@@ -51,13 +51,12 @@ now shows that this sparsity is not a variable partition: at round 3, between
 1,597 and 1,600 of the 1,600 state coordinates already depend on all 16 window
 coordinates.
 
-Round 2 is therefore the last measured factorable support layer. Round 3 is a
-sparse-polynomial but nearly all-to-all layer; round 4 is the first measured
-all-to-all and influence-balanced layer; round 5 adds maximum-degree,
-random-density ANFs. A
-round-split Reader intended to preserve a sparse dependency graph must split at
-the R2->R3 boundary.  Keeping R3 ANFs can still preserve low algebraic degree,
-but it cannot decompose the variables into independent components.
+Round 2 is therefore the last measured layer with incomplete coordinate-wise
+influence support.  The shared-ANF compression follow-up shows that its monomial
+primal graph is already complete, so independent variable components end at
+R1.  R2 remains highly useful as a shared low-degree feature dictionary.  Round
+3 is a sparse-polynomial but nearly all-to-all layer; round 4 is both all-to-all
+and influence-balanced; round 5 adds maximum-degree, random-density ANFs.
 
 ## Independent gates
 

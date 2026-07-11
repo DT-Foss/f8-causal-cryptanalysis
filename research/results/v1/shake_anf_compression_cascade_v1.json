@@ -1,0 +1,1602 @@
+{
+  "causal": {
+    "bytes": 939,
+    "explicit_triplets": 6,
+    "file_sha256": "5772b58ed396aebd4829aeee359fead1655440b73d5564aac7c5bb0e5c863d36",
+    "graph_sha256": "1eecfc970817e58ffbf61f000bab66d241e9fa3582cf14f8228c81abcbb507d0",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/shake_anf_compression_cascade_v1.causal",
+    "triplets": 6
+  },
+  "conversion_gate": {
+    "coordinate_values_checked": 8192,
+    "coordinates_per_state": 128,
+    "exact_match": true,
+    "output_sha256": "00d353d95d0bdc98396c18880c28e3dc4d1b03d6c2b4d6deab92d99ff57f9997",
+    "states": 64
+  },
+  "evidence_stage": "FULLROUND_REPRESENTATION_CONDITIONED_COMPRESSION_FRONTIER_MAPPED",
+  "mobius_gate": {
+    "assignments": 8,
+    "exact_match": true,
+    "expected_degrees": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "functions": 4,
+    "observed_degrees": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "pack_artifact": {
+    "bytes": 3167858,
+    "path": "research/results/v1/shake_anf_dictionary_v1.anfpack",
+    "record_sha256": [
+      "4c1700ca125cb83be426ee6de1672930e66f4f50038d4ee45624abe4a520cd79",
+      "d02ee86694c147db5954445f11eb21b5fbbbcb93b8b8e71b232f224f915aebca",
+      "9b5899c7a89ee34c4495968dbbf5a1a188a19a21c8a463899aa2989301368bc6",
+      "182bc0876cb3e9d47b6bcb6df1d143238be426c7b4311bf4390523710b12e313"
+    ],
+    "records": 4,
+    "sha256": "8ddffb70f3ad76621c42a3077d10478d167283bf003e855ea651481543ccf8f6"
+  },
+  "pack_reader_records": [
+    {
+      "reader_roundtrip": {
+        "assignments": 65536,
+        "exact_match": true,
+        "state_coordinates": 1600,
+        "truth_values_checked": 104857600
+      },
+      "record_bytes": 56134,
+      "record_sha256": "4c1700ca125cb83be426ee6de1672930e66f4f50038d4ee45624abe4a520cd79",
+      "round": 2,
+      "variant": "SHAKE128"
+    },
+    {
+      "reader_roundtrip": {
+        "assignments": 65536,
+        "exact_match": true,
+        "state_coordinates": 1600,
+        "truth_values_checked": 104857600
+      },
+      "record_bytes": 1519222,
+      "record_sha256": "d02ee86694c147db5954445f11eb21b5fbbbcb93b8b8e71b232f224f915aebca",
+      "round": 3,
+      "variant": "SHAKE128"
+    },
+    {
+      "reader_roundtrip": {
+        "assignments": 65536,
+        "exact_match": true,
+        "state_coordinates": 1600,
+        "truth_values_checked": 104857600
+      },
+      "record_bytes": 56542,
+      "record_sha256": "9b5899c7a89ee34c4495968dbbf5a1a188a19a21c8a463899aa2989301368bc6",
+      "round": 2,
+      "variant": "SHAKE256"
+    },
+    {
+      "reader_roundtrip": {
+        "assignments": 65536,
+        "exact_match": true,
+        "state_coordinates": 1600,
+        "truth_values_checked": 104857600
+      },
+      "record_bytes": 1535950,
+      "record_sha256": "182bc0876cb3e9d47b6bcb6df1d143238be426c7b4311bf4390523710b12e313",
+      "round": 3,
+      "variant": "SHAKE256"
+    }
+  ],
+  "parameters": {
+    "cascade_rounds": [
+      2,
+      3
+    ],
+    "codecs": {
+      "bz2": {
+        "compresslevel": 9
+      },
+      "lzma": {
+        "preset": 6
+      },
+      "python": "3.13.1",
+      "zlib": {
+        "level": 9,
+        "runtime_version": "1.2.12"
+      }
+    },
+    "observed_rounds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      24
+    ],
+    "persisted_pack_rounds": [
+      2,
+      3
+    ],
+    "seed": 89806001,
+    "window_bits": 16
+  },
+  "reader_triplets": [
+    {
+      "attrs": {
+        "reader_recipe": {
+          "dictionary": "little_endian_uint32_monomial_masks",
+          "format": "F8ANFPK1",
+          "inverse": "GF2_Mobius_transform",
+          "matrix": "basis_by_1600_packbits_little"
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-anf-dictionary-pack",
+      "evidence_kind": "full_reader_roundtrip",
+      "is_inferred": false,
+      "mechanism": "reader_lossless_binary_dictionary_pack",
+      "outcome": "shake128:reconstructible_compressed_truth_space",
+      "provenance": [
+        "shake128-shared-anf-transform"
+      ],
+      "source": "F8ANFPK1",
+      "trigger": "shake128:shared_anf_dictionary_and_coordinate_matrix"
+    },
+    {
+      "attrs": {},
+      "confidence": 1.0,
+      "edge_id": "shake128-compression-cascade",
+      "evidence_kind": "byte_exact_codec_sizes_and_hashes",
+      "is_inferred": false,
+      "mechanism": "compare_generic_codecs_and_all_ordered_two_codec_cascades",
+      "outcome": "shake128:representation_conditioned_compression_frontier",
+      "provenance": [
+        "shake128-anf-dictionary-pack"
+      ],
+      "source": "python_stdlib_codecs",
+      "trigger": "shake128:raw_and_shared_anf_representations"
+    },
+    {
+      "attrs": {},
+      "confidence": 1.0,
+      "edge_id": "shake128-shared-anf-transform",
+      "evidence_kind": "all_assignments_all_state_coordinates",
+      "is_inferred": false,
+      "mechanism": "exact_gf2_mobius_transform_and_global_monomial_union",
+      "outcome": "shake128:shared_anf_dictionary_and_coordinate_matrix",
+      "provenance": [],
+      "source": "complete_bit_sliced_round_trace",
+      "trigger": "shake128:complete_state_truth_spaces"
+    },
+    {
+      "attrs": {
+        "reader_recipe": {
+          "dictionary": "little_endian_uint32_monomial_masks",
+          "format": "F8ANFPK1",
+          "inverse": "GF2_Mobius_transform",
+          "matrix": "basis_by_1600_packbits_little"
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shake256-anf-dictionary-pack",
+      "evidence_kind": "full_reader_roundtrip",
+      "is_inferred": false,
+      "mechanism": "reader_lossless_binary_dictionary_pack",
+      "outcome": "shake256:reconstructible_compressed_truth_space",
+      "provenance": [
+        "shake256-shared-anf-transform"
+      ],
+      "source": "F8ANFPK1",
+      "trigger": "shake256:shared_anf_dictionary_and_coordinate_matrix"
+    },
+    {
+      "attrs": {},
+      "confidence": 1.0,
+      "edge_id": "shake256-compression-cascade",
+      "evidence_kind": "byte_exact_codec_sizes_and_hashes",
+      "is_inferred": false,
+      "mechanism": "compare_generic_codecs_and_all_ordered_two_codec_cascades",
+      "outcome": "shake256:representation_conditioned_compression_frontier",
+      "provenance": [
+        "shake256-anf-dictionary-pack"
+      ],
+      "source": "python_stdlib_codecs",
+      "trigger": "shake256:raw_and_shared_anf_representations"
+    },
+    {
+      "attrs": {},
+      "confidence": 1.0,
+      "edge_id": "shake256-shared-anf-transform",
+      "evidence_kind": "all_assignments_all_state_coordinates",
+      "is_inferred": false,
+      "mechanism": "exact_gf2_mobius_transform_and_global_monomial_union",
+      "outcome": "shake256:shared_anf_dictionary_and_coordinate_matrix",
+      "provenance": [],
+      "source": "complete_bit_sliced_round_trace",
+      "trigger": "shake256:complete_state_truth_spaces"
+    }
+  ],
+  "result": "A lossless shared-ANF transform exposes compressible SHAKE truth-space structure through R3 that generic codecs do not retain on the raw R3 bytes.",
+  "round_composition_gate": {
+    "exact_direct_bitslice_match": true,
+    "exact_scalar_match": true,
+    "output_sha256": "a6146bbba7defeeca19d5fafe2f99314522d7c5c81a5feb72b2a8f7c25c7e14f",
+    "rounds": 24,
+    "state_bits_checked": 102400,
+    "states": 64
+  },
+  "schema": "shake-shared-anf-compression-cascade-v1",
+  "scope": "Known-complement 16-coordinate capacity-window truth spaces; compression is of complete round-indexed state functions, with exact Reader roundtrip.",
+  "trials": [
+    {
+      "message_sha256": "665d927dc5fce11489b7ce9784afa6d2cf9043281ca1ef053bf42fb4602f0f19",
+      "observations": [
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16
+          },
+          "basis_fraction": 0.0002593994140625,
+          "basis_monomials": 17,
+          "basis_sha256": "7b66b35d858bb068d3f345a0675c46e236656270d70f9bae099c50f32c52e6b1",
+          "coefficient_density_within_dictionary": 0.029705882352941176,
+          "complete_monomial_primal_graph": false,
+          "compression": {
+            "anf_record_bytes": 3502,
+            "anf_transform_ratio": 3742.7755568246716,
+            "best_anf_over_best_raw_size_gain": 19.85185185185185,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 6432,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 2037.810945273632,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 9214,
+                    "ratio_from_raw_truth_space": 1422.5309311916649,
+                    "sha256": "afcccd6a5a06c07ade4913d2f011a9efa9320203d88b64a393e3f4f6f194f611"
+                  },
+                  "lzma_6": {
+                    "bytes": 6432,
+                    "ratio_from_raw_truth_space": 2037.810945273632,
+                    "sha256": "4c1d4daa91e61b621a96f0450911fb4b62119c8c970dfd9edbe1b58b3f49de7c"
+                  },
+                  "zlib_9": {
+                    "bytes": 381109,
+                    "ratio_from_raw_truth_space": 34.392260481909375,
+                    "sha256": "369b1faeb4af9cd419dbb7618b3abce2ca81c930d6ebdb8d7ca289558e79e043"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 324,
+                "best_codec_path": "zlib_9",
+                "best_ratio_from_raw_truth_space": 40454.32098765432,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 435,
+                    "ratio_from_raw_truth_space": 30131.494252873563,
+                    "sha256": "c2d47b3d0a31540b3f57bb12c1984c4e56273f0360126749576d317c1496ce52"
+                  },
+                  "lzma_6": {
+                    "bytes": 372,
+                    "ratio_from_raw_truth_space": 35234.408602150535,
+                    "sha256": "31537f3939cdfcdf220485814f69ede24414ddf37d214a7883abb64c74b76983"
+                  },
+                  "zlib_9": {
+                    "bytes": 324,
+                    "ratio_from_raw_truth_space": 40454.32098765432,
+                    "sha256": "68a8d618553aaab99258e1ddf2468f33889f2b64f3c15479acb82ccf6501d415"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 7.7056884765625e-06,
+          "maximum_basis_degree": 1,
+          "mean_coefficients_per_coordinate": 0.505,
+          "monomial_primal_edges": 0,
+          "packed_matrix_sha256": "e6427114858958fbbc5940f60c19d90d8d7b67a0da14441a1cd97110fe75c215",
+          "raw_truth_space_sha256": "963aa04d3226a6c47e988a68ba7e90637064cfb9fe48fe0efdf2f7c0baf73c66",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "eceb6d1e96b1a3419a67f5aaf411bd566da2496aa4b78c2ffb65f1003283a2fb",
+          "round": 0,
+          "total_coordinate_coefficients": 808
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "2": 10
+          },
+          "basis_fraction": 0.0004119873046875,
+          "basis_monomials": 27,
+          "basis_sha256": "9a0ab13b94a7c6e8e1b44df9e8269a92366801fc9e115054c9cd9353f165feea",
+          "coefficient_density_within_dictionary": 0.026550925925925926,
+          "complete_monomial_primal_graph": false,
+          "compression": {
+            "anf_record_bytes": 5542,
+            "anf_transform_ratio": 2365.0667629014797,
+            "best_anf_over_best_raw_size_gain": 52.02450980392157,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 42452,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 308.75341562234996,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 60514,
+                    "ratio_from_raw_truth_space": 216.59781207654427,
+                    "sha256": "697171c413025c39bd7c3defd5c392243e9f40a6b0d0813661db457d90db9c69"
+                  },
+                  "lzma_6": {
+                    "bytes": 42452,
+                    "ratio_from_raw_truth_space": 308.75341562234996,
+                    "sha256": "a8193fa757d347b1f13ff5b37bc5e2d2a982857fbd255d7be558b1d35b006f21"
+                  },
+                  "zlib_9": {
+                    "bytes": 436370,
+                    "ratio_from_raw_truth_space": 30.036895295276945,
+                    "sha256": "fbbb5dce27e7dbbc8dba19e44b482a6c9e1c1eae0c666633c3fdc321dc74ea8e"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 816,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 16062.745098039215,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 972,
+                    "ratio_from_raw_truth_space": 13484.77366255144,
+                    "sha256": "479fef13ac7f459ab6e1cd06ed3ff1217fd0f29901baf0b61925ddfe0e00745c"
+                  },
+                  "lzma_6": {
+                    "bytes": 816,
+                    "ratio_from_raw_truth_space": 16062.745098039215,
+                    "sha256": "f5ebd4da78743e8cf594ebba93bc43baaa9934a3f91125ccad33cb0359e11fa3"
+                  },
+                  "zlib_9": {
+                    "bytes": 859,
+                    "ratio_from_raw_truth_space": 15258.672875436554,
+                    "sha256": "d8c630428bb33fab1524f78374d4339fce05b550c48ad8b7ac4ddc77394e9ac9"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 1.0938644409179688e-05,
+          "maximum_basis_degree": 2,
+          "mean_coefficients_per_coordinate": 0.716875,
+          "monomial_primal_edges": 10,
+          "packed_matrix_sha256": "37571f904371e13d9be0cec3dd8441878b63623a25c10049e11b826c374ecfc3",
+          "raw_truth_space_sha256": "a01dc728709bdc644a75e23520f277239933cdef2b594b3ac22c9f0dfdf22b8d",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "b123292edbec0bfc0b67273af005ee09165bc9abbd8d77f31286d7e8ee8afcc6",
+          "round": 1,
+          "total_coordinate_coefficients": 1147
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "2": 120,
+            "3": 134,
+            "4": 4
+          },
+          "basis_fraction": 0.0041961669921875,
+          "basis_monomials": 275,
+          "basis_sha256": "0cee740da08a8dd2db9b524c962635c4714058405a38c56a7ec74c5d882f02ac",
+          "coefficient_density_within_dictionary": 0.03133863636363636,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 56134,
+            "anf_transform_ratio": 233.49841450814122,
+            "best_anf_over_best_raw_size_gain": 44.64929424538545,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 493464,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 26.561613410502083,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 1004515,
+                    "ratio_from_raw_truth_space": 13.048286984266039,
+                    "sha256": "c2679141d1938ce337198c5141045c2c0fe646c2d5df9f34a783e5714a274dad"
+                  },
+                  "lzma_6": {
+                    "bytes": 493464,
+                    "ratio_from_raw_truth_space": 26.561613410502083,
+                    "sha256": "db34a6323f687f7970b837b0f7149d568b9831bce349c4778e355d77fae5bae6"
+                  },
+                  "zlib_9": {
+                    "bytes": 1975909,
+                    "ratio_from_raw_truth_space": 6.633503870876645,
+                    "sha256": "73c0399e139a36d71079edd04123ecdff5fb4e21fa6c1cae38cb0368a768c948"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 1004624,
+                    "bytes_delta_from_first_stage": 109,
+                    "ratio_from_raw_truth_space": 13.046871267260189,
+                    "sha256": "97120016b89d617fcef9087f033f9a98d3e449771257a37810904f0ae3b58290"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 1003798,
+                    "bytes_delta_from_first_stage": -717,
+                    "ratio_from_raw_truth_space": 13.057607207824681,
+                    "sha256": "c8655ab032ebfa5eee5b005223daf00690b4a56ca77d7bfb3cb6936b3b4b6fb7"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 496163,
+                    "bytes_delta_from_first_stage": 2699,
+                    "ratio_from_raw_truth_space": 26.417125017383402,
+                    "sha256": "85e25ed570a10ab193460a42e69cd9091c7e6f4fb639370938d7d57d5f5f2bdd"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 493625,
+                    "bytes_delta_from_first_stage": 161,
+                    "ratio_from_raw_truth_space": 26.5529501139529,
+                    "sha256": "aa91526d5fe892d4c3f2021100286a89c6d8df3a946d334befc4ca8f3e2daeaa"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 1699475,
+                    "bytes_delta_from_first_stage": -276434,
+                    "ratio_from_raw_truth_space": 7.712499448359052,
+                    "sha256": "3b5926fac5caacbed90716b3308d73a62e683ff8ed7ddfd0efbcdf1f4073384a"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 1639908,
+                    "bytes_delta_from_first_stage": -336001,
+                    "ratio_from_raw_truth_space": 7.992643489756743,
+                    "sha256": "049a863c1a3dab41ae0dedca62bde1fbc7073d140e7d9251ea5a5f8045b8ba4f"
+                  }
+                }
+              },
+              "shared_anf_pack": {
+                "best_bytes": 11052,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 1185.9572927976837,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 12497,
+                    "ratio_from_raw_truth_space": 1048.8277186524765,
+                    "sha256": "643a5517de07dffc5d56f9ec08dfc0c0cae82100f82d297e00060db4e805b159"
+                  },
+                  "lzma_6": {
+                    "bytes": 11052,
+                    "ratio_from_raw_truth_space": 1185.9572927976837,
+                    "sha256": "ceb50a45e97cc7b5be3972e7dcd03d3313168ca74995694dac695da8d0b3d80a"
+                  },
+                  "zlib_9": {
+                    "bytes": 11908,
+                    "ratio_from_raw_truth_space": 1100.705408128989,
+                    "sha256": "1c00d2bc98cab3edcd71389efe8642a2482e6975c394268cbf7ec74ec9fde188"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 12560,
+                    "bytes_delta_from_first_stage": 63,
+                    "ratio_from_raw_truth_space": 1043.5668789808917,
+                    "sha256": "035f10378a6d7e5f906d970cc0375af3d582ca1ba0c7d5a9d366b99cf8c3b561"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 12494,
+                    "bytes_delta_from_first_stage": -3,
+                    "ratio_from_raw_truth_space": 1049.0795581879302,
+                    "sha256": "e813ca221b2ecb62d0655a0227fdff72c8f2ef7b9b8c411e7a9456cb670883bc"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 11531,
+                    "bytes_delta_from_first_stage": 479,
+                    "ratio_from_raw_truth_space": 1136.692394415055,
+                    "sha256": "2d3ff1f7d407c0543f3bf9d7cdd856bc19715e6d70d1ff0f90b0702a29227ded"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 11063,
+                    "bytes_delta_from_first_stage": 11,
+                    "ratio_from_raw_truth_space": 1184.7780891259151,
+                    "sha256": "57e62469e7f75c587c1234c1512c918873dd08f93a2f1c4f01b9a1139f77a529"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 12390,
+                    "bytes_delta_from_first_stage": 482,
+                    "ratio_from_raw_truth_space": 1057.8853914447134,
+                    "sha256": "e44f91ddb7fbb4aa7f197f3247709ede6d934f827141ee508b28555779e4bec8"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 11968,
+                    "bytes_delta_from_first_stage": 60,
+                    "ratio_from_raw_truth_space": 1095.1871657754011,
+                    "sha256": "a6655484a5bb95ca82e9eef45015d1705679ccffeee73aa5ae8437ae1870f428"
+                  }
+                }
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.0001315021514892578,
+          "maximum_basis_degree": 4,
+          "mean_coefficients_per_coordinate": 8.618125,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "598669f9f9c2d9975c9a5f5aa9b3f0e8c69f5fa304fc0ab33760448b8c867126",
+          "raw_truth_space_sha256": "ea31ace24ca67ffb3acc5bec0f288791620638c574d187befb846ea3cbe5504d",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "4c1700ca125cb83be426ee6de1672930e66f4f50038d4ee45624abe4a520cd79",
+          "round": 2,
+          "total_coordinate_coefficients": 13789
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "2": 120,
+            "3": 560,
+            "4": 1820,
+            "5": 2888,
+            "6": 1972,
+            "7": 70
+          },
+          "basis_fraction": 0.1136322021484375,
+          "basis_monomials": 7447,
+          "basis_sha256": "f4eec8f62f90697461076ffdd255ab5893c06412f838009d983caa8083a6d981",
+          "coefficient_density_within_dictionary": 0.12395427689002282,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 1519222,
+            "anf_transform_ratio": 8.627573850299694,
+            "best_anf_over_best_raw_size_gain": 20.44297346561631,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 12964852,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 1.0109795314285115,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13107930,
+                    "ratio_from_raw_truth_space": 0.9999443085216354,
+                    "sha256": "13475e22e8d6b8f20acac6e11bf7789899f770fcb5f9c61ac9300f32791bbf90"
+                  },
+                  "lzma_6": {
+                    "bytes": 12964852,
+                    "ratio_from_raw_truth_space": 1.0109795314285115,
+                    "sha256": "148f44743dabdd02566d02e5cbeaff3175d336b8a0e36816a711de4ba53c1e15"
+                  },
+                  "zlib_9": {
+                    "bytes": 13080915,
+                    "ratio_from_raw_truth_space": 1.002009416007978,
+                    "sha256": "e40d598e01745b3c36402d86566599a0ab764dfb5aef83153d0274b1d5a56b6a"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 13108644,
+                    "bytes_delta_from_first_stage": 714,
+                    "ratio_from_raw_truth_space": 0.9998898436787207,
+                    "sha256": "d898a31df077bb19f47703afd4e0688d8ad9a8fa66bd8b0637935794e57a1755"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 13108475,
+                    "bytes_delta_from_first_stage": 545,
+                    "ratio_from_raw_truth_space": 0.9999027346811891,
+                    "sha256": "d8bacd246cf034ce6d406cca178c05e007c655ba6861ee7191b745023906a411"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 13024076,
+                    "bytes_delta_from_first_stage": 59224,
+                    "ratio_from_raw_truth_space": 1.006382333764023,
+                    "sha256": "d0637479de7c8bdae8d23797c44e87669cc2a83b78c858747a304231e04fffc5"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 12968651,
+                    "bytes_delta_from_first_stage": 3799,
+                    "ratio_from_raw_truth_space": 1.0106833779396176,
+                    "sha256": "b91dbf064627d62405914fedc7b5c16a632800951855abf8ce373a15190a8cf1"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 13143431,
+                    "bytes_delta_from_first_stage": 62516,
+                    "ratio_from_raw_truth_space": 0.9972434138392022,
+                    "sha256": "885455ad29adc12c2dfafec30170ce4078c9949eb365e105095b71ddb3d42b46"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 13081624,
+                    "bytes_delta_from_first_stage": 709,
+                    "ratio_from_raw_truth_space": 1.0019551089375447,
+                    "sha256": "1a6b77595b282ef6760c426c484021069a2ed28ca816de0aee0ade34978933be"
+                  }
+                }
+              },
+              "shared_anf_pack": {
+                "best_bytes": 634196,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 20.66742773527427,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 708406,
+                    "ratio_from_raw_truth_space": 18.5023842259947,
+                    "sha256": "30628b61dee9205ae2361bd6645c8c4ab0548f23c05dcaf4d768397412821b66"
+                  },
+                  "lzma_6": {
+                    "bytes": 634196,
+                    "ratio_from_raw_truth_space": 20.66742773527427,
+                    "sha256": "f9a1d36404eb44ab0831f9c56906f2fe815fd6744181e6366c47fbaa18e662ef"
+                  },
+                  "zlib_9": {
+                    "bytes": 682154,
+                    "ratio_from_raw_truth_space": 19.214429586281103,
+                    "sha256": "8835b3bb665689ba2665805cb904cbd472d6125a541824964e6c5cd1f9a33593"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 708500,
+                    "bytes_delta_from_first_stage": 94,
+                    "ratio_from_raw_truth_space": 18.499929428369796,
+                    "sha256": "6e57ea8941ff6c1f04fa099c6feb5333d7f5ab6d4a13c91d29e912976c2fa284"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 708406,
+                    "bytes_delta_from_first_stage": 0,
+                    "ratio_from_raw_truth_space": 18.5023842259947,
+                    "sha256": "5af9984b9b5254969dbb3851fe8ed9b0895ad9ea758285af79ac157a7dae4141"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 637529,
+                    "bytes_delta_from_first_stage": 3333,
+                    "ratio_from_raw_truth_space": 20.559378475332103,
+                    "sha256": "e405b87d7dd7cdb9fe211cfbfd86e03a7161b4a032bf13163663a6659b62d81c"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 634397,
+                    "bytes_delta_from_first_stage": 201,
+                    "ratio_from_raw_truth_space": 20.660879543881826,
+                    "sha256": "f638e68c20faa8d2ab959bbc2dbe07098dfdc93745afb55ff7726f8bda11feae"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 684218,
+                    "bytes_delta_from_first_stage": 2064,
+                    "ratio_from_raw_truth_space": 19.156467675506928,
+                    "sha256": "66641485c3d91e6b399c063fddf67d77f04bb8eba6bec1a3db9bb83a68d6aff8"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 679080,
+                    "bytes_delta_from_first_stage": -3074,
+                    "ratio_from_raw_truth_space": 19.30140778700595,
+                    "sha256": "61bfd314b2ba7577171dfff93943f93bedae30f54b5d23f923168a7f6118d43b"
+                  }
+                }
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.014085197448730468,
+          "maximum_basis_degree": 7,
+          "mean_coefficients_per_coordinate": 923.0875,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "b11164cd92b6092196cfd536a91e95ac6d2dee94ed8b54863d86a9991634396b",
+          "raw_truth_space_sha256": "cceadf2b3b163aa819786f916e41be76ab916277d89e1a3b486b511c9f3f97c4",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "d02ee86694c147db5954445f11eb21b5fbbbcb93b8b8e71b232f224f915aebca",
+          "round": 3,
+          "total_coordinate_coefficients": 1476940
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "10": 8008,
+            "11": 4368,
+            "12": 1820,
+            "13": 405,
+            "14": 10,
+            "2": 120,
+            "3": 560,
+            "4": 1820,
+            "5": 4368,
+            "6": 8008,
+            "7": 11440,
+            "8": 12870,
+            "9": 11440
+          },
+          "basis_fraction": 0.995697021484375,
+          "basis_monomials": 65254,
+          "basis_sha256": "ac7c80e3fa34fb96837555a0af7ebc49d8535a870aeae60e83548b05be8498d8",
+          "coefficient_density_within_dictionary": 0.46989724767830326,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 13311850,
+            "anf_transform_ratio": 0.9846264794149574,
+            "best_anf_over_best_raw_size_gain": 1.0255058913072665,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 13107200,
+                "best_codec_path": "identity",
+                "best_ratio_from_raw_truth_space": 1.0,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13165839,
+                    "ratio_from_raw_truth_space": 0.9955461250893316,
+                    "sha256": "c2d83c410850344da0d733a8545ec9e4eca6e2e1c2e306e955bf5e3b76a14342"
+                  },
+                  "lzma_6": {
+                    "bytes": 13107912,
+                    "ratio_from_raw_truth_space": 0.9999456816615797,
+                    "sha256": "41fc9602a9fca777e6edef05eefd7acec6334b475e3f55acb44a7781a32c0be1"
+                  },
+                  "zlib_9": {
+                    "bytes": 13111206,
+                    "ratio_from_raw_truth_space": 0.9996944598384009,
+                    "sha256": "684cf35de492ed9ffebafa5de4a46156a9732b1a737e1bdab3788b7f1c779d41"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 12781204,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 1.0255058913072665,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 12939443,
+                    "ratio_from_raw_truth_space": 1.0129647775410426,
+                    "sha256": "648231c6300572a319b7a0cefe9b895669129fafab31262b713708c4527dcbcd"
+                  },
+                  "lzma_6": {
+                    "bytes": 12781204,
+                    "ratio_from_raw_truth_space": 1.0255058913072665,
+                    "sha256": "105e172f9d3a37d1a8a706152289bab782fd9111fdfe85dd93655fb613ed18a5"
+                  },
+                  "zlib_9": {
+                    "bytes": 12855495,
+                    "ratio_from_raw_truth_space": 1.0195795650031367,
+                    "sha256": "6dbcdae777c1d84d7528956e38c942c0a71c9302a1f5111ab0abad88451a10e7"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.4678752899169922,
+          "maximum_basis_degree": 14,
+          "mean_coefficients_per_coordinate": 30662.675,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "3cc34e855f66cf3d72ef22fe55a0b7ecac1b44ce822d419070a1eee78b36a5f0",
+          "raw_truth_space_sha256": "a32eacd7cc5a98bf500d6403d877bbc127725a476b20ed302c253f26a4f4a9c4",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "55543b428e6885125c565a4be33cae6ab3e9e8b2e75ef47e78b7746c7ecf8bc5",
+          "round": 4,
+          "total_coordinate_coefficients": 49060280
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "10": 8008,
+            "11": 4368,
+            "12": 1820,
+            "13": 560,
+            "14": 120,
+            "15": 16,
+            "16": 1,
+            "2": 120,
+            "3": 560,
+            "4": 1820,
+            "5": 4368,
+            "6": 8008,
+            "7": 11440,
+            "8": 12870,
+            "9": 11440
+          },
+          "basis_fraction": 1.0,
+          "basis_monomials": 65536,
+          "basis_sha256": "4a35a59aabf394adb1d83cda6d3c2e799553e35ba7e4ee55537c8add209532a7",
+          "coefficient_density_within_dictionary": 0.5001047325134277,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 13369378,
+            "anf_transform_ratio": 0.9803896636028991,
+            "best_anf_over_best_raw_size_gain": 0.9984904413920117,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 13107200,
+                "best_codec_path": "identity",
+                "best_ratio_from_raw_truth_space": 1.0,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13167772,
+                    "ratio_from_raw_truth_space": 0.9953999811053836,
+                    "sha256": "52d66f8db4e7fcc9b400f22b360c529c05b4e121412c6995f12c07219a9ab944"
+                  },
+                  "lzma_6": {
+                    "bytes": 13107912,
+                    "ratio_from_raw_truth_space": 0.9999456816615797,
+                    "sha256": "c47aac75ddefeb7b47ef377d436272cccf74143ccdcaf10872e55b0418b633ac"
+                  },
+                  "zlib_9": {
+                    "bytes": 13111206,
+                    "ratio_from_raw_truth_space": 0.9996944598384009,
+                    "sha256": "5a881c17b9270cf5dc9899e330be240bbe1564b7e0a03219be9247e4f6e8b7d0"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 13127016,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 0.9984904413920117,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13298089,
+                    "ratio_from_raw_truth_space": 0.9856453810769352,
+                    "sha256": "061b2acafa42e3b1d2e36e466168ada0605b97b1ba1c50ec842133011a17c2ff"
+                  },
+                  "lzma_6": {
+                    "bytes": 13127016,
+                    "ratio_from_raw_truth_space": 0.9984904413920117,
+                    "sha256": "de714e6e54aa27f07e2976e2e233e1b1f335a81bb8d248b81a612866e49f42f8"
+                  },
+                  "zlib_9": {
+                    "bytes": 13201919,
+                    "ratio_from_raw_truth_space": 0.9928253612221072,
+                    "sha256": "9ec11606fa09f27e1c52e76024bd4a497af8287b5a4560291b9605639cc8c725"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.5001047325134277,
+          "maximum_basis_degree": 16,
+          "mean_coefficients_per_coordinate": 32774.86375,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "3f075047b1b3aea1a3e312dd61697d540685969a7b76256cab9364a07079f7c6",
+          "raw_truth_space_sha256": "72fbc654173afaaa433bf27feaf7cc83e43e3ee3f78862da373af57d641ad244",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "1f4f3c5eda33e0892497d6a72a544412fe1525792212acef69c1d14753c0821d",
+          "round": 24,
+          "total_coordinate_coefficients": 52439782
+        }
+      ],
+      "seed": 89806001,
+      "variant": "SHAKE128",
+      "window_start_capacity_bit": 226,
+      "window_stop_capacity_bit_exclusive": 242
+    },
+    {
+      "message_sha256": "dbc479d41177e5737f1c0b214f46bbaf00b56b2523aaffdac65148a9c72700bd",
+      "observations": [
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16
+          },
+          "basis_fraction": 0.0002593994140625,
+          "basis_monomials": 17,
+          "basis_sha256": "7b66b35d858bb068d3f345a0675c46e236656270d70f9bae099c50f32c52e6b1",
+          "coefficient_density_within_dictionary": 0.029375,
+          "complete_monomial_primal_graph": false,
+          "compression": {
+            "anf_record_bytes": 3502,
+            "anf_transform_ratio": 3742.7755568246716,
+            "best_anf_over_best_raw_size_gain": 19.08641975308642,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 6184,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 2119.5342820181113,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 9067,
+                    "ratio_from_raw_truth_space": 1445.5939119885297,
+                    "sha256": "c91a26fbfe7fa78af1adc66ffdd1df3bca85381657ea8b94346b93287a9217a9"
+                  },
+                  "lzma_6": {
+                    "bytes": 6184,
+                    "ratio_from_raw_truth_space": 2119.5342820181113,
+                    "sha256": "29d5e16489ebd99330b39155e7d1f8195318305a9f28aa9aea3617161619831a"
+                  },
+                  "zlib_9": {
+                    "bytes": 372554,
+                    "ratio_from_raw_truth_space": 35.18201388255125,
+                    "sha256": "8689d341bc2d0c7c1a389cd142cf8034e741cc080274b1a1671c2e0f5463eb3c"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 324,
+                "best_codec_path": "zlib_9",
+                "best_ratio_from_raw_truth_space": 40454.32098765432,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 433,
+                    "ratio_from_raw_truth_space": 30270.66974595843,
+                    "sha256": "98c2a4b5ecd3ee5746753f6a866c5502b7af8cc78a25db74f3cbaa3537e8f8c9"
+                  },
+                  "lzma_6": {
+                    "bytes": 372,
+                    "ratio_from_raw_truth_space": 35234.408602150535,
+                    "sha256": "ab108036f3079233f9762e61daf05645e713d93d05880ad64ed8a12723e6ed20"
+                  },
+                  "zlib_9": {
+                    "bytes": 324,
+                    "ratio_from_raw_truth_space": 40454.32098765432,
+                    "sha256": "21f64365973b6bcd8c549164a843195b7049d73751fec843bbb1943ec15c3ddf"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 7.619857788085938e-06,
+          "maximum_basis_degree": 1,
+          "mean_coefficients_per_coordinate": 0.499375,
+          "monomial_primal_edges": 0,
+          "packed_matrix_sha256": "a7440bf6f2c44b81b7eca7d926baf68cab9bfc350d896418490ddd2c3b327434",
+          "raw_truth_space_sha256": "efbebd468239ab3560731cddd05ea6f9028b86b034a05a6eaf33c731838b5057",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "cca6fe64346b701fad958804128b8157ab0dbcbf40383eda436f5d7fcce91067",
+          "round": 0,
+          "total_coordinate_coefficients": 799
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "2": 10
+          },
+          "basis_fraction": 0.0004119873046875,
+          "basis_monomials": 27,
+          "basis_sha256": "9a0ab13b94a7c6e8e1b44df9e8269a92366801fc9e115054c9cd9353f165feea",
+          "coefficient_density_within_dictionary": 0.027962962962962964,
+          "complete_monomial_primal_graph": false,
+          "compression": {
+            "anf_record_bytes": 5542,
+            "anf_transform_ratio": 2365.0667629014797,
+            "best_anf_over_best_raw_size_gain": 53.45454545454545,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 44688,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 293.3046902971715,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 63132,
+                    "ratio_from_raw_truth_space": 207.61578914021416,
+                    "sha256": "bff3981863169272912bb90ee6805a2c7692941e39125d036482b7f4d76707bb"
+                  },
+                  "lzma_6": {
+                    "bytes": 44688,
+                    "ratio_from_raw_truth_space": 293.3046902971715,
+                    "sha256": "404616c47256110f8e8ad0e9e0d250ead8dc7b2c9d6e4b721f0534cf64d1bab1"
+                  },
+                  "zlib_9": {
+                    "bytes": 435926,
+                    "ratio_from_raw_truth_space": 30.06748851869354,
+                    "sha256": "5930637803874b474dc29795bc7020c00843a836bf9b7e355733568a655c20f4"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 836,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 15678.468899521531,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 1010,
+                    "ratio_from_raw_truth_space": 12977.425742574258,
+                    "sha256": "af4ff0fec4939eae4602db33f94f5410343522d636abb5617f69302f44092a4d"
+                  },
+                  "lzma_6": {
+                    "bytes": 836,
+                    "ratio_from_raw_truth_space": 15678.468899521531,
+                    "sha256": "cfdd6430004d9617f817d465a520dfd9c4671960047947463b5be33d611ddd42"
+                  },
+                  "zlib_9": {
+                    "bytes": 868,
+                    "ratio_from_raw_truth_space": 15100.460829493088,
+                    "sha256": "e517b543be83df143ab9cbc773621550a92ae95d5bff177a1d63de700d66ab6a"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 1.15203857421875e-05,
+          "maximum_basis_degree": 2,
+          "mean_coefficients_per_coordinate": 0.755,
+          "monomial_primal_edges": 10,
+          "packed_matrix_sha256": "3962478ab8efa6327e4ca4eec8da024c60a4683188c82b44264ac82c73f10048",
+          "raw_truth_space_sha256": "cca3e611663d310f9b6ade7d12871e99c0e7d35fbd7fe7a6354bdea9cee0944c",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "f25993e7a3c0ae40fbc5801b514a7ffce0d45d4e567e1ec1051857de5ac481b0",
+          "round": 1,
+          "total_coordinate_coefficients": 1208
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "2": 120,
+            "3": 136,
+            "4": 4
+          },
+          "basis_fraction": 0.0042266845703125,
+          "basis_monomials": 277,
+          "basis_sha256": "a119a0cb66a71d2adbaaf8233e0073ba26e62b7b961e5f7b4dfb52320b0c8a31",
+          "coefficient_density_within_dictionary": 0.0327278880866426,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 56542,
+            "anf_transform_ratio": 231.8135191539033,
+            "best_anf_over_best_raw_size_gain": 44.28974895397489,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 508092,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 25.796902923092667,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 1084115,
+                    "ratio_from_raw_truth_space": 12.090230279997972,
+                    "sha256": "316e1ede943d4a45989c7d21b55f9149b1eb0cc1586e23cabcc06485debdf5f4"
+                  },
+                  "lzma_6": {
+                    "bytes": 508092,
+                    "ratio_from_raw_truth_space": 25.796902923092667,
+                    "sha256": "cef47369edd0506f3ce635806cd91ff1bda71070f8a12d8f51caeae2f7268011"
+                  },
+                  "zlib_9": {
+                    "bytes": 2047924,
+                    "ratio_from_raw_truth_space": 6.400237508813803,
+                    "sha256": "49c74fb4bf9e190b333afca1baa9cb6770d2d596f7f45ba2a6a0cf7e40821e11"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 1084228,
+                    "bytes_delta_from_first_stage": 113,
+                    "ratio_from_raw_truth_space": 12.08897021659651,
+                    "sha256": "1bc3b2e1e069f9b2638175a1d040c91688386b3203346e68a99f12919ea6deb0"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 1083145,
+                    "bytes_delta_from_first_stage": -970,
+                    "ratio_from_raw_truth_space": 12.101057568469596,
+                    "sha256": "71a6a1b37f79e7c472c1307bdef92ecfd72799fd22f1bcd7fc5bf275afbb85e6"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 510950,
+                    "bytes_delta_from_first_stage": 2858,
+                    "ratio_from_raw_truth_space": 25.652607887268815,
+                    "sha256": "ff573d276ff09215d16e2dd27518a71c41302012d42482e64a9e50eaf3e6df6a"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 508253,
+                    "bytes_delta_from_first_stage": 161,
+                    "ratio_from_raw_truth_space": 25.788731202767124,
+                    "sha256": "76d8285700e0f468b8eaa5a1764d938059644ed602c10e863d05f1c9eb7008b3"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 1804056,
+                    "bytes_delta_from_first_stage": -243868,
+                    "ratio_from_raw_truth_space": 7.265406395366885,
+                    "sha256": "5c9d97335e15955062f842451c55ded75b7c9dc1d1497b5a0f3f92bf9694460d"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 1749100,
+                    "bytes_delta_from_first_stage": -298824,
+                    "ratio_from_raw_truth_space": 7.493682465267852,
+                    "sha256": "b43097761da776213176dfff0a3effd466ad7aaf62c39f02caaaadacbdf1f509"
+                  }
+                }
+              },
+              "shared_anf_pack": {
+                "best_bytes": 11472,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 1142.5383542538355,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13006,
+                    "ratio_from_raw_truth_space": 1007.7810241427034,
+                    "sha256": "1061bb2760f44bb3888e57b609b1485f0a82f23b8d1dafbc162b813f8149efaa"
+                  },
+                  "lzma_6": {
+                    "bytes": 11472,
+                    "ratio_from_raw_truth_space": 1142.5383542538355,
+                    "sha256": "ab6d5fc05e63ee232dc82b99dbe979aa5674cce623b6553e9f89d7bfd620233c"
+                  },
+                  "zlib_9": {
+                    "bytes": 12366,
+                    "ratio_from_raw_truth_space": 1059.9385411612486,
+                    "sha256": "53b46693799d8a9bf1f0e8dc71717963095e43da046d2e16129c3212c28d1231"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 13068,
+                    "bytes_delta_from_first_stage": 62,
+                    "ratio_from_raw_truth_space": 1002.9996939087848,
+                    "sha256": "d6b4c1af1554e6f71e427fcfa08d3d81ad6c06ecb57ad77571d3253a13bb0fda"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 13017,
+                    "bytes_delta_from_first_stage": 11,
+                    "ratio_from_raw_truth_space": 1006.9294000153645,
+                    "sha256": "035963fdbfc1483432bd20e41ef21e9f5c074ee046a72a0bc462a3d33238a3ac"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 11961,
+                    "bytes_delta_from_first_stage": 489,
+                    "ratio_from_raw_truth_space": 1095.8281080177242,
+                    "sha256": "884d3e5b5d29f3f204aedd7cfd56dcb9f05735aa53b1e15d545c86fb57ed7ad9"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 11483,
+                    "bytes_delta_from_first_stage": 11,
+                    "ratio_from_raw_truth_space": 1141.4438735522076,
+                    "sha256": "caeb6c9e935a132002daf8d9fd6171dac5b97a0737f7828f6dc734d0c44e414c"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 12832,
+                    "bytes_delta_from_first_stage": 466,
+                    "ratio_from_raw_truth_space": 1021.4463840399003,
+                    "sha256": "5ee3adde2cca772f56108afd1ab8ad533f3fc98f2b7d5d6a3e6d17937506fcef"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 12428,
+                    "bytes_delta_from_first_stage": 62,
+                    "ratio_from_raw_truth_space": 1054.650788542002,
+                    "sha256": "def39137d98a2502f1beef5bd04c715fb5dc9bdfce15a6ebb9513f746b9e4f09"
+                  }
+                }
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.00013833045959472657,
+          "maximum_basis_degree": 4,
+          "mean_coefficients_per_coordinate": 9.065625,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "34258a068cc43e0b2b905898950a6f2d6549493adcb2256f557464a351721eb0",
+          "raw_truth_space_sha256": "7f5548651700184f269154af2f9a53bcf465353e735ec77c44577b1692d0ed29",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "9b5899c7a89ee34c4495968dbbf5a1a188a19a21c8a463899aa2989301368bc6",
+          "round": 2,
+          "total_coordinate_coefficients": 14505
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "2": 120,
+            "3": 560,
+            "4": 1820,
+            "5": 2888,
+            "6": 2047,
+            "7": 77
+          },
+          "basis_fraction": 0.1148834228515625,
+          "basis_monomials": 7529,
+          "basis_sha256": "6609cdde8d6201242aeb9d3291f5ae792f39583dd9b0e9cb7c5818357c488c77",
+          "coefficient_density_within_dictionary": 0.12981305618275998,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 1535950,
+            "anf_transform_ratio": 8.533611120153651,
+            "best_anf_over_best_raw_size_gain": 19.836694674469996,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 13069684,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 1.0028704596071336,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13143707,
+                    "ratio_from_raw_truth_space": 0.9972224730816047,
+                    "sha256": "28276e4b5c9c4589e32beb0fc8bcf00cb70328d249a9d5db06eb623f7a89aae4"
+                  },
+                  "lzma_6": {
+                    "bytes": 13069684,
+                    "ratio_from_raw_truth_space": 1.0028704596071336,
+                    "sha256": "27036c07e7365c5d505f486b93dcd092a1a243bed67dda2310912d31fb20f5db"
+                  },
+                  "zlib_9": {
+                    "bytes": 13109358,
+                    "ratio_from_raw_truth_space": 0.9998353847686515,
+                    "sha256": "8d5d31e558068cea4b87dad34f800ad44171a8a457ae4e31e0d79b67a9e8ab54"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 13144420,
+                    "bytes_delta_from_first_stage": 713,
+                    "ratio_from_raw_truth_space": 0.9971683801947899,
+                    "sha256": "13e98d7b7360ecedfef6c2432e2830f082511080436d24fe2fab99fcae19c50b"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 13142923,
+                    "bytes_delta_from_first_stage": -784,
+                    "ratio_from_raw_truth_space": 0.9972819592719214,
+                    "sha256": "ddb8f134c50bf4f67ded2fdfa998ad9598e5e436696905f6a309a7ebb7901be7"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 13122614,
+                    "bytes_delta_from_first_stage": 52930,
+                    "ratio_from_raw_truth_space": 0.9988253864664464,
+                    "sha256": "b3fcb26121e4ca7e3460ed7aff3a55bdc2484a71a8c76561e7b60794d7732757"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 13073230,
+                    "bytes_delta_from_first_stage": 3546,
+                    "ratio_from_raw_truth_space": 1.0025984397122976,
+                    "sha256": "51f05a641932e9e81be9129b899b25c53763b83c2957b925a3c2bcf2281d9ce6"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 13162760,
+                    "bytes_delta_from_first_stage": 53402,
+                    "ratio_from_raw_truth_space": 0.9957790007566802,
+                    "sha256": "b45b249244ce61d3ddfdcd6e2bd05234d50389b5c894b19e927ea25c1bf5f2fb"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 13110064,
+                    "bytes_delta_from_first_stage": 706,
+                    "ratio_from_raw_truth_space": 0.9997815418750053,
+                    "sha256": "c038ec66cd96eadd37af4ee7c961aa78fcfd4890498991f7bfbd7cc64c445aac"
+                  }
+                }
+              },
+              "shared_anf_pack": {
+                "best_bytes": 658864,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 19.893635105272104,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 733514,
+                    "ratio_from_raw_truth_space": 17.86905226076121,
+                    "sha256": "61b7009562c2f22349b856a21f4a11610ee49fc73b0c537ed3f8f7c7d6ff263f"
+                  },
+                  "lzma_6": {
+                    "bytes": 658864,
+                    "ratio_from_raw_truth_space": 19.893635105272104,
+                    "sha256": "a3d24888393c4c3add930b286c5539ac0884125ba278953c2f6fb503a7546ef6"
+                  },
+                  "zlib_9": {
+                    "bytes": 709033,
+                    "ratio_from_raw_truth_space": 18.48602251235133,
+                    "sha256": "fea60084d4875617a02e27e14f6b2b158a6a4d049668e004d1822cd715ea16ea"
+                  }
+                },
+                "ordered_two_codec_cascades": {
+                  "bz2_9>lzma_6": {
+                    "bytes": 733612,
+                    "bytes_delta_from_first_stage": 98,
+                    "ratio_from_raw_truth_space": 17.86666521267373,
+                    "sha256": "721d80e5c2afddb244ceed119e60c462cb35b994b4bd46e2d339a9160f5fca58"
+                  },
+                  "bz2_9>zlib_9": {
+                    "bytes": 733499,
+                    "bytes_delta_from_first_stage": -15,
+                    "ratio_from_raw_truth_space": 17.86941768155103,
+                    "sha256": "2de7ebc0b04eaf4e5c88385f7a5e612d1fa562ce0022fa8804d313fb3571715e"
+                  },
+                  "lzma_6>bz2_9": {
+                    "bytes": 662018,
+                    "bytes_delta_from_first_stage": 3154,
+                    "ratio_from_raw_truth_space": 19.79885743287947,
+                    "sha256": "1da4aa500bcff28009b4af3e944d5584c5e9ea482357ad7b0ba7233bdf13ccb0"
+                  },
+                  "lzma_6>zlib_9": {
+                    "bytes": 659075,
+                    "bytes_delta_from_first_stage": 211,
+                    "ratio_from_raw_truth_space": 19.887266244357622,
+                    "sha256": "1111658c617a3c9880069f5700ee9db9f9550a7e9d1034581af1b87e1e4c2aa3"
+                  },
+                  "zlib_9>bz2_9": {
+                    "bytes": 710811,
+                    "bytes_delta_from_first_stage": 1778,
+                    "ratio_from_raw_truth_space": 18.439782164316533,
+                    "sha256": "ff999de91314ab6068b436c63f2127e0417d9d816b2fafacb81f331b8560092b"
+                  },
+                  "zlib_9>lzma_6": {
+                    "bytes": 705692,
+                    "bytes_delta_from_first_stage": -3341,
+                    "ratio_from_raw_truth_space": 18.57354199849226,
+                    "sha256": "16308c0d880c14545585d78020abf8b7b256ab3308c097b78bd4b0bfe8f4ee68"
+                  }
+                }
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.014913368225097656,
+          "maximum_basis_degree": 7,
+          "mean_coefficients_per_coordinate": 977.3625,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "97879ddc313c29dba3714277c69452aaa3568bd141f03497b87c785936dcef2a",
+          "raw_truth_space_sha256": "fe2414d689b3a3ae25c54f2039135b645302cc6cddb9ba119085294ff5ecddaa",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "182bc0876cb3e9d47b6bcb6df1d143238be426c7b4311bf4390523710b12e313",
+          "round": 3,
+          "total_coordinate_coefficients": 1563780
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "10": 8008,
+            "11": 4368,
+            "12": 1819,
+            "13": 389,
+            "14": 8,
+            "2": 120,
+            "3": 560,
+            "4": 1820,
+            "5": 4368,
+            "6": 8008,
+            "7": 11440,
+            "8": 12870,
+            "9": 11440
+          },
+          "basis_fraction": 0.9954071044921875,
+          "basis_monomials": 65235,
+          "basis_sha256": "ae0bcc3126bfe643b9c2a09bfb5a7966eef6ff27e9998ed258d4d8f92b7cefda",
+          "coefficient_density_within_dictionary": 0.4724759714876983,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 13307974,
+            "anf_transform_ratio": 0.9849132557668057,
+            "best_anf_over_best_raw_size_gain": 1.0230076825479284,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 13107200,
+                "best_codec_path": "identity",
+                "best_ratio_from_raw_truth_space": 1.0,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13166733,
+                    "ratio_from_raw_truth_space": 0.9954785291081698,
+                    "sha256": "82210bfa6ac5ae781a2082e33e22afcf90f71ba03d1512299b9f2fe2636dffc9"
+                  },
+                  "lzma_6": {
+                    "bytes": 13107912,
+                    "ratio_from_raw_truth_space": 0.9999456816615797,
+                    "sha256": "332f66da87af127a797a9e364b1273acd7f94f338830418fb220233dbc53fee2"
+                  },
+                  "zlib_9": {
+                    "bytes": 13111206,
+                    "ratio_from_raw_truth_space": 0.9996944598384009,
+                    "sha256": "a5d9c0aeb70edb1eb71f99ee4778f85eddfe1aa2f34d332337fca6452df4716b"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 12812416,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 1.0230076825479284,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 12972407,
+                    "ratio_from_raw_truth_space": 1.0103907470679883,
+                    "sha256": "6dfc715afe39097ad359f8e1dd3123494d8390a5f0260b17f679f679ae9cd741"
+                  },
+                  "lzma_6": {
+                    "bytes": 12812416,
+                    "ratio_from_raw_truth_space": 1.0230076825479284,
+                    "sha256": "c44fbcb6a8fa5e808747c71b8ad7894cd348f42cbf584227b79a1099ccb5e5b4"
+                  },
+                  "zlib_9": {
+                    "bytes": 12887960,
+                    "ratio_from_raw_truth_space": 1.0170112259814588,
+                    "sha256": "bde1ee3c8678104b18adb5827287da844c0486b3023bd1ab859ba58bbaa98ec4"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.47030593872070314,
+          "maximum_basis_degree": 14,
+          "mean_coefficients_per_coordinate": 30821.97,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "9cf7e66dbb2170959934a74eab5bd42cd3f4136cf3e6b03ddc0c74d55b8bc762",
+          "raw_truth_space_sha256": "ef9e8d74d79f96af018c0e1a92f32872d30b08688a31623ff9073d6223c4a0e1",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "6d8655e62c90398c185e7f822b7489a93ccfd748a086d5aea9313784507732a3",
+          "round": 4,
+          "total_coordinate_coefficients": 49315152
+        },
+        {
+          "available_monomials": 65536,
+          "basis_degree_histogram": {
+            "0": 1,
+            "1": 16,
+            "10": 8008,
+            "11": 4368,
+            "12": 1820,
+            "13": 560,
+            "14": 120,
+            "15": 16,
+            "16": 1,
+            "2": 120,
+            "3": 560,
+            "4": 1820,
+            "5": 4368,
+            "6": 8008,
+            "7": 11440,
+            "8": 12870,
+            "9": 11440
+          },
+          "basis_fraction": 1.0,
+          "basis_monomials": 65536,
+          "basis_sha256": "4a35a59aabf394adb1d83cda6d3c2e799553e35ba7e4ee55537c8add209532a7",
+          "coefficient_density_within_dictionary": 0.5001038360595703,
+          "complete_monomial_primal_graph": true,
+          "compression": {
+            "anf_record_bytes": 13369378,
+            "anf_transform_ratio": 0.9803896636028991,
+            "best_anf_over_best_raw_size_gain": 0.9984892243730342,
+            "raw_truth_space_bytes": 13107200,
+            "representations": {
+              "raw_truth_space": {
+                "best_bytes": 13107200,
+                "best_codec_path": "identity",
+                "best_ratio_from_raw_truth_space": 1.0,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13166405,
+                    "ratio_from_raw_truth_space": 0.9955033283572851,
+                    "sha256": "2fc4b61fb7a3255122f8a3ec55f1098f9ba6537ed91f0258fe0453b4b84c2f1d"
+                  },
+                  "lzma_6": {
+                    "bytes": 13107912,
+                    "ratio_from_raw_truth_space": 0.9999456816615797,
+                    "sha256": "dc071d86851514ed9710e2de011d401e4d3db29e468c7946e4775382c64f9774"
+                  },
+                  "zlib_9": {
+                    "bytes": 13111206,
+                    "ratio_from_raw_truth_space": 0.9996944598384009,
+                    "sha256": "4ad22b719f3401294538b21951b3acf1b47c41cb735cbbca3ab515ea3b3b7800"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              },
+              "shared_anf_pack": {
+                "best_bytes": 13127032,
+                "best_codec_path": "lzma_6",
+                "best_ratio_from_raw_truth_space": 0.9984892243730342,
+                "first_stage": {
+                  "bz2_9": {
+                    "bytes": 13296314,
+                    "ratio_from_raw_truth_space": 0.9857769604418187,
+                    "sha256": "300d552137122caab7dc121bb0712cbfc8e58a31c3b200e5850a4b9dd04b8bed"
+                  },
+                  "lzma_6": {
+                    "bytes": 13127032,
+                    "ratio_from_raw_truth_space": 0.9984892243730342,
+                    "sha256": "bfff1dab559c229aac118736aaab46936f71aaca6887c3b8cc57a51219a2879e"
+                  },
+                  "zlib_9": {
+                    "bytes": 13201928,
+                    "ratio_from_raw_truth_space": 0.9928246843945824,
+                    "sha256": "43de5eaf546fcbe87dcb84dedcf5af62df94bacf5d3eb5aa073dbea1160e219f"
+                  }
+                },
+                "ordered_two_codec_cascades": {}
+              }
+            }
+          },
+          "global_anf_coefficient_density": 0.5001038360595703,
+          "maximum_basis_degree": 16,
+          "mean_coefficients_per_coordinate": 32774.805,
+          "monomial_primal_edges": 120,
+          "packed_matrix_sha256": "f8f48e25339c7755a4e2569b2c8213116307279fad1e7d3ce4c9b2868eadee0e",
+          "raw_truth_space_sha256": "9f17d771136bca914099a0517c548307090b9cf96cd52a0aede2c3407f251e67",
+          "reader_roundtrip": {
+            "assignments": 65536,
+            "exact_match": true,
+            "state_coordinates": 1600,
+            "truth_values_checked": 104857600
+          },
+          "record_sha256": "61e938f31a2598ec58d74d197000d40cd0e3b4a51c53360e7a16030d2a85dcfa",
+          "round": 24,
+          "total_coordinate_coefficients": 52439688
+        }
+      ],
+      "seed": 89906004,
+      "variant": "SHAKE256",
+      "window_start_capacity_bit": 475,
+      "window_stop_capacity_bit_exclusive": 491
+    }
+  ]
+}

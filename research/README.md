@@ -137,9 +137,10 @@ The complete transfer track is one command:
 ./scripts/reproduce_fullround_transfers.sh
 ```
 
-It reruns the new PRESENT-128 measurement, localization and exact derivation,
-opens every causal artifact through the repository validator, runs the focused
-tests, and writes `results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
+It reruns the PRESENT-128-through-SHAKE transfer sequence, including the
+A133--A138 symbolic Reader block, opens every causal artifact through the
+repository validator, runs the focused tests, and writes
+`results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
 The SHA-256 full 64-step feed-forward result, its SHA-512 80-step word-width
 transfer, random-chaining confirmation, and the exact full-word carry spectrum
@@ -221,8 +222,32 @@ window per variant under the known-complement model.
 The multi-window Boolean-influence follow-up is reviewed in
 `reports/FULLROUND_CAUSAL_SHAKE_BOOLEAN_INFLUENCE_V1.md`. Across three complete
 16-bit windows per variant, R3 is already nearly all-to-all in variable support
-and measured R4, R5, and R24 are fully coupled and influence-balanced. This places the last
-measured dependency-factorable boundary at R2->R3 despite the sparse R3 ANFs.
+and measured R4, R5, and R24 are fully coupled and influence-balanced. A133
+subsequently distinguishes this coordinate-support frontier from the already
+complete R2 monomial interaction graph.
+
+The A133 shared-ANF transform is reviewed in
+`reports/FULLROUND_CAUSAL_SHAKE_ANF_COMPRESSION_V1.md`. It stores a shared
+monomial dictionary plus packed coordinate matrix, compares raw and transformed
+generic codecs and double cascades, and reopens a four-record binary pack to
+reconstruct every persisted truth value.
+
+The A134 direct compiler is reviewed in
+`reports/SHAKE_SYMBOLIC_R2_ANF_FRONTIER_V1.md`. It derives all 1,600 R2
+coordinate polynomials without `2^k` materialization and extends the exact
+interface through complete SHAKE128 and SHAKE256 capacities.
+
+The full-round symbolic Reader sequence is reviewed in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_SMT_V1.md`,
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_PARTITION_V1.md`,
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_SPLIT_FRONTIER_V1.md`, and
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_SCALING_V1.md`. A135 preserves
+native n-ary XOR across the R2 handover; A136 performs the complete
+ground-truth-blind width-16 prefix schedule; A137 selects R1 as the measured
+minimum-decision interface; and A138 resolves the unpartitioned width-16 model.
+The common runner and manifest remain
+`scripts/reproduce_shake_solver_frontier.sh` and
+`results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS`.
 
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,

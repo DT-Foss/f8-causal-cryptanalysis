@@ -351,11 +351,114 @@ separates low ANF density from actual variable-factorable support.
   bits, complete paired assignments, serialized matrix/support hashes, and
   six-edge Reader graph reopen.
 
-The measured dependency-factorable split must therefore occur no later than
-R2->R3. Sparse R3 ANFs remain useful as low-degree equations, but not as
-independent variable components. The result is scoped to six restricted,
-known-complement windows and instrumented states; it is not an unrestricted
-SHAKE input theorem, output-only recovery, or exponent reduction.
+R2 is the final measured layer with incomplete coordinate-level influence
+support, while A133 shows that its monomial primal graph is already complete.
+Sparse R3 ANFs remain useful as low-degree equations, but not as independent
+variable components. The result is scoped to six restricted, known-complement
+windows and instrumented states; it is not an unrestricted SHAKE input theorem
+or output-only recovery.
+
+## SHAKE shared-ANF compression: A133
+
+[`FULLROUND_CAUSAL_SHAKE_ANF_COMPRESSION_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE_ANF_COMPRESSION_V1.md)
+applies an exact representation transform before generic compression.
+
+- **Attack model:** complete `2^16 x 1,600` restricted state-function truth
+  spaces for SHAKE128 and SHAKE256 at R0/1/2/3/4/24.
+- **Known variables:** the state outside each declared 16-coordinate capacity
+  window and the exact round equations.
+- **Recovered object:** a shared monomial dictionary and packed
+  `basis x 1,600` ANF coefficient matrix that losslessly reconstruct every
+  retained Boolean function.
+- **Result:** at R3, the best raw codec retains 12.96/13.07 MB of each 13.11 MB
+  record, while shared-ANF plus LZMA uses 634/659 KB, a 20.44x/19.84x advantage
+  over the best raw path. The R2 advantage is 44.65x/44.29x; it falls to about
+  1.02x at R4 and disappears at R24. No ordered two-codec cascade beats the
+  best single LZMA path.
+- **Complexity and controls:** twelve complete truth spaces, exact Möbius and
+  inverse-Möbius gates, 102,400 independent Keccak state-bit checks, and a
+  disk Reader that reconstructs all 419,430,400 persisted truth values in the
+  four-record `F8ANFPK1` artifact.
+
+The R2 monomial graph contains all 120 variable-pair edges, so the compression
+gain is shared low-degree feature reuse rather than independent components.
+
+## SHAKE direct symbolic R2 compiler: A134
+
+[`SHAKE_SYMBOLIC_R2_ANF_FRONTIER_V1.md`](../research/reports/SHAKE_SYMBOLIC_R2_ANF_FRONTIER_V1.md)
+removes the exhaustive truth table from the compact R2 interface itself.
+
+- **Attack model:** exact Boolean-ring compilation of the first two Keccak
+  rounds from variable capacity coordinates, without sampling or `2^k`
+  assignment materialization.
+- **Known variables:** the complete starting state outside the declared
+  capacity coordinates and the Keccak round constants.
+- **Recovered object:** all 1,600 exact R2 coordinate polynomials.
+- **Result:** the complete 256-coordinate SHAKE128 capacity compiles to
+  6,918,733 coefficients over 2,467,023 shared monomials. The complete
+  512-coordinate SHAKE256 capacity compiles to 64,724,568 coordinate-local
+  coefficients of degree at most four. Its 4.142 GB symbolic form is smaller
+  than the formal truth table by a factor `2^487.696`.
+- **Complexity and controls:** width-16 basis and matrix hashes match all six
+  exhaustive A133 R0/R1/R2 artifacts; 94,720 independently evaluated state
+  bits match across widths 16--512. The width-512 coordinate-local form avoids
+  the unnecessary global duplicate-elimination set while retaining every
+  exact polynomial.
+
+## SHAKE native-XOR and partition Readers: A135--A136
+
+[`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_SMT_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_SMT_V1.md)
+joins the exact R2 formulas to explicit Boolean equations for R3--R24.
+
+- **A135 attack model:** complete 1,344-bit next-rate constraints with the
+  first-squeeze state known outside a 4/8/12/16-coordinate SHAKE128 capacity
+  window. R2 formulas remain native n-ary XOR equations.
+- **A135 recovered object and result:** exact 4/8/12-coordinate assignments,
+  each accompanied by an UNSAT blocked-model query. First-query decisions fall
+  from canonical-CNF counts 57,319/48,477/586,636 to
+  2,025/8,252/35,088. The 16-coordinate monolithic R2 system reaches the
+  registered 120-second boundary.
+- **A135 controls:** exact A128 result-hash gate, full 24-round Boolean
+  equations, independent assignment comparison, blocked-model queries, and
+  three-edge Reader reopen.
+- **A136 attack model:** the same exact 16-coordinate system partitioned into
+  all 16 disjoint low-four-coordinate prefixes, generated in ascending order
+  without consulting the instrumented assignment.
+- **A136 recovered object and result:** branch 13 returns assignment **35,837**
+  in 5,967 decisions. Independent 24-round evaluation reproduces all 1,344
+  next-rate bits. The other fifteen branches reach their per-branch limit, so
+  this artifact establishes autonomous model reconstruction, while a global
+  uniqueness certificate remains a distinct object.
+- **A136 controls:** complete branch coverage, five single-thread workers,
+  posthoc ground-truth comparison only after the schedule completes, and
+  independent complete-rate injection of every returned model.
+
+## SHAKE split selection and monolithic R1 model: A137--A138
+
+[`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_SPLIT_FRONTIER_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_SPLIT_FRONTIER_V1.md)
+compares exact R1/R2/R3 handover points under the same full-round query.
+
+- **A137 attack model:** identical SHAKE128 state, observation, solver, and
+  known-complement relation with only the symbolic-prefix depth changed.
+- **A137 recovered object and result:** the minimum-decision exact interface is
+  R1. At width 12, R1/R2/R3 require 2,986/35,088/4,441 decisions; R1 is
+  196.46x below canonical CNF. On the verified width-16 model branch, R1 uses
+  1,909 decisions versus 5,967 for R2, while R3 reaches its configured limit.
+  R2 is the storage-compression optimum and R1 the measured Reader optimum.
+- **A137 controls:** A135/A136 are reused only after exact SHA-256 gates; every
+  returned R1/R3 model is independently checked against all 1,344 rate bits.
+- **A138 attack model:** monolithic R1 interface, no fixed prefix, widths
+  16/20/24, and the complete 1,344-bit next-rate observation.
+- **A138 recovered object and result:** width 16 returns assignment **35,837**
+  in 4,701 decisions, 7.17% of the complete assignment count, and matches all
+  1,344 output bits under independent evaluation. The blocked query and first
+  queries at widths 20/24 reach the 120-second boundary.
+- **A138 controls:** exact A137 hash gate, independent full-round model
+  injection, posthoc instrumented-state equality, and three-edge Reader reopen.
+
+The R1 interfaces at widths 20 and 24 remain degree-two and small; the recorded
+boundary therefore selects subspace decomposition over the same equations,
+not a later symbolic expansion.
 
 ## Direct-output and PQC program
 

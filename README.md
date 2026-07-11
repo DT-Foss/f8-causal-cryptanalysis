@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A132 full-round relations as code, typed
+evidence, and the subsequent A107--A138 full-round relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -41,8 +41,14 @@ precisely:
 | A130 | SHAKE affine-hull prefix distinguisher/Reader | Exact 128-coordinate GF(2) hull membership leaves only the actual 10-bit prefix in both variants | Known first-squeeze-state complement; one complete 16-bit window truth space per variant; 128 next-rate coordinates | Exact 10-bit window prefix | [report](research/reports/FULLROUND_CAUSAL_SHAKE_AFFINE_HULL_V1.md) |
 | A131 | SHAKE algebraic-degree frontier | Restricted coordinate ANFs reach full degree 16 and random-like density at R5, remaining saturated through R24 | Known first-squeeze-state complement; one complete 16-bit window truth space per variant; first 128 rate coordinates | Exact round-localized ANF degree and density | [report](research/reports/FULLROUND_CAUSAL_SHAKE_ALGEBRAIC_DEGREE_V1.md) |
 | A132 | SHAKE Boolean-influence frontier | R3 is nearly all-to-all; measured R4, R5, and R24 are completely coupled and influence-balanced in all six exhaustive trials | Known first-squeeze-state complement; three complete 16-bit windows per variant; all 1,600 state coordinates | Exact round-localized 16x1,600 influence matrices | [report](research/reports/FULLROUND_CAUSAL_SHAKE_BOOLEAN_INFLUENCE_V1.md) |
+| A133 | SHAKE shared-ANF compression | Formula-space transform yields 20.44x/19.84x R3 advantage over best raw compression; disk Reader reconstructs 419.43M truth values | Known state complement; complete `2^16 x 1,600` restricted truth spaces | Exact shared formula dictionary and coefficient matrix | [report](research/reports/FULLROUND_CAUSAL_SHAKE_ANF_COMPRESSION_V1.md) |
+| A134 | SHAKE direct symbolic R2 | Complete 256-/512-coordinate capacity interfaces compile exactly without truth-table materialization | Known starting-state complement and Keccak round equations | All 1,600 exact R2 coordinate formulas | [report](research/reports/SHAKE_SYMBOLIC_R2_ANF_FRONTIER_V1.md) |
+| A135 | SHAKE native-XOR full-round Reader | Exact unique reconstruction at 4/8/12 coordinates with 3.53%/17.02%/5.98% of canonical-CNF decisions | Known first-state complement; complete next-rate observation | Exact capacity-window assignment | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_SMT_V1.md) |
+| A136 | SHAKE partitioned full-round Reader | Ground-truth-blind 16-branch schedule reconstructs assignment 35,837 and independently matches all 1,344 rate bits | Known first-state complement; complete next rate; exhaustive low-four prefix partition | Verified 16-coordinate model | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_PARTITION_V1.md) |
+| A137 | SHAKE symbolic split frontier | R1 minimizes decisions against R2/R3; width-12 R1 is 196.46x below canonical CNF | Matched full-round query; verified width-16 model branch for split comparison | Exact minimum-decision handover interface | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_SPLIT_FRONTIER_V1.md) |
+| A138 | SHAKE monolithic R1 Reader | Unpartitioned width 16 returns assignment 35,837 in 4,701 decisions and independently matches 1,344/1,344 bits | Known first-state complement; complete next rate; no supplied prefix | Verified 16-coordinate model | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_SCALING_V1.md) |
 
-The complete A107--A132 ledger, including complexity and controls for every
+The complete A107--A138 ledger, including complexity and controls for every
 class, is in [docs/RESULTS.md](docs/RESULTS.md). Earlier direct-output,
 compression-cascade, AES, ChaCha, PRESENT, Threefish, SIMON, and ML-KEM work is
 indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_MATRIX_V1.md)
@@ -91,9 +97,9 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and A129--A132 SHAKE frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and A129--A138 SHAKE frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
-| `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A132 Boolean, observability, hull, ANF, and influence Readers |
+| `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A138 Boolean, algebraic, compression, symbolic, and partition Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
 
 Expected quick-tier terminus:
@@ -116,7 +122,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A132 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A138 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

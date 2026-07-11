@@ -26,7 +26,13 @@ export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
   tests/test_shake_prefix_observability_frontier.py \
   tests/test_shake_affine_hull_frontier.py \
   tests/test_shake_algebraic_degree_frontier.py \
-  tests/test_shake_boolean_influence_frontier.py
+  tests/test_shake_boolean_influence_frontier.py \
+  tests/test_shake_anf_compression_cascade.py \
+  tests/test_shake_symbolic_anf_frontier.py \
+  tests/test_shake_symbolic_r2_smt_reader.py \
+  tests/test_shake_symbolic_r2_partition_reader.py \
+  tests/test_shake_symbolic_split_frontier.py \
+  tests/test_shake_symbolic_r1_scaling_reader.py
 CAUSAL_AUDIT="$(mktemp)"
 trap 'rm -f "$CAUSAL_AUDIT"' EXIT
 .venv/bin/python scripts/validate_causal_artifacts.py > "$CAUSAL_AUDIT"

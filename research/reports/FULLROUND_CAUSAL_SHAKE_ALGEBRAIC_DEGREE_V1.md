@@ -52,9 +52,10 @@ sparse representation of the state-window relation.
 The exact sparse algebraic zone ends at round 3.  Expanding the complete
 24-round composition into ANF destroys that sparsity by round 5.  The Boolean
 influence follow-up further establishes that R3 is already nearly all-to-all in
-variable support.  A dependency-factorized Reader must therefore split at the
-R2->R3 boundary; retaining the sparse R3 polynomials preserves low degree but
-does not partition the variables.  R4--R24 must remain a separate constraint
+variable support.  The shared-dictionary follow-up then places the complete
+monomial interaction graph one round earlier at R2.  Independent variable
+components end at R1; R2 remains compact only through extensive reuse of 275 or
+277 shared low-degree monomials.  R4--R24 must remain a separate constraint
 component rather than being substituted into a dense full-round ANF.
 
 This frontier also explains why the full-round affine-hull branches behave as

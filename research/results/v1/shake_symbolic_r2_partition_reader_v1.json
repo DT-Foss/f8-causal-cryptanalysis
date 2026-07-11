@@ -1,0 +1,609 @@
+{
+  "causal": {
+    "bytes": 840,
+    "explicit_triplets": 3,
+    "file_sha256": "ea16d00421f5174ce0c6cec3156c8f8f243b6a197fead5e16b41d068b8def6de",
+    "graph_sha256": "c8b6ed6e65d22162f2bb60efda883aea492df5b1b807878593435ea4de0ea6f2",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/shake_symbolic_r2_partition_reader_v1.causal",
+    "triplets": 3
+  },
+  "evidence_stage": "FULLROUND_PARTITIONED_NATIVE_XOR_MODEL_RECONSTRUCTED",
+  "kat": {
+    "fips202_url": "https://csrc.nist.gov/pubs/fips/202/final",
+    "keccak_f1600_zero_state_lanes": [
+      "f1258f7940e1dde7",
+      "84d5ccf933c0478a",
+      "d598261ea65aa9ee",
+      "bd1547306f80494d",
+      "8b284e056253d057",
+      "ff97a42d7f8e6fd4",
+      "90fee5a0a44647c4",
+      "8c5bda0cd6192e76",
+      "ad30a6f71b19059c",
+      "30935ab7d08ffc64",
+      "eb5aa93f2317d635",
+      "a9a6e6260d712103",
+      "81a57c16dbcf555f",
+      "43b831cd0347c826",
+      "01f22f1a11a5569f",
+      "05e5635a21d9ae61",
+      "64befef28cc970f2",
+      "613670957bc46611",
+      "b87c5a554fd00ecb",
+      "8c3ee88a1ccf32c8",
+      "940c7922ae3a2614",
+      "1841f924a2c509e4",
+      "16f53526e70465c2",
+      "75f644e97f30a13b",
+      "eaf1ff7b5ceca249"
+    ],
+    "keccak_f1600_zero_state_match": true,
+    "vectors": [
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "7f9c2ba4e88f827d616045507605853ed73b8093f6efbc88eb1a6eacfa66ef263cb1eea988004b93103cfb0aeefd2a686e01fa4a58e8a3639ca8a1e3f9ae57e2",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "5881092dd818bf5cf8a3ddb793fbcba74097d5c526a6d35f97b83351940f2cc844c50af32acd3f2cdd066568706f509bc1bdde58295dae3f891a9a0fca578378",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "46b9dd2b0ba88d13233b3feb743eeb243fcd52ea62b81b82b50c27646ed5762fd75dc4ddd8c0f200cb05019d67b592f6fc821c49479ab48640292eacb3b7c4be",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "483366601360a8771c6863080cc4114d8db44530f8f1e1ee4f94ea37e78b5739d5a15bef186a5386c75744c0527e1faa9f8726e462a12a4feb06bd8801e751e4",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      }
+    ]
+  },
+  "parameters": {
+    "max_workers": 5,
+    "partition_bits": 4,
+    "seed": 89754028,
+    "solver": "Z3 version 4.15.4 - 64 bit",
+    "solver_threads_per_branch": 1,
+    "timeout_seconds_per_branch": 60,
+    "window_bits": 16
+  },
+  "reader_triplets": [
+    {
+      "attrs": {},
+      "confidence": 1.0,
+      "edge_id": "shake128-exhaustive-prefix-partition",
+      "evidence_kind": "all_prefixes_exactly_once",
+      "is_inferred": false,
+      "mechanism": "reader_partition_first_coordinates_into_all_disjoint_prefixes",
+      "outcome": "shake128:complete_prefix_branch_schedule",
+      "provenance": [],
+      "source": "ascending_unsigned_prefix_schedule",
+      "trigger": "shake128:16_coordinate_native_xor_constraint_system"
+    },
+    {
+      "attrs": {},
+      "confidence": 1.0,
+      "edge_id": "shake128-partition-model-independent-check",
+      "evidence_kind": "all_1344_target_rate_bits",
+      "is_inferred": false,
+      "mechanism": "reader_inject_model_and_execute_independent_24_round_core",
+      "outcome": "shake128:complete_rate_model_verification",
+      "provenance": [
+        "shake128-partitioned-native-xor-models"
+      ],
+      "source": "independent_bit_sliced_keccak_core",
+      "trigger": "shake128:partition_model_set"
+    },
+    {
+      "attrs": {
+        "reader_recipe": {
+          "branch_count": 16,
+          "branch_order": "ascending_unsigned",
+          "partition_variables": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "prefix_source": "none_from_ground_truth"
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-partitioned-native-xor-models",
+      "evidence_kind": "branch_local_fullround_solver_models",
+      "is_inferred": false,
+      "mechanism": "reader_solve_each_exact_R2_plus_R3_R24_native_xor_branch",
+      "outcome": "shake128:partition_model_set",
+      "provenance": [
+        "shake128-exhaustive-prefix-partition"
+      ],
+      "source": "Z3_Boolean_SMT",
+      "trigger": "shake128:complete_prefix_branch_schedule"
+    }
+  ],
+  "result": "The exhaustive ground-truth-blind prefix schedule produced a model whose complete 1,344-bit next-rate state matches independently.",
+  "schema": "shake-symbolic-r2-partition-reader-v1",
+  "scope": "Known-complement 16-coordinate SHAKE128 state-window inference; exact symbolic R2 prefix and exact Boolean R3--R24 suffix in every branch.",
+  "trial": {
+    "actual_assignment_posthoc": 35837,
+    "actual_prefix_posthoc": 13,
+    "branch_schedule": "ascending_unsigned_prefix",
+    "branches": 16,
+    "branches_detail": [
+      {
+        "assignment": null,
+        "branch": 0,
+        "fixed_prefix": 0,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848041,
+        "smt_sha256": "acdfb7025df1c43ee1ebf8edb4cb85ffa3d48439c3481b3dd14048f6ceb43bd7",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 1,
+        "fixed_prefix": 1,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848035,
+        "smt_sha256": "973af0ee0c146aa557e63ed43853a9fd3a85b611ebe2bcdd13c136214d7b699e",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 2,
+        "fixed_prefix": 2,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848035,
+        "smt_sha256": "91fd8ed05d61d0a78006dae618683c334a422a730f6756ec1096ed36d7d3e490",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 3,
+        "fixed_prefix": 3,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848029,
+        "smt_sha256": "9809ae2b051e8505a4c6f62dc03196ee14079966725a9464efe9a80a82295f46",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 4,
+        "fixed_prefix": 4,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848035,
+        "smt_sha256": "d2a3cca20c40b4ae9a052d6b02b13ac4ce972827d56662b0b566dbdd631a06dc",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 5,
+        "fixed_prefix": 5,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848029,
+        "smt_sha256": "9f9c000e911781a28378a5d5013401178fed8052c32ac2f8fb614ac515a86b56",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 6,
+        "fixed_prefix": 6,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848029,
+        "smt_sha256": "a7f070496935104cd1a2137803e6f6b71b431cc25bb35d78f669f6e2bbcb7353",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 7,
+        "fixed_prefix": 7,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848023,
+        "smt_sha256": "80a3c8faba0cdfde4b43681821ce089a2f543b54053aee78ba4ecac13296e99e",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 8,
+        "fixed_prefix": 8,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848035,
+        "smt_sha256": "a280f489cb33a1a5a849b1ef6fdefa5d97fbaaec3afbb6bdac88701c61cf08fa",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 9,
+        "fixed_prefix": 9,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848029,
+        "smt_sha256": "a93e9ac695c1ecbfbe6f9e83974fc00c50ad49a96a821a419a3850fc7f85c9a7",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 10,
+        "fixed_prefix": 10,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848029,
+        "smt_sha256": "066fbbac6f92326ed1ef07d32685c69012928042e96f76ac2e5682345df6d03e",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 11,
+        "fixed_prefix": 11,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848023,
+        "smt_sha256": "a4697d39744ae0e5673e85163d17afd56c029d60244d659ea90c81a1ac41dc28",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 12,
+        "fixed_prefix": 12,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848029,
+        "smt_sha256": "6ff749418fe3e325efcf6d3c5806757984e820ede731cbf5f2499c6f9619f2d8",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": 35837,
+        "branch": 13,
+        "fixed_prefix": 13,
+        "independent_verification": {
+          "candidate_rate_sha256": "6d23d92d3ae295ffc64a53b5d1c70042a9a2efb73ad0daf6cd923fef31c940e4",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "6d23d92d3ae295ffc64a53b5d1c70042a9a2efb73ad0daf6cd923fef31c940e4"
+        },
+        "matches_instrumented_assignment": true,
+        "remaining_variables": 12,
+        "smt_bytes": 8848023,
+        "smt_sha256": "136ecb98ff6c1080ff279b995b69b8de6df11e7b70245c52b6ef0601f9d5f874",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {
+            "binary-propagations": 62901518.0,
+            "conflicts": 1272.0,
+            "decisions": 5967.0,
+            "propagations": 228373055.0,
+            "restarts": 2.0
+          },
+          "status": "sat"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 14,
+        "fixed_prefix": 14,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848023,
+        "smt_sha256": "8ffb499855058d4a93c3747510b3f2d03a3403117112e07442747a1c2b78733f",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      },
+      {
+        "assignment": null,
+        "branch": 15,
+        "fixed_prefix": 15,
+        "independent_verification": null,
+        "matches_instrumented_assignment": null,
+        "remaining_variables": 12,
+        "smt_bytes": 8848017,
+        "smt_sha256": "d12c47d91bebe4481e382dacf44f67adb7e0d6b4fbffbfe1504ecc61d50b0267",
+        "solver": {
+          "command_parameters": {
+            "representation": "Boolean_SMT_native_nary_XOR",
+            "threads": 1,
+            "timeout_seconds": 60
+          },
+          "external_timeout": false,
+          "return_code": 0,
+          "stats": {},
+          "status": "unknown"
+        }
+      }
+    ],
+    "distinct_models": [
+      35837
+    ],
+    "encoding": {
+      "native_xor_equations": true,
+      "output_assertions": 1344,
+      "r2_assertions": 1857,
+      "r2_polynomial_state_sha256": "8ce7be6e59072b481a6dee2bda2652fedd11e687a8efc151db80024f4208f209",
+      "r2_symbolic_monomials": 274,
+      "r2_variables": 1873,
+      "round_assertion_counts": [
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440
+      ],
+      "round_variable_counts": [
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440,
+        5440
+      ],
+      "suffix_rounds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "total_assertions": 122881,
+      "total_variables": 121553
+    },
+    "global_uniqueness_proved": false,
+    "ground_truth_used_for_branch_schedule": false,
+    "max_workers": 5,
+    "partition_bits": 4,
+    "partitioned_variables": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reconstructed_assignment": 35837,
+    "reconstruction_matches_ground_truth": true,
+    "seed": 89754028,
+    "status_counts": {
+      "error": 0,
+      "sat": 1,
+      "unknown": 15,
+      "unsat": 0
+    },
+    "timeout_seconds_per_branch": 60,
+    "variant": "SHAKE128",
+    "verified_models": [
+      35837
+    ],
+    "window_bits": 16
+  }
+}

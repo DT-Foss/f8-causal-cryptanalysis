@@ -28,6 +28,12 @@ such; empirical confirmations retain their sample counts.
 | A130 | Under the declared known-complement model, an exact full-round affine-hull prefix distinguisher/Reader over 128 next-rate coordinates leaves only the actual 10-bit prefix in each tested SHAKE128/256 window. | `shake_affine_hull_frontier_v1.*`, solver-frontier manifest |
 | A131 | Exact ANFs of the first 128 restricted SHAKE rate-coordinate functions reach full degree 16 and random-like coefficient density at R5 in both tested windows, remaining saturated through R24. | `shake_algebraic_degree_frontier_v1.*`, solver-frontier manifest |
 | A132 | Six complete restricted truth spaces show near-all-to-all Boolean influence at R3 and complete, approximately balanced 16x1,600 coupling at measured R4, R5, and R24. | `shake_boolean_influence_frontier_v1.*`, solver-frontier manifest |
+| A133 | An exact shared-ANF transform exposes 20.44x/19.84x R3 compression advantages over the best raw codec and reconstructs all 419,430,400 persisted truth values exactly. | `shake_anf_compression_cascade_v1.*`, `shake_anf_dictionary_v1.anfpack` |
+| A134 | Direct Boolean-ring compilation produces exact R2 formulas across the complete 256-bit SHAKE128 and 512-bit SHAKE256 capacities without materializing a truth table. | `shake_symbolic_anf_frontier_v1.*`, solver-frontier manifest |
+| A135 | The native-XOR symbolic-R2 Reader reconstructs and proves unique 4/8/12-coordinate SHAKE128 windows with 3.53%/17.02%/5.98% of the canonical-CNF decision counts. | `shake_symbolic_r2_smt_reader_v1.*`, solver-frontier manifest |
+| A136 | An exhaustive, ground-truth-blind 16-branch partition reconstructs the 16-coordinate assignment 35,837 and independently reproduces all 1,344 next-rate bits. | `shake_symbolic_r2_partition_reader_v1.*`, solver-frontier manifest |
+| A137 | Under matched full-round queries, the exact R1 symbolic handover minimizes decisions against R2 and R3; at width 12 it is 196.46x below canonical CNF. | `shake_symbolic_split_frontier_v1.*`, solver-frontier manifest |
+| A138 | The monolithic R1 Reader reconstructs the 16-coordinate assignment 35,837 in 4,701 decisions and independently matches all 1,344 next-rate bits without a supplied prefix. | `shake_symbolic_r1_scaling_reader_v1.*`, solver-frontier manifest |
 
 The filenames above are rooted at `research/results/v1/`; full hashes are in
 `FULLROUND_TRANSFER_SHA256SUMS`, `SHAKE_NATIVE_EXTENDED_SHA256SUMS`, and
@@ -51,6 +57,12 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | SHAKE affine hull | One deterministic 16-bit window per variant and known state complement; the current exact construction evaluates all `2^16` points and does not reduce the exponent. |
 | SHAKE ANF frontier | One deterministic 16-bit window per variant and 128 restricted coordinate functions; it localizes the tested sparse-to-dense transition, not the global algebraic degree of unrestricted SHAKE inputs. |
 | SHAKE influence frontier | Three deterministic 16-bit windows per variant with known complements and instrumented internal states; it is a restricted dependency map, not an unrestricted input theorem or output-only recovery. |
+| SHAKE shared ANF | Complete restricted 16-bit truth spaces; compression is lossless formula reuse, not variable-component factorization. |
+| SHAKE symbolic R2 | Exact direct formulas over declared variable capacity coordinates; the retained object is the R2 interface, not unrestricted full-capacity recovery from output. |
+| SHAKE native-XOR Reader | Known first-state complement and complete next-rate observation; solved widths have exact blocked-model uniqueness certificates. |
+| SHAKE partition Reader | The 16-coordinate model is independently verified; fifteen unresolved branches mean this artifact does not assert global uniqueness. |
+| SHAKE split frontier | Width-16 rows compare a fixed, already verified branch to select representation; the autonomous search result is A136/A138. |
+| SHAKE R1 scaling | Width 16 has an exact verified model; its blocked query and widths 20/24 are recorded solver boundaries, not uniqueness results. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -70,7 +82,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A132 claims above are governed by their newer JSON/Reader evidence and
+The A107--A138 claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

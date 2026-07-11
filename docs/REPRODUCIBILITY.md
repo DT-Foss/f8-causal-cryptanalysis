@@ -14,6 +14,10 @@ The native SHAKE Reader requires:
 - a 64-bit target;
 - no platform-specific vector intrinsic.
 
+The Boolean/symbolic SHAKE Readers additionally require the Z3 command-line
+solver. Retained solver statistics were produced with Z3 4.15.4; the
+paper-scale solver runner checks that exact version before execution.
+
 ## Clean installation
 
 ```bash
@@ -74,12 +78,13 @@ the committed JSON and write exploratory reruns to a separate worktree or copy.
 ```
 
 This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
-SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A132
-SHAKE observability, affine-hull, ANF, and influence frontiers. It then runs focused tests,
-opens all `.causal` files, and rewrites
+SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A138
+SHAKE observability, affine, algebraic, compression, symbolic, and partition
+frontiers. It then runs focused tests, opens all `.causal` files, and rewrites
 `research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
-The script creates `.venv` if absent. Result JSON and `.causal` filenames are
+The script creates `.venv` if absent and applies the same exact Z3 4.15.4
+preflight as the solver-tier runner. Result JSON and `.causal` filenames are
 stable. Compare a deliberate rerun with the committed manifest using:
 
 ```bash
@@ -115,11 +120,14 @@ for SHAKE256. Each independent target must have zero survivors.
 ./scripts/reproduce_shake_solver_frontier.sh
 ```
 
-This tier regenerates A128--A132: the exact 24-round SHAKE128 Tseitin-CNF
+This tier regenerates A128--A138: the exact 24-round SHAKE128 Tseitin-CNF
 Reader at 4/8/12/16 coordinates, one complete `2^16` SHAKE128/256
 prefix-observability truth space per variant, and the corresponding exact
 128-coordinate affine-hull prefix Readers, restricted ANFs, and Boolean
-influence frontiers.
+influence frontiers. It then executes shared-ANF compression, the direct
+symbolic R2 compiler, the native-XOR R2 Reader, the exhaustive width-16
+partition Reader, the R1/R2/R3 split frontier, and the monolithic R1 scaling
+Reader.
 The CNF production run requires the native Z3 CLI 4.15.4; focused tests skip
 the Z3-dependent execution gate when no CLI is installed, while the
 reproduction script fails closed. It writes:
@@ -129,10 +137,22 @@ reproduction script fails closed. It writes:
 - `shake_affine_hull_frontier_v1.json` and `.causal`;
 - `shake_algebraic_degree_frontier_v1.json` and `.causal`;
 - `shake_boolean_influence_frontier_v1.json` and `.causal`;
+- `shake_anf_compression_cascade_v1.json`, `.causal`, and
+  `shake_anf_dictionary_v1.anfpack`;
+- `shake_symbolic_anf_frontier_v1.json` and `.causal`;
+- `shake_symbolic_r2_smt_reader_v1.json` and `.causal`;
+- `shake_symbolic_r2_partition_reader_v1.json` and `.causal`;
+- `shake_symbolic_split_frontier_v1.json` and `.causal`;
+- `shake_symbolic_r1_scaling_reader_v1.json` and `.causal`;
 - `SHAKE_SOLVER_FRONTIER_SHA256SUMS`.
 
-The 16-coordinate CNF instance intentionally records its configured 120-second
-solver boundary. The complete truth-space frontier is independent of Z3.
+The 16-coordinate canonical CNF and symbolic-R2 monolithic instances record
+their configured 120-second boundaries. The R1 interface reconstructs the same
+unpartitioned width-16 model; widths 20/24 and its blocked-model query record
+the next boundary. Complete truth-space and symbolic-compiler stages are
+independent of Z3. The width-512 symbolic compiler is memory-intensive because
+it retains exact coordinate-local formulas; the result artifact records the
+bounded representation and its independent gates.
 
 ## Other reproducible tracks
 

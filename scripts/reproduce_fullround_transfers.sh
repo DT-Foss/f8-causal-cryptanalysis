@@ -10,6 +10,20 @@ if [[ ! -x .venv/bin/python ]]; then
   .venv/bin/python -m pip install -e .
 fi
 
+Z3_BIN="$(command -v z3 2>/dev/null || true)"
+if [[ -z "$Z3_BIN" && -x /opt/homebrew/bin/z3 ]]; then
+  Z3_BIN="/opt/homebrew/bin/z3"
+fi
+if [[ -z "$Z3_BIN" ]]; then
+  echo "Z3 CLI 4.15.4 is required for the symbolic Reader reproduction." >&2
+  exit 2
+fi
+Z3_VERSION="$($Z3_BIN -version)"
+if [[ "$Z3_VERSION" != "Z3 version 4.15.4"* ]]; then
+  echo "Expected Z3 CLI 4.15.4, found: $Z3_VERSION" >&2
+  exit 2
+fi
+
 export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
 mkdir -p research/results/v1
 
@@ -122,6 +136,51 @@ mkdir -p research/results/v1
   --output research/results/v1/shake_boolean_influence_frontier_v1.json \
   --causal-output research/results/v1/shake_boolean_influence_frontier_v1.causal
 
+.venv/bin/python research/experiments/shake_anf_compression_cascade.py \
+  --window-bits 16 \
+  --rounds 0,1,2,3,4,24 \
+  --pack-rounds 2,3 \
+  --cascade-rounds 2,3 \
+  --output research/results/v1/shake_anf_compression_cascade_v1.json \
+  --causal-output research/results/v1/shake_anf_compression_cascade_v1.causal \
+  --pack-output research/results/v1/shake_anf_dictionary_v1.anfpack
+
+.venv/bin/python research/experiments/shake_symbolic_anf_frontier.py \
+  --window-bits 16,32,64,128,256,512 \
+  --assignment-samples 8 \
+  --output research/results/v1/shake_symbolic_anf_frontier_v1.json \
+  --causal-output research/results/v1/shake_symbolic_anf_frontier_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r2_smt_reader.py \
+  --window-bits 4,8,12,16 \
+  --timeout-seconds 120 \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r2_smt_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r2_smt_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r2_partition_reader.py \
+  --window-bits 16 \
+  --partition-bits 4 \
+  --timeout-seconds 60 \
+  --max-workers 5 \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r2_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r2_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_split_frontier.py \
+  --prefix-rounds 1,2,3 \
+  --timeout-seconds 60 \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_split_frontier_v1.json \
+  --causal-output research/results/v1/shake_symbolic_split_frontier_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_scaling_reader.py \
+  --window-bits 16,20,24 \
+  --timeout-seconds 120 \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
+
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -136,6 +195,12 @@ mkdir -p research/results/v1
   tests/test_shake_affine_hull_frontier.py \
   tests/test_shake_algebraic_degree_frontier.py \
   tests/test_shake_boolean_influence_frontier.py \
+  tests/test_shake_anf_compression_cascade.py \
+  tests/test_shake_symbolic_anf_frontier.py \
+  tests/test_shake_symbolic_r2_smt_reader.py \
+  tests/test_shake_symbolic_r2_partition_reader.py \
+  tests/test_shake_symbolic_split_frontier.py \
+  tests/test_shake_symbolic_r1_scaling_reader.py \
   tests/test_feal32x_fullround_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_shacal2_fullround_cancellation.py \
@@ -193,6 +258,19 @@ mkdir -p research/results/v1
   research/results/v1/shake_algebraic_degree_frontier_v1.json \
   research/results/v1/shake_algebraic_degree_frontier_v1.causal \
   research/results/v1/shake_boolean_influence_frontier_v1.json \
-  research/results/v1/shake_boolean_influence_frontier_v1.causal
+  research/results/v1/shake_boolean_influence_frontier_v1.causal \
+  research/results/v1/shake_anf_compression_cascade_v1.json \
+  research/results/v1/shake_anf_compression_cascade_v1.causal \
+  research/results/v1/shake_anf_dictionary_v1.anfpack \
+  research/results/v1/shake_symbolic_anf_frontier_v1.json \
+  research/results/v1/shake_symbolic_anf_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_smt_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_smt_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_partition_reader_v1.causal \
+  research/results/v1/shake_symbolic_split_frontier_v1.json \
+  research/results/v1/shake_symbolic_split_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
 
 echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint mechanisms reproduced."
