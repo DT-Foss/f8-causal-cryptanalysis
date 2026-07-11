@@ -1,0 +1,88 @@
+{
+  "schema": "shake-symbolic-r1-width24-prospective-transfer-protocol-v1",
+  "attempt_id": "A152",
+  "protocol_state": "frozen_before_new_instance_generation",
+  "anchor": {
+    "artifact": "research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json",
+    "sha256": "3ea9f21a6cfde4f5728f4860181b4d32317be9d9eeb7296b3b81427faa1d75ee"
+  },
+  "seed_derivation": {
+    "label_ascii": "f8-causal:A152:prospective-shake128-r1-width24-transfer:v1|",
+    "input_suffix": "raw_bytes_of_anchor_sha256",
+    "digest": "sha256",
+    "digest_hex": "8f8854215b3702428d90fea9c8d02f55fdda697fcd1d5a599a17758dfa2c15ce",
+    "integer_rule": "big_endian_first_4_digest_bytes_bitand_0x7fffffff",
+    "derived_seed": 260592673
+  },
+  "target_system": {
+    "variant": "SHAKE128",
+    "window_bits": 24,
+    "window_domain": "contiguous_capacity_state_window_selected_by_seed_xor_0xB175",
+    "symbolic_prefix_rounds": 1,
+    "explicit_suffix_rounds": 23,
+    "total_keccak_f1600_rounds": 24,
+    "constrained_rate_bits": 1344,
+    "instance_generator": "shake_native_window_solver._problem",
+    "instance_generated_or_inspected_before_protocol_freeze": false
+  },
+  "structural_selection": {
+    "graph_input": "R1_polynomials_of_cleared_window_template_only",
+    "graph_edges": "unique_degree_2_monomial_variable_pairs",
+    "cover_rule": "exact_minimum_vertex_cover",
+    "cover_tie_break": "lexicographically_first_coordinate_tuple",
+    "assignment_input_used": false,
+    "target_rate_input_used": false,
+    "solver_observation_input_used": false
+  },
+  "schedule": {
+    "domain": "all_projection_values_of_selected_cover_coordinates",
+    "primary_key": "decreasing_count_of_edges_with_exactly_one_selected_endpoint_fixed_to_1",
+    "secondary_key": "decreasing_projection_popcount",
+    "tertiary_key": "increasing_numeric_projection_value",
+    "complete_pairwise_disjoint_assignment_space_cover_required": true,
+    "assignment_input_used": false,
+    "target_projection_input_used": false,
+    "solver_observation_input_used": false
+  },
+  "solver_plan": {
+    "solver": "Z3 CLI",
+    "required_version": "4.15.4",
+    "logic": "QF_UF",
+    "check_sat": "plain_check_sat",
+    "timeout_seconds_per_projection": 120,
+    "solver_threads_per_process": 1,
+    "maximum_parallel_processes": 5,
+    "wave_size": 5,
+    "maximum_minimum_vertex_cover_bits_for_solver_execution": 12,
+    "larger_cover_action": "write_structure_only_resource_boundary_without_solver_or_assignment_extraction",
+    "same_uniform_budget_assigned_to_every_planned_projection": true,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "stop_and_verification": {
+    "evaluate_complete_waves": true,
+    "check_every_returned_model_with_independent_numpy_lane_core": true,
+    "independent_rate_bits_checked": 1344,
+    "stop_after_complete_wave_containing_independently_confirmed_model": true,
+    "otherwise_exhaust_complete_projection_schedule": true,
+    "structure_only_guard_is_not_a_model_search_result": true,
+    "global_uniqueness_claimed": false
+  },
+  "artifact_contract": {
+    "result_filename": "shake_symbolic_r1_width24_prospective_transfer_v1.json",
+    "causal_filename": "shake_symbolic_r1_width24_prospective_transfer_v1.causal",
+    "local_invocation_paths_excluded_from_canonical_payload": true,
+    "json_and_causal_reopened_after_final_write": true
+  },
+  "prospective_boundary": {
+    "mechanism_and_schedule_generation_rule_frozen_from_A151_before_new_seed_execution": true,
+    "historical_A148_through_A151_informed_mechanism_and_budget": true,
+    "new_seed_is_hash_derived_not_selected_by_outcome": true,
+    "new_graph_may_control_only_declared_structural_selection_and_schedule_rules": true,
+    "new_seed_assignment_projection_and_solver_outcomes_informed_protocol": false,
+    "execution_must_use_clean_public_commit_worktree": true,
+    "instrumented_assignment_available_to_runtime_selection_or_schedule": false,
+    "instrumented_target_projection_available_to_runtime_selection_or_schedule": false,
+    "instrumented_assignment_compared_only_after_execution": true,
+    "blind_new_instance_transfer": true
+  }
+}

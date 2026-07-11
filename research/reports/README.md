@@ -42,3 +42,10 @@ confirmed assignment-free `k=8` model finding.
 exact nine-edge width-24 R1 graph, its minimum-vertex-cover threshold, the
 complete formula-ranked 512-subspace plan, and the independently confirmed
 assignment-free uniform-budget model search with explicit non-blind design scope.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PROSPECTIVE_TRANSFER_PROTOCOL_V1.md` freezes
+the A152 new-seed rule, graph extraction, exact-cover and schedule-generation
+algorithms, uniform budget, cover-size resource guard, clean-public-worktree
+gate, and posthoc boundary before the new instance is generated. Concrete
+new-seed graph, cover and schedule values are derived only after that gate. It
+is a protocol record and contains no A152 outcome yet.

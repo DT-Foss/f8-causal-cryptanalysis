@@ -292,6 +292,16 @@ the independent complete 1,344-bit rate check. The mechanism was developed
 from the same-instance frontier and is explicitly not a blind holdout; neither
 the assignment nor target projection is a runtime input.
 
+The next transfer is frozen separately in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PROSPECTIVE_TRANSFER_PROTOCOL_V1.md`.
+A152 derives a fresh width-24 seed from the retained A151 artifact hash and
+requires the exact protocol bytes to exist on a fetched public remote commit
+before the target can be generated. Its graph-extraction, exact-cover,
+tie-break and complete schedule-generation algorithms, uniform budget,
+cover-size guard, stop rule, and posthoc-only assignment comparison are fixed
+before any new-instance observation; the concrete graph, cover and schedule
+values are derived prospectively afterward.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs
