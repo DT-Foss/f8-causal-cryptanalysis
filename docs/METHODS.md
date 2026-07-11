@@ -179,8 +179,25 @@ one symbolic round followed by 23 rounds of explicit local equations and all
 1,344 next-rate constraints. Exact SHA-256 gates prevent an earlier result from
 being silently regenerated under changed inputs.
 
+A139--A141 hold that exact A138 width-20 SMT fixed and vary only the four
+partition coordinates. Low-4 and Upper-4 use positional plans. Max-Cover-4
+extracts all 28 degree-two edges from the exact R1 coordinate formulas,
+evaluates every one of the 4,845 four-coordinate subsets, and selects the
+lexicographically first of the 14 sets attaining maximum coverage 14. The
+selector receives neither the observed target nor the instrumented assignment.
+Each plan enumerates all 16 values of its fixed coordinates before execution,
+so the resulting 48 `unknown` statuses are complete disjoint-plan
+representation/resource measurements under the stored per-branch schedule.
+
+A142 transfers only A137's structural choice of a one-round symbolic prefix to
+SHAKE256. It rebuilds independent width-16/20/24 inputs, joins R1 to 23 exact
+rounds, and constrains all 1,088 next-rate bits. SHAKE128 solver outcomes and
+assignments are excluded. Its three `unknown` first queries therefore measure
+the direct monolithic transfer boundary for the declared seeds, solver thread,
+version, and time limit; they are not generalized as ambiguity or resistance.
+
 Explicit candidate enumeration in A123--A127 remains exactly `2^k` logical
-work. A133's truth-space transforms also consume all `2^16` points. A134--A138
+work. A133's truth-space transforms also consume all `2^16` points. A134--A142
 do not enumerate an assignment table; their recorded work is formula size,
 solver decisions, branch coverage, and configured time boundaries, without
 claiming a formal asymptotic exponent. Native enumeration checkpoints are

@@ -181,6 +181,28 @@ mkdir -p research/results/v1
   --output research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
 
+.venv/bin/python research/experiments/shake_symbolic_r1_partition_scaling_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_upper_partition_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_structural_partition_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake256_symbolic_r1_scaling_reader.py \
+  --window-bits 16,20,24 \
+  --timeout-seconds 120 \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
+  --causal-output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
+
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -201,6 +223,10 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r2_partition_reader.py \
   tests/test_shake_symbolic_split_frontier.py \
   tests/test_shake_symbolic_r1_scaling_reader.py \
+  tests/test_shake_symbolic_r1_partition_scaling_reader.py \
+  tests/test_shake_symbolic_r1_upper_partition_reader.py \
+  tests/test_shake_symbolic_r1_structural_partition_reader.py \
+  tests/test_shake256_symbolic_r1_scaling_reader.py \
   tests/test_feal32x_fullround_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_shacal2_fullround_cancellation.py \
@@ -271,6 +297,14 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_split_frontier_v1.json \
   research/results/v1/shake_symbolic_split_frontier_v1.causal \
   research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
-  research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
+  research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.causal \
+  research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
+  research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint mechanisms reproduced."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, partition and transfer mechanisms reproduced."

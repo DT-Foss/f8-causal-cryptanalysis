@@ -460,6 +460,57 @@ The R1 interfaces at widths 20 and 24 remain degree-two and small; the recorded
 boundary therefore selects subspace decomposition over the same equations,
 not a later symbolic expansion.
 
+## SHAKE128 R1 partition topology: A139--A141
+
+[`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PARTITION_TOPOLOGY_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PARTITION_TOPOLOGY_V1.md)
+compares three complete partitions of the same hash-gated A138 width-20 SMT.
+
+- **Attack model:** the first-squeeze state is known outside 20 declared
+  SHAKE128 coordinates; all 1,344 next-rate bits constrain an exact symbolic
+  R1 prefix followed by 23 explicit rounds.
+- **Partition plans:** A139 fixes `[0,1,2,3]`, A140 fixes
+  `[16,17,18,19]`, and A141 fixes `[4,9,17,18]`. Each plan exhausts all 16
+  values of its four fixed coordinates and leaves 16 free coordinates in every
+  branch.
+- **Result:** each plan records exactly 16 `unknown` statuses under its
+  60-second per-branch limit and five one-thread workers. No plan returns a
+  model or branch certificate. These are complete disjoint plan executions and
+  precise representation/resource boundaries, not ambiguity or immunity
+  results.
+- **A141 selection:** the exact R1 quadratic graph has 28 edges. Exhaustive
+  evaluation of all 4,845 four-coordinate subsets finds maximum coverage 14,
+  with 14 tied sets; the assignment- and target-independent lexicographic rule
+  selects `[4,9,17,18]`.
+- **Controls:** exact A138 JSON and unpartitioned-SMT hash gates, plan
+  construction before results, no assignment or output input to the selector,
+  complete branch coverage, and three independently reopened Reader graphs.
+
+The retained breadcrumb is a deeper or suffix-aware decomposition over the
+same explicit relation. Equal free dimension, low/high position, and static R1
+edge coverage are each insufficient predictors under the stored schedule.
+
+## SHAKE256 monolithic symbolic-R1 transfer: A142
+
+[`FULLROUND_CAUSAL_SHAKE256_SYMBOLIC_R1_TRANSFER_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE256_SYMBOLIC_R1_TRANSFER_V1.md)
+tests whether A137's SHAKE128-selected R1 handover transfers directly to
+SHAKE256.
+
+- **Attack model:** exact SHAKE256 symbolic R1 prefix plus 23 explicit rounds,
+  complete 1,088-bit next-rate observation, and known first-state complement.
+- **Transferred object:** only the structural choice
+  `symbolic_prefix_rounds=1`; no SHAKE128 status, assignment, or output is
+  imported.
+- **Result:** monolithic widths 16/20/24 each return `unknown` with one solver
+  thread and a 120-second first-query limit. Their exact degree-two R1
+  interfaces contain 23/35/76 shared monomials.
+- **Controls:** exact A137 hash gate, independent SHAKE256 seeds, all 17 rate
+  lanes constrained, functional SHAKE/Keccak gates, and a reopened three-edge
+  Reader graph.
+
+A142 is a cross-variant representation/resource boundary. It selects a
+SHAKE256-specific split frontier or complete disjoint partition as the next
+test; it makes no general statement about unresolved SHAKE256 windows.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.

@@ -105,6 +105,28 @@ mkdir -p research/results/v1
   --output research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
 
+.venv/bin/python research/experiments/shake_symbolic_r1_partition_scaling_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_upper_partition_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_structural_partition_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake256_symbolic_r1_scaling_reader.py \
+  --window-bits 16,20,24 \
+  --timeout-seconds 120 \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
+  --causal-output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
+
 .venv/bin/pytest -q \
   tests/test_shake_boolean_cnf_reader.py \
   tests/test_shake_prefix_observability_frontier.py \
@@ -116,7 +138,11 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r2_smt_reader.py \
   tests/test_shake_symbolic_r2_partition_reader.py \
   tests/test_shake_symbolic_split_frontier.py \
-  tests/test_shake_symbolic_r1_scaling_reader.py
+  tests/test_shake_symbolic_r1_scaling_reader.py \
+  tests/test_shake_symbolic_r1_partition_scaling_reader.py \
+  tests/test_shake_symbolic_r1_upper_partition_reader.py \
+  tests/test_shake_symbolic_r1_structural_partition_reader.py \
+  tests/test_shake256_symbolic_r1_scaling_reader.py
 .venv/bin/python scripts/validate_causal_artifacts.py >/dev/null
 
 .venv/bin/python scripts/write_hash_manifest.py \
@@ -143,6 +169,14 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_split_frontier_v1.json \
   research/results/v1/shake_symbolic_split_frontier_v1.causal \
   research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
-  research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
+  research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.causal \
+  research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
+  research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
 
-echo "SHAKE Boolean, affine, algebraic, compression, symbolic, and partition Readers reproduced."
+echo "SHAKE Boolean, algebraic, symbolic-split, partition and transfer Readers reproduced."

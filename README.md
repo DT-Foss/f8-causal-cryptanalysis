@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A138 full-round relations as code, typed
+evidence, and the subsequent A107--A142 full-round relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -47,8 +47,10 @@ precisely:
 | A136 | SHAKE partitioned full-round Reader | Ground-truth-blind 16-branch schedule reconstructs assignment 35,837 and independently matches all 1,344 rate bits | Known first-state complement; complete next rate; exhaustive low-four prefix partition | Verified 16-coordinate model | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_PARTITION_V1.md) |
 | A137 | SHAKE symbolic split frontier | R1 minimizes decisions against R2/R3; width-12 R1 is 196.46x below canonical CNF | Matched full-round query; verified width-16 model branch for split comparison | Exact minimum-decision handover interface | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_SPLIT_FRONTIER_V1.md) |
 | A138 | SHAKE monolithic R1 Reader | Unpartitioned width 16 returns assignment 35,837 in 4,701 decisions and independently matches 1,344/1,344 bits | Known first-state complement; complete next rate; no supplied prefix | Verified 16-coordinate model | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_SCALING_V1.md) |
+| A139--A141 | SHAKE128 R1 partition topology | Complete disjoint Low-4, Upper-4, and Max-Cover-4 width-20 schedules each return 16 `unknown` statuses at the stored 60-second/five-worker limits | Known first-state complement; complete next rate; all 16 branches per four-coordinate plan | Exact representation/resource boundary; no model returned | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PARTITION_TOPOLOGY_V1.md) |
+| A142 | SHAKE256 monolithic R1 transfer | Widths 16/20/24 each return `unknown` at the stored 120-second single-thread limit | Known first-state complement; complete 1,088-bit next rate; A137 used only to select R1 | Exact cross-variant representation/resource boundary; no model returned | [report](research/reports/FULLROUND_CAUSAL_SHAKE256_SYMBOLIC_R1_TRANSFER_V1.md) |
 
-The complete A107--A138 ledger, including complexity and controls for every
+The complete A107--A142 ledger, including complexity and controls for every
 class, is in [docs/RESULTS.md](docs/RESULTS.md). Earlier direct-output,
 compression-cascade, AES, ChaCha, PRESENT, Threefish, SIMON, and ML-KEM work is
 indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_MATRIX_V1.md)
@@ -97,9 +99,9 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and A129--A138 SHAKE frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and A129--A142 SHAKE frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
-| `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A138 Boolean, algebraic, compression, symbolic, and partition Readers |
+| `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A142 Boolean, algebraic, compression, symbolic, partition, and transfer Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
 
 Expected quick-tier terminus:
@@ -122,7 +124,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A138 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A142 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

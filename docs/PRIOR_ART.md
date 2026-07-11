@@ -31,6 +31,7 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-11 | Original twelve-configuration F8 suite finalized at source commit `2e23b23e46cd7a413edd5b56a748e4d5e6e62f73` by David Tom Foss |
 | 2026-07-11 | A107--A132 append-only experiment ledger: PRESENT-128 through native 32-coordinate SHAKE consistency, exact Boolean reconstruction, prefix observability, affine-hull prefix identification, restricted ANFs, and the Boolean-influence frontier |
 | 2026-07-11 | A133--A138 follow-up ledger: shared-ANF compression, direct full-capacity symbolic R2 compilation, native-XOR full-round reconstruction, exhaustive 16-branch model search, R1/R2/R3 split selection, and the monolithic R1 width-16 model |
+| 2026-07-11 | A139--A142 boundary ledger: three complete SHAKE128 width-20 R1 partition topologies and a monolithic SHAKE256 R1 cross-variant transfer, each retained with its exact resource schedule |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -45,9 +46,9 @@ invented here.
 | `paper/nano2026/main.tex` | `1269cfc7c24fb6ad2d3551ccea74f60fde4404967fe8b6710ba3acb8df887ed2` |
 | Sanitized Nanjing presentation source | `577607f1e1b2893234836f98999428ace0894a5362b5b85b6609565c1a70356c` |
 | `ANCHOR_SHA256SUMS` | `90f50ecdbe01e4de0afa4c858a57d916fc1794344375303a501a301c80e192e8` |
-| `FULLROUND_TRANSFER_SHA256SUMS` | `7b412604e0b8d7383c79344d8bc1a8689391fbf1e95d1f9bb0883f361a9bcf07` |
+| `FULLROUND_TRANSFER_SHA256SUMS` | `41730a98e4e9154c335bfb9e3269f86f16e72344088ef22488ecc8e79d9e5b91` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
-| `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `a80c5d16f3e0da06a69863f2b2221288edf6fee5ae1b0740350ec7b0143ccae3` |
+| `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `49b74518bb60ef42a639bd0475f71c8d60ca9ca546d8edc2e4713cbaf4160434` |
 
 The manifest digest authenticates the manifest; each manifest in turn lists the
 exact result JSON, `.causal`, source, or anchor file digests. Verify all layers
@@ -55,7 +56,7 @@ with `scripts/verify_hash_manifest.py`.
 
 ## Full-round result identifiers
 
-The stable A107--A138 identifiers are defined in
+The stable A107--A142 identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -79,7 +80,10 @@ publication:
 - A135: native-XOR symbolic-R2 complete-round Reader;
 - A136: autonomous 16-coordinate partitioned model reconstruction;
 - A137: exact R1/R2/R3 symbolic handover frontier;
-- A138: monolithic symbolic-R1 width-16 model reconstruction.
+- A138: monolithic symbolic-R1 width-16 model reconstruction;
+- A139--A141: complete Low-4, Upper-4, and quadratic Max-Cover-4
+  SHAKE128 width-20 partition boundaries;
+- A142: monolithic SHAKE256 symbolic-R1 transfer boundary at widths 16/20/24.
 
 ## Presentation sanitization
 
@@ -101,7 +105,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A138, include the exact follow-up commit containing the artifact; obtain
+A133--A142, include the exact follow-up commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a
 DOI or long-term archive guarantee.

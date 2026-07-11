@@ -34,6 +34,8 @@ such; empirical confirmations retain their sample counts.
 | A136 | An exhaustive, ground-truth-blind 16-branch partition reconstructs the 16-coordinate assignment 35,837 and independently reproduces all 1,344 next-rate bits. | `shake_symbolic_r2_partition_reader_v1.*`, solver-frontier manifest |
 | A137 | Under matched full-round queries, the exact R1 symbolic handover minimizes decisions against R2 and R3; at width 12 it is 196.46x below canonical CNF. | `shake_symbolic_split_frontier_v1.*`, solver-frontier manifest |
 | A138 | The monolithic R1 Reader reconstructs the 16-coordinate assignment 35,837 in 4,701 decisions and independently matches all 1,344 next-rate bits without a supplied prefix. | `shake_symbolic_r1_scaling_reader_v1.*`, solver-frontier manifest |
+| A139--A141 | Three complete disjoint width-20 R1 partition plans—Low-4, Upper-4, and exact quadratic Max-Cover-4—each record 16 `unknown` branches under the stored 60-second/five-worker resource schedule. | `shake_symbolic_r1_{partition_scaling,upper_partition,structural_partition}_reader_v1.*`, solver-frontier manifest |
+| A142 | Direct monolithic transfer of the SHAKE128-selected R1 handover to SHAKE256 widths 16/20/24 records `unknown` at each stored 120-second single-thread boundary. | `shake256_symbolic_r1_scaling_reader_v1.*`, solver-frontier manifest |
 
 The filenames above are rooted at `research/results/v1/`; full hashes are in
 `FULLROUND_TRANSFER_SHA256SUMS`, `SHAKE_NATIVE_EXTENDED_SHA256SUMS`, and
@@ -63,6 +65,8 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | SHAKE partition Reader | The 16-coordinate model is independently verified; fifteen unresolved branches mean this artifact does not assert global uniqueness. |
 | SHAKE split frontier | Width-16 rows compare a fixed, already verified branch to select representation; the autonomous search result is A136/A138. |
 | SHAKE R1 scaling | Width 16 has an exact verified model; its blocked query and widths 20/24 are recorded solver boundaries, not uniqueness results. |
+| SHAKE R1 partition topology | Each four-coordinate plan exhausts all 16 disjoint branches, but all statuses remain `unknown`; this maps three exact representation/resource boundaries and does not assert ambiguity or general resistance. |
+| SHAKE256 R1 transfer | Only A137's R1 split choice transfers; no SHAKE128 outcome is imported. The three bounded first queries do not exclude another split or partition. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -82,7 +86,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A138 claims above are governed by their newer JSON/Reader evidence and
+The A107--A142 claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

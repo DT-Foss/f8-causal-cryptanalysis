@@ -32,7 +32,11 @@ export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
   tests/test_shake_symbolic_r2_smt_reader.py \
   tests/test_shake_symbolic_r2_partition_reader.py \
   tests/test_shake_symbolic_split_frontier.py \
-  tests/test_shake_symbolic_r1_scaling_reader.py
+  tests/test_shake_symbolic_r1_scaling_reader.py \
+  tests/test_shake_symbolic_r1_partition_scaling_reader.py \
+  tests/test_shake_symbolic_r1_upper_partition_reader.py \
+  tests/test_shake_symbolic_r1_structural_partition_reader.py \
+  tests/test_shake256_symbolic_r1_scaling_reader.py
 CAUSAL_AUDIT="$(mktemp)"
 trap 'rm -f "$CAUSAL_AUDIT"' EXIT
 .venv/bin/python scripts/validate_causal_artifacts.py > "$CAUSAL_AUDIT"

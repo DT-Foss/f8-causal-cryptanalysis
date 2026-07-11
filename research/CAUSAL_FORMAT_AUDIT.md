@@ -71,10 +71,11 @@ present in the graph, but it cannot turn association into causation.
 
 ## Symbolic SHAKE Reader audit
 
-A133--A138 add six retained `.causal` graphs containing 24 explicit,
+A133--A142 add ten retained `.causal` graphs containing 36 explicit,
 provenance-linked operations. The graphs separately encode formula-space
 compression, direct Boolean-ring compilation, native-XOR suffix attachment,
 complete branch scheduling, representation selection, and independent model
-verification. Every production experiment reopens its graph with
-`CryptoCausalReader`; the repository-wide validator checks the canonical graph
-digest, triplet count, and provenance references again from disk.
+verification, followed by three partition-topology schedules and one
+cross-variant transfer boundary. Every production experiment reopens its graph
+with `CryptoCausalReader`; the repository-wide validator checks the canonical
+graph digest, triplet count, and provenance references again from disk.

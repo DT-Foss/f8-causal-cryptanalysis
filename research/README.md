@@ -138,7 +138,7 @@ The complete transfer track is one command:
 ```
 
 It reruns the PRESENT-128-through-SHAKE transfer sequence, including the
-A133--A138 symbolic Reader block, opens every causal artifact through the
+A133--A142 symbolic Reader block, opens every causal artifact through the
 repository validator, runs the focused tests, and writes
 `results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
@@ -248,6 +248,21 @@ minimum-decision interface; and A138 resolves the unpartitioned width-16 model.
 The common runner and manifest remain
 `scripts/reproduce_shake_solver_frontier.sh` and
 `results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS`.
+
+The complete SHAKE128 width-20 partition-topology comparison is reviewed in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PARTITION_TOPOLOGY_V1.md`. A139,
+A140, and A141 execute all 16 Low-4, all 16 Upper-4, and all 16 exact
+formula-graph Max-Cover-4 subspaces over the same A138 SMT. All 48 branches
+record `unknown` under the stored 60-second/five-worker limits. The A141 graph
+contains 28 edges, maximum coverage is 14 with 14 ties, and the independent
+lexicographic rule selects `[4,9,17,18]`.
+
+The orthogonal SHAKE256 transfer is reviewed in
+`reports/FULLROUND_CAUSAL_SHAKE256_SYMBOLIC_R1_TRANSFER_V1.md`. A142 transfers
+only the A137 R1 handover choice into independent monolithic SHAKE256 systems;
+widths 16/20/24 all record `unknown` under the stored 120-second single-thread
+limit. This is the exact direct-transfer representation/resource boundary, and
+the retained next test is a SHAKE256-specific split or disjoint partition.
 
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,

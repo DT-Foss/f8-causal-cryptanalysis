@@ -78,7 +78,7 @@ the committed JSON and write exploratory reruns to a separate worktree or copy.
 ```
 
 This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
-SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A138
+SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A142
 SHAKE observability, affine, algebraic, compression, symbolic, and partition
 frontiers. It then runs focused tests, opens all `.causal` files, and rewrites
 `research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
@@ -120,14 +120,15 @@ for SHAKE256. Each independent target must have zero survivors.
 ./scripts/reproduce_shake_solver_frontier.sh
 ```
 
-This tier regenerates A128--A138: the exact 24-round SHAKE128 Tseitin-CNF
+This tier regenerates A128--A142: the exact 24-round SHAKE128 Tseitin-CNF
 Reader at 4/8/12/16 coordinates, one complete `2^16` SHAKE128/256
 prefix-observability truth space per variant, and the corresponding exact
 128-coordinate affine-hull prefix Readers, restricted ANFs, and Boolean
 influence frontiers. It then executes shared-ANF compression, the direct
 symbolic R2 compiler, the native-XOR R2 Reader, the exhaustive width-16
 partition Reader, the R1/R2/R3 split frontier, and the monolithic R1 scaling
-Reader.
+Reader. It then executes three complete width-20 SHAKE128 R1 partition plans
+and the monolithic SHAKE256 R1 transfer at widths 16/20/24.
 The CNF production run requires the native Z3 CLI 4.15.4; focused tests skip
 the Z3-dependent execution gate when no CLI is installed, while the
 reproduction script fails closed. It writes:
@@ -144,12 +145,21 @@ reproduction script fails closed. It writes:
 - `shake_symbolic_r2_partition_reader_v1.json` and `.causal`;
 - `shake_symbolic_split_frontier_v1.json` and `.causal`;
 - `shake_symbolic_r1_scaling_reader_v1.json` and `.causal`;
+- `shake_symbolic_r1_partition_scaling_reader_v1.json` and `.causal`;
+- `shake_symbolic_r1_upper_partition_reader_v1.json` and `.causal`;
+- `shake_symbolic_r1_structural_partition_reader_v1.json` and `.causal`;
+- `shake256_symbolic_r1_scaling_reader_v1.json` and `.causal`;
 - `SHAKE_SOLVER_FRONTIER_SHA256SUMS`.
 
 The 16-coordinate canonical CNF and symbolic-R2 monolithic instances record
 their configured 120-second boundaries. The R1 interface reconstructs the same
 unpartitioned width-16 model; widths 20/24 and its blocked-model query record
-the next boundary. Complete truth-space and symbolic-compiler stages are
+the next boundary. A139--A141 each execute 16 disjoint width-20 branches and
+record all 16 as `unknown` at the retained 60-second/five-worker schedule;
+A142 records `unknown` for all three SHAKE256 widths at the retained
+120-second/single-thread schedule. These stored statuses are exact
+representation/resource boundaries, not general immunity claims. Complete
+truth-space and symbolic-compiler stages are
 independent of Z3. The width-512 symbolic compiler is memory-intensive because
 it retains exact coordinate-local formulas; the result artifact records the
 bounded representation and its independent gates.
