@@ -1,0 +1,746 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1"
+  },
+  "experiment": "chacha_subspace_multicoset_suite",
+  "figure": "research/results/v1/chacha_subspace_multicoset_smoke.png",
+  "parameters": {
+    "active_bits": [
+      8,
+      12,
+      32
+    ],
+    "cosets": 2,
+    "counter_bit": 0,
+    "orientations": [
+      "low",
+      "high"
+    ],
+    "pairing_control": "independent global repairing within each coset",
+    "rounds": 8,
+    "routes": 3,
+    "samples_per_coset": 64,
+    "seed_base": 130000,
+    "seeds": 3
+  },
+  "results": [
+    {
+      "active_bits": 8,
+      "bit_bias_effect_across_keys": {
+        "maximum": 0.3203938802083333,
+        "mean": 0.2702907986111111,
+        "minimum": 0.22843424479166669,
+        "sample_sd_ddof1": 0.04653114603987105,
+        "values": [
+          0.22843424479166669,
+          0.3203938802083333,
+          0.2620442708333333
+        ]
+      },
+      "bit_bias_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 1.0,
+        "mean_difference": 0.2702907986111111,
+        "seed_pairs": 3,
+        "two_sided_p": 0.25,
+        "upper_tail_p": 0.125
+      },
+      "cosets_per_key": 2,
+      "entropy_effect_across_keys": {
+        "maximum": 18.387629229122126,
+        "mean": 14.838915682733562,
+        "minimum": 10.983681767474778,
+        "sample_sd_ddof1": 3.7114788906994747,
+        "values": [
+          10.983681767474778,
+          15.145436051603781,
+          18.387629229122126
+        ]
+      },
+      "entropy_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 1.0,
+        "mean_difference": 14.838915682733562,
+        "seed_pairs": 3,
+        "two_sided_p": 0.25,
+        "upper_tail_p": 0.125
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "3c1464bc21273a3838460d31cce5718242733be90c7900676eaff8f82236fc3e",
+              "entropy_effect": 15.912090636257915,
+              "entropy_route_z": 90.69653283993645,
+              "mean_bit_bias_effect": 0.33056640625,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "92075d199470f4a83d985456fe985bdbf7ff640b6ce5cd226839b09f613489c0",
+              "entropy_effect": 6.055272898691641,
+              "entropy_route_z": 7.085602211925763,
+              "mean_bit_bias_effect": 0.12630208333333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 130000,
+          "mean_bit_bias_effect": 0.22843424479166669,
+          "mean_entropy_effect": 10.983681767474778,
+          "mean_entropy_route_z": 48.891067525931106
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "216f98e7f453c7ba7cceeec77f921ef52e229c5259b9d87cc3ccb639fbe3f92a",
+              "entropy_effect": 14.079229690294483,
+              "entropy_route_z": 16.02811726834623,
+              "mean_bit_bias_effect": 0.38199869791666663,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "0a5abe5d011ea5b21bc45c11f15c324f7f728db59cb1e7b4cfe205d84db57a3c",
+              "entropy_effect": 16.21164241291308,
+              "entropy_route_z": 21.368007950195718,
+              "mean_bit_bias_effect": 0.2587890625,
+              "samples": 64
+            }
+          ],
+          "key_seed": 131009,
+          "mean_bit_bias_effect": 0.3203938802083333,
+          "mean_entropy_effect": 15.145436051603781,
+          "mean_entropy_route_z": 18.698062609270973
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "394ac31b99c2f96aa364d5e8198c668faa0f9d7e367b50a89cadf6a8aa2ec248",
+              "entropy_effect": 15.858014240705046,
+              "entropy_route_z": 14.367755595655117,
+              "mean_bit_bias_effect": 0.27278645833333326,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "bfe5a3fbcfb09521df3785975c26adcbdb91af224fcb1663d7a8834b9eba68b4",
+              "entropy_effect": 20.917244217539206,
+              "entropy_route_z": 49.666369622518744,
+              "mean_bit_bias_effect": 0.25130208333333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 132018,
+          "mean_bit_bias_effect": 0.2620442708333333,
+          "mean_entropy_effect": 18.387629229122126,
+          "mean_entropy_route_z": 32.01706260908693
+        }
+      ],
+      "mean_route_z_across_cosets_and_keys": 33.20206424809634,
+      "orientation": "low",
+      "samples_per_coset": 64
+    },
+    {
+      "active_bits": 12,
+      "bit_bias_effect_across_keys": {
+        "maximum": 0.11287434895833337,
+        "mean": 0.09304470486111112,
+        "minimum": 0.058349609375,
+        "sample_sd_ddof1": 0.030149179763372398,
+        "values": [
+          0.10791015625,
+          0.058349609375,
+          0.11287434895833337
+        ]
+      },
+      "bit_bias_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 1.0,
+        "mean_difference": 0.09304470486111112,
+        "seed_pairs": 3,
+        "two_sided_p": 0.25,
+        "upper_tail_p": 0.125
+      },
+      "cosets_per_key": 2,
+      "entropy_effect_across_keys": {
+        "maximum": 3.1454857985971074,
+        "mean": 1.3475476663424406,
+        "minimum": -0.5053210055489217,
+        "sample_sd_ddof1": 1.8260231661833648,
+        "values": [
+          -0.5053210055489217,
+          1.4024782059791363,
+          3.1454857985971074
+        ]
+      },
+      "entropy_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.875,
+        "mean_difference": 1.3475476663424406,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.25
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "f8e779e5f946a649a189a075c8a9c9160633dd2343c7fa10c3a970b586917879",
+              "entropy_effect": -0.9196489122070943,
+              "entropy_route_z": -1.2036788656214958,
+              "mean_bit_bias_effect": -0.0146484375,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "36131fa8cfa85a67b110a320b033fc437cff9ab48af2cb82158c83cf9cb90106",
+              "entropy_effect": -0.09099309889074902,
+              "entropy_route_z": -0.19371999144261642,
+              "mean_bit_bias_effect": 0.23046875,
+              "samples": 64
+            }
+          ],
+          "key_seed": 130000,
+          "mean_bit_bias_effect": 0.10791015625,
+          "mean_entropy_effect": -0.5053210055489217,
+          "mean_entropy_route_z": -0.6986994285320561
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "cf280fd2ea5e8dcc22355a645de8e893de019947db88efcbbad69a8d08db7e80",
+              "entropy_effect": 0.12285403666115258,
+              "entropy_route_z": 0.1735539026719035,
+              "mean_bit_bias_effect": -0.00944010416666674,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "12e1bcb111bb054b7a07408a34face2367282fd75c2362e404454faf7452e681",
+              "entropy_effect": 2.68210237529712,
+              "entropy_route_z": 3.631721769198436,
+              "mean_bit_bias_effect": 0.12613932291666674,
+              "samples": 64
+            }
+          ],
+          "key_seed": 131009,
+          "mean_bit_bias_effect": 0.058349609375,
+          "mean_entropy_effect": 1.4024782059791363,
+          "mean_entropy_route_z": 1.9026378359351697
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "85e6842fb50121aac42659904e29f3a2b7b6048e76c7bf4b633eb9db07d7e1ab",
+              "entropy_effect": 4.475689323682872,
+              "entropy_route_z": 16.246781608840113,
+              "mean_bit_bias_effect": 0.00716145833333337,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "57db9fc9db26be10641581360d72b485c9f799a26347cf11ad4fc717b8dfe65c",
+              "entropy_effect": 1.8152822735113432,
+              "entropy_route_z": 2.221382275822425,
+              "mean_bit_bias_effect": 0.21858723958333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 132018,
+          "mean_bit_bias_effect": 0.11287434895833337,
+          "mean_entropy_effect": 3.1454857985971074,
+          "mean_entropy_route_z": 9.234081942331269
+        }
+      ],
+      "mean_route_z_across_cosets_and_keys": 3.4793401165781273,
+      "orientation": "low",
+      "samples_per_coset": 64
+    },
+    {
+      "active_bits": 32,
+      "bit_bias_effect_across_keys": {
+        "maximum": 0.096435546875,
+        "mean": 0.031331380208333336,
+        "minimum": -0.01057942708333337,
+        "sample_sd_ddof1": 0.05715330351037563,
+        "values": [
+          0.096435546875,
+          -0.01057942708333337,
+          0.00813802083333337
+        ]
+      },
+      "bit_bias_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.75,
+        "mean_difference": 0.031331380208333336,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.375
+      },
+      "cosets_per_key": 2,
+      "entropy_effect_across_keys": {
+        "maximum": 0.2226927235885512,
+        "mean": -0.05810513812531326,
+        "minimum": -0.5485353839849978,
+        "sample_sd_ddof1": 0.42621297591681195,
+        "values": [
+          0.2226927235885512,
+          -0.5485353839849978,
+          0.15152724602050682
+        ]
+      },
+      "entropy_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.5,
+        "mean_difference": -0.05810513812531326,
+        "seed_pairs": 3,
+        "two_sided_p": 1.0,
+        "upper_tail_p": 0.625
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "bd4a04ae653f3f0263a154cdba6b04b9dc3ecbf75784aded111e351f7e6b6af6",
+              "entropy_effect": 0.9499280906879903,
+              "entropy_route_z": 1.8342166690014197,
+              "mean_bit_bias_effect": 0.10579427083333326,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "d7b04eb0ce973ca55f2a6fa30a3a6d0cf9cd64c7d9535f19f88b0257e8cff082",
+              "entropy_effect": -0.504542643510888,
+              "entropy_route_z": -0.7150594756298772,
+              "mean_bit_bias_effect": 0.08707682291666674,
+              "samples": 64
+            }
+          ],
+          "key_seed": 130000,
+          "mean_bit_bias_effect": 0.096435546875,
+          "mean_entropy_effect": 0.2226927235885512,
+          "mean_entropy_route_z": 0.5595785966857713
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "05cb9c3912a69c6ca0dcfa3e5881393d46c216b361ea61cc506df3fd7a90a734",
+              "entropy_effect": -0.48289472648360743,
+              "entropy_route_z": -0.39259672680499325,
+              "mean_bit_bias_effect": 0.0234375,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "9cdacdb349c088b3fef18c02fa0458a1d140151d2d1cb1f84ea7f37a2aa56f73",
+              "entropy_effect": -0.6141760414863882,
+              "entropy_route_z": -1.840921408696881,
+              "mean_bit_bias_effect": -0.04459635416666674,
+              "samples": 64
+            }
+          ],
+          "key_seed": 131009,
+          "mean_bit_bias_effect": -0.01057942708333337,
+          "mean_entropy_effect": -0.5485353839849978,
+          "mean_entropy_route_z": -1.1167590677509371
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "01fe3443223dc39d2e7914e1e62b47f15fd0bbb020a5ee51bed3ee110b4ceb91",
+              "entropy_effect": 0.42606510371592776,
+              "entropy_route_z": 1.0456978570321704,
+              "mean_bit_bias_effect": -0.00944010416666663,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "5ad19619505b80e4d5241d2bc7cd40f2d9e7805f1cc74bba593592dc5f26c8d5",
+              "entropy_effect": -0.12301061167491412,
+              "entropy_route_z": -0.20023999991330343,
+              "mean_bit_bias_effect": 0.02571614583333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 132018,
+          "mean_bit_bias_effect": 0.00813802083333337,
+          "mean_entropy_effect": 0.15152724602050682,
+          "mean_entropy_route_z": 0.4227289285594335
+        }
+      ],
+      "mean_route_z_across_cosets_and_keys": -0.04481718083524413,
+      "orientation": "low",
+      "samples_per_coset": 64
+    },
+    {
+      "active_bits": 8,
+      "bit_bias_effect_across_keys": {
+        "maximum": 0.02473958333333337,
+        "mean": -0.024658203124999962,
+        "minimum": -0.08479817708333331,
+        "sample_sd_ddof1": 0.05555336338592502,
+        "values": [
+          0.02473958333333337,
+          -0.08479817708333331,
+          -0.013916015624999944
+        ]
+      },
+      "bit_bias_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.375,
+        "mean_difference": -0.024658203124999962,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.75
+      },
+      "cosets_per_key": 2,
+      "entropy_effect_across_keys": {
+        "maximum": 0.21198310564338385,
+        "mean": -0.09123435841750904,
+        "minimum": -0.3618845209819028,
+        "sample_sd_ddof1": 0.2883166402884297,
+        "values": [
+          0.21198310564338385,
+          -0.3618845209819028,
+          -0.12380165991400816
+        ]
+      },
+      "entropy_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.375,
+        "mean_difference": -0.09123435841750904,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.75
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "499d78bbcb1253183d1caadd5b96b81ed331770b1a06077ee6d89cb42f3fd0dd",
+              "entropy_effect": -0.13776627592901036,
+              "entropy_route_z": -0.15361183882472224,
+              "mean_bit_bias_effect": -0.01285807291666663,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "444605aff9c83a100d26537ae4b50a7cd87d6eee810ecef7ae2505414dafc568",
+              "entropy_effect": 0.5617324872157781,
+              "entropy_route_z": 1.796250071028514,
+              "mean_bit_bias_effect": 0.06233723958333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 130000,
+          "mean_bit_bias_effect": 0.02473958333333337,
+          "mean_entropy_effect": 0.21198310564338385,
+          "mean_entropy_route_z": 0.8213191161018959
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "9bc981f883bc468509a8fa92023a4e0a5f2676749a683d2b21d7f69e0fb9f765",
+              "entropy_effect": 0.4067010260508539,
+              "entropy_route_z": 0.9698844218492333,
+              "mean_bit_bias_effect": -0.08723958333333337,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "e94e3f08cd8aba8981a9d5e3a4d44362ed4848f29cbbd7cd8ebf06b959931267",
+              "entropy_effect": -1.1304700680146595,
+              "entropy_route_z": -2.2233190702414474,
+              "mean_bit_bias_effect": -0.08235677083333326,
+              "samples": 64
+            }
+          ],
+          "key_seed": 131009,
+          "mean_bit_bias_effect": -0.08479817708333331,
+          "mean_entropy_effect": -0.3618845209819028,
+          "mean_entropy_route_z": -0.626717324196107
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "8c9da1d36aa143187448342bd58e9c9e3ebd22937f5a94c368c9157b95093fa0",
+              "entropy_effect": -0.6416979816694663,
+              "entropy_route_z": -1.3219448604233537,
+              "mean_bit_bias_effect": -0.09261067708333326,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "9407de64eaa271ee3f7b86682e19a75b6737fadf32b43d910ff8261d6c252ec5",
+              "entropy_effect": 0.39409466184145003,
+              "entropy_route_z": 1.4197700378441438,
+              "mean_bit_bias_effect": 0.06477864583333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 132018,
+          "mean_bit_bias_effect": -0.013916015624999944,
+          "mean_entropy_effect": -0.12380165991400816,
+          "mean_entropy_route_z": 0.048912588710395055
+        }
+      ],
+      "mean_route_z_across_cosets_and_keys": 0.08117146020539463,
+      "orientation": "high",
+      "samples_per_coset": 64
+    },
+    {
+      "active_bits": 12,
+      "bit_bias_effect_across_keys": {
+        "maximum": 0.0673828125,
+        "mean": 0.012478298611111105,
+        "minimum": -0.035400390625,
+        "sample_sd_ddof1": 0.051750539805855526,
+        "values": [
+          0.005452473958333315,
+          0.0673828125,
+          -0.035400390625
+        ]
+      },
+      "bit_bias_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.75,
+        "mean_difference": 0.012478298611111105,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.375
+      },
+      "cosets_per_key": 2,
+      "entropy_effect_across_keys": {
+        "maximum": -0.26205518354970536,
+        "mean": -0.5659727783398457,
+        "minimum": -0.8060385745285998,
+        "sample_sd_ddof1": 0.2775558890632627,
+        "values": [
+          -0.26205518354970536,
+          -0.8060385745285998,
+          -0.6298245769412318
+        ]
+      },
+      "entropy_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.125,
+        "mean_difference": -0.5659727783398457,
+        "seed_pairs": 3,
+        "two_sided_p": 0.25,
+        "upper_tail_p": 1.0
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "c1e9c6f4e02593c7f768297cfab736e8c8fe3c4c70360d0062190eb345eec4ff",
+              "entropy_effect": -0.3867951172212827,
+              "entropy_route_z": -1.457296994640199,
+              "mean_bit_bias_effect": -0.02897135416666663,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "67f6add6a1aa30eb22bd5856f854aaa923eb7dc1e5e196262bcc5971e57af76c",
+              "entropy_effect": -0.13731524987812804,
+              "entropy_route_z": -0.6405369083113277,
+              "mean_bit_bias_effect": 0.03987630208333326,
+              "samples": 64
+            }
+          ],
+          "key_seed": 130000,
+          "mean_bit_bias_effect": 0.005452473958333315,
+          "mean_entropy_effect": -0.26205518354970536,
+          "mean_entropy_route_z": -1.0489169514757632
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "23cc777720c4ed87e8ad0eb4d20f351ab7889d44b0fe654d47829d36d484962b",
+              "entropy_effect": -0.5302788412923007,
+              "entropy_route_z": -2.0847108231895852,
+              "mean_bit_bias_effect": 0.15315755208333337,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "159b2abda061de7c431410008e65a844ddcb8a04207d6afce88402fb2563328d",
+              "entropy_effect": -1.081798307764899,
+              "entropy_route_z": -4.9008340779539585,
+              "mean_bit_bias_effect": -0.01839192708333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 131009,
+          "mean_bit_bias_effect": 0.0673828125,
+          "mean_entropy_effect": -0.8060385745285998,
+          "mean_entropy_route_z": -3.492772450571772
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "9919f8593504d85cba77c3324d54dc0bd0c65d262bd09e89e2331a3e6d83a53a",
+              "entropy_effect": -0.7344768229617387,
+              "entropy_route_z": -2.936817936072944,
+              "mean_bit_bias_effect": -0.00423177083333337,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "0f25d6624e73bb9a14cce05adedba6d0c9700d46aee3bf7b0c2833782df2f713",
+              "entropy_effect": -0.525172330920725,
+              "entropy_route_z": -0.6254325679627376,
+              "mean_bit_bias_effect": -0.06656901041666663,
+              "samples": 64
+            }
+          ],
+          "key_seed": 132018,
+          "mean_bit_bias_effect": -0.035400390625,
+          "mean_entropy_effect": -0.6298245769412318,
+          "mean_entropy_route_z": -1.7811252520178409
+        }
+      ],
+      "mean_route_z_across_cosets_and_keys": -2.1076048846884583,
+      "orientation": "high",
+      "samples_per_coset": 64
+    },
+    {
+      "active_bits": 32,
+      "bit_bias_effect_across_keys": {
+        "maximum": 0.044596354166666685,
+        "mean": 0.022840711805555598,
+        "minimum": -0.00911458333333326,
+        "sample_sd_ddof1": 0.02827084875578813,
+        "values": [
+          -0.00911458333333326,
+          0.03304036458333337,
+          0.044596354166666685
+        ]
+      },
+      "bit_bias_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.875,
+        "mean_difference": 0.022840711805555598,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.25
+      },
+      "cosets_per_key": 2,
+      "entropy_effect_across_keys": {
+        "maximum": 0.005795735648916889,
+        "mean": -0.4595008489304983,
+        "minimum": -0.9341338294731827,
+        "sample_sd_ddof1": 0.47003433179379783,
+        "values": [
+          0.005795735648916889,
+          -0.9341338294731827,
+          -0.45016445296722907
+        ]
+      },
+      "entropy_exact_test_across_keys": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.25,
+        "mean_difference": -0.4595008489304983,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.875
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "e0bbdd589b582a54d4caf2a4c5be41fbb54acf6371a4cc4661bbf274a42f1f0b",
+              "entropy_effect": 0.4375,
+              "entropy_route_z": 0.7334152305188973,
+              "mean_bit_bias_effect": 0.01285807291666674,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "dd94d41642b8132d8ca638e0a4a38d24869f4156339f54a0da1d50dd401b2566",
+              "entropy_effect": -0.4259085287021662,
+              "entropy_route_z": -2.858724086428421,
+              "mean_bit_bias_effect": -0.03108723958333326,
+              "samples": 64
+            }
+          ],
+          "key_seed": 130000,
+          "mean_bit_bias_effect": -0.00911458333333326,
+          "mean_entropy_effect": 0.005795735648916889,
+          "mean_entropy_route_z": -1.0626544279547618
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "c8a3a4356c87eb6a00ac3edfbdfe875181e39a18790449c83846e2c69c57b056",
+              "entropy_effect": -1.7922776044370892,
+              "entropy_route_z": -3.475400469676126,
+              "mean_bit_bias_effect": -0.01692708333333326,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "e2bd101d9dd9f8636ef7e97be2d6189b5bdf55021c3154ad949e8e70671f7bc2",
+              "entropy_effect": -0.0759900545092762,
+              "entropy_route_z": -0.3212157350144668,
+              "mean_bit_bias_effect": 0.0830078125,
+              "samples": 64
+            }
+          ],
+          "key_seed": 131009,
+          "mean_bit_bias_effect": 0.03304036458333337,
+          "mean_entropy_effect": -0.9341338294731827,
+          "mean_entropy_route_z": -1.8983081023452963
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_multiset_sha256": "202f94f21eb16ce318d8b71110f2276b7e98342286027c12fe63f77b9543acb2",
+              "entropy_effect": -0.9259085287021662,
+              "entropy_route_z": -0.860184486911633,
+              "mean_bit_bias_effect": 0.02880859375,
+              "samples": 64
+            },
+            {
+              "coset": 1,
+              "counter_multiset_sha256": "1c5afa661a7553f4af00b5008b57a358dbb7046f0f948fd5fd2c2b2a0fd3e8eb",
+              "entropy_effect": 0.025579622767708088,
+              "entropy_route_z": 0.04132931785718409,
+              "mean_bit_bias_effect": 0.06038411458333337,
+              "samples": 64
+            }
+          ],
+          "key_seed": 132018,
+          "mean_bit_bias_effect": 0.044596354166666685,
+          "mean_entropy_effect": -0.45016445296722907,
+          "mean_entropy_route_z": -0.40942758452722444
+        }
+      ],
+      "mean_route_z_across_cosets_and_keys": -1.1234633716090943,
+      "orientation": "high",
+      "samples_per_coset": 64
+    }
+  ],
+  "schema_version": 1,
+  "scope_note": "Each effect is first estimated within a fixed-dimension coset, then averaged across cosets and tested across keys."
+}

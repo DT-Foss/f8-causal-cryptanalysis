@@ -1,0 +1,300 @@
+{
+  "causal": {
+    "bytes": 5640,
+    "explicit_triplets": 128,
+    "file_sha256": "e028cdb904ed99e6475b350dba60cb4622f3446e1fee43f3f9b02ca81ec17b68",
+    "graph_sha256": "45bd5a4f903dc496390dc4f9f6914924a3cdb29612483dc9f5c3c4b867bdda3b",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/chacha_causal_contrast_signature_bvn_core_pooled_r2r20_full_byteflip_v1.causal",
+    "triplets": 128
+  },
+  "chance": 0.5,
+  "overall_accuracy": 1.0,
+  "parameters": {
+    "bits": [
+      0,
+      2
+    ],
+    "counter_mode": "random",
+    "difference_mode": "byte",
+    "feature_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "feature_normalization": "none",
+    "holdout_bits": [
+      1,
+      3
+    ],
+    "holdout_counter_mode": "random",
+    "output_view": "core",
+    "pairs_per_seed": 10000,
+    "repair_route_seed_strategy": "shared_per_seed_input_difference_across_round_classes",
+    "repairing_routes": 16,
+    "rounds": [
+      2,
+      20
+    ],
+    "route_mode": "bvn",
+    "train_seeds": 5,
+    "variance_mode": "pooled"
+  },
+  "per_class": {
+    "r2": {
+      "accuracy": 1.0,
+      "correct": 10,
+      "total": 10
+    },
+    "r20": {
+      "accuracy": 1.0,
+      "correct": 10,
+      "total": 10
+    }
+  },
+  "schema": "chacha-causal-contrast-signature-v1",
+  "scope": "direct ChaCha output causal contrast profile and reader-only reverse reduced-round class query; not key recovery",
+  "trials": [
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -3182.159117033445,
+        "r20": -3400.281742759691
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -140.21232336244623,
+        "r20": -205.5993456792449
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -668.3128481735167,
+        "r20": -802.4535367466856
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -16.037274404446787,
+        "r20": -65.80766260873128
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -931.148585509927,
+        "r20": -1056.8536567833473
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -444.52013749844957,
+        "r20": -523.2652294700194
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -1056.3696934808117,
+        "r20": -1202.1716242817088
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -3087.840333869596,
+        "r20": -3230.0894851256944
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -3834.216914779678,
+        "r20": -4039.1095540481656
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -1244.0059951598523,
+        "r20": -1323.2890338626726
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 99.73618507070329,
+        "r20": 142.97516637250533
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 100.86361667857437,
+        "r20": 143.40742886755248
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 90.85546642892979,
+        "r20": 136.17229993700437
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 94.61523884586552,
+        "r20": 143.0124362791025
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 98.35541653782369,
+        "r20": 143.56787309839507
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 87.85472028502255,
+        "r20": 133.0445340518628
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 101.19111994397,
+        "r20": 145.4052056835211
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 93.8907636862227,
+        "r20": 140.16333317693235
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 97.02092380802313,
+        "r20": 141.37421966271978
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 93.47978459128383,
+        "r20": 138.6133107719171
+      }
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "experiment": "mlkem_mutation_profile_suite",
+  "parameters": {
+    "operations": 128,
+    "output": "research/results/v1/mlkem_mutation_profile.json",
+    "variants": [
+      "mlkem512",
+      "mlkem768",
+      "mlkem1024"
+    ]
+  },
+  "results": [
+    {
+      "cases": {
+        "u_first_packing_group_swap": {
+          "casi_amplified": 1.036220209894757,
+          "casi_operational_max": 1.036220209894757,
+          "casi_standard": 1.0,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0537109375,
+          "rows": 3072,
+          "unchanged_shared_secrets": 0
+        },
+        "u_lsb_flip": {
+          "casi_amplified": 1.3571428571428572,
+          "casi_operational_max": 1.3571428571428572,
+          "casi_standard": 1.3571428571428572,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0537109375,
+          "rows": 3072,
+          "unchanged_shared_secrets": 0
+        },
+        "u_msb_flip": {
+          "casi_amplified": 1.2857142857142858,
+          "casi_operational_max": 1.2857142857142858,
+          "casi_standard": 1.2857142857142858,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.052734375,
+          "rows": 3072,
+          "unchanged_shared_secrets": 0
+        },
+        "v_lsb_flip": {
+          "casi_amplified": 1.2857142857142858,
+          "casi_operational_max": 1.2857142857142858,
+          "casi_standard": 1.2857142857142858,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0537109375,
+          "rows": 3072,
+          "unchanged_shared_secrets": 0
+        },
+        "v_zeroed": {
+          "casi_amplified": 11618.0,
+          "casi_operational_max": 11618.0,
+          "casi_standard": 11618.0,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 1.0,
+          "rows": 3072,
+          "unchanged_shared_secrets": 0
+        },
+        "valid": {
+          "casi_amplified": 1.2857142857142858,
+          "casi_operational_max": 1.2857142857142858,
+          "casi_standard": 1.2857142857142858,
+          "changed_shared_secret_rate": 0.0,
+          "f8_output_rate": 0.0537109375,
+          "rows": 3072,
+          "unchanged_shared_secrets": 128
+        }
+      },
+      "operations": 128,
+      "scope_note": "Mutation handling and format measurement only; no oracle, attack, or security claim.",
+      "variant": "mlkem512"
+    },
+    {
+      "cases": {
+        "u_first_packing_group_swap": {
+          "casi_amplified": 1.035135961677296,
+          "casi_operational_max": 1.035135961677296,
+          "casi_standard": 0.9880952380952381,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0517578125,
+          "rows": 4352,
+          "unchanged_shared_secrets": 0
+        },
+        "u_lsb_flip": {
+          "casi_amplified": 1.025,
+          "casi_operational_max": 1.025,
+          "casi_standard": 1.025,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0556640625,
+          "rows": 4352,
+          "unchanged_shared_secrets": 0
+        },
+        "u_msb_flip": {
+          "casi_amplified": 1.0125,
+          "casi_operational_max": 1.0125,
+          "casi_standard": 1.0125,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0576171875,
+          "rows": 4352,
+          "unchanged_shared_secrets": 0
+        },
+        "v_lsb_flip": {
+          "casi_amplified": 1.025,
+          "casi_operational_max": 1.025,
+          "casi_standard": 1.025,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0556640625,
+          "rows": 4352,
+          "unchanged_shared_secrets": 0
+        },
+        "v_zeroed": {
+          "casi_amplified": 10285.92857142857,
+          "casi_operational_max": 10285.92857142857,
+          "casi_standard": 10285.92857142857,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 1.0,
+          "rows": 4352,
+          "unchanged_shared_secrets": 0
+        },
+        "valid": {
+          "casi_amplified": 1.0186335403726707,
+          "casi_operational_max": 1.0186335403726707,
+          "casi_standard": 1.0186335403726707,
+          "changed_shared_secret_rate": 0.0,
+          "f8_output_rate": 0.0556640625,
+          "rows": 4352,
+          "unchanged_shared_secrets": 128
+        }
+      },
+      "operations": 128,
+      "scope_note": "Mutation handling and format measurement only; no oracle, attack, or security claim.",
+      "variant": "mlkem768"
+    },
+    {
+      "cases": {
+        "u_first_packing_group_swap": {
+          "casi_amplified": 1.023391812865497,
+          "casi_operational_max": 1.023391812865497,
+          "casi_standard": 1.023391812865497,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0439453125,
+          "rows": 6272,
+          "unchanged_shared_secrets": 0
+        },
+        "u_lsb_flip": {
+          "casi_amplified": 1.0256966565095782,
+          "casi_operational_max": 1.0256966565095782,
+          "casi_standard": 0.9829545454545454,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0390625,
+          "rows": 6272,
+          "unchanged_shared_secrets": 0
+        },
+        "u_msb_flip": {
+          "casi_amplified": 1.0252993285019094,
+          "casi_operational_max": 1.0252993285019094,
+          "casi_standard": 0.9829545454545454,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.037109375,
+          "rows": 6272,
+          "unchanged_shared_secrets": 0
+        },
+        "v_lsb_flip": {
+          "casi_amplified": 1.026008290578598,
+          "casi_operational_max": 1.026008290578598,
+          "casi_standard": 0.9943181818181818,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 0.0390625,
+          "rows": 6272,
+          "unchanged_shared_secrets": 0
+        },
+        "v_zeroed": {
+          "casi_amplified": 14561.42857142857,
+          "casi_operational_max": 14561.42857142857,
+          "casi_standard": 14561.42857142857,
+          "changed_shared_secret_rate": 1.0,
+          "f8_output_rate": 1.0,
+          "rows": 6272,
+          "unchanged_shared_secrets": 0
+        },
+        "valid": {
+          "casi_amplified": 1.0001462462269077,
+          "casi_operational_max": 1.0001462462269077,
+          "casi_standard": 0.87,
+          "changed_shared_secret_rate": 0.0,
+          "f8_output_rate": 0.0390625,
+          "rows": 6272,
+          "unchanged_shared_secrets": 128
+        }
+      },
+      "operations": 128,
+      "scope_note": "Mutation handling and format measurement only; no oracle, attack, or security claim.",
+      "variant": "mlkem1024"
+    }
+  ],
+  "schema_version": 1
+}

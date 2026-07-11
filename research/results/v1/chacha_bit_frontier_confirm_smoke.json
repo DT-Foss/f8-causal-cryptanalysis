@@ -1,0 +1,869 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1"
+  },
+  "experiment": "chacha_bit_round_frontier_screen",
+  "metrics": [
+    "entropy_deficit_sum",
+    "mean_reduced_byte_chi2",
+    "mean_bit_bias_chi2",
+    "mean_adjacent_quantized_mi",
+    "maximum_adjacent_quantized_mi",
+    "zlib_savings"
+  ],
+  "parameters": {
+    "base_counter_distribution": "uniform uint32 without collision per seed",
+    "counter_bits": [
+      0,
+      15,
+      31
+    ],
+    "pairs": 1000,
+    "rounds": [
+      3
+    ],
+    "routes": 3,
+    "seeds": 3,
+    "shift": 5
+  },
+  "results": [
+    {
+      "all_entropy_effects_positive": true,
+      "counter_bit": 0,
+      "entropy_deficit_sum_p": 0.25,
+      "entropy_deficit_sum_p_bh_q": 0.375,
+      "maximum_absolute_mean_route_z": 1.937157386294164,
+      "maximum_adjacent_quantized_mi_p": 0.25,
+      "maximum_adjacent_quantized_mi_p_bh_q": 0.375,
+      "mean_adjacent_quantized_mi_p": 0.75,
+      "mean_adjacent_quantized_mi_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "mean_reduced_byte_chi2_p": 0.25,
+      "mean_reduced_byte_chi2_p_bh_q": 0.375,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 12.771505583571237,
+            "mean": 12.670106990196807,
+            "minimum": 12.609576292404205,
+            "sample_sd_ddof1": 0.08836239302684062,
+            "values": [
+              12.771505583571237,
+              12.629239094614977,
+              12.609576292404205
+            ]
+          },
+          "effect": {
+            "maximum": 0.17519542292507673,
+            "mean": 0.11215076727845208,
+            "minimum": 0.03989019823048956,
+            "sample_sd_ddof1": 0.06812177149985825,
+            "values": [
+              0.12136668067978995,
+              0.03989019823048956,
+              0.17519542292507673
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.11215076727845208,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 0.125
+          },
+          "route_z": {
+            "maximum": 3.0510395896697506,
+            "mean": 1.7273276547786143,
+            "minimum": 0.3041680156532418,
+            "sample_sd_ddof1": 1.3761334402749896,
+            "values": [
+              3.0510395896697506,
+              0.3041680156532418,
+              1.8267753590128497
+            ]
+          }
+        },
+        "maximum_adjacent_quantized_mi": {
+          "actual": {
+            "maximum": 0.057962764778177536,
+            "mean": 0.053109580617890485,
+            "minimum": 0.05058207030153507,
+            "sample_sd_ddof1": 0.004204192176940288,
+            "values": [
+              0.05058207030153507,
+              0.05078390677395887,
+              0.057962764778177536
+            ]
+          },
+          "effect": {
+            "maximum": -0.0006327694766285127,
+            "mean": -0.004623488506732748,
+            "minimum": -0.009864140195991175,
+            "sample_sd_ddof1": 0.00474091764101548,
+            "values": [
+              -0.009864140195991175,
+              -0.0006327694766285127,
+              -0.0033735558475785563
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.125,
+            "mean_difference": -0.004623488506732748,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.15340599162017218,
+            "mean": -1.937157386294164,
+            "minimum": -4.912978862106223,
+            "sample_sd_ddof1": 2.5940618315925112,
+            "values": [
+              -4.912978862106223,
+              -0.15340599162017218,
+              -0.7450873051560976
+            ]
+          }
+        },
+        "mean_adjacent_quantized_mi": {
+          "actual": {
+            "maximum": 0.03584629572036021,
+            "mean": 0.03548892975644236,
+            "minimum": 0.03490353290273657,
+            "sample_sd_ddof1": 0.0005110763128893065,
+            "values": [
+              0.03490353290273657,
+              0.035716960646230304,
+              0.03584629572036021
+            ]
+          },
+          "effect": {
+            "maximum": 0.0004141441716087324,
+            "mean": -0.0005035074794056867,
+            "minimum": -0.0015311958930311897,
+            "sample_sd_ddof1": 0.000977326996771173,
+            "values": [
+              -0.0015311958930311897,
+              0.0004141441716087324,
+              -0.00039347071679460277
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.375,
+            "mean_difference": -0.0005035074794056867,
+            "seed_pairs": 3,
+            "two_sided_p": 0.75,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 1.180807342374796,
+            "mean": -1.9005406713880824,
+            "minimum": -6.478317837766502,
+            "sample_sd_ddof1": 4.042898067954084,
+            "values": [
+              -6.478317837766502,
+              1.180807342374796,
+              -0.4041115187725409
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 1.2776875,
+            "mean": 1.0944895833333332,
+            "minimum": 0.9607890625,
+            "sample_sd_ddof1": 0.1641452072653863,
+            "values": [
+              1.2776875,
+              1.0449921875000001,
+              0.9607890625
+            ]
+          },
+          "effect": {
+            "maximum": 0.26947916666666694,
+            "mean": 0.1085555555555557,
+            "minimum": -0.052312499999999984,
+            "sample_sd_ddof1": 0.16089584052685338,
+            "values": [
+              0.26947916666666694,
+              0.10850000000000015,
+              -0.052312499999999984
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.875,
+            "mean_difference": 0.1085555555555557,
+            "seed_pairs": 3,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 4.311154567845023,
+            "mean": 1.8323557524439813,
+            "minimum": -0.7970376767976336,
+            "sample_sd_ddof1": 2.557423714472279,
+            "values": [
+              4.311154567845023,
+              1.9829503662845542,
+              -0.7970376767976336
+            ]
+          }
+        },
+        "mean_reduced_byte_chi2": {
+          "actual": {
+            "maximum": 1.0233098039215687,
+            "mean": 1.0123712418300654,
+            "minimum": 1.0032313725490196,
+            "sample_sd_ddof1": 0.010159346606220988,
+            "values": [
+              1.0233098039215687,
+              1.010572549019608,
+              1.0032313725490196
+            ]
+          },
+          "effect": {
+            "maximum": 0.01846797385620902,
+            "mean": 0.013221786492374746,
+            "minimum": 0.009024836601307484,
+            "sample_sd_ddof1": 0.004808210140938227,
+            "values": [
+              0.01846797385620902,
+              0.009024836601307484,
+              0.012172549019607737
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.013221786492374746,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 0.125
+          },
+          "route_z": {
+            "maximum": 2.275747895732694,
+            "mean": 1.718351367980733,
+            "minimum": 0.6531836709412366,
+            "sample_sd_ddof1": 0.922795934192928,
+            "values": [
+              2.226122537268268,
+              0.6531836709412366,
+              2.275747895732694
+            ]
+          }
+        },
+        "zlib_savings": {
+          "actual": {
+            "maximum": -0.0004062499999999414,
+            "mean": -0.0004062499999999414,
+            "minimum": -0.0004062499999999414,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              -0.0004062499999999414,
+              -0.0004062499999999414,
+              -0.0004062499999999414
+            ]
+          },
+          "effect": {
+            "maximum": 0.0,
+            "mean": 0.0,
+            "minimum": 0.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.0,
+            "seed_pairs": 3,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": 0.0,
+            "mean": 0.0,
+            "minimum": 0.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "rounds": 3,
+      "zlib_savings_p": 1.0,
+      "zlib_savings_p_bh_q": 1.0
+    },
+    {
+      "all_entropy_effects_positive": false,
+      "counter_bit": 15,
+      "entropy_deficit_sum_p": 0.75,
+      "entropy_deficit_sum_p_bh_q": 0.75,
+      "maximum_absolute_mean_route_z": 3.9746542203176354,
+      "maximum_adjacent_quantized_mi_p": 0.75,
+      "maximum_adjacent_quantized_mi_p_bh_q": 0.75,
+      "mean_adjacent_quantized_mi_p": 0.5,
+      "mean_adjacent_quantized_mi_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 1.0,
+      "mean_bit_bias_chi2_p_bh_q": 1.0,
+      "mean_reduced_byte_chi2_p": 0.75,
+      "mean_reduced_byte_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 13.043174130101665,
+            "mean": 12.662077787703096,
+            "minimum": 12.393263129343172,
+            "sample_sd_ddof1": 0.3391923637917611,
+            "values": [
+              13.043174130101665,
+              12.393263129343172,
+              12.549796103664448
+            ]
+          },
+          "effect": {
+            "maximum": 0.37802883238126306,
+            "mean": 0.08910696337544977,
+            "minimum": -0.25045993198694916,
+            "sample_sd_ddof1": 0.31729043596563855,
+            "values": [
+              0.37802883238126306,
+              -0.25045993198694916,
+              0.1397519897320354
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.08910696337544977,
+            "seed_pairs": 3,
+            "two_sided_p": 0.75,
+            "upper_tail_p": 0.375
+          },
+          "route_z": {
+            "maximum": 1.2895918211187116,
+            "mean": -0.14865905859138953,
+            "minimum": -2.4548401227964995,
+            "sample_sd_ddof1": 2.01746617060146,
+            "values": [
+              1.2895918211187116,
+              -2.4548401227964995,
+              0.7192711259036193
+            ]
+          }
+        },
+        "maximum_adjacent_quantized_mi": {
+          "actual": {
+            "maximum": 0.05790208704386932,
+            "mean": 0.05395040835331721,
+            "minimum": 0.05121701456256424,
+            "sample_sd_ddof1": 0.0035050980147329084,
+            "values": [
+              0.05273212345351806,
+              0.05121701456256424,
+              0.05790208704386932
+            ]
+          },
+          "effect": {
+            "maximum": 0.004989207050853907,
+            "mean": -0.0012294678849937245,
+            "minimum": -0.005852458815745282,
+            "sample_sd_ddof1": 0.005594201039812126,
+            "values": [
+              -0.0028251518900897984,
+              -0.005852458815745282,
+              0.004989207050853907
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.375,
+            "mean_difference": -0.0012294678849937245,
+            "seed_pairs": 3,
+            "two_sided_p": 0.75,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 1.1462487889369215,
+            "mean": -0.380607941662286,
+            "minimum": -1.638898827150213,
+            "sample_sd_ddof1": 1.4118631380977458,
+            "values": [
+              -0.6491737867735664,
+              -1.638898827150213,
+              1.1462487889369215
+            ]
+          }
+        },
+        "mean_adjacent_quantized_mi": {
+          "actual": {
+            "maximum": 0.036455482931857,
+            "mean": 0.035603829962763955,
+            "minimum": 0.035029459267954956,
+            "sample_sd_ddof1": 0.000752362922548851,
+            "values": [
+              0.03532654768847992,
+              0.035029459267954956,
+              0.036455482931857
+            ]
+          },
+          "effect": {
+            "maximum": 0.001352260353195675,
+            "mean": -0.0005620934330402977,
+            "minimum": -0.0016764618247790547,
+            "sample_sd_ddof1": 0.001665314379147567,
+            "values": [
+              -0.0013620788275375134,
+              -0.0016764618247790547,
+              0.001352260353195675
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.0005620934330402977,
+            "seed_pairs": 3,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.875
+          },
+          "route_z": {
+            "maximum": 1.204629171552786,
+            "mean": -3.9746542203176354,
+            "minimum": -7.235661626874318,
+            "sample_sd_ddof1": 4.535357125671236,
+            "values": [
+              -7.235661626874318,
+              -5.892930205631375,
+              1.204629171552786
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 1.2166015625,
+            "mean": 1.0557916666666667,
+            "minimum": 0.9718906250000001,
+            "sample_sd_ddof1": 0.1393093306995422,
+            "values": [
+              1.2166015625,
+              0.9788828125,
+              0.9718906250000001
+            ]
+          },
+          "effect": {
+            "maximum": 0.17940625,
+            "mean": 0.03737500000000001,
+            "minimum": -0.056479166666666636,
+            "sample_sd_ddof1": 0.12510497978850377,
+            "values": [
+              0.17940625,
+              -0.010802083333333323,
+              -0.056479166666666636
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.625,
+            "mean_difference": 0.03737500000000001,
+            "seed_pairs": 3,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 4.4724766374432665,
+            "mean": 1.1177941018609463,
+            "minimum": -0.881811700625408,
+            "sample_sd_ddof1": 2.9230592905769255,
+            "values": [
+              4.4724766374432665,
+              -0.23728263123501905,
+              -0.881811700625408
+            ]
+          }
+        },
+        "mean_reduced_byte_chi2": {
+          "actual": {
+            "maximum": 1.033035294117647,
+            "mean": 1.006002614379085,
+            "minimum": 0.981521568627451,
+            "sample_sd_ddof1": 0.025851481688140318,
+            "values": [
+              1.033035294117647,
+              0.981521568627451,
+              1.0034509803921567
+            ]
+          },
+          "effect": {
+            "maximum": 0.023926797385620757,
+            "mean": 0.006748583877995558,
+            "minimum": -0.022703267973856134,
+            "sample_sd_ddof1": 0.02562366869733766,
+            "values": [
+              0.023926797385620757,
+              -0.022703267973856134,
+              0.01902222222222205
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.006748583877995558,
+            "seed_pairs": 3,
+            "two_sided_p": 0.75,
+            "upper_tail_p": 0.375
+          },
+          "route_z": {
+            "maximum": 2.019615653184463,
+            "mean": 0.23161899438129221,
+            "minimum": -2.452271512108139,
+            "sample_sd_ddof1": 2.3667304545551326,
+            "values": [
+              1.1275128420675529,
+              -2.452271512108139,
+              2.019615653184463
+            ]
+          }
+        },
+        "zlib_savings": {
+          "actual": {
+            "maximum": -0.0004062499999999414,
+            "mean": -0.0004062499999999414,
+            "minimum": -0.0004062499999999414,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              -0.0004062499999999414,
+              -0.0004062499999999414,
+              -0.0004062499999999414
+            ]
+          },
+          "effect": {
+            "maximum": 0.0,
+            "mean": 0.0,
+            "minimum": 0.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.0,
+            "seed_pairs": 3,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": 0.0,
+            "mean": 0.0,
+            "minimum": 0.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "rounds": 3,
+      "zlib_savings_p": 1.0,
+      "zlib_savings_p_bh_q": 1.0
+    },
+    {
+      "all_entropy_effects_positive": true,
+      "counter_bit": 31,
+      "entropy_deficit_sum_p": 0.25,
+      "entropy_deficit_sum_p_bh_q": 0.375,
+      "maximum_absolute_mean_route_z": 8.505682895803746,
+      "maximum_adjacent_quantized_mi_p": 0.25,
+      "maximum_adjacent_quantized_mi_p_bh_q": 0.375,
+      "mean_adjacent_quantized_mi_p": 0.75,
+      "mean_adjacent_quantized_mi_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.25,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "mean_reduced_byte_chi2_p": 0.25,
+      "mean_reduced_byte_chi2_p_bh_q": 0.375,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 12.954579862917353,
+            "mean": 12.83906766709135,
+            "minimum": 12.685082802494021,
+            "sample_sd_ddof1": 0.13880661394903054,
+            "values": [
+              12.954579862917353,
+              12.877540335862673,
+              12.685082802494021
+            ]
+          },
+          "effect": {
+            "maximum": 0.4847852239652717,
+            "mean": 0.3321299368734743,
+            "minimum": 0.17451590594411215,
+            "sample_sd_ddof1": 0.1551940858462841,
+            "values": [
+              0.4847852239652717,
+              0.33708868071103915,
+              0.17451590594411215
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.3321299368734743,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 0.125
+          },
+          "route_z": {
+            "maximum": 15.372418265806001,
+            "mean": 8.505682895803746,
+            "minimum": 0.9800841056177397,
+            "sample_sd_ddof1": 7.218753105590512,
+            "values": [
+              15.372418265806001,
+              9.164546315987495,
+              0.9800841056177397
+            ]
+          }
+        },
+        "maximum_adjacent_quantized_mi": {
+          "actual": {
+            "maximum": 0.05317135507128687,
+            "mean": 0.05059235024706196,
+            "minimum": 0.04638729445829068,
+            "sample_sd_ddof1": 0.003672723908038586,
+            "values": [
+              0.04638729445829068,
+              0.05317135507128687,
+              0.052218401211608347
+            ]
+          },
+          "effect": {
+            "maximum": -0.0012445693173982406,
+            "mean": -0.00478121704952784,
+            "minimum": -0.010849529051267605,
+            "sample_sd_ddof1": 0.005279280808294681,
+            "values": [
+              -0.010849529051267605,
+              -0.0012445693173982406,
+              -0.002249552779917674
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.125,
+            "mean_difference": -0.00478121704952784,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.4941994040877858,
+            "mean": -1.0619235128718485,
+            "minimum": -1.8925940358649493,
+            "sample_sd_ddof1": 0.7353451564434491,
+            "values": [
+              -1.8925940358649493,
+              -0.4941994040877858,
+              -0.7989770986628101
+            ]
+          }
+        },
+        "mean_adjacent_quantized_mi": {
+          "actual": {
+            "maximum": 0.03666695078858317,
+            "mean": 0.035400449417236586,
+            "minimum": 0.03355154692424727,
+            "sample_sd_ddof1": 0.0016373236116747954,
+            "values": [
+              0.03355154692424727,
+              0.03598285053887932,
+              0.03666695078858317
+            ]
+          },
+          "effect": {
+            "maximum": 0.0009011420177976459,
+            "mean": -0.0010009256968084347,
+            "minimum": -0.003246727213617004,
+            "sample_sd_ddof1": 0.0020951896060527613,
+            "values": [
+              -0.003246727213617004,
+              -0.0006571918946059463,
+              0.0009011420177976459
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 0.375,
+            "mean_difference": -0.0010009256968084347,
+            "seed_pairs": 3,
+            "two_sided_p": 0.75,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 3.495084267254958,
+            "mean": -0.414534739498734,
+            "minimum": -3.884394796064276,
+            "sample_sd_ddof1": 3.7093420929047065,
+            "values": [
+              -3.884394796064276,
+              -0.8542936896868842,
+              3.495084267254958
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 1.2985078125,
+            "mean": 1.2053515625,
+            "minimum": 1.144796875,
+            "sample_sd_ddof1": 0.08187740521574484,
+            "values": [
+              1.2985078125,
+              1.1727500000000002,
+              1.144796875
+            ]
+          },
+          "effect": {
+            "maximum": 0.2932083333333335,
+            "mean": 0.2116736111111112,
+            "minimum": 0.16788541666666656,
+            "sample_sd_ddof1": 0.07067572871869801,
+            "values": [
+              0.2932083333333335,
+              0.1739270833333335,
+              0.16788541666666656
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.2116736111111112,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 0.125
+          },
+          "route_z": {
+            "maximum": 6.3780392907988155,
+            "mean": 3.442400665270286,
+            "minimum": 1.8844933268403068,
+            "sample_sd_ddof1": 2.543933265071948,
+            "values": [
+              6.3780392907988155,
+              1.8844933268403068,
+              2.0646693781717356
+            ]
+          }
+        },
+        "mean_reduced_byte_chi2": {
+          "actual": {
+            "maximum": 1.035043137254902,
+            "mean": 1.026635294117647,
+            "minimum": 1.0169411764705882,
+            "sample_sd_ddof1": 0.009119272045790563,
+            "values": [
+              1.035043137254902,
+              1.027921568627451,
+              1.0169411764705882
+            ]
+          },
+          "effect": {
+            "maximum": 0.037678431372549004,
+            "mean": 0.0285664488017429,
+            "minimum": 0.020183006535947734,
+            "sample_sd_ddof1": 0.008770436179877841,
+            "values": [
+              0.037678431372549004,
+              0.027837908496731956,
+              0.020183006535947734
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.0285664488017429,
+            "seed_pairs": 3,
+            "two_sided_p": 0.25,
+            "upper_tail_p": 0.125
+          },
+          "route_z": {
+            "maximum": 7.615449633844226,
+            "mean": 5.044407685972627,
+            "minimum": 1.080847371552028,
+            "sample_sd_ddof1": 3.482755695203268,
+            "values": [
+              6.436926052521625,
+              7.615449633844226,
+              1.080847371552028
+            ]
+          }
+        },
+        "zlib_savings": {
+          "actual": {
+            "maximum": -0.0004062499999999414,
+            "mean": -0.0004062499999999414,
+            "minimum": -0.0004062499999999414,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              -0.0004062499999999414,
+              -0.0004062499999999414,
+              -0.0004062499999999414
+            ]
+          },
+          "effect": {
+            "maximum": 0.0,
+            "mean": 0.0,
+            "minimum": 0.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 8,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.0,
+            "seed_pairs": 3,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": 0.0,
+            "mean": 0.0,
+            "minimum": 0.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "rounds": 3,
+      "zlib_savings_p": 1.0,
+      "zlib_savings_p_bh_q": 1.0
+    }
+  ],
+  "schema_version": 1,
+  "scope_note": "This is a discovery screen. Configurations require an independent 10-seed confirmation before interpretation. It measures a chosen-input reduced-round differential, not standard ChaCha20 security."
+}

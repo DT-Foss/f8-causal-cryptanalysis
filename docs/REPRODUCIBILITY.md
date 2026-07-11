@@ -1,0 +1,193 @@
+# Reproducibility
+
+## Supported environments
+
+The reference publication was validated on Apple Silicon/macOS with Python
+3.13, NumPy 1.26.4, SciPy 1.17.1, Apple Clang, and the native POSIX threading
+path. The Python package supports Python 3.10 or newer. CI exercises Linux with
+GCC/Clang-compatible C11 and the pinned Python dependencies.
+
+The native SHAKE Reader requires:
+
+- a C11 compiler available as `cc`, `clang`, or `gcc`;
+- POSIX threads;
+- a 64-bit target;
+- no platform-specific vector intrinsic.
+
+## Clean installation
+
+```bash
+git clone https://github.com/DT-Foss/f8-causal-cryptanalysis.git
+cd f8-causal-cryptanalysis
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -e .
+```
+
+`requirements.txt` pins the direct research environment. `pyproject.toml`
+retains broader package bounds for integration. The installed import and CLI
+remain `arx_carry_leak` / `arx-f8` to preserve artifact and script
+compatibility; the publication repository is branded F8-Causal.
+
+## Evidence tiers
+
+### Quick
+
+```bash
+./scripts/reproduce_quick.sh
+```
+
+This tier is designed for minutes, not a paper-scale rerun. It performs:
+
+- Speck and Threefish vector gates;
+- focused F8, CASI, Reader, PRESENT, SHA-2, and native/Boolean-SHAKE tests;
+- repository-wide `.causal` Reader validation;
+- all nine retained SHA-256 manifest verifications;
+- `compileall` over active Python code.
+
+Expected final line: `quick evidence tier: OK`.
+
+### Anchors
+
+```bash
+./scripts/verify_anchors.sh
+```
+
+This authenticates the committed twelve-configuration F8 snapshot from source
+commit `2e23b23e46cd7a413edd5b56a748e4d5e6e62f73` and compiles its Python files.
+It deliberately does not spend hours recomputing already established anchors.
+To run an individual historical anchor by choice:
+
+```bash
+python provenance/fullround_anchors/f8/experiments/present.py
+```
+
+Historical scripts write into their snapshot's `results/` directory. Preserve
+the committed JSON and write exploratory reruns to a separate worktree or copy.
+
+### Standard full-round transfers
+
+```bash
+./scripts/reproduce_fullround_transfers.sh
+```
+
+This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
+SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A132
+SHAKE observability, affine-hull, ANF, and influence frontiers. It then runs focused tests,
+opens all `.causal` files, and rewrites
+`research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
+
+The script creates `.venv` if absent. Result JSON and `.causal` filenames are
+stable. Compare a deliberate rerun with the committed manifest using:
+
+```bash
+python scripts/verify_hash_manifest.py \
+  research/results/v1/FULLROUND_TRANSFER_SHA256SUMS
+```
+
+### Extended native SHAKE
+
+```bash
+./scripts/reproduce_shake_native_extended.sh
+```
+
+This enumerates the complete 32-coordinate assignment space for SHAKE128 and
+SHAKE256: `2^32` candidates per variant. The C11 kernel packs 64 assignments
+per machine word, uses ten worker threads by default, and streams bounded
+chunks. Progress is checkpointed to
+`research/results/v1/shake_native_window32_solver_v1.checkpoint.json`; restart
+the same command to resume.
+
+Successful completion writes:
+
+- `shake_native_window32_solver_v1.json`;
+- `shake_native_window32_solver_v1.causal`;
+- `SHAKE_NATIVE_EXTENDED_SHA256SUMS`.
+
+Expected unique assignments are `3,384,693,180` for SHAKE128 and `153,225,470`
+for SHAKE256. Each independent target must have zero survivors.
+
+### Exact SHAKE solver frontier
+
+```bash
+./scripts/reproduce_shake_solver_frontier.sh
+```
+
+This tier regenerates A128--A132: the exact 24-round SHAKE128 Tseitin-CNF
+Reader at 4/8/12/16 coordinates, one complete `2^16` SHAKE128/256
+prefix-observability truth space per variant, and the corresponding exact
+128-coordinate affine-hull prefix Readers, restricted ANFs, and Boolean
+influence frontiers.
+The CNF production run requires the native Z3 CLI 4.15.4; focused tests skip
+the Z3-dependent execution gate when no CLI is installed, while the
+reproduction script fails closed. It writes:
+
+- `shake_boolean_cnf_reader_v1.json` and `.causal`;
+- `shake_prefix_observability_frontier_v1.json` and `.causal`;
+- `shake_affine_hull_frontier_v1.json` and `.causal`;
+- `shake_algebraic_degree_frontier_v1.json` and `.causal`;
+- `shake_boolean_influence_frontier_v1.json` and `.causal`;
+- `SHAKE_SOLVER_FRONTIER_SHA256SUMS`.
+
+The 16-coordinate CNF instance intentionally records its configured 120-second
+solver boundary. The complete truth-space frontier is independent of Z3.
+
+## Other reproducible tracks
+
+```bash
+./scripts/reproduce.sh quick
+./scripts/reproduce_causal_mechanisms.sh
+./scripts/reproduce_multi_cipher_atlas.sh
+./scripts/reproduce_pqc.sh
+./scripts/reproduce_research.sh
+```
+
+The legacy paper runner is intentionally separate because it replays archived
+scripts and may require a Torch-capable interpreter for the recorded neural
+comparison:
+
+```bash
+TORCH_PYTHON=/path/to/python ./scripts/reproduce_papers.sh
+```
+
+## Integrity verification
+
+The portable verifier does not depend on `sha256sum` versus `shasum` naming:
+
+```bash
+python scripts/verify_hash_manifest.py \
+  provenance/SHA256SUMS \
+  research/results/reproduction_v1/SHA256SUMS \
+  research/results/v1/ANCHOR_SHA256SUMS \
+  research/results/v1/CAUSAL_SHA256SUMS \
+  research/results/v1/ATLAS_SHA256SUMS \
+  research/results/v1/PQC_SHA256SUMS \
+  research/results/v1/FULLROUND_TRANSFER_SHA256SUMS \
+  research/results/v1/SHAKE_NATIVE_EXTENDED_SHA256SUMS \
+  research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS
+```
+
+The manifest parser rejects malformed hashes, duplicate entries, missing
+files, and paths escaping the repository.
+
+## Full local gate
+
+```bash
+python -m pytest -q
+python -m compileall -q src research/experiments tests
+python scripts/validate_causal_artifacts.py
+bash -n scripts/*.sh
+git diff --check
+```
+
+CI runs the same test/compile/Reader/shell-syntax class without launching
+paper-scale or `2^32` enumerations.
+
+## Artifact update rule
+
+Do not hand-edit retained JSON or `.causal` files. Change an experiment or
+frozen config, regenerate both artifacts, reopen the graph with the Reader,
+run its focused tests, and update the relevant manifest in the same commit.
+The report must cite the new full SHA-256 digest.

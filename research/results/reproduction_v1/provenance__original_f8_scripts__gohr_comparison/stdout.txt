@@ -1,0 +1,23 @@
+================================================================================
+GOHR NEURAL DISTINGUISHER vs F8 COMPARISON
+================================================================================
+Gohr: 50K train, 10K test, 15 epochs, residual net
+F8:   50K samples, informed MI, 20 perms
+
+    Rounds    Gohr Acc        F8 Z     Both detect?
+  -------------------------------------------------------
+  R     5       0.708     +7083.1             BOTH
+  R     6       0.527     +7613.2          F8 only
+  R     7       0.507     +7172.7          F8 only
+  R     8       0.494     +9071.5          F8 only
+  R     9       0.486     +7199.5          F8 only
+  R    10       0.496     +9277.9          F8 only
+  R    11       0.497     +7974.4          F8 only
+  R    12       0.502    +10944.4          F8 only
+
+NOTE: F8 and Gohr test DIFFERENT things:
+  F8:   out(R) vs out(R+1) same-key independence (carry-leak)
+  Gohr: C(P) vs C(P⊕Δ) distinguishability (differential)
+F8 detects at ALL rounds (stationary leak). Gohr accuracy degrades.
+
+=== DONE ===

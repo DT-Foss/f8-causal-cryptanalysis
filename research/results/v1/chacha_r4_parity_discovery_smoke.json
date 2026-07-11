@@ -1,0 +1,1690 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1"
+  },
+  "experiment": "chacha_r4_parity_discovery",
+  "parameters": {
+    "counter_bit": 15,
+    "features": {
+      "pair_parity": 130816,
+      "unary": 512
+    },
+    "pairs": 2000,
+    "rounds": 4,
+    "seed_base": 50000,
+    "seeds": 3,
+    "selection_null": "independent repairing2 minus repairing1; global maximum over feature family",
+    "top": 32
+  },
+  "result": {
+    "global_null_maxima": {
+      "pair_parity_absolute_mean_effect": 0.076,
+      "unary_absolute_mean_effect": 0.054666666666666676
+    },
+    "seed_records": [
+      {
+        "null1_difference_sha256": "8eb15634f9c60e3276b8257064e5538748c225f2e27181ba317c24703fc2c4e3",
+        "null2_difference_sha256": "bedffe3e44d5099e90c287a90a56c5085afde3c1fb90a132d72818b733ea4eda",
+        "real_difference_sha256": "b1817f3664b62f9c61cacb34f895101a6e7f22ac16c72a23fd73b5fa7dafa278",
+        "seed": 50000
+      },
+      {
+        "null1_difference_sha256": "b232abb2713065ad2e0a079c350134b90d2b0586c056f8182eec9ad8617cb7be",
+        "null2_difference_sha256": "602dc2546e8c004ecf2ed5bac66ccefd0428d49c456498a7bcf22ad948c7dfa4",
+        "real_difference_sha256": "a1f27c2a509aef7f80c21321b8aefe20c829869fe290b6d97087f2e8a213ce9e",
+        "seed": 51009
+      },
+      {
+        "null1_difference_sha256": "940b4e79982e073831b737dec1f3d1882c7320f0668029121d354298204ff581",
+        "null2_difference_sha256": "075bb03cf7f80ddf901f35d932e11ff06ec90b3a0dafbbecc3b132a3429ec125",
+        "real_difference_sha256": "dc234a2df5985d8236e15930fce0cf8e62d39db616bb2c2bf0b30e65d6712a93",
+        "seed": 52018
+      }
+    ],
+    "selection_gates": {
+      "pair_parity_above_1_5x_global_null_max": 0,
+      "pair_parity_above_global_null_max": 7,
+      "unary_above_global_null_max": 0
+    },
+    "top_pair_parities": [
+      {
+        "absolute_effect_over_global_null_max": 1.1491228070175439,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.08733333333333333,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 8,
+          "flat_bit": 328,
+          "word": 10
+        },
+        "mean_parity_expectation_effect": -0.08733333333333333,
+        "per_seed_effects": [
+          -0.04800000000000004,
+          -0.09599999999999997,
+          -0.118
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.035795716689756764,
+        "second": {
+          "bit_in_word": 28,
+          "flat_bit": 380,
+          "word": 11
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 1.0877192982456145,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.08266666666666671,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 20,
+          "flat_bit": 52,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": 0.08266666666666671,
+        "per_seed_effects": [
+          0.07600000000000007,
+          0.02200000000000002,
+          0.15000000000000002
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.06425988899253822,
+        "second": {
+          "bit_in_word": 14,
+          "flat_bit": 238,
+          "word": 7
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 1.0701754385964917,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.08133333333333337,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 29,
+          "flat_bit": 413,
+          "word": 12
+        },
+        "mean_parity_expectation_effect": 0.08133333333333337,
+        "per_seed_effects": [
+          0.10799999999999998,
+          0.062000000000000055,
+          0.07400000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.023860706890897667,
+        "second": {
+          "bit_in_word": 0,
+          "flat_bit": 448,
+          "word": 14
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 1.035087719298245,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.07866666666666662,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 21,
+          "flat_bit": 85,
+          "word": 2
+        },
+        "mean_parity_expectation_effect": -0.07866666666666662,
+        "per_seed_effects": [
+          -0.09799999999999998,
+          -0.061999999999999944,
+          -0.07599999999999996
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.018147543451754948,
+        "second": {
+          "bit_in_word": 20,
+          "flat_bit": 468,
+          "word": 14
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 1.0175438596491233,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.07733333333333337,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 7,
+          "flat_bit": 327,
+          "word": 10
+        },
+        "mean_parity_expectation_effect": -0.07733333333333337,
+        "per_seed_effects": [
+          -0.06600000000000006,
+          -0.11399999999999999,
+          -0.052000000000000046
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.032516662395352496,
+        "second": {
+          "bit_in_word": 11,
+          "flat_bit": 491,
+          "word": 15
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 1.0087719298245619,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.0766666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 11,
+          "flat_bit": 43,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": -0.0766666666666667,
+        "per_seed_effects": [
+          -0.08599999999999997,
+          -0.07400000000000007,
+          -0.07000000000000006
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.008326663997864477,
+        "second": {
+          "bit_in_word": 19,
+          "flat_bit": 211,
+          "word": 6
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 1.0087719298245608,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.07666666666666662,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 15,
+          "flat_bit": 367,
+          "word": 11
+        },
+        "mean_parity_expectation_effect": -0.07666666666666662,
+        "per_seed_effects": [
+          -0.05799999999999994,
+          -0.08999999999999986,
+          -0.08200000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.01665332799572905,
+        "second": {
+          "bit_in_word": 31,
+          "flat_bit": 415,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9999999999999994,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.07599999999999996,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 14,
+          "flat_bit": 142,
+          "word": 4
+        },
+        "mean_parity_expectation_effect": 0.07599999999999996,
+        "per_seed_effects": [
+          0.061999999999999944,
+          0.07799999999999996,
+          0.08799999999999997
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.013114877048604014,
+        "second": {
+          "bit_in_word": 1,
+          "flat_bit": 289,
+          "word": 9
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9824561403508771,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.07466666666666666,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 6,
+          "flat_bit": 70,
+          "word": 2
+        },
+        "mean_parity_expectation_effect": -0.07466666666666666,
+        "per_seed_effects": [
+          -0.09799999999999986,
+          -0.04200000000000004,
+          -0.08400000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.029143323992525796,
+        "second": {
+          "bit_in_word": 1,
+          "flat_bit": 161,
+          "word": 5
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9736842105263153,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.07399999999999995,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 4,
+          "flat_bit": 196,
+          "word": 6
+        },
+        "mean_parity_expectation_effect": 0.07399999999999995,
+        "per_seed_effects": [
+          0.05599999999999994,
+          0.051999999999999935,
+          0.11399999999999999
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03469870314579498,
+        "second": {
+          "bit_in_word": 3,
+          "flat_bit": 259,
+          "word": 8
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9561403508771923,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.07266666666666662,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 25,
+          "flat_bit": 153,
+          "word": 4
+        },
+        "mean_parity_expectation_effect": 0.07266666666666662,
+        "per_seed_effects": [
+          0.061999999999999944,
+          0.06800000000000006,
+          0.08799999999999986
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.013613718571108022,
+        "second": {
+          "bit_in_word": 21,
+          "flat_bit": 469,
+          "word": 14
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9473684210526319,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.07200000000000002,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 13,
+          "flat_bit": 13,
+          "word": 0
+        },
+        "mean_parity_expectation_effect": 0.07200000000000002,
+        "per_seed_effects": [
+          0.08600000000000008,
+          0.09799999999999998,
+          0.03200000000000003
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03515679166249388,
+        "second": {
+          "bit_in_word": 25,
+          "flat_bit": 185,
+          "word": 5
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9473684210526319,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.07200000000000002,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 26,
+          "flat_bit": 58,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": -0.07200000000000002,
+        "per_seed_effects": [
+          -0.06800000000000006,
+          -0.07399999999999995,
+          -0.07400000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.0034641016151377253,
+        "second": {
+          "bit_in_word": 17,
+          "flat_bit": 81,
+          "word": 2
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9385964912280705,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.07133333333333336,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 18,
+          "flat_bit": 242,
+          "word": 7
+        },
+        "mean_parity_expectation_effect": -0.07133333333333336,
+        "per_seed_effects": [
+          -0.10400000000000009,
+          -0.04799999999999993,
+          -0.062000000000000055
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.029143323992525928,
+        "second": {
+          "bit_in_word": 4,
+          "flat_bit": 420,
+          "word": 13
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9298245614035092,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.0706666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 31,
+          "flat_bit": 63,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": -0.0706666666666667,
+        "per_seed_effects": [
+          -0.05800000000000005,
+          -0.09999999999999998,
+          -0.05400000000000005
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.025482019804821815,
+        "second": {
+          "bit_in_word": 23,
+          "flat_bit": 407,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9298245614035081,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.07066666666666661,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 6,
+          "flat_bit": 198,
+          "word": 6
+        },
+        "mean_parity_expectation_effect": 0.07066666666666661,
+        "per_seed_effects": [
+          0.03799999999999992,
+          0.10399999999999998,
+          0.06999999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03300505011863086,
+        "second": {
+          "bit_in_word": 13,
+          "flat_bit": 397,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9210526315789468,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.06999999999999995,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 31,
+          "flat_bit": 159,
+          "word": 4
+        },
+        "mean_parity_expectation_effect": 0.06999999999999995,
+        "per_seed_effects": [
+          0.06799999999999995,
+          0.07799999999999996,
+          0.06399999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.007211102550927985,
+        "second": {
+          "bit_in_word": 9,
+          "flat_bit": 361,
+          "word": 11
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298254,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.06866666666666672,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 10,
+          "flat_bit": 234,
+          "word": 7
+        },
+        "mean_parity_expectation_effect": -0.06866666666666672,
+        "per_seed_effects": [
+          -0.1140000000000001,
+          -0.026000000000000023,
+          -0.06600000000000006
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.044060564378288855,
+        "second": {
+          "bit_in_word": 31,
+          "flat_bit": 447,
+          "word": 13
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298249,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.0686666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 9,
+          "flat_bit": 41,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": -0.0686666666666667,
+        "per_seed_effects": [
+          -0.03600000000000003,
+          -0.09600000000000009,
+          -0.07399999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03035347316755258,
+        "second": {
+          "bit_in_word": 5,
+          "flat_bit": 485,
+          "word": 15
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298249,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.0686666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 7,
+          "flat_bit": 327,
+          "word": 10
+        },
+        "mean_parity_expectation_effect": -0.0686666666666667,
+        "per_seed_effects": [
+          -0.07600000000000007,
+          -0.09400000000000008,
+          -0.03599999999999992
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.029687258770949847,
+        "second": {
+          "bit_in_word": 8,
+          "flat_bit": 392,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298249,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.0686666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 7,
+          "flat_bit": 167,
+          "word": 5
+        },
+        "mean_parity_expectation_effect": -0.0686666666666667,
+        "per_seed_effects": [
+          -0.03400000000000003,
+          -0.06600000000000006,
+          -0.10599999999999998
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.036073998022583126,
+        "second": {
+          "bit_in_word": 12,
+          "flat_bit": 300,
+          "word": 9
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298249,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.0686666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 16,
+          "flat_bit": 272,
+          "word": 8
+        },
+        "mean_parity_expectation_effect": -0.0686666666666667,
+        "per_seed_effects": [
+          -0.06599999999999995,
+          -0.062000000000000055,
+          -0.07800000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.008326663997864556,
+        "second": {
+          "bit_in_word": 14,
+          "flat_bit": 430,
+          "word": 13
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298244,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.06866666666666665,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 5,
+          "flat_bit": 101,
+          "word": 3
+        },
+        "mean_parity_expectation_effect": 0.06866666666666665,
+        "per_seed_effects": [
+          0.07599999999999996,
+          0.10199999999999998,
+          0.028000000000000025
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03754108860080287,
+        "second": {
+          "bit_in_word": 15,
+          "flat_bit": 399,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.9035087719298244,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.06866666666666665,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 30,
+          "flat_bit": 94,
+          "word": 2
+        },
+        "mean_parity_expectation_effect": 0.06866666666666665,
+        "per_seed_effects": [
+          0.05400000000000005,
+          0.06600000000000006,
+          0.08599999999999985
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.016165807537309416,
+        "second": {
+          "bit_in_word": 1,
+          "flat_bit": 257,
+          "word": 8
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8947368421052634,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.06800000000000002,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 10,
+          "flat_bit": 170,
+          "word": 5
+        },
+        "mean_parity_expectation_effect": -0.06800000000000002,
+        "per_seed_effects": [
+          -0.05999999999999994,
+          -0.030000000000000027,
+          -0.1140000000000001
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.042567593307585576,
+        "second": {
+          "bit_in_word": 31,
+          "flat_bit": 351,
+          "word": 10
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.894736842105263,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.06799999999999999,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 22,
+          "flat_bit": 342,
+          "word": 10
+        },
+        "mean_parity_expectation_effect": 0.06799999999999999,
+        "per_seed_effects": [
+          0.08399999999999985,
+          0.1180000000000001,
+          0.0020000000000000018
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.05963220606350232,
+        "second": {
+          "bit_in_word": 4,
+          "flat_bit": 484,
+          "word": 15
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.894736842105263,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.06799999999999999,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 4,
+          "flat_bit": 100,
+          "word": 3
+        },
+        "mean_parity_expectation_effect": -0.06799999999999999,
+        "per_seed_effects": [
+          -0.08400000000000007,
+          -0.07599999999999996,
+          -0.04399999999999993
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.021166010488516785,
+        "second": {
+          "bit_in_word": 12,
+          "flat_bit": 428,
+          "word": 13
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8947368421052625,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.06799999999999995,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 3,
+          "flat_bit": 35,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": 0.06799999999999995,
+        "per_seed_effects": [
+          0.04999999999999993,
+          0.02200000000000002,
+          0.1319999999999999
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.05716642371182575,
+        "second": {
+          "bit_in_word": 16,
+          "flat_bit": 400,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8859649122807021,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.06733333333333336,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 18,
+          "flat_bit": 18,
+          "word": 0
+        },
+        "mean_parity_expectation_effect": -0.06733333333333336,
+        "per_seed_effects": [
+          -0.061999999999999944,
+          -0.10200000000000009,
+          -0.038000000000000034
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03233161507461908,
+        "second": {
+          "bit_in_word": 2,
+          "flat_bit": 194,
+          "word": 6
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8859649122807021,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.06733333333333336,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": {
+          "bit_in_word": 2,
+          "flat_bit": 98,
+          "word": 3
+        },
+        "mean_parity_expectation_effect": 0.06733333333333336,
+        "per_seed_effects": [
+          0.052000000000000046,
+          0.07800000000000007,
+          0.07199999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.013613718571108085,
+        "second": {
+          "bit_in_word": 22,
+          "flat_bit": 470,
+          "word": 14
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8859649122807021,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.06733333333333336,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 1,
+          "flat_bit": 33,
+          "word": 1
+        },
+        "mean_parity_expectation_effect": -0.06733333333333336,
+        "per_seed_effects": [
+          -0.04399999999999993,
+          -0.09400000000000008,
+          -0.06400000000000006
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.025166114784235905,
+        "second": {
+          "bit_in_word": 8,
+          "flat_bit": 392,
+          "word": 12
+        }
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8859649122807021,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.06733333333333336,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": {
+          "bit_in_word": 9,
+          "flat_bit": 105,
+          "word": 3
+        },
+        "mean_parity_expectation_effect": -0.06733333333333336,
+        "per_seed_effects": [
+          -0.08800000000000008,
+          -0.03199999999999992,
+          -0.08200000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.030746273486933973,
+        "second": {
+          "bit_in_word": 12,
+          "flat_bit": 172,
+          "word": 5
+        }
+      }
+    ],
+    "top_unary": [
+      {
+        "absolute_effect_over_global_null_max": 0.9634146341463414,
+        "bit_in_word": 31,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.052666666666666674,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 287,
+        "mean_effect": -0.052666666666666674,
+        "per_seed_effects": [
+          -0.05800000000000005,
+          -0.030000000000000027,
+          -0.06999999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.020526405757787507,
+        "word": 8
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8780487804878049,
+        "bit_in_word": 8,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.04800000000000001,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 424,
+        "mean_effect": 0.04800000000000001,
+        "per_seed_effects": [
+          0.04200000000000004,
+          0.039999999999999925,
+          0.062000000000000055
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.012165525060596486,
+        "word": 13
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8780487804878041,
+        "bit_in_word": 24,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.047999999999999966,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 248,
+        "mean_effect": -0.047999999999999966,
+        "per_seed_effects": [
+          -0.04799999999999993,
+          -0.07199999999999995,
+          -0.02400000000000002
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.023999999999999966,
+        "word": 7
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.8414634146341449,
+        "bit_in_word": 10,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.04599999999999993,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 170,
+        "mean_effect": -0.04599999999999993,
+        "per_seed_effects": [
+          -0.041999999999999926,
+          -0.04999999999999993,
+          -0.04599999999999993
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.0040000000000000036,
+        "word": 5
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7682926829268298,
+        "bit_in_word": 24,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.04200000000000004,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 152,
+        "mean_effect": -0.04200000000000004,
+        "per_seed_effects": [
+          -0.03600000000000003,
+          -0.010000000000000009,
+          -0.08000000000000007
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.0353836120259083,
+        "word": 4
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7682926829268298,
+        "bit_in_word": 0,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.04200000000000004,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 288,
+        "mean_effect": -0.04200000000000004,
+        "per_seed_effects": [
+          -0.03200000000000003,
+          -0.06400000000000006,
+          -0.030000000000000027
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.01907878402833893,
+        "word": 9
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7560975609756102,
+        "bit_in_word": 0,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.25,
+          "mean_difference": -0.04133333333333337,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.875
+        },
+        "flat_bit": 32,
+        "mean_effect": -0.04133333333333337,
+        "per_seed_effects": [
+          -0.09600000000000009,
+          -0.04800000000000004,
+          0.020000000000000018
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.058286647985051766,
+        "word": 1
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.74390243902439,
+        "bit_in_word": 19,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.04066666666666666,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 371,
+        "mean_effect": 0.04066666666666666,
+        "per_seed_effects": [
+          0.04599999999999993,
+          0.05400000000000005,
+          0.02200000000000002
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.016653327995729057,
+        "word": 11
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7439024390243895,
+        "bit_in_word": 20,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.04066666666666663,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 436,
+        "mean_effect": 0.04066666666666663,
+        "per_seed_effects": [
+          0.04800000000000004,
+          0.013999999999999901,
+          0.05999999999999994
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.023860706890897747,
+        "word": 13
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7317073170731706,
+        "bit_in_word": 30,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.04,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 62,
+        "mean_effect": -0.04,
+        "per_seed_effects": [
+          -0.062000000000000055,
+          -0.05399999999999994,
+          -0.0040000000000000036
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03143246729100342,
+        "word": 1
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7195121951219496,
+        "bit_in_word": 7,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.039333333333333255,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 455,
+        "mean_effect": -0.039333333333333255,
+        "per_seed_effects": [
+          -0.025999999999999912,
+          -0.017999999999999905,
+          -0.07399999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.030287511177601485,
+        "word": 14
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.7073170731707314,
+        "bit_in_word": 6,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.03866666666666666,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 422,
+        "mean_effect": 0.03866666666666666,
+        "per_seed_effects": [
+          0.0020000000000000018,
+          0.06999999999999995,
+          0.04400000000000004
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03431229128655404,
+        "word": 13
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6951219512195113,
+        "bit_in_word": 29,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.03799999999999996,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 381,
+        "mean_effect": -0.03799999999999996,
+        "per_seed_effects": [
+          -0.039999999999999925,
+          -0.026000000000000023,
+          -0.04799999999999993
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.011135528725659994,
+        "word": 11
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.670731707317073,
+        "bit_in_word": 29,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.03666666666666666,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 317,
+        "mean_effect": 0.03666666666666666,
+        "per_seed_effects": [
+          0.008000000000000007,
+          0.03399999999999992,
+          0.06800000000000006
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.030088757590391386,
+        "word": 9
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6585365853658541,
+        "bit_in_word": 21,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.03600000000000003,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 373,
+        "mean_effect": 0.03600000000000003,
+        "per_seed_effects": [
+          0.010000000000000009,
+          0.05600000000000005,
+          0.04200000000000004
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.02357965224510321,
+        "word": 11
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6585365853658527,
+        "bit_in_word": 17,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.035999999999999956,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 17,
+        "mean_effect": 0.035999999999999956,
+        "per_seed_effects": [
+          0.026000000000000023,
+          0.03799999999999992,
+          0.04399999999999993
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.009165151389911627,
+        "word": 0
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6585365853658527,
+        "bit_in_word": 29,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.875,
+          "mean_difference": 0.035999999999999956,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.25
+        },
+        "flat_bit": 157,
+        "mean_effect": 0.035999999999999956,
+        "per_seed_effects": [
+          -0.014000000000000012,
+          0.07799999999999996,
+          0.04399999999999993
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.046518813398452014,
+        "word": 4
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6463414634146333,
+        "bit_in_word": 21,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.03533333333333329,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 405,
+        "mean_effect": 0.03533333333333329,
+        "per_seed_effects": [
+          0.05599999999999994,
+          0.04599999999999993,
+          0.0040000000000000036
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.027592269448766464,
+        "word": 12
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6341463414634151,
+        "bit_in_word": 5,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.0346666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 133,
+        "mean_effect": 0.0346666666666667,
+        "per_seed_effects": [
+          0.050000000000000044,
+          0.030000000000000027,
+          0.02400000000000002
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.013613718571108104,
+        "word": 4
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6341463414634144,
+        "bit_in_word": 14,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.03466666666666666,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 430,
+        "mean_effect": -0.03466666666666666,
+        "per_seed_effects": [
+          -0.014000000000000012,
+          -0.026000000000000023,
+          -0.06399999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.026102362600602485,
+        "word": 13
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6341463414634138,
+        "bit_in_word": 13,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.875,
+          "mean_difference": 0.03466666666666662,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.25
+        },
+        "flat_bit": 205,
+        "mean_effect": 0.03466666666666662,
+        "per_seed_effects": [
+          -0.01200000000000001,
+          0.02399999999999991,
+          0.09199999999999997
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.05281413952090229,
+        "word": 6
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6341463414634138,
+        "bit_in_word": 12,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.03466666666666662,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 140,
+        "mean_effect": -0.03466666666666662,
+        "per_seed_effects": [
+          -0.04799999999999993,
+          -0.0040000000000000036,
+          -0.051999999999999935
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.02663331247391753,
+        "word": 4
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6219512195121956,
+        "bit_in_word": 8,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.875,
+          "mean_difference": 0.03400000000000003,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.25
+        },
+        "flat_bit": 264,
+        "mean_effect": 0.03400000000000003,
+        "per_seed_effects": [
+          0.04400000000000004,
+          -0.008000000000000007,
+          0.06600000000000006
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.038000000000000034,
+        "word": 8
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6219512195121949,
+        "bit_in_word": 0,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.25,
+          "mean_difference": -0.033999999999999996,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.875
+        },
+        "flat_bit": 0,
+        "mean_effect": -0.033999999999999996,
+        "per_seed_effects": [
+          -0.0040000000000000036,
+          -0.09999999999999998,
+          0.0020000000000000018
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.05723635208501673,
+        "word": 0
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6219512195121941,
+        "bit_in_word": 15,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.033999999999999954,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 495,
+        "mean_effect": 0.033999999999999954,
+        "per_seed_effects": [
+          0.0020000000000000018,
+          0.03399999999999992,
+          0.06599999999999995
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.03199999999999997,
+        "word": 15
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.609756097560976,
+        "bit_in_word": 22,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.03333333333333336,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 438,
+        "mean_effect": 0.03333333333333336,
+        "per_seed_effects": [
+          0.0020000000000000018,
+          0.05800000000000005,
+          0.040000000000000036
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.02858904218985545,
+        "word": 13
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6097560975609754,
+        "bit_in_word": 11,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.033333333333333326,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 235,
+        "mean_effect": -0.033333333333333326,
+        "per_seed_effects": [
+          -0.02200000000000002,
+          -0.039999999999999925,
+          -0.038000000000000034
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.009865765724632465,
+        "word": 7
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6097560975609754,
+        "bit_in_word": 30,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.033333333333333326,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 318,
+        "mean_effect": -0.033333333333333326,
+        "per_seed_effects": [
+          -0.050000000000000044,
+          -0.008000000000000007,
+          -0.041999999999999926
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.02230097157823697,
+        "word": 9
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6097560975609747,
+        "bit_in_word": 17,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.875,
+          "mean_difference": 0.03333333333333329,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.25
+        },
+        "flat_bit": 305,
+        "mean_effect": 0.03333333333333329,
+        "per_seed_effects": [
+          0.07799999999999996,
+          -0.014000000000000012,
+          0.03599999999999992
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.04605793453177565,
+        "word": 9
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.6097560975609747,
+        "bit_in_word": 16,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.03333333333333329,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "flat_bit": 368,
+        "mean_effect": 0.03333333333333329,
+        "per_seed_effects": [
+          0.05799999999999994,
+          0.006000000000000005,
+          0.03599999999999992
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.02610236260060249,
+        "word": 11
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.5975609756097565,
+        "bit_in_word": 27,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.25,
+          "mean_difference": -0.0326666666666667,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.875
+        },
+        "flat_bit": 219,
+        "mean_effect": -0.0326666666666667,
+        "per_seed_effects": [
+          -0.04400000000000004,
+          0.026000000000000023,
+          -0.08000000000000007
+        ],
+        "same_sign_all_seeds": false,
+        "sample_sd_ddof1": 0.053901144081859136,
+        "word": 6
+      },
+      {
+        "absolute_effect_over_global_null_max": 0.5975609756097559,
+        "bit_in_word": 28,
+        "exact_sign_flip": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.032666666666666656,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "flat_bit": 412,
+        "mean_effect": -0.032666666666666656,
+        "per_seed_effects": [
+          -0.02200000000000002,
+          -0.05599999999999994,
+          -0.020000000000000018
+        ],
+        "same_sign_all_seeds": true,
+        "sample_sd_ddof1": 0.02023198787399131,
+        "word": 12
+      }
+    ]
+  },
+  "schema_version": 1,
+  "scope_note": "Training-key discovery only. No feature is a result until frozen and evaluated on disjoint keys. The global null maximum controls selection across all screened unary/parity features."
+}

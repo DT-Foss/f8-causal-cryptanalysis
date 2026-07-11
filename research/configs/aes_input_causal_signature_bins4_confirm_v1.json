@@ -1,0 +1,15 @@
+{
+  "schema": "frozen-causal-output-confirmation-v1",
+  "discovery_artifact": "research/results/v1/aes_input_causal_signature_bins4_v1.json",
+  "discovery_sha256": "df07595a37deae443f92ebab773da782020dfb9ea833bbfaf03d33c8c64ff49f",
+  "causal_header": "cipheroutput-signature:delta:bins4:full-conditional-table",
+  "stage_chain": ["paired AES outputs", "XOR differential", "public final-linear projection", "4-bin conditional signature", "reader-reconstructed reverse batch inference"],
+  "input_bits": [0, 31, 64, 127],
+  "rounds": [3, 4, 10],
+  "representations": ["identity", "peel-final-linear"],
+  "pairs_per_key": 10000,
+  "train_keys": 5,
+  "holdout_keys": 5,
+  "seed_base": 1085001,
+  "decision_rule": "R3 peeled must exceed 50% batch classification while R3 identity, both R4 variants, and both AES-10 variants remain at or below 35%; classifier must be reconstructed from CryptoCausalReader only."
+}

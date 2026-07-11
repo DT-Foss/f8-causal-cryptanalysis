@@ -1,0 +1,459 @@
+{
+  "causal": {
+    "bytes": 956,
+    "explicit_triplets": 6,
+    "file_sha256": "040040f09f049618c24273c500bd47cc1119b3069e394d3a678d6cca886190f0",
+    "graph_sha256": "405f59e497674ad80f1eb51e311579a6094b431a445245fe723400ed6068cdac",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/aes_causal_contrast_signature_byte13_bit31_v1.causal",
+    "triplets": 6
+  },
+  "chance": 0.16666666666666666,
+  "overall_accuracy": 0.36666666666666664,
+  "parameters": {
+    "bits": [
+      31
+    ],
+    "feature_indices": [
+      13
+    ],
+    "pairs_per_seed": 10000,
+    "repairing_routes": 16,
+    "representations": [
+      "identity",
+      "peel-final-linear"
+    ],
+    "rounds": [
+      3,
+      4,
+      10
+    ],
+    "train_seeds": 5
+  },
+  "per_class": {
+    "r10-identity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 5
+    },
+    "r10-peel-final-linear": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 5
+    },
+    "r3-identity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 5
+    },
+    "r3-peel-final-linear": {
+      "accuracy": 0.8,
+      "correct": 4,
+      "total": 5
+    },
+    "r4-identity": {
+      "accuracy": 0.8,
+      "correct": 4,
+      "total": 5
+    },
+    "r4-peel-final-linear": {
+      "accuracy": 0.6,
+      "correct": 3,
+      "total": 5
+    }
+  },
+  "schema": "aes-causal-contrast-signature-v1",
+  "scope": "direct cipher-output factual-vs-counterfactual causal compression and reader-only reverse round-class query; not key recovery",
+  "trials": [
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r10-peel-final-linear",
+      "scores": {
+        "r10-identity": 4.622785167583475,
+        "r10-peel-final-linear": 5.268464761633226,
+        "r3-identity": 3.989014523773836,
+        "r3-peel-final-linear": -3.602725973747817,
+        "r4-identity": 5.1386289976656485,
+        "r4-peel-final-linear": -1.2192621920107651
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.583645393531251,
+        "r10-peel-final-linear": 5.719473926165771,
+        "r3-identity": 5.824740554183003,
+        "r3-peel-final-linear": -0.6684518151259704,
+        "r4-identity": 6.558420691086739,
+        "r4-peel-final-linear": 3.764554028805199
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.321186674322407,
+        "r10-peel-final-linear": 5.6044671361273215,
+        "r3-identity": 5.345724288657422,
+        "r3-peel-final-linear": -1.5776599924377113,
+        "r4-identity": 6.264052161024669,
+        "r4-peel-final-linear": 2.3797773976207264
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.188013401888674,
+        "r10-peel-final-linear": 5.543011522172749,
+        "r3-identity": 5.09418016410962,
+        "r3-peel-final-linear": -1.9982039094905906,
+        "r4-identity": 6.079295937513496,
+        "r4-peel-final-linear": 1.6860134445347015
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 6.1038938138091146,
+        "r10-peel-final-linear": 5.839555567289311,
+        "r3-identity": 6.47888762344047,
+        "r3-peel-final-linear": 2.553319430084631,
+        "r4-identity": 5.9103861815096765,
+        "r4-peel-final-linear": 6.8184995611869015
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": 3.3467676080234217,
+        "r10-peel-final-linear": 3.6347104124085274,
+        "r3-identity": -1.2818798405873517,
+        "r3-peel-final-linear": 6.116351732684507,
+        "r4-identity": -8.559429932127625,
+        "r4-peel-final-linear": -4.873635339666908
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": 1.2760885175585681,
+        "r10-peel-final-linear": 2.1932322433179134,
+        "r3-identity": -6.52340091375973,
+        "r3-peel-final-linear": 5.9709889585106115,
+        "r4-identity": -16.979004553894526,
+        "r4-peel-final-linear": -14.268944106099017
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": 4.024546647777842,
+        "r10-peel-final-linear": 4.119048941332654,
+        "r3-identity": 0.46803736644678917,
+        "r3-peel-final-linear": 5.999318350211791,
+        "r4-identity": -5.660703727714902,
+        "r4-peel-final-linear": -1.8341789755465712
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": -1.6807719172520006,
+        "r10-peel-final-linear": 0.18564153524497495,
+        "r3-identity": -13.8690625837378,
+        "r3-peel-final-linear": 5.095112824582999,
+        "r4-identity": -28.42207859476736,
+        "r4-peel-final-linear": -27.83061789002561
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 5.775894662343042,
+        "r10-peel-final-linear": 5.459643881492955,
+        "r3-identity": 5.233637435795913,
+        "r3-peel-final-linear": 4.524721675885319,
+        "r4-identity": 2.846413731949933,
+        "r4-peel-final-linear": 5.7644467226795335
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": true,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.926499538132865,
+        "r10-peel-final-linear": 5.844444468280992,
+        "r3-identity": 6.38131912427606,
+        "r3-peel-final-linear": 0.8516867891044964,
+        "r4-identity": 6.654558626009758,
+        "r4-peel-final-linear": 5.645878349339558
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": true,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.3647345377626765,
+        "r10-peel-final-linear": 5.624177990953483,
+        "r3-identity": 5.426924955815668,
+        "r3-peel-final-linear": -1.43507282670691,
+        "r4-identity": 6.320070330421253,
+        "r4-peel-final-linear": 2.6077427006502525
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": true,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.739493325307463,
+        "r10-peel-final-linear": 5.781755882879677,
+        "r3-identity": 6.092729086205268,
+        "r3-peel-final-linear": -0.04949905100469287,
+        "r4-identity": 6.664622458317865,
+        "r4-peel-final-linear": 4.604046316720537
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": false,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 6.051451002716473,
+        "r10-peel-final-linear": 5.865962169828556,
+        "r3-identity": 6.518381175445678,
+        "r3-peel-final-linear": 1.7218355137806647,
+        "r4-identity": 6.415321770696116,
+        "r4-peel-final-linear": 6.4003405475316635
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": true,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.216198816225951,
+        "r10-peel-final-linear": 5.55615358922469,
+        "r3-identity": 5.1477885924495554,
+        "r3-peel-final-linear": -1.9109784379704378,
+        "r4-identity": 6.119943231800829,
+        "r4-peel-final-linear": 1.8324573034631548
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.43277231442412,
+        "r10-peel-final-linear": 5.654529197798619,
+        "r3-identity": 5.552573614932678,
+        "r3-peel-final-linear": -1.2064520120437292,
+        "r4-identity": 6.402518456496322,
+        "r4-peel-final-linear": 2.965181256292067
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": true,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 6.0948189773183525,
+        "r10-peel-final-linear": 5.7961074484804564,
+        "r3-identity": 6.354261978664529,
+        "r3-peel-final-linear": 3.041237147809759,
+        "r4-identity": 5.449633689983632,
+        "r4-peel-final-linear": 6.883680982001978
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": true,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 5.833672515869778,
+        "r10-peel-final-linear": 5.5109363595447585,
+        "r3-identity": 5.410200699126336,
+        "r3-peel-final-linear": 4.383107438867663,
+        "r4-identity": 3.2077224120581485,
+        "r4-peel-final-linear": 5.994890705033236
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": true,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 5.970967283282591,
+        "r10-peel-final-linear": 5.641423899730113,
+        "r3-identity": 5.853314189580111,
+        "r3-peel-final-linear": 3.9333920600880607,
+        "r4-identity": 4.16449513440411,
+        "r4-peel-final-linear": 6.517839611240076
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.893525632595812,
+        "r10-peel-final-linear": 5.834934048866663,
+        "r3-identity": 6.334658196342444,
+        "r3-peel-final-linear": 0.6724806655427571,
+        "r4-identity": 6.673948500273245,
+        "r4-peel-final-linear": 5.457756928968239
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.9804310351991665,
+        "r10-peel-final-linear": 5.8575279491549495,
+        "r3-identity": 6.450870306672544,
+        "r3-peel-final-linear": 1.1773132072754873,
+        "r4-identity": 6.5946314458540005,
+        "r4-peel-final-linear": 5.96064574514507
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.927197444048995,
+        "r10-peel-final-linear": 5.844635266782096,
+        "r3-identity": 6.38227799347033,
+        "r3-peel-final-linear": 0.8556178263706187,
+        "r4-identity": 6.654028448590313,
+        "r4-peel-final-linear": 5.649890071461512
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 6.100719269545579,
+        "r10-peel-final-linear": 5.847564394339226,
+        "r3-identity": 6.498828166850537,
+        "r3-peel-final-linear": 2.418641609300609,
+        "r4-identity": 6.014126702625763,
+        "r4-peel-final-linear": 6.774825277501594
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 6.0949213697851725,
+        "r10-peel-final-linear": 5.854389337627944,
+        "r3-identity": 6.513886738912768,
+        "r3-peel-final-linear": 2.2753280131186946,
+        "r4-identity": 6.11453274589104,
+        "r4-peel-final-linear": 6.717408133641019
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 6.014243679013643,
+        "r10-peel-final-linear": 5.8633592310994676,
+        "r3-identity": 6.487983306425814,
+        "r3-peel-final-linear": 1.4126695787830785,
+        "r4-identity": 6.529989013658513,
+        "r4-peel-final-linear": 6.164783683557758
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": 5.175711853123875,
+        "r10-peel-final-linear": 4.973109278264735,
+        "r3-identity": 3.5262412932820997,
+        "r3-peel-final-linear": 5.386844647980538,
+        "r4-identity": -0.37848722214535435,
+        "r4-peel-final-linear": 3.238086020460457
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.651329967523017,
+        "r10-peel-final-linear": 5.747261469487454,
+        "r3-identity": 5.943149652363436,
+        "r3-peel-final-linear": -0.40935912223903426,
+        "r4-identity": 6.612974794925402,
+        "r4-peel-final-linear": 4.127029019427122
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 6.052489321543591,
+        "r10-peel-final-linear": 5.865944993420986,
+        "r3-identity": 6.518983577902294,
+        "r3-peel-final-linear": 1.7316449459005563,
+        "r4-identity": 6.411096582682585,
+        "r4-peel-final-linear": 6.407171332534805
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 5.878329346587906,
+        "r10-peel-final-linear": 5.551750672782731,
+        "r3-identity": 5.549870784553563,
+        "r3-peel-final-linear": 4.258257642782423,
+        "r4-identity": 3.5003364168433024,
+        "r4-peel-final-linear": 6.16965064986889
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 5.952358098286723,
+        "r10-peel-final-linear": 5.851171719909594,
+        "r3-identity": 6.415910094900822,
+        "r3-peel-final-linear": 1.0018400223498238,
+        "r4-identity": 6.631009033423931,
+        "r4-peel-final-linear": 5.795499278482482
+      }
+    }
+  ]
+}

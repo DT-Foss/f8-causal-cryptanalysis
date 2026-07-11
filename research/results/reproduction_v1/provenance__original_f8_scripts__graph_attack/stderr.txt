@@ -1,0 +1,21 @@
+<repository>/provenance/original_f8_scripts/graph_sweep.py:75: RuntimeWarning: divide by zero encountered in matmul
+  mat = np.abs(on.T @ dn / n)
+<repository>/provenance/original_f8_scripts/graph_sweep.py:75: RuntimeWarning: overflow encountered in matmul
+  mat = np.abs(on.T @ dn / n)
+<repository>/provenance/original_f8_scripts/graph_sweep.py:75: RuntimeWarning: invalid value encountered in matmul
+  mat = np.abs(on.T @ dn / n)
+Traceback (most recent call last):
+  File "<repository>/provenance/original_f8_scripts/graph_attack.py", line 112, in <module>
+    attack_cipher("AES-128", aes_gen, 32, [2, 3, 4, 5, 10])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/provenance/original_f8_scripts/graph_attack.py", line 67, in attack_cipher
+    r2 = gen_fn(N, rounds=n_rounds+1, seed=seed)
+  File "<repository>/provenance/original_f8_scripts/graph_attack.py", line 111, in aes_gen
+    return generate_aes_stream(N, rounds=rounds, seed=seed)
+  File "<legacy-live-casi>/live_casiv2/ciphers.py", line 195, in generate_aes_stream
+    all_blocks.append(_aes_ecb_batch(aes_key, pt, rounds))
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<legacy-live-casi>/live_casiv2/ciphers.py", line 176, in _aes_ecb_batch
+    state ^= rk_all[r][np.newaxis, :, :]
+             ~~~~~~^^^
+IndexError: index 11 is out of bounds for axis 0 with size 11

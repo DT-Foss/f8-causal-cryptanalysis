@@ -1,0 +1,19 @@
+{
+  "schema": "frozen-causal-header-confirmation-v1",
+  "header_sweep": {
+    "bins": [2, 4, 8, 16, 32, 64],
+    "selection_statistic": "R3 representation accuracy minus maximum of R3 other representation and both AES-10 representation accuracies",
+    "selected_header": "cipheroutput-signature:delta:bins32:full-conditional-table",
+    "selected_condition": "R3 identity"
+  },
+  "discovery_artifact": "research/results/v1/aes_input_causal_signature_bins32_discovery_v1.json",
+  "discovery_sha256": "a6784cfa99862ed86aae033197765a85286eb6587410070a3ed06c72457e1704",
+  "input_bits": [0, 31, 64, 127],
+  "rounds": [3, 4, 10],
+  "representations": ["identity", "peel-final-linear"],
+  "pairs_per_key": 10000,
+  "train_keys": 5,
+  "holdout_keys": 5,
+  "seed_base": 1585001,
+  "decision_rule": "R3 identity must exceed 50% heldout batch classification and exceed every R4/AES-10 family by at least 15 percentage points. Classification must be reconstructed from the .causal reader, not writer-side arrays."
+}

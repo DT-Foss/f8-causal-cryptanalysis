@@ -1,0 +1,656 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "parameters": {
+    "null": "row repair plus one-coordinate random-position mutation",
+    "operations_per_seed": 32,
+    "positions": [
+      0,
+      1,
+      7,
+      31,
+      127,
+      255
+    ],
+    "routes": 4,
+    "scope": "public formula boundary inference",
+    "seed_base": 585001,
+    "seeds": 2,
+    "variants": [
+      "mlkem512"
+    ]
+  },
+  "results": [
+    {
+      "all_roundtrips_exact": true,
+      "functional_roundtrips": [
+        32,
+        32
+      ],
+      "operations_per_seed": 32,
+      "positions": [
+        0,
+        1,
+        7,
+        31,
+        127,
+        255
+      ],
+      "results": [
+        {
+          "metrics": {
+            "change_entropy_deficit_sum": {
+              "effect": {
+                "maximum": 122.73388066114657,
+                "mean": 105.24987244870896,
+                "minimum": 87.76586423627134,
+                "sample_sd_ddof1": 24.72612153867185,
+                "values": [
+                  87.76586423627134,
+                  122.73388066114657
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 250.61763983088076,
+                  "mean": 250.25108413622894,
+                  "minimum": 249.88452844157715,
+                  "sample_sd_ddof1": 0.5183880347416779,
+                  "values": [
+                    249.88452844157715,
+                    250.61763983088076
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "changed_fraction": {
+              "effect": {
+                "maximum": -0.885406494140625,
+                "mean": -0.902679443359375,
+                "minimum": -0.919952392578125,
+                "sample_sd_ddof1": 0.024427639047338006,
+                "values": [
+                  -0.919952392578125,
+                  -0.885406494140625
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": -0.471435546875,
+                  "mean": -0.47161865234375,
+                  "minimum": -0.4718017578125,
+                  "sample_sd_ddof1": 0.0002589502372509329,
+                  "values": [
+                    -0.4718017578125,
+                    -0.471435546875
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "mean_symbol_delta": {
+              "effect": {
+                "maximum": -7.05078125,
+                "mean": -7.218017578125,
+                "minimum": -7.38525390625,
+                "sample_sd_ddof1": 0.23650788335585207,
+                "values": [
+                  -7.38525390625,
+                  -7.05078125
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": -3.7862548828125,
+                  "mean": -3.78662109375,
+                  "minimum": -3.7869873046875,
+                  "sample_sd_ddof1": 0.0005179004745018658,
+                  "values": [
+                    -3.7869873046875,
+                    -3.7862548828125
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            }
+          },
+          "position": 0
+        },
+        {
+          "metrics": {
+            "change_entropy_deficit_sum": {
+              "effect": {
+                "maximum": 116.81864448336412,
+                "mean": 104.05210461525219,
+                "minimum": 91.28556474714026,
+                "sample_sd_ddof1": 18.05461382606072,
+                "values": [
+                  91.28556474714026,
+                  116.81864448336412
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 251.19983680955946,
+                  "mean": 250.47113709144674,
+                  "minimum": 249.742437373334,
+                  "sample_sd_ddof1": 1.0305370242524627,
+                  "values": [
+                    251.19983680955946,
+                    249.742437373334
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "changed_fraction": {
+              "effect": {
+                "maximum": -0.88995361328125,
+                "mean": -0.90460205078125,
+                "minimum": -0.91925048828125,
+                "sample_sd_ddof1": 0.020716018980074635,
+                "values": [
+                  -0.91925048828125,
+                  -0.88995361328125
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": -0.4708251953125,
+                  "mean": -0.47174072265625,
+                  "minimum": -0.47265625,
+                  "sample_sd_ddof1": 0.0012947511862546647,
+                  "values": [
+                    -0.47265625,
+                    -0.4708251953125
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "mean_symbol_delta": {
+              "effect": {
+                "maximum": -7.1171875,
+                "mean": -7.22509765625,
+                "minimum": -7.3330078125,
+                "sample_sd_ddof1": 0.15260800648654982,
+                "values": [
+                  -7.3330078125,
+                  -7.1171875
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": -3.78564453125,
+                  "mean": -3.7867431640625,
+                  "minimum": -3.787841796875,
+                  "sample_sd_ddof1": 0.0015537014235055976,
+                  "values": [
+                    -3.787841796875,
+                    -3.78564453125
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            }
+          },
+          "position": 1
+        },
+        {
+          "metrics": {
+            "change_entropy_deficit_sum": {
+              "effect": {
+                "maximum": 85.68307032026348,
+                "mean": 84.86164701823908,
+                "minimum": 84.04022371621468,
+                "sample_sd_ddof1": 1.1616679741721967,
+                "values": [
+                  84.04022371621468,
+                  85.68307032026348
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 250.57027670800417,
+                  "mean": 249.85906475487212,
+                  "minimum": 249.1478528017401,
+                  "sample_sd_ddof1": 1.0058055898411833,
+                  "values": [
+                    250.57027670800417,
+                    249.1478528017401
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "changed_fraction": {
+              "effect": {
+                "maximum": -0.443450927734375,
+                "mean": -0.4435577392578125,
+                "minimum": -0.44366455078125,
+                "sample_sd_ddof1": 0.0001510543050630442,
+                "values": [
+                  -0.443450927734375,
+                  -0.44366455078125
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.010009765625,
+                  "mean": 0.009033203125,
+                  "minimum": 0.008056640625,
+                  "sample_sd_ddof1": 0.0013810679320049757,
+                  "values": [
+                    0.008056640625,
+                    0.010009765625
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "mean_symbol_delta": {
+              "effect": {
+                "maximum": -3.5361328125,
+                "mean": -3.550537109375,
+                "minimum": -3.56494140625,
+                "sample_sd_ddof1": 0.020370751997073392,
+                "values": [
+                  -3.5361328125,
+                  -3.56494140625
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.0784912109375,
+                  "mean": 0.07659912109375,
+                  "minimum": 0.07470703125,
+                  "sample_sd_ddof1": 0.00267581911825964,
+                  "values": [
+                    0.07470703125,
+                    0.0784912109375
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            }
+          },
+          "position": 7
+        },
+        {
+          "metrics": {
+            "change_entropy_deficit_sum": {
+              "effect": {
+                "maximum": 93.16465852242612,
+                "mean": 87.17707373369177,
+                "minimum": 81.18948894495742,
+                "sample_sd_ddof1": 8.467723614086964,
+                "values": [
+                  81.18948894495742,
+                  93.16465852242612
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 251.1123230515956,
+                  "mean": 250.31408211709606,
+                  "minimum": 249.5158411825965,
+                  "sample_sd_ddof1": 1.1288831556106516,
+                  "values": [
+                    251.1123230515956,
+                    249.5158411825965
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "changed_fraction": {
+              "effect": {
+                "maximum": -0.4356689453125,
+                "mean": -0.441986083984375,
+                "minimum": -0.44830322265625,
+                "sample_sd_ddof1": 0.008933783185157185,
+                "values": [
+                  -0.44830322265625,
+                  -0.4356689453125
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.0093994140625,
+                  "mean": 0.00872802734375,
+                  "minimum": 0.008056640625,
+                  "sample_sd_ddof1": 0.0009494842032534207,
+                  "values": [
+                    0.008056640625,
+                    0.0093994140625
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "mean_symbol_delta": {
+              "effect": {
+                "maximum": -3.533203125,
+                "mean": -3.564697265625,
+                "minimum": -3.59619140625,
+                "sample_sd_ddof1": 0.04453944080716046,
+                "values": [
+                  -3.59619140625,
+                  -3.533203125
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.080810546875,
+                  "mean": 0.07952880859375,
+                  "minimum": 0.0782470703125,
+                  "sample_sd_ddof1": 0.0018126516607565304,
+                  "values": [
+                    0.0782470703125,
+                    0.080810546875
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            }
+          },
+          "position": 31
+        },
+        {
+          "metrics": {
+            "change_entropy_deficit_sum": {
+              "effect": {
+                "maximum": 93.68526786332228,
+                "mean": 92.187441219688,
+                "minimum": 90.68961457605371,
+                "sample_sd_ddof1": 2.1182467535113765,
+                "values": [
+                  93.68526786332228,
+                  90.68961457605371
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 250.71875213049682,
+                  "mean": 250.45287814811098,
+                  "minimum": 250.18700416572517,
+                  "sample_sd_ddof1": 0.37600259177218187,
+                  "values": [
+                    250.71875213049682,
+                    250.18700416572517
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "changed_fraction": {
+              "effect": {
+                "maximum": -0.435699462890625,
+                "mean": -0.43829345703125,
+                "minimum": -0.440887451171875,
+                "sample_sd_ddof1": 0.0036684616943882167,
+                "values": [
+                  -0.435699462890625,
+                  -0.440887451171875
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.0089111328125,
+                  "mean": 0.00836181640625,
+                  "minimum": 0.0078125,
+                  "sample_sd_ddof1": 0.0007768507117527988,
+                  "values": [
+                    0.0078125,
+                    0.0089111328125
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "mean_symbol_delta": {
+              "effect": {
+                "maximum": -3.49072265625,
+                "mean": -3.5263671875,
+                "minimum": -3.56201171875,
+                "sample_sd_ddof1": 0.05040897951818161,
+                "values": [
+                  -3.49072265625,
+                  -3.56201171875
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.0753173828125,
+                  "mean": 0.07330322265625,
+                  "minimum": 0.0712890625,
+                  "sample_sd_ddof1": 0.0028484526097602623,
+                  "values": [
+                    0.0712890625,
+                    0.0753173828125
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            }
+          },
+          "position": 127
+        },
+        {
+          "metrics": {
+            "change_entropy_deficit_sum": {
+              "effect": {
+                "maximum": 90.91604415824193,
+                "mean": 82.49601999911008,
+                "minimum": 74.07599583997822,
+                "sample_sd_ddof1": 11.907712361353386,
+                "values": [
+                  74.07599583997822,
+                  90.91604415824193
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 250.1961595703906,
+                  "mean": 249.97597944162783,
+                  "minimum": 249.75579931286504,
+                  "sample_sd_ddof1": 0.31138172426137417,
+                  "values": [
+                    250.1961595703906,
+                    249.75579931286504
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "changed_fraction": {
+              "effect": {
+                "maximum": -0.43817138671875,
+                "mean": -0.4462890625,
+                "minimum": -0.45440673828125,
+                "sample_sd_ddof1": 0.01148012718479136,
+                "values": [
+                  -0.45440673828125,
+                  -0.43817138671875
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.010009765625,
+                  "mean": 0.009521484375,
+                  "minimum": 0.009033203125,
+                  "sample_sd_ddof1": 0.0006905339660024879,
+                  "values": [
+                    0.009033203125,
+                    0.010009765625
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            },
+            "mean_symbol_delta": {
+              "effect": {
+                "maximum": -3.5439453125,
+                "mean": -3.585693359375,
+                "minimum": -3.62744140625,
+                "sample_sd_ddof1": 0.059040654093212706,
+                "values": [
+                  -3.62744140625,
+                  -3.5439453125
+                ]
+              },
+              "exact_sign_flip": {
+                "seed_pairs": 2,
+                "two_sided_p": 0.5
+              },
+              "random_position_effect": {
+                "effect": {
+                  "maximum": 0.0789794921875,
+                  "mean": 0.07666015625,
+                  "minimum": 0.0743408203125,
+                  "sample_sd_ddof1": 0.003280036338511817,
+                  "values": [
+                    0.0789794921875,
+                    0.0743408203125
+                  ]
+                },
+                "exact_sign_flip": {
+                  "seed_pairs": 2,
+                  "two_sided_p": 0.5
+                }
+              }
+            }
+          },
+          "position": 255
+        }
+      ],
+      "scope_note": "Public decoded-v representation followed by NTT and Compress_d; not an internal-state or security claim.",
+      "seeds": 2,
+      "variant": "mlkem512"
+    }
+  ],
+  "schema": "mlkem-compression-boundary-frontier-v1"
+}

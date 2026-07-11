@@ -1,0 +1,214 @@
+{
+  "cipher": "speck128_256",
+  "test": "F8_cross_round_MI",
+  "block_bytes": 16,
+  "full_rounds": 34,
+  "n_blocks": 20000,
+  "n_seeds": 10,
+  "n_round_pairs": 8,
+  "timestamp": "2026-02-27T19:06:09",
+  "full_round_detected": true,
+  "full_round_t_stat": 40.4,
+  "results": [
+    {
+      "base_round": 1,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.169559,
+      "sig_rate_std": 0.006395,
+      "t_stat": 59.12,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.165829,
+        0.175781,
+        0.157454,
+        0.179587,
+        0.165922,
+        0.165271,
+        0.170296,
+        0.167598,
+        0.169738,
+        0.178113
+      ]
+    },
+    {
+      "base_round": 2,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.161104,
+      "sig_rate_std": 0.005804,
+      "t_stat": 60.53,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.158251,
+        0.166493,
+        0.152525,
+        0.169527,
+        0.155729,
+        0.154607,
+        0.162936,
+        0.158854,
+        0.162415,
+        0.169703
+      ]
+    },
+    {
+      "base_round": 3,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.147883,
+      "sig_rate_std": 0.006041,
+      "t_stat": 51.24,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.144428,
+        0.153846,
+        0.136932,
+        0.156922,
+        0.144,
+        0.142429,
+        0.149925,
+        0.1445,
+        0.151424,
+        0.154423
+      ]
+    },
+    {
+      "base_round": 4,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.12565,
+      "sig_rate_std": 0.006604,
+      "t_stat": 36.22,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.121138,
+        0.128922,
+        0.11231,
+        0.136832,
+        0.127023,
+        0.118195,
+        0.127023,
+        0.124632,
+        0.129966,
+        0.130456
+      ]
+    },
+    {
+      "base_round": 6,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.083398,
+      "sig_rate_std": 0.003526,
+      "t_stat": 29.95,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.084473,
+        0.084961,
+        0.079102,
+        0.088379,
+        0.083496,
+        0.082031,
+        0.081055,
+        0.07666,
+        0.086914,
+        0.086914
+      ]
+    },
+    {
+      "base_round": 8,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.077881,
+      "sig_rate_std": 0.003914,
+      "t_stat": 22.53,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.075195,
+        0.079102,
+        0.076172,
+        0.082031,
+        0.076172,
+        0.072754,
+        0.080566,
+        0.071777,
+        0.084473,
+        0.080566
+      ]
+    },
+    {
+      "base_round": 17,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.079395,
+      "sig_rate_std": 0.005482,
+      "t_stat": 16.96,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.075195,
+        0.086914,
+        0.075684,
+        0.070801,
+        0.09082,
+        0.077637,
+        0.081055,
+        0.078613,
+        0.079102,
+        0.078125
+      ]
+    },
+    {
+      "base_round": 25,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.081152,
+      "sig_rate_std": 0.002637,
+      "t_stat": 37.36,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.077637,
+        0.078613,
+        0.079102,
+        0.083008,
+        0.086914,
+        0.081055,
+        0.082031,
+        0.07959,
+        0.080078,
+        0.083496
+      ]
+    },
+    {
+      "base_round": 26,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.080615,
+      "sig_rate_std": 0.002397,
+      "t_stat": 40.4,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.078125,
+        0.078613,
+        0.080078,
+        0.084961,
+        0.083984,
+        0.081055,
+        0.083008,
+        0.078125,
+        0.079102,
+        0.079102
+      ]
+    },
+    {
+      "base_round": 32,
+      "n_round_pairs": 3,
+      "sig_rate_mean": 0.078385,
+      "sig_rate_std": 0.008127,
+      "t_stat": 11.04,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.075521,
+        0.080729,
+        0.058594,
+        0.082031,
+        0.080729,
+        0.076823,
+        0.092448,
+        0.082031,
+        0.080729,
+        0.074219
+      ]
+    }
+  ]
+}

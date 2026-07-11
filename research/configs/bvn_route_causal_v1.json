@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "f8": {
+    "targets": ["speck32_64", "simon32_64"],
+    "n_blocks": 1600,
+    "n_seeds": 3,
+    "routes_per_seed": 16,
+    "shift": 5,
+    "alpha": 0.05
+  },
+  "casi": {
+    "target": "speck32_64",
+    "rounds": 2,
+    "samples": 1000,
+    "routes": 16
+  }
+}

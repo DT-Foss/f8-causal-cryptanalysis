@@ -1,0 +1,317 @@
+{
+  "causal": {
+    "bytes": 948,
+    "explicit_triplets": 5,
+    "file_sha256": "dfd8565a926c8b53ecaa5dabdb563770a1af5707402ae57630d5e5bb475c60e3",
+    "graph_sha256": "efd100726fd0c9ab019d678483aad6f05e62d86298b164c31b06e5a90ed0597e",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/feal32x_fullround_reader_inverse_v1.causal",
+    "triplets": 5
+  },
+  "confirmation": [
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_block_matches": 0,
+        "max_byte_accuracy": 0.00440625,
+        "mean_byte_accuracy": 0.004089843750000001,
+        "total_block_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "block_accuracy": 1.0,
+        "block_matches": 8000,
+        "block_total": 8000,
+        "byte_accuracy": 1.0,
+        "byte_matches": 32000,
+        "byte_total": 32000
+      },
+      "key_index": 0,
+      "previous_round_subkey_control": {
+        "block_accuracy": 0.0,
+        "block_matches": 0,
+        "block_total": 8000,
+        "byte_accuracy": 0.5,
+        "byte_matches": 16000,
+        "byte_total": 32000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_block_matches": 0,
+        "max_byte_accuracy": 0.00471875,
+        "mean_byte_accuracy": 0.004009765625,
+        "total_block_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "block_accuracy": 1.0,
+        "block_matches": 8000,
+        "block_total": 8000,
+        "byte_accuracy": 1.0,
+        "byte_matches": 32000,
+        "byte_total": 32000
+      },
+      "key_index": 1,
+      "previous_round_subkey_control": {
+        "block_accuracy": 0.0,
+        "block_matches": 0,
+        "block_total": 8000,
+        "byte_accuracy": 0.5,
+        "byte_matches": 16000,
+        "byte_total": 32000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_block_matches": 0,
+        "max_byte_accuracy": 0.0045,
+        "mean_byte_accuracy": 0.004021484375,
+        "total_block_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "block_accuracy": 1.0,
+        "block_matches": 8000,
+        "block_total": 8000,
+        "byte_accuracy": 1.0,
+        "byte_matches": 32000,
+        "byte_total": 32000
+      },
+      "key_index": 2,
+      "previous_round_subkey_control": {
+        "block_accuracy": 0.0,
+        "block_matches": 0,
+        "block_total": 8000,
+        "byte_accuracy": 0.5,
+        "byte_matches": 16000,
+        "byte_total": 32000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_block_matches": 0,
+        "max_byte_accuracy": 0.00478125,
+        "mean_byte_accuracy": 0.004048828125,
+        "total_block_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "block_accuracy": 1.0,
+        "block_matches": 8000,
+        "block_total": 8000,
+        "byte_accuracy": 1.0,
+        "byte_matches": 32000,
+        "byte_total": 32000
+      },
+      "key_index": 3,
+      "previous_round_subkey_control": {
+        "block_accuracy": 0.0,
+        "block_matches": 0,
+        "block_total": 8000,
+        "byte_accuracy": 0.5,
+        "byte_matches": 16000,
+        "byte_total": 32000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_block_matches": 0,
+        "max_byte_accuracy": 0.00440625,
+        "mean_byte_accuracy": 0.0038671875,
+        "total_block_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "block_accuracy": 1.0,
+        "block_matches": 8000,
+        "block_total": 8000,
+        "byte_accuracy": 1.0,
+        "byte_matches": 32000,
+        "byte_total": 32000
+      },
+      "key_index": 4,
+      "previous_round_subkey_control": {
+        "block_accuracy": 0.0,
+        "block_matches": 0,
+        "block_total": 8000,
+        "byte_accuracy": 0.5,
+        "byte_matches": 16000,
+        "byte_total": 32000
+      }
+    }
+  ],
+  "evidence_stage": "FULLROUND_READER_INFERENCE_RETAINED",
+  "kat": {
+    "ciphertext": "9c9b54973df685f8",
+    "first_eight_round_subkeys": "751971f984e9488688e5523b4ea47ade",
+    "initial_state": "196a9ab1f97f1b21",
+    "key": "0123456789abcdef0123456789abcdef",
+    "ntt_reference_sha256": "8bc1d200610a029c7f1869da7b63a8f3780f1bbb5acacb037611cba4f999190f",
+    "ntt_reference_url": "https://info.isl.ntt.co.jp/crypt/eng/archive/dl/feal/call-6.txt",
+    "ntt_vector_sha256": "d2560183dcd4d79ca83389427009a6f2dc85648241b7f6b2d15dc0163d367949",
+    "ntt_vector_url": "https://info.isl.ntt.co.jp/crypt/eng/archive/dl/feal/call-5.zip",
+    "official_vector_match": true,
+    "plaintext": "0000000000000000",
+    "r32_state": "932ddf1603e932d4"
+  },
+  "parameters": {
+    "boundary": "R30_to_R32_fullround_endpoint",
+    "bvn_routes": 16,
+    "keys": 5,
+    "pairs_per_key": 8000,
+    "rounds": 32,
+    "seed": 88728001
+  },
+  "reader_triplets": [
+    {
+      "attrs": {
+        "distance2_identity": "left_R30 xor left_R32 = F(right_R30, K30)",
+        "information_recovered_bits": 32,
+        "inverse_recipe": {
+          "inputs": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "k0",
+            "k1"
+          ],
+          "operations": [
+            {
+              "constant": 0,
+              "left": "ror2(f0)",
+              "op": "sub_mod256",
+              "out": "x0",
+              "right": "f1"
+            },
+            {
+              "constant": 0,
+              "left": "ror2(f2)",
+              "op": "sub_mod256",
+              "out": "v",
+              "right": "f1"
+            },
+            {
+              "constant": 1,
+              "left": "ror2(f1)",
+              "op": "sub_mod256",
+              "out": "u",
+              "right": "v"
+            },
+            {
+              "constant": 1,
+              "left": "ror2(f3)",
+              "op": "sub_mod256",
+              "out": "x3",
+              "right": "f2"
+            },
+            {
+              "args": [
+                "x0",
+                "u",
+                "k0"
+              ],
+              "op": "xor",
+              "out": "x1"
+            },
+            {
+              "args": [
+                "x3",
+                "v",
+                "k1"
+              ],
+              "op": "xor",
+              "out": "x2"
+            }
+          ],
+          "output_order": [
+            "x0",
+            "x1",
+            "x2",
+            "x3"
+          ]
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "feal32x-reader-full-inverse",
+      "evidence_kind": "exact_composed_inverse",
+      "is_inferred": false,
+      "mechanism": "reader_executable_exact_inverse",
+      "outcome": "feal32x:r30_right_32bits",
+      "provenance": [
+        "feal32x-stage-middle",
+        "feal32x-stage-outer",
+        "feal32x-stage-u",
+        "feal32x-stage-v"
+      ],
+      "source": "FEAL32X_distance2_relation_and_reversible_F",
+      "trigger": "feal32x:r30_xor_r32_left_32bits_plus_round_subkey"
+    },
+    {
+      "attrs": {
+        "forward": "f1=ROL2(u+v+1); f2=ROL2(f1+v)",
+        "inverse": "v=ROR2(f2)-f1; u=ROR2(f1)-v-1"
+      },
+      "confidence": 1.0,
+      "edge_id": "feal32x-stage-middle",
+      "evidence_kind": "exact_FEAL_F_equation",
+      "is_inferred": false,
+      "mechanism": "reversible_add_rotate_pair",
+      "outcome": "feal32x:f1_f2",
+      "provenance": [],
+      "source": "NTT_FEAL32X_reference_equations",
+      "trigger": "feal32x:u_v"
+    },
+    {
+      "attrs": {
+        "forward": "f0=ROL2(x0+f1); f3=ROL2(x3+f2+1)",
+        "inverse": "x0=ROR2(f0)-f1; x3=ROR2(f3)-f2-1"
+      },
+      "confidence": 1.0,
+      "edge_id": "feal32x-stage-outer",
+      "evidence_kind": "exact_FEAL_F_equation",
+      "is_inferred": false,
+      "mechanism": "reversible_outer_add_rotate_pair",
+      "outcome": "feal32x:f0_f3",
+      "provenance": [],
+      "source": "NTT_FEAL32X_reference_equations",
+      "trigger": "feal32x:x0_x3_f1_f2"
+    },
+    {
+      "attrs": {
+        "formula": "u = x0 xor x1 xor k0"
+      },
+      "confidence": 1.0,
+      "edge_id": "feal32x-stage-u",
+      "evidence_kind": "exact_FEAL_F_equation",
+      "is_inferred": false,
+      "mechanism": "xor_pair_projection",
+      "outcome": "feal32x:u",
+      "provenance": [],
+      "source": "NTT_FEAL32X_reference_equations",
+      "trigger": "feal32x:r30_bytes_x0_x1_plus_k0"
+    },
+    {
+      "attrs": {
+        "formula": "v = x2 xor x3 xor k1"
+      },
+      "confidence": 1.0,
+      "edge_id": "feal32x-stage-v",
+      "evidence_kind": "exact_FEAL_F_equation",
+      "is_inferred": false,
+      "mechanism": "xor_pair_projection",
+      "outcome": "feal32x:v",
+      "provenance": [],
+      "source": "NTT_FEAL32X_reference_equations",
+      "trigger": "feal32x:r30_bytes_x2_x3_plus_k1"
+    }
+  ],
+  "result": "The R30 right half is exactly reconstructed from the R30 xor R32 left-half difference and the known two-byte round subkey by executing the recipe stored in .causal.",
+  "retained": true,
+  "schema": "feal32x-fullround-reader-inverse-v1"
+}

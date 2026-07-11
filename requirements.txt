@@ -1,0 +1,13 @@
+# Exact direct dependencies used for the clean-room verification on 2026-07-10.
+numpy==1.26.4
+scipy==1.17.1
+pytest==8.4.2
+build==1.2.2.post1
+# PQC experiment backend.  The exact resolved version is captured in each run manifest.
+pqcrypto==0.4.0
+# Representative lossless compressor families for causal cascade experiments.
+zstandard==0.25.0
+lz4==4.4.5
+Brotli==1.2.0
+# Reproducible static heatmaps for the multi-cipher causal atlas.
+matplotlib==3.10.8

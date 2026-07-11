@@ -1,0 +1,15 @@
+{
+  "schema": "frozen-confirmation-config-v1",
+  "experiment": "aes_bit_round_frontier_screen.py",
+  "discovery_artifact": "research/results/v1/aes_bit_round_frontier_screen_v1.json",
+  "discovery_sha256": "fbd79a8a4f13efb57331b2ed261dfe80795e45081335ef592408958412f2436d",
+  "hypothesis": "All 128 one-bit plaintext XOR differences have excess output-difference byte entropy deficit after genuine AES round 2, but not after round 3 or full AES-10.",
+  "rounds": [2, 3, 10],
+  "plaintext_bits": "all 0 through 127, frozen before confirmation",
+  "pairs_per_key": 10000,
+  "independent_keys": 10,
+  "repairing_routes": 8,
+  "seed_base": 185001,
+  "primary_metric": "entropy_deficit_sum",
+  "decision_rule": "R2 requires positive effect for every bit and BH q <= 0.01; R3 and R10 calibrate the selected-family null."
+}

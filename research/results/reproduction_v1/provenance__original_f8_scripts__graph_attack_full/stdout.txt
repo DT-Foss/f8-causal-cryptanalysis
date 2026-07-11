@@ -1,0 +1,142 @@
+================================================================================
+GRAPH-FRAMEWORK FULL ATTACK — ALL FAST COMBINATIONS
+================================================================================
+N=20000, 5 seeds, 12 perms
+4 edges × 3 grans × 6 metrics = 72 combos per cipher
+
+
+================================================================================
+  AES-128 — SPN, S-Box algebra, no addition
+================================================================================
+
+  Computing AES R3...
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- AES-128 R3 ---
+  No signal (best: MI/bytes/sig_rate Z=+1.5)
+
+  Top 5:
+    1.              MI/bytes/sig_rate  Z=+1.5
+    2.          MI/nibbles/clustering  Z=+1.4
+    3.              MI/bytes/max_edge  Z=+1.3
+    4.        pearson/words/mean_edge  Z=+1.2
+    5.        pearson/bytes/mean_edge  Z=+1.0
+
+  Computing AES R4...
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- AES-128 R4 ---
+  No signal (best: xor_bias/bytes/max_edge Z=+1.7)
+
+  Top 5:
+    1.        xor_bias/bytes/max_edge  Z=+1.7
+    2.            MI/nibbles/max_edge  Z=+1.4
+    3.          chi2/nibbles/max_edge  Z=+1.3
+    4.      xor_bias/bytes/clustering  Z=+1.1
+    5.         chi2/nibbles/mean_edge  Z=+0.8
+
+================================================================================
+  ChaCha20 — ARX stream, 512-bit state, 16 words
+================================================================================
+
+  Computing ChaCha R3...
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- ChaCha20 R3 ---
+  No signal (best: pearson/bytes/max_edge Z=+1.2)
+
+  Top 5:
+    1.         pearson/bytes/max_edge  Z=+1.2
+    2.       xor_bias/nibbles/entropy  Z=+1.0
+    3.     pearson/bytes/spectral_gap  Z=+1.0
+    4.       pearson/nibbles/max_edge  Z=+0.9
+    5.       xor_bias/words/mean_edge  Z=+0.8
+
+  Computing ChaCha R4...
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- ChaCha20 R4 ---
+  No signal (best: xor_bias/nibbles/max_edge Z=+0.8)
+
+  Top 5:
+    1.      xor_bias/nibbles/max_edge  Z=+0.8
+    2.       xor_bias/nibbles/entropy  Z=+0.7
+    3.     xor_bias/nibbles/mean_edge  Z=+0.6
+    4.               MI/words/entropy  Z=+0.6
+    5.            MI/words/clustering  Z=+0.6
+
+================================================================================
+  Salsa20 — ARX stream, 512-bit state, 16 words
+================================================================================
+
+  Computing Salsa R4...
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- Salsa20 R4 ---
+  No signal (best: pearson/nibbles/entropy Z=+1.1)
+
+  Top 5:
+    1.        pearson/nibbles/entropy  Z=+1.1
+    2.   pearson/nibbles/spectral_gap  Z=+1.0
+    3.       pearson/bytes/clustering  Z=+0.8
+    4.       pearson/words/clustering  Z=+0.8
+    5.     pearson/bytes/spectral_gap  Z=+0.7
+
+  Computing Salsa R5...
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- Salsa20 R5 ---
+  No signal (best: xor_bias/words/clustering Z=+1.4)
+
+  Top 5:
+    1.      xor_bias/words/clustering  Z=+1.4
+    2.         pearson/words/sig_rate  Z=+1.0
+    3.      xor_bias/bytes/clustering  Z=+0.7
+    4.           MI/nibbles/mean_edge  Z=+0.6
+    5.               MI/words/entropy  Z=+0.6
+
+================================================================================
+  Random (NULL — false positive rate check)
+================================================================================
+    [ 18/72] edge=chi2 done
+    [ 36/72] edge=MI done
+    [ 54/72] edge=pearson done
+    [ 72/72] edge=xor_bias done
+
+  --- Random R1 ---
+  No signal (best: pearson/words/sig_rate Z=+1.3)
+
+  Top 5:
+    1.         pearson/words/sig_rate  Z=+1.3
+    2.        xor_bias/words/sig_rate  Z=+1.1
+    3.  xor_bias/nibbles/spectral_gap  Z=+1.0
+    4.     xor_bias/nibbles/mean_edge  Z=+1.0
+    5.              MI/words/max_edge  Z=+0.7
+
+================================================================================
+SUMMARY
+================================================================================
+AES R3 frontier, R4 beyond — any signal = major finding
+ChaCha R3 frontier, R4 beyond — any signal = major finding
+Salsa R4 frontier, R5 beyond — any signal = major finding
+
+
+=== DONE ===

@@ -1,0 +1,1658 @@
+{
+  "counts": {
+    "entries": 121,
+    "retained_result_artifacts": 72,
+    "runnable_historical_experiments": 39
+  },
+  "entries": [
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts____init__",
+      "kind": "legacy_f8_support",
+      "non_runnable_reason": "support module, not a standalone experiment",
+      "path": "provenance/original_f8_scripts/__init__.py",
+      "runnable_historical": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "claims": [
+        "I06",
+        "I24",
+        "N23"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/arx_topology_sweep.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__arx_topology_sweep",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/arx_topology_sweep.py",
+      "runnable_historical": true,
+      "sha256": "98344c453f3e15ea8703ba55f6ce2b24c80edeb5501e34389ff0b0b8195ceeff"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/carry_chain_length.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__carry_chain_length",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/carry_chain_length.py",
+      "runnable_historical": true,
+      "sha256": "76e0f0d5988e4dacde6804d67f4b6e8013021b809aee61a2ab667ce3484804a5"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/diff_heatmap.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__diff_heatmap",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/diff_heatmap.py",
+      "runnable_historical": true,
+      "sha256": "18839e1f223d17b6073781b5798cc4feb17037cb095126e4a382a60e4465771c"
+    },
+    {
+      "claims": [
+        "I21"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/gohr_comparison.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__gohr_comparison",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/gohr_comparison.py",
+      "runnable_historical": true,
+      "sha256": "a978f9d67147307f956a889584dc812eeb90bf452795d7f76fdae9f313ac6df9"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/graph_attack.py"
+      ],
+      "expected_returncode": 1,
+      "expected_stderr_contains": "IndexError: index 11 is out of bounds",
+      "id": "provenance__original_f8_scripts__graph_attack",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/graph_attack.py",
+      "runnable_historical": true,
+      "sha256": "8481af18af621b6ba9914f70d002f9188a665f7af3c3c3ef84b9a891ad9ae113"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/graph_attack_full.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__graph_attack_full",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/graph_attack_full.py",
+      "runnable_historical": true,
+      "sha256": "b0690c416c6ab04174080ebf245daf2e1dd47c52a312fa142b1856b6464ef479"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/graph_sweep.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__graph_sweep",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/graph_sweep.py",
+      "runnable_historical": true,
+      "sha256": "cab158dae2e1dac677071a14852c2f2f5c00597df4bc69ff0cc39ce8d87634e3"
+    },
+    {
+      "claims": [
+        "I18"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/informed_chaskey.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__informed_chaskey",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/informed_chaskey.py",
+      "runnable_historical": true,
+      "sha256": "9cbe0d5903513bb4ed2c317244909330aa20fcaa18240910534bccfcdbd5ebca"
+    },
+    {
+      "claims": [
+        "I18"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/informed_hight.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__informed_hight",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/informed_hight.py",
+      "runnable_historical": true,
+      "sha256": "fe2aefe232e229b25b3e8cadb95fe87e2d95d8b0fd06517a72ae9c7c1a30cb15"
+    },
+    {
+      "claims": [
+        "I18"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/informed_lea.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__informed_lea",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/informed_lea.py",
+      "runnable_historical": true,
+      "sha256": "18015bb813fbfeaaa13e3f3ee464dee4cb8a33d76257a88fee716349864f3f3c"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/informed_sparx.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__informed_sparx",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/informed_sparx.py",
+      "runnable_historical": true,
+      "sha256": "a81232c0cd921f7b6ea52902a669a835a368b8f1fe3cbcee28023f206bf6e88e"
+    },
+    {
+      "claims": [
+        "I10"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/informed_sparx_internal.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__informed_sparx_internal",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/informed_sparx_internal.py",
+      "runnable_historical": true,
+      "sha256": "1d59e71527ef0df8cc8d47a84b78dfba36c7e9eea726cde693579fae8134e208"
+    },
+    {
+      "claims": [
+        "I04",
+        "I07",
+        "I20"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/informed_threefish.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__informed_threefish",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/informed_threefish.py",
+      "runnable_historical": true,
+      "sha256": "a3d4f212700f7c3a1b511cb4bd415488b20c598fd1dd0c386bf8e9020597dc82"
+    },
+    {
+      "claims": [
+        "I09"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/inverse_speck.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__inverse_speck",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/inverse_speck.py",
+      "runnable_historical": true,
+      "sha256": "4562c8bb2d2b2c4c898d7e5fc6364e77f6db216b10b7759b925321538c7095cc"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p1_speck128.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p1_speck128",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p1_speck128.py",
+      "runnable_historical": true,
+      "sha256": "cff140442b35a29bb7fbaf642bc19ab98b357004a40f4985df577d0f22b46333"
+    },
+    {
+      "claims": [
+        "I01",
+        "I14",
+        "N23"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p2_round_constancy.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p2_round_constancy",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p2_round_constancy.py",
+      "runnable_historical": true,
+      "sha256": "150168d95c47d2d41fabc45bdc6075231db3db13b427033d0df037c1b4460aa5"
+    },
+    {
+      "claims": [
+        "I07"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p3_bitlevel_mi.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p3_bitlevel_mi",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p3_bitlevel_mi.py",
+      "runnable_historical": true,
+      "sha256": "9acee81a285ca8aa53f7066ed51b7b19bbecee7cccd88a0523f6e449c28a0d60"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p4_leakrate.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p4_leakrate",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p4_leakrate.py",
+      "runnable_historical": true,
+      "sha256": "1b2f7ce5427f9573954e5a00a2d74dd06cc21fd4497520320465e64c68ac8463"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p5_alpha_beta_sweep.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p5_alpha_beta_sweep",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p5_alpha_beta_sweep.py",
+      "runnable_historical": true,
+      "sha256": "18c8b9712a45c23bbceaac955fd137a51f94d64f108f13dec6731b2876426b4c"
+    },
+    {
+      "claims": [
+        "I05",
+        "N17"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p5b_beta_fine.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p5b_beta_fine",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p5b_beta_fine.py",
+      "runnable_historical": true,
+      "sha256": "ab10b5c07182edb4cc30f8a8ed713e16ce7b53059967dbfa5415d820f902a759"
+    },
+    {
+      "claims": [
+        "I08",
+        "I24"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p6_predictions.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p6_predictions",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p6_predictions.py",
+      "runnable_historical": true,
+      "sha256": "0683d5d8d9d35482984af478192fe4e243091d88c170b85022546c8f7262a765"
+    },
+    {
+      "claims": [
+        "I19"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p6b_ws_threshold.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p6b_ws_threshold",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p6b_ws_threshold.py",
+      "runnable_historical": true,
+      "sha256": "fb65967fd00c06b4f953e4c2c41ffe75eb6ba82a05bfc03f4930c49ec7030528"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p7_spectral_gap.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p7_spectral_gap",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p7_spectral_gap.py",
+      "runnable_historical": true,
+      "sha256": "5b4e830cdc6fdf0c9d75c20786d519b918cd7927bbfdd8ff6cfd8e804293c43f"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p8_mi_reattack.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p8_mi_reattack",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p8_mi_reattack.py",
+      "runnable_historical": true,
+      "sha256": "64a46b128b56eeec0ba20b71e04119a7eacc215534e8b943840a8a55ac634026"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p8b_mi_verify.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p8b_mi_verify",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p8b_mi_verify.py",
+      "runnable_historical": true,
+      "sha256": "1f3942a6e53c5c79c64cb4183986246fb5c5cf142c943fbc71ebf7b31a87c6e4"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p8c_mi_correct.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p8c_mi_correct",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p8c_mi_correct.py",
+      "runnable_historical": true,
+      "sha256": "3e651f46a113ed481b8b84ddf916b824d3df91a458cf9eba656f6e148657876b"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/p9_adaptive_quant.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__p9_adaptive_quant",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/p9_adaptive_quant.py",
+      "runnable_historical": true,
+      "sha256": "847490b646660d5baaf5ecb679f74637ec78948438f1e3abb32758ce740cfa85"
+    },
+    {
+      "claims": [
+        "I10"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/sparx_inversion.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__sparx_inversion",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/sparx_inversion.py",
+      "runnable_historical": true,
+      "sha256": "f4c767b9c679372395efc30f8721ee2bc8bddcd2680df779220daeadd7b4833d"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__speck_utils",
+      "kind": "legacy_f8_support",
+      "non_runnable_reason": "support module, not a standalone experiment",
+      "path": "provenance/original_f8_scripts/speck_utils.py",
+      "runnable_historical": false,
+      "sha256": "c55a37beac730f48a215dd7dc5592125578522f10066893822f7f0ddc9f00e40"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t1_permutation.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t1_permutation",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t1_permutation.py",
+      "runnable_historical": true,
+      "sha256": "2dce492c6b3ad3a90dcdef5110f502002769b0c3b5ce559b8a03025876393306"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t2_quantization_sweep.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t2_quantization_sweep",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t2_quantization_sweep.py",
+      "runnable_historical": true,
+      "sha256": "560505395de0d777e744b3be901061208de9a7a06adff934f7c56cb2dec96c80"
+    },
+    {
+      "claims": [
+        "I11"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t3_heatmap.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t3_heatmap",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t3_heatmap.py",
+      "runnable_historical": true,
+      "sha256": "87e0c8f10516029a93e8b2c8819eee7231ee8cdab3fb6e2853c8636a60a74d9f"
+    },
+    {
+      "claims": [
+        "I11"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t5_simon.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t5_simon",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t5_simon.py",
+      "runnable_historical": true,
+      "sha256": "cbf956ec664cf9ecd0997f7056ba3ccb96b564b35a65631ef0e35055359e8a20"
+    },
+    {
+      "claims": [
+        "I03"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t6_variants.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t6_variants",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t6_variants.py",
+      "runnable_historical": true,
+      "sha256": "afb5142577d3e6e5f4ed8dd6c2a274d3c68a4acd30f28c4b1d44116ec4d4915a"
+    },
+    {
+      "claims": [
+        "I16"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t7_key_ablation.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t7_key_ablation",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t7_key_ablation.py",
+      "runnable_historical": true,
+      "sha256": "a502ac60f3933afcf135cb6badc0f29a8bff9f59c1c645de38b88399051cee14"
+    },
+    {
+      "claims": [
+        "I01",
+        "I15"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t8_direction.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t8_direction",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t8_direction.py",
+      "runnable_historical": true,
+      "sha256": "5873553e6955533acdaee94323f4d6ac25b5e4bc47c0d7ececf67932fdccf887"
+    },
+    {
+      "claims": [
+        "I17"
+      ],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/t9_nscaling.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__t9_nscaling",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/t9_nscaling.py",
+      "runnable_historical": true,
+      "sha256": "fcb585720e5e5892d9399bb9a5e49eece29a9c7311e8995e9af902b9c353a582"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/temporal_stability.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__temporal_stability",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/temporal_stability.py",
+      "runnable_historical": true,
+      "sha256": "3bbd1677de453f1b72636513a16ace8743576f2ac5be230bf073df28ecceb503"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/temporal_verify.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__temporal_verify",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/temporal_verify.py",
+      "runnable_historical": true,
+      "sha256": "d52048d2bc047bf0e6f0222195e9d29585e943769c128a0521b4cce0bda20701"
+    },
+    {
+      "claims": [],
+      "command": [
+        "{python}",
+        "provenance/original_f8_scripts/verify_threefish.py"
+      ],
+      "expected_returncode": 0,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_f8_scripts__verify_threefish",
+      "kind": "legacy_f8_experiment",
+      "non_runnable_reason": null,
+      "path": "provenance/original_f8_scripts/verify_threefish.py",
+      "runnable_historical": true,
+      "sha256": "2396beda0712b8fcf1cfde2a031fc4326f349e0e69580f91056388d1e15f2cca"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_nano_scripts__build_master_results",
+      "kind": "legacy_nano_script",
+      "non_runnable_reason": "archived script contains machine-specific absolute Desktop paths",
+      "path": "provenance/original_nano_scripts/build_master_results.py",
+      "runnable_historical": false,
+      "sha256": "ba93f33568c22bfaf4a712e57bc361b3580c74f7d5520cf0ad26bbec21125f66"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_nano_scripts__build_table_and_figure",
+      "kind": "legacy_nano_script",
+      "non_runnable_reason": "archived script contains machine-specific absolute Desktop paths",
+      "path": "provenance/original_nano_scripts/build_table_and_figure.py",
+      "runnable_historical": false,
+      "sha256": "db3f2a34e296c65b89d0932b00de579e31d3f224300949289fd4454aedf64047"
+    },
+    {
+      "claims": [
+        "N07",
+        "N08",
+        "N18",
+        "N20"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_nano_scripts__f8_sweep",
+      "kind": "legacy_nano_script",
+      "non_runnable_reason": "archived script contains machine-specific absolute Desktop paths",
+      "path": "provenance/original_nano_scripts/f8_sweep.py",
+      "runnable_historical": false,
+      "sha256": "cdd84f5b549a6d1dad6ad6959c8de3343ec71d98636a8e3264741ec6f6e154ba"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_nano_scripts__nano_ciphers",
+      "kind": "legacy_nano_script",
+      "non_runnable_reason": "archived script contains machine-specific absolute Desktop paths",
+      "path": "provenance/original_nano_scripts/nano_ciphers.py",
+      "runnable_historical": false,
+      "sha256": "775d5ad22c5278323fd8c489408f7e1c6cee33816cfc375dd6ca1675a516abdb"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_nano_scripts__run_nano_casi",
+      "kind": "legacy_nano_script",
+      "non_runnable_reason": "archived script contains machine-specific absolute Desktop paths",
+      "path": "provenance/original_nano_scripts/run_nano_casi.py",
+      "runnable_historical": false,
+      "sha256": "c37970238e24fed54c0d44888732f8e77d47e29ad5de3ac6c4b999fecc81e464"
+    },
+    {
+      "claims": [
+        "I22",
+        "N09",
+        "N10",
+        "N11",
+        "N19",
+        "N21"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__original_nano_scripts__sweep_runner",
+      "kind": "legacy_nano_script",
+      "non_runnable_reason": "archived script contains machine-specific absolute Desktop paths",
+      "path": "provenance/original_nano_scripts/sweep_runner.py",
+      "runnable_historical": false,
+      "sha256": "e3801600991d467b48ad89637ef30c14f91aa1e36930abce1a65624ae922e585"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__dependencies__live_casiv2_legacy_zip",
+      "kind": "legacy_python_dependency_bundle",
+      "non_runnable_reason": "importable frozen dependency bundle used by graph and temporal scripts",
+      "path": "provenance/dependencies/live_casiv2_legacy.zip",
+      "runnable_historical": false,
+      "sha256": "47870d2bc172b5cdd85880f2051bb527e6a73cf7b6a5ec172a3d6a5a499bc37f"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "provenance__dependencies__pqcrypto-upstream__pqclean__common__sha2_c",
+      "kind": "pinned_reference_source",
+      "non_runnable_reason": "constant source parsed by the SHA-2 full-compression experiment",
+      "path": "provenance/dependencies/pqcrypto-upstream/pqclean/common/sha2.c",
+      "runnable_historical": false,
+      "sha256": "cfe4588b638a9b8035ce55e8fc27e097cfdc7942a41165b7be0fd1fc9a6a6280"
+    },
+    {
+      "claims": [
+        "N13",
+        "N14"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__aging_simulation_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/aging_simulation.json",
+      "runnable_historical": false,
+      "sha256": "dbae222e50d99be17248f221f3640d5058a90e517e3d83d210df3a759655b817"
+    },
+    {
+      "claims": [
+        "N04"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__full_coverage_matrix_csv",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/full_coverage_matrix.csv",
+      "runnable_historical": false,
+      "sha256": "067c64d3af702d87cab84dd8e64538b6228c24b5a5a6e8a8b3c5e8473ab6d274"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_f8_summary_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_f8_summary.json",
+      "runnable_historical": false,
+      "sha256": "a3e1f1e0ca5783fd9b17b07b92f83a295fcb1af49e71ad3ba80b50f8a054bc04"
+    },
+    {
+      "claims": [
+        "N11"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_frontier_summary_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_frontier_summary.json",
+      "runnable_historical": false,
+      "sha256": "1a82a43d6d73dfb521b9e8339b08d77cbe5d60e0f62358e5d0fbddac7f1c8755"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_master_results_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_master_results.json",
+      "runnable_historical": false,
+      "sha256": "bef5249e901618c18583dadc29cea460c19997e5013e79d85ad0c5c832685331"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__paper_table_1_csv",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/paper_table_1.csv",
+      "runnable_historical": false,
+      "sha256": "0b762e0b96905683ab16574467f1d2b69f4bb7c42fb697e0ef162c2b1403ef3e"
+    },
+    {
+      "claims": [
+        "N25"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__reduced_round_detection_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/reduced_round_detection.json",
+      "runnable_historical": false,
+      "sha256": "c92ca6e99aa705a766095fb3a926ca05bb16108fd6df113afa0419b640ef6883"
+    },
+    {
+      "claims": [
+        "N15",
+        "N24"
+      ],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__sample_sensitivity_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/sample_sensitivity.json",
+      "runnable_historical": false,
+      "sha256": "b907ca78014cb3da2452fe9e3d3f36b4bfa2a882c78c952f4fac60e6822aa263"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__ascon__ascon128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/ascon/ascon128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "ae46fddf02d2f47afcef075c77c7aaf1c5c0d3548a516d5f3842ee1e6d7a0a98"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__ascon__ascon128a_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/ascon/ascon128a_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "66205e55d75c5f228ba509ffa128cead658df14c4de621c1ed1ef29e49848295"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__ascon__ascon_hash_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/ascon/ascon_hash_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "3f56aacba6a32429724976dbb5003dd7237b71ef05cbb0ec8a7e10273b0ce006"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__ascon__ascon_xof_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/ascon/ascon_xof_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "a153f52a2a472b7371cb7587f2028a706ace7201a68b4fd9f887f7928dcf4615"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__gift__gift128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/gift/gift128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "25084749a4634a294dd876e896aec1a75c720b9da28558b534e97a12b5a7e49b"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__gift__gift64_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/gift/gift64_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "600381ac20d9b3dba9b760d3d1dcc61eb6a80c8e8ddfdd2d43658585b2d7c17f"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__grain128a__grain128a_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/grain128a/grain128a_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "36a191fa6c8555a2463c1e29b2db5f939647f37da684ffc7a2f5ae4d539a1539"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__katan__katan32_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/katan/katan32_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "1ab4e003cdecf6b5f99652bad049fe6ee607a6d6d35268874194f2da23d68071"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__katan__katan48_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/katan/katan48_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "cbbe16d49bf737fd28b997861279afa6a12166e446bccc7be42ab29d6a867ab9"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__katan__katan64_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/katan/katan64_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "90aca3825613251410931a8a2cd78fcf93f84d28b81e40ba348f1fdddd526f75"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__lea__lea128_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/lea/lea128_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "439c9854df8f879a6aa5fc5805789fca0e4e86a6817a0f46479716694fdb6fed"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__lea__lea128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/lea/lea128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "05def47cb791a9b4e0391772eba30ef5f4f0dbb68564d15616668983bc9502f0"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__lea__lea192_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/lea/lea192_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "5e1fadeaef2042aaf15605b34f6cfbd378e69b9a600aa7d82ac2fff0708cd8d2"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__lea__lea192_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/lea/lea192_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "589fd878a164f8269306f66f7b4badd04f53d941db1e11a9f7b66fd8b63704c8"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__lea__lea256_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/lea/lea256_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "83a362bf713ee8bb784821f9a3e4f7af9587160926bf093a030e64139d503e67"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__lea__lea256_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/lea/lea256_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "b1527897d19184779d14e906d5c0fd6e1033d04056c528e8c0fcb7db46e386cd"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__present__present128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/present/present128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "07cccc13a4f311087ae981d555ca2f929b24cfdf8c96001b8450ad0bdab9c68c"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__present__present80_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/present/present80_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "632a2836056a8425a84d0df0c68354372c1199da7825129102ae7c819ecddcc7"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon128_128_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon128_128_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "cb11857f588180841d20670e32d0d39e4cdf79996a7ef1a1c18a851ab0aa6cab"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon128_128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon128_128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "b2fce252e300d17b8e14ae948ee41fae7e91c6b4abd036d59e0ad433601aa3e0"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon128_192_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon128_192_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "f751221eab57adba057208e3f074a5121a12335cb94a5148ddf01d13ebb736ee"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon128_192_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon128_192_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "84b2db99d06df459ba1d7fb0e4cc3862dc6c3629e03837f004f02c36a8b16602"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon128_256_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon128_256_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "70d6708caea592419c6c257c4c3442e550fc6206d79bcd10e9fbc16669c0de68"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon128_256_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon128_256_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "103159095a5eea35cd0666a3fc363e610f6f8b6e07b885ac66800f7afbbcd25d"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon32_64_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon32_64_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "daa50f4275d67fc89dec358560d34cde740895faaff856bce5df4df855391633"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon32_64_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon32_64_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "699ce1fd5e0eb91bdba894926450fce22a2518f1f9a4ec5ae7321f3879a7aba6"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon48_72_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon48_72_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "7f1694eb15e407d44682dc9c3b26c69ecc4732ac1887a6a3865dbd1c0db8ef37"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon48_72_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon48_72_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "69ef2aadd6c2378bb8b286b7a674f7bec4da01fcf779cb9964c335af74de6f40"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon48_96_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon48_96_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "b78b08ab7aa49a0747046de5fb494fc0081f1d4ce78d20236f4b85c04f12f173"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon48_96_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon48_96_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "2e8695f45337312770d2dc05a8229423ede61bf4cbacc12e74326adbee1aaa9d"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon64_128_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon64_128_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "d3ac7925570af2873150a8bfa0d397159ad3fbc0721fed38bb14bce8290c319e"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon64_128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon64_128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "d9e4fd7ec30f7cbce2ddd284fc4141947df8fcbd0dec746a63773582bc0a24fe"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon64_96_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon64_96_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "9e3dee8271f2a2d836e23c399de8f92c3f66cae50f9af377ef37d56d5e4bf564"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon64_96_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon64_96_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "71ca793656392c9ed0c0495c90f235e9d1b3b0fa013548f00c700208c4059cfe"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon96_144_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon96_144_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "8590de3173d05042c83f26a52b1efe3a5e9fb3383d5fc5ffed0af8d0c2005ccc"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon96_144_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon96_144_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "9ca6a69b6fefd4f4a5d2ea8cbe92f55e323a877379facb1b4a1d166df118cb90"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon96_96_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon96_96_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "fdb48c6c10595c05db3f9662b7d113d3845497e97d7fd6bdf2fa8d7c4c6512e7"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__simon__simon96_96_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/simon/simon96_96_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "94d1c26c8de489b774d8c13e884358a0e26f1ae9a97f393d1bb6c2f915e1721a"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__skinny__skinny128_128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/skinny/skinny128_128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "f43080e18ce7cbe2e4333bdb57fa9d006bf154ee136dfbf6af5121b11814b5d6"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__skinny__skinny128_256_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/skinny/skinny128_256_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "4a50f55b7af2e67ac89c0436622094fdbd545d66c4de45a1cbe7c54cfc08fcfc"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__skinny__skinny128_384_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/skinny/skinny128_384_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "83ac7a6dcd02aceff2a87d2a67c09a1f230afa815c0058a91cfd223e0453d684"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__skinny__skinny64_128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/skinny/skinny64_128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "2bc408aa06ae864a2c3c4f18f83ffe5fe71fc026caf23d95be3ec232ffef3bc8"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__skinny__skinny64_192_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/skinny/skinny64_192_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "005b39abf385c0bae763ef326e466735688a0b61ce60aa424b997d348a0f84f9"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__skinny__skinny64_64_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/skinny/skinny64_64_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "2ca39d802ea20ccad33abb330e97e2625dda101ef077097ad16459791866a4fe"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck128_128_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck128_128_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "372f6377166de8dbf795f44e04b3cc4270846d5219f7834578c68af018ebf23e"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck128_128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck128_128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "5be01191b4bcba0a134914ac3bf8770d5c8b35a552234d40b6500dcb98c3b7f9"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck128_192_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck128_192_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "5bacf87e70241c9bdc27de60fa34f89f7bca7efa6b140c4f782eb78dd229e9e6"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck128_192_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck128_192_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "16f63976e1a6eb718c61c6c609ff5e0cad24d9904eef3abdbe146faf3d4a760f"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck128_256_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck128_256_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "c1aaed9ef29885138c55f27cffdedc0ddabc30b5552a2ff8a360d4c8a135db79"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck128_256_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck128_256_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "80d48dff2ccad10f0ce75579840a227e3535dfb6c32b5df6d04b3e527f93f7f1"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck32_64_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck32_64_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "08dc75e06464a9604baed3cf12f158e31327402272ec52c6578e928d2575215b"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck32_64_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck32_64_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "154208ac49a57d1ce5d4be90d942cacfd44f8c0dac467363a23de4bece011ee5"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck48_72_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck48_72_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "bf8a117a90f2d73b881e7c47a8c9de66d11118117e118ca45c66160f7eba538d"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck48_72_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck48_72_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "b8c8b07c50ac71347c281a729b71716dee6bd8f2400e577e64a4839e30347df9"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck48_96_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck48_96_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "36b8f461d6bb146510b353e4c0022c675c2eb94e1d191cc5ee2fc608206a3b6b"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck48_96_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck48_96_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "813cb030d1fce6022a19243eaaf6e5ed98ea1be7a904ee08ea0a002e2ea1cf16"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck64_128_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck64_128_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "c76c635a66c045263870876010f8e34eec25eafdb6bb52f1bfb78786b8e29655"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck64_128_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck64_128_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "4503665c2162af43a8561072dc43a7708e083692335d8aaf3099b933d1200521"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck64_96_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck64_96_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "2cfeb7bdc81aeaebf19467ad882a6e3c2b010ded6f1eb91b05d3f84efd6c93ce"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck64_96_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck64_96_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "824d30075950db4e725a15acdfd4ae7d951cd40f119689997b8353098cbf7a7a"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck96_144_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck96_144_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "12d36e05c1c591be2391136e520363c1b7e188439dbbdb714932a25c5510ae64"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck96_144_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck96_144_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "0e63ef8ca262f63172d1b856e03d54d6703583abcf91a0265030dc00802e9343"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck96_96_f8_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck96_96_f8_sweep.json",
+      "runnable_historical": false,
+      "sha256": "cb3b27b5957855b08f89f191bca19346892b00a8538439a1f94a1f1e6391e9e9"
+    },
+    {
+      "claims": [],
+      "command": null,
+      "expected_returncode": null,
+      "expected_stderr_contains": null,
+      "id": "data__reference__nano_iot_raw__speck__speck96_96_full_sweep_json",
+      "kind": "retained_historical_result",
+      "non_runnable_reason": "retained result artifact",
+      "path": "data/reference/nano_iot_raw/speck/speck96_96_full_sweep.json",
+      "runnable_historical": false,
+      "sha256": "f93d4de704b6ff0bd78796eced3f4f763532d75d6a8a58268d2950260dc76881"
+    }
+  ],
+  "policy": {
+    "historical_and_corrected_runs_are_separate": true,
+    "legacy_sources_are_read_only": true,
+    "stdout_and_stderr_are_retained": true
+  },
+  "schema_version": 1,
+  "scope": "historical paper reproduction inventory"
+}

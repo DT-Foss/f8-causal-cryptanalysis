@@ -1,0 +1,16 @@
+{
+  "schema": "frozen-direct-output-causal-confirmation-v1",
+  "discovery_artifact": "research/results/v1/aes_causal_contrast_signature_v1.json",
+  "discovery_sha256": "66e519a990c5a929a59d045d3346773d3ebb3ce3e61253c7236a02848ac3ea7e",
+  "causal_header": {
+    "codec": "factual-minus-repairing-contrast-profile",
+    "stage_chain": ["paired cipher outputs", "factual XOR delta", "row-repair counterfactuals", "per-byte entropy contrast", "causal zlib", "reader reverse class query"]
+  },
+  "classes": ["r3-identity", "r3-peel-final-linear", "r4-identity", "r4-peel-final-linear", "r10-identity", "r10-peel-final-linear"],
+  "input_bits": [0, 31, 64, 127],
+  "pairs_per_key": 10000,
+  "keys": {"train": 5, "holdout": 5},
+  "repairing_routes": 16,
+  "seed_base": 2185001,
+  "decision_rule": "Reader-only R3-peel class accuracy must be >= 80%; every other class must be <= 50%."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "frozen-confirmation-config-v1",
+  "experiment": "aes_bit_round_frontier_screen.py",
+  "discovery_artifact": "research/results/v1/aes_formula_projection_screen_v1.json",
+  "discovery_sha256": "9577e9a62e5b10b29e141e9b330099b49c63cf71c991239e3eb238faadca2678",
+  "hypothesis": "Peeling the public final AES linear layer exposes chosen one-bit differential structure at round 3 for all 128 input bits; identity R3, both R4 representations, and semantically peeled AES-10 are null calibrations.",
+  "rounds": [3, 4, 10],
+  "representations": ["identity", "peel-final-linear"],
+  "peeling_semantics": "InvMixColumns then InvShiftRows for rounds 1-9; InvShiftRows only for AES-10, whose final round has no MixColumns.",
+  "plaintext_bits": "all 0 through 127, frozen before confirmation",
+  "pairs_per_key": 10000,
+  "independent_keys": 10,
+  "repairing_routes": 8,
+  "seed_base": 385001,
+  "primary_metric": "entropy_deficit_sum",
+  "decision_rule": "Peeled R3 requires positive effects for all 128 bits and BH q <= 0.01 within its pre-specified 128-bit family. Global BH across all six families is also reported but is not the pre-registered decision statistic. Other families are null calibrations."
+}

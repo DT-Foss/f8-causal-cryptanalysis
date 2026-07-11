@@ -1,0 +1,462 @@
+{
+  "causal": {
+    "bytes": 1691,
+    "explicit_triplets": 24,
+    "file_sha256": "d28fba4cf16fede7cb142003889a26fe2b76b6af94754091438b2145b006f19c",
+    "graph_sha256": "09b2d8039f5964fe7285eb454abafd4cecbc6a6cfb08d93d918b0b8d0e4e21c8",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/aes_causal_contrast_signature_sparse_bit31_v1.causal",
+    "triplets": 24
+  },
+  "chance": 0.16666666666666666,
+  "overall_accuracy": 0.26666666666666666,
+  "parameters": {
+    "bits": [
+      31
+    ],
+    "feature_indices": [
+      13,
+      11,
+      14,
+      12
+    ],
+    "pairs_per_seed": 10000,
+    "repairing_routes": 16,
+    "representations": [
+      "identity",
+      "peel-final-linear"
+    ],
+    "rounds": [
+      3,
+      4,
+      10
+    ],
+    "train_seeds": 5
+  },
+  "per_class": {
+    "r10-identity": {
+      "accuracy": 0.2,
+      "correct": 1,
+      "total": 5
+    },
+    "r10-peel-final-linear": {
+      "accuracy": 0.2,
+      "correct": 1,
+      "total": 5
+    },
+    "r3-identity": {
+      "accuracy": 0.2,
+      "correct": 1,
+      "total": 5
+    },
+    "r3-peel-final-linear": {
+      "accuracy": 0.6,
+      "correct": 3,
+      "total": 5
+    },
+    "r4-identity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 5
+    },
+    "r4-peel-final-linear": {
+      "accuracy": 0.4,
+      "correct": 2,
+      "total": 5
+    }
+  },
+  "schema": "aes-causal-contrast-signature-v1",
+  "scope": "direct cipher-output factual-vs-counterfactual causal compression and reader-only reverse round-class query; not key recovery",
+  "trials": [
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 23.38163589620667,
+        "r10-peel-final-linear": 19.874666117440153,
+        "r3-identity": 23.604768541243274,
+        "r3-peel-final-linear": -27.322278816026913,
+        "r4-identity": 24.63864730143302,
+        "r4-peel-final-linear": 24.47642037370986
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 23.711265711689684,
+        "r10-peel-final-linear": 22.74372286713244,
+        "r3-identity": 21.625373655254712,
+        "r3-peel-final-linear": -77.6154278376832,
+        "r4-identity": 23.76045029103733,
+        "r4-peel-final-linear": 22.419682507835823
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": true,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 20.069604670561613,
+        "r10-peel-final-linear": 20.99344671060094,
+        "r3-identity": 21.57348524360841,
+        "r3-peel-final-linear": 2.9243429873292737,
+        "r4-identity": 18.867410297315363,
+        "r4-peel-final-linear": 18.974173594930726
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 23.981716756380656,
+        "r10-peel-final-linear": 20.858389730977233,
+        "r3-identity": 24.544057589412354,
+        "r3-peel-final-linear": -38.2990880330892,
+        "r4-identity": 24.86584971143013,
+        "r4-peel-final-linear": 25.184546736268263
+      }
+    },
+    {
+      "actual": "r3-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 25.163351091268815,
+        "r10-peel-final-linear": 24.384044822399787,
+        "r3-identity": 24.88342647010387,
+        "r3-peel-final-linear": -44.77242485294734,
+        "r4-identity": 24.99396845200758,
+        "r4-peel-final-linear": 25.522085485074278
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": -10.051047743798875,
+        "r10-peel-final-linear": -21.839412179611458,
+        "r3-identity": -27.70812278344352,
+        "r3-peel-final-linear": 17.548942302231982,
+        "r4-identity": -12.197029103456504,
+        "r4-peel-final-linear": -32.685316317709386
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 17.234907201785354,
+        "r10-peel-final-linear": 14.77405413976858,
+        "r3-identity": 8.244304637818002,
+        "r3-peel-final-linear": 8.876594375107643,
+        "r4-identity": 15.539209648778261,
+        "r4-peel-final-linear": 3.010505981565224
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 6.126252193397786,
+        "r10-peel-final-linear": -20.111570208071967,
+        "r3-identity": -0.26043409054151656,
+        "r3-peel-final-linear": 6.808671489654476,
+        "r4-identity": 11.32780128491972,
+        "r4-peel-final-linear": 5.801981306636417
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": 6.649709443384894,
+        "r10-peel-final-linear": 1.3033133907531185,
+        "r3-identity": -7.9175477707601125,
+        "r3-peel-final-linear": 23.055609772682487,
+        "r4-identity": 4.657291117011513,
+        "r4-peel-final-linear": -9.48684252810622
+      }
+    },
+    {
+      "actual": "r3-peel-final-linear",
+      "correct": true,
+      "predicted": "r3-peel-final-linear",
+      "scores": {
+        "r10-identity": -5.809201742575964,
+        "r10-peel-final-linear": -48.26857976933001,
+        "r3-identity": -15.772324915897533,
+        "r3-peel-final-linear": 14.513096385169792,
+        "r4-identity": 3.6714913245804652,
+        "r4-peel-final-linear": -20.504684533316496
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 22.73020561675871,
+        "r10-peel-final-linear": 21.66127433865873,
+        "r3-identity": 20.889982970628616,
+        "r3-peel-final-linear": -100.34121335193899,
+        "r4-identity": 22.00988126694874,
+        "r4-peel-final-linear": 20.3373247940452
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": false,
+      "predicted": "r10-peel-final-linear",
+      "scores": {
+        "r10-identity": 23.32694229386926,
+        "r10-peel-final-linear": 24.454563171934318,
+        "r3-identity": 23.570657038792408,
+        "r3-peel-final-linear": -4.8484783199735615,
+        "r4-identity": 22.62316695829107,
+        "r4-peel-final-linear": 23.346045167333912
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": false,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 20.18600486846993,
+        "r10-peel-final-linear": 15.836633223204583,
+        "r3-identity": 22.011771008812936,
+        "r3-peel-final-linear": -18.519209210836998,
+        "r4-identity": 20.97207179840968,
+        "r4-peel-final-linear": 21.75467299160505
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 23.53783711554678,
+        "r10-peel-final-linear": 22.439574004548653,
+        "r3-identity": 22.575289426853786,
+        "r3-peel-final-linear": -58.416025247380105,
+        "r4-identity": 23.02902655754226,
+        "r4-peel-final-linear": 18.564025174203476
+      }
+    },
+    {
+      "actual": "r4-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 23.372023475251662,
+        "r10-peel-final-linear": 23.362325479120457,
+        "r3-identity": 23.80016729702283,
+        "r3-peel-final-linear": -6.281804360990339,
+        "r4-identity": 22.336859043578215,
+        "r4-peel-final-linear": 24.166402188379088
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": true,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 24.870421823543925,
+        "r10-peel-final-linear": 24.664170483117648,
+        "r3-identity": 25.029858810829776,
+        "r3-peel-final-linear": -20.665779924750453,
+        "r4-identity": 24.723442463475788,
+        "r4-peel-final-linear": 25.490020597610478
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": false,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 24.626165717454377,
+        "r10-peel-final-linear": 23.964007635701435,
+        "r3-identity": 26.013235436042198,
+        "r3-peel-final-linear": -36.49949888304148,
+        "r4-identity": 24.386872675477484,
+        "r4-peel-final-linear": 24.8250322036394
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": true,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 24.21107611724332,
+        "r10-peel-final-linear": 23.210109700638913,
+        "r3-identity": 24.343650777631396,
+        "r3-peel-final-linear": -20.06350037591364,
+        "r4-identity": 23.865901065428687,
+        "r4-peel-final-linear": 25.289638109565104
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 21.57293636283081,
+        "r10-peel-final-linear": 15.180948545905542,
+        "r3-identity": 21.49315638641402,
+        "r3-peel-final-linear": -61.565895181110264,
+        "r4-identity": 22.781908891503637,
+        "r4-peel-final-linear": 20.493020416235414
+      }
+    },
+    {
+      "actual": "r4-peel-final-linear",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 22.95009620896056,
+        "r10-peel-final-linear": 21.325418124596787,
+        "r3-identity": 21.876305232868006,
+        "r3-peel-final-linear": -65.12100853688618,
+        "r4-identity": 22.644046707013533,
+        "r4-peel-final-linear": 18.18424097051684
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 22.774002809304356,
+        "r10-peel-final-linear": 22.07409852979251,
+        "r3-identity": 21.099093861122448,
+        "r3-peel-final-linear": -78.75484539733047,
+        "r4-identity": 23.323624741851482,
+        "r4-peel-final-linear": 20.259547990170837
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-peel-final-linear",
+      "scores": {
+        "r10-identity": 24.51764421309808,
+        "r10-peel-final-linear": 23.59327060290707,
+        "r3-identity": 24.361519533075864,
+        "r3-peel-final-linear": -25.18122843262941,
+        "r4-identity": 24.857666866886003,
+        "r4-peel-final-linear": 24.859608535879232
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 24.430613273951025,
+        "r10-peel-final-linear": 22.341516323993766,
+        "r3-identity": 24.079937193044678,
+        "r3-peel-final-linear": -56.35769833080927,
+        "r4-identity": 24.59128033790618,
+        "r4-peel-final-linear": 24.583221222148858
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": true,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 23.46016189891155,
+        "r10-peel-final-linear": 22.15507443229324,
+        "r3-identity": 20.553942433647265,
+        "r3-peel-final-linear": -46.653025372991785,
+        "r4-identity": 22.291715992721464,
+        "r4-peel-final-linear": 14.604908177438315
+      }
+    },
+    {
+      "actual": "r10-identity",
+      "correct": false,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 24.667875670834473,
+        "r10-peel-final-linear": 24.550940183801206,
+        "r3-identity": 24.82607171338035,
+        "r3-peel-final-linear": -25.170288184911218,
+        "r4-identity": 24.75573753290689,
+        "r4-peel-final-linear": 24.766989392836976
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": true,
+      "predicted": "r10-peel-final-linear",
+      "scores": {
+        "r10-identity": 21.537288234872737,
+        "r10-peel-final-linear": 23.194033697859854,
+        "r3-identity": 21.75249949643731,
+        "r3-peel-final-linear": -8.91584768124526,
+        "r4-identity": 21.042484020490217,
+        "r4-peel-final-linear": 19.93312467368487
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r3-identity",
+      "scores": {
+        "r10-identity": 23.898307759179232,
+        "r10-peel-final-linear": 24.413125186645146,
+        "r3-identity": 24.515224470018616,
+        "r3-peel-final-linear": -32.577470208581104,
+        "r4-identity": 24.06332358600436,
+        "r4-peel-final-linear": 23.22904881516542
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 23.284837695119364,
+        "r10-peel-final-linear": 22.89084343309883,
+        "r3-identity": 23.277265685373493,
+        "r3-peel-final-linear": -74.82441425854931,
+        "r4-identity": 23.146498864182718,
+        "r4-peel-final-linear": 21.85596073310498
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r10-identity",
+      "scores": {
+        "r10-identity": 23.638442222658632,
+        "r10-peel-final-linear": 23.249145194588287,
+        "r3-identity": 21.04894441631199,
+        "r3-peel-final-linear": -16.76587088142671,
+        "r4-identity": 22.252366346769847,
+        "r4-peel-final-linear": 15.217037842918618
+      }
+    },
+    {
+      "actual": "r10-peel-final-linear",
+      "correct": false,
+      "predicted": "r4-identity",
+      "scores": {
+        "r10-identity": 24.25002671875527,
+        "r10-peel-final-linear": 22.843499431824654,
+        "r3-identity": 23.795781528718337,
+        "r3-peel-final-linear": -54.19103945250727,
+        "r4-identity": 24.60346326239926,
+        "r4-peel-final-linear": 24.033487121447784
+      }
+    }
+  ]
+}

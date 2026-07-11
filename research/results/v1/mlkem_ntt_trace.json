@@ -1,0 +1,200 @@
+{
+  "environment": {
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "experiment": "mlkem_ntt_trace_suite",
+  "parameters": {
+    "operations": 1000,
+    "permutations": 5,
+    "variants": [
+      "mlkem512",
+      "mlkem768",
+      "mlkem1024"
+    ]
+  },
+  "results": [
+    {
+      "functional_roundtrips": 1000,
+      "operations": 1000,
+      "recompression_exact": 1000,
+      "representation_metrics": {
+        "coefficients_to_ntt": {
+          "alpha": 0.05,
+          "max_chi2": 98.33498369174622,
+          "significant_pairs": 201,
+          "significant_rate": 0.016357421875,
+          "tested_pairs": 12288
+        },
+        "coefficients_to_shuffled_ntt": [
+          {
+            "alpha": 0.05,
+            "max_chi2": 89.01843102006286,
+            "significant_pairs": 182,
+            "significant_rate": 0.014811197916666666,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 90.93970065232963,
+            "significant_pairs": 196,
+            "significant_rate": 0.015950520833333332,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 90.0770421791934,
+            "significant_pairs": 200,
+            "significant_rate": 0.016276041666666668,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 91.43978592614309,
+            "significant_pairs": 215,
+            "significant_rate": 0.017496744791666668,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 93.79968467527833,
+            "significant_pairs": 197,
+            "significant_rate": 0.016031901041666668,
+            "tested_pairs": 12288
+          }
+        ],
+        "packed_v_to_coefficients": {
+          "alpha": 0.05,
+          "max_chi2": 7000.000000000001,
+          "significant_pairs": 850,
+          "significant_rate": 0.0518798828125,
+          "tested_pairs": 16384
+        }
+      },
+      "scope_note": "NTT is public implementation structure; this measures only representation dependence.",
+      "variant": "mlkem512"
+    },
+    {
+      "functional_roundtrips": 1000,
+      "operations": 1000,
+      "recompression_exact": 1000,
+      "representation_metrics": {
+        "coefficients_to_ntt": {
+          "alpha": 0.05,
+          "max_chi2": 93.671923789678,
+          "significant_pairs": 215,
+          "significant_rate": 0.017496744791666668,
+          "tested_pairs": 12288
+        },
+        "coefficients_to_shuffled_ntt": [
+          {
+            "alpha": 0.05,
+            "max_chi2": 92.9430019411158,
+            "significant_pairs": 222,
+            "significant_rate": 0.01806640625,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 87.55743006796116,
+            "significant_pairs": 186,
+            "significant_rate": 0.01513671875,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 88.00520219491328,
+            "significant_pairs": 224,
+            "significant_rate": 0.018229166666666668,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 96.4311479698391,
+            "significant_pairs": 198,
+            "significant_rate": 0.01611328125,
+            "tested_pairs": 12288
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 88.76414340207782,
+            "significant_pairs": 174,
+            "significant_rate": 0.01416015625,
+            "tested_pairs": 12288
+          }
+        ],
+        "packed_v_to_coefficients": {
+          "alpha": 0.05,
+          "max_chi2": 7000.000000000001,
+          "significant_pairs": 868,
+          "significant_rate": 0.052978515625,
+          "tested_pairs": 16384
+        }
+      },
+      "scope_note": "NTT is public implementation structure; this measures only representation dependence.",
+      "variant": "mlkem768"
+    },
+    {
+      "functional_roundtrips": 1000,
+      "operations": 1000,
+      "recompression_exact": 1000,
+      "representation_metrics": {
+        "coefficients_to_ntt": {
+          "alpha": 0.05,
+          "max_chi2": 92.02144821563961,
+          "significant_pairs": 308,
+          "significant_rate": 0.016041666666666666,
+          "tested_pairs": 19200
+        },
+        "coefficients_to_shuffled_ntt": [
+          {
+            "alpha": 0.05,
+            "max_chi2": 92.20467363739385,
+            "significant_pairs": 322,
+            "significant_rate": 0.016770833333333332,
+            "tested_pairs": 19200
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 93.92822217153523,
+            "significant_pairs": 322,
+            "significant_rate": 0.016770833333333332,
+            "tested_pairs": 19200
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 89.29526081155092,
+            "significant_pairs": 330,
+            "significant_rate": 0.0171875,
+            "tested_pairs": 19200
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 86.2770155434964,
+            "significant_pairs": 330,
+            "significant_rate": 0.0171875,
+            "tested_pairs": 19200
+          },
+          {
+            "alpha": 0.05,
+            "max_chi2": 109.6242089095909,
+            "significant_pairs": 298,
+            "significant_rate": 0.015520833333333333,
+            "tested_pairs": 19200
+          }
+        ],
+        "packed_v_to_coefficients": {
+          "alpha": 0.05,
+          "max_chi2": 7000.0,
+          "significant_pairs": 1307,
+          "significant_rate": 0.0510546875,
+          "tested_pairs": 25600
+        }
+      },
+      "scope_note": "NTT is public implementation structure; this measures only representation dependence.",
+      "variant": "mlkem1024"
+    }
+  ],
+  "schema_version": 1,
+  "security_scope": "No security, key-recovery, IND-CPA, IND-CCA, or external distinguisher claim is tested."
+}

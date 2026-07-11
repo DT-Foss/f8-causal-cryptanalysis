@@ -1,0 +1,28 @@
+================================================================================
+SPARX ALGEBRAIC INVERSION — Extract ARX-box output
+================================================================================
+N=20000, 3 seeds, 15 perms
+
+--- Approach: Invert last linear layer, F8 on pre-L state ---
+
+                          Config  Branch          MI           Z     Signal?
+  ---------------------------------------------------------------------------
+                  SPARX R2 pre-L  B    0    0.000446        -0.2  no
+                  SPARX R2 pre-L  B    1    0.000506        +0.3  no
+                  SPARX R4 pre-L  B    0    0.000648        +0.7  no
+                  SPARX R4 pre-L  B    1    0.000624        +1.1  no
+                  SPARX R8 pre-L  B    0    0.000461        -0.4  no
+                  SPARX R8 pre-L  B    1    0.000303        -1.1  no
+
+--- Approach: Invert L on FINAL ciphertext, F8 on recovered state ---
+
+                          Config  Branch          MI           Z     Signal?
+  ---------------------------------------------------------------------------
+                  SPARX R2 inv-L  B    0    0.000528        +0.3  no
+                  SPARX R2 inv-L  B    1    0.000583        +0.9  no
+                  SPARX R4 inv-L  B    0    0.000502        +0.2  no
+                  SPARX R4 inv-L  B    1    0.000303        -1.1  no
+                  SPARX R8 inv-L  B    0    0.000671        +1.1  no
+                  SPARX R8 inv-L  B    1    0.000374        -0.7  no
+
+=== DONE ===

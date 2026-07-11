@@ -1,0 +1,857 @@
+{
+  "adapter": "only archived module RAW_DIR was replaced",
+  "archived_builder": {
+    "path": "provenance/original_nano_scripts/build_master_results.py",
+    "sha256": "58eb3630fa0328715d460f278f6d48edee906ea9bd410b94dbce438117f2bab0"
+  },
+  "cipher_entries_rebuilt": 41,
+  "ciphers": [
+    {
+      "block_size": 320,
+      "cipher": "ascon128",
+      "family": "Sponge-LWC",
+      "full_rounds": 12,
+      "iso_standard": "NIST SP 800-232",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "algebraic_degree",
+        "frontier_round": null,
+        "full_round_casi": 1.5339,
+        "security_margin": 12,
+        "security_margin_percent": 100.0
+      }
+    },
+    {
+      "block_size": 320,
+      "cipher": "ascon128a",
+      "family": "Sponge-LWC",
+      "full_rounds": 12,
+      "iso_standard": "NIST SP 800-232",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "algebraic_degree",
+        "frontier_round": null,
+        "full_round_casi": 0.8538,
+        "security_margin": 12,
+        "security_margin_percent": 100.0
+      }
+    },
+    {
+      "block_size": 320,
+      "cipher": "ascon_hash",
+      "family": "Sponge-LWC",
+      "full_rounds": 12,
+      "iso_standard": "NIST SP 800-232",
+      "key_size": 0,
+      "standard_casi": {
+        "best_strategy": "algebraic_degree",
+        "frontier_round": null,
+        "full_round_casi": 0.9828,
+        "security_margin": 12,
+        "security_margin_percent": 100.0
+      }
+    },
+    {
+      "block_size": 320,
+      "cipher": "ascon_xof",
+      "family": "Sponge-LWC",
+      "full_rounds": 12,
+      "iso_standard": "NIST SP 800-232",
+      "key_size": 0,
+      "standard_casi": {
+        "best_strategy": "algebraic_degree",
+        "frontier_round": null,
+        "full_round_casi": 0.9828,
+        "security_margin": 12,
+        "security_margin_percent": 100.0
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "gift128",
+      "family": "SPN-LWC",
+      "full_rounds": 40,
+      "iso_standard": "None",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 7,
+        "full_round_casi": 1.0225,
+        "security_margin": 33,
+        "security_margin_percent": 82.5
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "gift64",
+      "family": "SPN-LWC",
+      "full_rounds": 28,
+      "iso_standard": "None",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 6,
+        "full_round_casi": 0.8637,
+        "security_margin": 22,
+        "security_margin_percent": 78.6
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "grain128a",
+      "family": "LFSR-NFSR",
+      "full_rounds": 256,
+      "iso_standard": "ISO/IEC 29167-13",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "integral",
+        "frontier_round": null,
+        "full_round_casi": 0.7799,
+        "security_margin": 256,
+        "security_margin_percent": 100.0
+      }
+    },
+    {
+      "block_size": 32,
+      "cipher": "katan32",
+      "family": "LFSR-block",
+      "full_rounds": 254,
+      "iso_standard": "None",
+      "key_size": 80,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 48,
+        "full_round_casi": 0.9556,
+        "security_margin": 206,
+        "security_margin_percent": 81.1
+      }
+    },
+    {
+      "block_size": 48,
+      "cipher": "katan48",
+      "family": "LFSR-block",
+      "full_rounds": 254,
+      "iso_standard": "None",
+      "key_size": 80,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 32,
+        "full_round_casi": 1.0035,
+        "security_margin": 222,
+        "security_margin_percent": 87.4
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "katan64",
+      "family": "LFSR-block",
+      "full_rounds": 254,
+      "iso_standard": "None",
+      "key_size": 80,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 32,
+        "full_round_casi": 0.7849,
+        "security_margin": 222,
+        "security_margin_percent": 87.4
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "lea128",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.051042,
+        "full_round_t_statistic": 0.34,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "ARX-block",
+      "full_rounds": 24,
+      "iso_standard": "Korean TTA",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 9,
+        "full_round_casi": 0.8412,
+        "security_margin": 15,
+        "security_margin_percent": 62.5
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "lea192",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.044271,
+        "full_round_t_statistic": 0,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "ARX-block",
+      "full_rounds": 28,
+      "iso_standard": "Korean TTA",
+      "key_size": 192,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 9,
+        "full_round_casi": 0.814,
+        "security_margin": 19,
+        "security_margin_percent": 67.9
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "lea256",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.052474,
+        "full_round_t_statistic": 0.89,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "ARX-block",
+      "full_rounds": 32,
+      "iso_standard": "Korean TTA",
+      "key_size": 256,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 9,
+        "full_round_casi": 0.8422,
+        "security_margin": 23,
+        "security_margin_percent": 71.9
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "present128",
+      "family": "SPN-ultralight",
+      "full_rounds": 31,
+      "iso_standard": "ISO/IEC 29167-11",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 7,
+        "full_round_casi": 0.8422,
+        "security_margin": 24,
+        "security_margin_percent": 77.4
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "present80",
+      "family": "SPN-ultralight",
+      "full_rounds": 31,
+      "iso_standard": "ISO/IEC 29167-11",
+      "key_size": 80,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 7,
+        "full_round_casi": 1.2355,
+        "security_margin": 24,
+        "security_margin_percent": 77.4
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "simon128_128",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.052083,
+        "full_round_t_statistic": 0.6,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 68,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 16,
+        "full_round_casi": 0.7943,
+        "security_margin": 52,
+        "security_margin_percent": 76.5
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "simon128_192",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.050911,
+        "full_round_t_statistic": 2.23,
+        "verdict": "WEAK \u2014 borderline detection at full rounds"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 69,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 192,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 16,
+        "full_round_casi": 0.9523,
+        "security_margin": 53,
+        "security_margin_percent": 76.8
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "simon128_256",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.053776,
+        "full_round_t_statistic": 1.6,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 72,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 256,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 16,
+        "full_round_casi": 0.8631,
+        "security_margin": 56,
+        "security_margin_percent": 77.8
+      }
+    },
+    {
+      "block_size": 32,
+      "cipher": "simon32_64",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.083333,
+        "full_round_t_statistic": 1.5,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 32,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 64,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 9,
+        "full_round_casi": 0.8392,
+        "security_margin": 23,
+        "security_margin_percent": 71.9
+      }
+    },
+    {
+      "block_size": 48,
+      "cipher": "simon48_72",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.04537,
+        "full_round_t_statistic": 0,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 36,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 72,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 9,
+        "full_round_casi": 0.8406,
+        "security_margin": 27,
+        "security_margin_percent": 75.0
+      }
+    },
+    {
+      "block_size": 48,
+      "cipher": "simon48_96",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.05463,
+        "full_round_t_statistic": 1.23,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 36,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 96,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 9,
+        "full_round_casi": 1.0134,
+        "security_margin": 27,
+        "security_margin_percent": 75.0
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "simon64_128",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.053125,
+        "full_round_t_statistic": 1.37,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 44,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 11,
+        "full_round_casi": 0.9544,
+        "security_margin": 33,
+        "security_margin_percent": 75.0
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "simon64_96",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.049479,
+        "full_round_t_statistic": 0,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 42,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 96,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 11,
+        "full_round_casi": 0.9369,
+        "security_margin": 31,
+        "security_margin_percent": 73.8
+      }
+    },
+    {
+      "block_size": 96,
+      "cipher": "simon96_144",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.046759,
+        "full_round_t_statistic": 0,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 54,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 144,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 12,
+        "full_round_casi": 1.0285,
+        "security_margin": 42,
+        "security_margin_percent": 77.8
+      }
+    },
+    {
+      "block_size": 96,
+      "cipher": "simon96_96",
+      "f8_distinguisher": {
+        "all_rounds_broken": false,
+        "full_round_sig_rate": 0.045833,
+        "full_round_t_statistic": 0.39,
+        "verdict": "IMMUNE \u2014 no carry-leak detected"
+      },
+      "family": "Feistel-LWC",
+      "full_rounds": 52,
+      "iso_standard": "ISO/IEC 29167-21",
+      "key_size": 96,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 12,
+        "full_round_casi": 1.0146,
+        "security_margin": 40,
+        "security_margin_percent": 76.9
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "skinny128_128",
+      "family": "SPN-TBC",
+      "full_rounds": 40,
+      "iso_standard": "None",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 7,
+        "full_round_casi": 0.9237,
+        "security_margin": 33,
+        "security_margin_percent": 82.5
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "skinny128_256",
+      "family": "SPN-TBC",
+      "full_rounds": 48,
+      "iso_standard": "None",
+      "key_size": 256,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 7,
+        "full_round_casi": 0.9295,
+        "security_margin": 41,
+        "security_margin_percent": 85.4
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "skinny128_384",
+      "family": "SPN-TBC",
+      "full_rounds": 56,
+      "iso_standard": "None",
+      "key_size": 384,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 7,
+        "full_round_casi": 0.883,
+        "security_margin": 49,
+        "security_margin_percent": 87.5
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "skinny64_128",
+      "family": "SPN-TBC",
+      "full_rounds": 36,
+      "iso_standard": "None",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 6,
+        "full_round_casi": 0.8921,
+        "security_margin": 30,
+        "security_margin_percent": 83.3
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "skinny64_192",
+      "family": "SPN-TBC",
+      "full_rounds": 40,
+      "iso_standard": "None",
+      "key_size": 192,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 6,
+        "full_round_casi": 0.8563,
+        "security_margin": 34,
+        "security_margin_percent": 85.0
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "skinny64_64",
+      "family": "SPN-TBC",
+      "full_rounds": 32,
+      "iso_standard": "None",
+      "key_size": 64,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 6,
+        "full_round_casi": 0.7809,
+        "security_margin": 26,
+        "security_margin_percent": 81.2
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "speck128_128",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.082943,
+        "full_round_t_statistic": 28.08,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 32,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 8,
+        "full_round_casi": 0.7981,
+        "security_margin": 24,
+        "security_margin_percent": 75.0
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "speck128_192",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.080599,
+        "full_round_t_statistic": 21.52,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 33,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 192,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 8,
+        "full_round_casi": 0.8274,
+        "security_margin": 25,
+        "security_margin_percent": 75.8
+      }
+    },
+    {
+      "block_size": 128,
+      "cipher": "speck128_256",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.078385,
+        "full_round_t_statistic": 40.4,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 34,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 256,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 8,
+        "full_round_casi": 0.9239,
+        "security_margin": 26,
+        "security_margin_percent": 76.5
+      }
+    },
+    {
+      "block_size": 32,
+      "cipher": "speck32_64",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.170833,
+        "full_round_t_statistic": 27.62,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 22,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 64,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 5,
+        "full_round_casi": 0.9505,
+        "security_margin": 17,
+        "security_margin_percent": 77.3
+      }
+    },
+    {
+      "block_size": 48,
+      "cipher": "speck48_72",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.126852,
+        "full_round_t_statistic": 21.52,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 22,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 72,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 4,
+        "full_round_casi": 0.8131,
+        "security_margin": 18,
+        "security_margin_percent": 81.8
+      }
+    },
+    {
+      "block_size": 48,
+      "cipher": "speck48_96",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.140741,
+        "full_round_t_statistic": 17.87,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 23,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 96,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 4,
+        "full_round_casi": 0.9826,
+        "security_margin": 19,
+        "security_margin_percent": 82.6
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "speck64_128",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.107813,
+        "full_round_t_statistic": 26.94,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 27,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 128,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 5,
+        "full_round_casi": 1.182,
+        "security_margin": 22,
+        "security_margin_percent": 81.5
+      }
+    },
+    {
+      "block_size": 64,
+      "cipher": "speck64_96",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.111979,
+        "full_round_t_statistic": 18.58,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 26,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 96,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 5,
+        "full_round_casi": 1.008,
+        "security_margin": 21,
+        "security_margin_percent": 80.8
+      }
+    },
+    {
+      "block_size": 96,
+      "cipher": "speck96_144",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.092361,
+        "full_round_t_statistic": 33.79,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 29,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 144,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 6,
+        "full_round_casi": 1.3246,
+        "security_margin": 23,
+        "security_margin_percent": 79.3
+      }
+    },
+    {
+      "block_size": 96,
+      "cipher": "speck96_96",
+      "f8_distinguisher": {
+        "all_rounds_broken": true,
+        "full_round_sig_rate": 0.084954,
+        "full_round_t_statistic": 26.17,
+        "verdict": "FULLY BROKEN \u2014 stationary carry-leak across all rounds"
+      },
+      "family": "ARX-Feistel",
+      "full_rounds": 28,
+      "iso_standard": "ISO/IEC 29167-22",
+      "key_size": 96,
+      "standard_casi": {
+        "best_strategy": "slide",
+        "frontier_round": 6,
+        "full_round_casi": 0.8963,
+        "security_margin": 22,
+        "security_margin_percent": 78.6
+      }
+    }
+  ],
+  "exact_cipher_payload_match": true,
+  "expected_master": {
+    "path": "data/reference/nano_iot_master_results.json",
+    "sha256": "bef5249e901618c18583dadc29cea460c19997e5013e79d85ad0c5c832685331"
+  },
+  "experiment": "archived_nano_master_rebuild",
+  "first_difference": null,
+  "raw_data": {
+    "files": 64,
+    "root": "data/reference/nano_iot_raw",
+    "sha256": {
+      "data/reference/nano_iot_raw/ascon/ascon128_full_sweep.json": "ae46fddf02d2f47afcef075c77c7aaf1c5c0d3548a516d5f3842ee1e6d7a0a98",
+      "data/reference/nano_iot_raw/ascon/ascon128a_full_sweep.json": "66205e55d75c5f228ba509ffa128cead658df14c4de621c1ed1ef29e49848295",
+      "data/reference/nano_iot_raw/ascon/ascon_hash_full_sweep.json": "3f56aacba6a32429724976dbb5003dd7237b71ef05cbb0ec8a7e10273b0ce006",
+      "data/reference/nano_iot_raw/ascon/ascon_xof_full_sweep.json": "a153f52a2a472b7371cb7587f2028a706ace7201a68b4fd9f887f7928dcf4615",
+      "data/reference/nano_iot_raw/gift/gift128_full_sweep.json": "25084749a4634a294dd876e896aec1a75c720b9da28558b534e97a12b5a7e49b",
+      "data/reference/nano_iot_raw/gift/gift64_full_sweep.json": "600381ac20d9b3dba9b760d3d1dcc61eb6a80c8e8ddfdd2d43658585b2d7c17f",
+      "data/reference/nano_iot_raw/grain128a/grain128a_full_sweep.json": "36a191fa6c8555a2463c1e29b2db5f939647f37da684ffc7a2f5ae4d539a1539",
+      "data/reference/nano_iot_raw/katan/katan32_full_sweep.json": "1ab4e003cdecf6b5f99652bad049fe6ee607a6d6d35268874194f2da23d68071",
+      "data/reference/nano_iot_raw/katan/katan48_full_sweep.json": "cbbe16d49bf737fd28b997861279afa6a12166e446bccc7be42ab29d6a867ab9",
+      "data/reference/nano_iot_raw/katan/katan64_full_sweep.json": "90aca3825613251410931a8a2cd78fcf93f84d28b81e40ba348f1fdddd526f75",
+      "data/reference/nano_iot_raw/lea/lea128_f8_sweep.json": "439c9854df8f879a6aa5fc5805789fca0e4e86a6817a0f46479716694fdb6fed",
+      "data/reference/nano_iot_raw/lea/lea128_full_sweep.json": "05def47cb791a9b4e0391772eba30ef5f4f0dbb68564d15616668983bc9502f0",
+      "data/reference/nano_iot_raw/lea/lea192_f8_sweep.json": "5e1fadeaef2042aaf15605b34f6cfbd378e69b9a600aa7d82ac2fff0708cd8d2",
+      "data/reference/nano_iot_raw/lea/lea192_full_sweep.json": "589fd878a164f8269306f66f7b4badd04f53d941db1e11a9f7b66fd8b63704c8",
+      "data/reference/nano_iot_raw/lea/lea256_f8_sweep.json": "83a362bf713ee8bb784821f9a3e4f7af9587160926bf093a030e64139d503e67",
+      "data/reference/nano_iot_raw/lea/lea256_full_sweep.json": "b1527897d19184779d14e906d5c0fd6e1033d04056c528e8c0fcb7db46e386cd",
+      "data/reference/nano_iot_raw/present/present128_full_sweep.json": "07cccc13a4f311087ae981d555ca2f929b24cfdf8c96001b8450ad0bdab9c68c",
+      "data/reference/nano_iot_raw/present/present80_full_sweep.json": "632a2836056a8425a84d0df0c68354372c1199da7825129102ae7c819ecddcc7",
+      "data/reference/nano_iot_raw/simon/simon128_128_f8_sweep.json": "cb11857f588180841d20670e32d0d39e4cdf79996a7ef1a1c18a851ab0aa6cab",
+      "data/reference/nano_iot_raw/simon/simon128_128_full_sweep.json": "b2fce252e300d17b8e14ae948ee41fae7e91c6b4abd036d59e0ad433601aa3e0",
+      "data/reference/nano_iot_raw/simon/simon128_192_f8_sweep.json": "f751221eab57adba057208e3f074a5121a12335cb94a5148ddf01d13ebb736ee",
+      "data/reference/nano_iot_raw/simon/simon128_192_full_sweep.json": "84b2db99d06df459ba1d7fb0e4cc3862dc6c3629e03837f004f02c36a8b16602",
+      "data/reference/nano_iot_raw/simon/simon128_256_f8_sweep.json": "70d6708caea592419c6c257c4c3442e550fc6206d79bcd10e9fbc16669c0de68",
+      "data/reference/nano_iot_raw/simon/simon128_256_full_sweep.json": "103159095a5eea35cd0666a3fc363e610f6f8b6e07b885ac66800f7afbbcd25d",
+      "data/reference/nano_iot_raw/simon/simon32_64_f8_sweep.json": "daa50f4275d67fc89dec358560d34cde740895faaff856bce5df4df855391633",
+      "data/reference/nano_iot_raw/simon/simon32_64_full_sweep.json": "699ce1fd5e0eb91bdba894926450fce22a2518f1f9a4ec5ae7321f3879a7aba6",
+      "data/reference/nano_iot_raw/simon/simon48_72_f8_sweep.json": "7f1694eb15e407d44682dc9c3b26c69ecc4732ac1887a6a3865dbd1c0db8ef37",
+      "data/reference/nano_iot_raw/simon/simon48_72_full_sweep.json": "69ef2aadd6c2378bb8b286b7a674f7bec4da01fcf779cb9964c335af74de6f40",
+      "data/reference/nano_iot_raw/simon/simon48_96_f8_sweep.json": "b78b08ab7aa49a0747046de5fb494fc0081f1d4ce78d20236f4b85c04f12f173",
+      "data/reference/nano_iot_raw/simon/simon48_96_full_sweep.json": "2e8695f45337312770d2dc05a8229423ede61bf4cbacc12e74326adbee1aaa9d",
+      "data/reference/nano_iot_raw/simon/simon64_128_f8_sweep.json": "d3ac7925570af2873150a8bfa0d397159ad3fbc0721fed38bb14bce8290c319e",
+      "data/reference/nano_iot_raw/simon/simon64_128_full_sweep.json": "d9e4fd7ec30f7cbce2ddd284fc4141947df8fcbd0dec746a63773582bc0a24fe",
+      "data/reference/nano_iot_raw/simon/simon64_96_f8_sweep.json": "9e3dee8271f2a2d836e23c399de8f92c3f66cae50f9af377ef37d56d5e4bf564",
+      "data/reference/nano_iot_raw/simon/simon64_96_full_sweep.json": "71ca793656392c9ed0c0495c90f235e9d1b3b0fa013548f00c700208c4059cfe",
+      "data/reference/nano_iot_raw/simon/simon96_144_f8_sweep.json": "8590de3173d05042c83f26a52b1efe3a5e9fb3383d5fc5ffed0af8d0c2005ccc",
+      "data/reference/nano_iot_raw/simon/simon96_144_full_sweep.json": "9ca6a69b6fefd4f4a5d2ea8cbe92f55e323a877379facb1b4a1d166df118cb90",
+      "data/reference/nano_iot_raw/simon/simon96_96_f8_sweep.json": "fdb48c6c10595c05db3f9662b7d113d3845497e97d7fd6bdf2fa8d7c4c6512e7",
+      "data/reference/nano_iot_raw/simon/simon96_96_full_sweep.json": "94d1c26c8de489b774d8c13e884358a0e26f1ae9a97f393d1bb6c2f915e1721a",
+      "data/reference/nano_iot_raw/skinny/skinny128_128_full_sweep.json": "f43080e18ce7cbe2e4333bdb57fa9d006bf154ee136dfbf6af5121b11814b5d6",
+      "data/reference/nano_iot_raw/skinny/skinny128_256_full_sweep.json": "4a50f55b7af2e67ac89c0436622094fdbd545d66c4de45a1cbe7c54cfc08fcfc",
+      "data/reference/nano_iot_raw/skinny/skinny128_384_full_sweep.json": "83ac7a6dcd02aceff2a87d2a67c09a1f230afa815c0058a91cfd223e0453d684",
+      "data/reference/nano_iot_raw/skinny/skinny64_128_full_sweep.json": "2bc408aa06ae864a2c3c4f18f83ffe5fe71fc026caf23d95be3ec232ffef3bc8",
+      "data/reference/nano_iot_raw/skinny/skinny64_192_full_sweep.json": "005b39abf385c0bae763ef326e466735688a0b61ce60aa424b997d348a0f84f9",
+      "data/reference/nano_iot_raw/skinny/skinny64_64_full_sweep.json": "2ca39d802ea20ccad33abb330e97e2625dda101ef077097ad16459791866a4fe",
+      "data/reference/nano_iot_raw/speck/speck128_128_f8_sweep.json": "372f6377166de8dbf795f44e04b3cc4270846d5219f7834578c68af018ebf23e",
+      "data/reference/nano_iot_raw/speck/speck128_128_full_sweep.json": "5be01191b4bcba0a134914ac3bf8770d5c8b35a552234d40b6500dcb98c3b7f9",
+      "data/reference/nano_iot_raw/speck/speck128_192_f8_sweep.json": "5bacf87e70241c9bdc27de60fa34f89f7bca7efa6b140c4f782eb78dd229e9e6",
+      "data/reference/nano_iot_raw/speck/speck128_192_full_sweep.json": "16f63976e1a6eb718c61c6c609ff5e0cad24d9904eef3abdbe146faf3d4a760f",
+      "data/reference/nano_iot_raw/speck/speck128_256_f8_sweep.json": "c1aaed9ef29885138c55f27cffdedc0ddabc30b5552a2ff8a360d4c8a135db79",
+      "data/reference/nano_iot_raw/speck/speck128_256_full_sweep.json": "80d48dff2ccad10f0ce75579840a227e3535dfb6c32b5df6d04b3e527f93f7f1",
+      "data/reference/nano_iot_raw/speck/speck32_64_f8_sweep.json": "08dc75e06464a9604baed3cf12f158e31327402272ec52c6578e928d2575215b",
+      "data/reference/nano_iot_raw/speck/speck32_64_full_sweep.json": "154208ac49a57d1ce5d4be90d942cacfd44f8c0dac467363a23de4bece011ee5",
+      "data/reference/nano_iot_raw/speck/speck48_72_f8_sweep.json": "bf8a117a90f2d73b881e7c47a8c9de66d11118117e118ca45c66160f7eba538d",
+      "data/reference/nano_iot_raw/speck/speck48_72_full_sweep.json": "b8c8b07c50ac71347c281a729b71716dee6bd8f2400e577e64a4839e30347df9",
+      "data/reference/nano_iot_raw/speck/speck48_96_f8_sweep.json": "36b8f461d6bb146510b353e4c0022c675c2eb94e1d191cc5ee2fc608206a3b6b",
+      "data/reference/nano_iot_raw/speck/speck48_96_full_sweep.json": "813cb030d1fce6022a19243eaaf6e5ed98ea1be7a904ee08ea0a002e2ea1cf16",
+      "data/reference/nano_iot_raw/speck/speck64_128_f8_sweep.json": "c76c635a66c045263870876010f8e34eec25eafdb6bb52f1bfb78786b8e29655",
+      "data/reference/nano_iot_raw/speck/speck64_128_full_sweep.json": "4503665c2162af43a8561072dc43a7708e083692335d8aaf3099b933d1200521",
+      "data/reference/nano_iot_raw/speck/speck64_96_f8_sweep.json": "2cfeb7bdc81aeaebf19467ad882a6e3c2b010ded6f1eb91b05d3f84efd6c93ce",
+      "data/reference/nano_iot_raw/speck/speck64_96_full_sweep.json": "824d30075950db4e725a15acdfd4ae7d951cd40f119689997b8353098cbf7a7a",
+      "data/reference/nano_iot_raw/speck/speck96_144_f8_sweep.json": "12d36e05c1c591be2391136e520363c1b7e188439dbbdb714932a25c5510ae64",
+      "data/reference/nano_iot_raw/speck/speck96_144_full_sweep.json": "0e63ef8ca262f63172d1b856e03d54d6703583abcf91a0265030dc00802e9343",
+      "data/reference/nano_iot_raw/speck/speck96_96_f8_sweep.json": "cb3b27b5957855b08f89f191bca19346892b00a8538439a1f94a1f1e6391e9e9",
+      "data/reference/nano_iot_raw/speck/speck96_96_full_sweep.json": "f93d4de704b6ff0bd78796eced3f4f763532d75d6a8a58268d2950260dc76881"
+    }
+  },
+  "schema_version": 1,
+  "tables": {
+    "full_coverage_matrix.csv": {
+      "actual_path": "research/results/reproduction_v1/nano_tables/full_coverage_matrix.csv",
+      "actual_sha256": "067c64d3af702d87cab84dd8e64538b6228c24b5a5a6e8a8b3c5e8473ab6d274",
+      "byte_exact": true,
+      "expected_path": "data/reference/full_coverage_matrix.csv",
+      "expected_sha256": "067c64d3af702d87cab84dd8e64538b6228c24b5a5a6e8a8b3c5e8473ab6d274"
+    },
+    "paper_table_1.csv": {
+      "actual_path": "research/results/reproduction_v1/nano_tables/paper_table_1.csv",
+      "actual_sha256": "0b762e0b96905683ab16574467f1d2b69f4bb7c42fb697e0ef162c2b1403ef3e",
+      "byte_exact": true,
+      "expected_path": "data/reference/paper_table_1.csv",
+      "expected_sha256": "0b762e0b96905683ab16574467f1d2b69f4bb7c42fb697e0ef162c2b1403ef3e"
+    }
+  }
+}

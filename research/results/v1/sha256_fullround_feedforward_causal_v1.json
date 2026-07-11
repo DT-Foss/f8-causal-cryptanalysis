@@ -1,0 +1,677 @@
+{
+  "causal": {
+    "bytes": 1524,
+    "explicit_triplets": 8,
+    "file_sha256": "b456f8df24f23769a3e2b0528ad416cab0966f5c032f70ceb3553e1ec35777b7",
+    "graph_sha256": "bdec95e9bd6eb0788d9006c2ddcb48437c97117fc0002345b166d116a63fcbca",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/sha256_fullround_feedforward_causal_v1.causal",
+    "reader_provenance_verified": true,
+    "reader_triplets": [
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0005404121868077712,
+            "bvn_mean": 0.00013688592485171133,
+            "factual_mi": 0.6931119001450408,
+            "relation": "same_lane",
+            "source_lane": 0,
+            "target_lane": 0,
+            "z": 4984.332769315944
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0004381255945958692,
+            "bvn_mean": 7.898679867484167e-05,
+            "factual_mi": 0.6931468605599111,
+            "relation": "same_lane",
+            "source_lane": 0,
+            "target_lane": 0,
+            "z": 5642.94804287518
+          },
+          "source_lane": 0,
+          "target_lane": 0
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-0",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_0:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_0:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.00043939433642450725,
+            "bvn_mean": 0.00010096171956093948,
+            "factual_mi": 0.6931267004201329,
+            "relation": "same_lane",
+            "source_lane": 1,
+            "target_lane": 1,
+            "z": 5179.998245861858
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.000141584529753944,
+            "bvn_mean": 3.716066752761786e-05,
+            "factual_mi": 0.6923469670899616,
+            "relation": "same_lane",
+            "source_lane": 1,
+            "target_lane": 1,
+            "z": 15085.068070263249
+          },
+          "source_lane": 1,
+          "target_lane": 1
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-1",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_1:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_1:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0004163161231733742,
+            "bvn_mean": 7.921122091187786e-05,
+            "factual_mi": 0.693121260335992,
+            "relation": "same_lane",
+            "source_lane": 2,
+            "target_lane": 2,
+            "z": 6154.1825675003965
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0004742841437043793,
+            "bvn_mean": 0.00011120632655081293,
+            "factual_mi": 0.6929390861251135,
+            "relation": "same_lane",
+            "source_lane": 2,
+            "target_lane": 2,
+            "z": 4455.160219848118
+          },
+          "source_lane": 2,
+          "target_lane": 2
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-2",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_2:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_2:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0003348069018257382,
+            "bvn_mean": 7.664112541521214e-05,
+            "factual_mi": 0.692878036412888,
+            "relation": "same_lane",
+            "source_lane": 3,
+            "target_lane": 3,
+            "z": 7093.577890564812
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0003065610646718585,
+            "bvn_mean": 9.436522443074952e-05,
+            "factual_mi": 0.6931267004201329,
+            "relation": "same_lane",
+            "source_lane": 3,
+            "target_lane": 3,
+            "z": 6129.751565759461
+          },
+          "source_lane": 3,
+          "target_lane": 3
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-3",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_3:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_3:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0003443184475055783,
+            "bvn_mean": 8.469994669874141e-05,
+            "factual_mi": 0.6930652583228365,
+            "relation": "same_lane",
+            "source_lane": 4,
+            "target_lane": 4,
+            "z": 6244.053572168646
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0002570722601004478,
+            "bvn_mean": 0.00010681166533499291,
+            "factual_mi": 0.692878036412888,
+            "relation": "same_lane",
+            "source_lane": 4,
+            "target_lane": 4,
+            "z": 7397.109309410114
+          },
+          "source_lane": 4,
+          "target_lane": 4
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-4",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_4:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_4:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.00048039818187772636,
+            "bvn_mean": 8.581007362776984e-05,
+            "factual_mi": 0.6928591529055732,
+            "relation": "same_lane",
+            "source_lane": 5,
+            "target_lane": 5,
+            "z": 5536.081803456581
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0005132782363941723,
+            "bvn_mean": 0.00015521392371477233,
+            "factual_mi": 0.6931291804519437,
+            "relation": "same_lane",
+            "source_lane": 5,
+            "target_lane": 5,
+            "z": 3555.665042583456
+          },
+          "source_lane": 5,
+          "target_lane": 5
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-5",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_5:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_5:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.00030952419437882146,
+            "bvn_mean": 9.406275145694935e-05,
+            "factual_mi": 0.6931084600601838,
+            "relation": "same_lane",
+            "source_lane": 6,
+            "target_lane": 6,
+            "z": 6521.831522318076
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0007118962810299979,
+            "bvn_mean": 0.00011483299153989635,
+            "factual_mi": 0.6927986600692193,
+            "relation": "same_lane",
+            "source_lane": 6,
+            "target_lane": 6,
+            "z": 3621.7588748671046
+          },
+          "source_lane": 6,
+          "target_lane": 6
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-6",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_6:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_6:bit_0"
+      },
+      {
+        "attrs": {
+          "both_modes_exact_and_above_all_bvn": true,
+          "fixed_iv": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0007685430047340413,
+            "bvn_mean": 0.00012295918289602207,
+            "factual_mi": 0.6931468605599111,
+            "relation": "same_lane",
+            "source_lane": 7,
+            "target_lane": 7,
+            "z": 3513.410108964702
+          },
+          "random_chaining": {
+            "above_all_bvn_routes": true,
+            "bvn_max": 0.0002509596459919468,
+            "bvn_mean": 6.696664335417471e-05,
+            "factual_mi": 0.6931459005593992,
+            "relation": "same_lane",
+            "source_lane": 7,
+            "target_lane": 7,
+            "z": 11105.389738650038
+          },
+          "source_lane": 7,
+          "target_lane": 7
+        },
+        "confidence": 1.0,
+        "edge_id": "sha256-feedforward-lane-7",
+        "evidence_kind": "exact_feedforward_identity_plus_bvn_measurement",
+        "is_inferred": false,
+        "mechanism": "same_lane_modular_feedforward_bit0_identity",
+        "outcome": "sha256:hin_xor_hout:lane_7:bit_0",
+        "provenance": [],
+        "source": "SHA2_full_compression_feedforward_equation",
+        "trigger": "sha256:working_after_step_64:lane_7:bit_0"
+      }
+    ],
+    "triplets": 8
+  },
+  "evidence_stage": "FULL_COMPRESSION_FEEDFORWARD_RETAINED",
+  "kat": {
+    "round_constants_imported": 64,
+    "vectors": [
+      {
+        "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "matches_fixed_standard_vector": true,
+        "matches_hashlib": true,
+        "message_hex": ""
+      },
+      {
+        "digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+        "matches_fixed_standard_vector": true,
+        "matches_hashlib": true,
+        "message_hex": "616263"
+      }
+    ],
+    "vendored_c_sha256": "cfe4588b638a9b8035ce55e8fc27e097cfdc7942a41165b7be0fd1fc9a6a6280",
+    "vendored_c_source": "provenance/dependencies/pqcrypto-upstream/pqclean/common/sha2.c"
+  },
+  "measurements": {
+    "fixed_iv": {
+      "all_exact_bit0_equalities_passed": true,
+      "all_same_lane_above_all_bvn_routes": true,
+      "control_total_mi": 0.0013455308236876432,
+      "exact_bit0_equalities": 40000,
+      "next_lane_control": [
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0007550837762856123,
+          "bvn_mean": 0.00014105558888222273,
+          "factual_mi": 6.57006426184228e-07,
+          "relation": "next_lane_control",
+          "source_lane": 0,
+          "target_lane": 1,
+          "z": -0.6040619917324834
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0005136122588333888,
+          "bvn_mean": 0.00010631618983313244,
+          "factual_mi": 3.163567564562226e-05,
+          "relation": "next_lane_control",
+          "source_lane": 1,
+          "target_lane": 2,
+          "z": -0.5773255855767704
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.00043346523628735086,
+          "bvn_mean": 8.06549427769684e-05,
+          "factual_mi": 8.687270386288507e-06,
+          "relation": "next_lane_control",
+          "source_lane": 2,
+          "target_lane": 3,
+          "z": -0.5489601135024531
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.00034095900784677276,
+          "bvn_mean": 5.408859535603366e-05,
+          "factual_mi": 0.00021034805935841137,
+          "relation": "next_lane_control",
+          "source_lane": 3,
+          "target_lane": 4,
+          "z": 1.6335060899089933
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0005223620808694086,
+          "bvn_mean": 9.364811619889504e-05,
+          "factual_mi": 0.0002809058197049399,
+          "relation": "next_lane_control",
+          "source_lane": 4,
+          "target_lane": 5,
+          "z": 1.2751657139283323
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0005314516483229566,
+          "bvn_mean": 0.00011297406861310369,
+          "factual_mi": 1.689618560713163e-05,
+          "relation": "next_lane_control",
+          "source_lane": 5,
+          "target_lane": 6,
+          "z": -0.602597971109913
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.00025107839687804265,
+          "bvn_mean": 5.209653471408951e-05,
+          "factual_mi": 0.000370186203725361,
+          "relation": "next_lane_control",
+          "source_lane": 6,
+          "target_lane": 7,
+          "z": 4.257259875438482
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0007224811164429547,
+          "bvn_mean": 9.397579603585414e-05,
+          "factual_mi": 0.00042621460283370424,
+          "relation": "next_lane_control",
+          "source_lane": 7,
+          "target_lane": 0,
+          "z": 1.8132843259074378
+        }
+      ],
+      "same_lane": [
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0005404121868077712,
+          "bvn_mean": 0.00013688592485171133,
+          "factual_mi": 0.6931119001450408,
+          "relation": "same_lane",
+          "source_lane": 0,
+          "target_lane": 0,
+          "z": 4984.332769315944
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.00043939433642450725,
+          "bvn_mean": 0.00010096171956093948,
+          "factual_mi": 0.6931267004201329,
+          "relation": "same_lane",
+          "source_lane": 1,
+          "target_lane": 1,
+          "z": 5179.998245861858
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0004163161231733742,
+          "bvn_mean": 7.921122091187786e-05,
+          "factual_mi": 0.693121260335992,
+          "relation": "same_lane",
+          "source_lane": 2,
+          "target_lane": 2,
+          "z": 6154.1825675003965
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0003348069018257382,
+          "bvn_mean": 7.664112541521214e-05,
+          "factual_mi": 0.692878036412888,
+          "relation": "same_lane",
+          "source_lane": 3,
+          "target_lane": 3,
+          "z": 7093.577890564812
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0003443184475055783,
+          "bvn_mean": 8.469994669874141e-05,
+          "factual_mi": 0.6930652583228365,
+          "relation": "same_lane",
+          "source_lane": 4,
+          "target_lane": 4,
+          "z": 6244.053572168646
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.00048039818187772636,
+          "bvn_mean": 8.581007362776984e-05,
+          "factual_mi": 0.6928591529055732,
+          "relation": "same_lane",
+          "source_lane": 5,
+          "target_lane": 5,
+          "z": 5536.081803456581
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.00030952419437882146,
+          "bvn_mean": 9.406275145694935e-05,
+          "factual_mi": 0.6931084600601838,
+          "relation": "same_lane",
+          "source_lane": 6,
+          "target_lane": 6,
+          "z": 6521.831522318076
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0007685430047340413,
+          "bvn_mean": 0.00012295918289602207,
+          "factual_mi": 0.6931468605599111,
+          "relation": "same_lane",
+          "source_lane": 7,
+          "target_lane": 7,
+          "z": 3513.410108964702
+        }
+      ],
+      "same_lane_total_mi": 5.544417629162559
+    },
+    "random_chaining": {
+      "all_exact_bit0_equalities_passed": true,
+      "all_same_lane_above_all_bvn_routes": true,
+      "control_total_mi": 0.000714740435544457,
+      "exact_bit0_equalities": 40000,
+      "next_lane_control": [
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0005665709243275752,
+          "bvn_mean": 9.403870281726052e-05,
+          "factual_mi": 7.885152772654997e-06,
+          "relation": "next_lane_control",
+          "source_lane": 0,
+          "target_lane": 1,
+          "z": -0.5758518017794383
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0005798470447374564,
+          "bvn_mean": 8.172019598006388e-05,
+          "factual_mi": 1.3630940747251085e-05,
+          "relation": "next_lane_control",
+          "source_lane": 1,
+          "target_lane": 2,
+          "z": -0.44756541054037974
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.00029466528929561215,
+          "bvn_mean": 5.676842138813984e-05,
+          "factual_mi": 4.8725904486387594e-05,
+          "relation": "next_lane_control",
+          "source_lane": 2,
+          "target_lane": 3,
+          "z": -0.09526359971837228
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0005171545122435832,
+          "bvn_mean": 0.00012940074300132366,
+          "factual_mi": 1.4868204260378272e-05,
+          "relation": "next_lane_control",
+          "source_lane": 3,
+          "target_lane": 4,
+          "z": -0.8059190662317257
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.00030129086063825257,
+          "bvn_mean": 6.716465477320448e-05,
+          "factual_mi": 0.00018948147658493127,
+          "relation": "next_lane_control",
+          "source_lane": 4,
+          "target_lane": 5,
+          "z": 1.4575943597349272
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.00017985381317498633,
+          "bvn_mean": 5.06861706846535e-05,
+          "factual_mi": 7.891683606381546e-05,
+          "relation": "next_lane_control",
+          "source_lane": 5,
+          "target_lane": 6,
+          "z": 0.47952272912439536
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0009671289336909278,
+          "bvn_mean": 0.00013419955376568402,
+          "factual_mi": 0.00028924532353724695,
+          "relation": "next_lane_control",
+          "source_lane": 6,
+          "target_lane": 7,
+          "z": 0.6512193327079041
+        },
+        {
+          "above_all_bvn_routes": false,
+          "bvn_max": 0.0008325014302079121,
+          "bvn_mean": 0.00013105785517013806,
+          "factual_mi": 7.198659709179139e-05,
+          "relation": "next_lane_control",
+          "source_lane": 7,
+          "target_lane": 0,
+          "z": -0.2897216480765707
+        }
+      ],
+      "same_lane": [
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0004381255945958692,
+          "bvn_mean": 7.898679867484167e-05,
+          "factual_mi": 0.6931468605599111,
+          "relation": "same_lane",
+          "source_lane": 0,
+          "target_lane": 0,
+          "z": 5642.94804287518
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.000141584529753944,
+          "bvn_mean": 3.716066752761786e-05,
+          "factual_mi": 0.6923469670899616,
+          "relation": "same_lane",
+          "source_lane": 1,
+          "target_lane": 1,
+          "z": 15085.068070263249
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0004742841437043793,
+          "bvn_mean": 0.00011120632655081293,
+          "factual_mi": 0.6929390861251135,
+          "relation": "same_lane",
+          "source_lane": 2,
+          "target_lane": 2,
+          "z": 4455.160219848118
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0003065610646718585,
+          "bvn_mean": 9.436522443074952e-05,
+          "factual_mi": 0.6931267004201329,
+          "relation": "same_lane",
+          "source_lane": 3,
+          "target_lane": 3,
+          "z": 6129.751565759461
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0002570722601004478,
+          "bvn_mean": 0.00010681166533499291,
+          "factual_mi": 0.692878036412888,
+          "relation": "same_lane",
+          "source_lane": 4,
+          "target_lane": 4,
+          "z": 7397.109309410114
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0005132782363941723,
+          "bvn_mean": 0.00015521392371477233,
+          "factual_mi": 0.6931291804519437,
+          "relation": "same_lane",
+          "source_lane": 5,
+          "target_lane": 5,
+          "z": 3555.665042583456
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0007118962810299979,
+          "bvn_mean": 0.00011483299153989635,
+          "factual_mi": 0.6927986600692193,
+          "relation": "same_lane",
+          "source_lane": 6,
+          "target_lane": 6,
+          "z": 3621.7588748671046
+        },
+        {
+          "above_all_bvn_routes": true,
+          "bvn_max": 0.0002509596459919468,
+          "bvn_mean": 6.696664335417471e-05,
+          "factual_mi": 0.6931459005593992,
+          "relation": "same_lane",
+          "source_lane": 7,
+          "target_lane": 7,
+          "z": 11105.389738650038
+        }
+      ],
+      "same_lane_total_mi": 5.543511391688569
+    }
+  },
+  "parameters": {
+    "bvn_routes": 16,
+    "pairs": 5000,
+    "seed": 88428001
+  },
+  "prediction": "all eight same-lane bit-0 edges are exact and approach ln(2) MI",
+  "retained": true,
+  "schema": "sha2-fullround-feedforward-causal-v2",
+  "steps": 64,
+  "variant": "sha256",
+  "word_bits": 32
+}

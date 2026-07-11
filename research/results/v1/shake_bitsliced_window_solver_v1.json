@@ -1,0 +1,395 @@
+{
+  "bitslice_cross_implementation_gate": {
+    "exact_match": true,
+    "input_sha256": "bec39de1a3aa20f1a00b7c150fd3345e498f34a2fe0ec21e3073d95f051d85fa",
+    "output_sha256": "4c5a3c20e8d11756f9f98a543567ad1ecbaaffbf7ada6e38d332d550e15523c2",
+    "state_bits_checked": 102400,
+    "states": 64
+  },
+  "causal": {
+    "bytes": 1067,
+    "explicit_triplets": 6,
+    "file_sha256": "70aac76d2829f2ea7f76b31decbfc4d3c2b10b82782c158609e17a9af1b5de11",
+    "graph_sha256": "e7d74a54cf4dbcb65045641ea40112da91a24c7b346e85d45162667837782324",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/shake_bitsliced_window_solver_v1.causal",
+    "triplets": 6
+  },
+  "confirmation": {
+    "shake128": [
+      {
+        "actual_assignment": 438348,
+        "candidate_count": 1048576,
+        "candidates_per_machine_word": 64,
+        "factual_filter_matches": [
+          438348
+        ],
+        "factual_full_matches": [
+          438348
+        ],
+        "filter_lanes": 2,
+        "message_sha256": "378f2f8faf9fb9bb8e62c886cae727f59fe771b1781caaf98911839c698796c2",
+        "pack_batch": 256,
+        "pack_batch_count": 64,
+        "packed_evaluation_reduction_factor": 64.0,
+        "packed_state_count": 16384,
+        "seed": 89728001,
+        "unique_exact_consistency": true,
+        "window_bits": 20,
+        "window_start_capacity_bit": 32,
+        "window_stop_capacity_bit_exclusive": 52,
+        "wrong_target_filter_matches": [],
+        "wrong_target_full_matches": [],
+        "wrong_target_rejected": true
+      },
+      {
+        "actual_assignment": 8647961,
+        "candidate_count": 16777216,
+        "candidates_per_machine_word": 64,
+        "factual_filter_matches": [
+          8647961
+        ],
+        "factual_full_matches": [
+          8647961
+        ],
+        "filter_lanes": 2,
+        "message_sha256": "6147eedf22df8bb99330a7e612328f41dec31432ae488f085b793f43961377c2",
+        "pack_batch": 256,
+        "pack_batch_count": 1024,
+        "packed_evaluation_reduction_factor": 64.0,
+        "packed_state_count": 262144,
+        "seed": 89729010,
+        "unique_exact_consistency": true,
+        "window_bits": 24,
+        "window_start_capacity_bit": 54,
+        "window_stop_capacity_bit_exclusive": 78,
+        "wrong_target_filter_matches": [],
+        "wrong_target_full_matches": [],
+        "wrong_target_rejected": true
+      }
+    ],
+    "shake256": [
+      {
+        "actual_assignment": 932712,
+        "candidate_count": 1048576,
+        "candidates_per_machine_word": 64,
+        "factual_filter_matches": [
+          932712
+        ],
+        "factual_full_matches": [
+          932712
+        ],
+        "filter_lanes": 2,
+        "message_sha256": "118902d89ec88aa7ffc7d8e5c4272599edbc864722ca33c826da7c60e13c00c0",
+        "pack_batch": 256,
+        "pack_batch_count": 64,
+        "packed_evaluation_reduction_factor": 64.0,
+        "packed_state_count": 16384,
+        "seed": 89828004,
+        "unique_exact_consistency": true,
+        "window_bits": 20,
+        "window_start_capacity_bit": 56,
+        "window_stop_capacity_bit_exclusive": 76,
+        "wrong_target_filter_matches": [],
+        "wrong_target_full_matches": [],
+        "wrong_target_rejected": true
+      },
+      {
+        "actual_assignment": 5723038,
+        "candidate_count": 16777216,
+        "candidates_per_machine_word": 64,
+        "factual_filter_matches": [
+          5723038
+        ],
+        "factual_full_matches": [
+          5723038
+        ],
+        "filter_lanes": 2,
+        "message_sha256": "c25f60f505a17dea4475da260b47f84eaebcfdb62fc04b8973a1efcfd41bf727",
+        "pack_batch": 256,
+        "pack_batch_count": 1024,
+        "packed_evaluation_reduction_factor": 64.0,
+        "packed_state_count": 262144,
+        "seed": 89829013,
+        "unique_exact_consistency": true,
+        "window_bits": 24,
+        "window_start_capacity_bit": 100,
+        "window_stop_capacity_bit_exclusive": 124,
+        "wrong_target_filter_matches": [],
+        "wrong_target_full_matches": [],
+        "wrong_target_rejected": true
+      }
+    ]
+  },
+  "evidence_stage": "BIT_SLICED_FULLROUND_WINDOW_CONSISTENCY_RETAINED",
+  "kat": {
+    "fips202_url": "https://csrc.nist.gov/pubs/fips/202/final",
+    "keccak_f1600_zero_state_lanes": [
+      "f1258f7940e1dde7",
+      "84d5ccf933c0478a",
+      "d598261ea65aa9ee",
+      "bd1547306f80494d",
+      "8b284e056253d057",
+      "ff97a42d7f8e6fd4",
+      "90fee5a0a44647c4",
+      "8c5bda0cd6192e76",
+      "ad30a6f71b19059c",
+      "30935ab7d08ffc64",
+      "eb5aa93f2317d635",
+      "a9a6e6260d712103",
+      "81a57c16dbcf555f",
+      "43b831cd0347c826",
+      "01f22f1a11a5569f",
+      "05e5635a21d9ae61",
+      "64befef28cc970f2",
+      "613670957bc46611",
+      "b87c5a554fd00ecb",
+      "8c3ee88a1ccf32c8",
+      "940c7922ae3a2614",
+      "1841f924a2c509e4",
+      "16f53526e70465c2",
+      "75f644e97f30a13b",
+      "eaf1ff7b5ceca249"
+    ],
+    "keccak_f1600_zero_state_match": true,
+    "vectors": [
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "7f9c2ba4e88f827d616045507605853ed73b8093f6efbc88eb1a6eacfa66ef263cb1eea988004b93103cfb0aeefd2a686e01fa4a58e8a3639ca8a1e3f9ae57e2",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "5881092dd818bf5cf8a3ddb793fbcba74097d5c526a6d35f97b83351940f2cc844c50af32acd3f2cdd066568706f509bc1bdde58295dae3f891a9a0fca578378",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "46b9dd2b0ba88d13233b3feb743eeb243fcd52ea62b81b82b50c27646ed5762fd75dc4ddd8c0f200cb05019d67b592f6fc821c49479ab48640292eacb3b7c4be",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "483366601360a8771c6863080cc4114d8db44530f8f1e1ee4f94ea37e78b5739d5a15bef186a5386c75744c0527e1faa9f8726e462a12a4feb06bd8801e751e4",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      }
+    ]
+  },
+  "parameters": {
+    "pack_batch": 256,
+    "permutation_rounds": 24,
+    "seed": 89728001,
+    "window_bits": [
+      20,
+      24
+    ]
+  },
+  "reader_triplets": [
+    {
+      "attrs": {
+        "reader_recipe": {
+          "candidates_per_machine_word": 64,
+          "capacity_bits": 256,
+          "capacity_lane_offset": 21,
+          "filter_lanes": 2,
+          "known": "rate_and_capacity_complement",
+          "operation": "bitsliced_keccak_f1600_then_exact_next_rate_filter",
+          "permutation_rounds": 24,
+          "rate_lanes": 21,
+          "representation": "candidate_axis_bitsliced_into_uint64",
+          "state_planes": [
+            25,
+            64
+          ],
+          "variable": "declared_capacity_window",
+          "variant": "SHAKE128"
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-bitsliced-keccak-fullround",
+      "evidence_kind": "64_state_cross_implementation_gate",
+      "is_inferred": false,
+      "mechanism": "exact_bitsliced_keccak_f1600_24_rounds",
+      "outcome": "shake128:bitsliced_next_state_planes",
+      "provenance": [
+        "shake128-candidate-axis-bit-pack"
+      ],
+      "source": "FIPS202_Boolean_operations_transposed_over_candidate_axis",
+      "trigger": "shake128:bitsliced_state_planes"
+    },
+    {
+      "attrs": {
+        "packed_evaluations": {
+          "20": 16384,
+          "24": 262144
+        },
+        "reader_recipe": {
+          "candidates_per_machine_word": 64,
+          "capacity_bits": 256,
+          "capacity_lane_offset": 21,
+          "filter_lanes": 2,
+          "known": "rate_and_capacity_complement",
+          "operation": "bitsliced_keccak_f1600_then_exact_next_rate_filter",
+          "permutation_rounds": 24,
+          "rate_lanes": 21,
+          "representation": "candidate_axis_bitsliced_into_uint64",
+          "state_planes": [
+            25,
+            64
+          ],
+          "variable": "declared_capacity_window",
+          "variant": "SHAKE128"
+        },
+        "window_sizes": [
+          20,
+          24
+        ]
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-bitsliced-window-reader",
+      "evidence_kind": "exact_fullround_output_equality",
+      "is_inferred": false,
+      "mechanism": "reader_executable_bitsliced_exact_consistency_filter",
+      "outcome": "shake128:consistent_capacity_window_assignment",
+      "provenance": [
+        "shake128-bitsliced-keccak-fullround",
+        "shake128-candidate-axis-bit-pack"
+      ],
+      "source": "two_rate_lane_filter_then_complete_rate_confirmation",
+      "trigger": "shake128:observed_next_rate_plus_bitsliced_candidates"
+    },
+    {
+      "attrs": {
+        "candidates_per_word": 64,
+        "low_candidate_patterns": [
+          "aaaaaaaaaaaaaaaa",
+          "cccccccccccccccc",
+          "f0f0f0f0f0f0f0f0",
+          "ff00ff00ff00ff00",
+          "ffff0000ffff0000",
+          "ffffffff00000000"
+        ]
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-candidate-axis-bit-pack",
+      "evidence_kind": "exact_lossless_representation_transform",
+      "is_inferred": false,
+      "mechanism": "exact_candidate_axis_bit_slicing",
+      "outcome": "shake128:1600_uint64_candidate_bit_planes",
+      "provenance": [],
+      "source": "candidate_axis_transposition",
+      "trigger": "shake128:64_capacity_window_assignments"
+    },
+    {
+      "attrs": {
+        "reader_recipe": {
+          "candidates_per_machine_word": 64,
+          "capacity_bits": 512,
+          "capacity_lane_offset": 17,
+          "filter_lanes": 2,
+          "known": "rate_and_capacity_complement",
+          "operation": "bitsliced_keccak_f1600_then_exact_next_rate_filter",
+          "permutation_rounds": 24,
+          "rate_lanes": 17,
+          "representation": "candidate_axis_bitsliced_into_uint64",
+          "state_planes": [
+            25,
+            64
+          ],
+          "variable": "declared_capacity_window",
+          "variant": "SHAKE256"
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shake256-bitsliced-keccak-fullround",
+      "evidence_kind": "64_state_cross_implementation_gate",
+      "is_inferred": false,
+      "mechanism": "exact_bitsliced_keccak_f1600_24_rounds",
+      "outcome": "shake256:bitsliced_next_state_planes",
+      "provenance": [
+        "shake256-candidate-axis-bit-pack"
+      ],
+      "source": "FIPS202_Boolean_operations_transposed_over_candidate_axis",
+      "trigger": "shake256:bitsliced_state_planes"
+    },
+    {
+      "attrs": {
+        "packed_evaluations": {
+          "20": 16384,
+          "24": 262144
+        },
+        "reader_recipe": {
+          "candidates_per_machine_word": 64,
+          "capacity_bits": 512,
+          "capacity_lane_offset": 17,
+          "filter_lanes": 2,
+          "known": "rate_and_capacity_complement",
+          "operation": "bitsliced_keccak_f1600_then_exact_next_rate_filter",
+          "permutation_rounds": 24,
+          "rate_lanes": 17,
+          "representation": "candidate_axis_bitsliced_into_uint64",
+          "state_planes": [
+            25,
+            64
+          ],
+          "variable": "declared_capacity_window",
+          "variant": "SHAKE256"
+        },
+        "window_sizes": [
+          20,
+          24
+        ]
+      },
+      "confidence": 1.0,
+      "edge_id": "shake256-bitsliced-window-reader",
+      "evidence_kind": "exact_fullround_output_equality",
+      "is_inferred": false,
+      "mechanism": "reader_executable_bitsliced_exact_consistency_filter",
+      "outcome": "shake256:consistent_capacity_window_assignment",
+      "provenance": [
+        "shake256-bitsliced-keccak-fullround",
+        "shake256-candidate-axis-bit-pack"
+      ],
+      "source": "two_rate_lane_filter_then_complete_rate_confirmation",
+      "trigger": "shake256:observed_next_rate_plus_bitsliced_candidates"
+    },
+    {
+      "attrs": {
+        "candidates_per_word": 64,
+        "low_candidate_patterns": [
+          "aaaaaaaaaaaaaaaa",
+          "cccccccccccccccc",
+          "f0f0f0f0f0f0f0f0",
+          "ff00ff00ff00ff00",
+          "ffff0000ffff0000",
+          "ffffffff00000000"
+        ]
+      },
+      "confidence": 1.0,
+      "edge_id": "shake256-candidate-axis-bit-pack",
+      "evidence_kind": "exact_lossless_representation_transform",
+      "is_inferred": false,
+      "mechanism": "exact_candidate_axis_bit_slicing",
+      "outcome": "shake256:1600_uint64_candidate_bit_planes",
+      "provenance": [],
+      "source": "candidate_axis_transposition",
+      "trigger": "shake256:64_capacity_window_assignments"
+    }
+  ],
+  "result": "Candidate-axis bit slicing evaluates 64 state-window assignments per uint64 and uniquely determines every tested 20-/24-bit assignment by exact next-rate consistency after 24 Keccak rounds.",
+  "retained": true,
+  "schema": "shake-bitsliced-window-solver-v1",
+  "scope": "Known-complement state-window consistency benchmark. Bit slicing reduces machine-word full-state evaluations by 64 while total candidate count remains 2^k."
+}

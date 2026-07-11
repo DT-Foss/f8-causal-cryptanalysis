@@ -1,0 +1,27 @@
+Test 1: All zeros (72 rounds)
+My implementation:
+  v[0] = 0x94eeea8b1f2ada84
+  v[1] = 0xadf103313eae6670
+  v[2] = 0x952419a1f4b16d53
+  v[3] = 0xd83f13e63c9f6b11
+Expected (pyskein):
+  v[0] = 0x94eeea8b1f2ada84
+  v[1] = 0xadf103313eae6670
+  v[2] = 0x952419a1f4b16d53
+  v[3] = 0xd83f13e63c9f6b11
+MATCH: True
+
+Test 2: Sequential key (72 rounds)
+My implementation:
+  v[0] = 0xe894160e827bb3d4
+  v[1] = 0xde12213be83d70ba
+  v[2] = 0x2b035298135ccaff
+  v[3] = 0xa7dfcaa344fc69f1
+Expected (pyskein):
+  v[0] = 0xe894160e827bb3d4
+  v[1] = 0xde12213be83d70ba
+  v[2] = 0x2b035298135ccaff
+  v[3] = 0xa7dfcaa344fc69f1
+MATCH: True
+
+BOTH TESTS PASSED — implementation is CORRECT

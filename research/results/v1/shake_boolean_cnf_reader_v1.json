@@ -1,0 +1,559 @@
+{
+  "causal": {
+    "bytes": 831,
+    "explicit_triplets": 2,
+    "file_sha256": "829f4f7f5022ef496f900880a7ecbc09ef1fbb38ce2cda6dd2da457c4f7dde76",
+    "graph_sha256": "5a0d7ca2f1ac1112ee9acf8dbb482c03ea50cac2554991d7b7075db8859ff349",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/shake_boolean_cnf_reader_v1.causal",
+    "triplets": 2
+  },
+  "evidence_stage": "BOOLEAN_CNF_FULLROUND_RECONSTRUCTION_OBSERVED",
+  "kat": {
+    "fips202_url": "https://csrc.nist.gov/pubs/fips/202/final",
+    "keccak_f1600_zero_state_lanes": [
+      "f1258f7940e1dde7",
+      "84d5ccf933c0478a",
+      "d598261ea65aa9ee",
+      "bd1547306f80494d",
+      "8b284e056253d057",
+      "ff97a42d7f8e6fd4",
+      "90fee5a0a44647c4",
+      "8c5bda0cd6192e76",
+      "ad30a6f71b19059c",
+      "30935ab7d08ffc64",
+      "eb5aa93f2317d635",
+      "a9a6e6260d712103",
+      "81a57c16dbcf555f",
+      "43b831cd0347c826",
+      "01f22f1a11a5569f",
+      "05e5635a21d9ae61",
+      "64befef28cc970f2",
+      "613670957bc46611",
+      "b87c5a554fd00ecb",
+      "8c3ee88a1ccf32c8",
+      "940c7922ae3a2614",
+      "1841f924a2c509e4",
+      "16f53526e70465c2",
+      "75f644e97f30a13b",
+      "eaf1ff7b5ceca249"
+    ],
+    "keccak_f1600_zero_state_match": true,
+    "vectors": [
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "7f9c2ba4e88f827d616045507605853ed73b8093f6efbc88eb1a6eacfa66ef263cb1eea988004b93103cfb0aeefd2a686e01fa4a58e8a3639ca8a1e3f9ae57e2",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "5881092dd818bf5cf8a3ddb793fbcba74097d5c526a6d35f97b83351940f2cc844c50af32acd3f2cdd066568706f509bc1bdde58295dae3f891a9a0fca578378",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "46b9dd2b0ba88d13233b3feb743eeb243fcd52ea62b81b82b50c27646ed5762fd75dc4ddd8c0f200cb05019d67b592f6fc821c49479ab48640292eacb3b7c4be",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "483366601360a8771c6863080cc4114d8db44530f8f1e1ee4f94ea37e78b5739d5a15bef186a5386c75744c0527e1faa9f8726e462a12a4feb06bd8801e751e4",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      }
+    ]
+  },
+  "parameters": {
+    "branching_heuristic": "chb",
+    "output_lanes": 21,
+    "seed": 89751001,
+    "solver": "Z3 version 4.15.4 - 64 bit",
+    "solver_threads": 1,
+    "timeout_seconds": 120,
+    "variants": [
+      "shake128"
+    ],
+    "window_bits": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "reader_triplets": [
+    {
+      "attrs": {
+        "reader_recipe": {
+          "encoding": "streaming_DIMACS_Tseitin",
+          "known": "rate_and_capacity_complement",
+          "output_constraint": "observed_next_rate_lanes",
+          "permutation_rounds": 24,
+          "solver": "Z3 version 4.15.4 - 64 bit",
+          "variable": "declared_capacity_window",
+          "variant": "SHAKE128"
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-boolean-fullround-circuit",
+      "evidence_kind": "round_equation_exact_encoding",
+      "is_inferred": false,
+      "mechanism": "exact_tseitin_cnf_of_24_round_keccak_f1600",
+      "outcome": "shake128:fullround_boolean_constraint_system",
+      "provenance": [],
+      "source": "FIPS202_theta_rho_pi_chi_iota",
+      "trigger": "shake128:known_rate_and_capacity_complement_plus_window_variables"
+    },
+    {
+      "attrs": {
+        "output_lanes": 21,
+        "window_sizes": [
+          4,
+          8,
+          12,
+          16
+        ]
+      },
+      "confidence": 1.0,
+      "edge_id": "shake128-cnf-reader-model",
+      "evidence_kind": "solver_model_checked_against_instrumented_ground_truth",
+      "is_inferred": false,
+      "mechanism": "reader_executable_sat_model_and_blocking_clause_query",
+      "outcome": "shake128:capacity_window_assignment_and_uniqueness_status",
+      "provenance": [
+        "shake128-boolean-fullround-circuit"
+      ],
+      "source": "Z3_DIMACS_single_thread",
+      "trigger": "shake128:fullround_boolean_constraints"
+    }
+  ],
+  "reconstructed_trials": 3,
+  "result": "The exact Boolean Reader reconstructed 3/4 tested full-round SHAKE capacity windows within the configured solver limit.",
+  "schema": "shake-boolean-cnf-reader-v1",
+  "scope": "Known-complement state-window inference from consecutive SHAKE rate blocks. Solver decisions are compared with explicit 2^k enumeration; all Boolean round equations are exact.",
+  "trials": [
+    {
+      "actual_assignment": 11,
+      "cnf_bytes_after_blocking_clause": 11106655,
+      "cnf_sha256_after_blocking_clause": "9b842c8c084edaac9098892638389e6a3b3c741c041b35df4817563e6ef80d83",
+      "encoding": {
+        "clauses": 525709,
+        "cnf_bytes": 11106642,
+        "output_bits": 1344,
+        "output_lanes": 21,
+        "round_clause_counts": [
+          0,
+          1752,
+          18612,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000
+        ],
+        "round_variable_counts": [
+          0,
+          494,
+          5053,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400
+        ],
+        "variables": 139952
+      },
+      "first_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 93946423,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {
+          "sat-conflicts": 1019.0,
+          "sat-decisions": 57319.0,
+          "sat-propagations-2ary": 147971.0,
+          "sat-propagations-nary": 11388887.0,
+          "sat-restarts": 20.0
+        },
+        "status": "sat"
+      },
+      "output_lanes": 21,
+      "reconstructed_assignment": 11,
+      "reconstruction_matches_ground_truth": true,
+      "second_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 250880820,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {
+          "sat-conflicts": 832.0,
+          "sat-decisions": 50368.0,
+          "sat-propagations-2ary": 141463.0,
+          "sat-propagations-nary": 6106379.0,
+          "sat-restarts": 9.0
+        },
+        "status": "unsat"
+      },
+      "seed": 89751001,
+      "unique_assignment_proved": true,
+      "variant": "SHAKE128",
+      "window_bits": 4,
+      "window_start_capacity_bit": 99,
+      "window_stop_capacity_bit_exclusive": 103
+    },
+    {
+      "actual_assignment": 66,
+      "cnf_bytes_after_blocking_clause": 11312342,
+      "cnf_sha256_after_blocking_clause": "4dd989ed0c8309c61dc5f3f6b3c9fa6d25eca32ba2b2b10868d2bb7bcf0084ac",
+      "encoding": {
+        "clauses": 534852,
+        "cnf_bytes": 11312322,
+        "output_bits": 1344,
+        "output_lanes": 21,
+        "round_clause_counts": [
+          0,
+          6643,
+          22864,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000
+        ],
+        "round_variable_counts": [
+          0,
+          1867,
+          6116,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400
+        ],
+        "variables": 142392
+      },
+      "first_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 93945380,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {
+          "sat-conflicts": 4541.0,
+          "sat-decisions": 48477.0,
+          "sat-propagations-2ary": 444725.0,
+          "sat-propagations-nary": 17654185.0,
+          "sat-restarts": 166.0
+        },
+        "status": "sat"
+      },
+      "output_lanes": 21,
+      "reconstructed_assignment": 66,
+      "reconstruction_matches_ground_truth": true,
+      "second_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 250928935,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {
+          "sat-conflicts": 35557.0,
+          "sat-decisions": 220149.0,
+          "sat-propagations-2ary": 2853367.0,
+          "sat-propagations-nary": 447831931.0,
+          "sat-restarts": 2216.0
+        },
+        "status": "unsat"
+      },
+      "seed": 89752010,
+      "unique_assignment_proved": true,
+      "variant": "SHAKE128",
+      "window_bits": 8,
+      "window_start_capacity_bit": 231,
+      "window_stop_capacity_bit_exclusive": 239
+    },
+    {
+      "actual_assignment": 3464,
+      "cnf_bytes_after_blocking_clause": 11426287,
+      "cnf_sha256_after_blocking_clause": "2470eb68a70f87b33737a9ece46697e5fc582cc499dbffec52037b1e7f0e8444",
+      "encoding": {
+        "clauses": 539213,
+        "cnf_bytes": 11426252,
+        "output_bits": 1344,
+        "output_lanes": 21,
+        "round_clause_counts": [
+          32,
+          10116,
+          23720,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000
+        ],
+        "round_variable_counts": [
+          8,
+          2832,
+          6330,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400
+        ],
+        "variables": 143583
+      },
+      "first_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 93944405,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {
+          "sat-conflicts": 83861.0,
+          "sat-decisions": 586636.0,
+          "sat-propagations-2ary": 4679035.0,
+          "sat-propagations-nary": 635224798.0,
+          "sat-restarts": 3677.0
+        },
+        "status": "sat"
+      },
+      "output_lanes": 21,
+      "reconstructed_assignment": 3464,
+      "reconstruction_matches_ground_truth": true,
+      "second_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 250927958,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {
+          "sat-conflicts": 65267.0,
+          "sat-decisions": 823465.0,
+          "sat-propagations-2ary": 3548494.0,
+          "sat-propagations-nary": 764971451.0,
+          "sat-restarts": 2273.0
+        },
+        "status": "unsat"
+      },
+      "seed": 89753019,
+      "unique_assignment_proved": true,
+      "variant": "SHAKE128",
+      "window_bits": 12,
+      "window_start_capacity_bit": 168,
+      "window_stop_capacity_bit_exclusive": 180
+    },
+    {
+      "actual_assignment": 35837,
+      "cnf_bytes_after_blocking_clause": 11475826,
+      "cnf_sha256_after_blocking_clause": "06b6208063c98896b218be8cf0c766c4dc49751d484f50fac97b5b6357afa958",
+      "encoding": {
+        "clauses": 541204,
+        "cnf_bytes": 11475826,
+        "output_bits": 1344,
+        "output_lanes": 21,
+        "round_clause_counts": [
+          82,
+          11881,
+          23896,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000,
+          24000
+        ],
+        "round_variable_counts": [
+          23,
+          3311,
+          6374,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400,
+          6400
+        ],
+        "variables": 144125
+      },
+      "first_solver": {
+        "command_parameters": {
+          "branching_heuristic": "chb",
+          "random_seed": 93943362,
+          "threads": 1,
+          "timeout_seconds": 120
+        },
+        "external_timeout": false,
+        "return_code": 0,
+        "stats": {},
+        "status": "unknown"
+      },
+      "output_lanes": 21,
+      "reconstructed_assignment": null,
+      "reconstruction_matches_ground_truth": false,
+      "second_solver": null,
+      "seed": 89754028,
+      "unique_assignment_proved": null,
+      "variant": "SHAKE128",
+      "window_bits": 16,
+      "window_start_capacity_bit": 196,
+      "window_stop_capacity_bit_exclusive": 212
+    }
+  ]
+}

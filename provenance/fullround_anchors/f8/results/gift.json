@@ -1,0 +1,60 @@
+{
+  "cipher": "GIFT-64 / GIFT-128",
+  "mechanism": "permutation cycle",
+  "official_test_vectors_verified": true,
+  "parameters": {
+    "N": 16000,
+    "n_perm": 18
+  },
+  "results": {
+    "gift64": [
+      {
+        "R": 4,
+        "Z": 629.58,
+        "MI": 0.340072,
+        "elapsed_s": 5.4
+      },
+      {
+        "R": 14,
+        "Z": 459.69,
+        "MI": 0.343841,
+        "elapsed_s": 5.4
+      },
+      {
+        "R": 28,
+        "Z": 675.62,
+        "MI": 0.336695,
+        "elapsed_s": 5.4
+      }
+    ],
+    "gift128": [
+      {
+        "R": 4,
+        "Z_lo64x64": 302.68,
+        "MI_lo64x64": 0.185197,
+        "Z_diag128": 0.03,
+        "MI_diag128": 0.004117,
+        "elapsed_s": 5.5
+      },
+      {
+        "R": 20,
+        "Z_lo64x64": 267.33,
+        "MI_lo64x64": 0.181257,
+        "Z_diag128": 0.88,
+        "MI_diag128": 0.004251,
+        "elapsed_s": 5.6
+      },
+      {
+        "R": 40,
+        "Z_lo64x64": 274.78,
+        "MI_lo64x64": 0.169129,
+        "Z_diag128": -0.43,
+        "MI_diag128": 0.003773,
+        "elapsed_s": 5.7
+      }
+    ]
+  },
+  "gift64_full_round_z": 675.62,
+  "gift128_full_round_z": 274.78,
+  "total_time_s": 33.1
+}

@@ -1,0 +1,675 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "parameters": {
+    "bits": [
+      0,
+      1,
+      7,
+      31,
+      63,
+      95,
+      127
+    ],
+    "null": "independent row re-pairing of the exact mutated NTT output multiset",
+    "operations_per_seed": 32,
+    "primary_metric": "entropy_deficit_sum over 16 quantized Z_q delta bins",
+    "routes": 4,
+    "scope": "open public representation inference, not a security game",
+    "seed_base": 485001,
+    "seeds": 2,
+    "variants": [
+      "mlkem512"
+    ]
+  },
+  "results": [
+    {
+      "all_roundtrips_exact": true,
+      "functional_roundtrips": [
+        32,
+        32
+      ],
+      "operations_per_seed": 32,
+      "results": [
+        {
+          "bit": 0,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 807.7695175708488,
+                "mean": 802.7647590492857,
+                "minimum": 797.7600005277225,
+                "sample_sd_ddof1": 7.077797377596983,
+                "values": [
+                  797.7600005277225,
+                  807.7695175708488
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 413.410804740347,
+                "mean": 310.9307573124112,
+                "minimum": 208.45070988447543,
+                "sample_sd_ddof1": 144.9286729452248,
+                "values": [
+                  413.410804740347,
+                  208.45070988447543
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -539.662109375,
+                "mean": -660.4562072753906,
+                "minimum": -781.2503051757812,
+                "sample_sd_ddof1": 170.82865150535582,
+                "values": [
+                  -781.2503051757812,
+                  -539.662109375
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -20.08282894154785,
+                "mean": -26.50655045363132,
+                "minimum": -32.93027196571479,
+                "sample_sd_ddof1": 9.084514083296249,
+                "values": [
+                  -32.93027196571479,
+                  -20.08282894154785
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.491851806640625,
+                "mean": -0.4919281005859375,
+                "minimum": -0.49200439453125,
+                "sample_sd_ddof1": 0.00010789593218788873,
+                "values": [
+                  -0.49200439453125,
+                  -0.491851806640625
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -53.880414179390804,
+                "mean": -53.99521451354795,
+                "minimum": -54.11001484770509,
+                "sample_sd_ddof1": 0.16235218952999314,
+                "values": [
+                  -54.11001484770509,
+                  -53.880414179390804
+                ]
+              }
+            }
+          }
+        },
+        {
+          "bit": 1,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 806.6147899010094,
+                "mean": 801.2235148136721,
+                "minimum": 795.8322397263347,
+                "sample_sd_ddof1": 7.624414346996691,
+                "values": [
+                  806.6147899010094,
+                  795.8322397263347
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 312.87279793073697,
+                "mean": 251.65802365421814,
+                "minimum": 190.44324937769935,
+                "sample_sd_ddof1": 86.57076399946057,
+                "values": [
+                  190.44324937769935,
+                  312.87279793073697
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -578.2674560546875,
+                "mean": -649.9413299560547,
+                "minimum": -721.6152038574219,
+                "sample_sd_ddof1": 101.3621645391325,
+                "values": [
+                  -578.2674560546875,
+                  -721.6152038574219
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -16.33942053574086,
+                "mean": -18.07034510882741,
+                "minimum": -19.801269681913958,
+                "sample_sd_ddof1": 2.447897006703857,
+                "values": [
+                  -16.33942053574086,
+                  -19.801269681913958
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.472381591796875,
+                "mean": -0.476226806640625,
+                "minimum": -0.480072021484375,
+                "sample_sd_ddof1": 0.005437954982269591,
+                "values": [
+                  -0.472381591796875,
+                  -0.480072021484375
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -32.482197432957314,
+                "mean": -47.0339986885695,
+                "minimum": -61.58579994418169,
+                "sample_sd_ddof1": 20.579354692644586,
+                "values": [
+                  -61.58579994418169,
+                  -32.482197432957314
+                ]
+              }
+            }
+          }
+        },
+        {
+          "bit": 7,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 801.8638404851334,
+                "mean": 798.132526947847,
+                "minimum": 794.4012134105606,
+                "sample_sd_ddof1": 5.2768742098968096,
+                "values": [
+                  801.8638404851334,
+                  794.4012134105606
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 628.2234435807618,
+                "mean": 387.6718854130214,
+                "minimum": 147.12032724528103,
+                "sample_sd_ddof1": 340.1912760107989,
+                "values": [
+                  628.2234435807618,
+                  147.12032724528103
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -795.676513671875,
+                "mean": -809.8487396240234,
+                "minimum": -824.0209655761719,
+                "sample_sd_ddof1": 20.04255415054427,
+                "values": [
+                  -824.0209655761719,
+                  -795.676513671875
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -24.99461321650081,
+                "mean": -123.39552545180075,
+                "minimum": -221.79643768710068,
+                "sample_sd_ddof1": 139.15990463304578,
+                "values": [
+                  -221.79643768710068,
+                  -24.99461321650081
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.48016357421875,
+                "mean": -0.488037109375,
+                "minimum": -0.49591064453125,
+                "sample_sd_ddof1": 0.011134860201790116,
+                "values": [
+                  -0.49591064453125,
+                  -0.48016357421875
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -24.440793374994527,
+                "mean": -44.123972435462036,
+                "minimum": -63.807151495929546,
+                "sample_sd_ddof1": 27.836218777931265,
+                "values": [
+                  -63.807151495929546,
+                  -24.440793374994527
+                ]
+              }
+            }
+          }
+        },
+        {
+          "bit": 31,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 798.7115892657637,
+                "mean": 797.4616224106823,
+                "minimum": 796.2116555556008,
+                "sample_sd_ddof1": 1.767720078972996,
+                "values": [
+                  796.2116555556008,
+                  798.7115892657637
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 541.6087185448217,
+                "mean": 454.63080570801105,
+                "minimum": 367.65289287120044,
+                "sample_sd_ddof1": 123.00534396072254,
+                "values": [
+                  541.6087185448217,
+                  367.65289287120044
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -794.051025390625,
+                "mean": -804.2103271484375,
+                "minimum": -814.36962890625,
+                "sample_sd_ddof1": 14.367422330139263,
+                "values": [
+                  -794.051025390625,
+                  -814.36962890625
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -31.86443135385917,
+                "mean": -43.15525636123557,
+                "minimum": -54.44608136861197,
+                "sample_sd_ddof1": 15.967637855813006,
+                "values": [
+                  -54.44608136861197,
+                  -31.86443135385917
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.48419189453125,
+                "mean": -0.4860687255859375,
+                "minimum": -0.487945556640625,
+                "sample_sd_ddof1": 0.0026542399318220627,
+                "values": [
+                  -0.48419189453125,
+                  -0.487945556640625
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -32.63931359662874,
+                "mean": -35.148639559436816,
+                "minimum": -37.657965522244886,
+                "sample_sd_ddof1": 3.548722809018103,
+                "values": [
+                  -37.657965522244886,
+                  -32.63931359662874
+                ]
+              }
+            }
+          }
+        },
+        {
+          "bit": 63,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 799.036083627467,
+                "mean": 798.6566565782691,
+                "minimum": 798.2772295290714,
+                "sample_sd_ddof1": 0.5365908789066938,
+                "values": [
+                  799.036083627467,
+                  798.2772295290714
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 615.9394993777979,
+                "mean": 500.12932683091424,
+                "minimum": 384.3191542840306,
+                "sample_sd_ddof1": 163.78031667657115,
+                "values": [
+                  615.9394993777979,
+                  384.3191542840306
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -818.0269775390625,
+                "mean": -828.9482269287109,
+                "minimum": -839.8694763183594,
+                "sample_sd_ddof1": 15.444979004899707,
+                "values": [
+                  -818.0269775390625,
+                  -839.8694763183594
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -30.805611733671423,
+                "mean": -47.733948321949974,
+                "minimum": -64.66228491022852,
+                "sample_sd_ddof1": 23.940283191560212,
+                "values": [
+                  -30.805611733671423,
+                  -64.66228491022852
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.488067626953125,
+                "mean": -0.493896484375,
+                "minimum": -0.499725341796875,
+                "sample_sd_ddof1": 0.008243249219154699,
+                "values": [
+                  -0.488067626953125,
+                  -0.499725341796875
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -32.928232646551756,
+                "mean": -4110.214116323275,
+                "minimum": -8187.5,
+                "sample_sd_ddof1": 5766.1529943679925,
+                "values": [
+                  -32.928232646551756,
+                  -8187.5
+                ]
+              }
+            }
+          }
+        },
+        {
+          "bit": 95,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 796.3515020632095,
+                "mean": 795.5301875637454,
+                "minimum": 794.7088730642811,
+                "sample_sd_ddof1": 1.1615141041159731,
+                "values": [
+                  794.7088730642811,
+                  796.3515020632095
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 278.91641514362385,
+                "mean": 243.1478701369107,
+                "minimum": 207.37932513019757,
+                "sample_sd_ddof1": 50.58436145484617,
+                "values": [
+                  207.37932513019757,
+                  278.91641514362385
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -796.6924438476562,
+                "mean": -797.6067810058594,
+                "minimum": -798.5211181640625,
+                "sample_sd_ddof1": 1.2930680097125336,
+                "values": [
+                  -798.5211181640625,
+                  -796.6924438476562
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -21.254191958482718,
+                "mean": -48.03023174641189,
+                "minimum": -74.80627153434106,
+                "sample_sd_ddof1": 37.86703861473105,
+                "values": [
+                  -74.80627153434106,
+                  -21.254191958482718
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.476348876953125,
+                "mean": -0.478271484375,
+                "minimum": -0.480194091796875,
+                "sample_sd_ddof1": 0.0027189774911347956,
+                "values": [
+                  -0.476348876953125,
+                  -0.480194091796875
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -24.635587502021643,
+                "mean": -38.61500645247058,
+                "minimum": -52.594425402919526,
+                "sample_sd_ddof1": 19.76988387382035,
+                "values": [
+                  -52.594425402919526,
+                  -24.635587502021643
+                ]
+              }
+            }
+          }
+        },
+        {
+          "bit": 127,
+          "entropy_deficit_sum_p": 0.5,
+          "metrics": {
+            "entropy_deficit_sum": {
+              "effect": {
+                "maximum": 794.3853584286488,
+                "mean": 793.6417240188935,
+                "minimum": 792.898089609138,
+                "sample_sd_ddof1": 1.0516578677234403,
+                "values": [
+                  792.898089609138,
+                  794.3853584286488
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 1.0,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 0.25
+              },
+              "route_z": {
+                "maximum": 135.97825305897058,
+                "mean": 127.91332267980532,
+                "minimum": 119.84839230064006,
+                "sample_sd_ddof1": 11.405533921810301,
+                "values": [
+                  119.84839230064006,
+                  135.97825305897058
+                ]
+              }
+            },
+            "mean_delta": {
+              "effect": {
+                "maximum": -793.8478393554688,
+                "mean": -797.6067810058594,
+                "minimum": -801.36572265625,
+                "sample_sd_ddof1": 5.315946262151527,
+                "values": [
+                  -793.8478393554688,
+                  -801.36572265625
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -26.375518545292998,
+                "mean": -27.65905604740592,
+                "minimum": -28.94259354951884,
+                "sample_sd_ddof1": 1.8151961433025778,
+                "values": [
+                  -28.94259354951884,
+                  -26.375518545292998
+                ]
+              }
+            },
+            "nonzero_fraction": {
+              "effect": {
+                "maximum": -0.47613525390625,
+                "mean": -0.4762725830078125,
+                "minimum": -0.476409912109375,
+                "sample_sd_ddof1": 0.0001942126779381997,
+                "values": [
+                  -0.476409912109375,
+                  -0.47613525390625
+                ]
+              },
+              "exact_sign_flip": {
+                "lower_tail_p": 0.25,
+                "seed_pairs": 2,
+                "two_sided_p": 0.5,
+                "upper_tail_p": 1.0
+              },
+              "route_z": {
+                "maximum": -23.827133158987984,
+                "mean": -27.257848257914667,
+                "minimum": -30.688563356841353,
+                "sample_sd_ddof1": 4.851763821540272,
+                "values": [
+                  -30.688563356841353,
+                  -23.827133158987984
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "scope_note": "Public compressed-v mutation through exported decompress and NTT; no valid-ciphertext or security claim.",
+      "seeds": 2,
+      "v_bytes": 128,
+      "variant": "mlkem512"
+    }
+  ],
+  "schema": "mlkem-chosen-difference-frontier-v1"
+}

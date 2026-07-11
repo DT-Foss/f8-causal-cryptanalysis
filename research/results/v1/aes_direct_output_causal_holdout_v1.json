@@ -1,0 +1,2270 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "parameters": {
+    "bins": 16,
+    "bits": [
+      0
+    ],
+    "max_edges": 128,
+    "pairs": 5000,
+    "representations": [
+      "identity",
+      "peel-final-linear"
+    ],
+    "rounds": [
+      3,
+      4,
+      10
+    ],
+    "routes": 16,
+    "seed_base": 785001,
+    "seeds": 10,
+    "train_seeds": 5
+  },
+  "results": [
+    {
+      "candidate_edges_per_seed": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "causal": {
+        "bytes": 10193,
+        "explicit_triplets": 128,
+        "file_sha256": "c2893873986dbdff80d367456ef53f73b108715c48fab1820c7c8746d5b46d50",
+        "graph_sha256": "bb19b516f5e879cfc0c594d271796c134b2e6172582a5b06fe35bb05efa1d275",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r3-identity-bit0.causal",
+        "reader_roundtrip": {
+          "graph_sha256": "bb19b516f5e879cfc0c594d271796c134b2e6172582a5b06fe35bb05efa1d275",
+          "triplets": 128
+        },
+        "triplets": 128
+      },
+      "causal_compressed_edges": 128,
+      "causal_path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r3-identity-bit0.causal",
+      "edge_summaries": [
+        {
+          "conditional_probability": 0.0750481077613855,
+          "control_mean_count": 87.6875,
+          "control_sd_count": 5.016223679223247,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.3125,
+          "lift": 1.2549850796218311,
+          "marginal_probability": 0.0598,
+          "observed_count": 117,
+          "outcome_bin": 5,
+          "outcome_byte": 11,
+          "route_z": 5.843539258707656,
+          "source_bin": 3,
+          "source_byte": 9
+        },
+        {
+          "conditional_probability": 0.08397932816537468,
+          "control_mean_count": 93.25,
+          "control_sd_count": 6.5777402401331315,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 36.75,
+          "lift": 1.317116188290067,
+          "marginal_probability": 0.06376,
+          "observed_count": 130,
+          "outcome_bin": 13,
+          "outcome_byte": 1,
+          "route_z": 5.587025126923558,
+          "source_bin": 7,
+          "source_byte": 6
+        },
+        {
+          "conditional_probability": 0.08466966003848621,
+          "control_mean_count": 97.0625,
+          "control_sd_count": 6.308393879057753,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.9375,
+          "lift": 1.3762948640846262,
+          "marginal_probability": 0.06152,
+          "observed_count": 132,
+          "outcome_bin": 4,
+          "outcome_byte": 12,
+          "route_z": 5.538255960203044,
+          "source_bin": 3,
+          "source_byte": 9
+        },
+        {
+          "conditional_probability": 0.07707641196013289,
+          "control_mean_count": 89.75,
+          "control_sd_count": 4.753945729601885,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 26.25,
+          "lift": 1.288903210035667,
+          "marginal_probability": 0.0598,
+          "observed_count": 116,
+          "outcome_bin": 5,
+          "outcome_byte": 11,
+          "route_z": 5.5217290000906845,
+          "source_bin": 0,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.07332900713822194,
+          "control_mean_count": 88.0,
+          "control_sd_count": 4.546060565661952,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 25.0,
+          "lift": 1.2386656611186138,
+          "marginal_probability": 0.0592,
+          "observed_count": 113,
+          "outcome_bin": 0,
+          "outcome_byte": 10,
+          "route_z": 5.499266813300749,
+          "source_bin": 15,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08142664872139974,
+          "control_mean_count": 91.0625,
+          "control_sd_count": 5.567390172543445,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.9375,
+          "lift": 1.2778821205492739,
+          "marginal_probability": 0.06372,
+          "observed_count": 121,
+          "outcome_bin": 6,
+          "outcome_byte": 2,
+          "route_z": 5.37729511893059,
+          "source_bin": 14,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.0872865275142315,
+          "control_mean_count": 103.125,
+          "control_sd_count": 6.551081335677848,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.875,
+          "lift": 1.3098218414500524,
+          "marginal_probability": 0.06664,
+          "observed_count": 138,
+          "outcome_bin": 7,
+          "outcome_byte": 5,
+          "route_z": 5.323548619380932,
+          "source_bin": 10,
+          "source_byte": 0
+        },
+        {
+          "conditional_probability": 0.0736235595390525,
+          "control_mean_count": 92.625,
+          "control_sd_count": 4.256367778595579,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 22.375,
+          "lift": 1.196741865069124,
+          "marginal_probability": 0.06152,
+          "observed_count": 115,
+          "outcome_bin": 12,
+          "outcome_byte": 14,
+          "route_z": 5.256829570160594,
+          "source_bin": 15,
+          "source_byte": 15
+        },
+        {
+          "conditional_probability": 0.07961783439490445,
+          "control_mean_count": 97.5625,
+          "control_sd_count": 5.240467536394057,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.4375,
+          "lift": 1.26538198339009,
+          "marginal_probability": 0.06292,
+          "observed_count": 125,
+          "outcome_bin": 3,
+          "outcome_byte": 13,
+          "route_z": 5.235696969679088,
+          "source_bin": 7,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08028720626631854,
+          "control_mean_count": 97.375,
+          "control_sd_count": 4.910872291830309,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 25.625,
+          "lift": 1.2505795368585444,
+          "marginal_probability": 0.0642,
+          "observed_count": 123,
+          "outcome_bin": 5,
+          "outcome_byte": 3,
+          "route_z": 5.2180139244568755,
+          "source_bin": 0,
+          "source_byte": 13
+        },
+        {
+          "conditional_probability": 0.07773631840796019,
+          "control_mean_count": 96.125,
+          "control_sd_count": 5.572252686302013,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.875,
+          "lift": 1.27020128117582,
+          "marginal_probability": 0.0612,
+          "observed_count": 125,
+          "outcome_bin": 12,
+          "outcome_byte": 9,
+          "route_z": 5.181925807309843,
+          "source_bin": 5,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.07824427480916031,
+          "control_mean_count": 93.75,
+          "control_sd_count": 5.674504383644443,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.25,
+          "lift": 1.2751674512575017,
+          "marginal_probability": 0.06136,
+          "observed_count": 123,
+          "outcome_bin": 7,
+          "outcome_byte": 0,
+          "route_z": 5.1546351932173895,
+          "source_bin": 3,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.08192620387742339,
+          "control_mean_count": 106.1875,
+          "control_sd_count": 4.8609841253255155,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 24.8125,
+          "lift": 1.2737282941141694,
+          "marginal_probability": 0.06432,
+          "observed_count": 131,
+          "outcome_bin": 11,
+          "outcome_byte": 13,
+          "route_z": 5.104419055953702,
+          "source_bin": 2,
+          "source_byte": 11
+        },
+        {
+          "conditional_probability": 0.08732212160413971,
+          "control_mean_count": 100.625,
+          "control_sd_count": 6.820312798300872,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.375,
+          "lift": 1.357620049815605,
+          "marginal_probability": 0.06432,
+          "observed_count": 135,
+          "outcome_bin": 11,
+          "outcome_byte": 10,
+          "route_z": 5.0400914175906655,
+          "source_bin": 14,
+          "source_byte": 0
+        },
+        {
+          "conditional_probability": 0.080737444373808,
+          "control_mean_count": 99.4375,
+          "control_sd_count": 5.573374202401989,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.5625,
+          "lift": 1.267065982012053,
+          "marginal_probability": 0.06372,
+          "observed_count": 127,
+          "outcome_bin": 6,
+          "outcome_byte": 2,
+          "route_z": 4.945388376779229,
+          "source_bin": 1,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08156498673740054,
+          "control_mean_count": 93.125,
+          "control_sd_count": 6.064926490348695,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.875,
+          "lift": 1.26653706113976,
+          "marginal_probability": 0.0644,
+          "observed_count": 123,
+          "outcome_bin": 12,
+          "outcome_byte": 12,
+          "route_z": 4.925863495219771,
+          "source_bin": 6,
+          "source_byte": 5
+        }
+      ],
+      "holdout": {
+        "edge_excess_sign_flip_p": 0.0625,
+        "keys": 5,
+        "mean_edge_excess_count": -0.43759765625,
+        "reverse_coverage": 0.9996,
+        "reverse_lift_over_marginal": 0.9096455855991703,
+        "reverse_marginal_baseline_rate": 0.06246602019230725,
+        "reverse_top1_hit_rate": 0.056822898156840516
+      },
+      "input_bit": 0,
+      "representation": "identity",
+      "reverse_query_for_first_delta": [
+        {
+          "score": 1.7632051705257106,
+          "source": "aes-r3-identity-bit0:source_byte_3:bin_9",
+          "support": [
+            {
+              "lift": 1.3259428839218144,
+              "outcome": "aes-r3-identity-bit0:delta_byte_8:bin_11",
+              "route_z": 4.332001127219817,
+              "score": 1.7632051705257106
+            }
+          ]
+        },
+        {
+          "score": 1.6753957883701074,
+          "source": "aes-r3-identity-bit0:source_byte_12:bin_1",
+          "support": [
+            {
+              "lift": 1.3771903064164965,
+              "outcome": "aes-r3-identity-bit0:delta_byte_13:bin_12",
+              "route_z": 3.6285346291826324,
+              "score": 1.6753957883701074
+            }
+          ]
+        },
+        {
+          "score": 1.4052855359276235,
+          "source": "aes-r3-identity-bit0:source_byte_11:bin_13",
+          "support": [
+            {
+              "lift": 1.2788652257568407,
+              "outcome": "aes-r3-identity-bit0:delta_byte_2:bin_3",
+              "route_z": 3.960065305633277,
+              "score": 1.4052855359276235
+            }
+          ]
+        },
+        {
+          "score": 1.3937864419317847,
+          "source": "aes-r3-identity-bit0:source_byte_8:bin_9",
+          "support": [
+            {
+              "lift": 1.2599691215372362,
+              "outcome": "aes-r3-identity-bit0:delta_byte_15:bin_14",
+              "route_z": 4.180668960554815,
+              "score": 1.3937864419317847
+            }
+          ]
+        },
+        {
+          "score": 1.3664605462493604,
+          "source": "aes-r3-identity-bit0:source_byte_8:bin_6",
+          "support": [
+            {
+              "lift": 1.2776484173420606,
+              "outcome": "aes-r3-identity-bit0:delta_byte_10:bin_6",
+              "route_z": 3.8656174228069196,
+              "score": 1.3664605462493604
+            }
+          ]
+        },
+        {
+          "score": 1.28016969349583,
+          "source": "aes-r3-identity-bit0:source_byte_14:bin_8",
+          "support": [
+            {
+              "lift": 1.2801729655917955,
+              "outcome": "aes-r3-identity-bit0:delta_byte_10:bin_6",
+              "route_z": 3.5925638241384767,
+              "score": 1.28016969349583
+            }
+          ]
+        },
+        {
+          "score": 1.0448150013374242,
+          "source": "aes-r3-identity-bit0:source_byte_10:bin_5",
+          "support": [
+            {
+              "lift": 1.2001693616043392,
+              "outcome": "aes-r3-identity-bit0:delta_byte_7:bin_0",
+              "route_z": 3.969088727665333,
+              "score": 1.0448150013374242
+            }
+          ]
+        },
+        {
+          "score": 0.9318378411685259,
+          "source": "aes-r3-identity-bit0:source_byte_3:bin_8",
+          "support": [
+            {
+              "lift": 1.1714191206573608,
+              "outcome": "aes-r3-identity-bit0:delta_byte_10:bin_6",
+              "route_z": 4.0824001851631895,
+              "score": 0.9318378411685259
+            }
+          ]
+        }
+      ],
+      "rounds": 3
+    },
+    {
+      "candidate_edges_per_seed": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "causal": {
+        "bytes": 10330,
+        "explicit_triplets": 128,
+        "file_sha256": "de1aaf2e2502c41654b55ec93fd9bec1d463144202df53ff1a64961c1775d647",
+        "graph_sha256": "f6be01d681b4cc00d8f4ec58aa8d14318696a89a64eb0470bcaaef179fa3385e",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r3-peel-final-linear-bit0.causal",
+        "reader_roundtrip": {
+          "graph_sha256": "f6be01d681b4cc00d8f4ec58aa8d14318696a89a64eb0470bcaaef179fa3385e",
+          "triplets": 128
+        },
+        "triplets": 128
+      },
+      "causal_compressed_edges": 128,
+      "causal_path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r3-peel-final-linear-bit0.causal",
+      "edge_summaries": [
+        {
+          "conditional_probability": 0.0870988867059594,
+          "control_mean_count": 99.0,
+          "control_sd_count": 5.366563145999495,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.0,
+          "lift": 1.3285370150390392,
+          "marginal_probability": 0.06556,
+          "observed_count": 133,
+          "outcome_bin": 5,
+          "outcome_byte": 4,
+          "route_z": 6.335525936249404,
+          "source_bin": 1,
+          "source_byte": 5
+        },
+        {
+          "conditional_probability": 0.08930817610062892,
+          "control_mean_count": 101.0625,
+          "control_sd_count": 7.279823715814369,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 40.9375,
+          "lift": 1.4122102482705394,
+          "marginal_probability": 0.06324,
+          "observed_count": 142,
+          "outcome_bin": 2,
+          "outcome_byte": 0,
+          "route_z": 5.623419137343831,
+          "source_bin": 13,
+          "source_byte": 12
+        },
+        {
+          "conditional_probability": 0.09205548549810845,
+          "control_mean_count": 100.8125,
+          "control_sd_count": 8.36037279870541,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 45.1875,
+          "lift": 1.4501494249859554,
+          "marginal_probability": 0.06348,
+          "observed_count": 146,
+          "outcome_bin": 7,
+          "outcome_byte": 14,
+          "route_z": 5.404962325005078,
+          "source_bin": 6,
+          "source_byte": 1
+        },
+        {
+          "conditional_probability": 0.08664955070603338,
+          "control_mean_count": 98.375,
+          "control_sd_count": 6.839834305985295,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 36.625,
+          "lift": 1.3338908667800704,
+          "marginal_probability": 0.06496,
+          "observed_count": 135,
+          "outcome_bin": 2,
+          "outcome_byte": 7,
+          "route_z": 5.354661876523934,
+          "source_bin": 15,
+          "source_byte": 3
+        },
+        {
+          "conditional_probability": 0.07863031071655041,
+          "control_mean_count": 96.875,
+          "control_sd_count": 5.32760108616752,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.125,
+          "lift": 1.255273159587331,
+          "marginal_probability": 0.06264,
+          "observed_count": 124,
+          "outcome_bin": 14,
+          "outcome_byte": 8,
+          "route_z": 5.091409728559975,
+          "source_bin": 7,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.0798035604665439,
+          "control_mean_count": 99.625,
+          "control_sd_count": 6.031859856904281,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 30.375,
+          "lift": 1.299732255155438,
+          "marginal_probability": 0.0614,
+          "observed_count": 130,
+          "outcome_bin": 14,
+          "outcome_byte": 7,
+          "route_z": 5.035760233260675,
+          "source_bin": 8,
+          "source_byte": 6
+        },
+        {
+          "conditional_probability": 0.07854406130268199,
+          "control_mean_count": 98.75,
+          "control_sd_count": 4.8373546489791295,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 24.25,
+          "lift": 1.2334180480948804,
+          "marginal_probability": 0.06368,
+          "observed_count": 123,
+          "outcome_bin": 11,
+          "outcome_byte": 14,
+          "route_z": 5.013070522980509,
+          "source_bin": 15,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08687258687258688,
+          "control_mean_count": 96.1875,
+          "control_sd_count": 7.858912138457842,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 38.8125,
+          "lift": 1.378929950358522,
+          "marginal_probability": 0.063,
+          "observed_count": 135,
+          "outcome_bin": 4,
+          "outcome_byte": 5,
+          "route_z": 4.938660633457113,
+          "source_bin": 9,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08034528552456839,
+          "control_mean_count": 93.75,
+          "control_sd_count": 5.5196618253899095,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.25,
+          "lift": 1.2569662941891173,
+          "marginal_probability": 0.06392,
+          "observed_count": 121,
+          "outcome_bin": 8,
+          "outcome_byte": 3,
+          "route_z": 4.93689665454732,
+          "source_bin": 3,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.07726980038634901,
+          "control_mean_count": 91.25,
+          "control_sd_count": 5.904800307094785,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.75,
+          "lift": 1.2390923730973222,
+          "marginal_probability": 0.06236,
+          "observed_count": 120,
+          "outcome_bin": 7,
+          "outcome_byte": 4,
+          "route_z": 4.86891994729374,
+          "source_bin": 13,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.07894736842105263,
+          "control_mean_count": 94.3125,
+          "control_sd_count": 5.300550285897997,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 25.6875,
+          "lift": 1.2539289774627165,
+          "marginal_probability": 0.06296,
+          "observed_count": 120,
+          "outcome_bin": 1,
+          "outcome_byte": 15,
+          "route_z": 4.846194944766594,
+          "source_bin": 1,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08244680851063829,
+          "control_mean_count": 96.1875,
+          "control_sd_count": 5.7528978205190935,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.8125,
+          "lift": 1.3095109356835815,
+          "marginal_probability": 0.06296,
+          "observed_count": 124,
+          "outcome_bin": 1,
+          "outcome_byte": 15,
+          "route_z": 4.834520074526621,
+          "source_bin": 10,
+          "source_byte": 1
+        },
+        {
+          "conditional_probability": 0.08242811501597444,
+          "control_mean_count": 97.9375,
+          "control_sd_count": 6.444312738117748,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 31.0625,
+          "lift": 1.2895512361698127,
+          "marginal_probability": 0.06392,
+          "observed_count": 129,
+          "outcome_bin": 3,
+          "outcome_byte": 9,
+          "route_z": 4.820141613591633,
+          "source_bin": 10,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08789808917197452,
+          "control_mean_count": 94.0625,
+          "control_sd_count": 9.197599324461429,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 43.9375,
+          "lift": 1.446643995588784,
+          "marginal_probability": 0.06076,
+          "observed_count": 138,
+          "outcome_bin": 0,
+          "outcome_byte": 1,
+          "route_z": 4.777061758185774,
+          "source_bin": 13,
+          "source_byte": 14
+        },
+        {
+          "conditional_probability": 0.0746941403734707,
+          "control_mean_count": 89.0,
+          "control_sd_count": 5.668627111861683,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.0,
+          "lift": 1.2196953032898548,
+          "marginal_probability": 0.06124,
+          "observed_count": 116,
+          "outcome_bin": 10,
+          "outcome_byte": 6,
+          "route_z": 4.763058050423199,
+          "source_bin": 7,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08032890575585072,
+          "control_mean_count": 98.5,
+          "control_sd_count": 6.0,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.5,
+          "lift": 1.2922925636398122,
+          "marginal_probability": 0.06216,
+          "observed_count": 127,
+          "outcome_bin": 9,
+          "outcome_byte": 7,
+          "route_z": 4.75,
+          "source_bin": 2,
+          "source_byte": 4
+        }
+      ],
+      "holdout": {
+        "edge_excess_sign_flip_p": 0.1875,
+        "keys": 5,
+        "mean_edge_excess_count": 0.26376953125,
+        "reverse_coverage": 0.9995200000000001,
+        "reverse_lift_over_marginal": 1.0031645913179015,
+        "reverse_marginal_baseline_rate": 0.06297737514020178,
+        "reverse_top1_hit_rate": 0.06318993995545077
+      },
+      "input_bit": 0,
+      "representation": "peel-final-linear",
+      "reverse_query_for_first_delta": [
+        {
+          "score": 1.497946673275896,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_11:bin_1",
+          "support": [
+            {
+              "lift": 1.2533213014488394,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_7:bin_12",
+              "route_z": 4.598365775168768,
+              "score": 1.497946673275896
+            }
+          ]
+        },
+        {
+          "score": 1.4716412615244694,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_2:bin_1",
+          "support": [
+            {
+              "lift": 1.2600428414566096,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_7:bin_12",
+              "route_z": 4.413077535759911,
+              "score": 1.4716412615244694
+            }
+          ]
+        },
+        {
+          "score": 1.30260385178604,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_5:bin_9",
+          "support": [
+            {
+              "lift": 1.2854400170113824,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_10:bin_0",
+              "route_z": 3.595747846856865,
+              "score": 1.30260385178604
+            }
+          ]
+        },
+        {
+          "score": 1.2268403723988341,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_1:bin_4",
+          "support": [
+            {
+              "lift": 1.2503656531489882,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_9:bin_2",
+              "route_z": 3.8059257546886576,
+              "score": 1.2268403723988341
+            }
+          ]
+        },
+        {
+          "score": 1.1156466537082002,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_4:bin_14",
+          "support": [
+            {
+              "lift": 1.242505830972246,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_9:bin_2",
+              "route_z": 3.5614918263347977,
+              "score": 1.1156466537082002
+            }
+          ]
+        },
+        {
+          "score": 1.0130623300090258,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_5:bin_8",
+          "support": [
+            {
+              "lift": 1.2141116493124378,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_6:bin_14",
+              "route_z": 3.6193581918719087,
+              "score": 1.0130623300090258
+            }
+          ]
+        },
+        {
+          "score": 0.9150671461296466,
+          "source": "aes-r3-peel-final-linear-bit0:source_byte_6:bin_13",
+          "support": [
+            {
+              "lift": 1.1653170301699547,
+              "outcome": "aes-r3-peel-final-linear-bit0:delta_byte_8:bin_1",
+              "route_z": 4.14578098794425,
+              "score": 0.9150671461296466
+            }
+          ]
+        }
+      ],
+      "rounds": 3
+    },
+    {
+      "candidate_edges_per_seed": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "causal": {
+        "bytes": 10150,
+        "explicit_triplets": 128,
+        "file_sha256": "7fef9a2f1fbd91297ba6be96d8743e2cde76d10ea4d54095eebbfac30bba60fa",
+        "graph_sha256": "735a522ec1b9709f6ef20cc56f3c79ac190e8be0dac6660acc88cb7bfe01be93",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r4-identity-bit0.causal",
+        "reader_roundtrip": {
+          "graph_sha256": "735a522ec1b9709f6ef20cc56f3c79ac190e8be0dac6660acc88cb7bfe01be93",
+          "triplets": 128
+        },
+        "triplets": 128
+      },
+      "causal_compressed_edges": 128,
+      "causal_path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r4-identity-bit0.causal",
+      "edge_summaries": [
+        {
+          "conditional_probability": 0.08253358925143954,
+          "control_mean_count": 96.375,
+          "control_sd_count": 5.0182998449009935,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 32.625,
+          "lift": 1.3269065796051374,
+          "marginal_probability": 0.0622,
+          "observed_count": 129,
+          "outcome_bin": 2,
+          "outcome_byte": 15,
+          "route_z": 6.501205788480274,
+          "source_bin": 9,
+          "source_byte": 8
+        },
+        {
+          "conditional_probability": 0.07428940568475452,
+          "control_mean_count": 98.0,
+          "control_sd_count": 2.70801280154532,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 17.0,
+          "lift": 1.1784486942378571,
+          "marginal_probability": 0.06304,
+          "observed_count": 115,
+          "outcome_bin": 11,
+          "outcome_byte": 15,
+          "route_z": 6.27766603994597,
+          "source_bin": 9,
+          "source_byte": 0
+        },
+        {
+          "conditional_probability": 0.09048569527611444,
+          "control_mean_count": 97.0,
+          "control_sd_count": 6.260990336999411,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 39.0,
+          "lift": 1.4033141326940826,
+          "marginal_probability": 0.06448,
+          "observed_count": 136,
+          "outcome_bin": 13,
+          "outcome_byte": 2,
+          "route_z": 6.2290465087494145,
+          "source_bin": 13,
+          "source_byte": 14
+        },
+        {
+          "conditional_probability": 0.07563025210084033,
+          "control_mean_count": 92.6875,
+          "control_sd_count": 4.142764777295472,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 24.3125,
+          "lift": 1.218270813480031,
+          "marginal_probability": 0.06208,
+          "observed_count": 117,
+          "outcome_bin": 12,
+          "outcome_byte": 14,
+          "route_z": 5.8686653254477,
+          "source_bin": 14,
+          "source_byte": 5
+        },
+        {
+          "conditional_probability": 0.08701298701298701,
+          "control_mean_count": 100.8125,
+          "control_sd_count": 5.890316912809814,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.1875,
+          "lift": 1.339485637515194,
+          "marginal_probability": 0.06496,
+          "observed_count": 134,
+          "outcome_bin": 8,
+          "outcome_byte": 14,
+          "route_z": 5.6342469329326486,
+          "source_bin": 4,
+          "source_byte": 3
+        },
+        {
+          "conditional_probability": 0.07271514342895263,
+          "control_mean_count": 90.5,
+          "control_sd_count": 3.286335345030997,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 18.5,
+          "lift": 1.1866048209685482,
+          "marginal_probability": 0.06128,
+          "observed_count": 109,
+          "outcome_bin": 9,
+          "outcome_byte": 15,
+          "route_z": 5.629370729914207,
+          "source_bin": 12,
+          "source_byte": 9
+        },
+        {
+          "conditional_probability": 0.08289473684210526,
+          "control_mean_count": 92.4375,
+          "control_sd_count": 6.239324215543433,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.5625,
+          "lift": 1.3327128109663224,
+          "marginal_probability": 0.0622,
+          "observed_count": 126,
+          "outcome_bin": 0,
+          "outcome_byte": 3,
+          "route_z": 5.379188328823969,
+          "source_bin": 15,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.0785307156428119,
+          "control_mean_count": 95.0,
+          "control_sd_count": 5.48938369339704,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.0,
+          "lift": 1.2967423322789282,
+          "marginal_probability": 0.06056,
+          "observed_count": 124,
+          "outcome_bin": 2,
+          "outcome_byte": 8,
+          "route_z": 5.282924572185205,
+          "source_bin": 3,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08527131782945736,
+          "control_mean_count": 97.625,
+          "control_sd_count": 6.601767440112787,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.375,
+          "lift": 1.3240887861716981,
+          "marginal_probability": 0.0644,
+          "observed_count": 132,
+          "outcome_bin": 4,
+          "outcome_byte": 4,
+          "route_z": 5.206938946551672,
+          "source_bin": 5,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08343949044585987,
+          "control_mean_count": 95.0625,
+          "control_sd_count": 7.243100164984604,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 35.9375,
+          "lift": 1.3732635030589182,
+          "marginal_probability": 0.06076,
+          "observed_count": 131,
+          "outcome_bin": 13,
+          "outcome_byte": 12,
+          "route_z": 4.961618530934176,
+          "source_bin": 15,
+          "source_byte": 8
+        },
+        {
+          "conditional_probability": 0.080625,
+          "control_mean_count": 94.75,
+          "control_sd_count": 6.923390306297438,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.25,
+          "lift": 1.3491465863453815,
+          "marginal_probability": 0.05976,
+          "observed_count": 129,
+          "outcome_bin": 6,
+          "outcome_byte": 13,
+          "route_z": 4.946998289096396,
+          "source_bin": 4,
+          "source_byte": 15
+        },
+        {
+          "conditional_probability": 0.0780520346897932,
+          "control_mean_count": 88.5625,
+          "control_sd_count": 5.75,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.4375,
+          "lift": 1.2948247294258992,
+          "marginal_probability": 0.06028,
+          "observed_count": 117,
+          "outcome_bin": 9,
+          "outcome_byte": 13,
+          "route_z": 4.945652173913044,
+          "source_bin": 12,
+          "source_byte": 9
+        },
+        {
+          "conditional_probability": 0.07779171894604768,
+          "control_mean_count": 91.8125,
+          "control_sd_count": 6.685494247498335,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 32.1875,
+          "lift": 1.3061067653802498,
+          "marginal_probability": 0.05956,
+          "observed_count": 124,
+          "outcome_bin": 0,
+          "outcome_byte": 2,
+          "route_z": 4.814528112419562,
+          "source_bin": 3,
+          "source_byte": 13
+        },
+        {
+          "conditional_probability": 0.08173690932311622,
+          "control_mean_count": 98.1875,
+          "control_sd_count": 6.241994873435895,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.8125,
+          "lift": 1.2998872347823827,
+          "marginal_probability": 0.06288,
+          "observed_count": 128,
+          "outcome_bin": 13,
+          "outcome_byte": 5,
+          "route_z": 4.776117347816686,
+          "source_bin": 3,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08198757763975155,
+          "control_mean_count": 98.875,
+          "control_sd_count": 6.936617811777341,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.125,
+          "lift": 1.3240887861716981,
+          "marginal_probability": 0.06192,
+          "observed_count": 132,
+          "outcome_bin": 5,
+          "outcome_byte": 7,
+          "route_z": 4.775382023175429,
+          "source_bin": 4,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08436724565756824,
+          "control_mean_count": 102.9375,
+          "control_sd_count": 6.951918200516075,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.0625,
+          "lift": 1.4033141326940826,
+          "marginal_probability": 0.06012,
+          "observed_count": 136,
+          "outcome_bin": 13,
+          "outcome_byte": 14,
+          "route_z": 4.755881620923792,
+          "source_bin": 13,
+          "source_byte": 2
+        }
+      ],
+      "holdout": {
+        "edge_excess_sign_flip_p": 0.3125,
+        "keys": 5,
+        "mean_edge_excess_count": -0.11796875,
+        "reverse_coverage": 0.9997199999999999,
+        "reverse_lift_over_marginal": 0.7996091288918784,
+        "reverse_marginal_baseline_rate": 0.062453012633189905,
+        "reverse_top1_hit_rate": 0.049933751304304094
+      },
+      "input_bit": 0,
+      "representation": "identity",
+      "reverse_query_for_first_delta": [
+        {
+          "score": 1.775784147710756,
+          "source": "aes-r4-identity-bit0:source_byte_7:bin_2",
+          "support": [
+            {
+              "lift": 1.3031233259877275,
+              "outcome": "aes-r4-identity-bit0:delta_byte_12:bin_6",
+              "route_z": 4.6489705841532,
+              "score": 1.775784147710756
+            }
+          ]
+        },
+        {
+          "score": 1.7157964840826685,
+          "source": "aes-r4-identity-bit0:source_byte_8:bin_1",
+          "support": [
+            {
+              "lift": 1.332956773044948,
+              "outcome": "aes-r4-identity-bit0:delta_byte_13:bin_1",
+              "route_z": 4.13813882921669,
+              "score": 1.7157964840826685
+            }
+          ]
+        },
+        {
+          "score": 1.5218063204865064,
+          "source": "aes-r4-identity-bit0:source_byte_9:bin_6",
+          "support": [
+            {
+              "lift": 1.2993800513399496,
+              "outcome": "aes-r4-identity-bit0:delta_byte_7:bin_0",
+              "route_z": 4.027823772924815,
+              "score": 1.5218063204865064
+            }
+          ]
+        },
+        {
+          "score": 1.519942273922683,
+          "source": "aes-r4-identity-bit0:source_byte_12:bin_2",
+          "support": [
+            {
+              "lift": 1.3404141241351137,
+              "outcome": "aes-r4-identity-bit0:delta_byte_3:bin_9",
+              "route_z": 3.5959747611403814,
+              "score": 1.519942273922683
+            }
+          ]
+        },
+        {
+          "score": 1.2904780831350555,
+          "source": "aes-r4-identity-bit0:source_byte_6:bin_8",
+          "support": [
+            {
+              "lift": 1.2836353204279762,
+              "outcome": "aes-r4-identity-bit0:delta_byte_5:bin_11",
+              "route_z": 3.5823189792541124,
+              "score": 1.2904780831350555
+            }
+          ]
+        },
+        {
+          "score": 1.2214416428065562,
+          "source": "aes-r4-identity-bit0:source_byte_7:bin_10",
+          "support": [
+            {
+              "lift": 1.2725468400696238,
+              "outcome": "aes-r4-identity-bit0:delta_byte_6:bin_11",
+              "route_z": 3.5127286263087236,
+              "score": 1.2214416428065562
+            }
+          ]
+        },
+        {
+          "score": 1.2200250861115396,
+          "source": "aes-r4-identity-bit0:source_byte_6:bin_0",
+          "support": [
+            {
+              "lift": 1.2823839029237505,
+              "outcome": "aes-r4-identity-bit0:delta_byte_3:bin_9",
+              "route_z": 3.400025453810777,
+              "score": 1.2200250861115396
+            }
+          ]
+        },
+        {
+          "score": 1.090767931354078,
+          "source": "aes-r4-identity-bit0:source_byte_11:bin_14",
+          "support": [
+            {
+              "lift": 1.238861696395183,
+              "outcome": "aes-r4-identity-bit0:delta_byte_9:bin_12",
+              "route_z": 3.5298203854132004,
+              "score": 1.090767931354078
+            }
+          ]
+        }
+      ],
+      "rounds": 4
+    },
+    {
+      "candidate_edges_per_seed": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "causal": {
+        "bytes": 10210,
+        "explicit_triplets": 128,
+        "file_sha256": "164d1c0805fc5302123d091f04b20e475988c9aa1eb84105211d32ce98244699",
+        "graph_sha256": "75d47e6fbdc973dc5d850cfd0112b674f448cc905d534a014f072f469a214759",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r4-peel-final-linear-bit0.causal",
+        "reader_roundtrip": {
+          "graph_sha256": "75d47e6fbdc973dc5d850cfd0112b674f448cc905d534a014f072f469a214759",
+          "triplets": 128
+        },
+        "triplets": 128
+      },
+      "causal_compressed_edges": 128,
+      "causal_path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r4-peel-final-linear-bit0.causal",
+      "edge_summaries": [
+        {
+          "conditional_probability": 0.07658779576587796,
+          "control_mean_count": 94.3125,
+          "control_sd_count": 4.331570154112709,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.6875,
+          "lift": 1.272222521027873,
+          "marginal_probability": 0.0602,
+          "observed_count": 123,
+          "outcome_bin": 5,
+          "outcome_byte": 14,
+          "route_z": 6.622887077740618,
+          "source_bin": 12,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08145363408521303,
+          "control_mean_count": 91.9375,
+          "control_sd_count": 5.938223640113263,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 38.0625,
+          "lift": 1.3694289523405014,
+          "marginal_probability": 0.05948,
+          "observed_count": 130,
+          "outcome_bin": 6,
+          "outcome_byte": 9,
+          "route_z": 6.40974512022151,
+          "source_bin": 9,
+          "source_byte": 14
+        },
+        {
+          "conditional_probability": 0.07522697795071336,
+          "control_mean_count": 92.25,
+          "control_sd_count": 3.82099463490856,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 23.75,
+          "lift": 1.2479591564484631,
+          "marginal_probability": 0.06028,
+          "observed_count": 116,
+          "outcome_bin": 15,
+          "outcome_byte": 0,
+          "route_z": 6.215659080758788,
+          "source_bin": 10,
+          "source_byte": 3
+        },
+        {
+          "conditional_probability": 0.07777777777777778,
+          "control_mean_count": 91.6875,
+          "control_sd_count": 5.016223679223247,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.3125,
+          "lift": 1.2561010623026128,
+          "marginal_probability": 0.06192,
+          "observed_count": 119,
+          "outcome_bin": 1,
+          "outcome_byte": 2,
+          "route_z": 5.444832955341675,
+          "source_bin": 14,
+          "source_byte": 0
+        },
+        {
+          "conditional_probability": 0.08111533586818757,
+          "control_mean_count": 101.75,
+          "control_sd_count": 5.013315602805526,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 26.25,
+          "lift": 1.2674271229404308,
+          "marginal_probability": 0.064,
+          "observed_count": 128,
+          "outcome_bin": 4,
+          "outcome_byte": 5,
+          "route_z": 5.236055752267045,
+          "source_bin": 6,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.08242811501597444,
+          "control_mean_count": 98.375,
+          "control_sd_count": 5.953990258641679,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 30.625,
+          "lift": 1.277559129199852,
+          "marginal_probability": 0.06452,
+          "observed_count": 129,
+          "outcome_bin": 11,
+          "outcome_byte": 15,
+          "route_z": 5.143609356019785,
+          "source_bin": 2,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.0851472471190781,
+          "control_mean_count": 93.3125,
+          "control_sd_count": 7.743545699484184,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 39.6875,
+          "lift": 1.4315273557343327,
+          "marginal_probability": 0.05948,
+          "observed_count": 133,
+          "outcome_bin": 6,
+          "outcome_byte": 9,
+          "route_z": 5.125236105036958,
+          "source_bin": 15,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.08199871877001921,
+          "control_mean_count": 99.25,
+          "control_sd_count": 5.709640969448079,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.75,
+          "lift": 1.2820312503129958,
+          "marginal_probability": 0.06396,
+          "observed_count": 128,
+          "outcome_bin": 12,
+          "outcome_byte": 1,
+          "route_z": 5.0353428794979225,
+          "source_bin": 13,
+          "source_byte": 6
+        },
+        {
+          "conditional_probability": 0.07797878976918278,
+          "control_mean_count": 100.1875,
+          "control_sd_count": 4.929080373998109,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 24.8125,
+          "lift": 1.2393323230957212,
+          "marginal_probability": 0.06292,
+          "observed_count": 125,
+          "outcome_bin": 14,
+          "outcome_byte": 14,
+          "route_z": 5.033900467700006,
+          "source_bin": 11,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08423739629865985,
+          "control_mean_count": 97.0,
+          "control_sd_count": 7.229568912920511,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 35.0,
+          "lift": 1.3499582740169849,
+          "marginal_probability": 0.0624,
+          "observed_count": 132,
+          "outcome_bin": 9,
+          "outcome_byte": 6,
+          "route_z": 4.841229182759271,
+          "source_bin": 14,
+          "source_byte": 1
+        },
+        {
+          "conditional_probability": 0.08496732026143791,
+          "control_mean_count": 96.5,
+          "control_sd_count": 7.061633427661525,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.5,
+          "lift": 1.3695570641753372,
+          "marginal_probability": 0.06204,
+          "observed_count": 130,
+          "outcome_bin": 6,
+          "outcome_byte": 13,
+          "route_z": 4.743944916310049,
+          "source_bin": 2,
+          "source_byte": 3
+        },
+        {
+          "conditional_probability": 0.07790549169859515,
+          "control_mean_count": 93.8125,
+          "control_sd_count": 6.013526419664256,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.1875,
+          "lift": 1.2581636256233066,
+          "marginal_probability": 0.06192,
+          "observed_count": 122,
+          "outcome_bin": 2,
+          "outcome_byte": 2,
+          "route_z": 4.687349490612823,
+          "source_bin": 14,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.08144519289650949,
+          "control_mean_count": 102.125,
+          "control_sd_count": 6.591661399070799,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 30.875,
+          "lift": 1.2725811390079609,
+          "marginal_probability": 0.064,
+          "observed_count": 133,
+          "outcome_bin": 8,
+          "outcome_byte": 15,
+          "route_z": 4.68394811729139,
+          "source_bin": 14,
+          "source_byte": 5
+        },
+        {
+          "conditional_probability": 0.07921419518377694,
+          "control_mean_count": 97.375,
+          "control_sd_count": 5.909032633745278,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.625,
+          "lift": 1.3141041005935126,
+          "marginal_probability": 0.06028,
+          "observed_count": 125,
+          "outcome_bin": 8,
+          "outcome_byte": 6,
+          "route_z": 4.67504610521852,
+          "source_bin": 1,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.08052805280528053,
+          "control_mean_count": 94.4375,
+          "control_sd_count": 5.95503988231817,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.5625,
+          "lift": 1.2543310405806938,
+          "marginal_probability": 0.0642,
+          "observed_count": 122,
+          "outcome_bin": 2,
+          "outcome_byte": 5,
+          "route_z": 4.628432478150005,
+          "source_bin": 13,
+          "source_byte": 1
+        },
+        {
+          "conditional_probability": 0.07345360824742268,
+          "control_mean_count": 97.625,
+          "control_sd_count": 3.556683848755748,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 16.375,
+          "lift": 1.1252084596725287,
+          "marginal_probability": 0.06528,
+          "observed_count": 114,
+          "outcome_bin": 13,
+          "outcome_byte": 10,
+          "route_z": 4.604007748883428,
+          "source_bin": 10,
+          "source_byte": 13
+        }
+      ],
+      "holdout": {
+        "edge_excess_sign_flip_p": 0.3125,
+        "keys": 5,
+        "mean_edge_excess_count": -0.13984375,
+        "reverse_coverage": 0.99992,
+        "reverse_lift_over_marginal": 0.8761773724443582,
+        "reverse_marginal_baseline_rate": 0.06295342784311261,
+        "reverse_top1_hit_rate": 0.055164536907381476
+      },
+      "input_bit": 0,
+      "representation": "peel-final-linear",
+      "reverse_query_for_first_delta": [
+        {
+          "score": 1.6489230581583005,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_7:bin_13",
+          "support": [
+            {
+              "lift": 1.3078630310716552,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_11:bin_12",
+              "route_z": 4.258456248782466,
+              "score": 1.6489230581583005
+            }
+          ]
+        },
+        {
+          "score": 1.598721591790829,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_14:bin_9",
+          "support": [
+            {
+              "lift": 1.3173538313589492,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_2:bin_13",
+              "route_z": 4.020495809319244,
+              "score": 1.598721591790829
+            }
+          ]
+        },
+        {
+          "score": 1.4901671272032462,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_0:bin_5",
+          "support": [
+            {
+              "lift": 1.3030339966699789,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_13:bin_4",
+              "route_z": 3.90224078767356,
+              "score": 1.4901671272032462
+            }
+          ]
+        },
+        {
+          "score": 1.0546940877230275,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_9:bin_10",
+          "support": [
+            {
+              "lift": 1.2133324952719815,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_14:bin_8",
+              "route_z": 3.7806049451907184,
+              "score": 1.0546940877230275
+            }
+          ]
+        },
+        {
+          "score": 1.040307332978351,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_5:bin_6",
+          "support": [
+            {
+              "lift": 1.206826060055023,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_3:bin_5",
+              "route_z": 3.8356903727459195,
+              "score": 1.040307332978351
+            }
+          ]
+        },
+        {
+          "score": 0.9574908480249176,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_13:bin_11",
+          "support": [
+            {
+              "lift": 1.1713954599835694,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_14:bin_8",
+              "route_z": 4.195322112561732,
+              "score": 0.9574908480249176
+            }
+          ]
+        },
+        {
+          "score": 0.7650469739524635,
+          "source": "aes-r4-peel-final-linear-bit0:source_byte_14:bin_11",
+          "support": [
+            {
+              "lift": 1.1498628816975527,
+              "outcome": "aes-r4-peel-final-linear-bit0:delta_byte_5:bin_5",
+              "route_z": 3.7974784614495936,
+              "score": 0.7650469739524635
+            }
+          ]
+        }
+      ],
+      "rounds": 4
+    },
+    {
+      "candidate_edges_per_seed": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "causal": {
+        "bytes": 10199,
+        "explicit_triplets": 128,
+        "file_sha256": "a2a524ca1f14ecc970fd3737f4073da86aa265ad59c71494e328ba5c09337fb9",
+        "graph_sha256": "527a801546f723e47c9cf655130c434bf3ff9d2bac490f2c135fc2ad0c205464",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r10-identity-bit0.causal",
+        "reader_roundtrip": {
+          "graph_sha256": "527a801546f723e47c9cf655130c434bf3ff9d2bac490f2c135fc2ad0c205464",
+          "triplets": 128
+        },
+        "triplets": 128
+      },
+      "causal_compressed_edges": 128,
+      "causal_path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r10-identity-bit0.causal",
+      "edge_summaries": [
+        {
+          "conditional_probability": 0.08533501896333755,
+          "control_mean_count": 100.875,
+          "control_sd_count": 4.440345331915826,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.125,
+          "lift": 1.356246328088645,
+          "marginal_probability": 0.06292,
+          "observed_count": 135,
+          "outcome_bin": 7,
+          "outcome_byte": 2,
+          "route_z": 7.685213074469699,
+          "source_bin": 9,
+          "source_byte": 4
+        },
+        {
+          "conditional_probability": 0.08625,
+          "control_mean_count": 95.25,
+          "control_sd_count": 5.825232470325397,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 42.75,
+          "lift": 1.4223284960422162,
+          "marginal_probability": 0.06064,
+          "observed_count": 138,
+          "outcome_bin": 8,
+          "outcome_byte": 14,
+          "route_z": 7.33876291079796,
+          "source_bin": 14,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.08907672301690507,
+          "control_mean_count": 98.75,
+          "control_sd_count": 5.458937625582473,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 38.25,
+          "lift": 1.4148145333053537,
+          "marginal_probability": 0.06296,
+          "observed_count": 137,
+          "outcome_bin": 15,
+          "outcome_byte": 1,
+          "route_z": 7.0068578583399175,
+          "source_bin": 1,
+          "source_byte": 9
+        },
+        {
+          "conditional_probability": 0.08113207547169811,
+          "control_mean_count": 93.875,
+          "control_sd_count": 5.596129614891588,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 35.125,
+          "lift": 1.302698706995795,
+          "marginal_probability": 0.06228,
+          "observed_count": 129,
+          "outcome_bin": 0,
+          "outcome_byte": 4,
+          "route_z": 6.27665948024695,
+          "source_bin": 8,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.07813484562066793,
+          "control_mean_count": 91.9375,
+          "control_sd_count": 5.1700257897487,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 32.0625,
+          "lift": 1.2970591902501316,
+          "marginal_probability": 0.06024,
+          "observed_count": 124,
+          "outcome_bin": 13,
+          "outcome_byte": 2,
+          "route_z": 6.20161316478819,
+          "source_bin": 9,
+          "source_byte": 13
+        },
+        {
+          "conditional_probability": 0.08739708676377454,
+          "control_mean_count": 99.8125,
+          "control_sd_count": 6.16677927825106,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 38.1875,
+          "lift": 1.3412689804139741,
+          "marginal_probability": 0.06516,
+          "observed_count": 138,
+          "outcome_bin": 2,
+          "outcome_byte": 10,
+          "route_z": 6.192454485063106,
+          "source_bin": 7,
+          "source_byte": 15
+        },
+        {
+          "conditional_probability": 0.07909967845659165,
+          "control_mean_count": 94.8125,
+          "control_sd_count": 5.04933989085042,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.1875,
+          "lift": 1.283252408445679,
+          "marginal_probability": 0.06164,
+          "observed_count": 123,
+          "outcome_bin": 0,
+          "outcome_byte": 9,
+          "route_z": 5.582412871646199,
+          "source_bin": 5,
+          "source_byte": 5
+        },
+        {
+          "conditional_probability": 0.0847145488029466,
+          "control_mean_count": 99.0,
+          "control_sd_count": 7.108680140035373,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 39.0,
+          "lift": 1.3412689804139741,
+          "marginal_probability": 0.06316,
+          "observed_count": 138,
+          "outcome_bin": 7,
+          "outcome_byte": 15,
+          "route_z": 5.4862505038531575,
+          "source_bin": 2,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.08900190718372536,
+          "control_mean_count": 96.8125,
+          "control_sd_count": 8.076457556792253,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 43.1875,
+          "lift": 1.434589090646766,
+          "marginal_probability": 0.06204,
+          "observed_count": 140,
+          "outcome_bin": 2,
+          "outcome_byte": 0,
+          "route_z": 5.347332007419462,
+          "source_bin": 7,
+          "source_byte": 3
+        },
+        {
+          "conditional_probability": 0.08823529411764706,
+          "control_mean_count": 95.0,
+          "control_sd_count": 7.754568545917518,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 40.0,
+          "lift": 1.4068127250900362,
+          "marginal_probability": 0.06272,
+          "observed_count": 135,
+          "outcome_bin": 14,
+          "outcome_byte": 13,
+          "route_z": 5.158249587084824,
+          "source_bin": 11,
+          "source_byte": 12
+        },
+        {
+          "conditional_probability": 0.08775137111517367,
+          "control_mean_count": 100.0,
+          "control_sd_count": 8.579044235810887,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 44.0,
+          "lift": 1.4199250989510304,
+          "marginal_probability": 0.0618,
+          "observed_count": 144,
+          "outcome_bin": 7,
+          "outcome_byte": 5,
+          "route_z": 5.1287764453217255,
+          "source_bin": 11,
+          "source_byte": 8
+        },
+        {
+          "conditional_probability": 0.08263395739186571,
+          "control_mean_count": 94.8125,
+          "control_sd_count": 6.754936466515926,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.1875,
+          "lift": 1.3175056982121447,
+          "marginal_probability": 0.06272,
+          "observed_count": 128,
+          "outcome_bin": 5,
+          "outcome_byte": 15,
+          "route_z": 4.913073596548202,
+          "source_bin": 4,
+          "source_byte": 13
+        },
+        {
+          "conditional_probability": 0.07412140575079872,
+          "control_mean_count": 91.875,
+          "control_sd_count": 4.937948291885339,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 24.125,
+          "lift": 1.2103430070345969,
+          "marginal_probability": 0.06124,
+          "observed_count": 116,
+          "outcome_bin": 4,
+          "outcome_byte": 7,
+          "route_z": 4.885632366714988,
+          "source_bin": 8,
+          "source_byte": 3
+        },
+        {
+          "conditional_probability": 0.08193548387096775,
+          "control_mean_count": 99.3125,
+          "control_sd_count": 5.7005116729407135,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.6875,
+          "lift": 1.3275353835218364,
+          "marginal_probability": 0.06172,
+          "observed_count": 127,
+          "outcome_bin": 1,
+          "outcome_byte": 11,
+          "route_z": 4.857020139337228,
+          "source_bin": 14,
+          "source_byte": 14
+        },
+        {
+          "conditional_probability": 0.07431551499348109,
+          "control_mean_count": 91.125,
+          "control_sd_count": 4.731102760808872,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 22.875,
+          "lift": 1.2072045970351055,
+          "marginal_probability": 0.06156,
+          "observed_count": 114,
+          "outcome_bin": 10,
+          "outcome_byte": 4,
+          "route_z": 4.83502497335084,
+          "source_bin": 15,
+          "source_byte": 15
+        },
+        {
+          "conditional_probability": 0.0781758957654723,
+          "control_mean_count": 90.3125,
+          "control_sd_count": 6.1613716005448005,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.6875,
+          "lift": 1.2666217719616382,
+          "marginal_probability": 0.06172,
+          "observed_count": 120,
+          "outcome_bin": 13,
+          "outcome_byte": 15,
+          "route_z": 4.818326490383241,
+          "source_bin": 12,
+          "source_byte": 7
+        }
+      ],
+      "holdout": {
+        "edge_excess_sign_flip_p": 0.125,
+        "keys": 5,
+        "mean_edge_excess_count": -0.1833984375,
+        "reverse_coverage": 0.9998400000000001,
+        "reverse_lift_over_marginal": 0.811896952753297,
+        "reverse_marginal_baseline_rate": 0.06218668126445779,
+        "reverse_top1_hit_rate": 0.05048779511804722
+      },
+      "input_bit": 0,
+      "representation": "identity",
+      "reverse_query_for_first_delta": [
+        {
+          "score": 3.5077237401487658,
+          "source": "aes-r10-identity-bit0:source_byte_9:bin_1",
+          "support": [
+            {
+              "lift": 1.4148145333053537,
+              "outcome": "aes-r10-identity-bit0:delta_byte_1:bin_15",
+              "route_z": 7.0068578583399175,
+              "score": 3.5077237401487658
+            }
+          ]
+        },
+        {
+          "score": 1.6802133641249872,
+          "source": "aes-r10-identity-bit0:source_byte_9:bin_13",
+          "support": [
+            {
+              "lift": 1.29285146065954,
+              "outcome": "aes-r10-identity-bit0:delta_byte_2:bin_2",
+              "route_z": 4.534297012502639,
+              "score": 1.6802133641249872
+            }
+          ]
+        },
+        {
+          "score": 1.5235610338377317,
+          "source": "aes-r10-identity-bit0:source_byte_14:bin_6",
+          "support": [
+            {
+              "lift": 1.2945277077474246,
+              "outcome": "aes-r10-identity-bit0:delta_byte_15:bin_4",
+              "route_z": 4.090911132280383,
+              "score": 1.5235610338377317
+            }
+          ]
+        },
+        {
+          "score": 1.4633610519915234,
+          "source": "aes-r10-identity-bit0:source_byte_1:bin_8",
+          "support": [
+            {
+              "lift": 1.2998830105290524,
+              "outcome": "aes-r10-identity-bit0:delta_byte_10:bin_6",
+              "route_z": 3.867419373862268,
+              "score": 1.4633610519915234
+            }
+          ]
+        },
+        {
+          "score": 1.2564796169280892,
+          "source": "aes-r10-identity-bit0:source_byte_0:bin_3",
+          "support": [
+            {
+              "lift": 1.2428047617863998,
+              "outcome": "aes-r10-identity-bit0:delta_byte_15:bin_4",
+              "route_z": 4.006635593452224,
+              "score": 1.2564796169280892
+            }
+          ]
+        },
+        {
+          "score": 1.1925739217310594,
+          "source": "aes-r10-identity-bit0:source_byte_6:bin_4",
+          "support": [
+            {
+              "lift": 1.26544902349517,
+              "outcome": "aes-r10-identity-bit0:delta_byte_9:bin_5",
+              "route_z": 3.511191097735891,
+              "score": 1.1925739217310594
+            }
+          ]
+        },
+        {
+          "score": 1.0272894234978507,
+          "source": "aes-r10-identity-bit0:source_byte_5:bin_10",
+          "support": [
+            {
+              "lift": 1.1989410643115854,
+              "outcome": "aes-r10-identity-bit0:delta_byte_3:bin_12",
+              "route_z": 3.9245358673688258,
+              "score": 1.0272894234978507
+            }
+          ]
+        },
+        {
+          "score": 0.7857016603763003,
+          "source": "aes-r10-identity-bit0:source_byte_6:bin_6",
+          "support": [
+            {
+              "lift": 1.1643325224099763,
+              "outcome": "aes-r10-identity-bit0:delta_byte_8:bin_10",
+              "route_z": 3.5794552658190883,
+              "score": 0.7857016603763003
+            }
+          ]
+        }
+      ],
+      "rounds": 10
+    },
+    {
+      "candidate_edges_per_seed": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "causal": {
+        "bytes": 10290,
+        "explicit_triplets": 128,
+        "file_sha256": "1e50aa566ad35980615772fdc50d2790825453eeaa0eb391ca5311668e0557f0",
+        "graph_sha256": "f2fef6c375abccd326eafa643c5b92078646cd5acbf95f8af8c545669d5fbab0",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r10-peel-final-linear-bit0.causal",
+        "reader_roundtrip": {
+          "graph_sha256": "f2fef6c375abccd326eafa643c5b92078646cd5acbf95f8af8c545669d5fbab0",
+          "triplets": 128
+        },
+        "triplets": 128
+      },
+      "causal_compressed_edges": 128,
+      "causal_path": "research/results/v1/aes_direct_output_causal_holdout_v1/aes-r10-peel-final-linear-bit0.causal",
+      "edge_summaries": [
+        {
+          "conditional_probability": 0.08907672301690507,
+          "control_mean_count": 97.5625,
+          "control_sd_count": 5.378584076377971,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 39.4375,
+          "lift": 1.4148145333053537,
+          "marginal_probability": 0.06296,
+          "observed_count": 137,
+          "outcome_bin": 15,
+          "outcome_byte": 5,
+          "route_z": 7.332320075315784,
+          "source_bin": 1,
+          "source_byte": 13
+        },
+        {
+          "conditional_probability": 0.08578912901113293,
+          "control_mean_count": 93.4375,
+          "control_sd_count": 5.476845198956543,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 37.5625,
+          "lift": 1.3899729262983302,
+          "marginal_probability": 0.06172,
+          "observed_count": 131,
+          "outcome_bin": 7,
+          "outcome_byte": 8,
+          "route_z": 6.858419151075599,
+          "source_bin": 3,
+          "source_byte": 7
+        },
+        {
+          "conditional_probability": 0.08625,
+          "control_mean_count": 100.4375,
+          "control_sd_count": 5.842017345632129,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 37.5625,
+          "lift": 1.4223284960422162,
+          "marginal_probability": 0.06064,
+          "observed_count": 138,
+          "outcome_bin": 8,
+          "outcome_byte": 6,
+          "route_z": 6.429713877533103,
+          "source_bin": 14,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.07982120051085569,
+          "control_mean_count": 96.0,
+          "control_sd_count": 4.91256891385081,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 29.0,
+          "lift": 1.2824743012669617,
+          "marginal_probability": 0.06224,
+          "observed_count": 125,
+          "outcome_bin": 15,
+          "outcome_byte": 9,
+          "route_z": 5.903225076036195,
+          "source_bin": 15,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.08229098090849243,
+          "control_mean_count": 99.9375,
+          "control_sd_count": 4.419181673869797,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 25.0625,
+          "lift": 1.2605848791129355,
+          "marginal_probability": 0.06528,
+          "observed_count": 125,
+          "outcome_bin": 11,
+          "outcome_byte": 1,
+          "route_z": 5.671298862455053,
+          "source_bin": 3,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.08484455958549222,
+          "control_mean_count": 101.0,
+          "control_sd_count": 5.316640543300503,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 30.0,
+          "lift": 1.3248682008977548,
+          "marginal_probability": 0.06404,
+          "observed_count": 131,
+          "outcome_bin": 10,
+          "outcome_byte": 9,
+          "route_z": 5.64266095397459,
+          "source_bin": 10,
+          "source_byte": 1
+        },
+        {
+          "conditional_probability": 0.07855361596009976,
+          "control_mean_count": 92.625,
+          "control_sd_count": 6.141389636447656,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 33.375,
+          "lift": 1.2793748527703543,
+          "marginal_probability": 0.0614,
+          "observed_count": 126,
+          "outcome_bin": 12,
+          "outcome_byte": 3,
+          "route_z": 5.434437802468595,
+          "source_bin": 3,
+          "source_byte": 12
+        },
+        {
+          "conditional_probability": 0.08300653594771241,
+          "control_mean_count": 96.3125,
+          "control_sd_count": 5.816284610184294,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 30.6875,
+          "lift": 1.2929366970048664,
+          "marginal_probability": 0.0642,
+          "observed_count": 127,
+          "outcome_bin": 15,
+          "outcome_byte": 1,
+          "route_z": 5.276134518291332,
+          "source_bin": 3,
+          "source_byte": 10
+        },
+        {
+          "conditional_probability": 0.08513425016371971,
+          "control_mean_count": 92.75,
+          "control_sd_count": 7.075780286771677,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 37.25,
+          "lift": 1.3775768634906103,
+          "marginal_probability": 0.0618,
+          "observed_count": 130,
+          "outcome_bin": 7,
+          "outcome_byte": 9,
+          "route_z": 5.26443706422593,
+          "source_bin": 4,
+          "source_byte": 15
+        },
+        {
+          "conditional_probability": 0.08089171974522293,
+          "control_mean_count": 94.875,
+          "control_sd_count": 6.163062009531734,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 32.125,
+          "lift": 1.3089275039680084,
+          "marginal_probability": 0.0618,
+          "observed_count": 127,
+          "outcome_bin": 1,
+          "outcome_byte": 0,
+          "route_z": 5.212506372695225,
+          "source_bin": 6,
+          "source_byte": 2
+        },
+        {
+          "conditional_probability": 0.084899546338302,
+          "control_mean_count": 96.125,
+          "control_sd_count": 6.800735254367722,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 34.875,
+          "lift": 1.38997292629833,
+          "marginal_probability": 0.06108,
+          "observed_count": 131,
+          "outcome_bin": 3,
+          "outcome_byte": 7,
+          "route_z": 5.128121989104309,
+          "source_bin": 7,
+          "source_byte": 8
+        },
+        {
+          "conditional_probability": 0.07687210072895957,
+          "control_mean_count": 88.625,
+          "control_sd_count": 5.402160061802439,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 27.375,
+          "lift": 1.2585478180903662,
+          "marginal_probability": 0.06108,
+          "observed_count": 116,
+          "outcome_bin": 3,
+          "outcome_byte": 7,
+          "route_z": 5.067417419480586,
+          "source_bin": 11,
+          "source_byte": 0
+        },
+        {
+          "conditional_probability": 0.0748925721301412,
+          "control_mean_count": 97.125,
+          "control_sd_count": 4.937948291885339,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 24.875,
+          "lift": 1.2165784946416698,
+          "marginal_probability": 0.06156,
+          "observed_count": 122,
+          "outcome_bin": 10,
+          "outcome_byte": 4,
+          "route_z": 5.037517310757941,
+          "source_bin": 12,
+          "source_byte": 6
+        },
+        {
+          "conditional_probability": 0.08005164622336991,
+          "control_mean_count": 95.4375,
+          "control_sd_count": 5.95503988231817,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 28.5625,
+          "lift": 1.2547279972315033,
+          "marginal_probability": 0.0638,
+          "observed_count": 124,
+          "outcome_bin": 10,
+          "outcome_byte": 0,
+          "route_z": 4.796357466019392,
+          "source_bin": 4,
+          "source_byte": 1
+        },
+        {
+          "conditional_probability": 0.08823529411764706,
+          "control_mean_count": 93.9375,
+          "control_sd_count": 8.698419396649026,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 41.0625,
+          "lift": 1.4068127250900362,
+          "marginal_probability": 0.06272,
+          "observed_count": 135,
+          "outcome_bin": 14,
+          "outcome_byte": 1,
+          "route_z": 4.720685233436651,
+          "source_bin": 11,
+          "source_byte": 12
+        },
+        {
+          "conditional_probability": 0.0761789600967352,
+          "control_mean_count": 102.1875,
+          "control_sd_count": 5.07567729470659,
+          "empirical_upper_p": 0.058823529411764705,
+          "excess_count": 23.8125,
+          "lift": 1.2008032802133544,
+          "marginal_probability": 0.06344,
+          "observed_count": 126,
+          "outcome_bin": 3,
+          "outcome_byte": 9,
+          "route_z": 4.6914921137389864,
+          "source_bin": 7,
+          "source_byte": 0
+        }
+      ],
+      "holdout": {
+        "edge_excess_sign_flip_p": 0.625,
+        "keys": 5,
+        "mean_edge_excess_count": -0.0912109375,
+        "reverse_coverage": 0.9997199999999999,
+        "reverse_lift_over_marginal": 0.7969576179130031,
+        "reverse_marginal_baseline_rate": 0.062000155699198645,
+        "reverse_top1_hit_rate": 0.04941390191169402
+      },
+      "input_bit": 0,
+      "representation": "peel-final-linear",
+      "reverse_query_for_first_delta": [
+        {
+          "score": 3.670654338726396,
+          "source": "aes-r10-peel-final-linear-bit0:source_byte_13:bin_1",
+          "support": [
+            {
+              "lift": 1.4148145333053537,
+              "outcome": "aes-r10-peel-final-linear-bit0:delta_byte_5:bin_15",
+              "route_z": 7.332320075315784,
+              "score": 3.670654338726396
+            }
+          ]
+        },
+        {
+          "score": 1.3981421794646773,
+          "source": "aes-r10-peel-final-linear-bit0:source_byte_3:bin_13",
+          "support": [
+            {
+              "lift": 1.2591764985699352,
+              "outcome": "aes-r10-peel-final-linear-bit0:delta_byte_15:bin_12",
+              "route_z": 4.205185258042379,
+              "score": 1.3981421794646773
+            }
+          ]
+        },
+        {
+          "score": 1.3625569877893078,
+          "source": "aes-r10-peel-final-linear-bit0:source_byte_15:bin_2",
+          "support": [
+            {
+              "lift": 1.2810134431057796,
+              "outcome": "aes-r10-peel-final-linear-bit0:delta_byte_7:bin_5",
+              "route_z": 3.813635165842532,
+              "score": 1.3625569877893078
+            }
+          ]
+        },
+        {
+          "score": 1.1574593252697232,
+          "source": "aes-r10-peel-final-linear-bit0:source_byte_12:bin_1",
+          "support": [
+            {
+              "lift": 1.2281936880669984,
+              "outcome": "aes-r10-peel-final-linear-bit0:delta_byte_7:bin_5",
+              "route_z": 3.9032399176286505,
+              "score": 1.1574593252697232
+            }
+          ]
+        },
+        {
+          "score": 1.1369549789587765,
+          "source": "aes-r10-peel-final-linear-bit0:source_byte_4:bin_14",
+          "support": [
+            {
+              "lift": 1.252208838148222,
+              "outcome": "aes-r10-peel-final-linear-bit0:delta_byte_6:bin_12",
+              "route_z": 3.503981252145139,
+              "score": 1.1369549789587765
+            }
+          ]
+        },
+        {
+          "score": 1.117019317638307,
+          "source": "aes-r10-peel-final-linear-bit0:source_byte_5:bin_10",
+          "support": [
+            {
+              "lift": 1.224690585525598,
+              "outcome": "aes-r10-peel-final-linear-bit0:delta_byte_0:bin_12",
+              "route_z": 3.8199494615621408,
+              "score": 1.117019317638307
+            }
+          ]
+        }
+      ],
+      "rounds": 10
+    }
+  ],
+  "schema": "aes-direct-output-causal-v1",
+  "scope": "direct observed-output causal compression and reverse output-node ranking; not key recovery or a full-AES security claim"
+}

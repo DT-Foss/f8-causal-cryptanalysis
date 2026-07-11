@@ -1,0 +1,238 @@
+{
+  "causal": {
+    "bytes": 826,
+    "explicit_triplets": 2,
+    "file_sha256": "1b007f3f770241c26b755af197f30727aec772d12e3e69d632867076ef1ecd47",
+    "graph_sha256": "9fd2029b22d6131cdf0c2ef744120432363802f435c996bcb66372ddf0ae2de7",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/chacha_causal_contrast_signature_bvn_full_pooled_byte7only_r2r3_v1.causal",
+    "triplets": 2
+  },
+  "chance": 0.5,
+  "overall_accuracy": 0.75,
+  "parameters": {
+    "bits": [
+      0,
+      2
+    ],
+    "counter_mode": "random",
+    "difference_mode": "byte",
+    "feature_indices": [
+      7
+    ],
+    "feature_normalization": "none",
+    "holdout_bits": [
+      1,
+      3
+    ],
+    "holdout_counter_mode": "random",
+    "mask_words": [],
+    "output_view": "full",
+    "pairs_per_seed": 10000,
+    "repair_route_seed_strategy": "shared_per_seed_input_difference_across_round_classes",
+    "repairing_routes": 16,
+    "rounds": [
+      2,
+      3
+    ],
+    "route_mode": "bvn",
+    "train_seeds": 5,
+    "variance_mode": "pooled"
+  },
+  "per_class": {
+    "r2": {
+      "accuracy": 0.5,
+      "correct": 5,
+      "total": 10
+    },
+    "r3": {
+      "accuracy": 1.0,
+      "correct": 10,
+      "total": 10
+    }
+  },
+  "schema": "chacha-causal-contrast-signature-v1",
+  "scope": "direct ChaCha output causal contrast profile and reader-only reverse reduced-round class query; not key recovery",
+  "trials": [
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -1.8202786860656854,
+        "r3": -6.769831703171869
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r3",
+      "scores": {
+        "r2": -0.9910362344964944,
+        "r3": -0.9640355598014384
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -2.7866974603336034,
+        "r3": -8.72762394111463
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r3",
+      "scores": {
+        "r2": -1.0673166850166032,
+        "r3": -0.8955487859722491
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -1.695714774679978,
+        "r3": -6.493360764564008
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r3",
+      "scores": {
+        "r2": -1.3462974623687618,
+        "r3": -0.7161324613892682
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -1.6932218780751396,
+        "r3": -6.487747873186167
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r3",
+      "scores": {
+        "r2": -1.1840646743922991,
+        "r3": -0.8089257761103015
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": true,
+      "predicted": "r2",
+      "scores": {
+        "r2": -3.0360166750336317,
+        "r3": -9.195887408447348
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r3",
+      "scores": {
+        "r2": -1.260034491015453,
+        "r3": -0.76201602625303
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.3646519079600745,
+        "r3": -0.5159233720384501
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.3617106742012623,
+        "r3": -0.5159224169156914
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.3594969356273814,
+        "r3": -0.5159232434948487
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.3608316776854417,
+        "r3": -0.5159225860689919
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.357491802057459,
+        "r3": -0.5159251400388103
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.3635536447921943,
+        "r3": -0.5159227415816191
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.360352760416915,
+        "r3": -0.5159227663740115
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.3610287706015667,
+        "r3": -0.5159225299281885
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.360341646098418,
+        "r3": -0.5159227712968325
+      }
+    },
+    {
+      "actual": "r3",
+      "correct": true,
+      "predicted": "r3",
+      "scores": {
+        "r2": -2.358042590177602,
+        "r3": -0.5159245102783969
+      }
+    }
+  ]
+}

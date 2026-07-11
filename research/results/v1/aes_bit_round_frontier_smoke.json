@@ -1,0 +1,1973 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "parameters": {
+    "aes_semantics": "genuine AES-128 prefix; MixColumns in prefix rounds 1-9",
+    "bits": [
+      0,
+      63,
+      127
+    ],
+    "null": "same outputs with independently permuted second rows",
+    "pairs_per_seed": 400,
+    "repairing_routes": 3,
+    "rounds": [
+      1,
+      2,
+      10
+    ],
+    "seed_base": 85001,
+    "seeds": 2,
+    "status": "discovery screen; candidates require frozen independent holdout"
+  },
+  "results": [
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 0.5,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 0.9,
+      "maximum_bit_bias_chi2_p": 0.5,
+      "maximum_bit_bias_chi2_p_bh_q": 0.9,
+      "maximum_byte_entropy_deficit_p": 0.5,
+      "maximum_byte_entropy_deficit_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 101.12323418728532,
+            "mean": 101.02028290956054,
+            "minimum": 100.91733163183575,
+            "sample_sd_ddof1": 0.14559509322202938,
+            "values": [
+              100.91733163183575,
+              101.12323418728532
+            ]
+          },
+          "effect": {
+            "maximum": 92.62663878887369,
+            "mean": 92.51958552446607,
+            "minimum": 92.41253226005846,
+            "sample_sd_ddof1": 0.15139617842156644,
+            "values": [
+              92.41253226005846,
+              92.62663878887369
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 92.51958552446607,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 678.4401814264864,
+            "mean": 564.3318606870073,
+            "minimum": 450.22353994752825,
+            "sample_sd_ddof1": 161.37353476939046,
+            "values": [
+              678.4401814264864,
+              450.22353994752825
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.5,
+            "mean": 0.5,
+            "minimum": 0.5,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.5,
+              0.5
+            ]
+          },
+          "effect": {
+            "maximum": 0.43416666666666665,
+            "mean": 0.42874999999999996,
+            "minimum": 0.42333333333333334,
+            "sample_sd_ddof1": 0.0076603234628542455,
+            "values": [
+              0.42333333333333334,
+              0.43416666666666665
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.42874999999999996,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 73.3234841870822,
+            "mean": 71.1658099950856,
+            "minimum": 69.008135803089,
+            "sample_sd_ddof1": 3.0514121055039984,
+            "values": [
+              73.3234841870822,
+              69.008135803089
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 400.0,
+            "mean": 400.0,
+            "minimum": 400.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              400.0,
+              400.0
+            ]
+          },
+          "effect": {
+            "maximum": 393.0233333333333,
+            "mean": 391.79166666666663,
+            "minimum": 390.56,
+            "sample_sd_ddof1": 1.7418397043228455,
+            "values": [
+              390.56,
+              393.0233333333333
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 391.79166666666663,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 293.6910757140692,
+            "mean": 287.7767385662222,
+            "minimum": 281.86240141837527,
+            "sample_sd_ddof1": 8.364135806932188,
+            "values": [
+              281.86240141837527,
+              293.6910757140692
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 8.0,
+            "mean": 8.0,
+            "minimum": 8.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              8.0,
+              8.0
+            ]
+          },
+          "effect": {
+            "maximum": 7.386456417356081,
+            "mean": 7.3849570155707305,
+            "minimum": 7.383457613785381,
+            "sample_sd_ddof1": 0.0021204743402887427,
+            "values": [
+              7.383457613785381,
+              7.386456417356081
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 7.3849570155707305,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 668.2053627068324,
+            "mean": 489.3532060386707,
+            "minimum": 310.501049370509,
+            "sample_sd_ddof1": 252.93514561979183,
+            "values": [
+              310.501049370509,
+              668.2053627068324
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 300.72953125000004,
+            "mean": 300.6928515625,
+            "minimum": 300.656171875,
+            "sample_sd_ddof1": 0.051872911526143865,
+            "values": [
+              300.72953125000004,
+              300.656171875
+            ]
+          },
+          "effect": {
+            "maximum": 299.61479166666663,
+            "mean": 299.6138020833333,
+            "minimum": 299.6128125,
+            "sample_sd_ddof1": 0.0013994821710619325,
+            "values": [
+              299.6128125,
+              299.61479166666663
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 299.6138020833333,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 10143.367318030803,
+            "mean": 6479.1690044412235,
+            "minimum": 2814.970690851644,
+            "sample_sd_ddof1": 5181.9589503030065,
+            "values": [
+              2814.970690851644,
+              10143.367318030803
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 0,
+      "rounds": 1
+    },
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 0.5,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 0.9,
+      "maximum_bit_bias_chi2_p": 0.5,
+      "maximum_bit_bias_chi2_p_bh_q": 0.9,
+      "maximum_byte_entropy_deficit_p": 0.5,
+      "maximum_byte_entropy_deficit_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 101.12648681608651,
+            "mean": 101.10723073911339,
+            "minimum": 101.08797466214027,
+            "sample_sd_ddof1": 0.027232205213488816,
+            "values": [
+              101.08797466214027,
+              101.12648681608651
+            ]
+          },
+          "effect": {
+            "maximum": 92.53103174052386,
+            "mean": 92.45797366572936,
+            "minimum": 92.38491559093487,
+            "sample_sd_ddof1": 0.10331972021524358,
+            "values": [
+              92.38491559093487,
+              92.53103174052386
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 92.45797366572936,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 1333.3656126103042,
+            "mean": 824.8362620860356,
+            "minimum": 316.3069115617671,
+            "sample_sd_ddof1": 719.1691043762022,
+            "values": [
+              1333.3656126103042,
+              316.3069115617671
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.5,
+            "mean": 0.5,
+            "minimum": 0.5,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.5,
+              0.5
+            ]
+          },
+          "effect": {
+            "maximum": 0.4241666666666667,
+            "mean": 0.4229166666666667,
+            "minimum": 0.4216666666666667,
+            "sample_sd_ddof1": 0.0017677669529663704,
+            "values": [
+              0.4241666666666667,
+              0.4216666666666667
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.4229166666666667,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 58.77425740350399,
+            "mean": 43.18941025917852,
+            "minimum": 27.604563114853057,
+            "sample_sd_ddof1": 22.040302199016676,
+            "values": [
+              58.77425740350399,
+              27.604563114853057
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 400.0,
+            "mean": 400.0,
+            "minimum": 400.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              400.0,
+              400.0
+            ]
+          },
+          "effect": {
+            "maximum": 390.74333333333334,
+            "mean": 390.33833333333337,
+            "minimum": 389.93333333333334,
+            "sample_sd_ddof1": 0.5727564927611051,
+            "values": [
+              390.74333333333334,
+              389.93333333333334
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 390.33833333333337,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 229.41942578039152,
+            "mean": 164.0740052377633,
+            "minimum": 98.72858469513503,
+            "sample_sd_ddof1": 92.41237997035832,
+            "values": [
+              229.41942578039152,
+              98.72858469513503
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 8.0,
+            "mean": 8.0,
+            "minimum": 8.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              8.0,
+              8.0
+            ]
+          },
+          "effect": {
+            "maximum": 7.421110051197234,
+            "mean": 7.402809438777635,
+            "minimum": 7.3845088263580365,
+            "sample_sd_ddof1": 0.025880974283529805,
+            "values": [
+              7.3845088263580365,
+              7.421110051197234
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 7.402809438777635,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 748.3781949156545,
+            "mean": 526.6222098725879,
+            "minimum": 304.8662248295212,
+            "sample_sd_ddof1": 313.6103215853101,
+            "values": [
+              748.3781949156545,
+              304.8662248295212
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 300.67140625,
+            "mean": 300.63984375,
+            "minimum": 300.60828125,
+            "sample_sd_ddof1": 0.04463611556241046,
+            "values": [
+              300.67140625,
+              300.60828125
+            ]
+          },
+          "effect": {
+            "maximum": 299.6021875,
+            "mean": 299.55484375000003,
+            "minimum": 299.5075,
+            "sample_sd_ddof1": 0.0669541733436157,
+            "values": [
+              299.5075,
+              299.6021875
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 299.55484375000003,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 17800.556205735047,
+            "mean": 10659.401329268747,
+            "minimum": 3518.246452802446,
+            "sample_sd_ddof1": 10099.118077305406,
+            "values": [
+              17800.556205735047,
+              3518.246452802446
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 63,
+      "rounds": 1
+    },
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 0.5,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 0.9,
+      "maximum_bit_bias_chi2_p": 0.5,
+      "maximum_bit_bias_chi2_p_bh_q": 0.9,
+      "maximum_byte_entropy_deficit_p": 0.5,
+      "maximum_byte_entropy_deficit_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 101.27294049601919,
+            "mean": 101.21454626738998,
+            "minimum": 101.15615203876078,
+            "sample_sd_ddof1": 0.08258191009173597,
+            "values": [
+              101.15615203876078,
+              101.27294049601919
+            ]
+          },
+          "effect": {
+            "maximum": 92.63965808977576,
+            "mean": 92.60223596257288,
+            "minimum": 92.56481383536997,
+            "sample_sd_ddof1": 0.05292287982318486,
+            "values": [
+              92.56481383536997,
+              92.63965808977576
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 92.60223596257288,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 531.7884923409168,
+            "mean": 383.6994448734049,
+            "minimum": 235.61039740589297,
+            "sample_sd_ddof1": 209.4295393674684,
+            "values": [
+              235.61039740589297,
+              531.7884923409168
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.5,
+            "mean": 0.5,
+            "minimum": 0.5,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              0.5,
+              0.5
+            ]
+          },
+          "effect": {
+            "maximum": 0.44166666666666665,
+            "mean": 0.43666666666666665,
+            "minimum": 0.43166666666666664,
+            "sample_sd_ddof1": 0.007071067811865481,
+            "values": [
+              0.43166666666666664,
+              0.44166666666666665
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.43666666666666665,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 57.827740912538154,
+            "mean": 57.1730872418302,
+            "minimum": 56.518433571122245,
+            "sample_sd_ddof1": 0.9258200997725197,
+            "values": [
+              56.518433571122245,
+              57.827740912538154
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 400.0,
+            "mean": 400.0,
+            "minimum": 400.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              400.0,
+              400.0
+            ]
+          },
+          "effect": {
+            "maximum": 394.49333333333334,
+            "mean": 393.48,
+            "minimum": 392.46666666666664,
+            "sample_sd_ddof1": 1.4330697432047592,
+            "values": [
+              392.46666666666664,
+              394.49333333333334
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 393.48,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 282.3192163908598,
+            "mean": 260.6956216658184,
+            "minimum": 239.072026940777,
+            "sample_sd_ddof1": 30.580380927412886,
+            "values": [
+              239.072026940777,
+              282.3192163908598
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 8.0,
+            "mean": 8.0,
+            "minimum": 8.0,
+            "sample_sd_ddof1": 0.0,
+            "values": [
+              8.0,
+              8.0
+            ]
+          },
+          "effect": {
+            "maximum": 7.391874168343805,
+            "mean": 7.39065096127316,
+            "minimum": 7.389427754202515,
+            "sample_sd_ddof1": 0.0017298760288968933,
+            "values": [
+              7.391874168343805,
+              7.389427754202515
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 7.39065096127316,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 2245.9276837344787,
+            "mean": 1340.9038179864128,
+            "minimum": 435.8799522383469,
+            "sample_sd_ddof1": 1279.897025212242,
+            "values": [
+              435.8799522383469,
+              2245.9276837344787
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 300.55671874999996,
+            "mean": 300.4840625,
+            "minimum": 300.41140625,
+            "sample_sd_ddof1": 0.10275145414112195,
+            "values": [
+              300.41140625,
+              300.55671874999996
+            ]
+          },
+          "effect": {
+            "maximum": 299.70322916666663,
+            "mean": 299.5678645833333,
+            "minimum": 299.4325,
+            "sample_sd_ddof1": 0.19143442961495463,
+            "values": [
+              299.4325,
+              299.70322916666663
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 299.5678645833333,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 5164.52618133574,
+            "mean": 3879.25397347776,
+            "minimum": 2593.9817656197806,
+            "sample_sd_ddof1": 1817.6493876939667,
+            "values": [
+              2593.9817656197806,
+              5164.52618133574
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 127,
+      "rounds": 1
+    },
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 1.0,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 1.0,
+      "maximum_bit_bias_chi2_p": 1.0,
+      "maximum_bit_bias_chi2_p_bh_q": 1.0,
+      "maximum_byte_entropy_deficit_p": 1.0,
+      "maximum_byte_entropy_deficit_p_bh_q": 1.0,
+      "mean_bit_bias_chi2_p": 1.0,
+      "mean_bit_bias_chi2_p_bh_q": 1.0,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 9.211456411979022,
+            "mean": 9.052703189295087,
+            "minimum": 8.893949966611153,
+            "sample_sd_ddof1": 0.224510960590056,
+            "values": [
+              8.893949966611153,
+              9.211456411979022
+            ]
+          },
+          "effect": {
+            "maximum": 0.7978334721098594,
+            "mean": 0.5296569162580109,
+            "minimum": 0.2614803604061624,
+            "sample_sd_ddof1": 0.37925892239618997,
+            "values": [
+              0.2614803604061624,
+              0.7978334721098594
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.5296569162580109,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 9.460965568958319,
+            "mean": 5.341574605015905,
+            "minimum": 1.222183641073493,
+            "sample_sd_ddof1": 5.825698569924537,
+            "values": [
+              1.222183641073493,
+              9.460965568958319
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.07250000000000001,
+            "mean": 0.0675,
+            "minimum": 0.0625,
+            "sample_sd_ddof1": 0.007071067811865481,
+            "values": [
+              0.0625,
+              0.07250000000000001
+            ]
+          },
+          "effect": {
+            "maximum": 0.011666666666666638,
+            "mean": 0.00041666666666664506,
+            "minimum": -0.010833333333333348,
+            "sample_sd_ddof1": 0.015909902576697308,
+            "values": [
+              -0.010833333333333348,
+              0.011666666666666638
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.00041666666666664506,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 8.082903768654912,
+            "mean": 3.671679803734883,
+            "minimum": -0.7395441611851469,
+            "sample_sd_ddof1": 6.238412757855125,
+            "values": [
+              -0.7395441611851469,
+              8.082903768654912
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 8.41,
+            "mean": 7.33,
+            "minimum": 6.25,
+            "sample_sd_ddof1": 1.5273506473629428,
+            "values": [
+              6.25,
+              8.41
+            ]
+          },
+          "effect": {
+            "maximum": 2.4866666666666672,
+            "mean": -0.04833333333333334,
+            "minimum": -2.583333333333334,
+            "sample_sd_ddof1": 3.585031380615797,
+            "values": [
+              -2.583333333333334,
+              2.4866666666666672
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.04833333333333334,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 8.789863281948179,
+            "mean": 4.0372710091828745,
+            "minimum": -0.7153212635824296,
+            "sample_sd_ddof1": 6.721180448574265,
+            "values": [
+              -0.7153212635824296,
+              8.789863281948179
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 0.6794538550257236,
+            "mean": 0.6294704406111542,
+            "minimum": 0.5794870261965848,
+            "sample_sd_ddof1": 0.07068722255879896,
+            "values": [
+              0.5794870261965848,
+              0.6794538550257236
+            ]
+          },
+          "effect": {
+            "maximum": 0.0914595958364064,
+            "mean": 0.030132165029715885,
+            "minimum": -0.031195265776974623,
+            "sample_sd_ddof1": 0.08673008439231927,
+            "values": [
+              -0.031195265776974623,
+              0.0914595958364064
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.030132165029715885,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 2.600214775548721,
+            "mean": 0.6583000532844419,
+            "minimum": -1.2836146689798373,
+            "sample_sd_ddof1": 2.7462821371981256,
+            "values": [
+              -1.2836146689798373,
+              2.600214775548721
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 1.16828125,
+            "mean": 0.8794921874999999,
+            "minimum": 0.5907031249999999,
+            "sample_sd_ddof1": 0.4084094088525114,
+            "values": [
+              0.5907031249999999,
+              1.16828125
+            ]
+          },
+          "effect": {
+            "maximum": 0.25687499999999985,
+            "mean": -0.048489583333333364,
+            "minimum": -0.3538541666666666,
+            "sample_sd_ddof1": 0.43185073521840905,
+            "values": [
+              -0.3538541666666666,
+              0.25687499999999985
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.048489583333333364,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 1.3717157176416181,
+            "mean": -0.5251548175791585,
+            "minimum": -2.422025352799935,
+            "sample_sd_ddof1": 2.682580036975134,
+            "values": [
+              -2.422025352799935,
+              1.3717157176416181
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 0,
+      "rounds": 2
+    },
+    {
+      "entropy_deficit_sum_p": 1.0,
+      "entropy_deficit_sum_p_bh_q": 1.0,
+      "maximum_absolute_bit_probability_bias_p": 1.0,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 1.0,
+      "maximum_bit_bias_chi2_p": 1.0,
+      "maximum_bit_bias_chi2_p_bh_q": 1.0,
+      "maximum_byte_entropy_deficit_p": 0.5,
+      "maximum_byte_entropy_deficit_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 1.0,
+      "mean_bit_bias_chi2_p_bh_q": 1.0,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 8.916393155439597,
+            "mean": 8.49484337625539,
+            "minimum": 8.073293597071185,
+            "sample_sd_ddof1": 0.5961614149376873,
+            "values": [
+              8.916393155439597,
+              8.073293597071185
+            ]
+          },
+          "effect": {
+            "maximum": 0.5014485923709611,
+            "mean": 0.06405161238107038,
+            "minimum": -0.3733453676088203,
+            "sample_sd_ddof1": 0.6185727412427366,
+            "values": [
+              0.5014485923709611,
+              -0.3733453676088203
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.06405161238107038,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 6.2043313316197795,
+            "mean": 2.21795380233205,
+            "minimum": -1.7684237269556795,
+            "sample_sd_ddof1": 5.637589166658057,
+            "values": [
+              6.2043313316197795,
+              -1.7684237269556795
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.08000000000000002,
+            "mean": 0.07250000000000001,
+            "minimum": 0.065,
+            "sample_sd_ddof1": 0.010606601717798222,
+            "values": [
+              0.08000000000000002,
+              0.065
+            ]
+          },
+          "effect": {
+            "maximum": 0.00916666666666667,
+            "mean": 0.0037500000000000033,
+            "minimum": -0.0016666666666666635,
+            "sample_sd_ddof1": 0.0076603234628542655,
+            "values": [
+              0.00916666666666667,
+              -0.0016666666666666635
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.0037500000000000033,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 0.6257681363874318,
+            "mean": 0.23281999129117215,
+            "minimum": -0.1601281538050875,
+            "sample_sd_ddof1": 0.5557125961044812,
+            "values": [
+              0.6257681363874318,
+              -0.1601281538050875
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 10.24,
+            "mean": 8.5,
+            "minimum": 6.76,
+            "sample_sd_ddof1": 2.4607315985291858,
+            "values": [
+              10.24,
+              6.76
+            ]
+          },
+          "effect": {
+            "maximum": 1.9833333333333343,
+            "mean": 0.7583333333333337,
+            "minimum": -0.4666666666666668,
+            "sample_sd_ddof1": 1.7324116139070422,
+            "values": [
+              1.9833333333333343,
+              -0.4666666666666668
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.7583333333333337,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 0.5675933338750615,
+            "mean": 0.1751052078642914,
+            "minimum": -0.2173829181464787,
+            "sample_sd_ddof1": 0.5550620308748314,
+            "values": [
+              0.5675933338750615,
+              -0.2173829181464787
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 0.604865847616674,
+            "mean": 0.6026966757497867,
+            "minimum": 0.6005275038828994,
+            "sample_sd_ddof1": 0.0030676722732701205,
+            "values": [
+              0.6005275038828994,
+              0.604865847616674
+            ]
+          },
+          "effect": {
+            "maximum": 0.011108656406459971,
+            "mean": 0.010491260082870657,
+            "minimum": 0.009873863759281343,
+            "sample_sd_ddof1": 0.0008731302541792963,
+            "values": [
+              0.011108656406459971,
+              0.009873863759281343
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.010491260082870657,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 1.5758341367515096,
+            "mean": 0.9604410478264974,
+            "minimum": 0.3450479589014852,
+            "sample_sd_ddof1": 0.8702972525484244,
+            "values": [
+              1.5758341367515096,
+              0.3450479589014852
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 1.68109375,
+            "mean": 1.278515625,
+            "minimum": 0.8759374999999999,
+            "sample_sd_ddof1": 0.5693314442897313,
+            "values": [
+              1.68109375,
+              0.8759374999999999
+            ]
+          },
+          "effect": {
+            "maximum": 0.76375,
+            "mean": 0.2668229166666667,
+            "minimum": -0.23010416666666667,
+            "sample_sd_ddof1": 0.7027610207605053,
+            "values": [
+              0.76375,
+              -0.23010416666666667
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.2668229166666667,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 22.9678555389853,
+            "mean": 10.971330990786495,
+            "minimum": -1.0251935574123103,
+            "sample_sd_ddof1": 16.96564771740452,
+            "values": [
+              22.9678555389853,
+              -1.0251935574123103
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 63,
+      "rounds": 2
+    },
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 0.5,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 0.9,
+      "maximum_bit_bias_chi2_p": 0.5,
+      "maximum_bit_bias_chi2_p_bh_q": 0.9,
+      "maximum_byte_entropy_deficit_p": 0.5,
+      "maximum_byte_entropy_deficit_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 8.515751007407733,
+            "mean": 8.378202132386097,
+            "minimum": 8.240653257364459,
+            "sample_sd_ddof1": 0.19452348454476112,
+            "values": [
+              8.240653257364459,
+              8.515751007407733
+            ]
+          },
+          "effect": {
+            "maximum": -0.12095947018766218,
+            "mean": -0.2657093467757994,
+            "minimum": -0.4104592233639366,
+            "sample_sd_ddof1": 0.20470723862277537,
+            "values": [
+              -0.4104592233639366,
+              -0.12095947018766218
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.2657093467757994,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.4380098206544852,
+            "mean": -1.3299942467628803,
+            "minimum": -2.221978672871275,
+            "sample_sd_ddof1": 1.2614564728280742,
+            "values": [
+              -2.221978672871275,
+              -0.4380098206544852
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.06000000000000005,
+            "mean": 0.05625000000000002,
+            "minimum": 0.05249999999999999,
+            "sample_sd_ddof1": 0.00530330085889915,
+            "values": [
+              0.06000000000000005,
+              0.05249999999999999
+            ]
+          },
+          "effect": {
+            "maximum": -0.00833333333333329,
+            "mean": -0.014999999999999986,
+            "minimum": -0.02166666666666668,
+            "sample_sd_ddof1": 0.009428090415820675,
+            "values": [
+              -0.00833333333333329,
+              -0.02166666666666668
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.014999999999999986,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -1.8763883748662835,
+            "mean": -3.824945533381253,
+            "minimum": -5.773502691896223,
+            "sample_sd_ddof1": 2.755675960631051,
+            "values": [
+              -5.773502691896223,
+              -1.8763883748662835
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 5.76,
+            "mean": 5.085,
+            "minimum": 4.41,
+            "sample_sd_ddof1": 0.9545941546018389,
+            "values": [
+              5.76,
+              4.41
+            ]
+          },
+          "effect": {
+            "maximum": -1.713333333333333,
+            "mean": -3.123333333333333,
+            "minimum": -4.533333333333333,
+            "sample_sd_ddof1": 1.9940411229460642,
+            "values": [
+              -1.713333333333333,
+              -4.533333333333333
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -3.123333333333333,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -1.58305718971349,
+            "mean": -3.4893289436155417,
+            "minimum": -5.395600697517594,
+            "sample_sd_ddof1": 2.695875367937029,
+            "values": [
+              -5.395600697517594,
+              -1.58305718971349
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 0.6120027300473581,
+            "mean": 0.576010245648019,
+            "minimum": 0.5400177612486798,
+            "sample_sd_ddof1": 0.05090105958104741,
+            "values": [
+              0.5400177612486798,
+              0.6120027300473581
+            ]
+          },
+          "effect": {
+            "maximum": -0.0006988128850796693,
+            "mean": -0.04150332854343297,
+            "minimum": -0.08230784420178627,
+            "sample_sd_ddof1": 0.057706299450108564,
+            "values": [
+              -0.08230784420178627,
+              -0.0006988128850796693
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.04150332854343297,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.026286884598994236,
+            "mean": -3.175769191993103,
+            "minimum": -6.325251499387212,
+            "sample_sd_ddof1": 4.454040593570858,
+            "values": [
+              -6.325251499387212,
+              -0.026286884598994236
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 0.7678906249999999,
+            "mean": 0.7534765625,
+            "minimum": 0.7390625,
+            "sample_sd_ddof1": 0.02038456267639343,
+            "values": [
+              0.7678906249999999,
+              0.7390625
+            ]
+          },
+          "effect": {
+            "maximum": -0.2265625000000001,
+            "mean": -0.2514583333333334,
+            "minimum": -0.2763541666666667,
+            "sample_sd_ddof1": 0.035208025146580106,
+            "values": [
+              -0.2265625000000001,
+              -0.2763541666666667
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.2514583333333334,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -3.0344285146064025,
+            "mean": -4.500677565096354,
+            "minimum": -5.966926615586305,
+            "sample_sd_ddof1": 2.0735892930195625,
+            "values": [
+              -5.966926615586305,
+              -3.0344285146064025
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 127,
+      "rounds": 2
+    },
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 1.0,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 1.0,
+      "maximum_bit_bias_chi2_p": 1.0,
+      "maximum_bit_bias_chi2_p_bh_q": 1.0,
+      "maximum_byte_entropy_deficit_p": 0.5,
+      "maximum_byte_entropy_deficit_p_bh_q": 0.75,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 8.420072075951182,
+            "mean": 8.404358114709998,
+            "minimum": 8.388644153468814,
+            "sample_sd_ddof1": 0.022222897105887984,
+            "values": [
+              8.420072075951182,
+              8.388644153468814
+            ]
+          },
+          "effect": {
+            "maximum": -0.05866785361650173,
+            "mean": -0.06310470104168964,
+            "minimum": -0.06754154846687754,
+            "sample_sd_ddof1": 0.0062746498028808835,
+            "values": [
+              -0.05866785361650173,
+              -0.06754154846687754
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.06310470104168964,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.6129684794446896,
+            "mean": -0.6552365734912837,
+            "minimum": -0.697504667537878,
+            "sample_sd_ddof1": 0.059776111856355,
+            "values": [
+              -0.697504667537878,
+              -0.6129684794446896
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.07750000000000001,
+            "mean": 0.06625,
+            "minimum": 0.05499999999999999,
+            "sample_sd_ddof1": 0.015909902576697336,
+            "values": [
+              0.05499999999999999,
+              0.07750000000000001
+            ]
+          },
+          "effect": {
+            "maximum": 0.009166666666666698,
+            "mean": -0.004166666666666666,
+            "minimum": -0.01750000000000003,
+            "sample_sd_ddof1": 0.01885618083164131,
+            "values": [
+              -0.01750000000000003,
+              0.009166666666666698
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.004166666666666666,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 2.400396792595907,
+            "mean": 0.4364357804719774,
+            "minimum": -1.527525231651952,
+            "sample_sd_ddof1": 2.7774602993176516,
+            "values": [
+              -1.527525231651952,
+              2.400396792595907
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 9.61,
+            "mean": 7.225,
+            "minimum": 4.84,
+            "sample_sd_ddof1": 3.3728993462598313,
+            "values": [
+              4.84,
+              9.61
+            ]
+          },
+          "effect": {
+            "maximum": 2.123333333333332,
+            "mean": -0.7933333333333334,
+            "minimum": -3.709999999999999,
+            "sample_sd_ddof1": 4.124789556921526,
+            "values": [
+              -3.709999999999999,
+              2.123333333333332
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.7933333333333334,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 2.5205839933056415,
+            "mean": 0.5453004739488175,
+            "minimum": -1.4299830454080065,
+            "sample_sd_ddof1": 2.7934727426064785,
+            "values": [
+              -1.4299830454080065,
+              2.5205839933056415
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 0.5884779562118148,
+            "mean": 0.5729900068048606,
+            "minimum": 0.5575020573979064,
+            "sample_sd_ddof1": 0.021903268104662955,
+            "values": [
+              0.5884779562118148,
+              0.5575020573979064
+            ]
+          },
+          "effect": {
+            "maximum": -0.006796412234586824,
+            "mean": -0.026468463299860356,
+            "minimum": -0.04614051436513389,
+            "sample_sd_ddof1": 0.02782048141620592,
+            "values": [
+              -0.006796412234586824,
+              -0.04614051436513389
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.026468463299860356,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.4081951970252102,
+            "mean": -2.795902072740636,
+            "minimum": -5.183608948456062,
+            "sample_sd_ddof1": 3.3767274466082453,
+            "values": [
+              -0.4081951970252102,
+              -5.183608948456062
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 0.832578125,
+            "mean": 0.8014843749999999,
+            "minimum": 0.7703906249999999,
+            "sample_sd_ddof1": 0.04397320295503847,
+            "values": [
+              0.832578125,
+              0.7703906249999999
+            ]
+          },
+          "effect": {
+            "maximum": -0.1841666666666666,
+            "mean": -0.22072916666666664,
+            "minimum": -0.2572916666666667,
+            "sample_sd_ddof1": 0.051707183374266365,
+            "values": [
+              -0.1841666666666666,
+              -0.2572916666666667
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.22072916666666664,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.878063612999766,
+            "mean": -9.74634386841717,
+            "minimum": -18.614624123834574,
+            "sample_sd_ddof1": 12.541642212136829,
+            "values": [
+              -0.878063612999766,
+              -18.614624123834574
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 0,
+      "rounds": 10
+    },
+    {
+      "entropy_deficit_sum_p": 1.0,
+      "entropy_deficit_sum_p_bh_q": 1.0,
+      "maximum_absolute_bit_probability_bias_p": 0.5,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 0.9,
+      "maximum_bit_bias_chi2_p": 0.5,
+      "maximum_bit_bias_chi2_p_bh_q": 0.9,
+      "maximum_byte_entropy_deficit_p": 1.0,
+      "maximum_byte_entropy_deficit_p_bh_q": 1.0,
+      "mean_bit_bias_chi2_p": 0.5,
+      "mean_bit_bias_chi2_p_bh_q": 0.75,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 8.488212106533439,
+            "mean": 8.466275543719672,
+            "minimum": 8.444338980905904,
+            "sample_sd_ddof1": 0.031022984643079052,
+            "values": [
+              8.444338980905904,
+              8.488212106533439
+            ]
+          },
+          "effect": {
+            "maximum": 0.021110077519004733,
+            "mean": -0.009384096932833152,
+            "minimum": -0.03987827138467104,
+            "sample_sd_ddof1": 0.043125275083160275,
+            "values": [
+              0.021110077519004733,
+              -0.03987827138467104
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.009384096932833152,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 0.8543301969280558,
+            "mean": 0.32232099292710875,
+            "minimum": -0.20968821107383828,
+            "sample_sd_ddof1": 0.7523746316054539,
+            "values": [
+              0.8543301969280558,
+              -0.20968821107383828
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.0675,
+            "mean": 0.065,
+            "minimum": 0.0625,
+            "sample_sd_ddof1": 0.0035355339059327407,
+            "values": [
+              0.0675,
+              0.0625
+            ]
+          },
+          "effect": {
+            "maximum": -0.0016666666666666635,
+            "mean": -0.006249999999999992,
+            "minimum": -0.01083333333333332,
+            "sample_sd_ddof1": 0.006481812160876678,
+            "values": [
+              -0.0016666666666666635,
+              -0.01083333333333332
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.006249999999999992,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.2886751345948121,
+            "mean": -0.8183561688721801,
+            "minimum": -1.348037203149548,
+            "sample_sd_ddof1": 0.749082102406862,
+            "values": [
+              -0.2886751345948121,
+              -1.348037203149548
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 7.29,
+            "mean": 6.77,
+            "minimum": 6.25,
+            "sample_sd_ddof1": 0.7353910524340094,
+            "values": [
+              7.29,
+              6.25
+            ]
+          },
+          "effect": {
+            "maximum": -0.40000000000000036,
+            "mean": -1.411666666666667,
+            "minimum": -2.423333333333334,
+            "sample_sd_ddof1": 1.4307127206007813,
+            "values": [
+              -0.40000000000000036,
+              -2.423333333333334
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -1.411666666666667,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -0.3207501495497923,
+            "mean": -0.7851752126986236,
+            "minimum": -1.2496002758474547,
+            "sample_sd_ddof1": 0.6567962230110582,
+            "values": [
+              -0.3207501495497923,
+              -1.2496002758474547
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 0.5959936600625877,
+            "mean": 0.5919861444619268,
+            "minimum": 0.5879786288612658,
+            "sample_sd_ddof1": 0.005667482913876443,
+            "values": [
+              0.5879786288612658,
+              0.5959936600625877
+            ]
+          },
+          "effect": {
+            "maximum": 0.0007036612881341497,
+            "mean": -0.00376360558242661,
+            "minimum": -0.00823087245298737,
+            "sample_sd_ddof1": 0.00631766939508704,
+            "values": [
+              -0.00823087245298737,
+              0.0007036612881341497
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.00376360558242661,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 0.05679999712817716,
+            "mean": -0.19172048162529665,
+            "minimum": -0.4402409603787705,
+            "sample_sd_ddof1": 0.35146103158061726,
+            "values": [
+              -0.4402409603787705,
+              0.05679999712817716
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 0.985703125,
+            "mean": 0.9202343749999999,
+            "minimum": 0.854765625,
+            "sample_sd_ddof1": 0.09258679416161358,
+            "values": [
+              0.854765625,
+              0.985703125
+            ]
+          },
+          "effect": {
+            "maximum": -0.07072916666666662,
+            "mean": -0.0971354166666667,
+            "minimum": -0.12354166666666677,
+            "sample_sd_ddof1": 0.037344076881414646,
+            "values": [
+              -0.12354166666666677,
+              -0.07072916666666662
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.25,
+            "mean_difference": -0.0971354166666667,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 1.0
+          },
+          "route_z": {
+            "maximum": -2.6766117213561156,
+            "mean": -4.86002878559583,
+            "minimum": -7.043445849835545,
+            "sample_sd_ddof1": 3.087818024564652,
+            "values": [
+              -7.043445849835545,
+              -2.6766117213561156
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 63,
+      "rounds": 10
+    },
+    {
+      "entropy_deficit_sum_p": 0.5,
+      "entropy_deficit_sum_p_bh_q": 0.6428571428571429,
+      "maximum_absolute_bit_probability_bias_p": 1.0,
+      "maximum_absolute_bit_probability_bias_p_bh_q": 1.0,
+      "maximum_bit_bias_chi2_p": 1.0,
+      "maximum_bit_bias_chi2_p_bh_q": 1.0,
+      "maximum_byte_entropy_deficit_p": 1.0,
+      "maximum_byte_entropy_deficit_p_bh_q": 1.0,
+      "mean_bit_bias_chi2_p": 1.0,
+      "mean_bit_bias_chi2_p_bh_q": 1.0,
+      "metrics": {
+        "entropy_deficit_sum": {
+          "actual": {
+            "maximum": 8.659357606867603,
+            "mean": 8.601729359295838,
+            "minimum": 8.544101111724071,
+            "sample_sd_ddof1": 0.08149864929178584,
+            "values": [
+              8.544101111724071,
+              8.659357606867603
+            ]
+          },
+          "effect": {
+            "maximum": 0.08224011573876844,
+            "mean": 0.0784375313782606,
+            "minimum": 0.07463494701775275,
+            "sample_sd_ddof1": 0.0053776663746980145,
+            "values": [
+              0.07463494701775275,
+              0.08224011573876844
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 1.0,
+            "mean_difference": 0.0784375313782606,
+            "seed_pairs": 2,
+            "two_sided_p": 0.5,
+            "upper_tail_p": 0.25
+          },
+          "route_z": {
+            "maximum": 0.9049640420428648,
+            "mean": 0.7290122984810246,
+            "minimum": 0.5530605549191844,
+            "sample_sd_ddof1": 0.24883334206834737,
+            "values": [
+              0.5530605549191844,
+              0.9049640420428648
+            ]
+          }
+        },
+        "maximum_absolute_bit_probability_bias": {
+          "actual": {
+            "maximum": 0.07999999999999996,
+            "mean": 0.07249999999999998,
+            "minimum": 0.065,
+            "sample_sd_ddof1": 0.010606601717798184,
+            "values": [
+              0.065,
+              0.07999999999999996
+            ]
+          },
+          "effect": {
+            "maximum": 0.004999999999999963,
+            "mean": 0.002083333333333326,
+            "minimum": -0.0008333333333333109,
+            "sample_sd_ddof1": 0.004124789556921485,
+            "values": [
+              -0.0008333333333333109,
+              0.004999999999999963
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.002083333333333326,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 0.6666666666666611,
+            "mean": 0.28587543354570694,
+            "minimum": -0.09491579957524723,
+            "sample_sd_ddof1": 0.5385201263124283,
+            "values": [
+              -0.09491579957524723,
+              0.6666666666666611
+            ]
+          }
+        },
+        "maximum_bit_bias_chi2": {
+          "actual": {
+            "maximum": 10.24,
+            "mean": 8.5,
+            "minimum": 6.76,
+            "sample_sd_ddof1": 2.4607315985291858,
+            "values": [
+              6.76,
+              10.24
+            ]
+          },
+          "effect": {
+            "maximum": 1.1799999999999997,
+            "mean": 0.46166666666666645,
+            "minimum": -0.2566666666666668,
+            "sample_sd_ddof1": 1.0158767423046733,
+            "values": [
+              -0.2566666666666668,
+              1.1799999999999997
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.46166666666666645,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 0.6552825780065322,
+            "mean": 0.2589502949830053,
+            "minimum": -0.1373819880405216,
+            "sample_sd_ddof1": 0.5604984898581638,
+            "values": [
+              -0.1373819880405216,
+              0.6552825780065322
+            ]
+          }
+        },
+        "maximum_byte_entropy_deficit": {
+          "actual": {
+            "maximum": 0.6317530663720827,
+            "mean": 0.6051966757497871,
+            "minimum": 0.5786402851274914,
+            "sample_sd_ddof1": 0.03755640778572818,
+            "values": [
+              0.5786402851274914,
+              0.6317530663720827
+            ]
+          },
+          "effect": {
+            "maximum": 0.020787930072922678,
+            "mean": 0.0010760042757154697,
+            "minimum": -0.01863592152149174,
+            "sample_sd_ddof1": 0.027876872802902516,
+            "values": [
+              -0.01863592152149174,
+              0.020787930072922678
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.75,
+            "mean_difference": 0.0010760042757154697,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.5
+          },
+          "route_z": {
+            "maximum": 0.6978161108618648,
+            "mean": 0.1221841550996913,
+            "minimum": -0.4534478006624822,
+            "sample_sd_ddof1": 0.8140665187742152,
+            "values": [
+              -0.4534478006624822,
+              0.6978161108618648
+            ]
+          }
+        },
+        "mean_bit_bias_chi2": {
+          "actual": {
+            "maximum": 1.116171875,
+            "mean": 1.043515625,
+            "minimum": 0.9708593749999999,
+            "sample_sd_ddof1": 0.10275145414117032,
+            "values": [
+              0.9708593749999999,
+              1.116171875
+            ]
+          },
+          "effect": {
+            "maximum": 0.04906250000000001,
+            "mean": -0.005416666666666736,
+            "minimum": -0.05989583333333348,
+            "sample_sd_ddof1": 0.07704517636678435,
+            "values": [
+              -0.05989583333333348,
+              0.04906250000000001
+            ]
+          },
+          "exact_sign_flip": {
+            "exact_assignments": 4,
+            "lower_tail_p": 0.5,
+            "mean_difference": -0.005416666666666736,
+            "seed_pairs": 2,
+            "two_sided_p": 1.0,
+            "upper_tail_p": 0.75
+          },
+          "route_z": {
+            "maximum": 0.27189500158224167,
+            "mean": -0.1341005656306975,
+            "minimum": -0.5400961328436367,
+            "sample_sd_ddof1": 0.5741644374158961,
+            "values": [
+              -0.5400961328436367,
+              0.27189500158224167
+            ]
+          }
+        }
+      },
+      "plaintext_bit": 127,
+      "rounds": 10
+    }
+  ],
+  "schema": "aes-bit-round-frontier-v1"
+}

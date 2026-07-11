@@ -1,0 +1,13 @@
+{
+  "schema": "frozen-direct-output-causal-confirmation-v1",
+  "discovery_artifact": "research/results/v1/chacha_causal_contrast_signature_v1.json",
+  "discovery_sha256": "1d50743b399943bb85b5f341ae0ef408e78045261b2873949778767254c4c1a7",
+  "causal_header": "factual-minus-repairing-contrast-profile",
+  "classes": ["r3", "r4", "r20"],
+  "input_bits": [0, 7, 15, 31],
+  "pairs_per_key": 10000,
+  "keys": {"train": 5, "holdout": 5},
+  "repairing_routes": 16,
+  "seed_base": 3085001,
+  "decision_rule": "Reader-only R3 accuracy must be >= 75% and exceed the maximum R4/R20 accuracy by >= 20 percentage points."
+}

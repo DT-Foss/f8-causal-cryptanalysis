@@ -1,0 +1,500 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1"
+  },
+  "experiment": "chacha_r4_parity_holdout",
+  "parameters": {
+    "config": "research/configs/chacha_r4_parity_holdout_v1.json",
+    "config_sha256": "855c2b1cf94f3d2bde722c74e55754b20aea940b3f223323014b9cc5269e2b93",
+    "counter_bit": 15,
+    "pairs": 5000,
+    "rounds": 4,
+    "routes": 3,
+    "seed_base": 60000,
+    "seeds": 3
+  },
+  "result": {
+    "ensemble": {
+      "auc_exact_test_vs_half": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.875,
+        "mean_difference": 0.0027062199999999814,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.25
+      },
+      "auc_mean": 0.50270622,
+      "auc_values": [
+        0.50658858,
+        0.49674628,
+        0.5047838
+      ],
+      "effect_mean": 0.000777777777777778,
+      "effect_values": [
+        -0.0006333333333333332,
+        -0.0024,
+        0.005366666666666667
+      ],
+      "exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.625,
+        "mean_difference": 0.000777777777777778,
+        "seed_pairs": 3,
+        "two_sided_p": 1.0,
+        "upper_tail_p": 0.5
+      },
+      "weights": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    "features": [
+      {
+        "bh_q": 1.0,
+        "candidate_index": 0,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.375,
+          "mean_difference": -0.008533333333333335,
+          "seed_pairs": 3,
+          "two_sided_p": 0.75,
+          "upper_tail_p": 0.75
+        },
+        "first": 274,
+        "holdout_effect_mean": -0.008533333333333335,
+        "holdout_effect_values": [
+          -0.028533333333333334,
+          -0.013333333333333334,
+          0.016266666666666665
+        ],
+        "same_direction_as_training": false,
+        "second": 497,
+        "training_effect": 0.028320000000000057
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 1,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.75,
+          "mean_difference": 0.007288888888888889,
+          "seed_pairs": 3,
+          "two_sided_p": 0.75,
+          "upper_tail_p": 0.375
+        },
+        "first": 175,
+        "holdout_effect_mean": 0.007288888888888889,
+        "holdout_effect_values": [
+          0.0007999999999999995,
+          0.022133333333333335,
+          -0.0010666666666666672
+        ],
+        "same_direction_as_training": true,
+        "second": 341,
+        "training_effect": 0.027839999999999955
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 2,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.625,
+          "mean_difference": 0.003644444444444445,
+          "seed_pairs": 3,
+          "two_sided_p": 1.0,
+          "upper_tail_p": 0.5
+        },
+        "first": 69,
+        "holdout_effect_mean": 0.003644444444444445,
+        "holdout_effect_values": [
+          -0.020266666666666665,
+          0.013866666666666668,
+          0.017333333333333333
+        ],
+        "same_direction_as_training": true,
+        "second": 311,
+        "training_effect": 0.02632000000000001
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 3,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.75,
+          "mean_difference": 0.0017777777777777774,
+          "seed_pairs": 3,
+          "two_sided_p": 0.75,
+          "upper_tail_p": 0.375
+        },
+        "first": 27,
+        "holdout_effect_mean": 0.0017777777777777774,
+        "holdout_effect_values": [
+          0.0184,
+          0.0034666666666666665,
+          -0.016533333333333334
+        ],
+        "same_direction_as_training": false,
+        "second": 95,
+        "training_effect": -0.025759999999999984
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 4,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.125,
+          "mean_difference": -0.005155555555555556,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 1.0
+        },
+        "first": 96,
+        "holdout_effect_mean": -0.005155555555555556,
+        "holdout_effect_values": [
+          -0.004,
+          -0.010933333333333333,
+          -0.0005333333333333336
+        ],
+        "same_direction_as_training": true,
+        "second": 359,
+        "training_effect": -0.025360000000000004
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 5,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.25,
+          "mean_difference": -0.012177777777777779,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.875
+        },
+        "first": 45,
+        "holdout_effect_mean": -0.012177777777777779,
+        "holdout_effect_values": [
+          0.0026666666666666666,
+          -0.014133333333333331,
+          -0.025066666666666668
+        ],
+        "same_direction_as_training": false,
+        "second": 361,
+        "training_effect": 0.025280000000000014
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 6,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.75,
+          "mean_difference": 0.0013333333333333333,
+          "seed_pairs": 3,
+          "two_sided_p": 0.75,
+          "upper_tail_p": 0.375
+        },
+        "first": 188,
+        "holdout_effect_mean": 0.0013333333333333333,
+        "holdout_effect_values": [
+          0.004533333333333334,
+          0.002933333333333334,
+          -0.0034666666666666674
+        ],
+        "same_direction_as_training": false,
+        "second": 353,
+        "training_effect": -0.025199999999999934
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 7,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 1.0,
+          "mean_difference": 0.010666666666666666,
+          "seed_pairs": 3,
+          "two_sided_p": 0.25,
+          "upper_tail_p": 0.125
+        },
+        "first": 453,
+        "holdout_effect_mean": 0.010666666666666666,
+        "holdout_effect_values": [
+          0.019733333333333332,
+          0.004533333333333332,
+          0.007733333333333333
+        ],
+        "same_direction_as_training": true,
+        "second": 487,
+        "training_effect": 0.025040000000000017
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 8,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.625,
+          "mean_difference": 2.8912057932946783e-19,
+          "seed_pairs": 3,
+          "two_sided_p": 1.0,
+          "upper_tail_p": 0.5
+        },
+        "first": 322,
+        "holdout_effect_mean": 2.8912057932946783e-19,
+        "holdout_effect_values": [
+          -0.010666666666666666,
+          0.007733333333333333,
+          0.002933333333333334
+        ],
+        "same_direction_as_training": true,
+        "second": 504,
+        "training_effect": 0.024959999999999982
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 9,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.625,
+          "mean_difference": 0.003111111111111111,
+          "seed_pairs": 3,
+          "two_sided_p": 1.0,
+          "upper_tail_p": 0.5
+        },
+        "first": 323,
+        "holdout_effect_mean": 0.003111111111111111,
+        "holdout_effect_values": [
+          -0.017066666666666667,
+          -0.005600000000000001,
+          0.032
+        ],
+        "same_direction_as_training": true,
+        "second": 509,
+        "training_effect": 0.0248
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 10,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.625,
+          "mean_difference": 0.0018666666666666677,
+          "seed_pairs": 3,
+          "two_sided_p": 1.0,
+          "upper_tail_p": 0.5
+        },
+        "first": 13,
+        "holdout_effect_mean": 0.0018666666666666677,
+        "holdout_effect_values": [
+          -0.005333333333333332,
+          0.014133333333333335,
+          -0.003199999999999999
+        ],
+        "same_direction_as_training": false,
+        "second": 33,
+        "training_effect": -0.024799999999999954
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 11,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.75,
+          "mean_difference": 0.0023111111111111123,
+          "seed_pairs": 3,
+          "two_sided_p": 0.75,
+          "upper_tail_p": 0.375
+        },
+        "first": 18,
+        "holdout_effect_mean": 0.0023111111111111123,
+        "holdout_effect_values": [
+          0.0063999999999999994,
+          -0.018666666666666665,
+          0.019200000000000002
+        ],
+        "same_direction_as_training": true,
+        "second": 64,
+        "training_effect": 0.02464000000000004
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 12,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.875,
+          "mean_difference": 0.003733333333333333,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.25
+        },
+        "first": 94,
+        "holdout_effect_mean": 0.003733333333333333,
+        "holdout_effect_values": [
+          -0.0005333333333333336,
+          0.006399999999999999,
+          0.005333333333333333
+        ],
+        "same_direction_as_training": false,
+        "second": 275,
+        "training_effect": -0.024560000000000005
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 13,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.75,
+          "mean_difference": 0.0033777777777777777,
+          "seed_pairs": 3,
+          "two_sided_p": 0.75,
+          "upper_tail_p": 0.375
+        },
+        "first": 130,
+        "holdout_effect_mean": 0.0033777777777777777,
+        "holdout_effect_values": [
+          -0.017866666666666666,
+          0.021866666666666666,
+          0.006133333333333333
+        ],
+        "same_direction_as_training": false,
+        "second": 381,
+        "training_effect": -0.02455999999999998
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 14,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.875,
+          "mean_difference": 0.01191111111111111,
+          "seed_pairs": 3,
+          "two_sided_p": 0.5,
+          "upper_tail_p": 0.25
+        },
+        "first": 412,
+        "holdout_effect_mean": 0.01191111111111111,
+        "holdout_effect_values": [
+          0.032266666666666666,
+          0.004266666666666665,
+          -0.0008000000000000004
+        ],
+        "same_direction_as_training": true,
+        "second": 493,
+        "training_effect": 0.024399999999999998
+      },
+      {
+        "bh_q": 1.0,
+        "candidate_index": 15,
+        "exact_test": {
+          "exact_assignments": 8,
+          "lower_tail_p": 0.625,
+          "mean_difference": 0.0011555555555555557,
+          "seed_pairs": 3,
+          "two_sided_p": 1.0,
+          "upper_tail_p": 0.5
+        },
+        "first": 17,
+        "holdout_effect_mean": 0.0011555555555555557,
+        "holdout_effect_values": [
+          -0.0002666666666666668,
+          -0.0013333333333333322,
+          0.005066666666666666
+        ],
+        "same_direction_as_training": true,
+        "second": 369,
+        "training_effect": 0.02424000000000004
+      }
+    ],
+    "gates": {
+      "bh_significant_features": 0,
+      "directionally_replicated_features": 9,
+      "ensemble_two_sided_p": 1.0
+    },
+    "per_seed": [
+      {
+        "ensemble_auc_vs_first_repairing": 0.50658858,
+        "ensemble_effect": -0.0006333333333333332,
+        "feature_effects": [
+          -0.028533333333333334,
+          0.0007999999999999995,
+          -0.020266666666666665,
+          0.0184,
+          -0.004,
+          0.0026666666666666666,
+          0.004533333333333334,
+          0.019733333333333332,
+          -0.010666666666666666,
+          -0.017066666666666667,
+          -0.005333333333333332,
+          0.0063999999999999994,
+          -0.0005333333333333336,
+          -0.017866666666666666,
+          0.032266666666666666,
+          -0.0002666666666666668
+        ],
+        "seed": 60000
+      },
+      {
+        "ensemble_auc_vs_first_repairing": 0.49674628,
+        "ensemble_effect": -0.0024,
+        "feature_effects": [
+          -0.013333333333333334,
+          0.022133333333333335,
+          0.013866666666666668,
+          0.0034666666666666665,
+          -0.010933333333333333,
+          -0.014133333333333331,
+          0.002933333333333334,
+          0.004533333333333332,
+          0.007733333333333333,
+          -0.005600000000000001,
+          0.014133333333333335,
+          -0.018666666666666665,
+          0.006399999999999999,
+          0.021866666666666666,
+          0.004266666666666665,
+          -0.0013333333333333322
+        ],
+        "seed": 61009
+      },
+      {
+        "ensemble_auc_vs_first_repairing": 0.5047838,
+        "ensemble_effect": 0.005366666666666667,
+        "feature_effects": [
+          0.016266666666666665,
+          -0.0010666666666666672,
+          0.017333333333333333,
+          -0.016533333333333334,
+          -0.0005333333333333336,
+          -0.025066666666666668,
+          -0.0034666666666666674,
+          0.007733333333333333,
+          0.002933333333333334,
+          0.032,
+          -0.003199999999999999,
+          0.019200000000000002,
+          0.005333333333333333,
+          0.006133333333333333,
+          -0.0008000000000000004,
+          0.005066666666666666
+        ],
+        "seed": 62018
+      }
+    ]
+  },
+  "schema_version": 1,
+  "scope_note": "Disjoint-key holdout of frozen R4 parity features; no feature selection occurs here."
+}

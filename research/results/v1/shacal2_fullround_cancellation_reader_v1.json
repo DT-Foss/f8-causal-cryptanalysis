@@ -1,0 +1,276 @@
+{
+  "causal": {
+    "bytes": 775,
+    "explicit_triplets": 3,
+    "file_sha256": "3b05b239fe4b9c23a8394cff3ee9c0e6a63c8da76b8824e99e0a423db74489a8",
+    "graph_sha256": "fcbd2bb4a497e7435369fdcf2a40c11f41793d288877f7f7c9b15d505307be04",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/shacal2_fullround_cancellation_reader_v1.causal",
+    "triplets": 3
+  },
+  "confirmation": [
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_bit_accuracy": 0.50147265625,
+        "max_word_matches": 0,
+        "mean_bit_accuracy": 0.500212646484375,
+        "total_word_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "bit_accuracy": 1.0,
+        "bit_matches": 256000,
+        "bit_total": 256000,
+        "word_accuracy": 1.0,
+        "word_matches": 8000,
+        "word_total": 8000
+      },
+      "key_index": 0,
+      "wrong_sigma_formula_control": {
+        "bit_accuracy": 0.50066796875,
+        "bit_matches": 128171,
+        "bit_total": 256000,
+        "word_accuracy": 0.0,
+        "word_matches": 0,
+        "word_total": 8000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_bit_accuracy": 0.50180078125,
+        "max_word_matches": 0,
+        "mean_bit_accuracy": 0.5003955078125,
+        "total_word_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "bit_accuracy": 1.0,
+        "bit_matches": 256000,
+        "bit_total": 256000,
+        "word_accuracy": 1.0,
+        "word_matches": 8000,
+        "word_total": 8000
+      },
+      "key_index": 1,
+      "wrong_sigma_formula_control": {
+        "bit_accuracy": 0.49742578125,
+        "bit_matches": 127341,
+        "bit_total": 256000,
+        "word_accuracy": 0.0,
+        "word_matches": 0,
+        "word_total": 8000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_bit_accuracy": 0.50196484375,
+        "max_word_matches": 0,
+        "mean_bit_accuracy": 0.49972167968750003,
+        "total_word_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "bit_accuracy": 1.0,
+        "bit_matches": 256000,
+        "bit_total": 256000,
+        "word_accuracy": 1.0,
+        "word_matches": 8000,
+        "word_total": 8000
+      },
+      "key_index": 2,
+      "wrong_sigma_formula_control": {
+        "bit_accuracy": 0.49910546875,
+        "bit_matches": 127771,
+        "bit_total": 256000,
+        "word_accuracy": 0.0,
+        "word_matches": 0,
+        "word_total": 8000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_bit_accuracy": 0.50117578125,
+        "max_word_matches": 0,
+        "mean_bit_accuracy": 0.499727294921875,
+        "total_word_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "bit_accuracy": 1.0,
+        "bit_matches": 256000,
+        "bit_total": 256000,
+        "word_accuracy": 1.0,
+        "word_matches": 8000,
+        "word_total": 8000
+      },
+      "key_index": 3,
+      "wrong_sigma_formula_control": {
+        "bit_accuracy": 0.501109375,
+        "bit_matches": 128284,
+        "bit_total": 256000,
+        "word_accuracy": 0.0,
+        "word_matches": 0,
+        "word_total": 8000
+      }
+    },
+    {
+      "bvn_routes": {
+        "count": 16,
+        "max_bit_accuracy": 0.5014140625,
+        "max_word_matches": 0,
+        "mean_bit_accuracy": 0.499923828125,
+        "total_word_matches": 0
+      },
+      "factual_above_all_bvn_routes": true,
+      "factual_reader_inference": {
+        "bit_accuracy": 1.0,
+        "bit_matches": 256000,
+        "bit_total": 256000,
+        "word_accuracy": 1.0,
+        "word_matches": 8000,
+        "word_total": 8000
+      },
+      "key_index": 4,
+      "wrong_sigma_formula_control": {
+        "bit_accuracy": 0.49930078125,
+        "bit_matches": 127821,
+        "bit_total": 256000,
+        "word_accuracy": 0.0,
+        "word_matches": 0,
+        "word_total": 8000
+      }
+    }
+  ],
+  "evidence_stage": "FULLROUND_CANCELLATION_RETAINED",
+  "kat": {
+    "bouncycastle_engine_raw_sha256": "fe457dec8a1679c8e49c0705ba861e45a4e754c3de9f7dc335cf90625daae08c",
+    "bouncycastle_engine_url": "https://github.com/bcgit/bc-java/blob/main/core/src/main/java/org/bouncycastle/crypto/engines/Shacal2Engine.java",
+    "bouncycastle_test_raw_sha256": "5d5b3ca6bb22b88efabf42d1fa9f50cc3e3abe39d25a87f4d74d7d629105ee1e",
+    "bouncycastle_test_url": "https://github.com/bcgit/bc-java/blob/main/core/src/test/java/org/bouncycastle/crypto/test/Shacal2Test.java",
+    "vectors": [
+      {
+        "ciphertext": "361ab6322fa9e7a7bb23818d839e01bddafdf47305426edd297aedb9f6202bae",
+        "key": "80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "match": true,
+        "name": "NESSIE_iterated_set_1_0_single",
+        "observed": "361ab6322fa9e7a7bb23818d839e01bddafdf47305426edd297aedb9f6202bae",
+        "plaintext": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "ciphertext": "00112233445566778899aabbccddeeff102132435465768798a9bacbdcedfe0f",
+        "key": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+        "match": true,
+        "name": "NESSIE_set_8_0",
+        "observed": "00112233445566778899aabbccddeeff102132435465768798a9bacbdcedfe0f",
+        "plaintext": "98bcc10405ab0bfc686bececaad01ac19b452511bceb9cb094f905c51ca45430"
+      }
+    ]
+  },
+  "parameters": {
+    "boundary": "R63_to_R64_fullround_endpoint",
+    "bvn_routes": 16,
+    "keys": 5,
+    "pairs_per_key": 8000,
+    "rounds": 64,
+    "seed": 88828001
+  },
+  "reader_triplets": [
+    {
+      "attrs": {
+        "information_reconstructed_bits": 32,
+        "reader_recipe": {
+          "operations": [
+            {
+              "input": "a63",
+              "op": "rotr_xor",
+              "out": "sigma0",
+              "shifts": [
+                2,
+                13,
+                22
+              ]
+            },
+            {
+              "args": [
+                "a63",
+                "b63",
+                "c63"
+              ],
+              "op": "majority",
+              "out": "majority"
+            },
+            {
+              "args": [
+                "sigma0",
+                "majority"
+              ],
+              "op": "add_mod2w",
+              "out": "t2"
+            },
+            {
+              "left": "a64",
+              "op": "sub_mod2w",
+              "out": "cancelled_t1",
+              "right": "e64"
+            },
+            {
+              "left": "t2",
+              "op": "sub_mod2w",
+              "out": "d63",
+              "right": "cancelled_t1"
+            }
+          ],
+          "output": "d63",
+          "word_bits": 32
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "shacal2-reader-d63",
+      "evidence_kind": "exact_composed_inverse",
+      "is_inferred": false,
+      "mechanism": "reader_executable_shared_t1_cancellation",
+      "outcome": "shacal2:r63_d",
+      "provenance": [
+        "shacal2-shared-t1-cancel",
+        "shacal2-t2"
+      ],
+      "source": "SHACAL2_fullround_cancellation_composition",
+      "trigger": "shacal2:r63_a_b_c_plus_r64_a_e"
+    },
+    {
+      "attrs": {
+        "formula": "a64-e64=T2-d63 mod 2^32"
+      },
+      "confidence": 1.0,
+      "edge_id": "shacal2-shared-t1-cancel",
+      "evidence_kind": "exact_round_equation",
+      "is_inferred": false,
+      "mechanism": "shared_t1_modular_subtraction",
+      "outcome": "shacal2:t2_minus_d63",
+      "provenance": [],
+      "source": "SHACAL2_dual_accumulator",
+      "trigger": "shacal2:r64_a_e"
+    },
+    {
+      "attrs": {
+        "formula": "T2=Sigma0(a63)+Maj(a63,b63,c63) mod 2^32"
+      },
+      "confidence": 1.0,
+      "edge_id": "shacal2-t2",
+      "evidence_kind": "exact_round_equation",
+      "is_inferred": false,
+      "mechanism": "sigma0_plus_majority",
+      "outcome": "shacal2:r63_t2",
+      "provenance": [],
+      "source": "SHACAL2_round_function",
+      "trigger": "shacal2:r63_a_b_c"
+    }
+  ],
+  "result": "The Reader cancels the shared T1 term at R64 and reconstructs d63 exactly.",
+  "retained": true,
+  "schema": "shacal2-fullround-cancellation-reader-v1"
+}

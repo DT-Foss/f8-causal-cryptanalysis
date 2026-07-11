@@ -1,0 +1,18 @@
+{
+  "schema": "frozen-transfer-config-v1",
+  "experiment": "mlkem_chosen_difference_frontier.py",
+  "question": "Does a fixed public compressed-v bit mutation reveal a parameter-set-specific or statistically exceptional structure through poly_decompress -> NTT?",
+  "variants": ["mlkem512", "mlkem768", "mlkem1024"],
+  "bits": [0, 1, 7, 15, 31, 63, 95, 127],
+  "operations_per_seed": 300,
+  "seeds": 5,
+  "repairing_routes": 8,
+  "random_bit_routes": 8,
+  "seed_base": 485001,
+  "primary_metric": "16-bin Z_q entropy deficit of NTT field differences",
+  "nulls": [
+    "independent row re-pairing of exact mutated output multiset",
+    "same-size row-wise random one-bit mutation controls"
+  ],
+  "decision_rule": "A candidate requires exact two-sided p <= 0.01 across five seeds and a parameter-set-specific excess beyond same-type random mutations."
+}

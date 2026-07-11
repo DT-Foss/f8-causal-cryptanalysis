@@ -1,0 +1,423 @@
+{
+  "causal": {
+    "bytes": 1025,
+    "explicit_triplets": 8,
+    "file_sha256": "66ba991254c2ea7960637f37f8603f95f8c1382117c299cafa054ed1fc143f19",
+    "graph_sha256": "79bc77f95068ca54370a4f6e41ec4f8992932ee756c958e0a765ff7a6cbfa57a",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/chacha_causal_contrast_signature_bvn_core_pooled_r2r20_top4_sequential_to_random_rank_v1.causal",
+    "triplets": 8
+  },
+  "chance": 0.5,
+  "overall_accuracy": 0.425,
+  "parameters": {
+    "bits": [
+      6,
+      13,
+      21,
+      25
+    ],
+    "counter_mode": "sequential",
+    "feature_indices": [
+      2,
+      9,
+      54,
+      63
+    ],
+    "feature_normalization": "rank",
+    "holdout_bits": [
+      14,
+      22,
+      24,
+      23
+    ],
+    "holdout_counter_mode": "random",
+    "output_view": "core",
+    "pairs_per_seed": 10000,
+    "repair_route_seed_strategy": "shared_per_seed_input_bit_across_round_classes",
+    "repairing_routes": 16,
+    "rounds": [
+      2,
+      20
+    ],
+    "route_mode": "bvn",
+    "train_seeds": 5,
+    "variance_mode": "pooled"
+  },
+  "per_class": {
+    "r2": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 20
+    },
+    "r20": {
+      "accuracy": 0.85,
+      "correct": 17,
+      "total": 20
+    }
+  },
+  "schema": "chacha-causal-contrast-signature-v1",
+  "scope": "direct ChaCha output causal contrast profile and reader-only reverse reduced-round class query; not key recovery",
+  "trials": [
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.1356432616709555,
+        "r20": 3.171325562999447
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.603465224070695,
+        "r20": 4.956402504827486
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.4313313865059518,
+        "r20": 4.463618044740088
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.8817060616200363,
+        "r20": 4.875415202609635
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 0.9183947286862486,
+        "r20": 2.7134185463166087
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.3219446081686463,
+        "r20": 4.447444531798792
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.159008208430117,
+        "r20": 4.705660478531992
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.230855489631171,
+        "r20": 5.044070767847171
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.0426920680747318,
+        "r20": 3.4655354837299024
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.506805386518233,
+        "r20": 4.790943204878493
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.830103196690684,
+        "r20": 4.819494916944285
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.8370397163430612,
+        "r20": 4.757631974200131
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": -0.17560681241530895,
+        "r20": 1.0779354168942552
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.7741098611453525,
+        "r20": 4.770376837090945
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.500615132200834,
+        "r20": 4.539777046126963
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.67064811597675,
+        "r20": 4.877899764211423
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 0.6865564462720524,
+        "r20": 2.550379726298943
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 3.087116711819749,
+        "r20": 5.13519273659733
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.780951855899166,
+        "r20": 5.3149311331724975
+      }
+    },
+    {
+      "actual": "r2",
+      "correct": false,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.315503747321283,
+        "r20": 4.935272900555689
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 0.4196194593044775,
+        "r20": 3.751149908581236
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -2.926686286733786,
+        "r20": 1.7969508569288397
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.9921619279680858,
+        "r20": 4.7435139522093
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -4.423410242912482,
+        "r20": -0.9323483114424302
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": false,
+      "predicted": "r2",
+      "scores": {
+        "r2": 4.867688296191704,
+        "r20": 4.112067795756336
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 0.3389313145449131,
+        "r20": 1.9686949311680384
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -0.5152862310832527,
+        "r20": 3.10647195283129
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -0.10468033109771402,
+        "r20": 3.5415378087956606
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 2.3284374611513114,
+        "r20": 3.134479066051006
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -3.742238589706323,
+        "r20": 2.234149698642277
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -2.9916583287627923,
+        "r20": 2.4119910485701883
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 3.2173226044218146,
+        "r20": 4.65519300704217
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": false,
+      "predicted": "r2",
+      "scores": {
+        "r2": 4.82433639383045,
+        "r20": 3.863589023808287
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -3.752370381470849,
+        "r20": 0.6151793250315496
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": false,
+      "predicted": "r2",
+      "scores": {
+        "r2": 2.979178407276756,
+        "r20": 2.7646996981158827
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 0.5982878407571077,
+        "r20": 2.3661783834119507
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -0.5236881312664665,
+        "r20": 2.329860565866441
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": 1.7427211812303907,
+        "r20": 4.534270642413075
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -0.16204604733754702,
+        "r20": 3.8870625078602172
+      }
+    },
+    {
+      "actual": "r20",
+      "correct": true,
+      "predicted": "r20",
+      "scores": {
+        "r2": -0.4756234200238826,
+        "r20": 2.473546933710602
+      }
+    }
+  ]
+}

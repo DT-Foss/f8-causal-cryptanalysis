@@ -1,0 +1,493 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "parameters": {
+    "bins": 16,
+    "bits": [
+      0,
+      31,
+      64,
+      127
+    ],
+    "edges_per_bit": 32,
+    "pairs": 500,
+    "representations": [
+      "identity",
+      "peel-final-linear"
+    ],
+    "rounds": [
+      3,
+      10
+    ],
+    "seed_base": 885001,
+    "seeds": 4,
+    "train_seeds": 2
+  },
+  "results": [
+    {
+      "accuracy_lift_over_chance": 0.5,
+      "causal": {
+        "bytes": 5383,
+        "explicit_triplets": 128,
+        "file_sha256": "b658c682b1c5227490517a06b606e74ac1d51efdb71af9f47772cfbce65c2248",
+        "graph_sha256": "ef8ec83ec3fb3e409471f84f0ec12d17f2748b435633d3b223347accf31668a5",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_input_causal_signature_smoke/aes-r3-identity-input-signature.causal",
+        "triplets": 128
+      },
+      "causal_path": "research/results/v1/aes_input_causal_signature_smoke/aes-r3-identity-input-signature.causal",
+      "chance_accuracy": 0.25,
+      "holdout_accuracy": 0.125,
+      "holdout_trials": [
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 17.265899389965163,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -55.31301167314647,
+            "31": -24.961817693217,
+            "64": -42.22771708318216,
+            "127": -46.82490155097065
+          }
+        },
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 2.546762974087528,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -56.28390533808953,
+            "31": -34.161654426649086,
+            "64": -44.504320425083456,
+            "127": -36.708417400736614
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 24.29594722845807,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -46.860175008431895,
+            "31": -51.65890313199733,
+            "64": -49.83163848793825,
+            "127": -22.564227779973827
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": true,
+          "margin": 8.273329151235473,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -38.32002314800009,
+            "31": -30.046693996764617,
+            "64": -58.97549126108697,
+            "127": -41.920274642419
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 19.18020396195547,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -52.75296189391727,
+            "31": -23.71598392564068,
+            "64": -42.89618788759615,
+            "127": -49.9931916158064
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 1.2897327168338109,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -54.39551388870319,
+            "31": -35.37840333030858,
+            "64": -36.66813604714239,
+            "127": -40.697956559817186
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": false,
+          "margin": 9.464940710805429,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -34.81646859482509,
+            "31": -45.003845475226576,
+            "64": -45.96365652299527,
+            "127": -44.28140930563052
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": false,
+          "margin": 7.417873432639453,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -30.28397485803754,
+            "31": -37.70184829067699,
+            "64": -53.96476192589189,
+            "127": -48.47764022307769
+          }
+        }
+      ],
+      "representation": "identity",
+      "rounds": 3
+    },
+    {
+      "accuracy_lift_over_chance": 0.5,
+      "causal": {
+        "bytes": 5702,
+        "explicit_triplets": 128,
+        "file_sha256": "7bc77c03e407a40908be160cf41d732c919e164716b8517ee59a090fb1b33a58",
+        "graph_sha256": "95b21fddc2b387de3ac447e8b8248e519322275870febb3a1dfddb06b61e3687",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_input_causal_signature_smoke/aes-r3-peel-final-linear-input-signature.causal",
+        "triplets": 128
+      },
+      "causal_path": "research/results/v1/aes_input_causal_signature_smoke/aes-r3-peel-final-linear-input-signature.causal",
+      "chance_accuracy": 0.25,
+      "holdout_accuracy": 0.125,
+      "holdout_trials": [
+        {
+          "actual_input_bit": 0,
+          "correct": true,
+          "margin": 0.7430823491255332,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -30.85999630893948,
+            "31": -43.60011775483026,
+            "64": -31.603078658065012,
+            "127": -72.54701440611603
+          }
+        },
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 17.71772900784622,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -42.15983854970841,
+            "31": -24.44210954186219,
+            "64": -68.48352421133843,
+            "127": -46.04933047781664
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 10.70082909173253,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -35.258565277172465,
+            "31": -46.03087148943516,
+            "64": -52.97001705226616,
+            "127": -45.959394368904995
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 11.928151413657982,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -30.806805621384047,
+            "31": -60.01922117065365,
+            "64": -47.57959271686313,
+            "127": -42.73495703504203
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 6.544711969166222,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -36.651250539620726,
+            "31": -46.92438686307589,
+            "64": -56.29709404225609,
+            "127": -43.19596250878695
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 6.000357560128428,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -37.556810335422156,
+            "31": -53.44506551282245,
+            "64": -46.27200828416577,
+            "127": -43.557167895550585
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": false,
+          "margin": 0.6796846272489887,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -32.37863902070154,
+            "31": -71.17173027916763,
+            "64": -33.05832364795053,
+            "127": -43.804627360277514
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": false,
+          "margin": 11.531199444609626,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -31.692126245663104,
+            "31": -54.68831353269438,
+            "64": -54.1469985784197,
+            "127": -43.22332569027273
+          }
+        }
+      ],
+      "representation": "peel-final-linear",
+      "rounds": 3
+    },
+    {
+      "accuracy_lift_over_chance": 0.5,
+      "causal": {
+        "bytes": 5595,
+        "explicit_triplets": 128,
+        "file_sha256": "03e9e0c0234abedf5c1e5b569ccd2e08344d04f4705d09075e599a89578ec508",
+        "graph_sha256": "e421b097c50123c9575a5e0ca6839aa6d289e98b31d234d168c20618c8c904c1",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_input_causal_signature_smoke/aes-r10-identity-input-signature.causal",
+        "triplets": 128
+      },
+      "causal_path": "research/results/v1/aes_input_causal_signature_smoke/aes-r10-identity-input-signature.causal",
+      "chance_accuracy": 0.25,
+      "holdout_accuracy": 0.125,
+      "holdout_trials": [
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 3.0137848887092105,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -39.86514585505736,
+            "31": -54.60965893078361,
+            "64": -40.38053848570337,
+            "127": -36.851360966348146
+          }
+        },
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 1.9475800674722663,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -47.43982709029124,
+            "31": -47.01567006188188,
+            "64": -38.388704415500996,
+            "127": -36.44112434802873
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 9.89655785002558,
+          "predicted_input_bit": 64,
+          "scores": {
+            "0": -39.44389224112837,
+            "31": -60.53056095448601,
+            "64": -29.547334391102787,
+            "127": -40.134566800589575
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 15.766276315419859,
+          "predicted_input_bit": 64,
+          "scores": {
+            "0": -47.71528057736039,
+            "31": -42.590568672904745,
+            "64": -26.824292357484886,
+            "127": -54.404971565525486
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 0.498976940206056,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -41.103935229214876,
+            "31": -40.60495828900882,
+            "64": -41.57212194866059,
+            "127": -48.94924870546743
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 6.40116002375747,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -34.457759850207744,
+            "31": -46.032316064944034,
+            "64": -40.85891987396521,
+            "127": -48.58031787135443
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": false,
+          "margin": 5.525840797478438,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -33.77445526117782,
+            "31": -41.48391885092946,
+            "64": -39.30029605865626,
+            "127": -57.29612917591316
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": true,
+          "margin": 6.1961330198047975,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -41.86947317164972,
+            "31": -53.79130570925259,
+            "64": -39.76494023348747,
+            "127": -33.568807213682675
+          }
+        }
+      ],
+      "representation": "identity",
+      "rounds": 10
+    },
+    {
+      "accuracy_lift_over_chance": 0.5,
+      "causal": {
+        "bytes": 5670,
+        "explicit_triplets": 128,
+        "file_sha256": "f432cc96c2a071cda38ae8e7f8e6a30cc7c04fbe9f0b3d9f9a5e411c64149655",
+        "graph_sha256": "599506af034af2ee98a11fbf89700c4f14dc938b817b6b115372f5a40296673b",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/aes_input_causal_signature_smoke/aes-r10-peel-final-linear-input-signature.causal",
+        "triplets": 128
+      },
+      "causal_path": "research/results/v1/aes_input_causal_signature_smoke/aes-r10-peel-final-linear-input-signature.causal",
+      "chance_accuracy": 0.25,
+      "holdout_accuracy": 0.125,
+      "holdout_trials": [
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 3.0137848887092105,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -39.865145855057364,
+            "31": -54.60965893078361,
+            "64": -40.380538485703376,
+            "127": -36.85136096634815
+          }
+        },
+        {
+          "actual_input_bit": 0,
+          "correct": false,
+          "margin": 1.9475800674722876,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -47.439827090291246,
+            "31": -47.01567006188187,
+            "64": -38.388704415501,
+            "127": -36.441124348028715
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 9.89655785002557,
+          "predicted_input_bit": 64,
+          "scores": {
+            "0": -39.44389224112836,
+            "31": -60.530560954486006,
+            "64": -29.54733439110279,
+            "127": -40.13456680058957
+          }
+        },
+        {
+          "actual_input_bit": 31,
+          "correct": false,
+          "margin": 15.766276315419848,
+          "predicted_input_bit": 64,
+          "scores": {
+            "0": -47.715280577360396,
+            "31": -42.59056867290474,
+            "64": -26.82429235748489,
+            "127": -54.40497156552548
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 0.498976940206056,
+          "predicted_input_bit": 31,
+          "scores": {
+            "0": -41.103935229214876,
+            "31": -40.60495828900882,
+            "64": -41.572121948660595,
+            "127": -48.94924870546743
+          }
+        },
+        {
+          "actual_input_bit": 64,
+          "correct": false,
+          "margin": 6.40116002375747,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -34.45775985020774,
+            "31": -46.03231606494404,
+            "64": -40.858919873965206,
+            "127": -48.58031787135444
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": false,
+          "margin": 5.525840797478416,
+          "predicted_input_bit": 0,
+          "scores": {
+            "0": -33.77445526117783,
+            "31": -41.48391885092946,
+            "64": -39.300296058656244,
+            "127": -57.296129175913165
+          }
+        },
+        {
+          "actual_input_bit": 127,
+          "correct": true,
+          "margin": 6.1961330198047975,
+          "predicted_input_bit": 127,
+          "scores": {
+            "0": -41.869473171649716,
+            "31": -53.79130570925259,
+            "64": -39.76494023348747,
+            "127": -33.568807213682675
+          }
+        }
+      ],
+      "representation": "peel-final-linear",
+      "rounds": 10
+    }
+  ],
+  "schema": "aes-input-causal-signature-v1",
+  "scope": "direct cipher-output causal compression plus heldout reverse input-bit batch inference; not key recovery or full-AES attack"
+}

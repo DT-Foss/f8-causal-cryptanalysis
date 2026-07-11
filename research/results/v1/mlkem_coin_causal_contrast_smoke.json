@@ -1,0 +1,145 @@
+{
+  "causal": {
+    "bytes": 120655,
+    "explicit_triplets": 3072,
+    "file_sha256": "834d6e946aa9bf41a85278e634cc27a3a6969c11ac3fb845953502ea95f7bc43",
+    "graph_sha256": "8ff00e943497f1b11c7b3a942a7091e5377cc3b63f1f643426e27cb0dbd7d156",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/mlkem_coin_causal_contrast_smoke.causal",
+    "triplets": 3072
+  },
+  "chance": 0.25,
+  "functional_decapsulations": [
+    200,
+    200,
+    200,
+    200
+  ],
+  "overall_accuracy": 0.25,
+  "parameters": {
+    "bits": [
+      0,
+      63,
+      127,
+      255
+    ],
+    "operations_per_key": 200,
+    "repairing_routes": 4,
+    "train_keys": 2,
+    "variant": "mlkem512"
+  },
+  "per_class": {
+    "0": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 2
+    },
+    "127": {
+      "accuracy": 0.5,
+      "correct": 1,
+      "total": 2
+    },
+    "255": {
+      "accuracy": 0.5,
+      "correct": 1,
+      "total": 2
+    },
+    "63": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 2
+    }
+  },
+  "schema": "mlkem-coin-causal-contrast-v1",
+  "scope": "fixed-key deterministic encapsulation coin-bit output contrast; not an IND-CPA/CCA or key-recovery claim",
+  "trials": [
+    {
+      "actual": 0,
+      "correct": false,
+      "predicted": 63,
+      "scores": {
+        "0": -573267.6981507881,
+        "63": -115322.99586502151,
+        "127": -1132188.8400595123,
+        "255": -684090.1816255552
+      }
+    },
+    {
+      "actual": 0,
+      "correct": false,
+      "predicted": 63,
+      "scores": {
+        "0": -287396.4883261031,
+        "63": -273229.37919542147,
+        "127": -4119962.2861701692,
+        "255": -3286451.7796122334
+      }
+    },
+    {
+      "actual": 63,
+      "correct": false,
+      "predicted": 0,
+      "scores": {
+        "0": -819473.9583181811,
+        "63": -4281046.3033615155,
+        "127": -4020333.8769312683,
+        "255": -9405866.251077523
+      }
+    },
+    {
+      "actual": 63,
+      "correct": false,
+      "predicted": 0,
+      "scores": {
+        "0": -289443.1254866746,
+        "63": -1034263.9826405304,
+        "127": -3714330.1134605897,
+        "255": -3421588.7854494723
+      }
+    },
+    {
+      "actual": 127,
+      "correct": true,
+      "predicted": 127,
+      "scores": {
+        "0": -1217275.0160326164,
+        "63": -451293.2858412855,
+        "127": -350434.65784439235,
+        "255": -1617562.0032550783
+      }
+    },
+    {
+      "actual": 127,
+      "correct": false,
+      "predicted": 255,
+      "scores": {
+        "0": -1641181.5296723517,
+        "63": -4485203.7130494295,
+        "127": -5398660.893878355,
+        "255": -1513660.5502575778
+      }
+    },
+    {
+      "actual": 255,
+      "correct": false,
+      "predicted": 0,
+      "scores": {
+        "0": -203121.9176787602,
+        "63": -682039.004627601,
+        "127": -1014475.4309251257,
+        "255": -2332543.565906171
+      }
+    },
+    {
+      "actual": 255,
+      "correct": true,
+      "predicted": 255,
+      "scores": {
+        "0": -2241324.471605098,
+        "63": -1491525.7523602594,
+        "127": -1377627.3243561485,
+        "255": -305920.8553647958
+      }
+    }
+  ]
+}

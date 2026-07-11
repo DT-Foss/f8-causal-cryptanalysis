@@ -1,0 +1,302 @@
+{
+  "environment": {
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "experiment": "mlkem_deterministic_io_f8",
+  "parameters": {
+    "operations": 5000,
+    "permutations": 5,
+    "variants": [
+      "mlkem512",
+      "mlkem768",
+      "mlkem1024"
+    ]
+  },
+  "results": [
+    {
+      "input_coins_to_ciphertext_prefix": {
+        "alpha": 0.05,
+        "max_chi2": 80.51068289043468,
+        "significant_pairs": 46,
+        "significant_rate": 0.044921875,
+        "tested_pairs": 1024
+      },
+      "input_coins_to_shared_secret": {
+        "alpha": 0.05,
+        "max_chi2": 87.91834012357056,
+        "significant_pairs": 57,
+        "significant_rate": 0.0556640625,
+        "tested_pairs": 1024
+      },
+      "operations": 5000,
+      "scope_note": "The inputs are deterministic test coins; this is a relation measurement, not a security game.",
+      "shuffled_ciphertext_controls": [
+        {
+          "alpha": 0.05,
+          "max_chi2": 90.11743411037415,
+          "significant_pairs": 48,
+          "significant_rate": 0.046875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 91.80075861768074,
+          "significant_pairs": 61,
+          "significant_rate": 0.0595703125,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 87.99107782439351,
+          "significant_pairs": 57,
+          "significant_rate": 0.0556640625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 83.15226824376117,
+          "significant_pairs": 56,
+          "significant_rate": 0.0546875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 85.38242727123,
+          "significant_pairs": 53,
+          "significant_rate": 0.0517578125,
+          "tested_pairs": 1024
+        }
+      ],
+      "shuffled_shared_secret_controls": [
+        {
+          "alpha": 0.05,
+          "max_chi2": 96.29318672015981,
+          "significant_pairs": 55,
+          "significant_rate": 0.0537109375,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 93.86925322203572,
+          "significant_pairs": 53,
+          "significant_rate": 0.0517578125,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 84.21438974094923,
+          "significant_pairs": 49,
+          "significant_rate": 0.0478515625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 89.35238631786169,
+          "significant_pairs": 52,
+          "significant_rate": 0.05078125,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 89.37790895414061,
+          "significant_pairs": 55,
+          "significant_rate": 0.0537109375,
+          "tested_pairs": 1024
+        }
+      ],
+      "successful_decapsulations": 5000,
+      "variant": "mlkem512"
+    },
+    {
+      "input_coins_to_ciphertext_prefix": {
+        "alpha": 0.05,
+        "max_chi2": 87.31740843309417,
+        "significant_pairs": 56,
+        "significant_rate": 0.0546875,
+        "tested_pairs": 1024
+      },
+      "input_coins_to_shared_secret": {
+        "alpha": 0.05,
+        "max_chi2": 95.5953708617433,
+        "significant_pairs": 45,
+        "significant_rate": 0.0439453125,
+        "tested_pairs": 1024
+      },
+      "operations": 5000,
+      "scope_note": "The inputs are deterministic test coins; this is a relation measurement, not a security game.",
+      "shuffled_ciphertext_controls": [
+        {
+          "alpha": 0.05,
+          "max_chi2": 83.99061367371617,
+          "significant_pairs": 42,
+          "significant_rate": 0.041015625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 86.5852344484785,
+          "significant_pairs": 64,
+          "significant_rate": 0.0625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 91.60129649178931,
+          "significant_pairs": 56,
+          "significant_rate": 0.0546875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 85.05245480979248,
+          "significant_pairs": 53,
+          "significant_rate": 0.0517578125,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 89.85603381427951,
+          "significant_pairs": 57,
+          "significant_rate": 0.0556640625,
+          "tested_pairs": 1024
+        }
+      ],
+      "shuffled_shared_secret_controls": [
+        {
+          "alpha": 0.05,
+          "max_chi2": 99.86679551963499,
+          "significant_pairs": 49,
+          "significant_rate": 0.0478515625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 92.49732742315283,
+          "significant_pairs": 54,
+          "significant_rate": 0.052734375,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 89.75181799482314,
+          "significant_pairs": 59,
+          "significant_rate": 0.0576171875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 98.45504201217854,
+          "significant_pairs": 45,
+          "significant_rate": 0.0439453125,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 84.3623339964696,
+          "significant_pairs": 45,
+          "significant_rate": 0.0439453125,
+          "tested_pairs": 1024
+        }
+      ],
+      "successful_decapsulations": 5000,
+      "variant": "mlkem768"
+    },
+    {
+      "input_coins_to_ciphertext_prefix": {
+        "alpha": 0.05,
+        "max_chi2": 82.19642287652428,
+        "significant_pairs": 46,
+        "significant_rate": 0.044921875,
+        "tested_pairs": 1024
+      },
+      "input_coins_to_shared_secret": {
+        "alpha": 0.05,
+        "max_chi2": 86.5216018975168,
+        "significant_pairs": 36,
+        "significant_rate": 0.03515625,
+        "tested_pairs": 1024
+      },
+      "operations": 5000,
+      "scope_note": "The inputs are deterministic test coins; this is a relation measurement, not a security game.",
+      "shuffled_ciphertext_controls": [
+        {
+          "alpha": 0.05,
+          "max_chi2": 82.85056910102547,
+          "significant_pairs": 47,
+          "significant_rate": 0.0458984375,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 90.67965188094252,
+          "significant_pairs": 49,
+          "significant_rate": 0.0478515625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 82.21036821609415,
+          "significant_pairs": 44,
+          "significant_rate": 0.04296875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 79.73109533759401,
+          "significant_pairs": 47,
+          "significant_rate": 0.0458984375,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 83.41397004901222,
+          "significant_pairs": 54,
+          "significant_rate": 0.052734375,
+          "tested_pairs": 1024
+        }
+      ],
+      "shuffled_shared_secret_controls": [
+        {
+          "alpha": 0.05,
+          "max_chi2": 87.46751719357594,
+          "significant_pairs": 46,
+          "significant_rate": 0.044921875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 84.40258568553072,
+          "significant_pairs": 51,
+          "significant_rate": 0.0498046875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 85.7502576979987,
+          "significant_pairs": 57,
+          "significant_rate": 0.0556640625,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 93.00958790586687,
+          "significant_pairs": 48,
+          "significant_rate": 0.046875,
+          "tested_pairs": 1024
+        },
+        {
+          "alpha": 0.05,
+          "max_chi2": 84.24308012170384,
+          "significant_pairs": 58,
+          "significant_rate": 0.056640625,
+          "tested_pairs": 1024
+        }
+      ],
+      "successful_decapsulations": 5000,
+      "variant": "mlkem1024"
+    }
+  ],
+  "schema_version": 1,
+  "security_scope": "No IND-CPA/CCA, key-recovery, or attack claim is within scope."
+}

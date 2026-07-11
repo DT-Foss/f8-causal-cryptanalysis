@@ -1,0 +1,13 @@
+{
+  "schema": "frozen-direct-output-causal-confirmation-v1",
+  "discovery_artifact": "research/results/v1/mlkem_coin_causal_contrast_v1.json",
+  "discovery_sha256": "e8007fd8447d568b76e11a32a99f3b4757f09e999293eb24c911ea3ce4ee3ad3",
+  "variant": "mlkem512",
+  "classes": [0, 63, 127, 255],
+  "candidate": 63,
+  "operations_per_key": 1000,
+  "keys": {"train": 5, "holdout": 5},
+  "repairing_routes": 16,
+  "seed_base": 3385001,
+  "decision_rule": "Bit 63 reader-only class accuracy must be >= 80% while every comparison bit is <= 50%; all decapsulations must pass."
+}

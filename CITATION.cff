@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use F8-Causal or a retained result, cite this software snapshot and the specific artifact hash."
+type: software
+title: "F8-Causal: Full-Round Distinguishers, Causal Readers, and Reproducible Cryptanalysis"
+abstract: >-
+  Reproducible implementations, controls, typed causal evidence graphs, and
+  result artifacts for F8, CASI/LiveCASI, and full-round cryptanalytic Reader
+  relations across block ciphers, hash compression functions, ChaCha20, and
+  Keccak-f[1600].
+authors:
+  - family-names: Foss
+    given-names: David Tom
+    email: david@foss.com.de
+    orcid: "https://orcid.org/0009-0004-0289-7154"
+version: 0.1.0
+date-released: 2026-07-11
+license: BSD-3-Clause
+repository-code: "https://github.com/DT-Foss/f8-causal-cryptanalysis"
+url: "https://github.com/DT-Foss/f8-causal-cryptanalysis/releases/tag/v0.1.0-prior-art"
+keywords:
+  - cryptanalysis
+  - full-round distinguisher
+  - causal inference
+  - state reconstruction
+  - ARX
+  - F8
+  - CASI
+  - Keccak
+  - reproducibility
+references:
+  - type: conference-paper
+    title: "Persistent Cross-Round Carry Leakage in ARX Ciphers: Detection, Prediction, and Topological Classification"
+    authors:
+      - family-names: Foss
+        given-names: David Tom
+    collection-title: "IEEE ICECET 2026"
+    year: 2026
+  - type: conference-paper
+    title: "Compression-Based Trust Verification of Lightweight Ciphers Deployed in Nano-IoT Communication Standards"
+    authors:
+      - family-names: Foss
+        given-names: David Tom
+    collection-title: "IEEE NANO 2026"
+    year: 2026

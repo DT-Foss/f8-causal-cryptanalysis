@@ -1,0 +1,708 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1"
+  },
+  "experiment": "chacha_involution_fair_null_suite",
+  "figure": "research/results/v1/chacha_involution_fair_null_smoke.png",
+  "parameters": {
+    "active_bits": [
+      8,
+      10
+    ],
+    "cosets": 2,
+    "counter_bit": 0,
+    "null": "random fixed-point-free perfect matching; bijective involution on identical output multiset",
+    "rounds": [
+      4,
+      8,
+      20
+    ],
+    "routes": 3,
+    "seed_base": 150000,
+    "seeds": 3
+  },
+  "results": [
+    {
+      "active_low_bits": 8,
+      "cosets_per_key": 2,
+      "counter_values_per_coset": 256,
+      "entropy_effect": {
+        "maximum": 0.5813911002151286,
+        "mean": 0.1945672166737206,
+        "minimum": -0.5252688135527066,
+        "sample_sd_ddof1": 0.6239766490542589,
+        "values": [
+          0.5275793633587398,
+          0.5813911002151286,
+          -0.5252688135527066
+        ]
+      },
+      "entropy_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.875,
+        "mean_difference": 0.1945672166737206,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.25
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "b2d9be87fa215e1a16e561fa702458f6beb6d7761f6187773a20cf06048487f1",
+              "entropy_effect": 0.012879116738872654,
+              "entropy_route_z": 0.06511686183001719,
+              "mean_bit_bias_effect": -0.19075520833333348
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "f30e07c2a40cb7829dd1f3c39fa4f376734162fa9578c3390a95bc1f2198f58d",
+              "entropy_effect": 1.042279609978607,
+              "entropy_route_z": 2.7017448464546527,
+              "mean_bit_bias_effect": -0.16617838541666652
+            }
+          ],
+          "key_seed": 150000,
+          "mean_bit_bias_effect": -0.178466796875,
+          "mean_entropy_effect": 0.5275793633587398,
+          "mean_entropy_route_z": 1.383430854142335
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "73ee6e8bf14ff0fdba438750071c91c3764d60277a4612ee2a1b5d1551815a46",
+              "entropy_effect": -0.18060941557969556,
+              "entropy_route_z": -0.4413292353600943,
+              "mean_bit_bias_effect": -0.04248046875
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "6846d8e84c3c2e0f552c19e29d2cfb3e5685de41d26db02c0fd2b076b76dab95",
+              "entropy_effect": 1.3433916160099528,
+              "entropy_route_z": 3.547988022213955,
+              "mean_bit_bias_effect": 0.25244140625
+            }
+          ],
+          "key_seed": 151009,
+          "mean_bit_bias_effect": 0.10498046875,
+          "mean_entropy_effect": 0.5813911002151286,
+          "mean_entropy_route_z": 1.5533293934269303
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "80db7709cf67f0b11fd846b138f71bd17c8d279262c41a5e793ca2e4791bf3db",
+              "entropy_effect": -0.4863300036163878,
+              "entropy_route_z": -0.9904907768456053,
+              "mean_bit_bias_effect": -0.2683919270833335
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "3e44cb794647d453d5ddbbea58c1f10326fb5b89543438efeafa9bbb8a2ead06",
+              "entropy_effect": -0.5642076234890254,
+              "entropy_route_z": -1.4022570665710925,
+              "mean_bit_bias_effect": -0.07340494791666652
+            }
+          ],
+          "key_seed": 152018,
+          "mean_bit_bias_effect": -0.1708984375,
+          "mean_entropy_effect": -0.5252688135527066,
+          "mean_entropy_route_z": -1.1963739217083489
+        }
+      ],
+      "mean_bit_bias_effect": {
+        "maximum": 0.10498046875,
+        "mean": -0.08146158854166667,
+        "minimum": -0.178466796875,
+        "sample_sd_ddof1": 0.16150789628147946,
+        "values": [
+          -0.178466796875,
+          0.10498046875,
+          -0.1708984375
+        ]
+      },
+      "mean_bit_bias_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.25,
+        "mean_difference": -0.08146158854166667,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.875
+      },
+      "mean_entropy_route_z": 0.580128775286972,
+      "rounds": 4
+    },
+    {
+      "active_low_bits": 10,
+      "cosets_per_key": 2,
+      "counter_values_per_coset": 1024,
+      "entropy_effect": {
+        "maximum": 0.427972089735837,
+        "mean": -0.011093104107980404,
+        "minimum": -0.2810417502670983,
+        "sample_sd_ddof1": 0.3835693696771425,
+        "values": [
+          -0.1802096517926799,
+          0.427972089735837,
+          -0.2810417502670983
+        ]
+      },
+      "entropy_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.5,
+        "mean_difference": -0.011093104107980404,
+        "seed_pairs": 3,
+        "two_sided_p": 1.0,
+        "upper_tail_p": 0.625
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "ac647d38b90b75ed33112f93678a9c4a0d0022cb44bb1942630cc408bc0c5903",
+              "entropy_effect": -0.029939981867702414,
+              "entropy_route_z": -0.3722639002983002,
+              "mean_bit_bias_effect": -0.25565592447916674
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "b6e81d78bfae19fc2ffd5990e6cbd115d9328a2dbe0203aee8d6ca9511f07893",
+              "entropy_effect": -0.33047932171765737,
+              "entropy_route_z": -1.0167755225155475,
+              "mean_bit_bias_effect": 0.10819498697916674
+            }
+          ],
+          "key_seed": 150000,
+          "mean_bit_bias_effect": -0.07373046875,
+          "mean_entropy_effect": -0.1802096517926799,
+          "mean_entropy_route_z": -0.6945197114069238
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "050c8051ec76b391791c002aa0d125b953cd6e6f3d1ea067de73b685b7dec3d0",
+              "entropy_effect": 0.2073776535623857,
+              "entropy_route_z": 2.885556149903305,
+              "mean_bit_bias_effect": -0.2537841796875
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "5dc8bf9295d278b5715e5d42b5d6ace632176b53478674605daf9818f4395788",
+              "entropy_effect": 0.6485665259092883,
+              "entropy_route_z": 1.6718398228032034,
+              "mean_bit_bias_effect": 0.09318033854166674
+            }
+          ],
+          "key_seed": 151009,
+          "mean_bit_bias_effect": -0.08030192057291663,
+          "mean_entropy_effect": 0.427972089735837,
+          "mean_entropy_route_z": 2.2786979863532544
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "1567025808b6fd73715edacbe9948c508fe9c4cdb722213997578ffe2d0bfc2c",
+              "entropy_effect": -0.2267710437023318,
+              "entropy_route_z": -1.0154398402491212,
+              "mean_bit_bias_effect": 0.07108561197916652
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "ddb2534530a4c2703d0245852d0010507fbe23772f881da98cf3743479670dc3",
+              "entropy_effect": -0.33531245683186484,
+              "entropy_route_z": -0.9844370997661329,
+              "mean_bit_bias_effect": -0.2567545572916665
+            }
+          ],
+          "key_seed": 152018,
+          "mean_bit_bias_effect": -0.09283447265625,
+          "mean_entropy_effect": -0.2810417502670983,
+          "mean_entropy_route_z": -0.999938470007627
+        }
+      ],
+      "mean_bit_bias_effect": {
+        "maximum": -0.07373046875,
+        "mean": -0.08228895399305554,
+        "minimum": -0.09283447265625,
+        "sample_sd_ddof1": 0.009705769813470003,
+        "values": [
+          -0.07373046875,
+          -0.08030192057291663,
+          -0.09283447265625
+        ]
+      },
+      "mean_bit_bias_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.125,
+        "mean_difference": -0.08228895399305554,
+        "seed_pairs": 3,
+        "two_sided_p": 0.25,
+        "upper_tail_p": 1.0
+      },
+      "mean_entropy_route_z": 0.19474660164623456,
+      "rounds": 4
+    },
+    {
+      "active_low_bits": 8,
+      "cosets_per_key": 2,
+      "counter_values_per_coset": 256,
+      "entropy_effect": {
+        "maximum": 1.2394704925234805,
+        "mean": 0.36385983281185474,
+        "minimum": -0.4089223547990315,
+        "sample_sd_ddof1": 0.8289933749927885,
+        "values": [
+          1.2394704925234805,
+          -0.4089223547990315,
+          0.2610313607111152
+        ]
+      },
+      "entropy_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.75,
+        "mean_difference": 0.36385983281185474,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.375
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "b2d9be87fa215e1a16e561fa702458f6beb6d7761f6187773a20cf06048487f1",
+              "entropy_effect": 1.5086998622767425,
+              "entropy_route_z": 1.951342936215879,
+              "mean_bit_bias_effect": 0.07975260416666674
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "f30e07c2a40cb7829dd1f3c39fa4f376734162fa9578c3390a95bc1f2198f58d",
+              "entropy_effect": 0.9702411227702186,
+              "entropy_route_z": 5.447482849845366,
+              "mean_bit_bias_effect": 0.146484375
+            }
+          ],
+          "key_seed": 150000,
+          "mean_bit_bias_effect": 0.11311848958333337,
+          "mean_entropy_effect": 1.2394704925234805,
+          "mean_entropy_route_z": 3.6994128930306225
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "73ee6e8bf14ff0fdba438750071c91c3764d60277a4612ee2a1b5d1551815a46",
+              "entropy_effect": 0.2008426603964466,
+              "entropy_route_z": 0.26038313677762154,
+              "mean_bit_bias_effect": 0.06331380208333348
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "6846d8e84c3c2e0f552c19e29d2cfb3e5685de41d26db02c0fd2b076b76dab95",
+              "entropy_effect": -1.0186873699945096,
+              "entropy_route_z": -9.203255449660249,
+              "mean_bit_bias_effect": -0.2861328125
+            }
+          ],
+          "key_seed": 151009,
+          "mean_bit_bias_effect": -0.11140950520833326,
+          "mean_entropy_effect": -0.4089223547990315,
+          "mean_entropy_route_z": -4.471436156441314
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "80db7709cf67f0b11fd846b138f71bd17c8d279262c41a5e793ca2e4791bf3db",
+              "entropy_effect": -0.06115777110123588,
+              "entropy_route_z": -0.4041364363076582,
+              "mean_bit_bias_effect": 0.18375651041666674
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "3e44cb794647d453d5ddbbea58c1f10326fb5b89543438efeafa9bbb8a2ead06",
+              "entropy_effect": 0.5832204925234663,
+              "entropy_route_z": 0.636280222607221,
+              "mean_bit_bias_effect": -0.1376953125
+            }
+          ],
+          "key_seed": 152018,
+          "mean_bit_bias_effect": 0.02303059895833337,
+          "mean_entropy_effect": 0.2610313607111152,
+          "mean_entropy_route_z": 0.11607189314978136
+        }
+      ],
+      "mean_bit_bias_effect": {
+        "maximum": 0.11311848958333337,
+        "mean": 0.008246527777777827,
+        "minimum": -0.11140950520833326,
+        "sample_sd_ddof1": 0.11299173280287134,
+        "values": [
+          0.11311848958333337,
+          -0.11140950520833326,
+          0.02303059895833337
+        ]
+      },
+      "mean_bit_bias_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.75,
+        "mean_difference": 0.008246527777777827,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.375
+      },
+      "mean_entropy_route_z": -0.21865045675363667,
+      "rounds": 8
+    },
+    {
+      "active_low_bits": 10,
+      "cosets_per_key": 2,
+      "counter_values_per_coset": 1024,
+      "entropy_effect": {
+        "maximum": 0.03460529808294588,
+        "mean": -0.22452816237783205,
+        "minimum": -0.4998590321303631,
+        "sample_sd_ddof1": 0.2676000693542766,
+        "values": [
+          0.03460529808294588,
+          -0.4998590321303631,
+          -0.20833075308607896
+        ]
+      },
+      "entropy_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.25,
+        "mean_difference": -0.22452816237783205,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.875
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "ac647d38b90b75ed33112f93678a9c4a0d0022cb44bb1942630cc408bc0c5903",
+              "entropy_effect": -0.043908668742695056,
+              "entropy_route_z": -0.2172266003964633,
+              "mean_bit_bias_effect": 0.149658203125
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "b6e81d78bfae19fc2ffd5990e6cbd115d9328a2dbe0203aee8d6ca9511f07893",
+              "entropy_effect": 0.11311926490858681,
+              "entropy_route_z": 1.0654492657442975,
+              "mean_bit_bias_effect": 0.01192220052083326
+            }
+          ],
+          "key_seed": 150000,
+          "mean_bit_bias_effect": 0.08079020182291663,
+          "mean_entropy_effect": 0.03460529808294588,
+          "mean_entropy_route_z": 0.4241113326739171
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "050c8051ec76b391791c002aa0d125b953cd6e6f3d1ea067de73b685b7dec3d0",
+              "entropy_effect": -0.8381788117153164,
+              "entropy_route_z": -2.3623621007434648,
+              "mean_bit_bias_effect": -0.03287760416666652
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "5dc8bf9295d278b5715e5d42b5d6ace632176b53478674605daf9818f4395788",
+              "entropy_effect": -0.1615392525454098,
+              "entropy_route_z": -0.5959786007689809,
+              "mean_bit_bias_effect": 0.06563313802083326
+            }
+          ],
+          "key_seed": 151009,
+          "mean_bit_bias_effect": 0.01637776692708337,
+          "mean_entropy_effect": -0.4998590321303631,
+          "mean_entropy_route_z": -1.4791703507562228
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "1567025808b6fd73715edacbe9948c508fe9c4cdb722213997578ffe2d0bfc2c",
+              "entropy_effect": -0.6232215294113743,
+              "entropy_route_z": -1.1014479924816711,
+              "mean_bit_bias_effect": -0.18135579427083348
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "ddb2534530a4c2703d0245852d0010507fbe23772f881da98cf3743479670dc3",
+              "entropy_effect": 0.2065600232392164,
+              "entropy_route_z": 2.2416665791884314,
+              "mean_bit_bias_effect": 0.003946940104166519
+            }
+          ],
+          "key_seed": 152018,
+          "mean_bit_bias_effect": -0.08870442708333348,
+          "mean_entropy_effect": -0.20833075308607896,
+          "mean_entropy_route_z": 0.5701092933533801
+        }
+      ],
+      "mean_bit_bias_effect": {
+        "maximum": 0.08079020182291663,
+        "mean": 0.002821180555555506,
+        "minimum": -0.08870442708333348,
+        "sample_sd_ddof1": 0.08555666591536501,
+        "values": [
+          0.08079020182291663,
+          0.01637776692708337,
+          -0.08870442708333348
+        ]
+      },
+      "mean_bit_bias_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.625,
+        "mean_difference": 0.002821180555555506,
+        "seed_pairs": 3,
+        "two_sided_p": 1.0,
+        "upper_tail_p": 0.5
+      },
+      "mean_entropy_route_z": -0.16164990824297523,
+      "rounds": 8
+    },
+    {
+      "active_low_bits": 8,
+      "cosets_per_key": 2,
+      "counter_values_per_coset": 256,
+      "entropy_effect": {
+        "maximum": 0.2750088463331153,
+        "mean": 0.06556549143012091,
+        "minimum": -0.3286332806322534,
+        "sample_sd_ddof1": 0.34160924678515503,
+        "values": [
+          0.2750088463331153,
+          -0.3286332806322534,
+          0.25032090858950085
+        ]
+      },
+      "entropy_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.625,
+        "mean_difference": 0.06556549143012091,
+        "seed_pairs": 3,
+        "two_sided_p": 1.0,
+        "upper_tail_p": 0.5
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "b2d9be87fa215e1a16e561fa702458f6beb6d7761f6187773a20cf06048487f1",
+              "entropy_effect": 0.43053333183198106,
+              "entropy_route_z": 1.2145421017263314,
+              "mean_bit_bias_effect": -0.12044270833333326
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "f30e07c2a40cb7829dd1f3c39fa4f376734162fa9578c3390a95bc1f2198f58d",
+              "entropy_effect": 0.11948436083424951,
+              "entropy_route_z": 0.8806529920878202,
+              "mean_bit_bias_effect": -0.03125
+            }
+          ],
+          "key_seed": 150000,
+          "mean_bit_bias_effect": -0.07584635416666663,
+          "mean_entropy_effect": 0.2750088463331153,
+          "mean_entropy_route_z": 1.0475975469070757
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "73ee6e8bf14ff0fdba438750071c91c3764d60277a4612ee2a1b5d1551815a46",
+              "entropy_effect": -0.2236309973461772,
+              "entropy_route_z": -0.3079594259714039,
+              "mean_bit_bias_effect": 0.22265625
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "6846d8e84c3c2e0f552c19e29d2cfb3e5685de41d26db02c0fd2b076b76dab95",
+              "entropy_effect": -0.4336355639183296,
+              "entropy_route_z": -0.8650356482425694,
+              "mean_bit_bias_effect": -0.16959635416666652
+            }
+          ],
+          "key_seed": 151009,
+          "mean_bit_bias_effect": 0.02652994791666674,
+          "mean_entropy_effect": -0.3286332806322534,
+          "mean_entropy_route_z": -0.5864975371069867
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "80db7709cf67f0b11fd846b138f71bd17c8d279262c41a5e793ca2e4791bf3db",
+              "entropy_effect": 0.2971223801273766,
+              "entropy_route_z": 0.49638568860649124,
+              "mean_bit_bias_effect": 0.08740234375
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "3e44cb794647d453d5ddbbea58c1f10326fb5b89543438efeafa9bbb8a2ead06",
+              "entropy_effect": 0.20351943705162512,
+              "entropy_route_z": 0.3500277906520672,
+              "mean_bit_bias_effect": -0.18587239583333326
+            }
+          ],
+          "key_seed": 152018,
+          "mean_bit_bias_effect": -0.04923502604166663,
+          "mean_entropy_effect": 0.25032090858950085,
+          "mean_entropy_route_z": 0.42320673962927924
+        }
+      ],
+      "mean_bit_bias_effect": {
+        "maximum": 0.02652994791666674,
+        "mean": -0.032850477430555504,
+        "minimum": -0.07584635416666663,
+        "sample_sd_ddof1": 0.05311842318778749,
+        "values": [
+          -0.07584635416666663,
+          0.02652994791666674,
+          -0.04923502604166663
+        ]
+      },
+      "mean_bit_bias_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.25,
+        "mean_difference": -0.032850477430555504,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.875
+      },
+      "mean_entropy_route_z": 0.2947689164764561,
+      "rounds": 20
+    },
+    {
+      "active_low_bits": 10,
+      "cosets_per_key": 2,
+      "counter_values_per_coset": 1024,
+      "entropy_effect": {
+        "maximum": 0.2390532346298304,
+        "mean": -0.09711532923185295,
+        "minimum": -0.30322126095615687,
+        "sample_sd_ddof1": 0.2936028326662342,
+        "values": [
+          -0.2271779613692324,
+          -0.30322126095615687,
+          0.2390532346298304
+        ]
+      },
+      "entropy_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.375,
+        "mean_difference": -0.09711532923185295,
+        "seed_pairs": 3,
+        "two_sided_p": 0.75,
+        "upper_tail_p": 0.75
+      },
+      "keys": [
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "ac647d38b90b75ed33112f93678a9c4a0d0022cb44bb1942630cc408bc0c5903",
+              "entropy_effect": -0.10296406380184564,
+              "entropy_route_z": -0.4174636723816352,
+              "mean_bit_bias_effect": -0.12967936197916652
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "b6e81d78bfae19fc2ffd5990e6cbd115d9328a2dbe0203aee8d6ca9511f07893",
+              "entropy_effect": -0.3513918589366192,
+              "entropy_route_z": -1.7280274606328374,
+              "mean_bit_bias_effect": -0.03776041666666674
+            }
+          ],
+          "key_seed": 150000,
+          "mean_bit_bias_effect": -0.08371988932291663,
+          "mean_entropy_effect": -0.2271779613692324,
+          "mean_entropy_route_z": -1.0727455665072363
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "050c8051ec76b391791c002aa0d125b953cd6e6f3d1ea067de73b685b7dec3d0",
+              "entropy_effect": -0.39374227358606007,
+              "entropy_route_z": -3.2493004831320347,
+              "mean_bit_bias_effect": -0.01505533854166674
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "5dc8bf9295d278b5715e5d42b5d6ace632176b53478674605daf9818f4395788",
+              "entropy_effect": -0.21270024832625367,
+              "entropy_route_z": -0.8614962221590858,
+              "mean_bit_bias_effect": -0.03800455729166674
+            }
+          ],
+          "key_seed": 151009,
+          "mean_bit_bias_effect": -0.02652994791666674,
+          "mean_entropy_effect": -0.30322126095615687,
+          "mean_entropy_route_z": -2.05539835264556
+        },
+        {
+          "cosets": [
+            {
+              "coset": 0,
+              "counter_sha256": "1567025808b6fd73715edacbe9948c508fe9c4cdb722213997578ffe2d0bfc2c",
+              "entropy_effect": 0.32284589362535954,
+              "entropy_route_z": 23.574699696719314,
+              "mean_bit_bias_effect": 0.0364990234375
+            },
+            {
+              "coset": 1,
+              "counter_sha256": "ddb2534530a4c2703d0245852d0010507fbe23772f881da98cf3743479670dc3",
+              "entropy_effect": 0.1552605756343013,
+              "entropy_route_z": 0.25442998885551116,
+              "mean_bit_bias_effect": -0.02567545572916652
+            }
+          ],
+          "key_seed": 152018,
+          "mean_bit_bias_effect": 0.005411783854166741,
+          "mean_entropy_effect": 0.2390532346298304,
+          "mean_entropy_route_z": 11.914564842787412
+        }
+      ],
+      "mean_bit_bias_effect": {
+        "maximum": 0.005411783854166741,
+        "mean": -0.034946017795138874,
+        "minimum": -0.08371988932291663,
+        "sample_sd_ddof1": 0.0451579058968205,
+        "values": [
+          -0.08371988932291663,
+          -0.02652994791666674,
+          0.005411783854166741
+        ]
+      },
+      "mean_bit_bias_exact_test": {
+        "exact_assignments": 8,
+        "lower_tail_p": 0.25,
+        "mean_difference": -0.034946017795138874,
+        "seed_pairs": 3,
+        "two_sided_p": 0.5,
+        "upper_tail_p": 0.875
+      },
+      "mean_entropy_route_z": 2.9288069745448717,
+      "rounds": 20
+    }
+  ],
+  "schema_version": 1,
+  "scope_note": "Corrects arbitrary repairing for differentials that are perfect matchings on a closed input subspace."
+}

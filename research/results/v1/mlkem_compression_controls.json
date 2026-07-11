@@ -1,0 +1,492 @@
+{
+  "environment": {
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "experiment": "mlkem_compression_control_suite",
+  "method": "A/B/C/D isolates real packed ciphertext, real decoded coefficients, uniform matched coefficients, and uniform bytes.",
+  "parameters": {
+    "operations": 500,
+    "seeds": 3,
+    "variants": [
+      "mlkem512",
+      "mlkem768",
+      "mlkem1024"
+    ]
+  },
+  "results": [
+    {
+      "effect_estimates": {
+        "coefficient_model_B_minus_C": 0.1159570199565243,
+        "packing_A_minus_B": -0.1154050058461824
+      },
+      "records": [
+        {
+          "coefficient_count": 256000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.027027027027027,
+              "casi_operational_max": 1.027027027027027,
+              "casi_standard": 1.027027027027027,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.385135135135135,
+              "casi_operational_max": 1.385135135135135,
+              "casi_standard": 1.385135135135135,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 1.0675675675675675,
+              "casi_operational_max": 1.0675675675675675,
+              "casi_standard": 1.0675675675675675,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 1.054054054054054,
+              "casi_operational_max": 1.054054054054054,
+              "casi_standard": 1.054054054054054,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            }
+          },
+          "seed": 42,
+          "successful_decapsulations": 500
+        },
+        {
+          "coefficient_count": 256000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.1176470588235294,
+              "casi_operational_max": 1.1176470588235294,
+              "casi_standard": 1.1176470588235294,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.0571428571428572,
+              "casi_operational_max": 1.0571428571428572,
+              "casi_standard": 1.0571428571428572,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 0.9851726981741854,
+              "casi_operational_max": 0.9851726981741854,
+              "casi_standard": 0.9771428571428571,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 0.9916274808108868,
+              "casi_operational_max": 0.9916274808108868,
+              "casi_standard": 0.88,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            }
+          },
+          "seed": 7961,
+          "successful_decapsulations": 500
+        },
+        {
+          "coefficient_count": 256000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.1111111111111112,
+              "casi_operational_max": 1.1111111111111112,
+              "casi_standard": 1.1111111111111112,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.1597222222222223,
+              "casi_operational_max": 1.1597222222222223,
+              "casi_standard": 1.1597222222222223,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 1.2013888888888888,
+              "casi_operational_max": 1.2013888888888888,
+              "casi_standard": 1.2013888888888888,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 1.1805555555555556,
+              "casi_operational_max": 1.1805555555555556,
+              "casi_standard": 1.1805555555555556,
+              "compression_ratio": 1.00033125,
+              "rows": 10000
+            }
+          },
+          "seed": 15880,
+          "successful_decapsulations": 500
+        }
+      ],
+      "summaries": {
+        "A_real_packed_u": {
+          "mean": 1.0852617323205558,
+          "sample_sd_ddof1": 0.05053850342652607,
+          "values": [
+            1.027027027027027,
+            1.1176470588235294,
+            1.1111111111111112
+          ]
+        },
+        "B_real_coefficients_random_high_bits": {
+          "mean": 1.2006667381667382,
+          "sample_sd_ddof1": 0.1677857969110883,
+          "values": [
+            1.385135135135135,
+            1.0571428571428572,
+            1.1597222222222223
+          ]
+        },
+        "C_uniform_coefficients_random_high_bits": {
+          "mean": 1.084709718210214,
+          "sample_sd_ddof1": 0.10912263870657472,
+          "values": [
+            1.0675675675675675,
+            0.9851726981741854,
+            1.2013888888888888
+          ]
+        },
+        "D_uniform_random_bytes": {
+          "mean": 1.0754123634734987,
+          "sample_sd_ddof1": 0.09625792119417678,
+          "values": [
+            1.054054054054054,
+            0.9916274808108868,
+            1.1805555555555556
+          ]
+        }
+      },
+      "u_coefficient_bits": 10,
+      "u_coefficients_per_operation": 512,
+      "variant": "mlkem512"
+    },
+    {
+      "effect_estimates": {
+        "coefficient_model_B_minus_C": -0.029415029415029714,
+        "packing_A_minus_B": -0.20140478368326464
+      },
+      "records": [
+        {
+          "coefficient_count": 384000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.0419580419580419,
+              "casi_operational_max": 1.0419580419580419,
+              "casi_standard": 1.0419580419580419,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.3333333333333333,
+              "casi_operational_max": 1.3333333333333333,
+              "casi_standard": 1.3333333333333333,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 0.993006993006993,
+              "casi_operational_max": 0.993006993006993,
+              "casi_standard": 0.993006993006993,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 0.9723168741439091,
+              "casi_operational_max": 0.9723168741439091,
+              "casi_standard": 0.8881118881118881,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            }
+          },
+          "seed": 42,
+          "successful_decapsulations": 500
+        },
+        {
+          "coefficient_count": 384000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.0443037974683544,
+              "casi_operational_max": 1.0443037974683544,
+              "casi_standard": 1.0443037974683544,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.2857142857142858,
+              "casi_operational_max": 1.2857142857142858,
+              "casi_standard": 1.2857142857142858,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 1.7857142857142858,
+              "casi_operational_max": 1.7857142857142858,
+              "casi_standard": 1.7857142857142858,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 1.009341371046199,
+              "casi_operational_max": 1.009341371046199,
+              "casi_standard": 0.9746835443037974,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            }
+          },
+          "seed": 7961,
+          "successful_decapsulations": 500
+        },
+        {
+          "coefficient_count": 384000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.6428571428571428,
+              "casi_operational_max": 1.6428571428571428,
+              "casi_standard": 1.6428571428571428,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.7142857142857142,
+              "casi_operational_max": 1.7142857142857142,
+              "casi_standard": 1.7142857142857142,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 1.6428571428571428,
+              "casi_operational_max": 1.6428571428571428,
+              "casi_standard": 1.6428571428571428,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 2.2142857142857144,
+              "casi_operational_max": 2.2142857142857144,
+              "casi_standard": 2.2142857142857144,
+              "compression_ratio": 1.000325,
+              "rows": 15000
+            }
+          },
+          "seed": 15880,
+          "successful_decapsulations": 500
+        }
+      ],
+      "summaries": {
+        "A_real_packed_u": {
+          "mean": 1.2430396607611798,
+          "sample_sd_ddof1": 0.34625408284148124,
+          "values": [
+            1.0419580419580419,
+            1.0443037974683544,
+            1.6428571428571428
+          ]
+        },
+        "B_real_coefficients_random_high_bits": {
+          "mean": 1.4444444444444444,
+          "sample_sd_ddof1": 0.23489918391982123,
+          "values": [
+            1.3333333333333333,
+            1.2857142857142858,
+            1.7142857142857142
+          ]
+        },
+        "C_uniform_coefficients_random_high_bits": {
+          "mean": 1.4738594738594741,
+          "sample_sd_ddof1": 0.4225119786145899,
+          "values": [
+            0.993006993006993,
+            1.7857142857142858,
+            1.6428571428571428
+          ]
+        },
+        "D_uniform_random_bytes": {
+          "mean": 1.398647986491941,
+          "sample_sd_ddof1": 0.7066055339389576,
+          "values": [
+            0.9723168741439091,
+            1.009341371046199,
+            2.2142857142857144
+          ]
+        }
+      },
+      "u_coefficient_bits": 10,
+      "u_coefficients_per_operation": 768,
+      "variant": "mlkem768"
+    },
+    {
+      "effect_estimates": {
+        "coefficient_model_B_minus_C": -0.04222045199504354,
+        "packing_A_minus_B": -0.4110958106418505
+      },
+      "records": [
+        {
+          "coefficient_count": 512000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.1293103448275863,
+              "casi_operational_max": 1.1293103448275863,
+              "casi_standard": 1.1293103448275863,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.5714285714285714,
+              "casi_operational_max": 1.5714285714285714,
+              "casi_standard": 1.5714285714285714,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 1.206896551724138,
+              "casi_operational_max": 1.206896551724138,
+              "casi_standard": 1.206896551724138,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 1.0775862068965518,
+              "casi_operational_max": 1.0775862068965518,
+              "casi_standard": 1.0775862068965518,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            }
+          },
+          "seed": 42,
+          "successful_decapsulations": 500
+        },
+        {
+          "coefficient_count": 512000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 1.087719298245614,
+              "casi_operational_max": 1.087719298245614,
+              "casi_standard": 1.087719298245614,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.5087719298245614,
+              "casi_operational_max": 1.5087719298245614,
+              "casi_standard": 1.5087719298245614,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 2.357142857142857,
+              "casi_operational_max": 2.357142857142857,
+              "casi_standard": 2.357142857142857,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 1.1428571428571428,
+              "casi_operational_max": 1.1428571428571428,
+              "casi_standard": 1.1428571428571428,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            }
+          },
+          "seed": 7961,
+          "successful_decapsulations": 500
+        },
+        {
+          "coefficient_count": 512000,
+          "operations": 500,
+          "scores": {
+            "A_real_packed_u": {
+              "casi_amplified": 0.9864725735412031,
+              "casi_operational_max": 0.9864725735412031,
+              "casi_standard": 0.9844961240310077,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "B_real_coefficients_random_high_bits": {
+              "casi_amplified": 1.3565891472868217,
+              "casi_operational_max": 1.3565891472868217,
+              "casi_standard": 1.3565891472868217,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "C_uniform_coefficients_random_high_bits": {
+              "casi_amplified": 0.99941159565809,
+              "casi_operational_max": 0.99941159565809,
+              "casi_standard": 0.8294573643410853,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            },
+            "D_uniform_random_bytes": {
+              "casi_amplified": 0.9843852904566176,
+              "casi_operational_max": 0.9843852904566176,
+              "casi_standard": 0.8372093023255814,
+              "compression_ratio": 1.0003139204545455,
+              "rows": 22000
+            }
+          },
+          "seed": 15880,
+          "successful_decapsulations": 500
+        }
+      ],
+      "summaries": {
+        "A_real_packed_u": {
+          "mean": 1.067834072204801,
+          "sample_sd_ddof1": 0.0734658008023866,
+          "values": [
+            1.1293103448275863,
+            1.087719298245614,
+            0.9864725735412031
+          ]
+        },
+        "B_real_coefficients_random_high_bits": {
+          "mean": 1.4789298828466515,
+          "sample_sd_ddof1": 0.11048486487869502,
+          "values": [
+            1.5714285714285714,
+            1.5087719298245614,
+            1.3565891472868217
+          ]
+        },
+        "C_uniform_coefficients_random_high_bits": {
+          "mean": 1.521150334841695,
+          "sample_sd_ddof1": 0.7313857564623656,
+          "values": [
+            1.206896551724138,
+            2.357142857142857,
+            0.99941159565809
+          ]
+        },
+        "D_uniform_random_bytes": {
+          "mean": 1.0682762134034374,
+          "sample_sd_ddof1": 0.07964508136065174,
+          "values": [
+            1.0775862068965518,
+            1.1428571428571428,
+            0.9843852904566176
+          ]
+        }
+      },
+      "u_coefficient_bits": 11,
+      "u_coefficients_per_operation": 1024,
+      "variant": "mlkem1024"
+    }
+  ],
+  "schema_version": 1,
+  "security_scope": "Distribution/format measurement only; no security or key-recovery claim."
+}

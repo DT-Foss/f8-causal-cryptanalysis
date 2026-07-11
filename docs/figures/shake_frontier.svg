@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+<title id="title">SHAKE exact state-window reconstruction frontier</title>
+<desc id="desc">Maximum uniquely reconstructed coordinate window for scalar, bit-sliced, native, and resumable native 24-round Keccak readers. Values are generated from committed result JSON.</desc>
+<rect width="1120" height="620" fill="#fbfbfa"/>
+<text x="560" y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" font-weight="700" fill="#17202a">SHAKE exact state-window frontier</text>
+<text x="560" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#4d5966">All stages execute 24 Keccak-f[1600] rounds; every listed SHAKE128/256 window is unique</text>
+<line x1="115" y1="455.00" x2="1015" y2="455.00" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="460.00" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">0</text>
+<line x1="115" y1="411.25" x2="1015" y2="411.25" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="416.25" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">4</text>
+<line x1="115" y1="367.50" x2="1015" y2="367.50" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="372.50" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">8</text>
+<line x1="115" y1="323.75" x2="1015" y2="323.75" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="328.75" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">12</text>
+<line x1="115" y1="280.00" x2="1015" y2="280.00" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="285.00" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">16</text>
+<line x1="115" y1="236.25" x2="1015" y2="236.25" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="241.25" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">20</text>
+<line x1="115" y1="192.50" x2="1015" y2="192.50" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="197.50" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">24</text>
+<line x1="115" y1="148.75" x2="1015" y2="148.75" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="153.75" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">28</text>
+<line x1="115" y1="105.00" x2="1015" y2="105.00" stroke="#d8dde3" stroke-width="1"/>
+<text x="101" y="110.00" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#56616d">32</text>
+<text x="28" y="280.0" transform="rotate(-90 28 280.0)" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="#26323d">maximum variable coordinates</text>
+<rect x="185" y="236.25" width="150" height="218.75" rx="7" fill="#4c78a8"/>
+<text x="260.0" y="224.25" text-anchor="middle" font-family="ui-monospace,monospace" font-size="22" font-weight="700" fill="#17202a">20</text>
+<text x="260.0" y="486" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#17202a">Scalar</text>
+<text x="260.0" y="508" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#56616d">NumPy batch</text>
+<text x="260.0" y="530" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#56616d">Σ 2,236,928 candidates</text>
+<rect x="410" y="192.50" width="150" height="262.50" rx="7" fill="#59a14f"/>
+<text x="485.0" y="180.50" text-anchor="middle" font-family="ui-monospace,monospace" font-size="22" font-weight="700" fill="#17202a">24</text>
+<text x="485.0" y="486" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#17202a">Bit-sliced</text>
+<text x="485.0" y="508" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#56616d">64-way uint64</text>
+<text x="485.0" y="530" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#56616d">Σ 35,651,584 candidates</text>
+<rect x="635" y="148.75" width="150" height="306.25" rx="7" fill="#f28e2b"/>
+<text x="710.0" y="136.75" text-anchor="middle" font-family="ui-monospace,monospace" font-size="22" font-weight="700" fill="#17202a">28</text>
+<text x="710.0" y="486" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#17202a">Native</text>
+<text x="710.0" y="508" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#56616d">C11 / 10 threads</text>
+<text x="710.0" y="530" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#56616d">Σ 570,425,344 candidates</text>
+<rect x="860" y="105.00" width="150" height="350.00" rx="7" fill="#e15759"/>
+<text x="935.0" y="93.00" text-anchor="middle" font-family="ui-monospace,monospace" font-size="22" font-weight="700" fill="#17202a">32</text>
+<text x="935.0" y="486" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#17202a">Native 32</text>
+<text x="935.0" y="508" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#56616d">resumable C11</text>
+<text x="935.0" y="530" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#56616d">Σ 8,589,934,592 candidates</text>
+<line x1="80" y1="565" x2="1040" y2="565" stroke="#d8dde3"/>
+<text x="560" y="590" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#68737d">source SHA-256 prefixes: Scalar 80b084b8d24b · Bit-sliced 7eb7350100b2 · Native 8497ccb7938d · Native 32 d09e629aca7a</text>
+</svg>

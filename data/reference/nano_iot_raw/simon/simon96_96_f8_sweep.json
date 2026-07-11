@@ -1,0 +1,234 @@
+{
+  "cipher": "simon96_96",
+  "test": "F8_cross_round_MI",
+  "block_bytes": 12,
+  "full_rounds": 52,
+  "n_blocks": 20000,
+  "n_seeds": 10,
+  "n_round_pairs": 8,
+  "timestamp": "2026-02-27T19:26:16",
+  "full_round_detected": false,
+  "full_round_t_stat": 0.39,
+  "results": [
+    {
+      "base_round": 1,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.292981,
+      "sig_rate_std": 0.043065,
+      "t_stat": 17.84,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.255517,
+        0.259833,
+        0.301802,
+        0.380791,
+        0.253488,
+        0.245392,
+        0.337403,
+        0.337514,
+        0.285554,
+        0.272515
+      ]
+    },
+    {
+      "base_round": 2,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.307559,
+      "sig_rate_std": 0.04051,
+      "t_stat": 20.11,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.277372,
+        0.27428,
+        0.313706,
+        0.390641,
+        0.268267,
+        0.266046,
+        0.347347,
+        0.352821,
+        0.299697,
+        0.285414
+      ]
+    },
+    {
+      "base_round": 4,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.296044,
+      "sig_rate_std": 0.032813,
+      "t_stat": 23.71,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.27551,
+        0.266981,
+        0.30037,
+        0.355717,
+        0.263405,
+        0.263305,
+        0.332726,
+        0.339815,
+        0.287934,
+        0.274674
+      ]
+    },
+    {
+      "base_round": 8,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.173214,
+      "sig_rate_std": 0.011847,
+      "t_stat": 32.89,
+      "verdict": "DETECTED",
+      "per_seed_rates": [
+        0.200695,
+        0.179443,
+        0.176368,
+        0.171007,
+        0.161458,
+        0.166087,
+        0.169271,
+        0.181424,
+        0.171007,
+        0.155382
+      ]
+    },
+    {
+      "base_round": 12,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.059635,
+      "sig_rate_std": 0.01182,
+      "t_stat": 2.58,
+      "verdict": "WEAK",
+      "per_seed_rates": [
+        0.072049,
+        0.081597,
+        0.06684,
+        0.041667,
+        0.055556,
+        0.051215,
+        0.053819,
+        0.069444,
+        0.057292,
+        0.046875
+      ]
+    },
+    {
+      "base_round": 13,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.051997,
+      "sig_rate_std": 0.010542,
+      "t_stat": 0.6,
+      "verdict": "CLEAN",
+      "per_seed_rates": [
+        0.059896,
+        0.070312,
+        0.063368,
+        0.037326,
+        0.052083,
+        0.042535,
+        0.050347,
+        0.059896,
+        0.045139,
+        0.039062
+      ]
+    },
+    {
+      "base_round": 16,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.047743,
+      "sig_rate_std": 0.008567,
+      "t_stat": -0.83,
+      "verdict": "CLEAN",
+      "per_seed_rates": [
+        0.037326,
+        0.057292,
+        0.065104,
+        0.041667,
+        0.046007,
+        0.038194,
+        0.052083,
+        0.053819,
+        0.043403,
+        0.042535
+      ]
+    },
+    {
+      "base_round": 26,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.051823,
+      "sig_rate_std": 0.009798,
+      "t_stat": 0.59,
+      "verdict": "CLEAN",
+      "per_seed_rates": [
+        0.037326,
+        0.049479,
+        0.048611,
+        0.071181,
+        0.059896,
+        0.059028,
+        0.052951,
+        0.044271,
+        0.056424,
+        0.039062
+      ]
+    },
+    {
+      "base_round": 39,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.05026,
+      "sig_rate_std": 0.010318,
+      "t_stat": 0.08,
+      "verdict": "CLEAN",
+      "per_seed_rates": [
+        0.039931,
+        0.068576,
+        0.03559,
+        0.038194,
+        0.049479,
+        0.042535,
+        0.05816,
+        0.057292,
+        0.059028,
+        0.053819
+      ]
+    },
+    {
+      "base_round": 44,
+      "n_round_pairs": 8,
+      "sig_rate_mean": 0.050781,
+      "sig_rate_std": 0.006275,
+      "t_stat": 0.39,
+      "verdict": "CLEAN",
+      "per_seed_rates": [
+        0.044271,
+        0.053819,
+        0.038194,
+        0.047743,
+        0.051215,
+        0.051215,
+        0.061632,
+        0.053819,
+        0.057292,
+        0.048611
+      ]
+    },
+    {
+      "base_round": 50,
+      "n_round_pairs": 3,
+      "sig_rate_mean": 0.045833,
+      "sig_rate_std": 0.009589,
+      "t_stat": -1.37,
+      "verdict": "CLEAN",
+      "per_seed_rates": [
+        0.053241,
+        0.037037,
+        0.055556,
+        0.037037,
+        0.025463,
+        0.053241,
+        0.050926,
+        0.055556,
+        0.048611,
+        0.041667
+      ]
+    }
+  ]
+}

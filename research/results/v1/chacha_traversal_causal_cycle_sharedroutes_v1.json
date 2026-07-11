@@ -1,0 +1,932 @@
+{
+  "chance": 0.3333333333333333,
+  "parameters": {
+    "pair_topology": "cycle",
+    "pairs_per_seed": 5000,
+    "repair_route_seed_strategy": "shared_per_seed_traversal_across_round_classes",
+    "repairing_routes": 16,
+    "rounds": [
+      2,
+      3,
+      20
+    ],
+    "route_mode": "bvn",
+    "train_seeds": 5,
+    "traversals": [
+      "sequential",
+      "gray",
+      "bit-reversal",
+      "affine",
+      "random-permutation"
+    ]
+  },
+  "results": {
+    "affine": {
+      "causal": {
+        "bytes": 8573,
+        "explicit_triplets": 192,
+        "file_sha256": "6cff594e558bc53178c2fa65942d20ba429a78354471a6e218183619065f7772",
+        "graph_sha256": "94d4a37134b6512925fce05d7e1cc54ffee4fecfbbd7bbbddb0732a4e3fb3246",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/traversal_cycle_sharedroutes/chacha_traversal_causal_affine_v1.causal",
+        "triplets": 192
+      },
+      "overall_accuracy": 0.6666666666666666,
+      "per_class": {
+        "r2": {
+          "accuracy": 1.0,
+          "correct": 5,
+          "total": 5
+        },
+        "r20": {
+          "accuracy": 0.4,
+          "correct": 2,
+          "total": 5
+        },
+        "r3": {
+          "accuracy": 0.6,
+          "correct": 3,
+          "total": 5
+        }
+      },
+      "trials": [
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 258.493810470175,
+            "r20": -740185.1804463496,
+            "r3": -910562.4145838665
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 145.6227163920003,
+            "r20": -947092.231198149,
+            "r3": -1140481.5551914896
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 211.5893900849972,
+            "r20": -525222.6896107632,
+            "r3": -735442.1890267277
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 194.30907803118723,
+            "r20": -549310.0943926156,
+            "r3": -813528.2502599577
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 236.77613048728935,
+            "r20": -957020.861122451,
+            "r3": -1661032.7319387333
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": 143.49086359846095,
+            "r20": 270.10375194768426,
+            "r3": 263.89935038808176
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": 191.83961684616168,
+            "r20": 312.6004044141499,
+            "r3": 319.9865095381823
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": 194.2611803345913,
+            "r20": 313.3593129473706,
+            "r3": 281.6197374160397
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": 186.12973193810365,
+            "r20": 290.70136659139354,
+            "r3": 306.6253357121393
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": 193.42093750803747,
+            "r20": 300.54373262369154,
+            "r3": 309.01538046430903
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": 204.33602448622264,
+            "r20": 302.93094508548216,
+            "r3": 251.61966359858883
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": 167.80887162212264,
+            "r20": 288.56615304793263,
+            "r3": 289.43253002661385
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": 191.3430937168954,
+            "r20": 295.49410568151666,
+            "r3": 278.00570584844957
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": 194.2236619663151,
+            "r20": 314.4618761220465,
+            "r3": 320.3555316952407
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": 161.89710534713475,
+            "r20": 271.7387845826386,
+            "r3": 272.9993207135577
+          }
+        }
+      ]
+    },
+    "bit-reversal": {
+      "causal": {
+        "bytes": 8467,
+        "explicit_triplets": 192,
+        "file_sha256": "5e99eceff267f5872073575f5d821075d0e781b515f75ac8c60d244b707365fa",
+        "graph_sha256": "420c818ac5b17332d231618ac508ec8b51975c9faa4758680020b146d1e81672",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/traversal_cycle_sharedroutes/chacha_traversal_causal_bit-reversal_v1.causal",
+        "triplets": 192
+      },
+      "overall_accuracy": 0.7333333333333333,
+      "per_class": {
+        "r2": {
+          "accuracy": 1.0,
+          "correct": 5,
+          "total": 5
+        },
+        "r20": {
+          "accuracy": 0.6,
+          "correct": 3,
+          "total": 5
+        },
+        "r3": {
+          "accuracy": 0.6,
+          "correct": 3,
+          "total": 5
+        }
+      },
+      "trials": [
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 56.10413879847249,
+            "r20": -44248016.517766684,
+            "r3": -47753846.917778105
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 31.74471499104625,
+            "r20": -46704373.06991842,
+            "r3": -54262120.872938484
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 62.61119264452138,
+            "r20": -50670525.64031525,
+            "r3": -50660994.20364227
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 54.05236148901268,
+            "r20": -47471541.24138717,
+            "r3": -48416090.51505235
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 43.728326470655034,
+            "r20": -44092334.23528592,
+            "r3": -51791091.43972804
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7423229.889804936,
+            "r20": 245.80006689696705,
+            "r3": 317.785441699089
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7430453.961558247,
+            "r20": 245.40602939309525,
+            "r3": 239.83466282483388
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7408840.357066872,
+            "r20": 241.46008835691774,
+            "r3": 294.4380807068186
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7396482.661284878,
+            "r20": 278.49686899648225,
+            "r3": 294.9275028532754
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7408721.427953844,
+            "r20": 311.49492793328864,
+            "r3": 278.01936334238087
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7422674.31263287,
+            "r20": 314.47606893671957,
+            "r3": 262.00957478276985
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7439710.264343115,
+            "r20": 324.4246560485147,
+            "r3": 304.6403510533896
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7410051.910649476,
+            "r20": 330.10494139286584,
+            "r3": 289.1935982857039
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7423261.232426372,
+            "r20": 308.64256350114533,
+            "r3": 309.9979521231544
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7419454.601716835,
+            "r20": 276.7015163114604,
+            "r3": 299.23359524643706
+          }
+        }
+      ]
+    },
+    "gray": {
+      "causal": {
+        "bytes": 8312,
+        "explicit_triplets": 192,
+        "file_sha256": "be82b68cbe9c69f7ca4dbe6c7085629748f4da1e5ff819f2745cdb983dfddcac",
+        "graph_sha256": "54bd9baa70e9e2765122347464d8ca910b89e472706ee8a96ed3276b2188132e",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/traversal_cycle_sharedroutes/chacha_traversal_causal_gray_v1.causal",
+        "triplets": 192
+      },
+      "overall_accuracy": 0.7333333333333333,
+      "per_class": {
+        "r2": {
+          "accuracy": 1.0,
+          "correct": 5,
+          "total": 5
+        },
+        "r20": {
+          "accuracy": 0.8,
+          "correct": 4,
+          "total": 5
+        },
+        "r3": {
+          "accuracy": 0.4,
+          "correct": 2,
+          "total": 5
+        }
+      },
+      "trials": [
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 6.396328678027288,
+            "r20": -33569901.82035975,
+            "r3": -49738766.90789807
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 41.47083832314816,
+            "r20": -37945145.30552223,
+            "r3": -55758515.523586586
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": -72.24302914304171,
+            "r20": -44669004.01484066,
+            "r3": -68363686.51426402
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": -8.646875363018747,
+            "r20": -34430003.34995126,
+            "r3": -46243544.451193616
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": -33.258690524027486,
+            "r20": -33587979.99193601,
+            "r3": -44679470.84348385
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7127.3572532680755,
+            "r20": 310.3232017619485,
+            "r3": 307.57378356465904
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7116.130284267027,
+            "r20": 310.3974239956091,
+            "r3": 314.1522726667416
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7105.773068910332,
+            "r20": 126.55467862391973,
+            "r3": 258.5078992761074
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7118.955369694165,
+            "r20": 319.2505505709023,
+            "r3": 298.1741927592066
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7126.3586421236505,
+            "r20": 326.13391098771325,
+            "r3": 255.79438771337834
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7111.723463274504,
+            "r20": 286.60196093105765,
+            "r3": 276.003922009045
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7124.016090664714,
+            "r20": 330.3897687088129,
+            "r3": 301.23309212576606
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7124.300914150906,
+            "r20": 309.11741355783016,
+            "r3": 305.2303025573155
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7124.185504375255,
+            "r20": 307.93608926848185,
+            "r3": 284.1051964481147
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -7115.692891485442,
+            "r20": 306.3428185563457,
+            "r3": 307.2882397334454
+          }
+        }
+      ]
+    },
+    "random-permutation": {
+      "causal": {
+        "bytes": 8608,
+        "explicit_triplets": 192,
+        "file_sha256": "09ec13c52ef9260510cb3732957c126e94ee776951670053230b1a7d27d7e1a2",
+        "graph_sha256": "7c80bf6104827a90a923c43f0ae80eccf05cb9a222cad47edebc05acd2456f9b",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/traversal_cycle_sharedroutes/chacha_traversal_causal_random-permutation_v1.causal",
+        "triplets": 192
+      },
+      "overall_accuracy": 0.7333333333333333,
+      "per_class": {
+        "r2": {
+          "accuracy": 1.0,
+          "correct": 5,
+          "total": 5
+        },
+        "r20": {
+          "accuracy": 0.8,
+          "correct": 4,
+          "total": 5
+        },
+        "r3": {
+          "accuracy": 0.4,
+          "correct": 2,
+          "total": 5
+        }
+      },
+      "trials": [
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 316.76657589385275,
+            "r20": 269.3118013937788,
+            "r3": 267.286787651803
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 297.3629562233124,
+            "r20": 263.23875090220633,
+            "r3": 252.15449405547042
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 256.79260719144537,
+            "r20": 201.87622759944466,
+            "r3": 252.18112541318158
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 329.6788855450743,
+            "r20": 299.2705823577179,
+            "r3": 287.22157201157063
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 301.78675450146307,
+            "r20": 273.2938085438443,
+            "r3": 258.24528861810563
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -7781819740082.146,
+            "r20": 318.84138042203256,
+            "r3": 309.5271828849938
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -1059152088107.1029,
+            "r20": 297.13277136034185,
+            "r3": 303.8370989489806
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -411184375268.09937,
+            "r20": 311.9360220974231,
+            "r3": 296.88849660254226
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -10976769051632.482,
+            "r20": 328.20630972915825,
+            "r3": 316.217494538098
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -3827658244960.4526,
+            "r20": 318.63398276070194,
+            "r3": 329.4157414066458
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -409770317186.7909,
+            "r20": 318.56102339785053,
+            "r3": 302.97119235792735
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -6775042083035.352,
+            "r20": 281.7808336537867,
+            "r3": 251.2039009960596
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -2601917617405.838,
+            "r20": 295.9330517424039,
+            "r3": 275.7829483806454
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -2981139076772.2583,
+            "r20": 324.62380344921974,
+            "r3": 320.6182643790138
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -2318708769521.46,
+            "r20": 320.0122682433955,
+            "r3": 327.4585042787344
+          }
+        }
+      ]
+    },
+    "sequential": {
+      "causal": {
+        "bytes": 8322,
+        "explicit_triplets": 192,
+        "file_sha256": "02f4601e3589bf50b1d48a0f95bd75629b577aa9c525f01be88a094e2e79db44",
+        "graph_sha256": "5bcd945018e4f8edab875a1b5e62761397043c7d41d4de4231eec57cf8f482ed",
+        "inferred_triplets": 0,
+        "path": "research/results/v1/traversal_cycle_sharedroutes/chacha_traversal_causal_sequential_v1.causal",
+        "triplets": 192
+      },
+      "overall_accuracy": 0.7333333333333333,
+      "per_class": {
+        "r2": {
+          "accuracy": 1.0,
+          "correct": 5,
+          "total": 5
+        },
+        "r20": {
+          "accuracy": 0.4,
+          "correct": 2,
+          "total": 5
+        },
+        "r3": {
+          "accuracy": 0.8,
+          "correct": 4,
+          "total": 5
+        }
+      },
+      "trials": [
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": -3.9271727817208095,
+            "r20": -55719548.73890419,
+            "r3": -50304201.14398421
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 59.89326187710108,
+            "r20": -53477824.53809522,
+            "r3": -44227965.81096219
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 13.549445522557816,
+            "r20": -54179152.427601814,
+            "r3": -49824872.62522546
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 49.88984633903607,
+            "r20": -49650753.230903044,
+            "r3": -44409794.915631756
+          }
+        },
+        {
+          "actual": "r2",
+          "correct": true,
+          "predicted": "r2",
+          "scores": {
+            "r2": 58.00456683062126,
+            "r20": -51562984.36690328,
+            "r3": -44158254.086677425
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -1099215719272.3638,
+            "r20": 266.0485167785736,
+            "r3": 303.2883396749203
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -1642334772239.335,
+            "r20": 258.97977313402396,
+            "r3": 316.1318992932912
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -8156914587677.606,
+            "r20": -98.83087227203956,
+            "r3": 219.773092786446
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": true,
+          "predicted": "r3",
+          "scores": {
+            "r2": -11677588515630.143,
+            "r20": 281.9998031624558,
+            "r3": 324.8067130019001
+          }
+        },
+        {
+          "actual": "r3",
+          "correct": false,
+          "predicted": "r20",
+          "scores": {
+            "r2": -3043279980944.6,
+            "r20": 309.40866122529326,
+            "r3": 294.2108484478615
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -9427257606332.84,
+            "r20": 287.3556177134244,
+            "r3": 285.9879874367233
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -1868832828691.706,
+            "r20": 302.56547345376555,
+            "r3": 308.81793640743604
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -39932213499193.75,
+            "r20": 297.81377652362636,
+            "r3": 310.72267831656745
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": false,
+          "predicted": "r3",
+          "scores": {
+            "r2": -3553640805002.9087,
+            "r20": 297.34789337295507,
+            "r3": 329.9415191829151
+          }
+        },
+        {
+          "actual": "r20",
+          "correct": true,
+          "predicted": "r20",
+          "scores": {
+            "r2": -13652627926832.893,
+            "r20": 316.841594150674,
+            "r3": 305.289859740225
+          }
+        }
+      ]
+    }
+  },
+  "schema": "chacha-traversal-causal-signature-v1",
+  "scope": "direct adjacent cipher-output causal compression over explicit counter traversals and reader-only reverse reduced-round query; not key recovery"
+}

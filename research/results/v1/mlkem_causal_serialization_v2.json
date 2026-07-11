@@ -1,0 +1,3582 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.1"
+  },
+  "experiment": "mlkem_causal_serialization_suite",
+  "formulae": {
+    "bitplane": "concatenate all bit j values before bit j+1; a permutation of the same bits",
+    "causal_identification": "same values + same bits + same length; only serialization locality changes",
+    "standard": "concatenate coefficient bits little-endian at width d"
+  },
+  "parameters": {
+    "operations": 500,
+    "seeds": 10,
+    "variants": [
+      "mlkem512",
+      "mlkem768",
+      "mlkem1024"
+    ]
+  },
+  "results": [
+    {
+      "all_bitcount_identity_gates_passed": true,
+      "all_functional_gates_passed": true,
+      "all_repack_gates_passed": true,
+      "coefficient_bits": 10,
+      "coefficients_per_operation": 512,
+      "paired_intervention_tests": {
+        "real_minus_uniform_field_compress_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.5185546875,
+          "mean_difference": 0.003425666057472043,
+          "seed_pairs": 10,
+          "two_sided_p": 0.96484375,
+          "upper_tail_p": 0.482421875
+        },
+        "real_minus_uniform_field_compress_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.6748046875,
+          "mean_difference": 0.00126953125,
+          "seed_pairs": 10,
+          "two_sided_p": 0.6953125,
+          "upper_tail_p": 0.34765625
+        },
+        "real_standard_minus_bitplane_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.7626953125,
+          "mean_difference": 0.0394546673000918,
+          "seed_pairs": 10,
+          "two_sided_p": 0.4765625,
+          "upper_tail_p": 0.23828125
+        },
+        "real_standard_minus_bitplane_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.34375,
+          "mean_difference": -0.00126953125,
+          "seed_pairs": 10,
+          "two_sided_p": 0.6875,
+          "upper_tail_p": 0.681640625
+        },
+        "real_standard_minus_routed_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.798828125,
+          "mean_difference": 0.041773598199217485,
+          "seed_pairs": 10,
+          "two_sided_p": 0.40625,
+          "upper_tail_p": 0.203125
+        },
+        "real_standard_minus_routed_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.345703125,
+          "mean_difference": -0.0013671875,
+          "seed_pairs": 10,
+          "two_sided_p": 0.69140625,
+          "upper_tail_p": 0.681640625
+        },
+        "uniform_standard_minus_bitplane_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.697265625,
+          "mean_difference": 0.03599106651380661,
+          "seed_pairs": 10,
+          "two_sided_p": 0.607421875,
+          "upper_tail_p": 0.3037109375
+        },
+        "uniform_standard_minus_bitplane_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.296875,
+          "mean_difference": -0.00166015625,
+          "seed_pairs": 10,
+          "two_sided_p": 0.59375,
+          "upper_tail_p": 0.732421875
+        }
+      },
+      "records": [
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.500453125,
+            0.502625,
+            0.50041015625,
+            0.499171875,
+            0.5010078125,
+            0.49831640625,
+            0.4976953125,
+            0.50015234375,
+            0.49917578125,
+            0.49830859375
+          ],
+          "coefficient_entropy_bits": 9.985163904043924,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.1075949367088607,
+              "f8_output_rate": 0.0517578125,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0569620253164558,
+              "f8_output_rate": 0.0556640625,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.0506329113924051,
+              "f8_output_rate": 0.048828125,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0159919199759033,
+              "f8_output_rate": 0.0615234375,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.0478515625,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 1.0571641515515873,
+              "f8_output_rate": 0.0556640625,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1063.663484375,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.1835198952125091,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0397492515884654,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.02583144924339141,
+            "tv_observed_to_uniform_output_alphabet": 0.05934375000000001,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 42,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1016.2035611979167,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.5540266957572983,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9933563648073477,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024711518333208175,
+            "tv_observed_to_uniform_output_alphabet": 0.05999609375000001,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.50082421875,
+            0.501265625,
+            0.49869921875,
+            0.50033203125,
+            0.50015234375,
+            0.50019140625,
+            0.49853125,
+            0.5003125,
+            0.49846875,
+            0.4999296875
+          ],
+          "coefficient_entropy_bits": 9.984791886180385,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0140704944202066,
+              "f8_output_rate": 0.0546875,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0511363636363635,
+              "f8_output_rate": 0.0576171875,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.2352941176470589,
+              "f8_output_rate": 0.0478515625,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 0.9952837193469749,
+              "f8_output_rate": 0.0400390625,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 0.9839816135440741,
+              "f8_output_rate": 0.0546875,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 0.9954715842218117,
+              "f8_output_rate": 0.044921875,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 940.4623092447916,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.9686571953899505,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9193179953517024,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024575586934890363,
+            "tv_observed_to_uniform_output_alphabet": 0.06041015625,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 7961,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1004.3602535807291,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.655367730348021,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9817793290134205,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.02510488674339141,
+            "tv_observed_to_uniform_output_alphabet": 0.060937500000000006,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.5001796875,
+            0.49964453125,
+            0.5003125,
+            0.5006171875,
+            0.498546875,
+            0.49971484375,
+            0.49957421875,
+            0.50015234375,
+            0.49936328125,
+            0.501484375
+          ],
+          "coefficient_entropy_bits": 9.984660471206547,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0810810810810811,
+              "f8_output_rate": 0.052734375,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.5,
+              "f8_output_rate": 0.05078125,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.1891891891891893,
+              "f8_output_rate": 0.046875,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0135135135135136,
+              "f8_output_rate": 0.0615234375,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.162162162162162,
+              "f8_output_rate": 0.0576171875,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 1.4285714285714286,
+              "f8_output_rate": 0.05078125,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1002.7564384765625,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.6684964491154738,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9802115723133553,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024859186082532292,
+            "tv_observed_to_uniform_output_alphabet": 0.060535156250000006,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 15880,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 985.7917591145833,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.7933217468639895,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9636283080298957,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.02507245864936918,
+            "tv_observed_to_uniform_output_alphabet": 0.059675781250000004,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.49887890625,
+            0.5005546875,
+            0.501390625,
+            0.5002578125,
+            0.5001796875,
+            0.50086328125,
+            0.4990703125,
+            0.50107421875,
+            0.49887109375,
+            0.500234375
+          ],
+          "coefficient_entropy_bits": 9.985104635939376,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.020119743107588,
+              "f8_output_rate": 0.05859375,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0005603321943308,
+              "f8_output_rate": 0.041015625,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.0740740740740742,
+              "f8_output_rate": 0.0546875,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.036915607630895,
+              "f8_output_rate": 0.0625,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.0656784950237679,
+              "f8_output_rate": 0.04296875,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 1.1428571428571428,
+              "f8_output_rate": 0.04296875,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1102.61018359375,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.041728521766694206,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0778203163184261,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.02607324365425053,
+            "tv_observed_to_uniform_output_alphabet": 0.059390625,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 23799,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1058.710079752604,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.21325797720014122,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0349072138344126,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025590815325548216,
+            "tv_observed_to_uniform_output_alphabet": 0.059472656250000006,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.50060546875,
+            0.49961328125,
+            0.4987109375,
+            0.50104296875,
+            0.499984375,
+            0.49870703125,
+            0.50038671875,
+            0.50008203125,
+            0.4977265625,
+            0.5022578125
+          ],
+          "coefficient_entropy_bits": 9.984962321984211,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 0.9886525491657696,
+              "f8_output_rate": 0.0576171875,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0301204819277108,
+              "f8_output_rate": 0.052734375,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.0301204819277108,
+              "f8_output_rate": 0.0537109375,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0,
+              "f8_output_rate": 0.0517578125,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.0252102603514663,
+              "f8_output_rate": 0.046875,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 0.9994398794514212,
+              "f8_output_rate": 0.0517578125,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1031.1753919270834,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.42270004462605665,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0079915854614696,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024743163769149895,
+            "tv_observed_to_uniform_output_alphabet": 0.06040625,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 31718,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1057.3739283854165,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.22175344086737453,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0336011030160475,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025669331067888258,
+            "tv_observed_to_uniform_output_alphabet": 0.060550781250000005,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.49937109375,
+            0.49955859375,
+            0.5002890625,
+            0.5008046875,
+            0.49984765625,
+            0.5009453125,
+            0.49982421875,
+            0.5006171875,
+            0.50230859375,
+            0.50067578125
+          ],
+          "coefficient_entropy_bits": 9.985404587770367,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.411764705882353,
+              "f8_output_rate": 0.0517578125,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 0.9846230925019146,
+              "f8_output_rate": 0.052734375,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.131578947368421,
+              "f8_output_rate": 0.0390625,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0003285908715995,
+              "f8_output_rate": 0.0498046875,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 0.9918534480207841,
+              "f8_output_rate": 0.0458984375,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 0.993421052631579,
+              "f8_output_rate": 0.0556640625,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 923.9235078125,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.9877916022612533,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9031510340298143,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024023633457870234,
+            "tv_observed_to_uniform_output_alphabet": 0.05904296875,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 39637,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1051.8732760416667,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.25877599501640974,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0282241212528511,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025604494827650946,
+            "tv_observed_to_uniform_output_alphabet": 0.06060156250000001,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.50140625,
+            0.49972265625,
+            0.4977265625,
+            0.49901953125,
+            0.4999453125,
+            0.4985546875,
+            0.49841015625,
+            0.49896484375,
+            0.4989453125,
+            0.4996015625
+          ],
+          "coefficient_entropy_bits": 9.98478655906608,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.056791551855037,
+              "f8_output_rate": 0.04296875,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0542168674698795,
+              "f8_output_rate": 0.0556640625,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.0510503344786604,
+              "f8_output_rate": 0.0478515625,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.032865665336785,
+              "f8_output_rate": 0.0546875,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.0323818030730687,
+              "f8_output_rate": 0.0517578125,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 1.0317722595517305,
+              "f8_output_rate": 0.048828125,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1041.043189453125,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.34042879883501653,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0176375263471409,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.02547949952125263,
+            "tv_observed_to_uniform_output_alphabet": 0.06010937500000001,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 47556,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 987.0162936197917,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.7853132821173675,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9648253114562968,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024796295340192252,
+            "tv_observed_to_uniform_output_alphabet": 0.06059765625000001,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.500609375,
+            0.4996171875,
+            0.50006640625,
+            0.50056640625,
+            0.5010390625,
+            0.4993359375,
+            0.49950390625,
+            0.4993203125,
+            0.49853515625,
+            0.49953515625
+          ],
+          "coefficient_entropy_bits": 9.985125555405588,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.1437908496732025,
+              "f8_output_rate": 0.0576171875,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0718954248366013,
+              "f8_output_rate": 0.056640625,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.0849673202614378,
+              "f8_output_rate": 0.0576171875,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.052734375,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 0.9934640522875817,
+              "f8_output_rate": 0.048828125,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 1.0196078431372548,
+              "f8_output_rate": 0.0537109375,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1046.622948893229,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.29701751110893,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0230918366502728,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025539646853409433,
+            "tv_observed_to_uniform_output_alphabet": 0.059601562500000003,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 55475,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1001.4387093098958,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.6791416309342274,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9789234695111396,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024718947131270652,
+            "tv_observed_to_uniform_output_alphabet": 0.060000000000000005,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.499125,
+            0.50200390625,
+            0.49925390625,
+            0.5010625,
+            0.4989609375,
+            0.4995234375,
+            0.50105859375,
+            0.49796875,
+            0.4974921875,
+            0.50062109375
+          ],
+          "coefficient_entropy_bits": 9.984981864651726,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 1.0036983434045599,
+              "f8_output_rate": 0.0556640625,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0473358915105364,
+              "f8_output_rate": 0.05859375,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.3571428571428572,
+              "f8_output_rate": 0.0546875,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 1.1741935483870967,
+              "f8_output_rate": 0.0478515625,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.064516129032258,
+              "f8_output_rate": 0.0595703125,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 0.9954652177074768,
+              "f8_output_rate": 0.0517578125,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1063.5746243489584,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.1840287278448774,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0396623893929213,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025579493184890358,
+            "tv_observed_to_uniform_output_alphabet": 0.05965625,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 63394,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1055.7495237630208,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.2323474054203277,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0320132197096976,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025297070957870236,
+            "tv_observed_to_uniform_output_alphabet": 0.05971875,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.5014375,
+            0.50011328125,
+            0.49976953125,
+            0.499703125,
+            0.5013359375,
+            0.5008671875,
+            0.50250390625,
+            0.50211328125,
+            0.50090625,
+            0.4989609375
+          ],
+          "coefficient_entropy_bits": 9.984165577649584,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 320000,
+              "casi": 0.9927382335854329,
+              "f8_output_rate": 0.0478515625,
+              "rows": 10000
+            },
+            "real_coefficient_routed": {
+              "bytes": 320000,
+              "casi": 1.0002627004990416,
+              "f8_output_rate": 0.05078125,
+              "rows": 10000
+            },
+            "real_standard": {
+              "bytes": 320000,
+              "casi": 1.0107989284031946,
+              "f8_output_rate": 0.0673828125,
+              "rows": 10000
+            },
+            "uniform_bitplane": {
+              "bytes": 320000,
+              "casi": 0.969689339857901,
+              "f8_output_rate": 0.046875,
+              "rows": 10000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 320000,
+              "casi": 1.6470588235294117,
+              "f8_output_rate": 0.0498046875,
+              "rows": 10000
+            },
+            "uniform_standard": {
+              "bytes": 320000,
+              "casi": 1.0063505818058738,
+              "f8_output_rate": 0.056640625,
+              "rows": 10000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1046.4322249348959,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.29845648396434304,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0229054007183733,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.025492379937668973,
+            "tv_observed_to_uniform_output_alphabet": 0.06149609375,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 71313,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 982.4259147135416,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.8144352807953945,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.960338137549894,
+            "samples": 256000,
+            "tv_observed_to_uniform_field_compress": 0.024756059439771702,
+            "tv_observed_to_uniform_output_alphabet": 0.06049609375000001,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        }
+      ],
+      "summaries": {
+        "real_bitplane": {
+          "casi": {
+            "mean": 1.0820302488884093,
+            "sample_sd_ddof1": 0.12697786995366125,
+            "values": [
+              1.1075949367088607,
+              1.0140704944202066,
+              1.0810810810810811,
+              1.020119743107588,
+              0.9886525491657696,
+              1.411764705882353,
+              1.056791551855037,
+              1.1437908496732025,
+              1.0036983434045599,
+              0.9927382335854329
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.053125,
+            "sample_sd_ddof1": 0.0048762977372588555,
+            "values": [
+              0.0517578125,
+              0.0546875,
+              0.052734375,
+              0.05859375,
+              0.0576171875,
+              0.0517578125,
+              0.04296875,
+              0.0576171875,
+              0.0556640625,
+              0.0478515625
+            ]
+          }
+        },
+        "real_coefficient_routed": {
+          "casi": {
+            "mean": 1.0797113179892834,
+            "sample_sd_ddof1": 0.1504858210424852,
+            "values": [
+              1.0569620253164558,
+              1.0511363636363635,
+              1.5,
+              1.0005603321943308,
+              1.0301204819277108,
+              0.9846230925019146,
+              1.0542168674698795,
+              1.0718954248366013,
+              1.0473358915105364,
+              1.0002627004990416
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05322265625,
+            "sample_sd_ddof1": 0.005090005133825485,
+            "values": [
+              0.0556640625,
+              0.0576171875,
+              0.05078125,
+              0.041015625,
+              0.052734375,
+              0.052734375,
+              0.0556640625,
+              0.056640625,
+              0.05859375,
+              0.05078125
+            ]
+          }
+        },
+        "real_standard": {
+          "casi": {
+            "mean": 1.121484916188501,
+            "sample_sd_ddof1": 0.1092063108198093,
+            "values": [
+              1.0506329113924051,
+              1.2352941176470589,
+              1.1891891891891893,
+              1.0740740740740742,
+              1.0301204819277108,
+              1.131578947368421,
+              1.0510503344786604,
+              1.0849673202614378,
+              1.3571428571428572,
+              1.0107989284031946
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05185546875,
+            "sample_sd_ddof1": 0.00762650227296156,
+            "values": [
+              0.048828125,
+              0.0478515625,
+              0.046875,
+              0.0546875,
+              0.0537109375,
+              0.0390625,
+              0.0478515625,
+              0.0576171875,
+              0.0546875,
+              0.0673828125
+            ]
+          }
+        },
+        "uniform_bitplane": {
+          "casi": {
+            "mean": 1.031021047634924,
+            "sample_sd_ddof1": 0.057392156977262083,
+            "values": [
+              1.0159919199759033,
+              0.9952837193469749,
+              1.0135135135135136,
+              1.036915607630895,
+              1.0,
+              1.0003285908715995,
+              1.032865665336785,
+              1.0714285714285714,
+              1.1741935483870967,
+              0.969689339857901
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.0529296875,
+            "sample_sd_ddof1": 0.007319515272164165,
+            "values": [
+              0.0615234375,
+              0.0400390625,
+              0.0615234375,
+              0.0625,
+              0.0517578125,
+              0.0498046875,
+              0.0546875,
+              0.052734375,
+              0.0478515625,
+              0.046875
+            ]
+          }
+        },
+        "uniform_field_through_compress_standard": {
+          "casi": {
+            "mean": 1.118059250131029,
+            "sample_sd_ddof1": 0.20056752742426529,
+            "values": [
+              1.2142857142857142,
+              0.9839816135440741,
+              1.162162162162162,
+              1.0656784950237679,
+              1.0252102603514663,
+              0.9918534480207841,
+              1.0323818030730687,
+              0.9934640522875817,
+              1.064516129032258,
+              1.6470588235294117
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.0505859375,
+            "sample_sd_ddof1": 0.0053050908300685835,
+            "values": [
+              0.0478515625,
+              0.0546875,
+              0.0576171875,
+              0.04296875,
+              0.046875,
+              0.0458984375,
+              0.0517578125,
+              0.048828125,
+              0.0595703125,
+              0.0498046875
+            ]
+          }
+        },
+        "uniform_standard": {
+          "casi": {
+            "mean": 1.0670121141487305,
+            "sample_sd_ddof1": 0.13497410426985448,
+            "values": [
+              1.0571641515515873,
+              0.9954715842218117,
+              1.4285714285714286,
+              1.1428571428571428,
+              0.9994398794514212,
+              0.993421052631579,
+              1.0317722595517305,
+              1.0196078431372548,
+              0.9954652177074768,
+              1.0063505818058738
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05126953125,
+            "sample_sd_ddof1": 0.0045862639334652905,
+            "values": [
+              0.0556640625,
+              0.044921875,
+              0.05078125,
+              0.04296875,
+              0.0517578125,
+              0.0556640625,
+              0.048828125,
+              0.0537109375,
+              0.0517578125,
+              0.056640625
+            ]
+          }
+        }
+      },
+      "variant": "mlkem512"
+    },
+    {
+      "all_bitcount_identity_gates_passed": true,
+      "all_functional_gates_passed": true,
+      "all_repack_gates_passed": true,
+      "coefficient_bits": 10,
+      "coefficients_per_operation": 768,
+      "paired_intervention_tests": {
+        "real_minus_uniform_field_compress_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.7568359375,
+          "mean_difference": 0.17251282376583815,
+          "seed_pairs": 10,
+          "two_sided_p": 0.48828125,
+          "upper_tail_p": 0.244140625
+        },
+        "real_minus_uniform_field_compress_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.5595703125,
+          "mean_difference": 0.000390625,
+          "seed_pairs": 10,
+          "two_sided_p": 0.927734375,
+          "upper_tail_p": 0.4638671875
+        },
+        "real_standard_minus_bitplane_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.91796875,
+          "mean_difference": 0.2808812490020408,
+          "seed_pairs": 10,
+          "two_sided_p": 0.166015625,
+          "upper_tail_p": 0.0830078125
+        },
+        "real_standard_minus_bitplane_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.689453125,
+          "mean_difference": 0.00146484375,
+          "seed_pairs": 10,
+          "two_sided_p": 0.6640625,
+          "upper_tail_p": 0.33203125
+        },
+        "real_standard_minus_routed_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.9853515625,
+          "mean_difference": 0.2983123949215517,
+          "seed_pairs": 10,
+          "two_sided_p": 0.03125,
+          "upper_tail_p": 0.015625
+        },
+        "real_standard_minus_routed_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.271484375,
+          "mean_difference": -0.00224609375,
+          "seed_pairs": 10,
+          "two_sided_p": 0.54296875,
+          "upper_tail_p": 0.7421875
+        },
+        "uniform_standard_minus_bitplane_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.44140625,
+          "mean_difference": -0.014793215122313819,
+          "seed_pairs": 10,
+          "two_sided_p": 0.8828125,
+          "upper_tail_p": 0.560546875
+        },
+        "uniform_standard_minus_bitplane_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.30078125,
+          "mean_difference": -0.001171875,
+          "seed_pairs": 10,
+          "two_sided_p": 0.6015625,
+          "upper_tail_p": 0.728515625
+        }
+      },
+      "records": [
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.5002630208333333,
+            0.4989661458333333,
+            0.4999765625,
+            0.4996302083333333,
+            0.499515625,
+            0.5001354166666667,
+            0.5002916666666667,
+            0.5004973958333333,
+            0.4986536458333333,
+            0.5001822916666666
+          ],
+          "coefficient_entropy_bits": 9.985608578192739,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 0.9889201818025223,
+              "f8_output_rate": 0.044921875,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.0112136561514489,
+              "f8_output_rate": 0.044921875,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 2.142857142857143,
+              "f8_output_rate": 0.04296875,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 0.9921606687538371,
+              "f8_output_rate": 0.0498046875,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.0316455696202531,
+              "f8_output_rate": 0.060546875,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.5,
+              "f8_output_rate": 0.0419921875,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1028.6939648437499,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.4441794127059177,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0055659480388561,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020744200272854712,
+            "tv_observed_to_uniform_output_alphabet": 0.059296875,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 42,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 982.92021484375,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.8114183219239801,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9608213243829423,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020030783768899572,
+            "tv_observed_to_uniform_output_alphabet": 0.05747135416666667,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.4989166666666667,
+            0.5001380208333334,
+            0.4995,
+            0.49952864583333334,
+            0.499890625,
+            0.499640625,
+            0.4997447916666667,
+            0.5010338541666667,
+            0.5002213541666667,
+            0.50034375
+          ],
+          "coefficient_entropy_bits": 9.986255927979608,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 0.9935270521888689,
+              "f8_output_rate": 0.0517578125,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.0064935064935066,
+              "f8_output_rate": 0.0556640625,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 1.1818181818181819,
+              "f8_output_rate": 0.0546875,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0,
+              "f8_output_rate": 0.0595703125,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.103896103896104,
+              "f8_output_rate": 0.044921875,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.0194805194805194,
+              "f8_output_rate": 0.0654296875,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1043.0770075954863,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.3243012029259102,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0196256183729093,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020774930847601885,
+            "tv_observed_to_uniform_output_alphabet": 0.05788541666666666,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 7961,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 993.6787799479166,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.7388337916606456,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9713380058141903,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020400056010313406,
+            "tv_observed_to_uniform_output_alphabet": 0.058317708333333336,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.49911979166666665,
+            0.49945572916666664,
+            0.4999895833333333,
+            0.5005807291666666,
+            0.4988489583333333,
+            0.49863541666666666,
+            0.5004609375,
+            0.49888020833333335,
+            0.4988932291666667,
+            0.5004036458333333
+          ],
+          "coefficient_entropy_bits": 9.985723177328829,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.4453125,
+              "f8_output_rate": 0.0478515625,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.1171875,
+              "f8_output_rate": 0.05859375,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 1.1328125,
+              "f8_output_rate": 0.048828125,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.5,
+              "f8_output_rate": 0.0498046875,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.203125,
+              "f8_output_rate": 0.03515625,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.15625,
+              "f8_output_rate": 0.0478515625,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 964.3224615885416,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.9045789672042261,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.942641702432592,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.01998261255256834,
+            "tv_observed_to_uniform_output_alphabet": 0.05921614583333333,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 15880,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 967.7135913628471,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.8906886183336774,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9459565897975045,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.02008951558901572,
+            "tv_observed_to_uniform_output_alphabet": 0.05897135416666667,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.4992734375,
+            0.5001666666666666,
+            0.49931770833333333,
+            0.49800260416666664,
+            0.4986770833333333,
+            0.49806770833333336,
+            0.4996145833333333,
+            0.49947916666666664,
+            0.499546875,
+            0.5010130208333333
+          ],
+          "coefficient_entropy_bits": 9.985708552689742,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.095890410958904,
+              "f8_output_rate": 0.041015625,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.0136986301369864,
+              "f8_output_rate": 0.044921875,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 1.143835616438356,
+              "f8_output_rate": 0.0576171875,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.052734375,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 2.2857142857142856,
+              "f8_output_rate": 0.060546875,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.5,
+              "f8_output_rate": 0.04296875,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1017.2859268663194,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.544515304641385,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9944143957637531,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020444595943476522,
+            "tv_observed_to_uniform_output_alphabet": 0.059265625,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 23799,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1017.0417424045139,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.5466629370298293,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9941757012751846,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020522458884049265,
+            "tv_observed_to_uniform_output_alphabet": 0.05844791666666667,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.499734375,
+            0.49953125,
+            0.49974739583333333,
+            0.49870572916666667,
+            0.4996041666666667,
+            0.5002942708333333,
+            0.4989609375,
+            0.4991145833333333,
+            0.49954947916666664,
+            0.49972916666666667
+          ],
+          "coefficient_entropy_bits": 9.985868002818876,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.9285714285714286,
+              "f8_output_rate": 0.0390625,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.6428571428571428,
+              "f8_output_rate": 0.0439453125,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 2.7857142857142856,
+              "f8_output_rate": 0.0478515625,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0888888888888888,
+              "f8_output_rate": 0.0458984375,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.1777777777777778,
+              "f8_output_rate": 0.0400390625,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.1037037037037036,
+              "f8_output_rate": 0.048828125,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1043.1232437065973,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.3239384659918351,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0196708149624607,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020648757447181334,
+            "tv_observed_to_uniform_output_alphabet": 0.058687500000000004,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 31718,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1055.526080512153,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.2338272209504332,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0317948001096313,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.021013210924201463,
+            "tv_observed_to_uniform_output_alphabet": 0.05857291666666667,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.500171875,
+            0.5000520833333333,
+            0.4998984375,
+            0.4994453125,
+            0.49883333333333335,
+            0.5006197916666667,
+            0.5006770833333334,
+            0.4994401041666667,
+            0.49904947916666664,
+            0.49966927083333335
+          ],
+          "coefficient_entropy_bits": 9.985904515255479,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0098784384804098,
+              "f8_output_rate": 0.052734375,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.6428571428571428,
+              "f8_output_rate": 0.0361328125,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 2.0,
+              "f8_output_rate": 0.0478515625,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0270584517122436,
+              "f8_output_rate": 0.048828125,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.4285714285714286,
+              "f8_output_rate": 0.05078125,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.046875,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1038.2677296006946,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.36294665810335575,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.014924466862849,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020499406259387204,
+            "tv_observed_to_uniform_output_alphabet": 0.058752604166666667,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 39637,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1088.8991610243056,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.07473656635952457,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.06441755720851,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.021516603615950737,
+            "tv_observed_to_uniform_output_alphabet": 0.059747395833333335,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.5008255208333333,
+            0.4988619791666667,
+            0.5000572916666667,
+            0.49866666666666665,
+            0.49861197916666666,
+            0.5014479166666667,
+            0.4989921875,
+            0.49988020833333335,
+            0.4999635416666667,
+            0.5006432291666667
+          ],
+          "coefficient_entropy_bits": 9.985705309034056,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0816326530612246,
+              "f8_output_rate": 0.0439453125,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.0191002947617147,
+              "f8_output_rate": 0.0556640625,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 1.0427981219494344,
+              "f8_output_rate": 0.0478515625,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.7857142857142858,
+              "f8_output_rate": 0.05859375,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.1020408163265305,
+              "f8_output_rate": 0.0537109375,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.0408163265306123,
+              "f8_output_rate": 0.064453125,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1021.2152738715276,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.5098680521734045,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9982553996789126,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.02040748363497547,
+            "tv_observed_to_uniform_output_alphabet": 0.05890885416666666,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 47556,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1075.5889405381943,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.1234397840674542,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0514065889913922,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.021100841249874838,
+            "tv_observed_to_uniform_output_alphabet": 0.060330729166666666,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.4982916666666667,
+            0.5003307291666667,
+            0.49900260416666664,
+            0.4998151041666667,
+            0.5002473958333333,
+            0.4990833333333333,
+            0.4989427083333333,
+            0.5000911458333334,
+            0.5000130208333333,
+            0.5001484375
+          ],
+          "coefficient_entropy_bits": 9.985801034570557,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0774647887323943,
+              "f8_output_rate": 0.0498046875,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.1126760563380282,
+              "f8_output_rate": 0.0556640625,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 1.056338028169014,
+              "f8_output_rate": 0.0458984375,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.056338028169014,
+              "f8_output_rate": 0.052734375,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.5714285714285714,
+              "f8_output_rate": 0.044921875,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.0120723958115716,
+              "f8_output_rate": 0.04296875,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1023.0192046440972,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.49395073851463484,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0000187728681302,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.02082988275382998,
+            "tv_observed_to_uniform_output_alphabet": 0.05874479166666667,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 55475,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1076.736896484375,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.11850400464270322,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0525287355663488,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020828050684640033,
+            "tv_observed_to_uniform_output_alphabet": 0.05848958333333333,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.4999427083333333,
+            0.49972916666666667,
+            0.49873697916666665,
+            0.499203125,
+            0.49902083333333336,
+            0.4998020833333333,
+            0.4995859375,
+            0.49975260416666667,
+            0.49935677083333335,
+            0.5007708333333334
+          ],
+          "coefficient_entropy_bits": 9.985939035646151,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.2291666666666667,
+              "f8_output_rate": 0.0498046875,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.0972222222222223,
+              "f8_output_rate": 0.05859375,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 0.9960827118760266,
+              "f8_output_rate": 0.060546875,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.0556640625,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.0097335315569194,
+              "f8_output_rate": 0.0478515625,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.0537109375,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1037.8711104600695,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.3662090863933998,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 1.0145367648681032,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.02060241360643837,
+            "tv_observed_to_uniform_output_alphabet": 0.05871614583333333,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 63394,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 956.2997738715278,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.9322951769021163,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9347993879487075,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020089779995243816,
+            "tv_observed_to_uniform_output_alphabet": 0.05867708333333334,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.5001067708333333,
+            0.5004557291666667,
+            0.5002630208333333,
+            0.4995234375,
+            0.4988723958333333,
+            0.4997109375,
+            0.4995598958333333,
+            0.5003515625,
+            0.4995546875,
+            0.5008984375
+          ],
+          "coefficient_entropy_bits": 9.985660950599106,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 10.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0153876706473066,
+              "f8_output_rate": 0.0615234375,
+              "rows": 15000
+            },
+            "real_coefficient_routed": {
+              "bytes": 480000,
+              "casi": 1.0281341800964234,
+              "f8_output_rate": 0.0654296875,
+              "rows": 15000
+            },
+            "real_standard": {
+              "bytes": 480000,
+              "casi": 1.1923076923076923,
+              "f8_output_rate": 0.04296875,
+              "rows": 15000
+            },
+            "uniform_bitplane": {
+              "bytes": 480000,
+              "casi": 1.0229834693276432,
+              "f8_output_rate": 0.046875,
+              "rows": 15000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 480000,
+              "casi": 1.0355029585798816,
+              "f8_output_rate": 0.0546875,
+              "rows": 15000
+            },
+            "uniform_standard": {
+              "bytes": 480000,
+              "casi": 0.9928886958163674,
+              "f8_output_rate": 0.0537109375,
+              "rows": 15000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 991.1357938368055,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.7571368222531055,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9688521933888617,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.02003430631696205,
+            "tv_observed_to_uniform_output_alphabet": 0.05926302083333333,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 71313,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 984.3968806423613,
+            "degrees_of_freedom": 1023,
+            "p_value": 0.8022330946534272,
+            "preimages_per_output_symbol": {
+              "3": 767,
+              "4": 257
+            },
+            "reduced_chi_square": 0.9622647904617413,
+            "samples": 384000,
+            "tv_observed_to_uniform_field_compress": 0.020457350023780917,
+            "tv_observed_to_uniform_output_alphabet": 0.05793229166666666,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.05782487937443677
+          }
+        }
+      ],
+      "summaries": {
+        "real_bitplane": {
+          "casi": {
+            "mean": 1.1865751791109724,
+            "sample_sd_ddof1": 0.29577040400285004,
+            "values": [
+              0.9889201818025223,
+              0.9935270521888689,
+              1.4453125,
+              1.095890410958904,
+              1.9285714285714286,
+              1.0098784384804098,
+              1.0816326530612246,
+              1.0774647887323943,
+              1.2291666666666667,
+              1.0153876706473066
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.0482421875,
+            "sample_sd_ddof1": 0.0064973827863930465,
+            "values": [
+              0.044921875,
+              0.0517578125,
+              0.0478515625,
+              0.041015625,
+              0.0390625,
+              0.052734375,
+              0.0439453125,
+              0.0498046875,
+              0.0498046875,
+              0.0615234375
+            ]
+          }
+        },
+        "real_coefficient_routed": {
+          "casi": {
+            "mean": 1.1691440331914613,
+            "sample_sd_ddof1": 0.253382989530846,
+            "values": [
+              1.0112136561514489,
+              1.0064935064935066,
+              1.1171875,
+              1.0136986301369864,
+              1.6428571428571428,
+              1.6428571428571428,
+              1.0191002947617147,
+              1.1126760563380282,
+              1.0972222222222223,
+              1.0281341800964234
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.051953125,
+            "sample_sd_ddof1": 0.008971628185824884,
+            "values": [
+              0.044921875,
+              0.0556640625,
+              0.05859375,
+              0.044921875,
+              0.0439453125,
+              0.0361328125,
+              0.0556640625,
+              0.0556640625,
+              0.05859375,
+              0.0654296875
+            ]
+          }
+        },
+        "real_standard": {
+          "casi": {
+            "mean": 1.4674564281130134,
+            "sample_sd_ddof1": 0.6167235811232482,
+            "values": [
+              2.142857142857143,
+              1.1818181818181819,
+              1.1328125,
+              1.143835616438356,
+              2.7857142857142856,
+              2.0,
+              1.0427981219494344,
+              1.056338028169014,
+              0.9960827118760266,
+              1.1923076923076923
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.04970703125,
+            "sample_sd_ddof1": 0.0059748814697426385,
+            "values": [
+              0.04296875,
+              0.0546875,
+              0.048828125,
+              0.0576171875,
+              0.0478515625,
+              0.0478515625,
+              0.0478515625,
+              0.0458984375,
+              0.060546875,
+              0.04296875
+            ]
+          }
+        },
+        "uniform_bitplane": {
+          "casi": {
+            "mean": 1.1901715221137341,
+            "sample_sd_ddof1": 0.2603264314088292,
+            "values": [
+              0.9921606687538371,
+              1.0,
+              1.5,
+              1.2142857142857142,
+              1.0888888888888888,
+              1.0270584517122436,
+              1.7857142857142858,
+              1.056338028169014,
+              1.2142857142857142,
+              1.0229834693276432
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05205078125,
+            "sample_sd_ddof1": 0.004695856628089403,
+            "values": [
+              0.0498046875,
+              0.0595703125,
+              0.0498046875,
+              0.052734375,
+              0.0458984375,
+              0.048828125,
+              0.05859375,
+              0.052734375,
+              0.0556640625,
+              0.046875
+            ]
+          }
+        },
+        "uniform_field_through_compress_standard": {
+          "casi": {
+            "mean": 1.2949436043471754,
+            "sample_sd_ddof1": 0.3929625490988624,
+            "values": [
+              1.0316455696202531,
+              1.103896103896104,
+              1.203125,
+              2.2857142857142856,
+              1.1777777777777778,
+              1.4285714285714286,
+              1.1020408163265305,
+              1.5714285714285714,
+              1.0097335315569194,
+              1.0355029585798816
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.04931640625,
+            "sample_sd_ddof1": 0.008365948747328383,
+            "values": [
+              0.060546875,
+              0.044921875,
+              0.03515625,
+              0.060546875,
+              0.0400390625,
+              0.05078125,
+              0.0537109375,
+              0.044921875,
+              0.0478515625,
+              0.0546875
+            ]
+          }
+        },
+        "uniform_standard": {
+          "casi": {
+            "mean": 1.1753783069914203,
+            "sample_sd_ddof1": 0.18905364502127794,
+            "values": [
+              1.5,
+              1.0194805194805194,
+              1.15625,
+              1.5,
+              1.1037037037037036,
+              1.2142857142857142,
+              1.0408163265306123,
+              1.0120723958115716,
+              1.2142857142857142,
+              0.9928886958163674
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05087890625,
+            "sample_sd_ddof1": 0.008469173807110313,
+            "values": [
+              0.0419921875,
+              0.0654296875,
+              0.0478515625,
+              0.04296875,
+              0.048828125,
+              0.046875,
+              0.064453125,
+              0.04296875,
+              0.0537109375,
+              0.0537109375
+            ]
+          }
+        }
+      },
+      "variant": "mlkem768"
+    },
+    {
+      "all_bitcount_identity_gates_passed": true,
+      "all_functional_gates_passed": true,
+      "all_repack_gates_passed": true,
+      "coefficient_bits": 11,
+      "coefficients_per_operation": 1024,
+      "paired_intervention_tests": {
+        "real_minus_uniform_field_compress_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.8544921875,
+          "mean_difference": 0.0893396287572037,
+          "seed_pairs": 10,
+          "two_sided_p": 0.29296875,
+          "upper_tail_p": 0.146484375
+        },
+        "real_minus_uniform_field_compress_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.80078125,
+          "mean_difference": 0.0021484375,
+          "seed_pairs": 10,
+          "two_sided_p": 0.4375,
+          "upper_tail_p": 0.21875
+        },
+        "real_standard_minus_bitplane_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.9453125,
+          "mean_difference": 0.12567876317651763,
+          "seed_pairs": 10,
+          "two_sided_p": 0.125,
+          "upper_tail_p": 0.0625
+        },
+        "real_standard_minus_bitplane_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.5947265625,
+          "mean_difference": 0.0009765625,
+          "seed_pairs": 10,
+          "two_sided_p": 0.849609375,
+          "upper_tail_p": 0.4248046875
+        },
+        "real_standard_minus_routed_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.7529296875,
+          "mean_difference": 0.0612646241185027,
+          "seed_pairs": 10,
+          "two_sided_p": 0.49609375,
+          "upper_tail_p": 0.248046875
+        },
+        "real_standard_minus_routed_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.3046875,
+          "mean_difference": -0.00126953125,
+          "seed_pairs": 10,
+          "two_sided_p": 0.609375,
+          "upper_tail_p": 0.7275390625
+        },
+        "uniform_standard_minus_bitplane_casi": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.05859375,
+          "mean_difference": -0.05554986437990045,
+          "seed_pairs": 10,
+          "two_sided_p": 0.1171875,
+          "upper_tail_p": 0.9423828125
+        },
+        "uniform_standard_minus_bitplane_f8_output_rate": {
+          "exact_assignments": 1024,
+          "lower_tail_p": 0.45703125,
+          "mean_difference": -0.000390625,
+          "seed_pairs": 10,
+          "two_sided_p": 0.9140625,
+          "upper_tail_p": 0.576171875
+        }
+      },
+      "records": [
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.499173828125,
+            0.499697265625,
+            0.50080078125,
+            0.500630859375,
+            0.499953125,
+            0.49901953125,
+            0.49936328125,
+            0.50032421875,
+            0.500212890625,
+            0.499173828125,
+            0.499666015625
+          ],
+          "coefficient_entropy_bits": 10.928669901108535,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0161290322580645,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.4285714285714286,
+              "f8_output_rate": 0.0556640625,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.217741935483871,
+              "f8_output_rate": 0.0537109375,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.046495841313677,
+              "f8_output_rate": 0.0576171875,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.0483870967741935,
+              "f8_output_rate": 0.052734375,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0806451612903225,
+              "f8_output_rate": 0.0419921875,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2036.696244140625,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.5599658621687331,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9949664114023571,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.0248107404860694,
+            "tv_observed_to_uniform_output_alphabet": 0.14384375,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 42,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1912.7787705078124,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.9836165585878082,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.934430273819156,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02420722603446982,
+            "tv_observed_to_uniform_output_alphabet": 0.143857421875,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.499099609375,
+            0.4980625,
+            0.4993828125,
+            0.4997265625,
+            0.499666015625,
+            0.5010859375,
+            0.5004765625,
+            0.500259765625,
+            0.500255859375,
+            0.49905859375,
+            0.500525390625
+          ],
+          "coefficient_entropy_bits": 10.928732725378593,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.078740157480315,
+              "f8_output_rate": 0.052734375,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.0458010094747674,
+              "f8_output_rate": 0.0458984375,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.078740157480315,
+              "f8_output_rate": 0.05078125,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.0537109375,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.0064475903644343,
+              "f8_output_rate": 0.048828125,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0236220472440944,
+              "f8_output_rate": 0.05859375,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2132.3952412109375,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.09227250874503612,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.0417172648807707,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.025220115251389317,
+            "tv_observed_to_uniform_output_alphabet": 0.143650390625,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 7961,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1999.6773740234373,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.7688102777138096,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9768819609298668,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.0246443364655302,
+            "tv_observed_to_uniform_output_alphabet": 0.14370117187499998,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.49951953125,
+            0.5008671875,
+            0.49928515625,
+            0.50035546875,
+            0.498970703125,
+            0.498947265625,
+            0.500423828125,
+            0.499404296875,
+            0.500064453125,
+            0.499771484375,
+            0.499591796875
+          ],
+          "coefficient_entropy_bits": 10.927894390691186,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0159379259192982,
+              "f8_output_rate": 0.0380859375,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.05078125,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 0.9895543174821592,
+              "f8_output_rate": 0.044921875,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.1428571428571428,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.1864406779661016,
+              "f8_output_rate": 0.0478515625,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.044921875,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2044.258015625,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.5129444021700887,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.998660486382511,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02509941635063083,
+            "tv_observed_to_uniform_output_alphabet": 0.144611328125,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 15880,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2008.43225390625,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.7244658501337622,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9811588929683683,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024646682092970874,
+            "tv_observed_to_uniform_output_alphabet": 0.14421484375,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.50005859375,
+            0.500076171875,
+            0.500755859375,
+            0.4998359375,
+            0.4997265625,
+            0.500923828125,
+            0.49944921875,
+            0.500638671875,
+            0.500611328125,
+            0.500490234375,
+            0.49948046875
+          ],
+          "coefficient_entropy_bits": 10.926438131835273,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0925925925925926,
+              "f8_output_rate": 0.04296875,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.1203703703703705,
+              "f8_output_rate": 0.0517578125,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.5,
+              "f8_output_rate": 0.05078125,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.2685185185185186,
+              "f8_output_rate": 0.048828125,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.1851851851851851,
+              "f8_output_rate": 0.0517578125,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.1759259259259258,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2006.3126171874999,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.7355615884503858,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9801234084941377,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024722856314771717,
+            "tv_observed_to_uniform_output_alphabet": 0.14611328125,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 23799,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2000.7892080078127,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.7634018456409651,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9774251138289266,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024715037361069406,
+            "tv_observed_to_uniform_output_alphabet": 0.143044921875,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.49805078125,
+            0.50162109375,
+            0.499484375,
+            0.500740234375,
+            0.499564453125,
+            0.499662109375,
+            0.499716796875,
+            0.500568359375,
+            0.499921875,
+            0.499330078125,
+            0.49970703125
+          ],
+          "coefficient_entropy_bits": 10.928818991621739,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.0537109375,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.036336943662933,
+              "f8_output_rate": 0.048828125,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.1965811965811965,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.1111111111111112,
+              "f8_output_rate": 0.0576171875,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.1196581196581197,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1958.9361357421872,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.917145526163324,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9569790599619868,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02425917599128869,
+            "tv_observed_to_uniform_output_alphabet": 0.14382421874999998,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 31718,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1987.827564453125,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.8221044248705649,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.971093094505679,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02472558799095075,
+            "tv_observed_to_uniform_output_alphabet": 0.14432812499999997,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.5003984375,
+            0.498525390625,
+            0.500166015625,
+            0.500412109375,
+            0.498115234375,
+            0.500072265625,
+            0.500099609375,
+            0.5009453125,
+            0.49992578125,
+            0.499947265625,
+            0.500427734375
+          ],
+          "coefficient_entropy_bits": 10.927690159567879,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.2142857142857142,
+              "f8_output_rate": 0.048828125,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.064453125,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.1171875,
+              "f8_output_rate": 0.0537109375,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.078125,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.0263330219501654,
+              "f8_output_rate": 0.0537109375,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0318437693232276,
+              "f8_output_rate": 0.05859375,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1997.4927177734373,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.7792393533527029,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9758147131282058,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024691995883711335,
+            "tv_observed_to_uniform_output_alphabet": 0.14487695312499999,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 39637,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1936.4718876953125,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.9598600952539689,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9460048303347887,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024174413065109653,
+            "tv_observed_to_uniform_output_alphabet": 0.14374804687499998,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.50056640625,
+            0.500458984375,
+            0.499865234375,
+            0.49970703125,
+            0.4993125,
+            0.499162109375,
+            0.498998046875,
+            0.50005078125,
+            0.49997265625,
+            0.501177734375,
+            0.50013671875
+          ],
+          "coefficient_entropy_bits": 10.927508895170158,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.1743119266055047,
+              "f8_output_rate": 0.044921875,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.3333333333333333,
+              "f8_output_rate": 0.0595703125,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.1743119266055047,
+              "f8_output_rate": 0.048828125,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.2844036697247707,
+              "f8_output_rate": 0.0546875,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.2201834862385321,
+              "f8_output_rate": 0.04296875,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0825688073394495,
+              "f8_output_rate": 0.05859375,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2119.3750800781254,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.12956217424328487,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.035356658562836,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.025465431623610705,
+            "tv_observed_to_uniform_output_alphabet": 0.14488671874999998,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 47556,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2016.1435703124998,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.6823432904365909,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9849260236016121,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02479667845542957,
+            "tv_observed_to_uniform_output_alphabet": 0.14423437500000003,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.499509765625,
+            0.499109375,
+            0.4991171875,
+            0.500802734375,
+            0.50094921875,
+            0.49926171875,
+            0.49998828125,
+            0.500021484375,
+            0.499087890625,
+            0.500357421875,
+            0.50046484375
+          ],
+          "coefficient_entropy_bits": 10.928737744857434,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0564516129032258,
+              "f8_output_rate": 0.0517578125,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.0498046875,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.1451612903225807,
+              "f8_output_rate": 0.0556640625,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.1209677419354838,
+              "f8_output_rate": 0.0693359375,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.2903225806451613,
+              "f8_output_rate": 0.0380859375,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0109852955445613,
+              "f8_output_rate": 0.0595703125,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2048.155936523437,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.4886390672799421,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.0005646978619624,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02482206849372936,
+            "tv_observed_to_uniform_output_alphabet": 0.14376562499999998,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 55475,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 1986.55968359375,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.8273195229433233,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 0.9704737096207865,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.02456582365669121,
+            "tv_observed_to_uniform_output_alphabet": 0.14426757812500002,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.49991796875,
+            0.498611328125,
+            0.49994921875,
+            0.498908203125,
+            0.499203125,
+            0.500708984375,
+            0.499892578125,
+            0.50117578125,
+            0.49982421875,
+            0.498970703125,
+            0.4998515625
+          ],
+          "coefficient_entropy_bits": 10.928482039753272,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0145180270583283,
+              "f8_output_rate": 0.046875,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.0468953342146268,
+              "f8_output_rate": 0.0478515625,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.6428571428571428,
+              "f8_output_rate": 0.05859375,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 1.128787878787879,
+              "f8_output_rate": 0.05078125,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.0237288805412124,
+              "f8_output_rate": 0.0478515625,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.0114173466057972,
+              "f8_output_rate": 0.048828125,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2102.031120117187,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.19410202829868792,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.0268837909707802,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.025033788065109655,
+            "tv_observed_to_uniform_output_alphabet": 0.143970703125,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 63394,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2053.9296708984375,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.4527972810769561,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.0033852813377808,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024756053572769613,
+            "tv_observed_to_uniform_output_alphabet": 0.144482421875,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        },
+        {
+          "bitcount_identity_operations": 500,
+          "bitplane_one_frequencies": [
+            0.50056640625,
+            0.499029296875,
+            0.49903125,
+            0.49977734375,
+            0.4990625,
+            0.5001171875,
+            0.4999296875,
+            0.499955078125,
+            0.50040625,
+            0.49971875,
+            0.498931640625
+          ],
+          "coefficient_entropy_bits": 10.928387253265033,
+          "exact_standard_repacks": 500,
+          "maximum_coefficient_entropy_bits": 11.0,
+          "measurements": {
+            "real_bitplane": {
+              "bytes": 704000,
+              "casi": 1.0172282207919252,
+              "f8_output_rate": 0.0712890625,
+              "rows": 22000
+            },
+            "real_coefficient_routed": {
+              "bytes": 704000,
+              "casi": 1.0273138951333727,
+              "f8_output_rate": 0.0458984375,
+              "rows": 22000
+            },
+            "real_standard": {
+              "bytes": 704000,
+              "casi": 1.0714285714285714,
+              "f8_output_rate": 0.0439453125,
+              "rows": 22000
+            },
+            "uniform_bitplane": {
+              "bytes": 704000,
+              "casi": 0.9682852698689771,
+              "f8_output_rate": 0.0478515625,
+              "rows": 22000
+            },
+            "uniform_field_through_compress_standard": {
+              "bytes": 704000,
+              "casi": 1.0168754947405823,
+              "f8_output_rate": 0.044921875,
+              "rows": 22000
+            },
+            "uniform_standard": {
+              "bytes": 704000,
+              "casi": 1.1428571428571428,
+              "f8_output_rate": 0.0546875,
+              "rows": 22000
+            }
+          },
+          "real_distribution_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2087.7333251953123,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.26016343818306464,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.0198990352688384,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.024948240720749484,
+            "tv_observed_to_uniform_output_alphabet": 0.144052734375,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          },
+          "route_check": {
+            "all_bijective": true,
+            "forbidden_alignments": 0
+          },
+          "seed": 71313,
+          "successful_decapsulations": 500,
+          "uniform_field_control_fit": {
+            "chi_square_vs_uniform_field_through_compress": 2128.38028515625,
+            "degrees_of_freedom": 2047,
+            "p_value": 0.1027944258114403,
+            "preimages_per_output_symbol": {
+              "1": 767,
+              "2": 1281
+            },
+            "reduced_chi_square": 1.0397558794119444,
+            "samples": 512000,
+            "tv_observed_to_uniform_field_compress": 0.025774018333208186,
+            "tv_observed_to_uniform_output_alphabet": 0.14472265625000003,
+            "tv_theoretical_compress_to_uniform_output_alphabet": 0.14411219937481223
+          }
+        }
+      ],
+      "summaries": {
+        "real_bitplane": {
+          "casi": {
+            "mean": 1.075162378132354,
+            "sample_sd_ddof1": 0.0698356468375803,
+            "values": [
+              1.0161290322580645,
+              1.078740157480315,
+              1.0159379259192982,
+              1.0925925925925926,
+              1.0714285714285714,
+              1.2142857142857142,
+              1.1743119266055047,
+              1.0564516129032258,
+              1.0145180270583283,
+              1.0172282207919252
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.0498046875,
+            "sample_sd_ddof1": 0.008914755167727313,
+            "values": [
+              0.046875,
+              0.052734375,
+              0.0380859375,
+              0.04296875,
+              0.0537109375,
+              0.048828125,
+              0.044921875,
+              0.0517578125,
+              0.046875,
+              0.0712890625
+            ]
+          }
+        },
+        "real_coefficient_routed": {
+          "casi": {
+            "mean": 1.1395765171903691,
+            "sample_sd_ddof1": 0.1402154458181147,
+            "values": [
+              1.4285714285714286,
+              1.0458010094747674,
+              1.2142857142857142,
+              1.1203703703703705,
+              1.036336943662933,
+              1.0714285714285714,
+              1.3333333333333333,
+              1.0714285714285714,
+              1.0468953342146268,
+              1.0273138951333727
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05205078125,
+            "sample_sd_ddof1": 0.006090807081840888,
+            "values": [
+              0.0556640625,
+              0.0458984375,
+              0.05078125,
+              0.0517578125,
+              0.048828125,
+              0.064453125,
+              0.0595703125,
+              0.0498046875,
+              0.0478515625,
+              0.0458984375
+            ]
+          }
+        },
+        "real_standard": {
+          "casi": {
+            "mean": 1.2008411413088713,
+            "sample_sd_ddof1": 0.20790162754037747,
+            "values": [
+              1.217741935483871,
+              1.078740157480315,
+              0.9895543174821592,
+              1.5,
+              1.0714285714285714,
+              1.1171875,
+              1.1743119266055047,
+              1.1451612903225807,
+              1.6428571428571428,
+              1.0714285714285714
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05078125,
+            "sample_sd_ddof1": 0.004739654875833671,
+            "values": [
+              0.0537109375,
+              0.05078125,
+              0.044921875,
+              0.05078125,
+              0.046875,
+              0.0537109375,
+              0.048828125,
+              0.0556640625,
+              0.05859375,
+              0.0439453125
+            ]
+          }
+        },
+        "uniform_bitplane": {
+          "casi": {
+            "mean": 1.1306450831016215,
+            "sample_sd_ddof1": 0.09829171491496866,
+            "values": [
+              1.046495841313677,
+              1.0714285714285714,
+              1.1428571428571428,
+              1.2685185185185186,
+              1.1965811965811965,
+              1.078125,
+              1.2844036697247707,
+              1.1209677419354838,
+              1.128787878787879,
+              0.9682852698689771
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.05234375,
+            "sample_sd_ddof1": 0.007060125891523937,
+            "values": [
+              0.0576171875,
+              0.0537109375,
+              0.046875,
+              0.048828125,
+              0.046875,
+              0.046875,
+              0.0546875,
+              0.0693359375,
+              0.05078125,
+              0.0478515625
+            ]
+          }
+        },
+        "uniform_field_through_compress_standard": {
+          "casi": {
+            "mean": 1.1115015125516678,
+            "sample_sd_ddof1": 0.1020705672842994,
+            "values": [
+              1.0483870967741935,
+              1.0064475903644343,
+              1.1864406779661016,
+              1.1851851851851851,
+              1.1111111111111112,
+              1.0263330219501654,
+              1.2201834862385321,
+              1.2903225806451613,
+              1.0237288805412124,
+              1.0168754947405823
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.0486328125,
+            "sample_sd_ddof1": 0.005690565985263583,
+            "values": [
+              0.052734375,
+              0.048828125,
+              0.0478515625,
+              0.0517578125,
+              0.0576171875,
+              0.0537109375,
+              0.04296875,
+              0.0380859375,
+              0.0478515625,
+              0.044921875
+            ]
+          }
+        },
+        "uniform_standard": {
+          "casi": {
+            "mean": 1.0750952187217213,
+            "sample_sd_ddof1": 0.0572805877660768,
+            "values": [
+              1.0806451612903225,
+              1.0236220472440944,
+              1.0714285714285714,
+              1.1759259259259258,
+              1.1196581196581197,
+              1.0318437693232276,
+              1.0825688073394495,
+              1.0109852955445613,
+              1.0114173466057972,
+              1.1428571428571428
+            ]
+          },
+          "f8_output_rate": {
+            "mean": 0.051953125,
+            "sample_sd_ddof1": 0.006731279700813974,
+            "values": [
+              0.0419921875,
+              0.05859375,
+              0.044921875,
+              0.046875,
+              0.046875,
+              0.05859375,
+              0.05859375,
+              0.0595703125,
+              0.048828125,
+              0.0546875
+            ]
+          }
+        }
+      },
+      "variant": "mlkem1024"
+    }
+  ],
+  "schema_version": 1,
+  "scope_note": "This isolates sensitivity of CASI/F8-O to bijective serialization. It does not observe pre-compression ML-KEM coefficients and makes no IND-CPA/IND-CCA or key-recovery claim."
+}

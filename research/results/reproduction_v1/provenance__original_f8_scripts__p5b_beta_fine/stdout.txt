@@ -1,0 +1,68 @@
+=== P5b: FINE β SWEEP (α=7, word_size=16) ===
+
+  β   Active     MI/pair    log₂(MI)
+----------------------------------------
+  1    15/16   0.189045      -2.403
+  2    14/16   0.045687      -4.452
+  3    13/16   0.011291      -6.469
+  4    12/16   0.002792      -8.485
+  5     0/16   0.000000        -inf
+  6     0/16   0.000000        -inf
+  7     0/16   0.000000        -inf
+  8     0/16   0.000000        -inf
+
+=== CONFIRMING α-INDEPENDENCE (α=3 vs α=7 vs α=13) ===
+
+  β         α=3         α=7        α=13   Max spread%
+-------------------------------------------------------
+  1  0.189154  0.189045  0.189310        0.14%
+  2  0.045450  0.045687  0.045579        0.52%
+  3  0.011382  0.011291  0.011202        1.60%
+  4  0.002845  0.002792  0.002836        1.88%
+
+=== REFINED MI(β) MODEL ===
+
+Power law: MI(β) = 0.2396 · β^(-2.958)
+R² = 0.876116
+
+    β    Measured   Predicted    Error%
+    1  0.189045  0.239634     26.8%
+    2  0.045687  0.030831     32.5%
+    3  0.011291  0.009291     17.7%
+    4  0.002792  0.003967     42.1%
+
+Exponential: MI(β) = 0.7802 · exp(-1.418·β)
+R² = 0.999997
+
+    β    Measured   Predicted    Error%
+    1  0.189045  0.189031      0.0%
+    2  0.045687  0.045800      0.2%
+    3  0.011291  0.011097      1.7%
+    4  0.002792  0.002689      3.7%
+
+=== COMPLETE f(α,β) FORMULA ===
+
+n_dead(α,β) = β  (dead bits at positions [α, α+1, ..., α+β-1] mod WS)
+n_active(β) = WS - β
+MI_per_pair(β) = 0.2396 · β^(-2.958)  (α irrelevant)
+total_MI(β) = (WS - β) · MI_per_pair(β)
+leak_rate(β) = total_MI(β) / WS
+
+Death threshold: β ≥ 5 → no signal (at WS=16)
+
+=== CROSS-VALIDATION: PREDICT REAL SPECK VARIANTS ===
+
+Using MI(β) model trained on WS=16 to predict WS=24/32/64:
+(Hypothesis: if MI depends ONLY on β, these predictions should match)
+
+Model predicts MI/pair at β=3: 0.009291
+P4 measured Speck 48/96 (β=3): 0.011 (from P4)
+P4 measured Speck 64/128 (β=3): 0.011 (from P4)
+P4 measured Speck 128/256 (β=3): 0.011 (from P4)
+P5 measured WS=16, β=3: 0.011291
+
+--- Live measurement at larger word sizes ---
+  Speck 48/96: n_active=21/24 (pred=21), MI/pair=0.011401 (pred=0.009291)
+  Speck 64/128: n_active=29/32 (pred=29), MI/pair=0.011289 (pred=0.009291)
+
+=== DONE ===

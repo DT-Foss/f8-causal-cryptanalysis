@@ -1,0 +1,21 @@
+================================================================================
+INVERSE-SPECK: ENCRYPT vs DECRYPT F8 LEAK
+================================================================================
+N=50000, 5 seeds, 20 perms
+
+ENCRYPT (forward):
+  R 5: MI=0.636771  Z=   +8801.9
+  R10: MI=0.635318  Z=   +8706.5
+  R15: MI=0.639624  Z=   +8561.9
+  R22: MI=0.639497  Z=   +8717.7
+
+DECRYPT (inverse):
+  R 5: MI=0.000229  Z=      +0.5
+  R10: MI=0.000173  Z=      -0.6
+  R15: MI=0.000202  Z=      -0.2
+  R22: MI=0.000158  Z=      -0.6
+
+If encrypt ≈ decrypt → leak is structural (in the addition itself)
+If encrypt >> decrypt → leak is directional (carry propagation direction)
+
+=== DONE ===

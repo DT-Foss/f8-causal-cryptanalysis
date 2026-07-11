@@ -1,0 +1,18 @@
+{
+  "schema": "frozen-boundary-config-v1",
+  "experiment": "mlkem_compression_boundary_frontier.py",
+  "causal_breadcrumbs": [
+    "poly_decompress_then_ntt",
+    "Compress_10_unequal_preimage_counts",
+    "Compress_11_unequal_preimage_counts"
+  ],
+  "variants": ["mlkem512", "mlkem768", "mlkem1024"],
+  "positions": [0, 1, 2, 3, 7, 15, 31, 63, 127, 191, 255],
+  "operations_per_seed": 300,
+  "seeds": 5,
+  "repairing_routes": 8,
+  "seed_base": 585001,
+  "v_compression_bits": {"mlkem512": 4, "mlkem768": 4, "mlkem1024": 5},
+  "nulls": ["row repairing", "same-weight random coefficient position"],
+  "decision_rule": "A position is retained only if its fixed-position effect exceeds the same-weight random-position control with exact p <= 0.01 across five seeds."
+}

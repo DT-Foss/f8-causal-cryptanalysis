@@ -1,0 +1,178 @@
+{
+  "conclusions": {
+    "all_seed_frontier_rule_matches_paper": false,
+    "every_round_matches_paper": false,
+    "sample_count_matches_paper": false
+  },
+  "experiment": "retained_nano_protocol_audit",
+  "paper_protocol": {
+    "frontier_rule": "all five seeds above CASI 2",
+    "round_grid": "every round",
+    "samples": 5000,
+    "seeds": 5
+  },
+  "retained_protocol": {
+    "complete_round_grids": 4,
+    "f8_sweep_files": 23,
+    "full_sweep_files": 41,
+    "mean_based_frontiers_failing_all_seed_rule": [
+      {
+        "cipher": "katan32",
+        "frontier": 48,
+        "per_seed_amplified": [
+          1.034,
+          2.9286,
+          3.4286,
+          2.9286,
+          2.5
+        ],
+        "per_seed_operational_max": [
+          1.034,
+          2.9286,
+          3.4286,
+          2.9286,
+          2.5
+        ],
+        "per_seed_standard": [
+          0.8643,
+          2.9286,
+          3.4286,
+          2.9286,
+          2.5
+        ],
+        "seeds_above_two": 4
+      },
+      {
+        "cipher": "present128",
+        "frontier": 7,
+        "per_seed_amplified": [
+          2.3571,
+          1.5714,
+          1.6429,
+          2.1429,
+          3.1429
+        ],
+        "per_seed_operational_max": [
+          2.3571,
+          1.5714,
+          1.6429,
+          2.1429,
+          3.1429
+        ],
+        "per_seed_standard": [
+          2.3571,
+          1.5714,
+          1.6429,
+          2.1429,
+          3.1429
+        ],
+        "seeds_above_two": 3
+      },
+      {
+        "cipher": "simon48_72",
+        "frontier": 9,
+        "per_seed_amplified": [
+          2.0714,
+          5.0714,
+          3.4861,
+          1.6429,
+          3.7023
+        ],
+        "per_seed_operational_max": [
+          2.0714,
+          5.0714,
+          3.4861,
+          1.6429,
+          3.7023
+        ],
+        "per_seed_standard": [
+          2.0714,
+          5.0714,
+          1.7143,
+          1.6429,
+          2.7143
+        ],
+        "seeds_above_two": 4
+      },
+      {
+        "cipher": "simon48_96",
+        "frontier": 9,
+        "per_seed_amplified": [
+          1.6429,
+          9.2857,
+          3.4769,
+          2.0714,
+          4.5643
+        ],
+        "per_seed_operational_max": [
+          1.6429,
+          9.2857,
+          3.4769,
+          2.0714,
+          4.5643
+        ],
+        "per_seed_standard": [
+          1.6429,
+          9.2857,
+          1.9286,
+          2.0714,
+          3.7143
+        ],
+        "seeds_above_two": 4
+      }
+    ],
+    "n_frontier_failures": 4,
+    "sample_counts": [
+      10000
+    ],
+    "seed_counts": [
+      5
+    ],
+    "sparse_ciphers": [
+      "gift128",
+      "gift64",
+      "grain128a",
+      "katan32",
+      "katan48",
+      "katan64",
+      "lea128",
+      "lea192",
+      "lea256",
+      "present128",
+      "present80",
+      "simon128_128",
+      "simon128_192",
+      "simon128_256",
+      "simon32_64",
+      "simon48_72",
+      "simon48_96",
+      "simon64_128",
+      "simon64_96",
+      "simon96_144",
+      "simon96_96",
+      "skinny128_128",
+      "skinny128_256",
+      "skinny128_384",
+      "skinny64_128",
+      "skinny64_192",
+      "skinny64_64",
+      "speck128_128",
+      "speck128_192",
+      "speck128_256",
+      "speck32_64",
+      "speck48_72",
+      "speck48_96",
+      "speck64_128",
+      "speck64_96",
+      "speck96_144",
+      "speck96_96"
+    ],
+    "sparse_round_grids": 37,
+    "strongest_strategy_counts": {
+      "algebraic_degree": 4,
+      "integral": 1,
+      "slide": 36
+    }
+  },
+  "schema_version": 1
+}

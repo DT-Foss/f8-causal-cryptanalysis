@@ -1,0 +1,101 @@
+{
+  "test": "F8_cross_round_MI",
+  "reference": "ICECET 2026 Paper #1142",
+  "timestamp": "2026-02-27T20:12:01",
+  "n_blocks": 20000,
+  "n_seeds": 10,
+  "results": {
+    "speck32_64": {
+      "full_round_detected": true,
+      "full_round_t_stat": 27.62
+    },
+    "speck48_72": {
+      "full_round_detected": true,
+      "full_round_t_stat": 21.52
+    },
+    "speck48_96": {
+      "full_round_detected": true,
+      "full_round_t_stat": 17.87
+    },
+    "speck64_96": {
+      "full_round_detected": true,
+      "full_round_t_stat": 18.58
+    },
+    "speck64_128": {
+      "full_round_detected": true,
+      "full_round_t_stat": 26.94
+    },
+    "speck96_96": {
+      "full_round_detected": true,
+      "full_round_t_stat": 26.17
+    },
+    "speck96_144": {
+      "full_round_detected": true,
+      "full_round_t_stat": 33.79
+    },
+    "speck128_128": {
+      "full_round_detected": true,
+      "full_round_t_stat": 28.08
+    },
+    "speck128_192": {
+      "full_round_detected": true,
+      "full_round_t_stat": 21.52
+    },
+    "speck128_256": {
+      "full_round_detected": true,
+      "full_round_t_stat": 40.4
+    },
+    "simon32_64": {
+      "full_round_detected": false,
+      "full_round_t_stat": 1.5
+    },
+    "simon48_72": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0
+    },
+    "simon48_96": {
+      "full_round_detected": false,
+      "full_round_t_stat": 1.23
+    },
+    "simon64_96": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0
+    },
+    "simon64_128": {
+      "full_round_detected": false,
+      "full_round_t_stat": 1.37
+    },
+    "simon96_96": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0.39
+    },
+    "simon96_144": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0
+    },
+    "simon128_128": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0.6
+    },
+    "simon128_192": {
+      "full_round_detected": false,
+      "full_round_t_stat": 2.23
+    },
+    "simon128_256": {
+      "full_round_detected": false,
+      "full_round_t_stat": 1.6
+    },
+    "lea128": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0.34
+    },
+    "lea192": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0
+    },
+    "lea256": {
+      "full_round_detected": false,
+      "full_round_t_stat": 0.89
+    }
+  }
+}

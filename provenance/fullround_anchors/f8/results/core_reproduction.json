@@ -1,0 +1,129 @@
+{
+  "timestamp": "2026-07-11T02:38:47",
+  "N": 20000,
+  "C1": {
+    "claim": "C1",
+    "description": "Speck 32/64 R=22 distinguisher",
+    "results": [
+      {
+        "seed": 0,
+        "Z": 3928.6,
+        "MI_total": 0.4426
+      },
+      {
+        "seed": 1,
+        "Z": 4236.6,
+        "MI_total": 0.4444
+      },
+      {
+        "seed": 2,
+        "Z": 4098.9,
+        "MI_total": 0.4474
+      }
+    ],
+    "mean_z": 4088.0,
+    "verdict": "CONFIRMED"
+  },
+  "C2": {
+    "claim": "C2",
+    "description": "No round-decay",
+    "results": [
+      {
+        "R": 5,
+        "Z": 3345.4,
+        "MI_total": 0.4595
+      },
+      {
+        "R": 10,
+        "Z": 3771.9,
+        "MI_total": 0.4491
+      },
+      {
+        "R": 15,
+        "Z": 3833.8,
+        "MI_total": 0.4357
+      },
+      {
+        "R": 22,
+        "Z": 3928.6,
+        "MI_total": 0.4426
+      }
+    ],
+    "mi_spread_pct": 5.3,
+    "verdict": "CONFIRMED"
+  },
+  "C3": {
+    "claim": "C3",
+    "description": "Diagonal structure",
+    "mean_diag_mi": 0.031616,
+    "mean_offdiag_mi": 2.3e-05,
+    "mean_dead_mi": 2.1e-05,
+    "ratio": 1349.5,
+    "n_dead": 2,
+    "dead_positions": [
+      7,
+      8
+    ],
+    "verdict": "CONFIRMED"
+  },
+  "C4": {
+    "claim": "C4",
+    "description": "Leak-rate formula",
+    "results": [
+      {
+        "beta": 1,
+        "measured_mi_per_pair": 0.130652,
+        "predicted": 0.188537,
+        "error_pct": 30.7
+      },
+      {
+        "beta": 2,
+        "measured_mi_per_pair": 0.031616,
+        "predicted": 0.045572,
+        "error_pct": 30.6
+      },
+      {
+        "beta": 3,
+        "measured_mi_per_pair": 0.008084,
+        "predicted": 0.011015,
+        "error_pct": 26.6
+      },
+      {
+        "beta": 4,
+        "measured_mi_per_pair": 0.001937,
+        "predicted": 0.002663,
+        "error_pct": 27.3
+      }
+    ],
+    "fit_A": 0.5367,
+    "fit_B": 1.4131,
+    "R_squared": 0.999986,
+    "verdict": "CONFIRMED"
+  },
+  "C5": {
+    "claim": "C5",
+    "description": "Encrypt-only asymmetry",
+    "encrypt_Z": 3928.6,
+    "decrypt_Z": 0.4,
+    "ratio": 8915.0,
+    "verdict": "CONFIRMED"
+  },
+  "C6": {
+    "claim": "C6",
+    "description": "Key-schedule independence",
+    "z_scores": {
+      "normal": 2979.1,
+      "zero": 3944.7,
+      "random_independent": 4232.3
+    },
+    "mi_totals": {
+      "normal": 0.439,
+      "zero": 0.4416,
+      "random_independent": 0.434
+    },
+    "mi_spread_pct": 1.7,
+    "min_z": 2979.1,
+    "verdict": "CONFIRMED"
+  },
+  "elapsed_seconds": 2.7
+}

@@ -1,0 +1,389 @@
+{
+  "causal": {
+    "bytes": 879,
+    "explicit_triplets": 7,
+    "file_sha256": "50bad071f023815d55ec8b1451ecb7d25d8fa07a00775ba9541c306da427d661",
+    "graph_sha256": "07e7bf32f975f7775cc3387a88cdd7a8fdf6dc236b3cc10f738232fb1543cb0f",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/present_fullround_exact_mechanism_v1.causal",
+    "reader_provenance_verified": true,
+    "reader_triplets": [
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            6,
+            2,
+            4,
+            4
+          ],
+          "population_mi_nats": 0.033822075568605205,
+          "source_bit": 20,
+          "source_local_bit": 0,
+          "target_bit": 21,
+          "target_local_bit": 1
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-20-21",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_21",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_20"
+      },
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            7,
+            1,
+            3,
+            5
+          ],
+          "population_mi_nats": 0.1423965384507726,
+          "source_bit": 23,
+          "source_local_bit": 3,
+          "target_bit": 21,
+          "target_local_bit": 1
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-23-21",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_21",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_23"
+      },
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            6,
+            2,
+            2,
+            6
+          ],
+          "population_mi_nats": 0.13081203594113697,
+          "source_bit": 3,
+          "source_local_bit": 3,
+          "target_bit": 0,
+          "target_local_bit": 0
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-3-0",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_0",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_3"
+      },
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            2,
+            6,
+            4,
+            4
+          ],
+          "population_mi_nats": 0.0338220755686052,
+          "source_bit": 40,
+          "source_local_bit": 0,
+          "target_bit": 42,
+          "target_local_bit": 2
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-40-42",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_42",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_40"
+      },
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            2,
+            6,
+            4,
+            4
+          ],
+          "population_mi_nats": 0.0338220755686052,
+          "source_bit": 43,
+          "source_local_bit": 3,
+          "target_bit": 42,
+          "target_local_bit": 2
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-43-42",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_42",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_43"
+      },
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            2,
+            6,
+            4,
+            4
+          ],
+          "population_mi_nats": 0.0338220755686052,
+          "source_bit": 60,
+          "source_local_bit": 0,
+          "target_bit": 63,
+          "target_local_bit": 3
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-60-63",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_63",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_60"
+      },
+      {
+        "attrs": {
+          "joint_counts_over_16_sbox_inputs": [
+            5,
+            3,
+            1,
+            7
+          ],
+          "population_mi_nats": 0.1423965384507726,
+          "source_bit": 62,
+          "source_local_bit": 2,
+          "target_bit": 63,
+          "target_local_bit": 3
+        },
+        "confidence": 1.0,
+        "edge_id": "present-exact-62-63",
+        "evidence_kind": "exact_algebraic_enumeration",
+        "is_inferred": false,
+        "mechanism": "player_fixedpoint_same_sbox_nibble_survival",
+        "outcome": "present:delta_r_rplus1_bit_63",
+        "provenance": [],
+        "source": "PRESENT_round_recurrence_and_4bit_sbox_truth_table",
+        "trigger": "present:state_r_bit_62"
+      }
+    ],
+    "triplets": 7
+  },
+  "empirical_comparison": {
+    "all_seven_cells_survive_all_five_fresh_keys_and_bvn_banks": true,
+    "cell_comparison": [
+      {
+        "absolute_error": 0.004744397861821514,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.12606763807931545,
+        "population_mi_nats": 0.13081203594113697,
+        "source_bit": 3,
+        "target_bit": 0
+      },
+      {
+        "absolute_error": 0.001653177975837819,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.035475253544443024,
+        "population_mi_nats": 0.033822075568605205,
+        "source_bit": 20,
+        "target_bit": 21
+      },
+      {
+        "absolute_error": 0.004063998366209048,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.13833254008456355,
+        "population_mi_nats": 0.1423965384507726,
+        "source_bit": 23,
+        "target_bit": 21
+      },
+      {
+        "absolute_error": 6.869523988155962e-05,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.03375338032872364,
+        "population_mi_nats": 0.0338220755686052,
+        "source_bit": 40,
+        "target_bit": 42
+      },
+      {
+        "absolute_error": 0.0002339522516971032,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.0340560278203023,
+        "population_mi_nats": 0.0338220755686052,
+        "source_bit": 43,
+        "target_bit": 42
+      },
+      {
+        "absolute_error": 7.803363442344946e-05,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.03374404193418175,
+        "population_mi_nats": 0.0338220755686052,
+        "source_bit": 60,
+        "target_bit": 63
+      },
+      {
+        "absolute_error": 0.001304359575022701,
+        "all_five_keys_above_all_bvn_routes": true,
+        "observed_mean_mi_nats": 0.1437008980257953,
+        "population_mi_nats": 0.1423965384507726,
+        "source_bit": 62,
+        "target_bit": 63
+      }
+    ],
+    "discovery_ranks_8_to_16_are_outside_population_support": true,
+    "discovery_top_seven_exactly_equal_population_support": true,
+    "fixed_to_matched_observed_ratio": 564.3667818262733,
+    "localization_json": "research/results/v1/present128_fixedpoint_causal_mechanism_v1.json",
+    "matched_nonfixed_control_mean_mi_nats": 0.0009659140072938065,
+    "observed_five_key_mean_total_mi_nats": 0.545129779817325,
+    "population_total_mi_nats": 0.550893415117103,
+    "relative_total_error": 0.010462341973270452,
+    "transfer_json": "research/results/v1/present128_fullround_causal_f8_v1.json"
+  },
+  "evidence_stage": "EXACT_MECHANISM_DERIVED",
+  "identity_gate": {
+    "all_passed": true,
+    "exact_equalities_checked": 576,
+    "formula": "E_(r+1)(p,k) = pLayer(SBoxLayer(E_r(p,k))) xor K_(r+1)",
+    "keys_checked": 3,
+    "plaintexts_per_key_round": 64,
+    "rounds_checked": [
+      1,
+      7,
+      31
+    ]
+  },
+  "not_a_fullround_anchor_rerun": true,
+  "population_support": {
+    "balanced_sbox_output_bits": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "nonzero_cell_count": 7,
+    "nonzero_cells": [
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          6,
+          2,
+          2,
+          6
+        ],
+        "population_mi_nats": 0.13081203594113697,
+        "source_bit": 3,
+        "source_local_bit": 3,
+        "target_bit": 0,
+        "target_local_bit": 0
+      },
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          6,
+          2,
+          4,
+          4
+        ],
+        "population_mi_nats": 0.033822075568605205,
+        "source_bit": 20,
+        "source_local_bit": 0,
+        "target_bit": 21,
+        "target_local_bit": 1
+      },
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          7,
+          1,
+          3,
+          5
+        ],
+        "population_mi_nats": 0.1423965384507726,
+        "source_bit": 23,
+        "source_local_bit": 3,
+        "target_bit": 21,
+        "target_local_bit": 1
+      },
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          2,
+          6,
+          4,
+          4
+        ],
+        "population_mi_nats": 0.0338220755686052,
+        "source_bit": 40,
+        "source_local_bit": 0,
+        "target_bit": 42,
+        "target_local_bit": 2
+      },
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          2,
+          6,
+          4,
+          4
+        ],
+        "population_mi_nats": 0.0338220755686052,
+        "source_bit": 43,
+        "source_local_bit": 3,
+        "target_bit": 42,
+        "target_local_bit": 2
+      },
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          2,
+          6,
+          4,
+          4
+        ],
+        "population_mi_nats": 0.0338220755686052,
+        "source_bit": 60,
+        "source_local_bit": 0,
+        "target_bit": 63,
+        "target_local_bit": 3
+      },
+      {
+        "joint_counts_over_16_sbox_inputs": [
+          5,
+          3,
+          1,
+          7
+        ],
+        "population_mi_nats": 0.1423965384507726,
+        "source_bit": 62,
+        "source_local_bit": 2,
+        "target_bit": 63,
+        "target_local_bit": 3
+      }
+    ],
+    "pLayer_fixed_points": [
+      0,
+      21,
+      42,
+      63
+    ],
+    "population_total_mi_nats": 0.550893415117103,
+    "same_nibble_targets": [
+      0,
+      21,
+      42,
+      63
+    ],
+    "zero_cell_count": 4089
+  },
+  "schema": "present-cross-round-exact-mechanism-v1",
+  "theorem": {
+    "complete_support_statement": "Exactly seven of 4096 state-bit/delta-bit cells have nonzero population MI; all seven values are fixed by the public S-box truth table.",
+    "fixed_point_condition": "A single-bit dependency survives iff target t and pLayer^-1(t) share a nibble; for PRESENT this is exactly t in {0,21,42,63}.",
+    "round_and_key_schedule_invariance": "The support and MI values are identical for every r and for PRESENT-80/PRESENT-128; K_(r+1) only flips an outcome bit and cannot change MI.",
+    "round_identity": "E_(r+1)(p,k) = pLayer(SBoxLayer(E_r(p,k))) xor K_(r+1)"
+  }
+}

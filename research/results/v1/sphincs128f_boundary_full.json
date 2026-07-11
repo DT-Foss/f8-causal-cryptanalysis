@@ -1,0 +1,326 @@
+{
+  "environment": {
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "pqcrypto_version": "0.4.0",
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]"
+  },
+  "experiment": "pqc_output_control_suite",
+  "method": {
+    "casi": "existing portable CASI implementation, reported as a heuristic score",
+    "controls": [
+      "fixed key vs fresh key",
+      "row permutation of fixed-key output"
+    ],
+    "f8_output": "adjacent-output F8 quantized independence statistic; not an internal-round F8 test"
+  },
+  "parameters": {
+    "max_rows": null,
+    "operations": 64,
+    "output": "research/results/v1/sphincs128f_boundary_full.json",
+    "permutations": 2,
+    "seeds": 2,
+    "targets": [
+      "sphincs128f"
+    ]
+  },
+  "results": [
+    {
+      "backend_module": "pqcrypto.sign.sphincs_sha2_128f_simple",
+      "family": "SPHINCS+ / SLH-DSA family",
+      "fixed_key": [
+        {
+          "casi": {
+            "amplified": 1.2881041597947593,
+            "classic": 2.563025210084034,
+            "deep": 19.071428571428573,
+            "operational_max": 19.071428571428573,
+            "standard": 19.071428571428573
+          },
+          "condition": "fixed_key",
+          "f8_output": {
+            "alpha": 0.05,
+            "max_chi2": 114.86780157709913,
+            "significant_pairs": 400,
+            "significant_rate": 0.390625,
+            "tested_pairs": 1024
+          },
+          "functional_gate": true,
+          "operation_boundary_controls": {
+            "whole_operation_permutation": {
+              "casi": {
+                "amplified": 1.2889079181851413,
+                "classic": 2.563025210084034,
+                "deep": 19.357142857142858,
+                "operational_max": 19.357142857142858,
+                "standard": 19.357142857142858
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 114.62237743314422,
+                "significant_pairs": 397,
+                "significant_rate": 0.3876953125,
+                "tested_pairs": 1024
+              }
+            },
+            "within_operation_row_permutation": {
+              "casi": {
+                "amplified": 1.097901528590185,
+                "classic": 2.563025210084034,
+                "deep": 2.357142857142857,
+                "operational_max": 2.563025210084034,
+                "standard": 2.563025210084034
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 87.17717736436474,
+                "significant_pairs": 47,
+                "significant_rate": 0.0458984375,
+                "tested_pairs": 1024
+              }
+            }
+          },
+          "operations": 64,
+          "output_bytes": 1093632,
+          "row_budget": null,
+          "row_permutation_controls": [
+            {
+              "casi": {
+                "amplified": 1.0922488486013664,
+                "classic": 2.563025210084034,
+                "deep": 9.142857142857142,
+                "operational_max": 9.142857142857142,
+                "standard": 9.142857142857142
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 85.23860999200258,
+                "significant_pairs": 24,
+                "significant_rate": 0.0234375,
+                "tested_pairs": 1024
+              },
+              "permutation": 0
+            },
+            {
+              "casi": {
+                "amplified": 1.1237323369726435,
+                "classic": 2.563025210084034,
+                "deep": 10.214285714285714,
+                "operational_max": 10.214285714285714,
+                "standard": 10.214285714285714
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 86.47022483327379,
+                "significant_pairs": 61,
+                "significant_rate": 0.0595703125,
+                "tested_pairs": 1024
+              },
+              "permutation": 1
+            }
+          ],
+          "rows": 34176,
+          "seed": 42
+        },
+        {
+          "casi": {
+            "amplified": 1.2814403763578341,
+            "classic": 2.3185185185185184,
+            "deep": 23.714285714285715,
+            "operational_max": 23.714285714285715,
+            "standard": 23.714285714285715
+          },
+          "condition": "fixed_key",
+          "f8_output": {
+            "alpha": 0.05,
+            "max_chi2": 117.28228785807336,
+            "significant_pairs": 461,
+            "significant_rate": 0.4501953125,
+            "tested_pairs": 1024
+          },
+          "functional_gate": true,
+          "operation_boundary_controls": {
+            "whole_operation_permutation": {
+              "casi": {
+                "amplified": 1.2810401074079847,
+                "classic": 2.3185185185185184,
+                "deep": 23.071428571428573,
+                "operational_max": 23.071428571428573,
+                "standard": 23.071428571428573
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 116.31219100821316,
+                "significant_pairs": 459,
+                "significant_rate": 0.4482421875,
+                "tested_pairs": 1024
+              }
+            },
+            "within_operation_row_permutation": {
+              "casi": {
+                "amplified": 1.1082557341481831,
+                "classic": 2.3185185185185184,
+                "deep": 1.6428571428571428,
+                "operational_max": 2.3185185185185184,
+                "standard": 2.3185185185185184
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 92.64074852542635,
+                "significant_pairs": 45,
+                "significant_rate": 0.0439453125,
+                "tested_pairs": 1024
+              }
+            }
+          },
+          "operations": 64,
+          "output_bytes": 1093632,
+          "row_budget": null,
+          "row_permutation_controls": [
+            {
+              "casi": {
+                "amplified": 1.0803526393092677,
+                "classic": 2.3185185185185184,
+                "deep": 20.214285714285715,
+                "operational_max": 20.214285714285715,
+                "standard": 20.214285714285715
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 81.29218354166103,
+                "significant_pairs": 40,
+                "significant_rate": 0.0390625,
+                "tested_pairs": 1024
+              },
+              "permutation": 0
+            },
+            {
+              "casi": {
+                "amplified": 1.079731186111229,
+                "classic": 2.3185185185185184,
+                "deep": 12.142857142857142,
+                "operational_max": 12.142857142857142,
+                "standard": 12.142857142857142
+              },
+              "f8_output": {
+                "alpha": 0.05,
+                "max_chi2": 93.73602468468566,
+                "significant_pairs": 47,
+                "significant_rate": 0.0458984375,
+                "tested_pairs": 1024
+              },
+              "permutation": 1
+            }
+          ],
+          "rows": 34176,
+          "seed": 1051
+        }
+      ],
+      "fresh_key": [
+        {
+          "casi": {
+            "amplified": 0.9976726184518373,
+            "classic": 0.9159663865546218,
+            "deep": 0.7142857142857143,
+            "operational_max": 0.9976726184518373,
+            "standard": 0.9159663865546218
+          },
+          "condition": "fresh_key",
+          "f8_output": {
+            "alpha": 0.05,
+            "max_chi2": 85.888784017446,
+            "significant_pairs": 54,
+            "significant_rate": 0.052734375,
+            "tested_pairs": 1024
+          },
+          "functional_gate": true,
+          "operations": 64,
+          "output_bytes": 1093632,
+          "row_budget": null,
+          "rows": 34176,
+          "seed": 42
+        },
+        {
+          "casi": {
+            "amplified": 1.010285763000892,
+            "classic": 0.7481481481481481,
+            "deep": 0.6428571428571429,
+            "operational_max": 1.010285763000892,
+            "standard": 0.7481481481481481
+          },
+          "condition": "fresh_key",
+          "f8_output": {
+            "alpha": 0.05,
+            "max_chi2": 88.30295534966726,
+            "significant_pairs": 56,
+            "significant_rate": 0.0546875,
+            "tested_pairs": 1024
+          },
+          "functional_gate": true,
+          "operations": 64,
+          "output_bytes": 1093632,
+          "row_budget": null,
+          "rows": 34176,
+          "seed": 1051
+        }
+      ],
+      "kind": "sign",
+      "summaries": {
+        "fixed_key_casi": {
+          "maximum": 23.714285714285715,
+          "mean": 21.392857142857146,
+          "minimum": 19.071428571428573,
+          "sample_sd_ddof1": 3.2829957697946845,
+          "values": [
+            19.071428571428573,
+            23.714285714285715
+          ]
+        },
+        "fixed_key_f8_output": {
+          "maximum": 0.4501953125,
+          "mean": 0.42041015625,
+          "minimum": 0.390625,
+          "sample_sd_ddof1": 0.04212257192615176,
+          "values": [
+            0.390625,
+            0.4501953125
+          ]
+        },
+        "fresh_key_casi": {
+          "maximum": 1.010285763000892,
+          "mean": 1.0039791907263647,
+          "minimum": 0.9976726184518373,
+          "sample_sd_ddof1": 0.008918840042722646,
+          "values": [
+            0.9976726184518373,
+            1.010285763000892
+          ]
+        },
+        "fresh_key_f8_output": {
+          "maximum": 0.0546875,
+          "mean": 0.0537109375,
+          "minimum": 0.052734375,
+          "sample_sd_ddof1": 0.0013810679320049757,
+          "values": [
+            0.052734375,
+            0.0546875
+          ]
+        },
+        "permuted_f8_output": {
+          "maximum": 0.0595703125,
+          "mean": 0.0419921875,
+          "minimum": 0.0234375,
+          "sample_sd_ddof1": 0.015023412446893654,
+          "values": [
+            0.0234375,
+            0.0595703125,
+            0.0390625,
+            0.0458984375
+          ]
+        }
+      },
+      "target": "sphincs128f"
+    }
+  ],
+  "schema_version": 1,
+  "scope_note": "This study measures observable output format and adjacent-row dependence. It makes no IND-CPA, IND-CCA, key-recovery, or distinguisher claim."
+}
