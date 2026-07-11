@@ -1,0 +1,848 @@
+{
+  "anchor_gate": {
+    "logical_path": "research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json",
+    "projection_imported": false,
+    "reconstructed_assignment_imported": false,
+    "schema": "shake-symbolic-r1-width24-vertex-cover-reader-v1",
+    "sha256": "3ea9f21a6cfde4f5728f4860181b4d32317be9d9eeb7296b3b81427faa1d75ee",
+    "solver_observations_imported": false
+  },
+  "assignment_free_plan": {
+    "plan_sha256": "2a4b760014f1b11c11c3be2f6861cb040592f7c718dbf3100ede9974a22aac97",
+    "proof": {
+      "blind_new_instance_transfer": true,
+      "complete_projection_domain": true,
+      "covers_complete_assignment_space": true,
+      "expected_complete_assignment_space": 16777216,
+      "free_coordinate_count_per_subspace": 24,
+      "historical_A148_through_A151_informed_rule_and_budget": true,
+      "logical_assignments_per_subspace": 16777216,
+      "new_seed_outcomes_informed_schedule": false,
+      "ordering": "decreasing_retained_free_linearized_edge_count_then_decreasing_projection_popcount_then_increasing_numeric_value",
+      "pairwise_disjoint_by_unique_fixed_patterns": true,
+      "plan_sha256": "2a4b760014f1b11c11c3be2f6861cb040592f7c718dbf3100ede9974a22aac97",
+      "projection_value_count": 1,
+      "projection_values": [
+        0
+      ],
+      "proof_sha256": "28708a9ebfb2b26b0811c7d98ce444ee8802da5ae42872fb500288d9e7fef87a",
+      "prospectively_frozen_rule": true,
+      "runtime_assignment_or_target_projection_input_used": false,
+      "total_logical_assignments": 16777216,
+      "unique_fixed_coordinate_patterns": 1
+    },
+    "subspaces": [
+      {
+        "blind_new_instance_transfer": true,
+        "constant_edges_with_both_endpoints_selected": [],
+        "deleted_edges": [],
+        "fixed_coordinates": [],
+        "fixed_value": 0,
+        "free_coordinates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "historical_A148_through_A151_informed_rule_and_budget": true,
+        "interaction_preservation_score": 0,
+        "logical_assignments": 16777216,
+        "new_seed_outcomes_informed_schedule": false,
+        "projection_popcount": 0,
+        "prospectively_frozen_rule": true,
+        "retained_free_linearized_edges": [],
+        "runtime_assignment_or_target_projection_input_used": false,
+        "schedule_index": 0,
+        "schedule_key": [
+          0,
+          0,
+          0
+        ],
+        "subspace_index": 0
+      }
+    ]
+  },
+  "attempt_id": "A152",
+  "causal": {
+    "explicit_triplets": 4,
+    "file_sha256": "04e222ab50d9a0e39c15838c94eae566b41e28ca368f0d35d56a1f1378a8c0fa",
+    "graph_sha256": "8a9dc00fdde9ca78fa767129d3e3d28a9acdc00ad4d86f8981c415c549cf1b97",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2534,
+      "explicit_triplets": 4,
+      "file_sha256": "04e222ab50d9a0e39c15838c94eae566b41e28ca368f0d35d56a1f1378a8c0fa",
+      "graph_sha256": "8a9dc00fdde9ca78fa767129d3e3d28a9acdc00ad4d86f8981c415c549cf1b97",
+      "inferred_triplets": 0,
+      "triplets": 4
+    }
+  },
+  "dependency_gate": {
+    "crypto_causal_relative_path": "src/arx_carry_leak/crypto_causal.py",
+    "loaded_after_public_freeze_gate": true,
+    "numpy_version": "1.26.4",
+    "repository_dependency_root": "public_freeze_commit"
+  },
+  "encoding": {
+    "coordinate_coefficients": 1317,
+    "maximum_degree": 1,
+    "native_xor_equations": true,
+    "nonconstant_symbolic_monomials": 24,
+    "output_assertions": 1344,
+    "polynomial_state_sha256": "e0c8856814a8fa2a48268ccb580ad0b94decc3879915c300ff66114cfd61025d",
+    "prefix_assertions": 1600,
+    "prefix_variables": 1624,
+    "round_assertion_counts": [
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440
+    ],
+    "round_variable_counts": [
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440,
+      5440
+    ],
+    "suffix_rounds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "symbolic_monomials": 25,
+    "symbolic_prefix_rounds": 1,
+    "total_assertions": 128064,
+    "total_variables": 126744,
+    "unpartitioned_smt_bytes": 9187001,
+    "unpartitioned_smt_sha256": "8dc549599b1d699d632be37312b0efacd43f73e073a16f5829ddc42f0c4f23c7"
+  },
+  "evidence_stage": "PROSPECTIVE_NEW_SEED_TRANSFER_EXECUTED",
+  "execution": {
+    "all_attempted_projection_values_use_the_assigned_uniform_budget": true,
+    "all_executed_phases_form_exact_phase_prefix": true,
+    "all_found_assignments_independently_verified": true,
+    "all_returned_assignments_independently_checked": true,
+    "attempt_count": 1,
+    "attempted_projection_values": [
+      0
+    ],
+    "blind_holdout": true,
+    "executed_phase_count": 1,
+    "executed_phases": [
+      {
+        "blind_holdout": true,
+        "execution": {
+          "all_executed_values_form_exact_schedule_prefix": true,
+          "all_found_assignments_independently_verified": true,
+          "all_returned_assignments_independently_checked": true,
+          "blind_holdout": true,
+          "executed_projection_values": [
+            0
+          ],
+          "executed_wave_count": 1,
+          "found_assignments": [],
+          "future_values_omitted_only_by_verified_early_stop": true,
+          "historical_instance_results_informed_schedule_hypothesis": true,
+          "independently_confirmed_projection_values": [],
+          "independently_verified_assignments": [],
+          "interaction_preservation_order_used": true,
+          "maximum_solver_processes": 5,
+          "model_finding_not_global_uniqueness_certificate": true,
+          "new_seed_assignment_projection_or_solver_outcomes_informed_plan": false,
+          "planned_projection_values": [
+            0
+          ],
+          "planned_waves": [
+            [
+              0
+            ]
+          ],
+          "prospectively_frozen_before_new_instance_generation": true,
+          "reconstructed_assignment": null,
+          "runtime_assignment_or_target_projection_input_used": false,
+          "solver_threads_per_process": 1,
+          "status_counts": {
+            "error": 0,
+            "sat": 0,
+            "unknown": 1,
+            "unsat": 0
+          },
+          "stop_reason": "complete_1_value_plan_exhausted_without_confirmed_model",
+          "stopped_only_after_independent_complete_check": false,
+          "timeout_seconds_per_subspace": 120,
+          "wave_size": 5,
+          "waves": [
+            {
+              "all_sat_assignments_independently_checked": true,
+              "all_wave_processes_started_before_independent_checks": true,
+              "executed_projection_values": [
+                0
+              ],
+              "independently_confirmed_projection_values": [],
+              "planned_projection_values": [
+                0
+              ],
+              "smt_files_generated_only_for_this_wave": true,
+              "smt_files_removed_after_wave": true,
+              "solver_processes_started": 1,
+              "solver_threads_per_process": 1,
+              "status_counts": {
+                "error": 0,
+                "sat": 0,
+                "unknown": 1,
+                "unsat": 0
+              },
+              "stop_after_wave": false,
+              "subspaces": [
+                {
+                  "assignment": null,
+                  "blind_new_instance_transfer": true,
+                  "constant_edges_with_both_endpoints_selected": [],
+                  "deleted_edges": [],
+                  "fixed_coordinates": [],
+                  "fixed_value": 0,
+                  "free_coordinates": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23
+                  ],
+                  "historical_A148_through_A151_informed_rule_and_budget": true,
+                  "independent_end_state_check": {
+                    "complete_rate_match": null,
+                    "performed": false,
+                    "rate_bits_required": 1344,
+                    "reason": "no_complete_solver_assignment"
+                  },
+                  "independently_confirmed_model": false,
+                  "interaction_preservation_score": 0,
+                  "logical_assignments": 16777216,
+                  "new_seed_outcomes_informed_schedule": false,
+                  "posthoc_assignment_or_projection_used": false,
+                  "projection_popcount": 0,
+                  "prospectively_frozen_rule": true,
+                  "retained_free_linearized_edges": [],
+                  "runtime_assignment_or_target_projection_input_used": false,
+                  "schedule_index": 0,
+                  "schedule_key": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "smt_bytes": 9187001,
+                  "smt_sha256": "8dc549599b1d699d632be37312b0efacd43f73e073a16f5829ddc42f0c4f23c7",
+                  "solver": {
+                    "command_parameters": {
+                      "representation": "Boolean_SMT_native_nary_XOR",
+                      "threads": 1,
+                      "timeout_seconds": 120
+                    },
+                    "external_timeout": false,
+                    "return_code": 0,
+                    "stats": {},
+                    "status": "unknown"
+                  },
+                  "subspace_index": 0
+                }
+              ],
+              "wave_index": 0
+            }
+          ]
+        },
+        "historical_A148_through_A151_informed_rule_and_budget": true,
+        "maximum_solver_processes": 5,
+        "name": "prospective_complete_uniform",
+        "new_seed_outcomes_informed_phase_plan": false,
+        "phase_index": 0,
+        "projection_value_count": 1,
+        "projection_values": [
+          0
+        ],
+        "prospectively_frozen_before_new_instance_generation": true,
+        "purpose": "prospectively_frozen_uniform_budget_over_complete_formula_ranked_domain",
+        "runtime_assignment_input_used": false,
+        "runtime_stored_model_input_used": false,
+        "runtime_target_projection_input_used": false,
+        "timeout_seconds_per_subspace": 120,
+        "uniform_budget_assigned_to_every_planned_projection_value": true,
+        "wave_size": 5
+      }
+    ],
+    "found_assignments": [],
+    "future_phases_omitted_only_by_verified_early_stop": true,
+    "historical_a148_a149_results_informed_mechanism_and_budget": true,
+    "independently_confirmed_projection_values": [],
+    "independently_verified_assignments": [],
+    "interaction_preservation_order_used": true,
+    "model_finding_not_global_uniqueness_certificate": true,
+    "new_seed_assignment_projection_or_solver_outcomes_informed_plan": false,
+    "planned_phases": [
+      {
+        "blind_holdout": true,
+        "historical_A148_through_A151_informed_rule_and_budget": true,
+        "maximum_solver_processes": 5,
+        "name": "prospective_complete_uniform",
+        "new_seed_outcomes_informed_phase_plan": false,
+        "phase_index": 0,
+        "projection_value_count": 1,
+        "projection_values": [
+          0
+        ],
+        "prospectively_frozen_before_new_instance_generation": true,
+        "purpose": "prospectively_frozen_uniform_budget_over_complete_formula_ranked_domain",
+        "runtime_assignment_input_used": false,
+        "runtime_stored_model_input_used": false,
+        "runtime_target_projection_input_used": false,
+        "timeout_seconds_per_subspace": 120,
+        "uniform_budget_assigned_to_every_planned_projection_value": true,
+        "wave_size": 5
+      }
+    ],
+    "prospectively_frozen_before_new_instance_generation": true,
+    "reconstructed_assignment": null,
+    "runtime_stored_assignment_input_used": false,
+    "runtime_target_projection_input_used": false,
+    "status_counts": {
+      "error": 0,
+      "sat": 0,
+      "unknown": 1,
+      "unsat": 0
+    },
+    "stop_reason": "complete_uniform_phase_exhausted_without_confirmed_model",
+    "stopped_only_after_independent_complete_check": false,
+    "uniform_budget_assigned_to_every_planned_projection_value": true,
+    "unique_attempted_projection_value_count": 1,
+    "unique_attempted_projection_values": [
+      0
+    ]
+  },
+  "execution_phase_plan": {
+    "phases": [
+      {
+        "blind_holdout": true,
+        "historical_A148_through_A151_informed_rule_and_budget": true,
+        "maximum_solver_processes": 5,
+        "name": "prospective_complete_uniform",
+        "new_seed_outcomes_informed_phase_plan": false,
+        "phase_index": 0,
+        "projection_value_count": 1,
+        "projection_values": [
+          0
+        ],
+        "prospectively_frozen_before_new_instance_generation": true,
+        "purpose": "prospectively_frozen_uniform_budget_over_complete_formula_ranked_domain",
+        "runtime_assignment_input_used": false,
+        "runtime_stored_model_input_used": false,
+        "runtime_target_projection_input_used": false,
+        "timeout_seconds_per_subspace": 120,
+        "uniform_budget_assigned_to_every_planned_projection_value": true,
+        "wave_size": 5
+      }
+    ],
+    "proof": {
+      "blind_new_instance_transfer": true,
+      "complete_formula_ranked_domain_planned": true,
+      "historical_A148_through_A151_informed_rule_and_budget": true,
+      "new_seed_outcomes_informed_phase_plan": false,
+      "phases": [
+        {
+          "blind_holdout": true,
+          "historical_A148_through_A151_informed_rule_and_budget": true,
+          "maximum_solver_processes": 5,
+          "name": "prospective_complete_uniform",
+          "new_seed_outcomes_informed_phase_plan": false,
+          "phase_index": 0,
+          "projection_value_count": 1,
+          "projection_values": [
+            0
+          ],
+          "prospectively_frozen_before_new_instance_generation": true,
+          "purpose": "prospectively_frozen_uniform_budget_over_complete_formula_ranked_domain",
+          "runtime_assignment_input_used": false,
+          "runtime_stored_model_input_used": false,
+          "runtime_target_projection_input_used": false,
+          "timeout_seconds_per_subspace": 120,
+          "uniform_budget_assigned_to_every_planned_projection_value": true,
+          "wave_size": 5
+        }
+      ],
+      "planned_attempt_count": 1,
+      "proof_sha256": "d9ecd4d58f4b24ad948282a86f1e65e63bc81d0ed7e986d774f76404c05a8860",
+      "runtime_assignment_or_target_projection_input_used": false,
+      "uniform_timeout_seconds": 120
+    }
+  },
+  "minimum_vertex_cover_proof": {
+    "all_sizes_through_minimum_exhausted": true,
+    "assignment_input_used": false,
+    "expected_subset_count_by_size": {
+      "0": 1
+    },
+    "interaction_edges": [],
+    "interaction_edges_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "lexicographically_first_minimum_cover": true,
+    "minimum_cover_count": 1,
+    "minimum_vertex_cover_size": 0,
+    "proof_sha256": "be2d9ee0cdcc43aaf73ac658d1d9a0b1f8817986847567c24693194bb0b35654",
+    "selected_coordinates": [],
+    "selected_set_is_vertex_cover": true,
+    "solver_observations_used": false,
+    "subsets_exhaustively_checked_by_size": {
+      "0": 1
+    },
+    "target_rate_input_used": false,
+    "uncovered_edges": [],
+    "window_bits": 24
+  },
+  "parameters": {
+    "blind_new_instance_transfer": true,
+    "global_uniqueness_claimed": false,
+    "maximum_parallel_processes": 5,
+    "seed": 260592673,
+    "solver": "Z3 version 4.15.4 - 64 bit",
+    "symbolic_prefix_rounds": 1,
+    "uniform_timeout_seconds_per_projection": 120,
+    "wallclock_excluded_from_canonical_result": true,
+    "wave_size": 5,
+    "window_bits": 24
+  },
+  "posthoc_comparison": {
+    "confirmed_target_consistent_alternate_model": false,
+    "instrumented_assignment": 9279571,
+    "instrumented_assignment_independent_check": {
+      "candidate_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c",
+      "complete_rate_match": true,
+      "performed": true,
+      "rate_bits_checked": 1344,
+      "rate_lanes_checked": 21,
+      "reason": null,
+      "target_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c"
+    },
+    "instrumented_assignment_used_for_selection_or_schedule": false,
+    "instrumented_projection_attempted": true,
+    "instrumented_projection_schedule_index": 0,
+    "instrumented_projection_solver_status": "unknown",
+    "instrumented_projection_used_for_selection_or_schedule": false,
+    "instrumented_projection_value": 0,
+    "performed_after_execution_completed": true,
+    "reconstructed_assignment": null,
+    "reconstruction_matches_instrumented_assignment": false
+  },
+  "protocol": {
+    "anchor": {
+      "artifact": "research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json",
+      "sha256": "3ea9f21a6cfde4f5728f4860181b4d32317be9d9eeb7296b3b81427faa1d75ee"
+    },
+    "artifact_contract": {
+      "causal_filename": "shake_symbolic_r1_width24_prospective_transfer_v1.causal",
+      "json_and_causal_reopened_after_final_write": true,
+      "local_invocation_paths_excluded_from_canonical_payload": true,
+      "result_filename": "shake_symbolic_r1_width24_prospective_transfer_v1.json"
+    },
+    "attempt_id": "A152",
+    "prospective_boundary": {
+      "blind_new_instance_transfer": true,
+      "execution_must_use_clean_public_commit_worktree": true,
+      "historical_A148_through_A151_informed_mechanism_and_budget": true,
+      "instrumented_assignment_available_to_runtime_selection_or_schedule": false,
+      "instrumented_assignment_compared_only_after_execution": true,
+      "instrumented_target_projection_available_to_runtime_selection_or_schedule": false,
+      "mechanism_and_schedule_generation_rule_frozen_from_A151_before_new_seed_execution": true,
+      "new_graph_may_control_only_declared_structural_selection_and_schedule_rules": true,
+      "new_seed_assignment_projection_and_solver_outcomes_informed_protocol": false,
+      "new_seed_is_hash_derived_not_selected_by_outcome": true
+    },
+    "protocol_state": "frozen_before_new_instance_generation",
+    "schedule": {
+      "assignment_input_used": false,
+      "complete_pairwise_disjoint_assignment_space_cover_required": true,
+      "domain": "all_projection_values_of_selected_cover_coordinates",
+      "primary_key": "decreasing_count_of_edges_with_exactly_one_selected_endpoint_fixed_to_1",
+      "secondary_key": "decreasing_projection_popcount",
+      "solver_observation_input_used": false,
+      "target_projection_input_used": false,
+      "tertiary_key": "increasing_numeric_projection_value"
+    },
+    "schema": "shake-symbolic-r1-width24-prospective-transfer-protocol-v1",
+    "seed_derivation": {
+      "derived_seed": 260592673,
+      "digest": "sha256",
+      "digest_hex": "8f8854215b3702428d90fea9c8d02f55fdda697fcd1d5a599a17758dfa2c15ce",
+      "input_suffix": "raw_bytes_of_anchor_sha256",
+      "integer_rule": "big_endian_first_4_digest_bytes_bitand_0x7fffffff",
+      "label_ascii": "f8-causal:A152:prospective-shake128-r1-width24-transfer:v1|"
+    },
+    "solver_plan": {
+      "check_sat": "plain_check_sat",
+      "larger_cover_action": "write_structure_only_resource_boundary_without_solver_or_assignment_extraction",
+      "logic": "QF_UF",
+      "maximum_minimum_vertex_cover_bits_for_solver_execution": 12,
+      "maximum_parallel_processes": 5,
+      "required_version": "4.15.4",
+      "same_uniform_budget_assigned_to_every_planned_projection": true,
+      "solver": "Z3 CLI",
+      "solver_threads_per_process": 1,
+      "timeout_seconds_per_projection": 120,
+      "wallclock_excluded_from_canonical_result": true,
+      "wave_size": 5
+    },
+    "stop_and_verification": {
+      "check_every_returned_model_with_independent_numpy_lane_core": true,
+      "evaluate_complete_waves": true,
+      "global_uniqueness_claimed": false,
+      "independent_rate_bits_checked": 1344,
+      "otherwise_exhaust_complete_projection_schedule": true,
+      "stop_after_complete_wave_containing_independently_confirmed_model": true,
+      "structure_only_guard_is_not_a_model_search_result": true
+    },
+    "structural_selection": {
+      "assignment_input_used": false,
+      "cover_rule": "exact_minimum_vertex_cover",
+      "cover_tie_break": "lexicographically_first_coordinate_tuple",
+      "graph_edges": "unique_degree_2_monomial_variable_pairs",
+      "graph_input": "R1_polynomials_of_cleared_window_template_only",
+      "solver_observation_input_used": false,
+      "target_rate_input_used": false
+    },
+    "target_system": {
+      "constrained_rate_bits": 1344,
+      "explicit_suffix_rounds": 23,
+      "instance_generated_or_inspected_before_protocol_freeze": false,
+      "instance_generator": "shake_native_window_solver._problem",
+      "symbolic_prefix_rounds": 1,
+      "total_keccak_f1600_rounds": 24,
+      "variant": "SHAKE128",
+      "window_bits": 24,
+      "window_domain": "contiguous_capacity_state_window_selected_by_seed_xor_0xB175"
+    }
+  },
+  "public_freeze_gate": {
+    "commit": "9327e3cc5d09f725f89bd1027e5f02b4410c53e8",
+    "executing_worktree_clean": true,
+    "executing_worktree_head_is_freeze_commit": true,
+    "fresh_public_main_ancestry_verified": true,
+    "gate_completed_before_instance_generation": true,
+    "passed": true,
+    "protocol_relative_path": "research/configs/shake_symbolic_r1_width24_prospective_transfer_v1.json",
+    "protocol_sha256": "0fd33d09108a3aabccd8dfa38131eee074f7b56ba4fede52e23fa1fe29843bc4",
+    "repository": "https://github.com/DT-Foss/f8-causal-cryptanalysis",
+    "runner_relative_path": "research/experiments/shake_symbolic_r1_width24_prospective_transfer.py",
+    "runner_sha256": "b35afa29763ec6e08625da1479cd9fd58fa7eef631088bc418451209ac265f37"
+  },
+  "result": "The publicly frozen complete projection schedule ended without an independently confirmed model under the declared per-projection budget.",
+  "runtime_input_boundary": {
+    "instrumented_assignment_or_projection_runtime_input": false,
+    "instrumented_base_state_available_to_selection_or_schedule": false,
+    "runtime_problem_contains_cleared_window_template": true,
+    "runtime_problem_contains_target_rate": true
+  },
+  "runtime_instance": {
+    "capacity_window_positions": [
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166
+    ],
+    "capacity_window_start_bit": 143,
+    "capacity_window_stop_bit_exclusive": 167,
+    "cleared_template_sha256": "8dd7a73132ae11987e86866552701cc7d093771ec911ee94883d114d3afb33d2",
+    "instrumented_assignment_or_projection_included": false,
+    "target_rate_bits": 1344,
+    "target_rate_lanes": 21,
+    "target_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c"
+  },
+  "schema": "shake-symbolic-r1-width24-prospective-transfer-v1",
+  "scope": "One prospectively hash-derived SHAKE128 width-24 capacity-window system, an R1 symbolic interface, 23 exact suffix rounds, and all 1,344 rate bits.",
+  "seed_derivation": {
+    "anchor_sha256": "3ea9f21a6cfde4f5728f4860181b4d32317be9d9eeb7296b3b81427faa1d75ee",
+    "derived_seed": 260592673,
+    "digest_sha256": "8f8854215b3702428d90fea9c8d02f55fdda697fcd1d5a599a17758dfa2c15ce",
+    "label_ascii": "f8-causal:A152:prospective-shake128-r1-width24-transfer:v1|"
+  },
+  "selection": {
+    "actual_assignment_used": false,
+    "components": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12
+      ],
+      [
+        13
+      ],
+      [
+        14
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ],
+      [
+        17
+      ],
+      [
+        18
+      ],
+      [
+        19
+      ],
+      [
+        20
+      ],
+      [
+        21
+      ],
+      [
+        22
+      ],
+      [
+        23
+      ]
+    ],
+    "degree_by_coordinate": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "degree_two_monomial_masks": [],
+    "edge_count": 0,
+    "free_coordinates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "interaction_edges": [],
+    "interaction_edges_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "isolated_coordinates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "minimum_vertex_cover_proof_sha256": "be2d9ee0cdcc43aaf73ac658d1d9a0b1f8817986847567c24693194bb0b35654",
+    "partition_bits": 0,
+    "r1_polynomial_state_sha256": "e0c8856814a8fa2a48268ccb580ad0b94decc3879915c300ff66114cfd61025d",
+    "selected_coordinates": [],
+    "selection_sha256": "0749fcf89acaf92ad14b5729434519d998dd5f4013220180d96e7c51d3cf6405",
+    "solver_observations_used": false,
+    "symbolic_prefix_rounds": 1,
+    "target_end_state_bits_used": false,
+    "window_bits": 24
+  }
+}

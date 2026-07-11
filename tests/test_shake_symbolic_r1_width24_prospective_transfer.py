@@ -27,6 +27,13 @@ sys.modules[SPEC.name] = MODULE
 SPEC.loader.exec_module(MODULE)
 MODULE._load_runtime_modules(Path(__file__).parents[1])
 
+RESULT_PATH = Path(__file__).parents[1] / "research" / "results" / "v1" / MODULE.RESULT_FILENAME
+CAUSAL_PATH = Path(__file__).parents[1] / "research" / "results" / "v1" / MODULE.CAUSAL_FILENAME
+RESULT_SHA256 = "0e01e3e6ff0b9a80ff66ad6614f846305188d96a4497ca38857eac81097a1561"
+CAUSAL_SHA256 = "04e222ab50d9a0e39c15838c94eae566b41e28ca368f0d35d56a1f1378a8c0fa"
+CAUSAL_GRAPH_SHA256 = "8a9dc00fdde9ca78fa767129d3e3d28a9acdc00ad4d86f8981c415c549cf1b97"
+RUNNER_SHA256 = "b35afa29763ec6e08625da1479cd9fd58fa7eef631088bc418451209ac265f37"
+
 
 def _git(*args: str, cwd: Path) -> str:
     return subprocess.run(
@@ -471,3 +478,47 @@ def test_production_source_orders_freeze_before_instance_and_posthoc_extraction(
     assert "--public-freeze-repo" in main
     assert "--public-freeze-commit" in main
     assert "--verify-freeze-only" in main
+
+
+def test_retained_prospective_result_is_hash_pinned_and_reader_valid() -> None:
+    raw = RESULT_PATH.read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == RESULT_SHA256
+    assert hashlib.sha256(CAUSAL_PATH.read_bytes()).hexdigest() == CAUSAL_SHA256
+    payload = json.loads(raw)
+    assert payload["schema"] == "shake-symbolic-r1-width24-prospective-transfer-v1"
+    assert hashlib.sha256(MODULE_PATH.read_bytes()).hexdigest() == RUNNER_SHA256
+    assert payload["public_freeze_gate"]["commit"] == ("9327e3cc5d09f725f89bd1027e5f02b4410c53e8")
+    assert payload["public_freeze_gate"]["protocol_sha256"] == MODULE.PROTOCOL_SHA256
+    assert payload["public_freeze_gate"]["runner_sha256"] == RUNNER_SHA256
+    assert payload["parameters"]["seed"] == MODULE.EXPECTED_SEED
+    assert payload["runtime_instance"]["capacity_window_positions"] == list(range(143, 167))
+    assert payload["selection"]["interaction_edges"] == []
+    assert payload["selection"]["edge_count"] == 0
+    assert payload["selection"]["isolated_coordinates"] == list(range(24))
+    assert payload["minimum_vertex_cover_proof"]["minimum_vertex_cover_size"] == 0
+    assert payload["minimum_vertex_cover_proof"]["selected_coordinates"] == []
+    assert len(payload["assignment_free_plan"]["subspaces"]) == 1
+    assert payload["assignment_free_plan"]["subspaces"][0]["logical_assignments"] == 1 << 24
+    execution = payload["execution"]
+    assert execution["attempt_count"] == 1
+    assert execution["status_counts"] == {
+        "error": 0,
+        "sat": 0,
+        "unknown": 1,
+        "unsat": 0,
+    }
+    assert execution["reconstructed_assignment"] is None
+    posthoc = payload["posthoc_comparison"]
+    assert posthoc["instrumented_assignment"] == 9_279_571
+    assert posthoc["instrumented_projection_value"] == 0
+    assert posthoc["instrumented_projection_solver_status"] == "unknown"
+    assert posthoc["instrumented_assignment_independent_check"]["complete_rate_match"] is True
+    lowered = raw.decode().lower()
+    assert '"wallclock_seconds"' not in lowered
+    assert '"elapsed_seconds"' not in lowered
+    assert payload["parameters"]["wallclock_excluded_from_canonical_result"] is True
+    reader = MODULE._CryptoCausalReader(CAUSAL_PATH)
+    assert reader.file_sha256 == CAUSAL_SHA256
+    assert reader.graph_sha256 == CAUSAL_GRAPH_SHA256
+    assert reader.verify_provenance() is True
+    assert len(reader.triplets(include_inferred=False)) == 4

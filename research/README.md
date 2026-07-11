@@ -292,15 +292,68 @@ the independent complete 1,344-bit rate check. The mechanism was developed
 from the same-instance frontier and is explicitly not a blind holdout; neither
 the assignment nor target projection is a runtime input.
 
-The next transfer is frozen separately in
+The prospective transfer is frozen and executed separately in
 `reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PROSPECTIVE_TRANSFER_PROTOCOL_V1.md`.
 A152 derives a fresh width-24 seed from the retained A151 artifact hash and
 requires the exact protocol bytes to exist on a fetched public remote commit
-before the target can be generated. Its graph-extraction, exact-cover,
-tie-break and complete schedule-generation algorithms, uniform budget,
-cover-size guard, stop rule, and posthoc-only assignment comparison are fixed
-before any new-instance observation; the concrete graph, cover and schedule
-values are derived prospectively afterward.
+before the target can be generated.  The resulting `[143,167)` window has an
+edgeless exact R1 quadratic graph: all 24 coordinates are isolated, the unique
+minimum cover is empty, and the complete schedule is one unconditioned
+subspace.  Its single 120-second query returns `unknown`; the independent
+posthoc check confirms the instrumented witness against all 1,344 rate bits.
+The prospective result therefore maps a real transfer boundary and selects an
+affine basis/pivot analysis followed by R2 interaction analysis, not another
+vertex-cover replay.
+
+A154 performs that exact affine analysis.  The full `1600 x 24` R1 coefficient
+matrix has rank 24 and input nullity zero; its lexicographically first
+independent output basis consists entirely of unit rows.  The 24 output deltas
+are therefore a permutation of the hidden inputs and have a verified two-sided
+inverse.  A155 substitutes that inverse into every R2 equation and proves that
+the pairwise graph is exactly K24, containing all 276 possible edges with a
+minimum vertex cover of size 23.  The next executable leverage is systematic
+R1 alias/constant elimination, not an R2 partition.
+
+A156 executes that consequence with four predeclared exact encoders.  Removing
+constants and aliases deletes 1,573 prefix definitions; fully inlining the 27
+remaining two-term rows deletes all 1,600 and 101,268 formula bytes.  All four
+uniform one-thread 120-second runs return `unknown` without errors or models.
+The retained boundary now selects a representation change that removes the
+entire first generic suffix-round block: compile R2 directly from its 301
+shared monomials rather than alter only R1 variable order or aliases.
+
+A157 implements that direct R2 compiler.  It defines every one of the 276 K24
+quadratic terms exactly once, eliminates the two one-monomial R2 state aliases,
+and appends only R3--R24.  All four uniform runs return `unknown`, but the same
+R2 equations traverse very differently: original input order reaches
+20,649/20,703 decisions, while A154 pivot order reaches 11,853/12,284.
+Monomial-definition frequency has only a small effect.  This selects weighted
+input orders derived from the exact R2 occurrence matrix, not further formula
+shrinking by declaration order.
+
+A158 derives weighted-degree and dynamic remaining-connectivity permutations
+from that matrix.  All four exact formulas return `unknown`, but their decision
+counters span 10,990--23,097 under one 120-second cap.  Since a wall-clock
+boundary cannot determine which direction is intrinsically favorable, the
+next experiment retains the exact formula bytes and replaces time with a fixed
+Z3 `rlimit`, producing a deterministic resource-unit comparison.
+
+A159 performs that byte-exact replay at 500,000,000 Z3 resource units per
+formula.  All four queries exhaust the cap, but the A158 rank order persists:
+weighted-degree descending records 6,940 decisions, greedy-max 13,298,
+weighted-degree ascending 14,386 and greedy-min 18,936.  Volatile timing and
+memory statistics are excluded from the canonical observations.  Input order
+therefore has a reproducible traversal effect, while no order emits a model.
+The next structural variable is an exact assignment-free affine gauge of the
+24 R2 inputs, not another time budget or heuristic permutation.
+
+A160 exhausts that entire `2^24` gauge domain with an exact integer Walsh
+transform.  The unique optimum `0x8e26db` removes 285 linear R2 coefficient
+incidences (8,698 to 8,413); the A154 constant gauge removes only 33.  Every
+per-coordinate quadratic coefficient, all 15,972 quadratic incidences and the
+K24 graph remain unchanged, and 307,200 independent state-bit checks pass.
+This supplies a globally certified, assignment-free polarity transform for the
+next fixed-resource full-round encoder transfer.
 
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,

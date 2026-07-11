@@ -162,6 +162,18 @@ mkdir -p research/results/v1
   --output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
 
+# A152 is a publicly precommitted prospective run. The aggregate reproduction
+# validates its retained artifacts; the exact fresh-run command and commit gate
+# are documented in its dedicated report.
+.venv/bin/python research/experiments/shake_symbolic_r1_affine_basis_reader.py
+.venv/bin/python research/experiments/shake_symbolic_r2_pivot_basis_reader.py
+.venv/bin/python research/experiments/shake_symbolic_r2_affine_gauge_reader.py
+
+# A156 contains four sequential 120-second solver executions. The aggregate
+# gate rebuilds all four formulas byte-for-byte and validates the retained
+# execution. A157--A159 do the same for shared-R2 encoders, weighted orders,
+# and the fixed-rlimit replay; use their dedicated reports to repeat the long
+# solver frontiers.
 .venv/bin/pytest -q \
   tests/test_shake_boolean_cnf_reader.py \
   tests/test_shake_prefix_observability_frontier.py \
@@ -184,7 +196,15 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r1_z3_structural6_partition_reader.py \
   tests/test_shake_symbolic_r1_structural_k8_reader.py \
   tests/test_shake_symbolic_r1_width24_depth_frontier.py \
-  tests/test_shake_symbolic_r1_width24_vertex_cover_reader.py
+  tests/test_shake_symbolic_r1_width24_vertex_cover_reader.py \
+  tests/test_shake_symbolic_r1_width24_prospective_transfer.py \
+  tests/test_shake_symbolic_r1_affine_basis_reader.py \
+  tests/test_shake_symbolic_r2_pivot_basis_reader.py \
+  tests/test_shake_symbolic_r1_systematic_encoder_frontier.py \
+  tests/test_shake_symbolic_r2_shared_monomial_encoder_frontier.py \
+  tests/test_shake_symbolic_r2_weighted_input_order_frontier.py \
+  tests/test_shake_symbolic_r2_fixed_rlimit_order_frontier.py \
+  tests/test_shake_symbolic_r2_affine_gauge_reader.py
 .venv/bin/python scripts/validate_causal_artifacts.py >/dev/null
 
 .venv/bin/python scripts/write_hash_manifest.py \
@@ -233,6 +253,22 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.json \
   research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.causal \
   research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
-  research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
+  research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_width24_prospective_transfer_v1.json \
+  research/results/v1/shake_symbolic_r1_width24_prospective_transfer_v1.causal \
+  research/results/v1/shake_symbolic_r1_affine_basis_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_affine_basis_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_pivot_basis_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_pivot_basis_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_systematic_encoder_frontier_v1.json \
+  research/results/v1/shake_symbolic_r1_systematic_encoder_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_shared_monomial_encoder_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_shared_monomial_encoder_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_weighted_input_order_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_weighted_input_order_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.causal
 
-echo "SHAKE Boolean, algebraic, symbolic-split, partition, strategy, assignment-free and transfer Readers reproduced."
+echo "SHAKE Boolean, algebraic, symbolic-split, partition, strategy, prospective, affine-basis and shared-encoder Readers validated."

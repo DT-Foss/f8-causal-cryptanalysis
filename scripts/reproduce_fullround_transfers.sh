@@ -238,6 +238,15 @@ mkdir -p research/results/v1
   --output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
 
+# A152 remains bound to its public pre-execution commit. Validate the retained
+# result here; use the dedicated report for an explicitly gated fresh run.
+.venv/bin/python research/experiments/shake_symbolic_r1_affine_basis_reader.py
+.venv/bin/python research/experiments/shake_symbolic_r2_pivot_basis_reader.py
+.venv/bin/python research/experiments/shake_symbolic_r2_affine_gauge_reader.py
+
+# A156--A158 contain four 120-second executions and A159 four fixed-rlimit
+# executions. They are retained and hash-gated here; their dedicated reports
+# give the explicit long-run commands.
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -269,6 +278,14 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r1_structural_k8_reader.py \
   tests/test_shake_symbolic_r1_width24_depth_frontier.py \
   tests/test_shake_symbolic_r1_width24_vertex_cover_reader.py \
+  tests/test_shake_symbolic_r1_width24_prospective_transfer.py \
+  tests/test_shake_symbolic_r1_affine_basis_reader.py \
+  tests/test_shake_symbolic_r2_pivot_basis_reader.py \
+  tests/test_shake_symbolic_r1_systematic_encoder_frontier.py \
+  tests/test_shake_symbolic_r2_shared_monomial_encoder_frontier.py \
+  tests/test_shake_symbolic_r2_weighted_input_order_frontier.py \
+  tests/test_shake_symbolic_r2_fixed_rlimit_order_frontier.py \
+  tests/test_shake_symbolic_r2_affine_gauge_reader.py \
   tests/test_feal32x_fullround_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_shacal2_fullround_cancellation.py \
@@ -361,6 +378,22 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.json \
   research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.causal \
   research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
-  research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
+  research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_width24_prospective_transfer_v1.json \
+  research/results/v1/shake_symbolic_r1_width24_prospective_transfer_v1.causal \
+  research/results/v1/shake_symbolic_r1_affine_basis_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_affine_basis_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_pivot_basis_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_pivot_basis_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_systematic_encoder_frontier_v1.json \
+  research/results/v1/shake_symbolic_r1_systematic_encoder_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_shared_monomial_encoder_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_shared_monomial_encoder_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_weighted_input_order_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_weighted_input_order_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.causal
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, partition, strategy and transfer mechanisms reproduced."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis and shared-encoder mechanisms validated."
