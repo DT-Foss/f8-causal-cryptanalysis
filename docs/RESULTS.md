@@ -511,6 +511,64 @@ A142 is a cross-variant representation/resource boundary. It selects a
 SHAKE256-specific split frontier or complete disjoint partition as the next
 test; it makes no general statement about unresolved SHAKE256 windows.
 
+## SHAKE128 structural depth and solver strategy: A143--A146
+
+The [structural-depth report](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_STRUCTURAL_DEPTH_V1.md)
+and [strategy report](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_Z3_STRATEGY_V1.md)
+preserve the exact A138 width-20 relation while separating graph structure,
+conditioning depth, and solver processing.
+
+- A143 enumerates all 38,760 six-coordinate sets, selects the unique 20/28-edge
+  maximum `[4,9,12,15,17,18]`, and executes its complete 64-subspace plan. All
+  branches return `unknown` at the retained 30-second boundary.
+- A144 compares six predeclared, syntax-gated Z3 routes. Native-XOR `QF_UF` is
+  the only independently verified width-16 `sat` route and returns assignment
+  35,837 in 4,701 decisions; its unchanged width-20 transfer remains `unknown`.
+- A145 fixes graph-selected coordinates at posthoc assignment projections to
+  localize the first measured successful depth: `k=4` and `k=6` return
+  `unknown`, while `k=8` returns assignment 227,581 in 1,442 decisions and
+  independently matches 1,344/1,344 bits. This is mechanism localization, not
+  autonomous model search.
+- A146 transfers the A144 strategy to all 64 A143 subspaces at a 120-second
+  cap. All 64 return `unknown`; no candidate is emitted.
+
+## SHAKE128 width-20 assignment-free Reader: A147
+
+[`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_ASSIGNMENT_FREE_K8_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_ASSIGNMENT_FREE_K8_V1.md)
+turns the `k=8` breadcrumb into a frozen runtime search. Coordinate selection
+is graph-only, all 256 projection values are declared in ascending order, and
+the controller executes complete five-process waves. Projection 38 returns
+assignment 227,581 in 1,442 decisions after eight complete waves; a separate
+implementation matches all 1,344 next-rate bits. The assignment and target
+projection are not selection or runtime inputs. The remaining branches are not
+certified empty, so the artifact claims model finding rather than global
+uniqueness.
+
+## SHAKE128 width-24 minimum-cover Reader: A148--A151
+
+[`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_WIDTH24_VERTEX_COVER_V1.md`](../research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_WIDTH24_VERTEX_COVER_V1.md)
+extends the exact symbolic-R1 mechanism to 24 coordinates.
+
+- A148 proves that the R1 graph is exactly nine disjoint edges and therefore
+  has minimum vertex-cover size nine. Its explicitly posthoc-conditioned
+  frontier first returns `sat` at depth nine: assignment 4,845,375 in 4,734
+  decisions, independently matching all 1,344 next-rate bits.
+- A149 records the resource-sensitive 60-second parallel boundary. A150's
+  completed 60/120-second prefix retry remains historical because its 20-value
+  cutoff was recognized as same-instance target-rank-informed; it is not the
+  final published protocol.
+- A151 selects the exact lexicographic cover `[0,1,2,3,4,5,6,7,8]`, freezes a
+  complete 512-subspace schedule, and assigns every planned subspace the same
+  120-second cap. Four complete waves execute 20 branches; projection 319
+  returns assignment 4,845,375 in 4,734 decisions and 2,380 conflicts. The
+  independent implementation confirms 1,344/1,344 rate bits before early stop.
+
+A151 accepts neither the assignment nor target projection at runtime. The
+formula-order hypothesis and cap were developed from A148/A149 on this same
+instance, so the artifact is explicitly posthoc-informed and non-blind. The
+complete plan covers all `2^24` assignments, while planned coverage is kept
+distinct from the 20 branches actually executed before the verified stop.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.

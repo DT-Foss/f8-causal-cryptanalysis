@@ -138,7 +138,7 @@ The complete transfer track is one command:
 ```
 
 It reruns the PRESENT-128-through-SHAKE transfer sequence, including the
-A133--A142 symbolic Reader block, opens every causal artifact through the
+A133--A151 symbolic Reader block, opens every causal artifact through the
 repository validator, runs the focused tests, and writes
 `results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
@@ -263,6 +263,34 @@ only the A137 R1 handover choice into independent monolithic SHAKE256 systems;
 widths 16/20/24 all record `unknown` under the stored 120-second single-thread
 limit. This is the exact direct-transfer representation/resource boundary, and
 the retained next test is a SHAKE256-specific split or disjoint partition.
+
+The Structural-6 and conditioned-depth experiments in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_STRUCTURAL_DEPTH_V1.md` preserve the
+same A138 width-20 relation. The graph-only six-coordinate plan covers all 64
+subspaces, while the explicitly posthoc-conditioned depth sequence localizes
+the first complete-rate-confirmed branch to `k=8`.
+
+The Z3 processing portfolio and its Structural-6 transfer are reviewed in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_Z3_STRATEGY_V1.md`. Native-XOR
+`QF_UF` remains the only verified width-16 route, and its unchanged width-20
+monolithic and 64-subspace transfers retain their measured resource boundaries.
+
+The assignment-free continuation in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_ASSIGNMENT_FREE_K8_V1.md` rebuilds
+the eight-coordinate selection and complete 256-value plan from the R1 graph,
+executes ascending five-value waves, and independently confirms assignment
+227,581 against all 1,344 rate bits. This is model finding; unexecuted and
+unresolved subspaces keep global uniqueness as a separate certificate task.
+
+The width-24 continuation in
+`reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_WIDTH24_VERTEX_COVER_V1.md` maps the
+posthoc-conditioned depth threshold, proves that its nine disjoint R1 edges
+force a minimum vertex cover of size nine, and converts that proof into a
+complete assignment-free 512-subspace schedule. A formula-only uniform
+120-second plan reconstructs assignment 4,845,375 in 4,734 decisions and passes
+the independent complete 1,344-bit rate check. The mechanism was developed
+from the same-instance frontier and is explicitly not a blind holdout; neither
+the assignment nor target projection is a runtime input.
 
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,

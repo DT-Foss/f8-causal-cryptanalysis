@@ -19,8 +19,8 @@ if [[ -z "$Z3_BIN" ]]; then
   exit 2
 fi
 Z3_VERSION="$($Z3_BIN -version)"
-if [[ "$Z3_VERSION" != "Z3 version 4.15.4"* ]]; then
-  echo "Expected Z3 CLI 4.15.4, found: $Z3_VERSION" >&2
+if [[ "$Z3_VERSION" != "Z3 version 4.15.4 "* ]]; then
+  echo "Z3 CLI 4.15.4 is required; observed: $Z3_VERSION" >&2
   exit 2
 fi
 
@@ -203,6 +203,41 @@ mkdir -p research/results/v1
   --output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
   --causal-output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
 
+.venv/bin/python research/experiments/shake_symbolic_r1_structural6_partition_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_structural6_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_structural6_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_z3_strategy_frontier.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_structural_depth_frontier.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_structural_depth_frontier_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_structural_depth_frontier_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_z3_structural6_partition_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_z3_structural6_partition_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_z3_structural6_partition_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_structural_k8_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_structural_k8_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_structural_k8_reader_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_width24_depth_frontier.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.causal
+
+.venv/bin/python research/experiments/shake_symbolic_r1_width24_vertex_cover_reader.py \
+  --z3 "$Z3_BIN" \
+  --output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
+  --causal-output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
+
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -227,6 +262,13 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r1_upper_partition_reader.py \
   tests/test_shake_symbolic_r1_structural_partition_reader.py \
   tests/test_shake256_symbolic_r1_scaling_reader.py \
+  tests/test_shake_symbolic_r1_structural6_partition_reader.py \
+  tests/test_shake_symbolic_r1_z3_strategy_frontier.py \
+  tests/test_shake_symbolic_r1_structural_depth_frontier.py \
+  tests/test_shake_symbolic_r1_z3_structural6_partition_reader.py \
+  tests/test_shake_symbolic_r1_structural_k8_reader.py \
+  tests/test_shake_symbolic_r1_width24_depth_frontier.py \
+  tests/test_shake_symbolic_r1_width24_vertex_cover_reader.py \
   tests/test_feal32x_fullround_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_shacal2_fullround_cancellation.py \
@@ -305,6 +347,20 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.json \
   research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.causal \
   research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
-  research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
+  research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_structural6_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_structural6_partition_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.json \
+  research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r1_structural_depth_frontier_v1.json \
+  research/results/v1/shake_symbolic_r1_structural_depth_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r1_z3_structural6_partition_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_z3_structural6_partition_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_structural_k8_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_structural_k8_reader_v1.causal \
+  research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.json \
+  research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
+  research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, partition and transfer mechanisms reproduced."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, partition, strategy and transfer mechanisms reproduced."

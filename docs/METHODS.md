@@ -196,8 +196,30 @@ assignments are excluded. Its three `unknown` first queries therefore measure
 the direct monolithic transfer boundary for the declared seeds, solver thread,
 version, and time limit; they are not generalized as ambiguity or resistance.
 
+A143 extends Max-Cover conditioning to six coordinates by evaluating all
+38,760 subsets and freezing the unique 20-edge maximum before executing its
+complete 64-value plan. A144 declares six Z3 processing routes in source order,
+syntax-gates their emitted formulas, and selects only by verified status and
+decision count; wallclock and assignment values are excluded. A145 uses
+graph-selected coordinates but intentionally supplies posthoc assignment
+projections to localize the conditioned depth threshold. A146 transfers A144's
+selected route byte-for-byte to every A143 branch.
+
+A147 removes the assignment from coordinate selection, branch values, and
+branch order. The graph determines eight coordinates, all 256 values are frozen
+in ascending order, and five-process waves stop only after a candidate passes a
+separate complete-rate implementation. A148 repeats exact graph enumeration at
+width 24 and proves the resulting nine disjoint edges require a vertex cover of
+size nine. A151 uses the lexicographic exact minimum cover to define all 512
+subspaces, ranks formulas from graph/formula structure, assigns the same
+120-second cap to every planned branch, and accepts a model only after the
+independent 1,344-bit gate. The ordering and budget were developed from A148
+and A149 on the same instance, so the protocol records posthoc-informed,
+non-blind scope. Planned 512-way coverage is distinct from the 20 branches
+actually executed before the verified complete-wave early stop.
+
 Explicit candidate enumeration in A123--A127 remains exactly `2^k` logical
-work. A133's truth-space transforms also consume all `2^16` points. A134--A142
+work. A133's truth-space transforms also consume all `2^16` points. A134--A151
 do not enumerate an assignment table; their recorded work is formula size,
 solver decisions, branch coverage, and configured time boundaries, without
 claiming a formal asymptotic exponent. Native enumeration checkpoints are

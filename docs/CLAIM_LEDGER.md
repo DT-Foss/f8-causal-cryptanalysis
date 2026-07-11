@@ -36,6 +36,9 @@ such; empirical confirmations retain their sample counts.
 | A138 | The monolithic R1 Reader reconstructs the 16-coordinate assignment 35,837 in 4,701 decisions and independently matches all 1,344 next-rate bits without a supplied prefix. | `shake_symbolic_r1_scaling_reader_v1.*`, solver-frontier manifest |
 | A139--A141 | Three complete disjoint width-20 R1 partition plans—Low-4, Upper-4, and exact quadratic Max-Cover-4—each record 16 `unknown` branches under the stored 60-second/five-worker resource schedule. | `shake_symbolic_r1_{partition_scaling,upper_partition,structural_partition}_reader_v1.*`, solver-frontier manifest |
 | A142 | Direct monolithic transfer of the SHAKE128-selected R1 handover to SHAKE256 widths 16/20/24 records `unknown` at each stored 120-second single-thread boundary. | `shake256_symbolic_r1_scaling_reader_v1.*`, solver-frontier manifest |
+| A143--A146 | Exact R1-graph Structural-6 and solver-strategy experiments map the width-20 resource boundary; the explicitly posthoc-conditioned frontier first returns a complete-rate-verified model at depth eight. | `shake_symbolic_r1_structural6_partition_reader_v1.*`, `shake_symbolic_r1_structural_depth_frontier_v1.*`, `shake_symbolic_r1_z3_strategy_frontier_v1.*`, `shake_symbolic_r1_z3_structural6_partition_reader_v1.*`, solver-frontier manifest |
+| A147 | A frozen graph-only eight-coordinate schedule finds the width-20 assignment 227,581 without assignment, target projection, or outcome-prioritized branch order as runtime inputs and independently reproduces all 1,344 next-rate bits. | `shake_symbolic_r1_structural_k8_reader_v1.*`, solver-frontier manifest |
+| A148--A151 | The width-24 R1 graph consists of nine disjoint edges, so its minimum vertex-cover size is exactly nine; the final uniform complete-domain schedule finds assignment 4,845,375 in 4,734 decisions and independently reproduces all 1,344 next-rate bits. | `shake_symbolic_r1_width24_{depth_frontier,vertex_cover_reader}_v1.*`, solver-frontier manifest |
 
 The filenames above are rooted at `research/results/v1/`; full hashes are in
 `FULLROUND_TRANSFER_SHA256SUMS`, `SHAKE_NATIVE_EXTENDED_SHA256SUMS`, and
@@ -67,6 +70,9 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | SHAKE R1 scaling | Width 16 has an exact verified model; its blocked query and widths 20/24 are recorded solver boundaries, not uniqueness results. |
 | SHAKE R1 partition topology | Each four-coordinate plan exhausts all 16 disjoint branches, but all statuses remain `unknown`; this maps three exact representation/resource boundaries and does not assert ambiguity or general resistance. |
 | SHAKE256 R1 transfer | Only A137's R1 split choice transfers; no SHAKE128 outcome is imported. The three bounded first queries do not exclude another split or partition. |
+| SHAKE R1 structural depth | A145 supplies posthoc branch values to localize a mechanism threshold; it is not assignment-free search. A143/A146 retain complete plans and exact resource limits. |
+| SHAKE R1 assignment-free `k=8` | A147 verifies one width-20 model after eight complete waves; unresolved and unexecuted branches remain outside any global-uniqueness claim. |
+| SHAKE R1 width-24 vertex cover | A151's runtime accepts neither the assignment nor target projection. Its formula ordering and uniform 120-second cap were nevertheless developed from A148/A149 on the same instance, so the result is explicitly non-blind and posthoc-informed. All 512 branches are planned uniformly; only 20 execute before the verified complete-wave early stop. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -86,7 +92,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A142 claims above are governed by their newer JSON/Reader evidence and
+The A107--A151 claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

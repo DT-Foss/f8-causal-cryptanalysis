@@ -1,0 +1,1371 @@
+{
+  "causal": {
+    "bytes": 1163,
+    "explicit_triplets": 3,
+    "file_sha256": "77f0bfe3618f8055eb8d5c8a8159c4230fa6837ffd8ff9734a5652ab8e2e69c0",
+    "graph_sha256": "c8f1c673e621508c9f9554a741fe67fe144f4e8dcbcd01ec8076eac6562d8ffd",
+    "inferred_triplets": 0,
+    "path": "research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.causal",
+    "triplets": 3
+  },
+  "evidence_stage": "EXACT_HASH_GATED_Z3_PROCESSING_STRATEGY_FRONTIER",
+  "formula_gates": {
+    "both_match_a138": true,
+    "width16": {
+      "canonical_smt_bytes": 9187068,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "expected_first_smt_bytes": 9187068,
+      "expected_first_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "matches_expected_first_smt": true,
+      "matches_retained_a138_first_smt": true,
+      "output_assertions": 1344,
+      "retained_a138_first_smt_bytes": 9187068,
+      "retained_a138_first_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "seed": 89754028,
+      "symbolic_prefix_rounds": 1,
+      "total_assertions": 128074,
+      "total_variables": 126746,
+      "variant": "SHAKE128",
+      "window_bits": 16
+    },
+    "width20": {
+      "canonical_smt_bytes": 9189138,
+      "canonical_smt_sha256": "66aa82020b4dd2b4d21f3065c99ca6f7c9224ab1ab9765f686121f2fe7f8618f",
+      "expected_first_smt_bytes": 9189138,
+      "expected_first_smt_sha256": "66aa82020b4dd2b4d21f3065c99ca6f7c9224ab1ab9765f686121f2fe7f8618f",
+      "matches_expected_first_smt": true,
+      "matches_retained_a138_first_smt": true,
+      "output_assertions": 1344,
+      "retained_a138_first_smt_bytes": 9189138,
+      "retained_a138_first_smt_sha256": "66aa82020b4dd2b4d21f3065c99ca6f7c9224ab1ab9765f686121f2fe7f8618f",
+      "seed": 89755037,
+      "symbolic_prefix_rounds": 1,
+      "total_assertions": 128092,
+      "total_variables": 126768,
+      "variant": "SHAKE128",
+      "window_bits": 20
+    }
+  },
+  "kat": {
+    "fips202_url": "https://csrc.nist.gov/pubs/fips/202/final",
+    "keccak_f1600_zero_state_lanes": [
+      "f1258f7940e1dde7",
+      "84d5ccf933c0478a",
+      "d598261ea65aa9ee",
+      "bd1547306f80494d",
+      "8b284e056253d057",
+      "ff97a42d7f8e6fd4",
+      "90fee5a0a44647c4",
+      "8c5bda0cd6192e76",
+      "ad30a6f71b19059c",
+      "30935ab7d08ffc64",
+      "eb5aa93f2317d635",
+      "a9a6e6260d712103",
+      "81a57c16dbcf555f",
+      "43b831cd0347c826",
+      "01f22f1a11a5569f",
+      "05e5635a21d9ae61",
+      "64befef28cc970f2",
+      "613670957bc46611",
+      "b87c5a554fd00ecb",
+      "8c3ee88a1ccf32c8",
+      "940c7922ae3a2614",
+      "1841f924a2c509e4",
+      "16f53526e70465c2",
+      "75f644e97f30a13b",
+      "eaf1ff7b5ceca249"
+    ],
+    "keccak_f1600_zero_state_match": true,
+    "vectors": [
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "7f9c2ba4e88f827d616045507605853ed73b8093f6efbc88eb1a6eacfa66ef263cb1eea988004b93103cfb0aeefd2a686e01fa4a58e8a3639ca8a1e3f9ae57e2",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "5881092dd818bf5cf8a3ddb793fbcba74097d5c526a6d35f97b83351940f2cc844c50af32acd3f2cdd066568706f509bc1bdde58295dae3f891a9a0fca578378",
+        "rate_bytes": 168,
+        "variant": "shake128"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "empty",
+        "observed_first_64": "46b9dd2b0ba88d13233b3feb743eeb243fcd52ea62b81b82b50c27646ed5762fd75dc4ddd8c0f200cb05019d67b592f6fc821c49479ab48640292eacb3b7c4be",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      },
+      {
+        "embedded_empty_vector_match": true,
+        "hashlib_full_rate_match": true,
+        "message": "abc",
+        "observed_first_64": "483366601360a8771c6863080cc4114d8db44530f8f1e1ee4f94ea37e78b5739d5a15bef186a5386c75744c0527e1faa9f8726e462a12a4feb06bd8801e751e4",
+        "rate_bytes": 136,
+        "variant": "shake256"
+      }
+    ]
+  },
+  "parameters": {
+    "a138_sha256": "428e17c9d959e425f417b0c3ce15bd1e9065b8284229ce78f7dd8cb4dce0b078",
+    "actual_assignment_used_for_strategy_selection": false,
+    "portfolio_declared_before_measurement": true,
+    "retained_default_width16_reexecuted": false,
+    "solver": "Z3 version 4.15.4 - 64 bit",
+    "solver_threads": 1,
+    "symbolic_prefix_rounds": 1,
+    "syntax_validation_seed": 89751001,
+    "syntax_validation_timeout_seconds": 30,
+    "syntax_validation_width": 4,
+    "wallclock_used_for_strategy_selection": false,
+    "width16_new_strategy_timeout_seconds": 60,
+    "width20_timeout_seconds_per_query": 120,
+    "width_seeds": {
+      "16": 89754028,
+      "20": 89755037
+    }
+  },
+  "reader_gate": {
+    "exact_three_edge_chain": true,
+    "explicit_triplet_count": 3,
+    "passed": true,
+    "reader_file_sha256": "77f0bfe3618f8055eb8d5c8a8159c4230fa6837ffd8ff9734a5652ab8e2e69c0",
+    "reader_graph_sha256": "c8f1c673e621508c9f9554a741fe67fe144f4e8dcbcd01ec8076eac6562d8ffd",
+    "reader_verify_provenance": true
+  },
+  "reader_triplets": [
+    {
+      "attrs": {
+        "reader_recipe": {
+          "a138_sha256": "428e17c9d959e425f417b0c3ce15bd1e9065b8284229ce78f7dd8cb4dce0b078",
+          "formula_sha256": {
+            "16": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+            "20": "66aa82020b4dd2b4d21f3065c99ca6f7c9224ab1ab9765f686121f2fe7f8618f"
+          },
+          "formulation_module": "shake_symbolic_r1_scaling_reader.py",
+          "width_seeds": {
+            "16": 89754028,
+            "20": 89755037
+          }
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "r1-hash-gated-identical-formulas",
+      "evidence_kind": "A138_file_hash_plus_two_first_SMT_hash_gates",
+      "is_inferred": false,
+      "mechanism": "regenerate_exact_A137_R1_SMT_and_match_stored_first_smt_sha256",
+      "outcome": "SHAKE128:identical_unpartitioned_R1_formulas",
+      "provenance": [],
+      "source": "A137_encoder_and_A138_retained_artifact",
+      "trigger": "A138:hash_gated_R1_width16_and_width20_trials"
+    },
+    {
+      "attrs": {
+        "reader_recipe": {
+          "instrumented_assignment_selector": null,
+          "new_strategy_timeout_seconds": 60,
+          "portfolio_order": [
+            "qf_uf_default_retained",
+            "qf_fd_default",
+            "aig_sat",
+            "aig_sat_chb",
+            "aig_sat_cutxor",
+            "propagate_aig_sat"
+          ],
+          "selection_metric": "decisions",
+          "solver_threads": 1,
+          "wallclock_selector": null
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "r1-predeclared-z3-strategy-portfolio",
+      "evidence_kind": "exact_models_plus_complete_1344_bit_checks_and_solver_statistics",
+      "is_inferred": false,
+      "mechanism": "execute_predeclared_equal_seed_single_thread_Z3_processing_portfolio",
+      "outcome": "SHAKE128:width16_strategy_frontier_observations",
+      "provenance": [
+        "r1-hash-gated-identical-formulas"
+      ],
+      "source": "Z3_strategy_measurements_with_A138_default_anchor",
+      "trigger": "SHAKE128:identical_unpartitioned_R1_formulas"
+    },
+    {
+      "attrs": {
+        "reader_recipe": {
+          "first_sat_requires_blocked_second_query": true,
+          "first_sat_requires_complete_rate_check": true,
+          "selected_strategy": "qf_uf_default_retained",
+          "timeout_seconds_per_query": 120
+        }
+      },
+      "confidence": 1.0,
+      "edge_id": "r1-selected-strategy-width20-followup",
+      "evidence_kind": "120_second_status_and_conditional_model_and_blocked_query_checks",
+      "is_inferred": false,
+      "mechanism": "select_deterministically_then_transfer_exact_processing_path_to_width20",
+      "outcome": "SHAKE128:deterministic_width20_followup_observation",
+      "provenance": [
+        "r1-predeclared-z3-strategy-portfolio"
+      ],
+      "source": "selected_Z3_path_plus_independent_bit_sliced_core",
+      "trigger": "SHAKE128:width16_strategy_frontier_observations"
+    }
+  ],
+  "result": "A predeclared six-route Z3 processing frontier was measured on the exact A138 width-16 R1 formula; the deterministic independently verified winner was transferred unchanged to the exact A138 width-20 formula.",
+  "schema": "shake-symbolic-r1-z3-strategy-frontier-v1",
+  "scope": "Unpartitioned canonical SHAKE128 known-complement R1 state-window Reader; strategy selection excludes wallclock and the instrumented assignment.",
+  "selection": {
+    "eligible_strategies": [
+      "qf_uf_default_retained"
+    ],
+    "instrumented_assignment_used": false,
+    "metric_candidate_strategies": [
+      "qf_uf_default_retained"
+    ],
+    "selected_strategy": "qf_uf_default_retained",
+    "selection_inputs": [
+      "solver_status_sat",
+      "independent_complete_1344_bit_rate_gate",
+      "decisions",
+      "predeclared_portfolio_order"
+    ],
+    "selection_metric": "decisions",
+    "selection_metric_value": 4701.0,
+    "selection_reason": "minimum_decisions_among_verified_sat_results_with_decision_statistics",
+    "tie_break": "predeclared_portfolio_order",
+    "wallclock_used": false
+  },
+  "strategy_portfolio": [
+    {
+      "check_sat_form": "(check-sat)",
+      "logic": "QF_UF",
+      "portfolio_index": 0,
+      "strategy": "qf_uf_default_retained"
+    },
+    {
+      "check_sat_form": "(check-sat)",
+      "logic": "QF_FD",
+      "portfolio_index": 1,
+      "strategy": "qf_fd_default"
+    },
+    {
+      "check_sat_form": "(check-sat-using (then simplify solve-eqs aig sat))",
+      "logic": "QF_UF",
+      "portfolio_index": 2,
+      "strategy": "aig_sat"
+    },
+    {
+      "check_sat_form": "(check-sat-using (then simplify solve-eqs aig (using-params sat :branching.heuristic chb)))",
+      "logic": "QF_UF",
+      "portfolio_index": 3,
+      "strategy": "aig_sat_chb"
+    },
+    {
+      "check_sat_form": "(check-sat-using (then simplify solve-eqs aig (using-params sat :cut true :cut.xor true :cut.force true)))",
+      "logic": "QF_UF",
+      "portfolio_index": 4,
+      "strategy": "aig_sat_cutxor"
+    },
+    {
+      "check_sat_form": "(check-sat-using (then simplify propagate-values solve-eqs aig sat))",
+      "logic": "QF_UF",
+      "portfolio_index": 5,
+      "strategy": "propagate_aig_sat"
+    }
+  ],
+  "syntax_validation": {
+    "all_six_syntactically_executable_and_correct": true,
+    "canonical_smt_bytes": 9184637,
+    "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+    "results": [
+      {
+        "assignment": 11,
+        "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "check_sat_form": "(check-sat)",
+        "complete_rate_gate": true,
+        "executed_in_this_run": true,
+        "external_timeout": false,
+        "ground_truth_used_for_strategy_selection": false,
+        "independent_verification": {
+          "candidate_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3"
+        },
+        "logic": "QF_UF",
+        "matches_instrumented_assignment_posthoc": true,
+        "model_parsed": true,
+        "portfolio_index": 0,
+        "render_audit": {
+          "assertion_count": 128064,
+          "changed_line_indices_zero_based": [],
+          "declaration_count": 126724,
+          "get_value_count": 1,
+          "get_value_preserved_byte_exact": true,
+          "line_count": 254794,
+          "preserved_body_bytes": 9184607,
+          "preserved_body_sha256": "6c2f73105e0ebc67ea2cbb573ea60301eed9e177b5e59540a89e3bbe157eadf1",
+          "replaceable_line_indices_zero_based": [
+            0,
+            254791
+          ]
+        },
+        "rendered_smt_bytes": 9184637,
+        "rendered_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "return_code": 0,
+        "seed": 89751001,
+        "selection_metrics": {
+          "conflicts": 31.0,
+          "decisions": 511.0
+        },
+        "solver_invocation": {
+          "combined_output_sha256": "6880c451f8f8042e275a9401d3c9348f507e3a5b5553df4d51f577e49df56b7f",
+          "command": [
+            "/opt/homebrew/bin/z3",
+            "-smt2",
+            "-st",
+            "-T:30",
+            "build/shake-symbolic-r1-z3-strategies/shake128_r1_w4_syntax_qf_uf_default_retained.smt2"
+          ],
+          "diagnostics": [],
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 584,
+          "stdout_sha256": "6880c451f8f8042e275a9401d3c9348f507e3a5b5553df4d51f577e49df56b7f"
+        },
+        "source": "new_equal_limit_measurement",
+        "stats": {
+          "binary-propagations": 699825.0,
+          "conflicts": 31.0,
+          "decisions": 511.0,
+          "del-clause": 85857.0,
+          "final-checks": 1.0,
+          "max-memory": 499.13,
+          "memory": 387.86,
+          "minimized-lits": 6712.0,
+          "mk-bool-var": 255097.0,
+          "mk-clause": 613600.0,
+          "mk-clause-binary": 139090.0,
+          "num-allocs": 2796939388.0,
+          "num-checks": 1.0,
+          "propagations": 2503746.0,
+          "rlimit-count": 93820262.0,
+          "solve-eqs-elim-vars": 51022.0,
+          "solve-eqs-steps": 204695.0,
+          "time": 3.89,
+          "total-time": 4.34
+        },
+        "status": "sat",
+        "strategy": "qf_uf_default_retained",
+        "threads": 1,
+        "timeout_seconds": 30
+      },
+      {
+        "assignment": 11,
+        "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "check_sat_form": "(check-sat)",
+        "complete_rate_gate": true,
+        "executed_in_this_run": true,
+        "external_timeout": false,
+        "ground_truth_used_for_strategy_selection": false,
+        "independent_verification": {
+          "candidate_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3"
+        },
+        "logic": "QF_FD",
+        "matches_instrumented_assignment_posthoc": true,
+        "model_parsed": true,
+        "portfolio_index": 1,
+        "render_audit": {
+          "assertion_count": 128064,
+          "changed_line_indices_zero_based": [
+            0
+          ],
+          "declaration_count": 126724,
+          "get_value_count": 1,
+          "get_value_preserved_byte_exact": true,
+          "line_count": 254794,
+          "preserved_body_bytes": 9184607,
+          "preserved_body_sha256": "6c2f73105e0ebc67ea2cbb573ea60301eed9e177b5e59540a89e3bbe157eadf1",
+          "replaceable_line_indices_zero_based": [
+            0,
+            254791
+          ]
+        },
+        "rendered_smt_bytes": 9184637,
+        "rendered_smt_sha256": "3cf6910b0e1352c7fbe225c1eb80529eb831493682e0bfda770e8498838044a9",
+        "return_code": 0,
+        "seed": 89751001,
+        "selection_metrics": {
+          "conflicts": 112.0,
+          "decisions": 31540.0
+        },
+        "solver_invocation": {
+          "combined_output_sha256": "a0b3e9fdf58d0dc1d04398b272d86203069d5ac75e7c3ac8b06f0374888b4eb7",
+          "command": [
+            "/opt/homebrew/bin/z3",
+            "-smt2",
+            "-st",
+            "-T:30",
+            "build/shake-symbolic-r1-z3-strategies/shake128_r1_w4_syntax_qf_fd_default.smt2"
+          ],
+          "diagnostics": [],
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 769,
+          "stdout_sha256": "a0b3e9fdf58d0dc1d04398b272d86203069d5ac75e7c3ac8b06f0374888b4eb7"
+        },
+        "source": "new_equal_limit_measurement",
+        "stats": {
+          "max-memory": 546.41,
+          "memory": 520.3,
+          "num-allocs": 4493391333.0,
+          "rlimit-count": 16242247.0,
+          "sat-backjumps": 112.0,
+          "sat-conflicts": 112.0,
+          "sat-decisions": 31540.0,
+          "sat-del-clause": 5193.0,
+          "sat-elim-clauses": 714.0,
+          "sat-elim-literals": 807.0,
+          "sat-minimized-lits": 1697.0,
+          "sat-mk-clause-2ary": 396147.0,
+          "sat-mk-clause-nary": 449565.0,
+          "sat-mk-var": 265721.0,
+          "sat-probing-assigned": 247.0,
+          "sat-propagations-2ary": 2566593.0,
+          "sat-propagations-nary": 1113429.0,
+          "sat-scc-elim-binary": 28.0,
+          "sat-scc-elim-vars": 122918.0,
+          "sat-subs-resolution": 45.0,
+          "sat-subsumed": 306.0,
+          "sat-units": 7953.0,
+          "time": 1.3,
+          "total-time": 1.65
+        },
+        "status": "sat",
+        "strategy": "qf_fd_default",
+        "threads": 1,
+        "timeout_seconds": 30
+      },
+      {
+        "assignment": 11,
+        "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "check_sat_form": "(check-sat-using (then simplify solve-eqs aig sat))",
+        "complete_rate_gate": true,
+        "executed_in_this_run": true,
+        "external_timeout": false,
+        "ground_truth_used_for_strategy_selection": false,
+        "independent_verification": {
+          "candidate_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3"
+        },
+        "logic": "QF_UF",
+        "matches_instrumented_assignment_posthoc": true,
+        "model_parsed": true,
+        "portfolio_index": 2,
+        "render_audit": {
+          "assertion_count": 128064,
+          "changed_line_indices_zero_based": [
+            254791
+          ],
+          "declaration_count": 126724,
+          "get_value_count": 1,
+          "get_value_preserved_byte_exact": true,
+          "line_count": 254794,
+          "preserved_body_bytes": 9184607,
+          "preserved_body_sha256": "6c2f73105e0ebc67ea2cbb573ea60301eed9e177b5e59540a89e3bbe157eadf1",
+          "replaceable_line_indices_zero_based": [
+            0,
+            254791
+          ]
+        },
+        "rendered_smt_bytes": 9184677,
+        "rendered_smt_sha256": "95508c9d508642173674065ae3d85efab4ad9c52c8476c73436e67ba626ca70d",
+        "return_code": 0,
+        "seed": 89751001,
+        "selection_metrics": {
+          "conflicts": 152.0,
+          "decisions": 22371.0
+        },
+        "solver_invocation": {
+          "combined_output_sha256": "31bf5217913246cbdc8e9df1b0a9ccf67d4a6a019320b1af52f33a5080596c2e",
+          "command": [
+            "/opt/homebrew/bin/z3",
+            "-smt2",
+            "-st",
+            "-T:30",
+            "build/shake-symbolic-r1-z3-strategies/shake128_r1_w4_syntax_aig_sat.smt2"
+          ],
+          "diagnostics": [],
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 948,
+          "stdout_sha256": "31bf5217913246cbdc8e9df1b0a9ccf67d4a6a019320b1af52f33a5080596c2e"
+        },
+        "source": "new_equal_limit_measurement",
+        "stats": {
+          "max-memory": 836.58,
+          "memory": 347.35,
+          "num-allocs": 10731680270.0,
+          "rlimit-count": 19491776.0,
+          "sat-backjumps": 152.0,
+          "sat-conflicts": 152.0,
+          "sat-decisions": 22371.0,
+          "sat-del-clause": 293206.0,
+          "sat-elim-bool-vars-res": 48292.0,
+          "sat-elim-clauses": 5149.0,
+          "sat-elim-literals": 5171.0,
+          "sat-minimized-lits": 3040.0,
+          "sat-mk-clause-2ary": 226867.0,
+          "sat-mk-clause-3ary": 136825.0,
+          "sat-mk-clause-nary": 620462.0,
+          "sat-mk-var": 211694.0,
+          "sat-probing-assigned": 54.0,
+          "sat-propagations-2ary": 140593.0,
+          "sat-propagations-nary": 1314661.0,
+          "sat-restarts": 4.0,
+          "sat-scc-elim-binary": 2.0,
+          "sat-scc-elim-vars": 76297.0,
+          "sat-subs-resolution": 686.0,
+          "sat-subsumed": 670.0,
+          "sat-units": 1168.0,
+          "solve-eqs-elim-vars": 51986.0,
+          "solve-eqs-steps": 219288.0,
+          "time": 2.25,
+          "total-time": 2.58
+        },
+        "status": "sat",
+        "strategy": "aig_sat",
+        "threads": 1,
+        "timeout_seconds": 30
+      },
+      {
+        "assignment": 11,
+        "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "check_sat_form": "(check-sat-using (then simplify solve-eqs aig (using-params sat :branching.heuristic chb)))",
+        "complete_rate_gate": true,
+        "executed_in_this_run": true,
+        "external_timeout": false,
+        "ground_truth_used_for_strategy_selection": false,
+        "independent_verification": {
+          "candidate_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3"
+        },
+        "logic": "QF_UF",
+        "matches_instrumented_assignment_posthoc": true,
+        "model_parsed": true,
+        "portfolio_index": 3,
+        "render_audit": {
+          "assertion_count": 128064,
+          "changed_line_indices_zero_based": [
+            254791
+          ],
+          "declaration_count": 126724,
+          "get_value_count": 1,
+          "get_value_preserved_byte_exact": true,
+          "line_count": 254794,
+          "preserved_body_bytes": 9184607,
+          "preserved_body_sha256": "6c2f73105e0ebc67ea2cbb573ea60301eed9e177b5e59540a89e3bbe157eadf1",
+          "replaceable_line_indices_zero_based": [
+            0,
+            254791
+          ]
+        },
+        "rendered_smt_bytes": 9184717,
+        "rendered_smt_sha256": "65baebaf80632f4511eb8d0e1928853126dee2a111a789e964a67c7ccbb805e2",
+        "return_code": 0,
+        "seed": 89751001,
+        "selection_metrics": {
+          "conflicts": 295.0,
+          "decisions": 21434.0
+        },
+        "solver_invocation": {
+          "combined_output_sha256": "40906e47b192aaa5d4e9e4aa4a81bcf165864303593f9cf58cc15b67b1400fd6",
+          "command": [
+            "/opt/homebrew/bin/z3",
+            "-smt2",
+            "-st",
+            "-T:30",
+            "build/shake-symbolic-r1-z3-strategies/shake128_r1_w4_syntax_aig_sat_chb.smt2"
+          ],
+          "diagnostics": [],
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1003,
+          "stdout_sha256": "40906e47b192aaa5d4e9e4aa4a81bcf165864303593f9cf58cc15b67b1400fd6"
+        },
+        "source": "new_equal_limit_measurement",
+        "stats": {
+          "max-memory": 838.54,
+          "memory": 347.36,
+          "num-allocs": 10763854614.0,
+          "rlimit-count": 21278567.0,
+          "sat-backjumps": 295.0,
+          "sat-conflicts": 295.0,
+          "sat-decisions": 21434.0,
+          "sat-del-clause": 286482.0,
+          "sat-elim-bool-vars-res": 48287.0,
+          "sat-elim-clauses": 784.0,
+          "sat-elim-literals": 1373.0,
+          "sat-minimized-lits": 9397.0,
+          "sat-mk-clause-2ary": 224648.0,
+          "sat-mk-clause-3ary": 136796.0,
+          "sat-mk-clause-nary": 620625.0,
+          "sat-mk-var": 211694.0,
+          "sat-probing-assigned": 58.0,
+          "sat-propagations-2ary": 95256.0,
+          "sat-propagations-nary": 3258624.0,
+          "sat-restarts": 32.0,
+          "sat-scc-elim-binary": 1.0,
+          "sat-scc-elim-vars": 76297.0,
+          "sat-subs-resolution": 676.0,
+          "sat-subs-resolution-dyn": 1.0,
+          "sat-subsumed": 670.0,
+          "sat-units": 788.0,
+          "solve-eqs-elim-vars": 51986.0,
+          "solve-eqs-steps": 219288.0,
+          "time": 2.2,
+          "total-time": 2.63
+        },
+        "status": "sat",
+        "strategy": "aig_sat_chb",
+        "threads": 1,
+        "timeout_seconds": 30
+      },
+      {
+        "assignment": 11,
+        "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "check_sat_form": "(check-sat-using (then simplify solve-eqs aig (using-params sat :cut true :cut.xor true :cut.force true)))",
+        "complete_rate_gate": true,
+        "executed_in_this_run": true,
+        "external_timeout": false,
+        "ground_truth_used_for_strategy_selection": false,
+        "independent_verification": {
+          "candidate_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3"
+        },
+        "logic": "QF_UF",
+        "matches_instrumented_assignment_posthoc": true,
+        "model_parsed": true,
+        "portfolio_index": 4,
+        "render_audit": {
+          "assertion_count": 128064,
+          "changed_line_indices_zero_based": [
+            254791
+          ],
+          "declaration_count": 126724,
+          "get_value_count": 1,
+          "get_value_preserved_byte_exact": true,
+          "line_count": 254794,
+          "preserved_body_bytes": 9184607,
+          "preserved_body_sha256": "6c2f73105e0ebc67ea2cbb573ea60301eed9e177b5e59540a89e3bbe157eadf1",
+          "replaceable_line_indices_zero_based": [
+            0,
+            254791
+          ]
+        },
+        "rendered_smt_bytes": 9184732,
+        "rendered_smt_sha256": "9db854ab716e269247625dc3f30902145ad2b0eb441383442b19ebe32ab75d1c",
+        "return_code": 0,
+        "seed": 89751001,
+        "selection_metrics": {
+          "conflicts": 152.0,
+          "decisions": 22371.0
+        },
+        "solver_invocation": {
+          "combined_output_sha256": "7fb6fc379ba11d74e10fca0d193f4611abc815685d0b5aed3b551ff9d59fce88",
+          "command": [
+            "/opt/homebrew/bin/z3",
+            "-smt2",
+            "-st",
+            "-T:30",
+            "build/shake-symbolic-r1-z3-strategies/shake128_r1_w4_syntax_aig_sat_cutxor.smt2"
+          ],
+          "diagnostics": [],
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 1038,
+          "stdout_sha256": "7fb6fc379ba11d74e10fca0d193f4611abc815685d0b5aed3b551ff9d59fce88"
+        },
+        "source": "new_equal_limit_measurement",
+        "stats": {
+          "max-memory": 879.62,
+          "memory": 347.36,
+          "num-allocs": 12388288442.0,
+          "rlimit-count": 19491776.0,
+          "sat-backjumps": 152.0,
+          "sat-conflicts": 152.0,
+          "sat-cut.ands": 34495.0,
+          "sat-cut.ites": 1.0,
+          "sat-cut.xors": 102459.0,
+          "sat-decisions": 22371.0,
+          "sat-del-clause": 293206.0,
+          "sat-elim-bool-vars-res": 48292.0,
+          "sat-elim-clauses": 5149.0,
+          "sat-elim-literals": 5171.0,
+          "sat-minimized-lits": 3040.0,
+          "sat-mk-clause-2ary": 226867.0,
+          "sat-mk-clause-3ary": 136825.0,
+          "sat-mk-clause-nary": 620462.0,
+          "sat-mk-var": 211694.0,
+          "sat-probing-assigned": 54.0,
+          "sat-propagations-2ary": 140593.0,
+          "sat-propagations-nary": 1314661.0,
+          "sat-restarts": 4.0,
+          "sat-scc-elim-binary": 2.0,
+          "sat-scc-elim-vars": 76297.0,
+          "sat-subs-resolution": 686.0,
+          "sat-subsumed": 670.0,
+          "sat-units": 1168.0,
+          "solve-eqs-elim-vars": 51986.0,
+          "solve-eqs-steps": 219288.0,
+          "time": 2.06,
+          "total-time": 2.46
+        },
+        "status": "sat",
+        "strategy": "aig_sat_cutxor",
+        "threads": 1,
+        "timeout_seconds": 30
+      },
+      {
+        "assignment": 11,
+        "canonical_smt_sha256": "1aa88dc30d286641fd65050077b6832a8644ecd6db73318e8ce8d0c4e7937a6b",
+        "check_sat_form": "(check-sat-using (then simplify propagate-values solve-eqs aig sat))",
+        "complete_rate_gate": true,
+        "executed_in_this_run": true,
+        "external_timeout": false,
+        "ground_truth_used_for_strategy_selection": false,
+        "independent_verification": {
+          "candidate_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3",
+          "complete_rate_match": true,
+          "rate_bits_checked": 1344,
+          "rate_lanes_checked": 21,
+          "target_rate_sha256": "41ba9ace167c93ade024226c67f6ac95490569e1f86202d35b72f2e75256b2f3"
+        },
+        "logic": "QF_UF",
+        "matches_instrumented_assignment_posthoc": true,
+        "model_parsed": true,
+        "portfolio_index": 5,
+        "render_audit": {
+          "assertion_count": 128064,
+          "changed_line_indices_zero_based": [
+            254791
+          ],
+          "declaration_count": 126724,
+          "get_value_count": 1,
+          "get_value_preserved_byte_exact": true,
+          "line_count": 254794,
+          "preserved_body_bytes": 9184607,
+          "preserved_body_sha256": "6c2f73105e0ebc67ea2cbb573ea60301eed9e177b5e59540a89e3bbe157eadf1",
+          "replaceable_line_indices_zero_based": [
+            0,
+            254791
+          ]
+        },
+        "rendered_smt_bytes": 9184694,
+        "rendered_smt_sha256": "9058f8661a3a8e8c65b2664079da98a35197bbd311a8551c69e8e9eaf725d86d",
+        "return_code": 0,
+        "seed": 89751001,
+        "selection_metrics": {
+          "conflicts": 384.0,
+          "decisions": 36902.0
+        },
+        "solver_invocation": {
+          "combined_output_sha256": "9ecfd87d2ee4c2c02ca34501ced45bdd22e0a264761a4e7a66572d7dc0d25da2",
+          "command": [
+            "/opt/homebrew/bin/z3",
+            "-smt2",
+            "-st",
+            "-T:30",
+            "build/shake-symbolic-r1-z3-strategies/shake128_r1_w4_syntax_propagate_aig_sat.smt2"
+          ],
+          "diagnostics": [],
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 945,
+          "stdout_sha256": "9ecfd87d2ee4c2c02ca34501ced45bdd22e0a264761a4e7a66572d7dc0d25da2"
+        },
+        "source": "new_equal_limit_measurement",
+        "stats": {
+          "max-memory": 844.31,
+          "memory": 346.97,
+          "num-allocs": 8255175596.0,
+          "rlimit-count": 20310902.0,
+          "sat-backjumps": 384.0,
+          "sat-conflicts": 384.0,
+          "sat-decisions": 36902.0,
+          "sat-del-clause": 285482.0,
+          "sat-elim-bool-vars-res": 48303.0,
+          "sat-elim-clauses": 2.0,
+          "sat-elim-literals": 683.0,
+          "sat-minimized-lits": 16958.0,
+          "sat-mk-clause-2ary": 226246.0,
+          "sat-mk-clause-3ary": 136859.0,
+          "sat-mk-clause-nary": 620881.0,
+          "sat-mk-var": 212700.0,
+          "sat-probing-assigned": 47.0,
+          "sat-propagations-2ary": 147385.0,
+          "sat-propagations-nary": 3148296.0,
+          "sat-restarts": 72.0,
+          "sat-scc-elim-binary": 3.0,
+          "sat-scc-elim-vars": 77260.0,
+          "sat-subs-resolution": 644.0,
+          "sat-subsumed": 634.0,
+          "sat-units": 1158.0,
+          "solve-eqs-elim-vars": 51022.0,
+          "solve-eqs-steps": 204695.0,
+          "time": 2.22,
+          "total-time": 2.63
+        },
+        "status": "sat",
+        "strategy": "propagate_aig_sat",
+        "threads": 1,
+        "timeout_seconds": 30
+      }
+    ],
+    "seed": 89751001,
+    "timeout_seconds_per_strategy": 30,
+    "used_for_width16_strategy_selection": false,
+    "window_bits": 4
+  },
+  "width16_strategy_results": [
+    {
+      "assignment": 35837,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "check_sat_form": "(check-sat)",
+      "complete_rate_gate": true,
+      "executed_in_this_run": false,
+      "external_timeout": false,
+      "frontier_new_strategy_timeout_seconds": 60,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": {
+        "candidate_rate_sha256": "6d23d92d3ae295ffc64a53b5d1c70042a9a2efb73ad0daf6cd923fef31c940e4",
+        "complete_rate_match": true,
+        "rate_bits_checked": 1344,
+        "rate_lanes_checked": 21,
+        "target_rate_sha256": "6d23d92d3ae295ffc64a53b5d1c70042a9a2efb73ad0daf6cd923fef31c940e4"
+      },
+      "logic": "QF_UF",
+      "matches_instrumented_assignment_posthoc": true,
+      "model_parsed": true,
+      "portfolio_index": 0,
+      "render_audit": {
+        "assertion_count": 128074,
+        "changed_line_indices_zero_based": [],
+        "declaration_count": 126746,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254826,
+        "preserved_body_bytes": 9187038,
+        "preserved_body_sha256": "907a22608ce92e38f05ec36a84be06bde0c613e4e9aab36e34a8da65d59bb2eb",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254823
+        ]
+      },
+      "rendered_smt_bytes": 9187068,
+      "rendered_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "return_code": 0,
+      "seed": 89754028,
+      "selection_metrics": {
+        "conflicts": 2565.0,
+        "decisions": 4701.0
+      },
+      "solver_invocation": {
+        "combined_output_sha256": null,
+        "command": null,
+        "diagnostics": [],
+        "not_reexecuted_reason": "The task requires the hash-gated A138 default width-16 measurement to be imported rather than recomputed.",
+        "stderr_bytes": null,
+        "stderr_sha256": null,
+        "stdout_bytes": null,
+        "stdout_sha256": null
+      },
+      "source": "A138_hash_gated_retained_measurement",
+      "stats": {
+        "binary-propagations": 118334974.0,
+        "conflicts": 2565.0,
+        "decisions": 4701.0,
+        "propagations": 422212529.0,
+        "restarts": 7.0
+      },
+      "status": "sat",
+      "strategy": "qf_uf_default_retained",
+      "threads": 1,
+      "timeout_seconds": 120
+    },
+    {
+      "assignment": null,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "check_sat_form": "(check-sat)",
+      "complete_rate_gate": false,
+      "executed_in_this_run": true,
+      "external_timeout": false,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": null,
+      "logic": "QF_FD",
+      "matches_instrumented_assignment_posthoc": null,
+      "model_parsed": false,
+      "portfolio_index": 1,
+      "render_audit": {
+        "assertion_count": 128074,
+        "changed_line_indices_zero_based": [
+          0
+        ],
+        "declaration_count": 126746,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254826,
+        "preserved_body_bytes": 9187038,
+        "preserved_body_sha256": "907a22608ce92e38f05ec36a84be06bde0c613e4e9aab36e34a8da65d59bb2eb",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254823
+        ]
+      },
+      "rendered_smt_bytes": 9187068,
+      "rendered_smt_sha256": "a3a0675294cb5a3256bba21a8501833aea65f77e43ceed66ca32eef4b8ff151e",
+      "return_code": 0,
+      "seed": 89754028,
+      "selection_metrics": {
+        "conflicts": 20039.0,
+        "decisions": 62001.0
+      },
+      "solver_invocation": {
+        "combined_output_sha256": "7c26d063ad9061d6344ecd9c7c8bfe9ba9c184a5b24a22e6f1ac890fae62c914",
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-smt2",
+          "-st",
+          "-T:60",
+          "build/shake-symbolic-r1-z3-strategies/shake128_r1_w16_frontier_qf_fd_default.smt2"
+        ],
+        "diagnostics": [],
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_bytes": 909,
+        "stdout_sha256": "7c26d063ad9061d6344ecd9c7c8bfe9ba9c184a5b24a22e6f1ac890fae62c914"
+      },
+      "source": "new_equal_limit_measurement",
+      "stats": {
+        "max-memory": 530.22,
+        "memory": 530.01,
+        "num-allocs": 3727467117.0,
+        "rlimit-count": 686738251.0,
+        "sat-backjumps": 20028.0,
+        "sat-backtracks": 10.0,
+        "sat-conflicts": 20039.0,
+        "sat-decisions": 62001.0,
+        "sat-del-clause": 13872.0,
+        "sat-elim-clauses": 147.0,
+        "sat-elim-literals": 149.0,
+        "sat-gc-clause": 9945.0,
+        "sat-minimized-lits": 10423916.0,
+        "sat-mk-clause-2ary": 404748.0,
+        "sat-mk-clause-nary": 481805.0,
+        "sat-mk-var": 269689.0,
+        "sat-probing-assigned": 231.0,
+        "sat-propagations-2ary": 135015137.0,
+        "sat-propagations-nary": 552988473.0,
+        "sat-restarts": 1959.0,
+        "sat-scc-elim-binary": 29.0,
+        "sat-scc-elim-vars": 125801.0,
+        "sat-subs-resolution": 5.0,
+        "sat-subs-resolution-dyn": 1014.0,
+        "sat-subsumed": 304.0,
+        "sat-units": 6205.0,
+        "time": 59.76,
+        "total-time": 59.62
+      },
+      "status": "unknown",
+      "strategy": "qf_fd_default",
+      "threads": 1,
+      "timeout_seconds": 60
+    },
+    {
+      "assignment": null,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "check_sat_form": "(check-sat-using (then simplify solve-eqs aig sat))",
+      "complete_rate_gate": false,
+      "executed_in_this_run": true,
+      "external_timeout": false,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": null,
+      "logic": "QF_UF",
+      "matches_instrumented_assignment_posthoc": null,
+      "model_parsed": false,
+      "portfolio_index": 2,
+      "render_audit": {
+        "assertion_count": 128074,
+        "changed_line_indices_zero_based": [
+          254823
+        ],
+        "declaration_count": 126746,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254826,
+        "preserved_body_bytes": 9187038,
+        "preserved_body_sha256": "907a22608ce92e38f05ec36a84be06bde0c613e4e9aab36e34a8da65d59bb2eb",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254823
+        ]
+      },
+      "rendered_smt_bytes": 9187108,
+      "rendered_smt_sha256": "791af7db1040d85604a86d6cc474459fd5680a654444da71421ce76e2f9956a2",
+      "return_code": 0,
+      "seed": 89754028,
+      "selection_metrics": {
+        "conflicts": null,
+        "decisions": null
+      },
+      "solver_invocation": {
+        "combined_output_sha256": "293d4c25fb777d19eff45755486d7aa759bc1e5249315be8f83fd110efcc965a",
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-smt2",
+          "-st",
+          "-T:60",
+          "build/shake-symbolic-r1-z3-strategies/shake128_r1_w16_frontier_aig_sat.smt2"
+        ],
+        "diagnostics": [],
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_bytes": 149,
+        "stdout_sha256": "293d4c25fb777d19eff45755486d7aa759bc1e5249315be8f83fd110efcc965a"
+      },
+      "source": "new_equal_limit_measurement",
+      "stats": {
+        "max-memory": 838.24,
+        "memory": 524.11,
+        "num-allocs": 6243743045.0,
+        "rlimit-count": 513744537.0,
+        "time": 59.6,
+        "total-time": 59.9
+      },
+      "status": "unknown",
+      "strategy": "aig_sat",
+      "threads": 1,
+      "timeout_seconds": 60
+    },
+    {
+      "assignment": null,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "check_sat_form": "(check-sat-using (then simplify solve-eqs aig (using-params sat :branching.heuristic chb)))",
+      "complete_rate_gate": false,
+      "executed_in_this_run": true,
+      "external_timeout": false,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": null,
+      "logic": "QF_UF",
+      "matches_instrumented_assignment_posthoc": null,
+      "model_parsed": false,
+      "portfolio_index": 3,
+      "render_audit": {
+        "assertion_count": 128074,
+        "changed_line_indices_zero_based": [
+          254823
+        ],
+        "declaration_count": 126746,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254826,
+        "preserved_body_bytes": 9187038,
+        "preserved_body_sha256": "907a22608ce92e38f05ec36a84be06bde0c613e4e9aab36e34a8da65d59bb2eb",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254823
+        ]
+      },
+      "rendered_smt_bytes": 9187148,
+      "rendered_smt_sha256": "01b677cca5e4739ebce06645373c887f8d09d3669cc48deb0128f783f4a360fe",
+      "return_code": 0,
+      "seed": 89754028,
+      "selection_metrics": {
+        "conflicts": null,
+        "decisions": null
+      },
+      "solver_invocation": {
+        "combined_output_sha256": "7bfbb000c6cc999e4e2891d6b150256f82602a80831fb8721aaf3e75688b54fc",
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-smt2",
+          "-st",
+          "-T:60",
+          "build/shake-symbolic-r1-z3-strategies/shake128_r1_w16_frontier_aig_sat_chb.smt2"
+        ],
+        "diagnostics": [],
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_bytes": 149,
+        "stdout_sha256": "7bfbb000c6cc999e4e2891d6b150256f82602a80831fb8721aaf3e75688b54fc"
+      },
+      "source": "new_equal_limit_measurement",
+      "stats": {
+        "max-memory": 841.01,
+        "memory": 531.67,
+        "num-allocs": 5749633919.0,
+        "rlimit-count": 560280975.0,
+        "time": 59.62,
+        "total-time": 59.82
+      },
+      "status": "unknown",
+      "strategy": "aig_sat_chb",
+      "threads": 1,
+      "timeout_seconds": 60
+    },
+    {
+      "assignment": null,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "check_sat_form": "(check-sat-using (then simplify solve-eqs aig (using-params sat :cut true :cut.xor true :cut.force true)))",
+      "complete_rate_gate": false,
+      "executed_in_this_run": true,
+      "external_timeout": false,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": null,
+      "logic": "QF_UF",
+      "matches_instrumented_assignment_posthoc": null,
+      "model_parsed": false,
+      "portfolio_index": 4,
+      "render_audit": {
+        "assertion_count": 128074,
+        "changed_line_indices_zero_based": [
+          254823
+        ],
+        "declaration_count": 126746,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254826,
+        "preserved_body_bytes": 9187038,
+        "preserved_body_sha256": "907a22608ce92e38f05ec36a84be06bde0c613e4e9aab36e34a8da65d59bb2eb",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254823
+        ]
+      },
+      "rendered_smt_bytes": 9187163,
+      "rendered_smt_sha256": "06a25acce2b5ce04a3e91fe222fafd5691db7aec7e11a34a4ce8db6f124bf728",
+      "return_code": 0,
+      "seed": 89754028,
+      "selection_metrics": {
+        "conflicts": null,
+        "decisions": null
+      },
+      "solver_invocation": {
+        "combined_output_sha256": "68e3e5c33162abbff264ce4e584a813465af49e94c3b3096111d982ffb82d375",
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-smt2",
+          "-st",
+          "-T:60",
+          "build/shake-symbolic-r1-z3-strategies/shake128_r1_w16_frontier_aig_sat_cutxor.smt2"
+        ],
+        "diagnostics": [],
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_bytes": 149,
+        "stdout_sha256": "68e3e5c33162abbff264ce4e584a813465af49e94c3b3096111d982ffb82d375"
+      },
+      "source": "new_equal_limit_measurement",
+      "stats": {
+        "max-memory": 882.82,
+        "memory": 572.19,
+        "num-allocs": 6829271937.0,
+        "rlimit-count": 514635781.0,
+        "time": 59.59,
+        "total-time": 59.84
+      },
+      "status": "unknown",
+      "strategy": "aig_sat_cutxor",
+      "threads": 1,
+      "timeout_seconds": 60
+    },
+    {
+      "assignment": null,
+      "canonical_smt_sha256": "1670f07a90669eb83482f3c63aa28f1bc4b4e246ed5976eba2f6fd813ca9d9de",
+      "check_sat_form": "(check-sat-using (then simplify propagate-values solve-eqs aig sat))",
+      "complete_rate_gate": false,
+      "executed_in_this_run": true,
+      "external_timeout": false,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": null,
+      "logic": "QF_UF",
+      "matches_instrumented_assignment_posthoc": null,
+      "model_parsed": false,
+      "portfolio_index": 5,
+      "render_audit": {
+        "assertion_count": 128074,
+        "changed_line_indices_zero_based": [
+          254823
+        ],
+        "declaration_count": 126746,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254826,
+        "preserved_body_bytes": 9187038,
+        "preserved_body_sha256": "907a22608ce92e38f05ec36a84be06bde0c613e4e9aab36e34a8da65d59bb2eb",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254823
+        ]
+      },
+      "rendered_smt_bytes": 9187125,
+      "rendered_smt_sha256": "ab1a856ffaa1c847a7967f7198355ae364570c69b9cc8188205d6e26e9aedf37",
+      "return_code": 0,
+      "seed": 89754028,
+      "selection_metrics": {
+        "conflicts": null,
+        "decisions": null
+      },
+      "solver_invocation": {
+        "combined_output_sha256": "3051d5294b2f02227c8f209d97fefaf89a0e791d5f4b87a3fd63f616c75ef269",
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-smt2",
+          "-st",
+          "-T:60",
+          "build/shake-symbolic-r1-z3-strategies/shake128_r1_w16_frontier_propagate_aig_sat.smt2"
+        ],
+        "diagnostics": [],
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_bytes": 149,
+        "stdout_sha256": "3051d5294b2f02227c8f209d97fefaf89a0e791d5f4b87a3fd63f616c75ef269"
+      },
+      "source": "new_equal_limit_measurement",
+      "stats": {
+        "max-memory": 848.39,
+        "memory": 533.82,
+        "num-allocs": 7754999171.0,
+        "rlimit-count": 477684130.0,
+        "time": 59.62,
+        "total-time": 59.57
+      },
+      "status": "unknown",
+      "strategy": "propagate_aig_sat",
+      "threads": 1,
+      "timeout_seconds": 60
+    }
+  ],
+  "width20_transfer": {
+    "blocked_second_query": null,
+    "blocked_second_query_required": false,
+    "first_query": {
+      "assignment": null,
+      "canonical_smt_sha256": "66aa82020b4dd2b4d21f3065c99ca6f7c9224ab1ab9765f686121f2fe7f8618f",
+      "check_sat_form": "(check-sat)",
+      "complete_rate_gate": false,
+      "executed_in_this_run": true,
+      "external_timeout": false,
+      "ground_truth_used_for_strategy_selection": false,
+      "independent_verification": null,
+      "logic": "QF_UF",
+      "matches_instrumented_assignment_posthoc": null,
+      "model_parsed": false,
+      "portfolio_index": 0,
+      "render_audit": {
+        "assertion_count": 128092,
+        "changed_line_indices_zero_based": [],
+        "declaration_count": 126768,
+        "get_value_count": 1,
+        "get_value_preserved_byte_exact": true,
+        "line_count": 254866,
+        "preserved_body_bytes": 9189108,
+        "preserved_body_sha256": "99c75379238ae0f35b7f2ca81aeaf8225edcc8d2e494452d3174e18cbe9055bf",
+        "replaceable_line_indices_zero_based": [
+          0,
+          254863
+        ]
+      },
+      "rendered_smt_bytes": 9189138,
+      "rendered_smt_sha256": "66aa82020b4dd2b4d21f3065c99ca6f7c9224ab1ab9765f686121f2fe7f8618f",
+      "return_code": 0,
+      "seed": 89755037,
+      "selection_metrics": {
+        "conflicts": 7650.0,
+        "decisions": 11124.0
+      },
+      "solver_invocation": {
+        "combined_output_sha256": "3a8da2459a272022b9bf510e0e1d825012ba57aa2a9344f004a440a6f9ad0c43",
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-smt2",
+          "-st",
+          "-T:120",
+          "build/shake-symbolic-r1-z3-strategies/shake128_r1_w20_transfer_first_qf_uf_default_retained.smt2"
+        ],
+        "diagnostics": [],
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_bytes": 562,
+        "stdout_sha256": "3a8da2459a272022b9bf510e0e1d825012ba57aa2a9344f004a440a6f9ad0c43"
+      },
+      "source": "new_equal_limit_measurement",
+      "stats": {
+        "binary-propagations": 351452113.0,
+        "conflicts": 7650.0,
+        "decisions": 11124.0,
+        "del-clause": 88360.0,
+        "max-memory": 495.27,
+        "memory": 494.7,
+        "minimized-lits": 8520377.0,
+        "mk-bool-var": 262009.0,
+        "mk-clause": 637616.0,
+        "mk-clause-binary": 143510.0,
+        "num-allocs": 1850097392.0,
+        "num-checks": 1.0,
+        "propagations": 1255325324.0,
+        "restarts": 12.0,
+        "rlimit-count": 1334603681.0,
+        "solve-eqs-elim-vars": 49078.0,
+        "solve-eqs-steps": 207210.0,
+        "time": 119.56,
+        "total-time": 119.34
+      },
+      "status": "unknown",
+      "strategy": "qf_uf_default_retained",
+      "threads": 1,
+      "timeout_seconds": 120
+    },
+    "first_sat_independent_complete_rate_gate": null,
+    "same_strategy_as_width16_winner": true,
+    "selected_strategy": "qf_uf_default_retained",
+    "timeout_seconds_per_query": 120,
+    "unique_assignment_proved": null
+  },
+  "z3_parameter_audit": {
+    "all_required_parameters_present": true,
+    "command": [
+      "/opt/homebrew/bin/z3",
+      "-p"
+    ],
+    "required_parameter_entries": {
+      "branching.heuristic": "branching.heuristic (symbol) (default: vsids)",
+      "cut": "cut (bool) (default: false)",
+      "cut.force": "cut.force (bool) (default: false)",
+      "cut.xor": "cut.xor (bool) (default: false)"
+    },
+    "return_code": 0,
+    "silently_dropped_parameters": [],
+    "stdout_bytes": 31924,
+    "stdout_sha256": "594daf6b217eb77861459f38c1315feab61e896b73be29bc8b6f4277c5fdca40"
+  }
+}

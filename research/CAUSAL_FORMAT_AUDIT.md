@@ -79,3 +79,11 @@ verification, followed by three partition-topology schedules and one
 cross-variant transfer boundary. Every production experiment reopens its graph
 with `CryptoCausalReader`; the repository-wide validator checks the canonical
 graph digest, triplet count, and provenance references again from disk.
+
+A143--A151 add seven retained graphs containing 22 explicit triplets. They
+encode complete Structural-6 scheduling, solver-strategy selection, the
+posthoc-conditioned depth frontier, assignment-free width-20 scheduling, the
+exact width-24 minimum-cover proof, uniform complete-domain planning, and the
+independent complete-rate candidate gate. The A151 graph records the
+same-instance, non-blind scope and distinguishes all 512 planned subspaces from
+the 20 actually executed before its verified complete-wave early stop.
