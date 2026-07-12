@@ -1,0 +1,119 @@
+{
+  "anchors": {
+    "A198": {
+      "causal_sha256": "b7c4e1302594e266c7958057221fb4101fb5ef5ee284792d6ca93e43386dd514",
+      "evidence_stage": "ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_RETAINED",
+      "sha256": "693367464ab488c49d386c1d011e8c45e7fb094cceeb37352934dde121773373"
+    },
+    "A200": {
+      "causal_sha256": "1d1680e04a829139f74fae832a6498164b994c35e636458b2262f66f973f2c93",
+      "evidence_stage": "ROUND10_PUBLIC_GEOMETRY_COMPLETE_PARTITION_BOUNDARY_RETAINED",
+      "sha256": "a945e95c63499d84cf0c41932dbe056b1eb39adbaf6d7a2096887e1b108d99ad"
+    },
+    "A201": {
+      "causal_sha256": "adfb1e7e3390b67725587373dac8423b20a4873bd46a278bdd4d97ac672816d8",
+      "evidence_stage": "PUBLIC_CHACHA_PHASE_CONJUGACY_HOLDOUT_RETAINED",
+      "sha256": "c186da54770b520153f94b0b9f72e809d6b78d950a52bee39d74ea9c15194767"
+    }
+  },
+  "attempt_id": "A202",
+  "challenge_reuse_boundary": {
+    "correct_prefix_known_before_A202": false,
+    "public_challenge_reference": "research/configs/chacha20_bitwuzla_round10_width12_refinement_v1.json",
+    "public_challenge_reference_sha256": "041782b106f6d956dd74f5051c285d7aebe00abc7e614c44790dc6fe525d5b2e",
+    "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+    "unknown_assignment_recovered_before_A202": false
+  },
+  "compiler_plan": {
+    "block_definition_order": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "cse_base_bytes": 148714,
+    "cse_base_sha256": "c4cdc311248f25fe4dd41c687d46b38ea3ad1af1cd847b94d31418e1339a1035",
+    "cse_definition_count": 2364,
+    "cse_stats_sha256": "e61b4b6b87ed141f420d3c78225b21feac46eefe4f8bc3738c054e9a55a0e162",
+    "formula_hash_list_sha256": "d998de7e253c174b3b80a0725e1a0b305664b9d2c1a4171779ce575ec7e3ef98",
+    "formula_plan_sha256": "81d2468b21fa1296ce046303cc325fc7ef1e2cd4e4062a3ca7ec1d68b0275427",
+    "original_base_bytes": 177158,
+    "original_base_sha256": "9f315292550a671352c8b745d72e0a0be05da00ff7f9bed074bccc895e4255d8",
+    "original_definition_count": 2560,
+    "per_block": [
+      {
+        "block_index": 7,
+        "new_definitions": 320,
+        "reused_definitions": 0
+      },
+      {
+        "block_index": 6,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      },
+      {
+        "block_index": 5,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      },
+      {
+        "block_index": 4,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      },
+      {
+        "block_index": 3,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      },
+      {
+        "block_index": 2,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      },
+      {
+        "block_index": 1,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      },
+      {
+        "block_index": 0,
+        "new_definitions": 292,
+        "reused_definitions": 28
+      }
+    ],
+    "reused_definition_occurrences": 196,
+    "semantic_rule": "reuse_only_byte_identical_expressions_after_exact_local_to_global_DAG_name_substitution",
+    "transformation": "global_hash_cons_across_all_eight_shared_key_blocks_without_algebraic_rewrite"
+  },
+  "execution_plan_sha256": "6dcba196f1bd064b52e5dcdb149d424ef13dcc4f3d5b9f33a9eb864a3762de06",
+  "information_boundary": {
+    "A202_solver_outcomes_used_before_protocol_freeze": false,
+    "cell_order_budget_or_CSE_rule_changed_after_any_A202_outcome": false,
+    "early_stop_permitted": false,
+    "original_A198_cells_reexecuted": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false
+  },
+  "prospective_predictions": {
+    "primary": "the_complete_10000ms_global_CSE_prefix_cover_returns_at_least_one_independently_confirmed_model",
+    "secondary": "the_complete_global_CSE_cover_resolves_at_least_one_cell_as_SAT_or_UNSAT_within_10000ms",
+    "success_rule": "all_32_CSE_cells_execute_without_early_stop_and_every_returned_model_matches_all_4096_target_bits_while_rejecting_the_control"
+  },
+  "protocol_state": "frozen_after_A200_A201_and_global_CSE_derivation_before_any_A202_solver_execution",
+  "schema": "chacha20-round10-b8-global-cse-protocol-v1",
+  "solver_binaries": {
+    "bitwuzla": {
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "path_at_freeze": "/opt/homebrew/bin/bitwuzla",
+      "sat_backend": "cadical",
+      "version": "0.9.1"
+    }
+  },
+  "solver_time_limit_milliseconds": 10000,
+  "variant_order_sha256": "8e8e72eaffece56a66c150d0c96910d80f30c1435e92ddf65e39ac3072b1f1c3"
+}

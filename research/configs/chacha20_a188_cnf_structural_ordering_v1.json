@@ -1,0 +1,344 @@
+{
+  "schema": "chacha20-a188-cnf-structural-ordering-calibration-protocol-v1",
+  "attempt_id": "A205",
+  "protocol_state": "frozen_after_A204_r3_and_formula_atlas_transfer_design_before_any_A205_structural_solver_execution",
+  "anchors": {
+    "A204": {
+      "artifact": "research/results/v1/chacha20_round10_external_cnf_reverse_v1.json",
+      "sha256": "603eaf8a2a6bb85c3c4bb2fdf4b7466205ffd1d8005593d987c8a6461b7c8c22",
+      "causal_artifact": "research/results/v1/chacha20_round10_external_cnf_reverse_v1.causal",
+      "causal_sha256": "f1ca39f964640d8aa2a5c6f6dab9bcfb48dfaddf6dda2e399275f77235ca71c3",
+      "causal_graph_sha256": "0cbdde4c25a7c804706a9e8b9823c71ec9bc74046191526cae4a7a55b5dbdc73",
+      "evidence_stage": "ROUND10_EXTERNAL_CNF_COMPLETE_PARTITION_BOUNDARY_RETAINED"
+    },
+    "formula_atlas": {
+      "report": "research/reports/FORMULA_ATLAS_FULL_REAUDIT_V1.md",
+      "report_sha256": "a4d43be43e56590402cf74febcdb5faf40de9b7640bb47ca32e7779f5d4a5d87",
+      "transfer_coverage": "research/results/v1/formula_atlas_transfer_coverage_v1.json",
+      "transfer_coverage_sha256": "feadca39a2cdb0caf38018e9d28ed6aecd56384f5771d7a6e6ab261f87ee1cc2",
+      "source_pages": 113,
+      "formula_entries": 2411,
+      "transferred_families": [
+        "T01_ordered_products_and_commutators",
+        "T04_Fiedler_and_multimode_partitions",
+        "T05_sum_difference_coordinates"
+      ]
+    }
+  },
+  "source": {
+    "challenge": "A188_public_eight_block_ChaCha5_known_positive_recovery_anchor",
+    "formula_variant": "bitwuzla_bitblast_b8",
+    "formula_sha256": "004bbb7ef6ab6ab19898dface90ad7bee953e5a9ca5a3134fab41ac275bae590",
+    "formula_bytes": 92294,
+    "cnf_export_command": [
+      "bitwuzla",
+      "--lang",
+      "smt2",
+      "--time-limit",
+      "1000",
+      "--bv-solver",
+      "bitblast",
+      "--sat-solver",
+      "cadical",
+      "--write-cnf=<path>"
+    ],
+    "cnf_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+    "cnf_bytes": 5423474,
+    "cnf_header": "p cnf 96859 310088",
+    "variable_count": 96859,
+    "clause_count": 310088,
+    "clause_length_counts": {
+      "1": 6642,
+      "2": 167660,
+      "3": 135786
+    },
+    "unit_clause_variable_count": 6642,
+    "unit_clause_variables_distinct": true,
+    "key_variable_count": 40,
+    "key_variable_one_literal_mapping": {
+      "k0": [
+        3,
+        2,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        25,
+        29,
+        34,
+        39,
+        44,
+        49,
+        53,
+        57,
+        62,
+        67,
+        71,
+        75,
+        80,
+        85,
+        90,
+        94,
+        99,
+        104,
+        109,
+        113,
+        118,
+        122
+      ],
+      "lo8": [
+        311,
+        310,
+        313,
+        319,
+        323,
+        328,
+        332,
+        354
+      ]
+    },
+    "recovered_model": {
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "combined_assignment": 357645702403
+    },
+    "confirmation": {
+      "block_count": 8,
+      "output_bits": 4096,
+      "all_blocks_match": true,
+      "control_rejected": true
+    }
+  },
+  "graph_construction": {
+    "graph": "simple_undirected_primal_variable_graph",
+    "vertices": 96859,
+    "undirected_edges": 264534,
+    "connected_components": 1,
+    "isolated_vertices": 0,
+    "minimum_degree": 2,
+    "maximum_degree": 317,
+    "edge_rule": "connect_each_pair_of_absolute_variables_cooccurring_in_a_clause_then_deduplicate",
+    "unit_sources": "all_6642_distinct_variables_appearing_in_unit_clauses",
+    "key_sources": "the_40_exactly_mapped_A188_key_variables",
+    "bfs_unreachable_value": "variable_count_plus_one",
+    "tie_breaker": "old_variable_id_ascending"
+  },
+  "spectral_construction": {
+    "laplacian": "symmetric_normalized_graph_laplacian",
+    "eigensolver": "scipy.sparse.linalg.eigsh",
+    "k": 2,
+    "which": "SM",
+    "tolerance": 0.00001,
+    "max_iterations": 10000,
+    "deterministic_v0": "sin((old_variable_id)*sqrt(2))_plus_cos((old_variable_id)*sqrt(3))",
+    "eigenvector": "second_smallest_eigenpair_after_numeric_sort",
+    "sign_orientation": "dot_with_deterministic_v0_must_be_nonnegative"
+  },
+  "candidates": [
+    {
+      "name": "identity_control",
+      "rule": "identity",
+      "family": "control"
+    },
+    {
+      "name": "reverse_id_control",
+      "rule": "reverse_variable_ids",
+      "family": "control"
+    },
+    {
+      "name": "occurrence_degree_ascending",
+      "rule": "sort_by_literal_occurrence_count_ascending_then_old_id",
+      "family": "degree"
+    },
+    {
+      "name": "occurrence_degree_descending",
+      "rule": "sort_by_literal_occurrence_count_descending_then_old_id",
+      "family": "degree"
+    },
+    {
+      "name": "adjacency_degree_ascending",
+      "rule": "sort_by_primal_graph_degree_ascending_then_old_id",
+      "family": "degree"
+    },
+    {
+      "name": "adjacency_degree_descending",
+      "rule": "sort_by_primal_graph_degree_descending_then_old_id",
+      "family": "degree"
+    },
+    {
+      "name": "last_occurrence_descending",
+      "rule": "sort_by_last_clause_index_descending_then_old_id",
+      "family": "occurrence"
+    },
+    {
+      "name": "last_occurrence_ascending",
+      "rule": "sort_by_last_clause_index_then_old_id",
+      "family": "occurrence"
+    },
+    {
+      "name": "occurrence_span_ascending",
+      "rule": "sort_by_last_minus_first_clause_index_then_old_id",
+      "family": "sum_difference"
+    },
+    {
+      "name": "output_unit_bfs_near",
+      "rule": "multi_source_BFS_from_all_unit_clause_variables_near_to_far",
+      "family": "bfs"
+    },
+    {
+      "name": "output_unit_bfs_far",
+      "rule": "multi_source_BFS_from_all_unit_clause_variables_far_to_near",
+      "family": "bfs"
+    },
+    {
+      "name": "key_bfs_near",
+      "rule": "multi_source_BFS_from_all_40_mapped_key_variables_near_to_far",
+      "family": "bfs"
+    },
+    {
+      "name": "key_bfs_far",
+      "rule": "multi_source_BFS_from_all_40_mapped_key_variables_far_to_near",
+      "family": "bfs"
+    },
+    {
+      "name": "bidirectional_min_distance",
+      "rule": "sort_by_min_key_or_unit_distance_then_signed_difference_then_old_id",
+      "family": "bidirectional"
+    },
+    {
+      "name": "alternating_key_output_bfs",
+      "rule": "stable_alternation_of_key_near_and_unit_near_orders_without_duplicates",
+      "family": "bidirectional"
+    },
+    {
+      "name": "signed_key_minus_output_ascending",
+      "rule": "sort_by_key_distance_minus_unit_distance_ascending_then_distance_sum_then_old_id",
+      "family": "sum_difference"
+    },
+    {
+      "name": "signed_key_minus_output_descending",
+      "rule": "sort_by_key_distance_minus_unit_distance_descending_then_distance_sum_then_old_id",
+      "family": "sum_difference"
+    },
+    {
+      "name": "output_layer_parity_interleave",
+      "rule": "sort_by_unit_BFS_layer_parity_then_layer_then_old_id",
+      "family": "ordered_layers"
+    },
+    {
+      "name": "reverse_cuthill_mckee",
+      "rule": "scipy_reverse_cuthill_mckee_on_symmetric_primal_graph",
+      "family": "sparse_graph"
+    },
+    {
+      "name": "fiedler_ascending",
+      "rule": "normalized_laplacian_second_eigenvector_ascending_then_old_id",
+      "family": "spectral"
+    },
+    {
+      "name": "fiedler_descending",
+      "rule": "normalized_laplacian_second_eigenvector_descending_then_old_id",
+      "family": "spectral"
+    },
+    {
+      "name": "fiedler_center_out",
+      "rule": "normalized_laplacian_second_eigenvector_absolute_value_then_signed_value_then_old_id",
+      "family": "spectral"
+    },
+    {
+      "name": "shake256_random_control",
+      "rule": "sort_by_SHAKE256_label_and_old_id",
+      "family": "control"
+    }
+  ],
+  "candidate_order": [
+    "identity_control",
+    "reverse_id_control",
+    "occurrence_degree_ascending",
+    "occurrence_degree_descending",
+    "adjacency_degree_ascending",
+    "adjacency_degree_descending",
+    "last_occurrence_descending",
+    "last_occurrence_ascending",
+    "occurrence_span_ascending",
+    "output_unit_bfs_near",
+    "output_unit_bfs_far",
+    "key_bfs_near",
+    "key_bfs_far",
+    "bidirectional_min_distance",
+    "alternating_key_output_bfs",
+    "signed_key_minus_output_ascending",
+    "signed_key_minus_output_descending",
+    "output_layer_parity_interleave",
+    "reverse_cuthill_mckee",
+    "fiedler_ascending",
+    "fiedler_descending",
+    "fiedler_center_out",
+    "shake256_random_control"
+  ],
+  "solver_modes": [
+    {
+      "name": "default",
+      "arguments": []
+    },
+    {
+      "name": "reverse",
+      "arguments": [
+        "--reverse=true"
+      ]
+    }
+  ],
+  "execution_plan": {
+    "execution_mode": "sequential_mapping_major_then_solver_mode",
+    "candidate_count": 23,
+    "solver_mode_count": 2,
+    "total_variant_count": 46,
+    "solver": "external_CaDiCaL_3.0.0",
+    "solver_executable_sha256": "c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3",
+    "solver_time_limit_seconds_per_variant": 5,
+    "external_timeout_seconds_per_variant": 8,
+    "complete_variant_plan_required": true,
+    "early_stop_permitted": false,
+    "model_decode": "inverse_variable_permutation_then_frozen_A188_40_bit_literal_map",
+    "semantic_gate": "inverse_reindex_each_transformed_CNF_and_require_byte_identical_original_CNF",
+    "independent_confirmation": "NumPy_ChaCha5_all_eight_blocks_4096_bits_and_control_rejection",
+    "progress_metrics": [
+      "conflicts",
+      "decisions",
+      "propagations",
+      "restarts"
+    ]
+  },
+  "retained_controls": {
+    "identity_default_status_at_A204_calibration": "unknown",
+    "identity_reverse_status_at_A204_calibration": "sat",
+    "identity_reverse_exact_model_confirmed": true,
+    "controls_are_reexecuted_in_A205": true
+  },
+  "prospective_rules": {
+    "primary_success": "at_least_one_noncontrol_structural_mapping_mode_returns_SAT_and_independently_confirms_the_exact_40_bit_model",
+    "robust_success": "one_noncontrol_structural_mapping_returns_confirmed_SAT_in_both_default_and_reverse_solver_modes",
+    "structural_outlier_exclusions": [
+      "identity_control",
+      "reverse_id_control",
+      "shake256_random_control"
+    ],
+    "A206_transfer_selection": "retain_every_noncontrol_mapping_with_at_least_one_confirmed_SAT_mode_in_frozen_candidate_order",
+    "no_runtime_ranking": "volatile_seconds_do_not_select_candidates",
+    "frozen_before_any_new_A205_structural_solver_execution": true
+  },
+  "information_boundary": {
+    "A204_control_outcomes_known_before_freeze": true,
+    "any_new_A205_structural_candidate_outcome_known_before_freeze": false,
+    "known_positive_model_in_protocol": true,
+    "known_positive_model_available_to_runner_before_execution": true,
+    "model_used_only_for_post_witness_confirmation": true,
+    "model_not_used_in_order_construction_or_solver_input": true,
+    "mapping_candidates_or_solver_modes_changed_after_any_new_A205_outcome": false,
+    "early_stop_permitted": false
+  }
+}

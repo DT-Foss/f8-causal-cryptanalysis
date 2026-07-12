@@ -10,12 +10,12 @@ if [[ ! -x .venv/bin/python ]]; then
   .venv/bin/python -m pip install -e .
 fi
 
-Z3_BIN="$(command -v z3 2>/dev/null || true)"
+Z3_BIN="$(command -v z3 || true)"
 if [[ -z "$Z3_BIN" && -x /opt/homebrew/bin/z3 ]]; then
   Z3_BIN="/opt/homebrew/bin/z3"
 fi
 if [[ -z "$Z3_BIN" ]]; then
-  echo "Z3 CLI 4.15.4 is required for the symbolic Reader reproduction." >&2
+  echo "Z3 CLI 4.15.4 is required for the SHAKE solver Readers." >&2
   exit 2
 fi
 Z3_VERSION="$($Z3_BIN -version)"
@@ -154,7 +154,6 @@ mkdir -p research/results/v1
 .venv/bin/python research/experiments/shake_symbolic_r2_smt_reader.py \
   --window-bits 4,8,12,16 \
   --timeout-seconds 120 \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r2_smt_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r2_smt_reader_v1.causal
 
@@ -163,82 +162,68 @@ mkdir -p research/results/v1
   --partition-bits 4 \
   --timeout-seconds 60 \
   --max-workers 5 \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r2_partition_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r2_partition_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_split_frontier.py \
   --prefix-rounds 1,2,3 \
   --timeout-seconds 60 \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_split_frontier_v1.json \
   --causal-output research/results/v1/shake_symbolic_split_frontier_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_scaling_reader.py \
   --window-bits 16,20,24 \
   --timeout-seconds 120 \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_scaling_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_scaling_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_partition_scaling_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_partition_scaling_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_upper_partition_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_upper_partition_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_structural_partition_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_structural_partition_reader_v1.causal
 
 .venv/bin/python research/experiments/shake256_symbolic_r1_scaling_reader.py \
   --window-bits 16,20,24 \
   --timeout-seconds 120 \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json \
   --causal-output research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_structural6_partition_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_structural6_partition_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_structural6_partition_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_z3_strategy_frontier.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_z3_strategy_frontier_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_structural_depth_frontier.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_structural_depth_frontier_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_structural_depth_frontier_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_z3_structural6_partition_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_z3_structural6_partition_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_z3_structural6_partition_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_structural_k8_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_structural_k8_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_structural_k8_reader_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_width24_depth_frontier.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_width24_depth_frontier_v1.causal
 
 .venv/bin/python research/experiments/shake_symbolic_r1_width24_vertex_cover_reader.py \
-  --z3 "$Z3_BIN" \
   --output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.json \
   --causal-output research/results/v1/shake_symbolic_r1_width24_vertex_cover_reader_v1.causal
 
-# A152 remains bound to its public pre-execution commit. Validate the retained
+# A152 remains bound to its public pre-execution commit.  Validate the retained
 # result here; use the dedicated report for an explicitly gated fresh run.
 .venv/bin/python research/experiments/shake_symbolic_r1_affine_basis_reader.py
 .venv/bin/python research/experiments/shake_symbolic_r2_pivot_basis_reader.py
@@ -247,17 +232,61 @@ mkdir -p research/results/v1
 .venv/bin/python research/experiments/shake_a152_native_fullround_reader_transfer.py \
   --no-resume
 
+# Unnumbered source-first formula-atlas audit. This rebuild is available when
+# the two hash-gated sibling sources documented in EXTERNAL_DEPENDENCIES.md are
+# present; clean publication clones still authenticate the retained ledger via
+# FULLROUND_TRANSFER_SHA256SUMS.
+if [[ -f ../Mathepaper/formula_atlas_v1.json && -f ../Mathepaper/formula_source_pages_v1.json ]]; then
+  .venv/bin/python research/experiments/formula_atlas_transfer_audit.py --check
+  .venv/bin/pytest -q tests/test_formula_atlas_transfer_audit.py
+else
+  echo "formula-atlas source pages absent: retained coverage ledger authenticated by manifest"
+fi
+
+# A199 is a deterministic public operator-atlas computation.  It contains no
+# hidden assignment and invokes no external solver.
+.venv/bin/python research/experiments/chacha20_formula_operator_atlas.py
+.venv/bin/python research/experiments/chacha20_formula_operator_atlas_figure.py
+.venv/bin/python research/experiments/chacha20_round10_public_geometry_partition.py \
+  --analyze-only
+.venv/bin/python research/experiments/chacha20_round10_public_geometry_partition_figure.py \
+  --check
+.venv/bin/python research/experiments/chacha20_phase_conjugacy_holdout.py
+.venv/bin/python research/experiments/chacha20_phase_conjugacy_holdout_figure.py --check
+.venv/bin/python research/experiments/chacha20_round10_b8_global_cse.py --analyze-only
+.venv/bin/python research/experiments/chacha20_round10_b8_global_cse_figure.py --check
+.venv/bin/python research/experiments/chacha20_round10_b8_lane_major.py --analyze-only
+.venv/bin/python research/experiments/chacha20_round10_b8_lane_major_figure.py --check
+.venv/bin/python research/experiments/chacha20_cnf_structural_figures.py --check
+
 # A156--A158 contain four 120-second executions; A159/A161 contain four;
 # A163/A164/A169/A170 contain eight fixed-rlimit executions each; A166--A168
-# and A172--A176 contain four each. They are retained and hash-gated here; their
-# dedicated reports give the explicit long-run commands. A177's SHAKE256,
+# and A172--A176 contain four each.  They are retained and hash-gated here; their
+# dedicated reports give the explicit long-run commands.  A177's SHAKE256,
 # A178's ChaCha20 recovery, A179's vector-256 equivalence, A181's Apple M4
 # Metal equivalence, A182--A184's fresh Metal width-36/38/40 recovery, and
-# A185--A189's reduced-round direction, shared-key stacking, and portable solver
-# portfolios are also retained and hash-gated here. Their focused tests never
-# repeat the production solver or complete-domain executions. A160 and A162 are
-# regenerated; A171 and A180 are intentionally unused.
+# A185--A198's reduced-round direction, shared-key stacking, portable solver,
+# and complete assignment-free partition executions are retained and hash-gated here.  A199 is rebuilt
+# from public states and uses no solver.  Their strict tests
+# never repeat those production runs.  A160 and A162 are regenerated.
 .venv/bin/pytest -q \
+  tests/test_chacha20_formula_operator_atlas.py \
+  tests/test_chacha20_formula_operator_atlas_figure.py \
+  tests/test_chacha20_round10_public_geometry_partition.py \
+  tests/test_chacha20_round10_public_geometry_partition_figure.py \
+  tests/test_chacha20_phase_conjugacy_holdout.py \
+  tests/test_chacha20_phase_conjugacy_holdout_figure.py \
+  tests/test_chacha20_round10_b8_global_cse.py \
+  tests/test_chacha20_round10_b8_global_cse_figure.py \
+  tests/test_chacha20_round10_b8_lane_major.py \
+  tests/test_chacha20_round10_b8_lane_major_figure.py \
+  tests/test_chacha20_round10_external_cnf_reverse.py \
+  tests/test_chacha20_a188_cnf_structural_ordering.py \
+  tests/test_chacha20_round10_bidirectional_min_distance.py \
+  tests/test_chacha20_round10_structural_order_archive.py \
+  tests/test_chacha20_round10_structural_portfolio.py \
+  tests/test_chacha20_round10_structural_portfolio_result.py \
+  tests/test_chacha20_cnf_structural_figures.py \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
   tests/test_chacha20_fullround_feedforward_reader.py \
@@ -273,6 +302,15 @@ mkdir -p research/results/v1
   tests/test_chacha20_smt_shared_key_multiblock_transfer.py \
   tests/test_chacha20_bitwuzla_round5_transfer.py \
   tests/test_chacha20_bitwuzla_round6_width20_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_width18_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round8_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round9_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_split9_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_width12_refinement.py \
+  tests/test_chacha20_bitwuzla_round10_b8_partition_transfer.py \
   tests/test_chacha20_smt_round5_retained_figures.py \
   tests/test_shake_fullround_rate_reader.py \
   tests/test_shake_capacity_jacobian_reader.py \
@@ -332,8 +370,7 @@ mkdir -p research/results/v1
   tests/test_ciphers.py
 .venv/bin/python scripts/validate_causal_artifacts.py >/dev/null
 
-.venv/bin/python scripts/write_hash_manifest.py \
-  --output research/results/v1/FULLROUND_TRANSFER_SHA256SUMS \
+shasum -a 256 \
   research/results/v1/present128_fullround_causal_f8_v1.json \
   research/results/v1/present128_fullround_causal_f8_v1.causal \
   research/results/v1/present128_fixedpoint_causal_mechanism_v1.json \
@@ -511,8 +548,90 @@ mkdir -p research/results/v1
   research/configs/chacha20_bitwuzla_round6_width20_transfer_v1.json \
   research/results/v1/chacha20_bitwuzla_round6_width20_transfer_v1.json \
   research/results/v1/chacha20_bitwuzla_round6_width20_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round7_width18_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round7_width18_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round7_width18_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round7_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round7_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round7_partition_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round7_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round7_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round7_width20_partition_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round8_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round8_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round8_width20_partition_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round9_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round9_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round9_width20_partition_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round10_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_width20_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_width20_partition_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round10_split9_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_split9_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_split9_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round10_width12_refinement_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_width12_refinement_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_width12_refinement_v1.causal \
+  research/configs/chacha20_bitwuzla_round10_b8_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_b8_partition_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round10_b8_partition_transfer_v1.causal \
+  research/configs/chacha20_formula_operator_atlas_v1.json \
+  research/results/v1/chacha20_formula_operator_atlas_v1.json \
+  research/results/v1/chacha20_formula_operator_atlas_v1.causal \
+  research/configs/chacha20_round10_public_geometry_partition_v1.json \
+  research/results/v1/chacha20_round10_public_geometry_partition_v1.json \
+  research/results/v1/chacha20_round10_public_geometry_partition_v1.causal \
+  research/configs/chacha20_phase_conjugacy_holdout_v1.json \
+  research/results/v1/chacha20_phase_conjugacy_holdout_v1.json \
+  research/results/v1/chacha20_phase_conjugacy_holdout_v1.causal \
+  research/configs/chacha20_round10_b8_global_cse_v1.json \
+  research/results/v1/chacha20_round10_b8_global_cse_v1.json \
+  research/results/v1/chacha20_round10_b8_global_cse_v1.causal \
+  research/configs/chacha20_round10_b8_lane_major_v1.json \
+  research/results/v1/chacha20_round10_b8_lane_major_v1.json \
+  research/results/v1/chacha20_round10_b8_lane_major_v1.causal \
+  research/configs/chacha20_round10_external_cnf_reverse_v1.json \
+  research/results/v1/chacha20_round10_external_cnf_reverse_v1.json \
+  research/results/v1/chacha20_round10_external_cnf_reverse_v1.causal \
+  research/configs/chacha20_a188_cnf_structural_ordering_v1.json \
+  research/results/v1/chacha20_a188_cnf_structural_ordering_v1.json \
+  research/results/v1/chacha20_a188_cnf_structural_ordering_v1.causal \
+  research/configs/chacha20_round10_bidirectional_min_distance_v1.json \
+  research/results/v1/chacha20_round10_bidirectional_min_distance_v1.json \
+  research/results/v1/chacha20_round10_bidirectional_min_distance_v1.causal \
+  research/configs/chacha20_round10_structural_portfolio_v1.json \
+  research/experiments/chacha20_round10_structural_order_archive.py \
+  research/experiments/chacha20_round10_structural_portfolio.py \
+  tests/test_chacha20_round10_structural_order_archive.py \
+  tests/test_chacha20_round10_structural_portfolio.py \
+  tests/test_chacha20_round10_structural_portfolio_result.py \
+  research/results/v1/chacha20_round10_structural_order_archive_v1.json \
+  research/results/v1/chacha20_round10_structural_order_archive_v1.causal \
+  research/results/v1/chacha20_round10_structural_orders_v1.npy \
+  research/results/v1/chacha20_round10_structural_portfolio_v1.json \
+  research/results/v1/chacha20_round10_structural_portfolio_v1.causal \
   research/results/v1/chacha20_a187_fixed_rlimit_search_shape_v1.svg \
   research/results/v1/chacha20_a188_solver_portfolio_v1.svg \
-  research/results/v1/chacha20_a189_round6_width20_portfolio_v1.svg
+  research/results/v1/chacha20_a189_round6_width20_portfolio_v1.svg \
+  research/results/v1/chacha20_a190_round7_width18_boundary_v1.svg \
+  research/results/v1/chacha20_a191_round7_complete_partition_v1.svg \
+  research/results/v1/chacha20_a192_round7_width20_complete_partition_v1.svg \
+  research/results/v1/chacha20_a193_round8_width20_partition_transfer_v1.svg \
+  research/results/v1/chacha20_a194_round9_width20_partition_transfer_v1.svg \
+  research/results/v1/chacha20_a195_round10_width20_partition_boundary_v1.svg \
+  research/results/v1/chacha20_a196_round10_split8_split9_cut_boundary_v1.svg \
+  research/results/v1/chacha20_a197_round10_width12_refinement_boundary_v1.svg \
+  research/results/v1/chacha20_a198_round10_b8_two_budget_boundary_v1.svg \
+  research/results/v1/chacha20_a199_formula_operator_atlas_v1.svg \
+  research/results/v1/chacha20_a200_round10_public_geometry_boundary_v1.svg \
+  research/results/v1/chacha20_a201_phase_conjugacy_holdout_v1.svg \
+  research/results/v1/chacha20_a202_round10_b8_global_cse_boundary_v1.svg \
+  research/results/v1/chacha20_a203_round10_b8_lane_major_boundary_v1.svg \
+  research/results/v1/chacha20_a204_external_cnf_reverse_boundary_v1.svg \
+  research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg \
+  research/results/v1/chacha20_a206_bidirectional_round10_boundary_v1.svg \
+  research/results/v1/chacha20_a207_structural_portfolio_boundary_v1.svg \
+  research/results/v1/formula_atlas_transfer_coverage_v1.json \
+  > research/results/v1/FULLROUND_TRANSFER_SHA256SUMS
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, shared-encoder, native width-32, partial-key, vector-packing, Metal width-36/38/40, reduced-round SMT direction, shared-key stacking and portable solver portfolio mechanisms validated."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, shared-encoder, native width-32, partial-key, vector-packing, Metal width-36/38/40, reduced-round SMT direction, shared-key stacking, portable solver portfolio, complete round-7 partitions, round-8/9 depth-transfer recoveries, round-10 split8/split9/width12/eight-block/public-geometry/CNF-order boundaries, the formula-atlas transfer ledger, and the complete A207 structural portfolio validated."

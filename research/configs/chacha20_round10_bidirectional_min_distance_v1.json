@@ -1,0 +1,213 @@
+{
+  "schema": "chacha20-round10-bidirectional-min-distance-transfer-protocol-v1",
+  "attempt_id": "A206",
+  "protocol_state": "frozen_after_A205_r2_robust_structural_calibration_and_A206_source_preflight_before_any_A206_round10_solver_execution",
+  "anchors": {
+    "A204": {
+      "artifact": "research/results/v1/chacha20_round10_external_cnf_reverse_v1.json",
+      "sha256": "603eaf8a2a6bb85c3c4bb2fdf4b7466205ffd1d8005593d987c8a6461b7c8c22",
+      "causal_artifact": "research/results/v1/chacha20_round10_external_cnf_reverse_v1.causal",
+      "causal_sha256": "f1ca39f964640d8aa2a5c6f6dab9bcfb48dfaddf6dda2e399275f77235ca71c3",
+      "causal_graph_sha256": "0cbdde4c25a7c804706a9e8b9823c71ec9bc74046191526cae4a7a55b5dbdc73",
+      "evidence_stage": "ROUND10_EXTERNAL_CNF_COMPLETE_PARTITION_BOUNDARY_RETAINED"
+    },
+    "A205_r2": {
+      "protocol": "research/configs/chacha20_a188_cnf_structural_ordering_v1.json",
+      "protocol_sha256": "53a7f8a7527218e8db386d62cbc082466050b5b62eee3798edb808602e058730",
+      "artifact": "research/results/v1/chacha20_a188_cnf_structural_ordering_v1.json",
+      "sha256": "b3c76fca5a9ffabf3bd2c2bf812c8ef66b9be56bc7f9936a9525fd5e8d3c7f7f",
+      "causal_artifact": "research/results/v1/chacha20_a188_cnf_structural_ordering_v1.causal",
+      "causal_sha256": "d17ed98433e70ecfafd75ce895372aa7f150cb2b178c853697ee8406f0582f80",
+      "causal_graph_sha256": "8dddd0764910b940627c65e2b21b2e4e0e367db388d481954e70c3213c56fec0",
+      "evidence_stage": "A188_CNF_ROBUST_STRUCTURAL_ORDERING_OUTLIER_RETAINED"
+    }
+  },
+  "selection": {
+    "calibration_candidates_with_at_least_one_confirmed_noncontrol_SAT_mode": [
+      "occurrence_degree_ascending",
+      "adjacency_degree_ascending",
+      "adjacency_degree_descending",
+      "occurrence_span_ascending",
+      "output_unit_bfs_near",
+      "output_unit_bfs_far",
+      "bidirectional_min_distance",
+      "signed_key_minus_output_ascending",
+      "signed_key_minus_output_descending",
+      "output_layer_parity_interleave",
+      "fiedler_ascending",
+      "fiedler_center_out"
+    ],
+    "robust_both_mode_candidates": [
+      "bidirectional_min_distance"
+    ],
+    "selected_candidate": "bidirectional_min_distance",
+    "selection_rule": "select_the_unique_noncontrol_A205_candidate_that_confirmed_the_exact_known_positive_model_in_both_predeclared_solver_modes",
+    "selection_time_data_used": false,
+    "pilot_scope": "fixed_budget_robust_both_mode_transfer_before_the_complete_12_candidate_portfolio",
+    "complete_A205_transfer_portfolio_deferred_not_cancelled": true
+  },
+  "round10_source": {
+    "source_family": "A202_exact_global_CSE_32_cell_complete_numeric_prefix_cover_replayed_through_A204",
+    "cell_count": 32,
+    "partition_fixed_bits": 5,
+    "partition_free_bits": 15,
+    "complete_domain_candidates": 1048576,
+    "common_header": "p cnf 232191 734180",
+    "common_normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+    "source_manifest_anchor": "A204_protocol_A202_round10_cnf_freeze_per_cell_manifest",
+    "free_k0_bit_one_literal_mapping": [
+      16,
+      15,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "prefix_order": [
+      "00000",
+      "00001",
+      "00010",
+      "00011",
+      "00100",
+      "00101",
+      "00110",
+      "00111",
+      "01000",
+      "01001",
+      "01010",
+      "01011",
+      "01100",
+      "01101",
+      "01110",
+      "01111",
+      "10000",
+      "10001",
+      "10010",
+      "10011",
+      "10100",
+      "10101",
+      "10110",
+      "10111",
+      "11000",
+      "11001",
+      "11010",
+      "11011",
+      "11100",
+      "11101",
+      "11110",
+      "11111"
+    ]
+  },
+  "structural_order": {
+    "candidate": "bidirectional_min_distance",
+    "graph": "simple_undirected_primal_variable_graph",
+    "unit_sources": "all_distinct_variables_appearing_in_unit_clauses",
+    "key_sources": "the_15_exactly_mapped_free_k0_variables",
+    "unit_distance": "unweighted_multi_source_BFS",
+    "key_distance": "unweighted_multi_source_BFS",
+    "unreachable_value": 232192,
+    "ordering_rule": "sort_by_min_key_or_unit_distance_then_key_distance_minus_unit_distance_then_old_variable_id",
+    "tie_breaker": "old_variable_id_ascending",
+    "formula_atlas_transfer_families": [
+      "T01_ordered_products_and_commutators",
+      "T05_sum_difference_coordinates"
+    ],
+    "representative_prefix": "11111",
+    "representative_source_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+    "order_sha256": "c019beaea6888a5db16c3805922752c273aacd5a70498df1119edb21535db8d3",
+    "old_to_new_sha256": "8568c89883908e5eadead20533c700c4a6a37d7ac9968de5ea939f66f2012702",
+    "representative_transformed_cnf_sha256": "65809b9b8bf1698195ec6b82b395f49242ec7ea6997c0966ccfaa8d69ae44bca",
+    "representative_transformed_cnf_bytes": 14082806,
+    "representative_inverse_restored_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+    "transformed_free_k0_bit_one_literal_mapping": [
+      12,
+      11,
+      13,
+      14,
+      15,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "transformed_free_mapping_sha256": "db7dcd835ddfc494c5004358edd0657fe9fab340878b750febb200874adea983"
+  },
+  "representative_graph_preflight": {
+    "variable_count": 232191,
+    "clause_count": 734180,
+    "unit_clause_variable_count": 6919,
+    "undirected_edges": 636276,
+    "connected_components": 2,
+    "largest_component": 232190,
+    "isolated_vertices": 1,
+    "minimum_degree": 0,
+    "maximum_degree": 219,
+    "key_distance_min": 0,
+    "key_distance_max": 232192,
+    "unit_distance_min": 0,
+    "unit_distance_max": 10,
+    "csr_indptr_sha256": "a81f7db7211fd3289ba1536117c2bebf2c09c6e4c1a2da75d72a95a1472a59da",
+    "csr_indices_sha256": "9e8b64e2ccecf79ab67ae8a4cb1c5f6c9e324293e5f1cbbafb65b1a442db3704"
+  },
+  "solver_modes": [
+    {
+      "name": "default",
+      "arguments": []
+    },
+    {
+      "name": "reverse",
+      "arguments": [
+        "--reverse=true"
+      ]
+    }
+  ],
+  "execution_plan": {
+    "primitive": "ChaCha20_block_function",
+    "rounds": 10,
+    "unknown_key_bits": 20,
+    "shared_key_block_count": 8,
+    "target_output_bits_per_cell": 4096,
+    "solver": "external_CaDiCaL_3.0.0",
+    "solver_time_limit_seconds_per_cell_mode": 10,
+    "external_timeout_seconds_per_cell_mode": 13,
+    "max_parallel_workers": 4,
+    "cell_mode_count": 64,
+    "execution_order": "prefix_major_then_default_reverse",
+    "complete_cell_mode_plan_required": true,
+    "early_stop_permitted": false,
+    "witness_decode": "transformed_frozen_CNF_literal_map_plus_public_prefix_and_known_upper12",
+    "independent_confirmation": "NumPy_ChaCha10_all_eight_blocks_4096_bits_and_control_rejection"
+  },
+  "prospective_predictions": {
+    "confirmed_recovery": "at_least_one_cell_mode_returns_SAT_and_its_decoded_model_passes_independent_4096_bit_confirmation_and_control_rejection",
+    "both_mode_transfer": "default_and_reverse_modes_return_the_same_independently_confirmed_model_in_the_same_prefix_cell",
+    "complete_domain_resolution": "exactly_one_prefix_cell_is_SAT_and_the_other_31_prefix_cells_are_UNSAT_with_no_UNKNOWN_or_invalid_result_in_at_least_one_solver_mode",
+    "boundary": "all_other_outcome_patterns_are_retained_with_exact_statuses_and_progress_metrics"
+  },
+  "information_boundary": {
+    "A205_calibration_outcomes_known_before_freeze": true,
+    "A205_candidate_selected_after_calibration_by_the_predeclared_robust_both_mode_criterion": true,
+    "any_A206_round10_solver_outcome_known_before_freeze": false,
+    "round10_unknown_assignment_in_protocol_or_source": false,
+    "round10_unknown_assignment_available_to_runner_before_execution": false,
+    "unrelated_A188_known_positive_model_present_only_in_A205_anchor": true,
+    "unrelated_A188_known_positive_model_used_in_A206_order_or_solver_input": false,
+    "source_manifest_candidate_order_solver_modes_or_budget_changed_after_any_A206_outcome": false,
+    "early_stop_permitted": false
+  }
+}

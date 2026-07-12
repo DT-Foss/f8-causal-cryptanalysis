@@ -608,6 +608,60 @@ typed Causal graphs, and deterministic figures are authenticated by
 `FULLROUND_TRANSFER_SHA256SUMS`. Focused tests reconstruct this evidence without
 rerunning the production solvers.
 
+## ChaCha partition, formula, and structural-CNF progression: A190--A207
+
+A190--A206 continue the same reduced-round program with complete domain covers,
+explicit `unknown`/`unsat` separation, and independent model confirmation.
+A207 is included only as a frozen pre-execution protocol.
+
+- [A190](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH18_BOUNDARY_V1.md)
+  retains the fresh ChaCha7 width-18 monolithic boundary. [A191](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_PARTITION_RECOVERY_V1.md)
+  covers that unchanged domain with eight disjoint cells and recovers
+  `0x3d051` after seven UNSAT cells.
+- [A192](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH20_PARTITION_RECOVERY_V1.md)
+  scales the rule prospectively to all `2^20` candidates and recovers
+  `0x05eb0` with 31 UNSAT cells. [A193](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND8_WIDTH20_PARTITION_RECOVERY_V1.md)
+  and [A194](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND9_WIDTH20_PARTITION_RECOVERY_V1.md)
+  transfer recovery to ChaCha8/9 (`0x5a40a`, `0x8675b`); their remaining 31
+  cells are UNKNOWN, so global uniqueness is not asserted.
+- [A195](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH20_PARTITION_BOUNDARY_V1.md),
+  [A196](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_SPLIT9_CUT_BOUNDARY_V1.md),
+  [A197](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH12_REFINEMENT_BOUNDARY_V1.md),
+  and [A198](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_V1.md)
+  retain complete ChaCha10 UNKNOWN frontiers across split8, split9, width-12
+  refinement, and eight-block 10/30-second representations.  Every candidate
+  remains covered; UNKNOWN is never interpreted as UNSAT.
+- [A199](../research/reports/CAUSAL_CHACHA20_FORMULA_OPERATOR_ATLAS_V1.md)
+  transfers the full source-first formula audit into public ChaCha operators,
+  exact derivative-root gates, signed forward/backward features, and a
+  32-cell Fiedler-filtration baseline. [A201](../research/reports/CAUSAL_CHACHA20_PHASE_CONJUGACY_HOLDOUT_V1.md)
+  attributes the dominant factor-40 contrast to known Column/Diagonal layout
+  conjugacy. A200/A202/A203 test distinct affine covers, exact global CSE, and
+  lane-major assertion order without crossing the fixed ChaCha10 frontier.
+- [A204](../research/reports/CAUSAL_CHACHA20_ROUND10_EXTERNAL_CNF_REVERSE_BOUNDARY_V1.md)
+  derives the exact CNF literal map and calibrates 26 standalone-SAT routes.
+  CaDiCaL reverse uniquely confirms the A188 model, but all 32 prospective
+  round-10 cells remain valid UNKNOWN.
+- [A205-r2](../research/reports/CAUSAL_CHACHA20_A188_CNF_STRUCTURAL_ORDERING_V1.md)
+  evaluates 23 exact graph orders under both CaDiCaL modes. The complete matrix
+  has 16 SAT and 30 UNKNOWN observations; all SAT models independently confirm
+  the A188 key. Twelve non-control structural candidates succeed, with
+  `bidirectional_min_distance` unique in both modes. The r2 correction changes
+  metadata only, not those 46 observations or their comparisons.
+- [A206](../research/reports/CAUSAL_CHACHA20_ROUND10_BIDIRECTIONAL_MIN_DISTANCE_BOUNDARY_V1.md)
+  transfers that robust order to 32 prefixes and both modes. All 64 cells are
+  valid UNKNOWN, with no model or recovery claim.
+- [A207 preflight](../research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_PREFLIGHT_V1.md)
+  freezes 12 exact order permutations, the remaining 11 candidate modes, and a
+  complete 352-cell plan. The [completed result](../research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md)
+  returns 352/352 new valid UNKNOWN observations, making all 416 combined
+  A206/A207 calibrated cells UNKNOWN. Reverse `output_unit_bfs_far` is a
+  systematic progress outlier at 2.758577x conflicts, 5.685714x decisions, and
+  0.593999x propagations relative to the A206 same-mode baseline.
+
+All A190--A207 retained artifacts, Causal graphs, figures, formula/order
+archives, and focused no-solver tests are included in the transfer manifest.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.

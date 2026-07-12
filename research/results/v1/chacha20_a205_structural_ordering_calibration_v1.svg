@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="720">
+<style>.t{font:700 24px system-ui}.s{font:600 15px system-ui}.x{font:12px system-ui;fill:#475569}.sat{fill:#dcfce7;stroke:#15803d}.unk{fill:#f1f3f5;stroke:#7c3aed}.box{fill:#fafbfc;stroke:#9aa6b2}</style>
+<rect width="1240" height="720" fill="white"/>
+<text x="36" y="42" class="t">A205-r2 — structural CNF ordering calibration</text>
+<text x="36" y="70" class="s">23 exact orders × default/reverse · 46 complete observations · every SAT witness confirmed</text>
+<rect x="36" y="96" width="1168" height="86" rx="9" class="box"/>
+<text x="58" y="132" class="s">16 SAT · 30 UNKNOWN · 12 non-control structural candidates</text>
+<text x="58" y="160" class="x">r2 corrects boundary metadata only; observations, confirmations, and comparisons are unchanged.</text>
+<rect x="36" y="204" width="1168" height="410" rx="9" class="box"/>
+<text x="58" y="238" class="s">Confirmed structural candidates and successful mode</text>
+<text x="58" y="276" class="x">occurrence_degree_ascending</text>
+<rect data-candidate="occurrence_degree_ascending" data-mode="default" x="720" y="258" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="274" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="occurrence_degree_ascending" data-mode="reverse" x="930" y="258" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="274" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="303" class="x">adjacency_degree_ascending</text>
+<rect data-candidate="adjacency_degree_ascending" data-mode="default" x="720" y="285" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="301" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="adjacency_degree_ascending" data-mode="reverse" x="930" y="285" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="301" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="330" class="x">adjacency_degree_descending</text>
+<rect data-candidate="adjacency_degree_descending" data-mode="default" x="720" y="312" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="328" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="adjacency_degree_descending" data-mode="reverse" x="930" y="312" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="328" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="357" class="x">occurrence_span_ascending</text>
+<rect data-candidate="occurrence_span_ascending" data-mode="default" x="720" y="339" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="355" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="occurrence_span_ascending" data-mode="reverse" x="930" y="339" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="355" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="384" class="x">output_unit_bfs_near</text>
+<rect data-candidate="output_unit_bfs_near" data-mode="default" x="720" y="366" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="382" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="output_unit_bfs_near" data-mode="reverse" x="930" y="366" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="382" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="411" class="x">output_unit_bfs_far</text>
+<rect data-candidate="output_unit_bfs_far" data-mode="default" x="720" y="393" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="409" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="output_unit_bfs_far" data-mode="reverse" x="930" y="393" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="409" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="438" class="x">bidirectional_min_distance</text>
+<rect data-candidate="bidirectional_min_distance" data-mode="default" x="720" y="420" width="190" height="22" rx="4" class="sat"/>
+<text x="815" y="436" text-anchor="middle" class="x">default · SAT</text>
+<rect data-candidate="bidirectional_min_distance" data-mode="reverse" x="930" y="420" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="436" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="465" class="x">signed_key_minus_output_ascending</text>
+<rect data-candidate="signed_key_minus_output_ascending" data-mode="default" x="720" y="447" width="190" height="22" rx="4" class="sat"/>
+<text x="815" y="463" text-anchor="middle" class="x">default · SAT</text>
+<rect data-candidate="signed_key_minus_output_ascending" data-mode="reverse" x="930" y="447" width="190" height="22" rx="4" class="unk"/>
+<text x="1025" y="463" text-anchor="middle" class="x">reverse · UNKNOWN</text>
+<text x="58" y="492" class="x">signed_key_minus_output_descending</text>
+<rect data-candidate="signed_key_minus_output_descending" data-mode="default" x="720" y="474" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="490" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="signed_key_minus_output_descending" data-mode="reverse" x="930" y="474" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="490" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="519" class="x">output_layer_parity_interleave</text>
+<rect data-candidate="output_layer_parity_interleave" data-mode="default" x="720" y="501" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="517" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="output_layer_parity_interleave" data-mode="reverse" x="930" y="501" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="517" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="546" class="x">fiedler_ascending</text>
+<rect data-candidate="fiedler_ascending" data-mode="default" x="720" y="528" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="544" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="fiedler_ascending" data-mode="reverse" x="930" y="528" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="544" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="573" class="x">fiedler_center_out</text>
+<rect data-candidate="fiedler_center_out" data-mode="default" x="720" y="555" width="190" height="22" rx="4" class="unk"/>
+<text x="815" y="571" text-anchor="middle" class="x">default · UNKNOWN</text>
+<rect data-candidate="fiedler_center_out" data-mode="reverse" x="930" y="555" width="190" height="22" rx="4" class="sat"/>
+<text x="1025" y="571" text-anchor="middle" class="x">reverse · SAT</text>
+<text x="58" y="660" class="s">bidirectional_min_distance is the unique structural candidate confirmed in both modes.</text>
+<text x="58" y="684" class="x">UNKNOWN is not UNSAT · exact retained observations only</text>
+</svg>

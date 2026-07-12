@@ -37,6 +37,11 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-12 | A152--A177 prospective and mechanistic continuation: public protocol transfer, exact R1/R2 structure, compiler/gauge/order interventions, and complete native width-24/32 reconstruction |
 | 2026-07-12 | A178--A184 ChaCha20 full-round continuation: fresh 32-/36-/38-/40-bit partial-key recoveries, vector-256 equivalence, and Apple M4 Metal execution |
 | 2026-07-12 | A185--A189 reduced-round ChaCha continuation: prospective direction transfer, round-5 resource boundary, shared-key stacking, cross-engine round-5 recovery, and prospective round-6 width-20 recovery |
+| 2026-07-12 | A190--A198 complete-domain ChaCha continuation: round-7/8/9 partition recoveries and exact round-10 split, refinement, block-stacking, and budget boundaries |
+| 2026-07-12 | A199--A203 formula/operator continuation: source-first formula transfer, public geometry, phase-conjugacy attribution, global CSE, and assertion-order boundaries |
+| 2026-07-12 | A204--A206 exact-CNF continuation: standalone solver calibration, structural graph-order outliers on A188, and the complete robust-order ChaCha10 transfer boundary |
+| 2026-07-12 | A207 pre-execution record: twelve exact archived CNF permutations and the frozen 11-mode/352-cell remaining portfolio, committed as an internal hash-gated state before solver outcomes |
+| 2026-07-12 | A207 completed record: 352/352 new and 416/416 combined calibrated cells valid UNKNOWN, plus the exact systematic `output_unit_bfs_far` progress-map outlier |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -51,7 +56,7 @@ invented here.
 | `paper/nano2026/main.tex` | `1269cfc7c24fb6ad2d3551ccea74f60fde4404967fe8b6710ba3acb8df887ed2` |
 | Sanitized Nanjing presentation source | `577607f1e1b2893234836f98999428ace0894a5362b5b85b6609565c1a70356c` |
 | `ANCHOR_SHA256SUMS` | `90f50ecdbe01e4de0afa4c858a57d916fc1794344375303a501a301c80e192e8` |
-| `FULLROUND_TRANSFER_SHA256SUMS` | `c590abe67a529b5500429783f727917e528c79b396b757420951fa4eb0498d30` |
+| `FULLROUND_TRANSFER_SHA256SUMS` | `a02fa90472b717c59fa3f99f7a61705fccc50aff9050c2dd7fa367f6f1dddaed` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
 | `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `c4ba0fd7770f414aad6f67e9f3c171cf97890ce2997d53f75edb65d6ccf65717` |
 
@@ -61,7 +66,7 @@ with `scripts/verify_hash_manifest.py`.
 
 ## Result identifiers
 
-The stable A107--A189 identifiers are defined in
+The stable A107--A207 identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -105,6 +110,18 @@ publication:
   Bitwuzla/Z3/Boolector portfolio;
 - A189: fresh prospective reduced ChaCha6 20-bit partial-key recovery with 236
   known key bits.
+- A190--A194: complete assignment-free ChaCha7--9 partition transfers, including
+  confirmed low18/low20 models and exact open-cell boundaries;
+- A195--A198: complete ChaCha10 split8/split9/width12/eight-block resource
+  frontiers over the unchanged `2^20` domain;
+- A199--A203: public formula/operator structure, phase-conjugacy attribution,
+  affine geometry, exact global CSE, and assertion-order boundaries;
+- A204: exact external-CNF calibration and complete 32-cell ChaCha10 transfer;
+- A205-r2: complete 23-order by two-mode A188 structural calibration; the r2
+  revision changes boundary metadata only;
+- A206: complete 64-cell-mode transfer of the robust structural order;
+- A207: exact 12-order pre-execution archive followed by the protocol-identical
+  complete 352-cell execution, 416-cell combined boundary, and progress map;
 
 ## Presentation sanitization
 
@@ -126,7 +143,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A189, include the exact follow-up commit containing the artifact; obtain
+A133--A207, include the exact follow-up commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a
 DOI or long-term archive guarantee.

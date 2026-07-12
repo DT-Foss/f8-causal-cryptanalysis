@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import zipfile
@@ -49,9 +50,7 @@ def skipped(relative: Path) -> bool:
 
 def files() -> list[Path]:
     return sorted(
-        path
-        for path in ROOT.rglob("*")
-        if path.is_file() and not skipped(path.relative_to(ROOT))
+        path for path in ROOT.rglob("*") if path.is_file() and not skipped(path.relative_to(ROOT))
     )
 
 
@@ -176,11 +175,52 @@ def main() -> int:
         "chacha20_smt_shared_key_multiblock_transfer": (
             "CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md"
         ),
-        "chacha20_bitwuzla_round5_transfer": (
-            "CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md"
-        ),
+        "chacha20_bitwuzla_round5_transfer": ("CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md"),
         "chacha20_bitwuzla_round6_width20_transfer": (
             "CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md"
+        ),
+        "chacha20_bitwuzla_round7_width18_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH18_BOUNDARY_V1.md"
+        ),
+        "chacha20_bitwuzla_round7_partition_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND7_PARTITION_RECOVERY_V1.md"
+        ),
+        "chacha20_bitwuzla_round7_width20_partition_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH20_PARTITION_RECOVERY_V1.md"
+        ),
+        "chacha20_bitwuzla_round8_width20_partition_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND8_WIDTH20_PARTITION_RECOVERY_V1.md"
+        ),
+        "chacha20_bitwuzla_round9_width20_partition_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND9_WIDTH20_PARTITION_RECOVERY_V1.md"
+        ),
+        "chacha20_bitwuzla_round10_width20_partition_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH20_PARTITION_BOUNDARY_V1.md"
+        ),
+        "chacha20_bitwuzla_round10_split9_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND10_SPLIT9_CUT_BOUNDARY_V1.md"
+        ),
+        "chacha20_bitwuzla_round10_width12_refinement": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH12_REFINEMENT_BOUNDARY_V1.md"
+        ),
+        "chacha20_bitwuzla_round10_b8_partition_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_V1.md"
+        ),
+        "chacha20_formula_operator_atlas": ("CAUSAL_CHACHA20_FORMULA_OPERATOR_ATLAS_V1.md"),
+        "chacha20_round10_public_geometry_partition": (
+            "CAUSAL_CHACHA20_ROUND10_PUBLIC_GEOMETRY_PARTITION_BOUNDARY_V1.md"
+        ),
+        "chacha20_phase_conjugacy_holdout": ("CAUSAL_CHACHA20_PHASE_CONJUGACY_HOLDOUT_V1.md"),
+        "chacha20_round10_b8_global_cse": ("CAUSAL_CHACHA20_ROUND10_B8_GLOBAL_CSE_BOUNDARY_V1.md"),
+        "chacha20_round10_b8_lane_major": ("CAUSAL_CHACHA20_ROUND10_B8_LANE_MAJOR_BOUNDARY_V1.md"),
+        "chacha20_round10_external_cnf_reverse": (
+            "CAUSAL_CHACHA20_ROUND10_EXTERNAL_CNF_REVERSE_BOUNDARY_V1.md"
+        ),
+        "chacha20_a188_cnf_structural_ordering": (
+            "CAUSAL_CHACHA20_A188_CNF_STRUCTURAL_ORDERING_V1.md"
+        ),
+        "chacha20_round10_bidirectional_min_distance": (
+            "CAUSAL_CHACHA20_ROUND10_BIDIRECTIONAL_MIN_DISTANCE_BOUNDARY_V1.md"
         ),
     }
     for stem, report in retained_chacha_transfers.items():
@@ -201,6 +241,30 @@ def main() -> int:
             "research/results/v1/chacha20_a188_solver_portfolio_v1.svg",
             "research/results/v1/chacha20_a189_round6_width20_portfolio_v1.svg",
             "tests/test_chacha20_smt_round5_retained_figures.py",
+            "Brewfile",
+            "research/experiments/formula_atlas_transfer_audit.py",
+            "research/reports/FORMULA_ATLAS_FULL_REAUDIT_V1.md",
+            "research/results/v1/formula_atlas_transfer_coverage_v1.json",
+            "tests/test_formula_atlas_transfer_audit.py",
+            "research/experiments/chacha20_cnf_structural_figures.py",
+            "research/results/v1/chacha20_a204_external_cnf_reverse_boundary_v1.svg",
+            "research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg",
+            "research/results/v1/chacha20_a206_bidirectional_round10_boundary_v1.svg",
+            "tests/test_chacha20_cnf_structural_figures.py",
+            "research/configs/chacha20_round10_structural_portfolio_v1.json",
+            "research/experiments/chacha20_round10_structural_order_archive.py",
+            "research/experiments/chacha20_round10_structural_portfolio.py",
+            "research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_PREFLIGHT_V1.md",
+            "research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md",
+            "research/results/v1/chacha20_round10_structural_order_archive_v1.json",
+            "research/results/v1/chacha20_round10_structural_order_archive_v1.causal",
+            "research/results/v1/chacha20_round10_structural_orders_v1.npy",
+            "research/results/v1/chacha20_round10_structural_portfolio_v1.json",
+            "research/results/v1/chacha20_round10_structural_portfolio_v1.causal",
+            "research/results/v1/chacha20_a207_structural_portfolio_boundary_v1.svg",
+            "tests/test_chacha20_round10_structural_order_archive.py",
+            "tests/test_chacha20_round10_structural_portfolio.py",
+            "tests/test_chacha20_round10_structural_portfolio_result.py",
         ]
     )
     for item in required:
@@ -212,19 +276,95 @@ def main() -> int:
         failures.append("CITATION.cff has no canonical repository URL")
 
     boolean_result = json.loads(
-        (ROOT / "research/results/v1/shake_boolean_cnf_reader_v1.json").read_text(
-            encoding="utf-8"
-        )
+        (ROOT / "research/results/v1/shake_boolean_cnf_reader_v1.json").read_text(encoding="utf-8")
     )
     executed_variants = set(boolean_result["parameters"]["variants"])
-    graph_variants = {
-        row["edge_id"].split("-", 1)[0]
-        for row in boolean_result["reader_triplets"]
-    }
+    graph_variants = {row["edge_id"].split("-", 1)[0] for row in boolean_result["reader_triplets"]}
     if graph_variants != executed_variants:
-        failures.append(
-            "Boolean CNF Reader graph variants do not match executed variants"
-        )
+        failures.append("Boolean CNF Reader graph variants do not match executed variants")
+
+    results = ROOT / "research/results/v1"
+    a205 = json.loads((results / "chacha20_a188_cnf_structural_ordering_v1.json").read_bytes())
+    if a205["comparisons"]["status_counts"] != {
+        "invalid": 0,
+        "sat": 16,
+        "unknown": 30,
+        "unsat": 0,
+    }:
+        failures.append("A205-r2 observation counts differ")
+    if len(a205["comparisons"]["structural_outlier_candidates"]) != 12:
+        failures.append("A205-r2 structural candidate count differs")
+    correction = a205.get("metadata_correction", {})
+    if not (
+        correction.get("solver_observations_changed") is False
+        and correction.get("comparisons_changed") is False
+        and correction.get("confirmations_changed") is False
+    ):
+        failures.append("A205-r2 metadata-only correction boundary differs")
+
+    a206 = json.loads(
+        (results / "chacha20_round10_bidirectional_min_distance_v1.json").read_bytes()
+    )
+    if (
+        a206["comparisons"]["status_counts"]
+        != {
+            "invalid": 0,
+            "sat": 0,
+            "unknown": 64,
+            "unsat": 0,
+        }
+        or a206["confirmations"]
+    ):
+        failures.append("A206 complete UNKNOWN boundary differs")
+
+    archive = results / "chacha20_round10_structural_orders_v1.npy"
+    if (
+        archive.stat().st_size != 11_145_296
+        or hashlib.sha256(archive.read_bytes()).hexdigest()
+        != "ea45134552a6ad3bb6c277ec6bd271d22764f902298b78bda568aef57a12f72f"
+    ):
+        failures.append("A207 structural order archive identity differs")
+    a207_preflight = json.loads(
+        (results / "chacha20_round10_structural_order_archive_v1.json").read_bytes()
+    )
+    if not (
+        a207_preflight["attempt_id"] == "A207_PREFLIGHT"
+        and a207_preflight["information_boundary"]["external_CaDiCaL_A207_execution_started"]
+        is False
+        and len(a207_preflight["candidate_manifest"]) == 12
+    ):
+        failures.append("A207 pre-execution boundary differs")
+    a207_result_path = results / "chacha20_round10_structural_portfolio_v1.json"
+    if (
+        hashlib.sha256(a207_result_path.read_bytes()).hexdigest()
+        != "80ce896083b239e3bb95e31433fc8cdf6157491005bbb3b024182f730b545652"
+    ):
+        failures.append("A207 result identity differs")
+    if (
+        hashlib.sha256(
+            (results / "chacha20_round10_structural_portfolio_v1.causal").read_bytes()
+        ).hexdigest()
+        != "0d23f4fcb91c6602b3222315afb84f203eff8f5d51b0e4df5f6f6430616d6dfa"
+    ):
+        failures.append("A207 Causal identity differs")
+    a207_result = json.loads(a207_result_path.read_bytes())
+    comparison = a207_result["comparisons"]
+    if not (
+        a207_result["evidence_stage"] == "ROUND10_STRUCTURAL_PORTFOLIO_COMPLETE_BOUNDARY_RETAINED"
+        and comparison["new_status_counts"] == {"invalid": 0, "sat": 0, "unknown": 352, "unsat": 0}
+        and comparison["combined_calibrated_portfolio_cell_mode_count"] == 416
+        and a207_result["confirmations"] == []
+    ):
+        failures.append("A207 complete UNKNOWN boundary differs")
+    progress = {
+        row["candidate"]: row for row in a207_result["progress_map"]["candidate_summaries"]
+    }["output_unit_bfs_far"]["metrics"]
+    if not (
+        progress["conflicts"]["total_ratio"] == 2.7585773439810706
+        and progress["decisions"]["total_ratio"] == 5.685713565082508
+        and progress["propagations"]["total_ratio"] == 0.5939991928589421
+    ):
+        failures.append("A207 progress-map outlier differs")
 
     deck = ROOT / "paper/nano2026/presentation/Foss_CASI_Nano-IoT_IEEE_NANO_2026.pptx"
     if deck.is_file():

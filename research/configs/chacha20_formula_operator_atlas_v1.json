@@ -1,0 +1,120 @@
+{
+  "anchors": {
+    "A198": {
+      "causal_sha256": "b7c4e1302594e266c7958057221fb4101fb5ef5ee284792d6ca93e43386dd514",
+      "evidence_stage": "ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_RETAINED",
+      "result": "research/results/v1/chacha20_bitwuzla_round10_b8_partition_transfer_v1.json",
+      "sha256": "693367464ab488c49d386c1d011e8c45e7fb094cceeb37352934dde121773373"
+    },
+    "formula_atlas_reaudit": {
+      "candidate_registry_sha256": "6b48da24730a5f2fd39497f1f7f34feab25860393382db8c2ce33f0976420d46",
+      "coverage_sha256": "314e1555c612551fc8344df32df534adac341b6ea814a7a85f3991155879604e",
+      "result": "research/results/v1/formula_atlas_transfer_coverage_v1.json",
+      "sha256": "feadca39a2cdb0caf38018e9d28ed6aecd56384f5771d7a6e6ab261f87ee1cc2"
+    }
+  },
+  "attempt_id": "A199",
+  "information_boundary": {
+    "A199_measurements_used_before_protocol_freeze": false,
+    "hidden_cipher_assignment_used": false,
+    "partition_masks_selected_from_public_data_only": true,
+    "solver_execution_in_A199": false,
+    "transfer_family_or_threshold_changed_after_any_A199_measurement": false
+  },
+  "predeclared_analysis": {
+    "T01": {
+      "controls": [
+        "reverse_order_product",
+        "adjoint_order_identity",
+        "lag2_same_phase_commutator"
+      ],
+      "objects": [
+        "twenty_column_stochastic_forward_word_operators",
+        "twenty_aligned_inverse_word_operators",
+        "ordered_cumulative_products",
+        "adjacent_commutators"
+      ]
+    },
+    "T02": {
+      "null_replicates": 32,
+      "null_rule": "independently_permute_the_64_public_samples_inside_each_key_bit_and_round",
+      "sample_key_bit_rows": 1280,
+      "triplet_count": 1140,
+      "triplets": "all_strictly_increasing_round_triplets_from_1_through_20"
+    },
+    "T03": {
+      "matrices": [
+        "twenty_local_forward_operators",
+        "twenty_ordered_cumulative_forward_products"
+      ],
+      "reconstruction_tolerance": 1e-06,
+      "views": [
+        "eigenvalues",
+        "roots_of_characteristic_polynomial_derivative"
+      ]
+    },
+    "T04": {
+      "candidate_quantizers": "oriented_low_laplacian_modes_thresholded_at_sorted_ranks_8_through_12",
+      "cell_bits": 5,
+      "domain_bits": 20,
+      "selection": "first_five_candidates_that_increase_binary_rank_in_mode_rank_threshold_order"
+    },
+    "T05": {
+      "channels": [
+        "forward_key_to_cut_word_sensitivity",
+        "inverse_cut_bit_to_key_sensitivity",
+        "physical_sum",
+        "signed_difference",
+        "stabilized_difference_over_sum",
+        "cross_copy_svd"
+      ],
+      "control": "copy_swap_preserves_sum_and_negates_signed_difference"
+    }
+  },
+  "prospective_predictions": {
+    "H1_noncommutative_order": "at_least_one_adjacent_relative_commutator_exceeds_1e-3_and_the_depth20_forward_reverse_product_gap_exceeds_1e-6",
+    "H2_triplet_dependence": "the_observed_third_cumulant_l2_norm_exceeds_the_97_5_percentile_of_32_marginal_preserving_null_replicates",
+    "H3_derivative_root_gate": "all_40_characteristic_and_derivative_root_reconstruction_gates_are_at_most_1e-6",
+    "H4_complete_public_partition": "five_independent_public_masks_produce_exactly_32_cells_of_32768_assignments_each",
+    "H5_sum_difference": "the_forward_backward_signed_channel_is_nonzero_above_1e-3_while_copy_swap_identities_hold_to_1e-12"
+  },
+  "protocol_state": "frozen_after_A198_and_full_formula_reaudit_before_any_A199_measurement",
+  "public_inputs": {
+    "cipher": "ChaCha20_core_without_feedforward_for_operator_measurements",
+    "key_bit_coordinates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "operator_sample_count": 16,
+    "rounds": 20,
+    "seed_derivation": "SHAKE256_little_endian_words",
+    "seed_label": "f8-causal/A199/public-chacha20-operator-atlas/v1",
+    "triplet_sample_count": 64
+  },
+  "schema": "chacha20-formula-operator-atlas-protocol-v1",
+  "transfer_families": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05"
+  ]
+}

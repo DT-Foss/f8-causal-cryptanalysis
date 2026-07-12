@@ -1,0 +1,2471 @@
+{
+  "anchor_gates": {
+    "A204_causal_graph_sha256": "0cbdde4c25a7c804706a9e8b9823c71ec9bc74046191526cae4a7a55b5dbdc73",
+    "A204_causal_provenance_verified": true,
+    "A204_causal_sha256": "f1ca39f964640d8aa2a5c6f6dab9bcfb48dfaddf6dda2e399275f77235ca71c3",
+    "A204_full_calibration_mapping_and_round10_boundary_retained": true,
+    "A204_result_sha256": "603eaf8a2a6bb85c3c4bb2fdf4b7466205ffd1d8005593d987c8a6461b7c8c22",
+    "formula_atlas_2411_entries_113_pages_retained": true,
+    "formula_atlas_coverage_sha256": "feadca39a2cdb0caf38018e9d28ed6aecd56384f5771d7a6e6ab261f87ee1cc2",
+    "formula_atlas_report_sha256": "a4d43be43e56590402cf74febcdb5faf40de9b7640bb47ca32e7779f5d4a5d87"
+  },
+  "attempt_id": "A205",
+  "candidate_diagnostics": {
+    "candidate_order_sha256": {
+      "adjacency_degree_ascending": "e687f994f5ae1ed1226dff722d25b5f508871039ccc3543a77bfe3ff6d0bc403",
+      "adjacency_degree_descending": "8ecfcb15b27cb46d4292ea343568f38fdf9e0e132ca7cd810a5d6a5c988c8eb4",
+      "alternating_key_output_bfs": "75eb48a38553406587c5f1d45526c3bf81ad806109db397a4e5e71ad1da4911a",
+      "bidirectional_min_distance": "45913ae5fb4bd01a7a19772b2b71b9805ea9b586290078e363f5790cd0c8af4f",
+      "fiedler_ascending": "1de14e41d3c00e74c781e9d6de46238ee47ec887e97fd66f359ce1a0b91f1848",
+      "fiedler_center_out": "a260a3837f31d15fb10b65f3644477bb51ff4785a1fecd6b2b9ff421120b7b93",
+      "fiedler_descending": "847c0790c2b0c88eff94fe4a2f9724cdedca6026503cf62ddf94a7778307a6a3",
+      "identity_control": "e8911956446102df764fcfc6156c1f418b7a2d1af7a397be515e5383c4e83001",
+      "key_bfs_far": "44004280093edf77dab32889ddd926d436b9de22b31fe25e2460a63dd3ba1ea8",
+      "key_bfs_near": "927597a33a49e85493dfe7d53eb7c1197b72e12aa2a736d11393af69fe005249",
+      "last_occurrence_ascending": "17e81306cadd0781253b200535908e0e470ebe82377e9110a4f9a21ab7d5ca5e",
+      "last_occurrence_descending": "4e4b49daed88b2492ed5d9781c38c80614794a739b290ec8123f257a0f062aa1",
+      "occurrence_degree_ascending": "c6dc21444107c9931b6badd4b98da3a3e32c98a1384b41a2a3387bdf1aaeec77",
+      "occurrence_degree_descending": "0e1eefe6b888b5fbe80251a511925f96d977366a9c8ecab4e603e11e47614a0c",
+      "occurrence_span_ascending": "9bd43e9f4c9b8ed025890621e9932bb01543f0cc1dc595bd2e26dfcd0c90b27b",
+      "output_layer_parity_interleave": "23616cb323d2cff0b1e6503b5201b416816c282c137229ba983413d6f501cab6",
+      "output_unit_bfs_far": "84e0ff1c91a1687366cb475c1fe1b9815b6dd87c9a398468cb28d223105a55ba",
+      "output_unit_bfs_near": "6cb65cf02d61084895ef80156a76d68dd42c9f80e016050ff1c1b45ca3032847",
+      "reverse_cuthill_mckee": "36a8b50e905274aec87406b29fedd21dcff8426f04b5c85323460db591e4d974",
+      "reverse_id_control": "0403f5a86334b56bf3471e4c30a55c374e0d738f6967a63c298f77841a5f0c93",
+      "shake256_random_control": "07e89ca25c4f095ac9407d6891963a16bffe2cbe0cbcc0337a1e3e1d73c9d614",
+      "signed_key_minus_output_ascending": "6824ddd5db337698dee565ade80fa63419482061a9db7f2f01eb110045b2ef1a",
+      "signed_key_minus_output_descending": "d0e2469579bf6a549dfdfff56d8bdbc95eb83d7372cd516a90c98b5c30cf9c76"
+    },
+    "fiedler_eigenvalues": [
+      -1.2263177088264413e-16,
+      0.004648327669233628
+    ],
+    "fiedler_residual": 4.407140333482364e-08,
+    "key_distance_max": 9,
+    "key_distance_min": 0,
+    "key_source_count": 40,
+    "unit_distance_max": 7,
+    "unit_distance_min": 0,
+    "unit_source_count": 6642
+  },
+  "candidate_diagnostics_sha256": "671f3ba37bd59dcb2c588413ffc457f62a3bfff1627a57840bb93938a0944662",
+  "causal": {
+    "explicit_triplets": 8,
+    "file_sha256": "d17ed98433e70ecfafd75ce895372aa7f150cb2b178c853697ee8406f0582f80",
+    "graph_sha256": "8dddd0764910b940627c65e2b21b2e4e0e367db388d481954e70c3213c56fec0",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 13300,
+      "explicit_triplets": 8,
+      "file_sha256": "d17ed98433e70ecfafd75ce895372aa7f150cb2b178c853697ee8406f0582f80",
+      "graph_sha256": "8dddd0764910b940627c65e2b21b2e4e0e367db388d481954e70c3213c56fec0",
+      "inferred_triplets": 0,
+      "triplets": 8
+    }
+  },
+  "comparison_sha256": "60b1363e815ae5248a314dd1b35af8a2437f0f85535da39123603c72c045e1f3",
+  "comparisons": {
+    "A206_transfer_selection": [
+      "occurrence_degree_ascending",
+      "adjacency_degree_ascending",
+      "adjacency_degree_descending",
+      "occurrence_span_ascending",
+      "output_unit_bfs_near",
+      "output_unit_bfs_far",
+      "bidirectional_min_distance",
+      "signed_key_minus_output_ascending",
+      "signed_key_minus_output_descending",
+      "output_layer_parity_interleave",
+      "fiedler_ascending",
+      "fiedler_center_out"
+    ],
+    "complete_predeclared_execution": true,
+    "complete_variant_count": 46,
+    "confirmed_candidates": [
+      "identity_control",
+      "reverse_id_control",
+      "occurrence_degree_ascending",
+      "adjacency_degree_ascending",
+      "adjacency_degree_descending",
+      "occurrence_span_ascending",
+      "output_unit_bfs_near",
+      "output_unit_bfs_far",
+      "bidirectional_min_distance",
+      "signed_key_minus_output_ascending",
+      "signed_key_minus_output_descending",
+      "output_layer_parity_interleave",
+      "fiedler_ascending",
+      "fiedler_center_out"
+    ],
+    "confirmed_variants": [
+      "identity_control__reverse",
+      "reverse_id_control__default",
+      "reverse_id_control__reverse",
+      "occurrence_degree_ascending__reverse",
+      "adjacency_degree_ascending__reverse",
+      "adjacency_degree_descending__reverse",
+      "occurrence_span_ascending__reverse",
+      "output_unit_bfs_near__reverse",
+      "output_unit_bfs_far__reverse",
+      "bidirectional_min_distance__default",
+      "bidirectional_min_distance__reverse",
+      "signed_key_minus_output_ascending__default",
+      "signed_key_minus_output_descending__reverse",
+      "output_layer_parity_interleave__reverse",
+      "fiedler_ascending__reverse",
+      "fiedler_center_out__reverse"
+    ],
+    "early_stop_used": false,
+    "primary_prediction_retained": true,
+    "robust_both_mode_structural_candidates": [
+      "bidirectional_min_distance"
+    ],
+    "robust_prediction_retained": true,
+    "status_counts": {
+      "invalid": 0,
+      "sat": 16,
+      "unknown": 30,
+      "unsat": 0
+    },
+    "statuses": {
+      "adjacency_degree_ascending__default": "unknown",
+      "adjacency_degree_ascending__reverse": "sat",
+      "adjacency_degree_descending__default": "unknown",
+      "adjacency_degree_descending__reverse": "sat",
+      "alternating_key_output_bfs__default": "unknown",
+      "alternating_key_output_bfs__reverse": "unknown",
+      "bidirectional_min_distance__default": "sat",
+      "bidirectional_min_distance__reverse": "sat",
+      "fiedler_ascending__default": "unknown",
+      "fiedler_ascending__reverse": "sat",
+      "fiedler_center_out__default": "unknown",
+      "fiedler_center_out__reverse": "sat",
+      "fiedler_descending__default": "unknown",
+      "fiedler_descending__reverse": "unknown",
+      "identity_control__default": "unknown",
+      "identity_control__reverse": "sat",
+      "key_bfs_far__default": "unknown",
+      "key_bfs_far__reverse": "unknown",
+      "key_bfs_near__default": "unknown",
+      "key_bfs_near__reverse": "unknown",
+      "last_occurrence_ascending__default": "unknown",
+      "last_occurrence_ascending__reverse": "unknown",
+      "last_occurrence_descending__default": "unknown",
+      "last_occurrence_descending__reverse": "unknown",
+      "occurrence_degree_ascending__default": "unknown",
+      "occurrence_degree_ascending__reverse": "sat",
+      "occurrence_degree_descending__default": "unknown",
+      "occurrence_degree_descending__reverse": "unknown",
+      "occurrence_span_ascending__default": "unknown",
+      "occurrence_span_ascending__reverse": "sat",
+      "output_layer_parity_interleave__default": "unknown",
+      "output_layer_parity_interleave__reverse": "sat",
+      "output_unit_bfs_far__default": "unknown",
+      "output_unit_bfs_far__reverse": "sat",
+      "output_unit_bfs_near__default": "unknown",
+      "output_unit_bfs_near__reverse": "sat",
+      "reverse_cuthill_mckee__default": "unknown",
+      "reverse_cuthill_mckee__reverse": "unknown",
+      "reverse_id_control__default": "sat",
+      "reverse_id_control__reverse": "sat",
+      "shake256_random_control__default": "unknown",
+      "shake256_random_control__reverse": "unknown",
+      "signed_key_minus_output_ascending__default": "sat",
+      "signed_key_minus_output_ascending__reverse": "unknown",
+      "signed_key_minus_output_descending__default": "unknown",
+      "signed_key_minus_output_descending__reverse": "sat"
+    },
+    "structural_outlier_candidates": [
+      "occurrence_degree_ascending",
+      "adjacency_degree_ascending",
+      "adjacency_degree_descending",
+      "occurrence_span_ascending",
+      "output_unit_bfs_near",
+      "output_unit_bfs_far",
+      "bidirectional_min_distance",
+      "signed_key_minus_output_ascending",
+      "signed_key_minus_output_descending",
+      "output_layer_parity_interleave",
+      "fiedler_ascending",
+      "fiedler_center_out"
+    ]
+  },
+  "confirmation_sha256": "6d68ffe6030f8625f5034a1ab546bd2145618f0c7873b53141a405144c100c1a",
+  "confirmations": [
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "identity_control",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "identity_control__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "reverse_id_control",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "default",
+      "variant": "reverse_id_control__default"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "reverse_id_control",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "reverse_id_control__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "occurrence_degree_ascending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "occurrence_degree_ascending__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "adjacency_degree_ascending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "adjacency_degree_ascending__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "adjacency_degree_descending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "adjacency_degree_descending__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "occurrence_span_ascending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "occurrence_span_ascending__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "output_unit_bfs_near",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "output_unit_bfs_near__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "output_unit_bfs_far",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "output_unit_bfs_far__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "bidirectional_min_distance",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "default",
+      "variant": "bidirectional_min_distance__default"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "bidirectional_min_distance",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "bidirectional_min_distance__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "signed_key_minus_output_ascending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "default",
+      "variant": "signed_key_minus_output_ascending__default"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "signed_key_minus_output_descending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "signed_key_minus_output_descending__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "output_layer_parity_interleave",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "output_layer_parity_interleave__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "fiedler_ascending",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "fiedler_ascending__reverse"
+    },
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate": "fiedler_center_out",
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "solver_mode": "reverse",
+      "variant": "fiedler_center_out__reverse"
+    }
+  ],
+  "evidence_stage": "A188_CNF_ROBUST_STRUCTURAL_ORDERING_OUTLIER_RETAINED",
+  "execution": {
+    "complete_variant_plan_executed": true,
+    "early_stop_used": false,
+    "known_positive_model_available_to_runner_before_execution": true,
+    "model_not_used_in_order_construction_or_solver_input": true,
+    "model_used_only_for_post_witness_confirmation": true,
+    "observations": [
+      {
+        "candidate": "identity_control",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/identity_control.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 79394,
+          "decisions": 135778,
+          "propagations": 35602722,
+          "restarts": 2447
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "bd7a9fdfb018f2ab86dd0630c845ac34323cbb25046555fd6a2683980abb97f1",
+        "variant": "identity_control__default",
+        "volatile_seconds": 5.01709937537089,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "identity_control",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/identity_control.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 90762,
+          "decisions": 255608,
+          "propagations": 29475133,
+          "restarts": 5943
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7861b1103f2b207db000c3a9a2dbc620d5ee9f35379631a615536e744461b9c0",
+        "variant": "identity_control__reverse",
+        "volatile_seconds": 4.792381125036627,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "reverse_id_control",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/reverse_id_control.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 73028,
+          "decisions": 135075,
+          "propagations": 27613431,
+          "restarts": 3119
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "default",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1de62896ec3bf8e62bb3e1ab710e9cab09691edba91a22dbb41a570fc51b04ef",
+        "variant": "reverse_id_control__default",
+        "volatile_seconds": 4.419992667157203,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "reverse_id_control",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/reverse_id_control.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 40111,
+          "decisions": 79230,
+          "propagations": 18345239,
+          "restarts": 1871
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "78b6440c96e0b7c6fd288589ca7420a8ef90fd04272f1a28d703ba0cd721c927",
+        "variant": "reverse_id_control__reverse",
+        "volatile_seconds": 3.0091209998354316,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "occurrence_degree_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/occurrence_degree_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 87680,
+          "decisions": 276916,
+          "propagations": 32290075,
+          "restarts": 7620
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "d8703df53c8482ef4768f6587cb8ddb07bd730004c95f6cd2ab0804d01235488",
+        "variant": "occurrence_degree_ascending__default",
+        "volatile_seconds": 5.014859042130411,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "occurrence_degree_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/occurrence_degree_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 31462,
+          "decisions": 79772,
+          "propagations": 15629014,
+          "restarts": 1723
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4fc8a771c30fc08441246039ad640898c4f5ab7422140165b18037e28c68b9b7",
+        "variant": "occurrence_degree_ascending__reverse",
+        "volatile_seconds": 2.868316125124693,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "occurrence_degree_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/occurrence_degree_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 72156,
+          "decisions": 203069,
+          "propagations": 31115001,
+          "restarts": 4664
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fc1e8858b77c61a575ddfe9a58d5b7407784ee0a97090f4b51210869840b11f1",
+        "variant": "occurrence_degree_descending__default",
+        "volatile_seconds": 5.024672083090991,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "occurrence_degree_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/occurrence_degree_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 80610,
+          "decisions": 153771,
+          "propagations": 36284552,
+          "restarts": 4928
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "d12d0e956f93dd5558232e971538fc72448980ada1e337f4af7024a57704cde3",
+        "variant": "occurrence_degree_descending__reverse",
+        "volatile_seconds": 5.013845916837454,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "adjacency_degree_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/adjacency_degree_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 83651,
+          "decisions": 270274,
+          "propagations": 30294832,
+          "restarts": 6698
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "604ce95cadc6ac6bafe24a69220ea28ac55d33cb65c955d20dcaee05e16b32d8",
+        "variant": "adjacency_degree_ascending__default",
+        "volatile_seconds": 5.020608874969184,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "adjacency_degree_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/adjacency_degree_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 48373,
+          "decisions": 95179,
+          "propagations": 20594234,
+          "restarts": 2147
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "bd552b14da2f432a6f5dd20152a71958df4451dbedb898f95d7783b6ad65f74a",
+        "variant": "adjacency_degree_ascending__reverse",
+        "volatile_seconds": 3.640022207982838,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "adjacency_degree_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/adjacency_degree_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 80140,
+          "decisions": 176456,
+          "propagations": 31995239,
+          "restarts": 3934
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "8b94c8440590b88594922e0165704a1dbf9dedad1fe920c5a528a46875865f60",
+        "variant": "adjacency_degree_descending__default",
+        "volatile_seconds": 5.021570832934231,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "adjacency_degree_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/adjacency_degree_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 87274,
+          "decisions": 177895,
+          "propagations": 34154564,
+          "restarts": 5254
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "8b3bc05216f031efcc7f2e1985d016307af3f3c17b9d0a9f5f39202d4023da5e",
+        "variant": "adjacency_degree_descending__reverse",
+        "volatile_seconds": 4.939861792139709,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "last_occurrence_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/last_occurrence_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 85322,
+          "decisions": 298238,
+          "propagations": 28803251,
+          "restarts": 8318
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0ce492b28eb7cd11ec9c79d3b81a16be6621d8f69ffb9e8ab8323941eeeed83a",
+        "variant": "last_occurrence_descending__default",
+        "volatile_seconds": 5.010278791189194,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "last_occurrence_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/last_occurrence_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 81525,
+          "decisions": 275589,
+          "propagations": 30224289,
+          "restarts": 7047
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "5337c4ae65c71ce4500c825eeef312e4e3214ed340825b5025246529a9fdfbf6",
+        "variant": "last_occurrence_descending__reverse",
+        "volatile_seconds": 5.015451249666512,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "last_occurrence_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/last_occurrence_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 94967,
+          "decisions": 297181,
+          "propagations": 26715265,
+          "restarts": 7922
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c8fba42de849d7fb9a1c7591775480263380c3af638c7bcdc2d95cec8f305cdd",
+        "variant": "last_occurrence_ascending__default",
+        "volatile_seconds": 5.013863666914403,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "last_occurrence_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/last_occurrence_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 96404,
+          "decisions": 181242,
+          "propagations": 33757809,
+          "restarts": 3659
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4155bf1d4acf7ba5f77bb18da29a926105d2e02bfb565b7e34cfb24d724a5f7f",
+        "variant": "last_occurrence_ascending__reverse",
+        "volatile_seconds": 5.012286957819015,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "occurrence_span_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/occurrence_span_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 74399,
+          "decisions": 259800,
+          "propagations": 28680404,
+          "restarts": 6732
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a2fc6f742b76871a31f2701b5af45ccf85f0b4ad069e4e219a1284365ef83468",
+        "variant": "occurrence_span_ascending__default",
+        "volatile_seconds": 5.010976749937981,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "occurrence_span_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/occurrence_span_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 71812,
+          "decisions": 149903,
+          "propagations": 30076835,
+          "restarts": 3250
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "922cc601c6d0915243f3fe2f484a0a4a67313165aac77bf4157b596790d0159d",
+        "variant": "occurrence_span_ascending__reverse",
+        "volatile_seconds": 4.785515875089914,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "output_unit_bfs_near",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/output_unit_bfs_near.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 89085,
+          "decisions": 304665,
+          "propagations": 28328530,
+          "restarts": 8089
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "d192f3520deaa3c0a4afca3d158cd6f7d7b06a1ba88eec3ba14b572862203a6b",
+        "variant": "output_unit_bfs_near__default",
+        "volatile_seconds": 5.0354005000554025,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_near",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/output_unit_bfs_near.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 14284,
+          "decisions": 23216,
+          "propagations": 10989601,
+          "restarts": 189
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "8f106ab7c251d377b1e0e75b3dc783548e951706e80f438c13da6e61c708fdae",
+        "variant": "output_unit_bfs_near__reverse",
+        "volatile_seconds": 1.9005383751355112,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 83130,
+          "decisions": 147612,
+          "propagations": 33131432,
+          "restarts": 3852
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "b924dfb8aab2d473a4e8643b7cbc964031ffce1c3ceaf01a6653cc6d2dcc3273",
+        "variant": "output_unit_bfs_far__default",
+        "volatile_seconds": 5.013083208817989,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 58179,
+          "decisions": 126368,
+          "propagations": 22991199,
+          "restarts": 3280
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a1427a865ce0d3200847eb5008dc664174bf166b6ab6b91e030dfab99d6ab71a",
+        "variant": "output_unit_bfs_far__reverse",
+        "volatile_seconds": 4.044482292141765,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "key_bfs_near",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/key_bfs_near.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 86464,
+          "decisions": 254356,
+          "propagations": 33099970,
+          "restarts": 6582
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "3e818596974e19a6c8e62c8861e33e23f2206bd3dd8488e3dd6972c216863747",
+        "variant": "key_bfs_near__default",
+        "volatile_seconds": 5.013405875302851,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "key_bfs_near",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/key_bfs_near.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 72569,
+          "decisions": 256809,
+          "propagations": 32440666,
+          "restarts": 6943
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "6488404aba4a53f7c40aa1b3aa8f7446051a9a93b202df8f1226faa32422967e",
+        "variant": "key_bfs_near__reverse",
+        "volatile_seconds": 5.040914707817137,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "key_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/key_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 89061,
+          "decisions": 306062,
+          "propagations": 28560812,
+          "restarts": 8071
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e0cbab8e64cbb937dbb787194097374b1f5c85462d36a40605c30d3285fcdfef",
+        "variant": "key_bfs_far__default",
+        "volatile_seconds": 5.020014708861709,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "key_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/key_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 80825,
+          "decisions": 152568,
+          "propagations": 34719983,
+          "restarts": 4324
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "14ce40f5acb7baa5022992be1ed52468e2e43a047090d618c6bd9bea6d33876c",
+        "variant": "key_bfs_far__reverse",
+        "volatile_seconds": 5.014090749900788,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "bidirectional_min_distance",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/bidirectional_min_distance.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 63198,
+          "decisions": 127752,
+          "propagations": 24534511,
+          "restarts": 3116
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "default",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7330eb3345b797fdd68b90f7c9794b44e3f56e14d8e7b0915a5abf06f9517e41",
+        "variant": "bidirectional_min_distance__default",
+        "volatile_seconds": 3.997321375180036,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "bidirectional_min_distance",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/bidirectional_min_distance.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 54876,
+          "decisions": 120090,
+          "propagations": 25538245,
+          "restarts": 2688
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "b21a7a605b0d430afec86ef7a1297a76b8146f9bb65e0969b6d4911d419d9b42",
+        "variant": "bidirectional_min_distance__reverse",
+        "volatile_seconds": 3.9927080417983234,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "alternating_key_output_bfs",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/alternating_key_output_bfs.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 63377,
+          "decisions": 126101,
+          "propagations": 27724489,
+          "restarts": 2870
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e2a1174ddd8a0615aa3e1edaff172e18fb2d9c05591b69d276ba773b221818e1",
+        "variant": "alternating_key_output_bfs__default",
+        "volatile_seconds": 5.015292542055249,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "alternating_key_output_bfs",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/alternating_key_output_bfs.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 63179,
+          "decisions": 84501,
+          "propagations": 36815325,
+          "restarts": 899
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "50fbd263bb69ffb42a6a09d3d0b7489c43491a2961525aa47b3e512905b14259",
+        "variant": "alternating_key_output_bfs__reverse",
+        "volatile_seconds": 5.01186658302322,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "signed_key_minus_output_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/signed_key_minus_output_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 62282,
+          "decisions": 262085,
+          "propagations": 26817049,
+          "restarts": 7384
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "default",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "6c3f631a87083c192c420a1a13d4379681ffaec5c8ac697d433f20aa15d893c2",
+        "variant": "signed_key_minus_output_ascending__default",
+        "volatile_seconds": 4.5803162907250226,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "signed_key_minus_output_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/signed_key_minus_output_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 80552,
+          "decisions": 172105,
+          "propagations": 30421876,
+          "restarts": 3780
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a0fa2edbe6b0fdb2c33d2cd55fc592eacb9be0f3ddc322f2ad709731bbe6d73b",
+        "variant": "signed_key_minus_output_ascending__reverse",
+        "volatile_seconds": 5.039596041664481,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "signed_key_minus_output_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/signed_key_minus_output_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 72179,
+          "decisions": 138708,
+          "propagations": 31611729,
+          "restarts": 3136
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "29e03a1ac79ebccb7bd53b4a9db5cc038a2a3860b9b27fb7a1c3b0a3e6e7ab02",
+        "variant": "signed_key_minus_output_descending__default",
+        "volatile_seconds": 5.018336083274335,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "signed_key_minus_output_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/signed_key_minus_output_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 8873,
+          "decisions": 21738,
+          "propagations": 8792721,
+          "restarts": 472
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f3b7cfdd34cddd3ce88cac02dfe226d76362b1225ee8bf33e38b88205a0ef9dc",
+        "variant": "signed_key_minus_output_descending__reverse",
+        "volatile_seconds": 1.5858047921210527,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "output_layer_parity_interleave",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/output_layer_parity_interleave.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 75768,
+          "decisions": 149788,
+          "propagations": 32022509,
+          "restarts": 4117
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "de9c0d851ea2e1aa186cb67537d604ab0a01be19cad7b540af0c50034584ebaf",
+        "variant": "output_layer_parity_interleave__default",
+        "volatile_seconds": 5.01300183404237,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_layer_parity_interleave",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/output_layer_parity_interleave.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 33057,
+          "decisions": 58318,
+          "propagations": 17691837,
+          "restarts": 967
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "dbfe3a384cc2f3e6f95f9c6035a9aa447e80d85ec6c03365b98ba0ab2a2dde15",
+        "variant": "output_layer_parity_interleave__reverse",
+        "volatile_seconds": 3.530747666954994,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "reverse_cuthill_mckee",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/reverse_cuthill_mckee.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 73617,
+          "decisions": 241905,
+          "propagations": 24514405,
+          "restarts": 6102
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "906dc4fd2534152ac0605ba89703310c068883bbe802b7d36319f4de2e2c97a0",
+        "variant": "reverse_cuthill_mckee__default",
+        "volatile_seconds": 5.011182500049472,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "reverse_cuthill_mckee",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/reverse_cuthill_mckee.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 59503,
+          "decisions": 120888,
+          "propagations": 27827152,
+          "restarts": 2475
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "bf29174b30b3d9770c3e921dbaa9a1faff3110aacfec5c6720241e332839e5a7",
+        "variant": "reverse_cuthill_mckee__reverse",
+        "volatile_seconds": 5.01226416695863,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "fiedler_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/fiedler_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 69894,
+          "decisions": 175843,
+          "propagations": 26537600,
+          "restarts": 4686
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0942869d04f0b61916c8751701f438c30f99dc40c24e6383cc59fe8b3378cf30",
+        "variant": "fiedler_ascending__default",
+        "volatile_seconds": 5.013764791190624,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "fiedler_ascending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/fiedler_ascending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 83275,
+          "decisions": 233850,
+          "propagations": 29560142,
+          "restarts": 5338
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "bbf17a65b9afbd8ccd7333fa4a7cbc670405a0abbc269fbd81645068a3284b6e",
+        "variant": "fiedler_ascending__reverse",
+        "volatile_seconds": 4.989079666789621,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "fiedler_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/fiedler_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 64632,
+          "decisions": 136203,
+          "propagations": 27820586,
+          "restarts": 4342
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "6c5aa2afb10e47fe4d9eee97f1fa6b71ac952b0273439eb42f7aaa666da1ae4f",
+        "variant": "fiedler_descending__default",
+        "volatile_seconds": 5.035966333001852,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "fiedler_descending",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/fiedler_descending.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 80266,
+          "decisions": 194551,
+          "propagations": 30555363,
+          "restarts": 4339
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "6b9a377184b9ebecf7ac5eb535f03e2ec80eac33fda73a238fded9d837734a07",
+        "variant": "fiedler_descending__reverse",
+        "volatile_seconds": 5.014065625146031,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "fiedler_center_out",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/fiedler_center_out.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 97994,
+          "decisions": 255570,
+          "propagations": 26530279,
+          "restarts": 5513
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "25dd0fd9f24379b7aec62e94852e570d6c4971ef5bd9b16b23e8923c937cd59e",
+        "variant": "fiedler_center_out__default",
+        "volatile_seconds": 5.033106083981693,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "fiedler_center_out",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/fiedler_center_out.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": false,
+        "metrics": {
+          "conflicts": 35841,
+          "decisions": 68426,
+          "propagations": 14409648,
+          "restarts": 1269
+        },
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 10,
+        "solver_mode": "reverse",
+        "status": "sat",
+        "status_line": "s SATISFIABLE",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "d5b1c8a3c5aa8951f646f66306618d80f3e3edf915e6e524fd65e5cd325707a2",
+        "variant": "fiedler_center_out__reverse",
+        "volatile_seconds": 3.1582753751426935,
+        "witness_assignment_count": 96859
+      },
+      {
+        "candidate": "shake256_random_control",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/shake256_random_control.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 49594,
+          "decisions": 99950,
+          "propagations": 22835457,
+          "restarts": 2011
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "default",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7c0f349208f7dbd5601c213b08afe6d88a95f16cfc048fd161f279fdf1155715",
+        "variant": "shake256_random_control__default",
+        "volatile_seconds": 5.01314516691491,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "shake256_random_control",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "5",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/shake256_random_control.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "metrics": {
+          "conflicts": 64710,
+          "decisions": 207232,
+          "propagations": 24337773,
+          "restarts": 5685
+        },
+        "model": null,
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "2e76a46227390706aea4b12e27b9d5062bc8bd53817047fa1c6d9c599ec19df0",
+        "variant": "shake256_random_control__reverse",
+        "volatile_seconds": 5.042318207677454,
+        "witness_assignment_count": 0
+      }
+    ],
+    "returned_model_count": 16,
+    "variant_order": [
+      "identity_control__default",
+      "identity_control__reverse",
+      "reverse_id_control__default",
+      "reverse_id_control__reverse",
+      "occurrence_degree_ascending__default",
+      "occurrence_degree_ascending__reverse",
+      "occurrence_degree_descending__default",
+      "occurrence_degree_descending__reverse",
+      "adjacency_degree_ascending__default",
+      "adjacency_degree_ascending__reverse",
+      "adjacency_degree_descending__default",
+      "adjacency_degree_descending__reverse",
+      "last_occurrence_descending__default",
+      "last_occurrence_descending__reverse",
+      "last_occurrence_ascending__default",
+      "last_occurrence_ascending__reverse",
+      "occurrence_span_ascending__default",
+      "occurrence_span_ascending__reverse",
+      "output_unit_bfs_near__default",
+      "output_unit_bfs_near__reverse",
+      "output_unit_bfs_far__default",
+      "output_unit_bfs_far__reverse",
+      "key_bfs_near__default",
+      "key_bfs_near__reverse",
+      "key_bfs_far__default",
+      "key_bfs_far__reverse",
+      "bidirectional_min_distance__default",
+      "bidirectional_min_distance__reverse",
+      "alternating_key_output_bfs__default",
+      "alternating_key_output_bfs__reverse",
+      "signed_key_minus_output_ascending__default",
+      "signed_key_minus_output_ascending__reverse",
+      "signed_key_minus_output_descending__default",
+      "signed_key_minus_output_descending__reverse",
+      "output_layer_parity_interleave__default",
+      "output_layer_parity_interleave__reverse",
+      "reverse_cuthill_mckee__default",
+      "reverse_cuthill_mckee__reverse",
+      "fiedler_ascending__default",
+      "fiedler_ascending__reverse",
+      "fiedler_descending__default",
+      "fiedler_descending__reverse",
+      "fiedler_center_out__default",
+      "fiedler_center_out__reverse",
+      "shake256_random_control__default",
+      "shake256_random_control__reverse"
+    ]
+  },
+  "execution_sha256": "28ca16c1d0fc5b3a4375803c613dd1a0cdeaf6e6a659b1ab61b97671444a398b",
+  "graph": {
+    "clause_count": 310088,
+    "clause_length_counts": {
+      "1": 6642,
+      "2": 167660,
+      "3": 135786
+    },
+    "connected_components": 1,
+    "csr_indices_sha256": "89f93bf8e2fec5087f6d950328e563332bfcc188f629584668ae741feb7d8d72",
+    "csr_indptr_sha256": "1ff15c691829310e0b5a0ee5909670a7addaff54ab2be489bce32e3610d3ff71",
+    "isolated_vertices": 0,
+    "largest_component": 96859,
+    "maximum_degree": 317,
+    "minimum_degree": 2,
+    "undirected_edges": 264534,
+    "unit_clause_variable_count": 6642,
+    "variable_count": 96859
+  },
+  "graph_sha256": "57e7280e33fa4a39c66f7f3643edae61892c8348e1c520ac728a15d1b3897c21",
+  "metadata_correction": {
+    "comparisons_changed": false,
+    "confirmations_changed": false,
+    "corrected_protocol_sha256": "53a7f8a7527218e8db386d62cbc082466050b5b62eee3798edb808602e058730",
+    "correction_date": "2026-07-12",
+    "known_positive_model_not_used_in_order_construction_or_solver_input": true,
+    "known_positive_model_used_only_after_a_SAT_witness_was_returned": true,
+    "original_causal_graph_sha256": "e8cf5d3ec0a4953d572be02dc2dfeef717d9faaec710d0170c1f5c5723f0738d",
+    "original_causal_sha256": "bc4415f9fa3290248fec7753f04ecd867c6156f275c9352e63bc635d12a36817",
+    "original_protocol_sha256": "319b2e9fa93237664d5ccb2181a28e41f6ed4dffdd3bf00af26495979d75c950",
+    "original_result_sha256": "a22ed27ba8096d007944cec2415a732eb996b81a163be4a3f3f499765fa8c4c0",
+    "reason": "The A205 protocol embeds the known-positive model for post-witness confirmation, while two original boundary fields incorrectly claimed that it was absent and unavailable.",
+    "revision": "A205-r2-known-positive-boundary-metadata-correction",
+    "solver_observations_changed": false,
+    "solver_observations_reused_without_rerun": true
+  },
+  "metadata_correction_sha256": "8cb488ed94f17944ca8e3b64b06085f4e6bd98e1f6c0f48eaee9fdede86f5a37",
+  "protocol_gate": {
+    "artifact_sha256": "53a7f8a7527218e8db386d62cbc082466050b5b62eee3798edb808602e058730",
+    "candidate_order": [
+      "identity_control",
+      "reverse_id_control",
+      "occurrence_degree_ascending",
+      "occurrence_degree_descending",
+      "adjacency_degree_ascending",
+      "adjacency_degree_descending",
+      "last_occurrence_descending",
+      "last_occurrence_ascending",
+      "occurrence_span_ascending",
+      "output_unit_bfs_near",
+      "output_unit_bfs_far",
+      "key_bfs_near",
+      "key_bfs_far",
+      "bidirectional_min_distance",
+      "alternating_key_output_bfs",
+      "signed_key_minus_output_ascending",
+      "signed_key_minus_output_descending",
+      "output_layer_parity_interleave",
+      "reverse_cuthill_mckee",
+      "fiedler_ascending",
+      "fiedler_descending",
+      "fiedler_center_out",
+      "shake256_random_control"
+    ],
+    "information_boundary": {
+      "A204_control_outcomes_known_before_freeze": true,
+      "any_new_A205_structural_candidate_outcome_known_before_freeze": false,
+      "early_stop_permitted": false,
+      "known_positive_model_available_to_runner_before_execution": true,
+      "known_positive_model_in_protocol": true,
+      "mapping_candidates_or_solver_modes_changed_after_any_new_A205_outcome": false,
+      "model_not_used_in_order_construction_or_solver_input": true,
+      "model_used_only_for_post_witness_confirmation": true
+    },
+    "prospective_rules": {
+      "A206_transfer_selection": "retain_every_noncontrol_mapping_with_at_least_one_confirmed_SAT_mode_in_frozen_candidate_order",
+      "frozen_before_any_new_A205_structural_solver_execution": true,
+      "no_runtime_ranking": "volatile_seconds_do_not_select_candidates",
+      "primary_success": "at_least_one_noncontrol_structural_mapping_mode_returns_SAT_and_independently_confirms_the_exact_40_bit_model",
+      "robust_success": "one_noncontrol_structural_mapping_returns_confirmed_SAT_in_both_default_and_reverse_solver_modes",
+      "structural_outlier_exclusions": [
+        "identity_control",
+        "reverse_id_control",
+        "shake256_random_control"
+      ]
+    },
+    "protocol_state": "frozen_after_A204_r3_and_formula_atlas_transfer_design_before_any_A205_structural_solver_execution",
+    "solver_modes": [
+      {
+        "arguments": [],
+        "name": "default"
+      },
+      {
+        "arguments": [
+          "--reverse=true"
+        ],
+        "name": "reverse"
+      }
+    ]
+  },
+  "result": "Twenty-three formula-derived structural CNF orders are calibrated in both default and reverse CaDiCaL modes on the exact A188 known-positive anchor.",
+  "schema": "chacha20-a188-cnf-structural-ordering-calibration-v1",
+  "scope": "Known-positive ChaCha5 40-bit partial-key recovery calibration.",
+  "solver_identities": {
+    "bitwuzla": {
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "path": "/opt/homebrew/bin/bitwuzla",
+      "version": "0.9.1"
+    },
+    "cadical": {
+      "executable_sha256": "c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3",
+      "path": "/opt/homebrew/bin/cadical",
+      "version": "3.0.0"
+    }
+  },
+  "source_export": {
+    "bytes": 5423474,
+    "command": [
+      "/opt/homebrew/bin/bitwuzla",
+      "--lang",
+      "smt2",
+      "--time-limit",
+      "1000",
+      "--bv-solver",
+      "bitblast",
+      "--sat-solver",
+      "cadical",
+      "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a205-structural-cnf-bcjv_dgi/A188.cnf"
+    ],
+    "export_status": "unknown",
+    "externally_timed_out": false,
+    "header": "p cnf 96859 310088",
+    "normalized_sha256": "8b94a13745d306d59e9fb346057b7cf13f3ec8d1eaecc3ed665f30efea51faad",
+    "prefix": null,
+    "returncode": 0,
+    "sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+    "tail_units": [
+      -96855,
+      -96856,
+      -96857,
+      -96858,
+      -96859
+    ],
+    "variant": "A188_structural_source",
+    "volatile_seconds": 1.0373627920635045
+  },
+  "source_export_sha256": "0d40648ef1899ce4a2aa80558ab2ec5d230ee8cfa8951e926ed8537bb8d30754",
+  "transform_plan": [
+    {
+      "candidate": "identity_control",
+      "cnf_bytes": 5423474,
+      "cnf_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "5e16c815e5e3c28e7715abf43b725852e09144ebe4ea6cab0c682e93e8272d4a",
+      "order_sha256": "e8911956446102df764fcfc6156c1f418b7a2d1af7a397be515e5383c4e83001"
+    },
+    {
+      "candidate": "reverse_id_control",
+      "cnf_bytes": 5454593,
+      "cnf_sha256": "17f0a78e4a56fdd2d9930d54b0544cc6a07b262c648212c6f5865828121c7522",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "28944a0432b0b3521248dbb065fda39fa870e4682f03b8afcae680af90fff927",
+      "order_sha256": "0403f5a86334b56bf3471e4c30a55c374e0d738f6967a63c298f77841a5f0c93"
+    },
+    {
+      "candidate": "occurrence_degree_ascending",
+      "cnf_bytes": 5485218,
+      "cnf_sha256": "ac551ef5622585a2b601e87bef0fa61a20186d0d961aaf79fc20ef3948048e1b",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "d09eb8cd3bbee28fbb90139b238a7572c02017849ca7a176a41f2b856cce3898",
+      "order_sha256": "c6dc21444107c9931b6badd4b98da3a3e32c98a1384b41a2a3387bdf1aaeec77"
+    },
+    {
+      "candidate": "occurrence_degree_descending",
+      "cnf_bytes": 5356044,
+      "cnf_sha256": "77bef0968ca7fcdeafa9291c2f104984013f4cfc37777bbea94476df4699826f",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "e4f3337172f621fae73925da70d50e072da2b08da346cbec1699ce8a871ddbee",
+      "order_sha256": "0e1eefe6b888b5fbe80251a511925f96d977366a9c8ecab4e603e11e47614a0c"
+    },
+    {
+      "candidate": "adjacency_degree_ascending",
+      "cnf_bytes": 5484019,
+      "cnf_sha256": "7f04b13e1f465631e8eebabf47a28c9bebabb584e76ffa1161d4cb3740a6ac85",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "a08c770cc059df6bd2ade67c5a26bedfe87a38e1352cec91ce97ebc86a81ac81",
+      "order_sha256": "e687f994f5ae1ed1226dff722d25b5f508871039ccc3543a77bfe3ff6d0bc403"
+    },
+    {
+      "candidate": "adjacency_degree_descending",
+      "cnf_bytes": 5361245,
+      "cnf_sha256": "2931874e95fc8206dac0894d9649b3c11b4aae3fc82580cf7ae70fa44312e6ff",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "4fd9200509344acb53545dc2d53a27ecdb0c89b40a58bde4c9dff2485236aa17",
+      "order_sha256": "8ecfcb15b27cb46d4292ea343568f38fdf9e0e132ca7cd810a5d6a5c988c8eb4"
+    },
+    {
+      "candidate": "last_occurrence_descending",
+      "cnf_bytes": 5446779,
+      "cnf_sha256": "42db81e2a44314dce8aa3c1e566f763405842d66604b90256f3fed48da26e42a",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "319050bac37ddc4b163457bd3531136205c744ca96722d5c0941d52e2aa93166",
+      "order_sha256": "4e4b49daed88b2492ed5d9781c38c80614794a739b290ec8123f257a0f062aa1"
+    },
+    {
+      "candidate": "last_occurrence_ascending",
+      "cnf_bytes": 5452911,
+      "cnf_sha256": "36b0efc56ba32fbc0e52a38891f7b62d6a20626cf60c7f8ecc35e7e2e6bd78d1",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "80511006c44609c942b61d59cd08e94067de172802eb2f5a8d5fb75f6e678373",
+      "order_sha256": "17e81306cadd0781253b200535908e0e470ebe82377e9110a4f9a21ab7d5ca5e"
+    },
+    {
+      "candidate": "occurrence_span_ascending",
+      "cnf_bytes": 5479541,
+      "cnf_sha256": "c967488906c4d85b178bc5138718b03c6202e5b777f2d5e6515903b9db080d32",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "76c57c861fb42126326f242e8f011e59f995cd31e7efc029f9ce289fae5b0729",
+      "order_sha256": "9bd43e9f4c9b8ed025890621e9932bb01543f0cc1dc595bd2e26dfcd0c90b27b"
+    },
+    {
+      "candidate": "output_unit_bfs_near",
+      "cnf_bytes": 5461783,
+      "cnf_sha256": "e4cc459c9ae059ef6db37764c963876a308aac790c5a14569a7025ce6e4c4dda",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "01a04833b06bd63c6d388ab700dd37047307dfa734156ea79361e2b3fe26bfe0",
+      "order_sha256": "6cb65cf02d61084895ef80156a76d68dd42c9f80e016050ff1c1b45ca3032847"
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "cnf_bytes": 5459960,
+      "cnf_sha256": "3df16b73a17fcb184404b5c11de2768d4a30acdca043e87fad749d72e560c08f",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "bf5e652c2b6101eb2087d5bedd36184ffa9319c20f424655091ab714ce4cbd24",
+      "order_sha256": "84e0ff1c91a1687366cb475c1fe1b9815b6dd87c9a398468cb28d223105a55ba"
+    },
+    {
+      "candidate": "key_bfs_near",
+      "cnf_bytes": 5416682,
+      "cnf_sha256": "dd313b85261ef879cabc0316b2b4d9a2433ce03dd7449756c81568af9ce7b1df",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "3af9247928fb59004a6c26b97a802b76ea3a351a47ecf0b1b53253de056f5ed9",
+      "order_sha256": "927597a33a49e85493dfe7d53eb7c1197b72e12aa2a736d11393af69fe005249"
+    },
+    {
+      "candidate": "key_bfs_far",
+      "cnf_bytes": 5462065,
+      "cnf_sha256": "3d0ebaf2c24f06845dde4ba54ccb7ccc65e249863fed20cbcb9e24f2d6f414ed",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "21ceb610077a1d9a1ecbd8773b184399d5cd0e5f18efd69e46da2bdd76177e1c",
+      "order_sha256": "44004280093edf77dab32889ddd926d436b9de22b31fe25e2460a63dd3ba1ea8"
+    },
+    {
+      "candidate": "bidirectional_min_distance",
+      "cnf_bytes": 5447041,
+      "cnf_sha256": "15aeea82893592c28a4e9bb64ad766eb56baeda4af0e369040a4eea827e3662f",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "3272b5a53db802b9acd4733aa88b67e0bf2b5b81b7546118073d0ab6fe732019",
+      "order_sha256": "45913ae5fb4bd01a7a19772b2b71b9805ea9b586290078e363f5790cd0c8af4f"
+    },
+    {
+      "candidate": "alternating_key_output_bfs",
+      "cnf_bytes": 5434073,
+      "cnf_sha256": "2553d97467b95731b0ca4333c5d5f73c18237c8351ac9887a4db4c6223f54427",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "71ad154e1dba98142c1780202f04652cff6cecf0be2e2ad6914cec84bf8b10f6",
+      "order_sha256": "75eb48a38553406587c5f1d45526c3bf81ad806109db397a4e5e71ad1da4911a"
+    },
+    {
+      "candidate": "signed_key_minus_output_ascending",
+      "cnf_bytes": 5423406,
+      "cnf_sha256": "e1e4b4206b6b25925a7cbe73121761a807b902ad5da23b8ea6df1ed542800950",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "de00e9a2ec6795585510f6e23b122af64c9dc8a9013f4420e3129cade731578e",
+      "order_sha256": "6824ddd5db337698dee565ade80fa63419482061a9db7f2f01eb110045b2ef1a"
+    },
+    {
+      "candidate": "signed_key_minus_output_descending",
+      "cnf_bytes": 5460409,
+      "cnf_sha256": "b0ab3adf13e9152caa598515bb1ea20de5644b77ed617e07befc018d71eb5f61",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "0a9b06c9b7ab17b7edf6c83c05da95e4e9ac10d88cc2e6891b6c014bf5831620",
+      "order_sha256": "d0e2469579bf6a549dfdfff56d8bdbc95eb83d7372cd516a90c98b5c30cf9c76"
+    },
+    {
+      "candidate": "output_layer_parity_interleave",
+      "cnf_bytes": 5461533,
+      "cnf_sha256": "ec996e769d9a426a11e1d29095807f2b0b6427913eba69121fe1e9e9660af00a",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "a2f28fca1cbd0377438a7537dc8686d02ba8360b7628b76b51719232d874de3d",
+      "order_sha256": "23616cb323d2cff0b1e6503b5201b416816c282c137229ba983413d6f501cab6"
+    },
+    {
+      "candidate": "reverse_cuthill_mckee",
+      "cnf_bytes": 5463887,
+      "cnf_sha256": "867878810c3193b7a3658f886afdba0a0d9d76c06756cda029a814c4e0cfac19",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "be38175fa6b4309e683d9117fd54a73b1ae54e004026bcbd35775e19ed88845c",
+      "order_sha256": "36a8b50e905274aec87406b29fedd21dcff8426f04b5c85323460db591e4d974"
+    },
+    {
+      "candidate": "fiedler_ascending",
+      "cnf_bytes": 5437542,
+      "cnf_sha256": "2397adbfb6c7c3c148de0188e1ef0527f9aa8e61a0f8e57e3275eb664cb7900d",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "36647de7c4cca32e28f44e52c60510c4f4fabd581f4bbd2663450e7a422dd295",
+      "order_sha256": "1de14e41d3c00e74c781e9d6de46238ee47ec887e97fd66f359ce1a0b91f1848"
+    },
+    {
+      "candidate": "fiedler_descending",
+      "cnf_bytes": 5445850,
+      "cnf_sha256": "8f1f87ce38145bd03b1dea53f49dd0496fb98d5b0082ccf110b313e94acea0f9",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "4f91d0004143f11339d1a9c93ee4812cf1e5648e17659e2720e2e5fecc03085c",
+      "order_sha256": "847c0790c2b0c88eff94fe4a2f9724cdedca6026503cf62ddf94a7778307a6a3"
+    },
+    {
+      "candidate": "fiedler_center_out",
+      "cnf_bytes": 5434431,
+      "cnf_sha256": "065c5f58d6e8b1f5b3cbdb58995779f596dc4fe2789d555b75574dc0bbe2fe5d",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "2e2d75e7d2165cb762107aeaa9625660ab9f64a1212760ec135d9554c14f27da",
+      "order_sha256": "a260a3837f31d15fb10b65f3644477bb51ff4785a1fecd6b2b9ff421120b7b93"
+    },
+    {
+      "candidate": "shake256_random_control",
+      "cnf_bytes": 5451043,
+      "cnf_sha256": "e05685fa1c07a693fd2416456049cf472c792878a624fb612449115ecfc5646e",
+      "inverse_byte_identical": true,
+      "inverse_restored_sha256": "a49e7ec1ea7135b760d732855fe05b91ac85c56cf786e0777bb9a2188d6a3216",
+      "old_to_new_sha256": "11fc455228cf305e5414a82fb3a646b4a061bfe920403f6671dcad06416ed565",
+      "order_sha256": "07e89ca25c4f095ac9407d6891963a16bffe2cbe0cbcc0337a1e3e1d73c9d614"
+    }
+  ],
+  "transform_plan_sha256": "81c957f7db4181817bad6bd23b455e96ba63e4150634024649c5ef34da91c082"
+}

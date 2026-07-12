@@ -1,0 +1,374 @@
+{
+  "schema": "chacha20-bitwuzla-round7-partition-transfer-protocol-v1",
+  "attempt_id": "A191",
+  "protocol_state": "frozen_before_any_A191_solver_execution",
+  "anchors": {
+    "A190": {
+      "artifact": "research/results/v1/chacha20_bitwuzla_round7_width18_transfer_v1.json",
+      "sha256": "f1cdad782a7ed82e893517eb2bffc1973640652bd59bcdc6a76a8ce060659220",
+      "causal_artifact": "research/results/v1/chacha20_bitwuzla_round7_width18_transfer_v1.causal",
+      "causal_sha256": "bb400fa62b338833dd7b06e98ea34840da1926315624f2d024ea80220af472f6",
+      "causal_graph_sha256": "eca84970c765a5c9f017d98018835009b34a52150bfdfc3f9430de9789bd782a",
+      "rounds": 7,
+      "unknown_key_bits": 18,
+      "complete_nine_variant_plan": true,
+      "returned_model_count": 0
+    }
+  },
+  "discovery_basis": {
+    "challenge": "A190_public_challenge_complete_prefix_partition",
+    "scope": "retrospective_partition_discovery_only",
+    "monolithic_A190_statuses": "all_eight_solver_views_unknown_with_Z3_CLI_parser_invalid",
+    "partition_definition": {
+      "fixed_coordinates": "k0_bits_17_through_15",
+      "free_coordinates": "k0_bits_14_through_0",
+      "cell_count": 8,
+      "candidates_per_cell": 32768,
+      "pairwise_disjoint": true,
+      "union_candidate_count": 262144,
+      "equals_original_18bit_domain": true,
+      "prefix_order": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "100",
+        "101",
+        "110",
+        "111"
+      ],
+      "assignment_used_for_partition_or_order": false
+    },
+    "cell_screen_5s": [
+      {
+        "prefix": "000",
+        "status": "sat",
+        "volatile_seconds": 1.9734476669691503,
+        "formula_sha256": "bd735678d99347224fa72a8a09a079bea96f126439b38d62ea5fe4336ee4fe4f",
+        "recovered_low18": 13771,
+        "independent_512bit_confirmation": true,
+        "control_match": false
+      },
+      {
+        "prefix": "001",
+        "status": "unknown",
+        "volatile_seconds": 5.010868957731873,
+        "formula_sha256": "5f89257fcd7e174836ef70142a9909a9b5d1c27f7d3d31991c66d44b9c1df671"
+      },
+      {
+        "prefix": "010",
+        "status": "unknown",
+        "volatile_seconds": 5.012764124665409,
+        "formula_sha256": "a39ff2fa8150b44716a11ee94ebc0155265c73bdb626553f2cd9c5fb4b3b4d45"
+      },
+      {
+        "prefix": "011",
+        "status": "unknown",
+        "volatile_seconds": 5.010363250039518,
+        "formula_sha256": "60a1c437cd79fb8d7afa0432534c49eb53666466f86917ee986331681edf19b3"
+      },
+      {
+        "prefix": "100",
+        "status": "unknown",
+        "volatile_seconds": 5.011235750280321,
+        "formula_sha256": "4a2548994151a555beab50a0e373d6db6eace9990d27ca01ea0224c85917b6dc"
+      },
+      {
+        "prefix": "101",
+        "status": "unknown",
+        "volatile_seconds": 5.007184125017375,
+        "formula_sha256": "abd152506eba4383e752395c2ba005db26603f6f9b15e5cd8fe5ffc1604732d1"
+      },
+      {
+        "prefix": "110",
+        "status": "unknown",
+        "volatile_seconds": 5.010046208277345,
+        "formula_sha256": "1b414a34d567abb785fbf6a76e3730acccc494278d26c914739ccc59240d1ecf"
+      },
+      {
+        "prefix": "111",
+        "status": "unknown",
+        "volatile_seconds": 5.0145871671848,
+        "formula_sha256": "5639306e07f74e73b3e483e02f90a9c504cdf894e67c0294465017f23b1bbaf2"
+      }
+    ],
+    "selection_rule": "prospectively_transfer_the_complete_assignment_free_eight_cell_partition_to_a_fresh_round7_width18_challenge"
+  },
+  "solver_binaries": {
+    "bitwuzla": {
+      "version": "0.9.1",
+      "path_at_freeze": "/opt/homebrew/bin/bitwuzla",
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "sat_backend": "cadical"
+    }
+  },
+  "public_challenge": {
+    "block_count": 8,
+    "control_target_block_sha256": "b35594db6a34d1d759473711c6b988248695091fc05f87c34ed614ee3edd7ae8",
+    "control_target_words": [
+      1799793522,
+      2581811055,
+      2107884704,
+      2674325908,
+      2004229675,
+      4031084685,
+      1231036411,
+      1738823373,
+      4247831564,
+      1398000796,
+      1145011070,
+      2072535136,
+      498606779,
+      3621312647,
+      1649886142,
+      1052911872
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 1133590882,
+    "known_key_word0_upper14": 2893545472,
+    "known_key_word1": 2882485369,
+    "known_key_words_2_through_7": [
+      1787881436,
+      2812833624,
+      275518593,
+      3247443306,
+      689251865,
+      2447013531
+    ],
+    "known_material_derivation_label": "f8-causal:A191:chacha20:r7-width18-partition:known-material:f1cdad782a7ed82e893517eb2bffc1973640652bd59bcdc6a76a8ce060659220",
+    "known_material_derivation_sha256": "da324c9149b2477cb366dbd4a0e04b55fce2235ff838957185d510c3cd6d2cbb",
+    "nonce_words": [
+      3608905754,
+      893190405,
+      126507950
+    ],
+    "rounds": 7,
+    "target_block_sha256": [
+      "f88f11d2854d4648c57f0b4cece8803f97433566c8732bb0dfdfb837a890505c",
+      "002260854ae30a51b935db0eee2972b4aa1ea000ffc29d92050c014239faeaf5",
+      "3a0931c5bd5afd6f7bc003f0e05ad0816ab91f4361238890972d2be3359fa70d",
+      "afc165dd002c20197228c17ae9cede93b693b2f3315a5a36a5e5fd5a4accea13",
+      "ba7e425b40eec0a30c8bb1fc8ab9bc885e189b4a14f193749b875c764d6b3e70",
+      "84e1d534cb35f7daeeccc19923758944e8dbbc6b7af4f734e4ce1e88d4e3d86b",
+      "fc0a915f13aa78a97e2703299b68760202b242ed590d59c31ed35e12576f9911",
+      "0476946989f967e381b1f72ba094d708605c180b14c651451dc9b4782ab498c4"
+    ],
+    "target_words": [
+      [
+        1799793523,
+        2581811055,
+        2107884704,
+        2674325908,
+        2004229675,
+        4031084685,
+        1231036411,
+        1738823373,
+        4247831564,
+        1398000796,
+        1145011070,
+        2072535136,
+        498606779,
+        3621312647,
+        1649886142,
+        1052911872
+      ],
+      [
+        3870128112,
+        1747177393,
+        2268246669,
+        923042491,
+        2865560210,
+        1628223034,
+        3545428149,
+        1142358564,
+        3993166780,
+        2017653249,
+        410460044,
+        4005275694,
+        2830662247,
+        3913691877,
+        1165852426,
+        1385405831
+      ],
+      [
+        624063007,
+        2762572832,
+        3115393220,
+        148781211,
+        993752200,
+        3041453155,
+        151254185,
+        1188448236,
+        982719610,
+        3047525864,
+        3770853740,
+        3079767179,
+        1305010691,
+        2411453028,
+        2722540862,
+        4260173494
+      ],
+      [
+        459308107,
+        3709729222,
+        694356063,
+        1261213336,
+        3600004266,
+        1659104908,
+        2818858960,
+        1069529501,
+        3616010299,
+        1973121955,
+        230110824,
+        3541223467,
+        314855387,
+        4126036707,
+        198104391,
+        1072759109
+      ],
+      [
+        1678339132,
+        2785581647,
+        3032215935,
+        3015295205,
+        187004814,
+        3460062482,
+        3644476166,
+        1779011219,
+        97804142,
+        4126842723,
+        333152993,
+        133230105,
+        2386287757,
+        1558583634,
+        653632666,
+        4206864250
+      ],
+      [
+        2777310363,
+        382973526,
+        3624402249,
+        2424853959,
+        3362907790,
+        3301546730,
+        337449178,
+        2846554598,
+        1550044713,
+        2180727374,
+        3878046230,
+        555555058,
+        3537433997,
+        3884882841,
+        3645657103,
+        1221993315
+      ],
+      [
+        491414803,
+        2286311987,
+        3589750625,
+        3060406918,
+        3059541189,
+        3734613975,
+        1306001371,
+        1179286457,
+        2025682405,
+        2481722430,
+        391897588,
+        3148980926,
+        2740120193,
+        4119537785,
+        1487050884,
+        419170882
+      ],
+      [
+        3270356070,
+        4053441242,
+        3207478174,
+        1649830051,
+        3981905164,
+        1462321193,
+        3686796493,
+        3421402782,
+        3450322323,
+        2657729226,
+        1835659011,
+        4114953274,
+        1703498446,
+        2615299875,
+        1505241553,
+        4139358994
+      ]
+    ],
+    "unknown_assignment_bits": 18,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_low_bits": 18,
+    "unknown_key_word0_low_value_included": false
+  },
+  "public_challenge_sha256": "e92258e707ee18b7209643e0dbbf7f9c2c4390381ab10dded59e945ccc835b3f",
+  "execution_plan": {
+    "complete_variant_plan_required": true,
+    "early_stop_used": false,
+    "execution_mode": "sequential_external_solver_complete_prefix_partition",
+    "external_timeout_seconds_per_cell": 15,
+    "formula_representation": "portable_SMTLIB2_round7_split6_b1_complete_3bit_prefix_partition",
+    "known_key_bits": 238,
+    "partition_cell_count": 8,
+    "partition_cell_free_bits": 15,
+    "partition_fixed_bits": 3,
+    "partition_prefix_order": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "primitive": "ChaCha20_block_function",
+    "rounds": 7,
+    "solver": "Bitwuzla_0.9.1_bitblast_CaDiCaL",
+    "solver_time_limit_milliseconds_per_cell": 10000,
+    "target_output_bits_per_cell": 512,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 18,
+    "variant_execution_order": [
+      "prefix_000",
+      "prefix_001",
+      "prefix_010",
+      "prefix_011",
+      "prefix_100",
+      "prefix_101",
+      "prefix_110",
+      "prefix_111"
+    ],
+    "variants": [
+      "prefix_000",
+      "prefix_001",
+      "prefix_010",
+      "prefix_011",
+      "prefix_100",
+      "prefix_101",
+      "prefix_110",
+      "prefix_111"
+    ]
+  },
+  "execution_plan_sha256": "5b9357f11d6281c4eb65344cbd1244b7294156b2be8c05d1b5ac7ec21188a700",
+  "prospective_prediction": {
+    "prediction": "the_complete_eight_cell_split6_partition_returns_at_least_one_fresh_round7_18bit_assignment_within_10000ms_per_cell",
+    "success_rule": "all_eight_cells_executed_in_frozen_order_at_least_one_model_independent_512bit_confirmation_and_control_rejection",
+    "frozen_before_solver_execution": true,
+    "claim_type": "prospective_assignment_free_complete_partition_partial_key_recovery_transfer"
+  },
+  "information_boundary": {
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_used_only_to_form_eight_public_targets_before_freeze": true,
+    "unknown_assignment_persisted_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "A191_solver_outcomes_used_before_protocol_freeze": false,
+    "cell_order_or_budget_changed_after_any_outcome": false,
+    "early_stop_permitted": false
+  }
+}

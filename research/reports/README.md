@@ -4,20 +4,18 @@ Reports in this directory interpret retained results. They must link every
 numeric statement to a JSON/CSV artifact and every execution claim to the
 attempt log. Raw outputs take precedence over report prose.
 
+`FORMULA_ATLAS_FULL_REAUDIT_V1.md` records the unnumbered, keyword-independent
+re-read of nine mathematical papers, 113 source pages, and all 2,411 immutable
+atlas entries.  It retains complete page/entry coverage and an 18-family
+controlled transfer registry.  The registry is a hypothesis program, not a
+promotion of any family to a cryptanalytic result.
+
 `BVN_ROUTE_CAUSAL_V1.md` defines the balanced global-route control used for
 F8/CASI calibration and public-output PQC order controls.
 
 `CAUSAL_MECHANISM_RESULTS_V1.md` records the operation-level carry
 interventions, the corrected ML-KEM quantizer control, real compressor cascades
 and the conditional code-length formulation.
-
-The SHAKE symbolic sequence is indexed by
-`FULLROUND_CAUSAL_SHAKE_ANF_COMPRESSION_V1.md`,
-`SHAKE_SYMBOLIC_R2_ANF_FRONTIER_V1.md`,
-`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_SMT_V1.md`,
-`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_PARTITION_V1.md`,
-`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_SPLIT_FRONTIER_V1.md`, and
-`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_SCALING_V1.md`.
 
 `FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R1_PARTITION_TOPOLOGY_V1.md` compares the
 complete low, high, and R1-graph-selected four-coordinate partitions of the
@@ -175,7 +173,7 @@ holds A172's central 11/12 positions fixed while changing the surrounding
 family from Greedy-Max to Weighted Descending.  The directional delta remains
 positive and grows from +456 to +10,955, selecting
 `central_position_supported`.  Effects -5,087 for `0,12` and +5,868 for
-`12,0` establish an exact, sign-changing compiler x adjacent-order interaction
+`12,0` establish an exact, sign-changing compiler × adjacent-order interaction
 without a model claim.
 
 `FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_CENTER_ALIAS_PARTNER_TRANSFER_V1.md`
@@ -245,30 +243,157 @@ confirm all 512 bits.  The scope is 40 unknown key bits, not full 256-bit key
 recovery.
 
 `CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND4_TRANSFER_V1.md` records A185's fresh
-prospectively frozen reduced ChaCha round-4 directional transfer. Five matched
+prospectively frozen reduced ChaCha round-4 directional transfer.  Five matched
 SMT views execute at the same 30-second budget: forward, inverse, and split3
 return `unknown`, while split1 and split2 independently return
-`0x230f1aee2d` and each confirms all 512 target bits.
+`0x230f1aee2d` and each confirms all 512 target bits.  The scope is reduced
+round 4 over a 40-bit partial-key relation, not fullround or full-key recovery.
 
 `CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND5_BOUNDARY_V1.md` records A186's fresh
-prospectively frozen reduced ChaCha round-5 boundary. Forward, inverse, and all
+prospectively frozen reduced ChaCha round-5 boundary.  Forward, inverse, and all
 four midstate cuts execute at the same 30-second budget; all six return
-`unknown`, the complete order is retained, and no assignment is emitted.
+`unknown`, the complete order is retained, and no assignment is emitted.  This
+is the exact measured round-4→round-5 boundary, not fullround or full-key
+recovery.
 
 `CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md` records A187's fresh
-prospectively frozen reduced ChaCha5 shared-key stacking transfer. Complete b8
-reduces decisions/conflicts by 20.93x/75.54x relative to b1, and all three
-fixed-total-512-bit sparse views beat b1 on both counts under the same fixed
-resource limit.
+prospectively frozen reduced ChaCha5 shared-key stacking transfer.  Ten
+predeclared fixed-rlimit formulas compare complete, fixed-total-512-bit sparse,
+and modular-delta observations across eight counter-related blocks.  Complete
+b8 reduces decisions/conflicts by 20.93x/75.54x relative to b1, and all three
+sparse views beat b1 on both counts.  All statuses are `unknown`; this is an
+exact search-shape result, not recovery or fullround ChaCha20.
 
 `CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md` records A188's complete fresh
-eight-variant portable SMT-LIB2 portfolio. The predeclared Bitwuzla bitblast b8
-view returns `0x5345585503`; an independent implementation matches all 4,096
-target bits and rejects the control. The exact result includes the observed
-b4-to-b8 instance boundary.
+eight-variant portable SMT-LIB2 portfolio.  The frozen b4 prediction is not
+retained, while the already-predeclared Bitwuzla bitblast b8 view returns
+`0x5345585503`; an independent implementation matches all 4,096 target bits and
+rejects the control.  This is reduced-round 40-bit partial-key recovery plus a
+b4-to-b8 instance boundary, not a fullround or full-key result.  The stored Z3
+`invalid` row remains an exact no-status-token parser boundary.
 
 `CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md` records A189's fresh
-prospective reduced ChaCha6 width-20 transfer. The predicted Bitwuzla bitblast
+prospective reduced ChaCha6 width-20 transfer.  The predicted Bitwuzla bitblast
 b8 view recovers low20 `0x6fa70` and independently confirms all 4,096 bits;
-preprop b8 and the predeclared b1 view return the identical assignment with
-independent confirmation.
+preprop b8 returns the same model and confirmation, while the predeclared b1
+view also returns the same assignment with a complete 512-bit check.  The full
+eight-variant portfolio executes without early stop.  This is reduced-round
+20-bit partial-key recovery with 236 known key bits, not fullround or full-key
+recovery.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH18_BOUNDARY_V1.md` records A190's fresh
+prospective reduced ChaCha7 width-18 monolithic/portfolio boundary.  All nine
+predeclared views execute without early stop; eight return `unknown`, the Z3
+row retains its exact no-status-token `invalid` label, and no model is emitted.
+This is an exact fresh-instance solver boundary, not an absence claim for the
+complete `2^18` domain.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND7_PARTITION_RECOVERY_V1.md` records A191's
+prospective assignment-free complete partition of a fresh round-7 width-18
+domain.  Eight pairwise-disjoint width-15 cells cover exactly all `2^18`
+candidates. Prefixes `000`--`110` are `unsat`; prefix `111` recovers low18
+`0x3d051`, matches all 512 target bits independently, and rejects the control.
+The partition changes representation without shrinking the domain.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH20_PARTITION_RECOVERY_V1.md` records
+A192's prospective scaling of that complete assignment-free rule to a fresh
+round-7 width-20 domain.  Thirty-two disjoint width-15 cells cover exactly all
+`2^20` candidates. Prefix `00000` recovers low20 `0x05eb0`; the other 31 cells
+are `unsat`; 512/512 bits confirm independently and the control is rejected.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND8_WIDTH20_PARTITION_RECOVERY_V1.md` records
+A193's prospective depth transfer of the complete structural width-20 cover to
+fresh reduced ChaCha8/split7.  Prefix `01011` recovers low20 `0x5a40a`, passes
+an independent 512-bit gate, and rejects the control.  The other 31 cells are
+`unknown`, not `unsat`: the recovery transfer is retained and all `2^20`
+candidates are structurally covered, while uniqueness across the open cells is
+not adjudicated.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND9_WIDTH20_PARTITION_RECOVERY_V1.md` records
+A194's prospective transfer to fresh reduced ChaCha9/split8.  Prefix `10000`
+recovers low20 `0x8675b`, passes the independent 512-bit gate, and rejects the
+control.  The 32 cells structurally cover exactly `2^20`, but 31 outcomes remain
+`unknown`; recovery is confirmed while uniqueness remains unadjudicated.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH20_PARTITION_BOUNDARY_V1.md` records
+A195's prospective transfer of the unchanged structural cover to fresh reduced
+ChaCha10/split8.  All 32 predeclared cells return `unknown`, no model is
+returned, and the complete no-early-stop order is retained.  This is the exact
+fresh-instance/cut transfer boundary, not an absence, recovery, or uniqueness
+claim.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND10_SPLIT9_CUT_BOUNDARY_V1.md` records A196's
+controlled same-challenge alternative-cut test.  The byte-identical still-secret
+A195 challenge is represented by a separately frozen complete split9 partition;
+all 32 cells return `unknown` and no model is emitted.  Split8 and split9 are
+status-equivalent bounded results, with no absence, recovery, or uniqueness
+claim.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH12_REFINEMENT_BOUNDARY_V1.md` records
+A197's complete finer-partition test on that same still-secret challenge.  The
+unchanged `2^20` domain becomes 256 disjoint cells with 12 free bits, executed
+as 64 deterministic waves of four.  All 256 cells return `unknown` and no model
+is emitted; the retained result is a refinement boundary, not an absence,
+recovery, or uniqueness claim.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_V1.md`
+records A198's eight-block shared-key depth test on the same round-10 challenge.
+Two complete 32-cell covers use identical SMT formula bytes under 10-second and
+30-second budgets.  All 64 cells return `unknown` and no model is emitted.  The
+result is a resource/representation boundary, not `unsat`, absence, recovery,
+or uniqueness.
+
+`CAUSAL_CHACHA20_FORMULA_OPERATOR_ATLAS_V1.md` records A199's prospectively
+frozen public ChaCha20 formula-operator atlas.  It retains phase-sensitive
+ordered products, 40 characteristic/derivative-root gates, an aligned
+forward/backward signed channel, and an exact 32-cell public partition.  The
+third-cumulant prediction is not retained under its 32 exact same-marginal
+nulls.  All five partition masks are nested thresholds of Fiedler mode 1, so
+the construction is a Fiedler-filtration baseline rather than a demonstrated
+multimode mixture.  No hidden assignment or solver is used, and no key-recovery
+claim is made.
+
+`CAUSAL_CHACHA20_ROUND10_PUBLIC_GEOMETRY_PARTITION_BOUNDARY_V1.md` records
+A200's four complete affine covers of the unchanged A198 ChaCha10 width-20 b8
+challenge.  All 128 cells return `unknown` with no model.  Gray is exactly a
+row-space-equivalent encoding control for numeric prefix; the Fiedler,
+Laplacian distinct-mode, and signed-SVD distinct-mode spans are pairwise
+distinct.  The result is not `unsat`, absence, recovery, or uniqueness.
+
+`CAUSAL_CHACHA20_PHASE_CONJUGACY_HOLDOUT_V1.md` records A201's prospective
+eight-batch public holdout. Correct row-rotation conjugation reduces the raw
+adjacent commutator to same-phase scale in every batch; the dominant A199
+factor-40 signal is known layout conjugacy, not a new carry leak or break.
+
+`CAUSAL_CHACHA20_ROUND10_B8_GLOBAL_CSE_BOUNDARY_V1.md` records A202's exact
+global hash-consing transfer. Source bytes fall 16.06%, but original and CSE
+inputs preprocess to the byte-identical Bitwuzla DAG and all cells remain
+`unknown`.
+`CAUSAL_CHACHA20_ROUND10_B8_LANE_MAJOR_BOUNDARY_V1.md` records A203's exact
+assertion-order transfer and unchanged complete UNKNOWN frontier.
+
+`CAUSAL_CHACHA20_ROUND10_EXTERNAL_CNF_REVERSE_BOUNDARY_V1.md` records A204's
+26-configuration standalone-SAT calibration, exact 70-probe CNF literal map,
+independently confirmed A188 calibration model, and complete 32-UNKNOWN
+round-10 transfer boundary.
+
+`CAUSAL_CHACHA20_A188_CNF_STRUCTURAL_ORDERING_V1.md` records A205-r2's complete
+23-order by two-mode calibration matrix: 16 SAT observations, 30 UNKNOWN, 12
+structural candidates, and the unique robust-both-mode
+`bidirectional_min_distance` order.  Its r2 correction changes boundary
+metadata only, not the 46 observations or their confirmations.
+
+`CAUSAL_CHACHA20_ROUND10_BIDIRECTIONAL_MIN_DISTANCE_BOUNDARY_V1.md` records
+A206's complete prospective transfer of that order to 32 prefixes and both
+CaDiCaL modes.  All 64 observations are valid `unknown`; no model or recovery
+is claimed.
+
+`CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_PREFLIGHT_V1.md` records A207's
+pre-execution checkpoint: 12 exact archived permutations, 11 remaining
+candidate modes, and a frozen 352-cell plan before any solver result.
+
+`CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md` records A207's
+complete execution under that freeze. All 352 new and all 416 combined
+A206/A207 observations are valid `unknown`. The retained progress map identifies
+reverse `output_unit_bfs_far` as a systematic conflict/decision-density outlier
+without a model or resolved cell.

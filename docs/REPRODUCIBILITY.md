@@ -97,9 +97,11 @@ This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
 SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A151
 SHAKE observability, affine, algebraic, compression, symbolic, partition,
 strategy, assignment-free, and minimum-cover frontiers. Retained validation
-continues through A189, including the A179 vector-256 replay, A181 Metal replay,
-A182--A184 fresh width-36/38/40 Metal recoveries, and A185--A189 reduced-round
-direction, block-stacking, and portable-solver transfers. It then runs focused
+continues through A206, including the A179 vector-256 replay, A181 Metal replay,
+A182--A184 fresh width-36/38/40 Metal recoveries, A185--A203 reduced-round,
+partition, formula, and compiler transfers, and the retained A204--A206 exact-
+CNF structural sequence. It also verifies the A207 pre-execution order archive,
+frozen portfolio, and completed 352-cell result. It then runs focused
 tests, opens all `.causal` files, and rewrites
 `research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
@@ -189,9 +191,65 @@ PYTHONPATH=.:src python -m pytest -q \
   tests/test_chacha20_smt_round5_retained_figures.py
 ```
 
-Explicit production portfolio executions remain separate. A188/A189 fail
-closed unless Bitwuzla 0.9.1, Z3 4.15.4, and Boolector 3.2.4 match the frozen
-versions and executable digests listed in
+A190--A203 retain the complete ChaCha7--10 partition progression, public
+formula/operator transfers, and deterministic figures. A204--A206 add exact
+DIMACS/literal-map, structural-order, and complete transfer evidence. A207's
+tests open all 12 archived permutations, the frozen 11-mode plan, all 352
+stored observations, the combined 416-cell boundary, the progress map, and the
+final Causal graph. The following gate launches no solver:
+
+```bash
+PYTHONPATH=.:src python -m pytest -q \
+  tests/test_chacha20_bitwuzla_round7_width18_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round8_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round9_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_split9_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_width12_refinement.py \
+  tests/test_chacha20_bitwuzla_round10_b8_partition_transfer.py \
+  tests/test_chacha20_formula_operator_atlas.py \
+  tests/test_chacha20_round10_public_geometry_partition.py \
+  tests/test_chacha20_phase_conjugacy_holdout.py \
+  tests/test_chacha20_round10_b8_global_cse.py \
+  tests/test_chacha20_round10_b8_lane_major.py \
+  tests/test_chacha20_round10_external_cnf_reverse.py \
+  tests/test_chacha20_a188_cnf_structural_ordering.py \
+  tests/test_chacha20_round10_bidirectional_min_distance.py \
+  tests/test_chacha20_round10_structural_order_archive.py \
+  tests/test_chacha20_round10_structural_portfolio.py \
+  tests/test_chacha20_round10_structural_portfolio_result.py \
+  tests/test_chacha20_cnf_structural_figures.py
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_smt_round5_retained_figures.py --check
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_formula_operator_atlas_figure.py --check
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_round10_public_geometry_partition_figure.py --check
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_phase_conjugacy_holdout_figure.py --check
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_round10_b8_global_cse_figure.py --check
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_round10_b8_lane_major_figure.py --check
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_cnf_structural_figures.py --check
+```
+
+The source-first formula-atlas coverage rebuild additionally requires the two
+hash-gated sibling JSON files documented in
+`research/reproduction/EXTERNAL_DEPENDENCIES.md`. A clean clone without those
+source pages can still verify the committed coverage JSON through the transfer
+manifest; the standard runner skips only that source rebuild when the two
+external files are absent.
+
+Explicit production portfolio executions remain separate. A188--A203 fail
+closed unless the applicable Bitwuzla 0.9.1, Z3 4.15.4, and Boolector 3.2.4
+identities match. A204--A207 additionally gate the applicable CaDiCaL 3.0.0,
+Kissat 4.0.4, CryptoMiniSat 5.14.7, and MiniSat 2.2.1 identities. On macOS,
+`brew bundle` installs the standalone-CNF CLI set; the pinned `z3-solver` wheel
+supplies exact Z3 4.15.4. Exact executable digests are in
 `research/reproduction/EXTERNAL_DEPENDENCIES.md`.
 
 ### Extended native SHAKE

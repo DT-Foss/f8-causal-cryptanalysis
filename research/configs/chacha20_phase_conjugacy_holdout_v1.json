@@ -1,0 +1,55 @@
+{
+  "anchor": {
+    "A199_causal_sha256": "bb509b61239bf3bc4396bac2b882820204deba6683186f9f5a89f65c1968fc89",
+    "A199_result": "research/results/v1/chacha20_formula_operator_atlas_v1.json",
+    "A199_sha256": "16c1025308bae64e2c45339804ec0a39d5fcb927c1cd0a1dcbf2ca8dfd3d5c48"
+  },
+  "attempt_id": "A201",
+  "discovery_observation": {
+    "aligned_adjacent_commutator_mean": 0.01260613348,
+    "aligned_column_diagonal_mean_operator_distance": 0.004948823356,
+    "correct_conjugation": "P_times_M_diagonal_times_P_transpose",
+    "raw_adjacent_commutator_mean": 0.52158921895,
+    "same_phase_lag2_commutator_mean": 0.013002274002,
+    "wrong_conjugation_adjacent_commutator_mean": 0.167519220363
+  },
+  "holdout_plan": {
+    "batch_count": 8,
+    "rounds": 20,
+    "sample_count_per_batch": 16,
+    "seed_label_rule": "f8-causal/A201/chacha20-phase-conjugacy-holdout/v1/batch/{batch_index}",
+    "word_permutation_new_position_gets_old_position": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      4,
+      10,
+      11,
+      8,
+      9,
+      15,
+      12,
+      13,
+      14
+    ]
+  },
+  "information_boundary": {
+    "A201_holdout_measurements_used_before_protocol_freeze": false,
+    "hidden_cipher_assignment_used": false,
+    "permutation_fitted_to_holdout_data": false,
+    "seed_batch_or_threshold_changed_after_any_holdout_measurement": false
+  },
+  "prospective_predictions": {
+    "H1_layout_dominance": "in_every_holdout_batch_raw_adjacent_mean_divided_by_correctly_aligned_adjacent_mean_exceeds_20",
+    "H2_same_phase_scale": "in_every_holdout_batch_correctly_aligned_adjacent_mean_is_between_one_half_and_twice_the_same_phase_lag2_mean",
+    "H3_operator_alignment": "in_every_holdout_batch_correctly_aligned_column_diagonal_mean_operator_distance_is_below_0_02",
+    "H4_wrong_direction_control": "in_every_holdout_batch_wrong_direction_adjacent_mean_exceeds_0_10",
+    "H5_residual_channel": "in_every_holdout_batch_correctly_aligned_adjacent_mean_remains_above_0_003"
+  },
+  "protocol_state": "frozen_after_A199_discovery_conjugacy_audit_before_any_A201_holdout_measurement",
+  "schema": "chacha20-phase-conjugacy-holdout-protocol-v1"
+}

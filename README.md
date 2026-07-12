@@ -5,7 +5,8 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A189 full-round and reduced-round relations as code, typed
+evidence, and the subsequent A107--A207 full-round, reduced-round, and frozen
+pre-execution relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -82,6 +83,18 @@ precisely:
 | A187 | ChaCha5 shared-key multiblock compiler | Complete b8 reduces decisions/conflicts by 20.93x/75.54x relative to b1; every fixed-total-512-bit sparse b2/b4/b8 view also beats b1 on both counters | Fresh 40-bit key shared across eight counter-related blocks; ten predeclared formulas at `rlimit=10,000,000` | Exact prospective search-shape transfer | [report](research/reports/CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md) |
 | A188 | ChaCha5 portable solver portfolio | The predeclared Bitwuzla bitblast b8 view returns `0x5345585503`; independent recomputation matches all 4,096 target bits and rejects the control | Fresh 40-bit challenge; complete eight-variant Bitwuzla/Z3/Boolector portfolio; five-second variants | Recovered 40-bit partial-key assignment and b4→b8 instance boundary | [report](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md) |
 | A189 | ChaCha6 prospective width-20 transfer | Predicted Bitwuzla bitblast b8 and preprop b8 independently return `0x6fa70` and confirm all 4,096 bits; bitblast b1 also returns the same model with a 512-bit gate | Fresh 20-bit challenge with 236 known key bits; complete eight-variant portfolio | Recovered 20-bit partial-key assignment | [report](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md) |
+| A190 | ChaCha7 monolithic width-18 frontier | Complete nine-view portfolio returns eight `unknown` and one exact no-status parser boundary | Fresh 18-bit challenge; fixed 10/30-second views; complete execution | Exact monolithic/portfolio boundary | [report](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH18_BOUNDARY_V1.md) |
+| A191--A194 | ChaCha7--9 complete partition transfers | A191 recovers low18 `0x3d051`; A192 recovers low20 `0x05eb0` with 31 UNSAT cells; A193/A194 recover `0x5a40a`/`0x8675b` with the other cells open | Pairwise-disjoint complete domains; assignment-free 15-bit cells; fixed ten-second budgets | Confirmed reduced-round partial-key assignments | [A191](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_PARTITION_RECOVERY_V1.md), [A192](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH20_PARTITION_RECOVERY_V1.md), [A193](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND8_WIDTH20_PARTITION_RECOVERY_V1.md), [A194](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND9_WIDTH20_PARTITION_RECOVERY_V1.md) |
+| A195--A198 | ChaCha10 partition/resource frontier | Split8, split9, width-12 refinement, and eight-block 10/30-second covers all retain complete UNKNOWN frontiers | Same complete `2^20` challenge; 32--256 disjoint cells; no early stop | Exact representation/resource boundaries | [A195](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH20_PARTITION_BOUNDARY_V1.md), [A196](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_SPLIT9_CUT_BOUNDARY_V1.md), [A197](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_WIDTH12_REFINEMENT_BOUNDARY_V1.md), [A198](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_V1.md) |
+| A199--A203 | Formula/operator and compiler transfers | Formula-atlas operators expose exact public structure; geometry, CSE, and lane-major variants retain the round-10 frontier; phase holdout attributes the dominant factor-40 contrast to known layout conjugacy | Public operator computation plus complete retained ChaCha10 covers | Exact operator and representation boundaries | [A199](research/reports/CAUSAL_CHACHA20_FORMULA_OPERATOR_ATLAS_V1.md), [A200](research/reports/CAUSAL_CHACHA20_ROUND10_PUBLIC_GEOMETRY_PARTITION_BOUNDARY_V1.md), [A201](research/reports/CAUSAL_CHACHA20_PHASE_CONJUGACY_HOLDOUT_V1.md), [A202](research/reports/CAUSAL_CHACHA20_ROUND10_B8_GLOBAL_CSE_BOUNDARY_V1.md), [A203](research/reports/CAUSAL_CHACHA20_ROUND10_B8_LANE_MAJOR_BOUNDARY_V1.md) |
+| A204 | External-CNF calibration transfer | One of 26 frozen standalone-SAT configurations confirms the A188 model; all 32 prospective ChaCha10 cells remain valid UNKNOWN | Exact DIMACS export, 70-probe literal map, complete ten-second cover | Confirmed calibration and round-10 boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_EXTERNAL_CNF_REVERSE_BOUNDARY_V1.md) |
+| A205-r2 | A188 structural CNF ordering | Complete 46-cell matrix has 16 SAT, 30 UNKNOWN, and 12 confirmed structural candidates; one succeeds in both solver modes | Known-positive A188 calibration; 23 exact graph orders; default/reverse CaDiCaL | Robust structural ordering outlier | [report](research/reports/CAUSAL_CHACHA20_A188_CNF_STRUCTURAL_ORDERING_V1.md) |
+| A206 | ChaCha10 robust-order transfer | Both modes of all 32 cells return valid UNKNOWN; exact transforms and progress counters retained | Prospectively selected `bidirectional_min_distance`; complete 64-cell-mode execution | Exact structural-transfer boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BIDIRECTIONAL_MIN_DISTANCE_BOUNDARY_V1.md) |
+| A207 | ChaCha10 complete structural portfolio | All 352 new and 416 combined calibrated cell modes are valid UNKNOWN; `output_unit_bfs_far` is a systematic 2.759x-conflict/5.686x-decision progress outlier | Prospectively frozen 12-order archive; 11 remaining modes; complete 32-prefix cover; no early stop | Exact structural-order boundary and progress map | [result](research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md), [preflight](research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_PREFLIGHT_V1.md) |
+
+![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
+
+![A207 complete structural portfolio boundary](research/results/v1/chacha20_a207_structural_portfolio_boundary_v1.svg)
 
 A152 was frozen on public `main` before its unseen instance was generated, then
 executed under that exact protocol. A154--A184 follow the resulting affine
@@ -97,12 +110,17 @@ indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_
 and the append-only [attempt log](research/ATTEMPT_LOG.md). The earlier
 A107--A151 class ledger remains in [docs/RESULTS.md](docs/RESULTS.md).
 
-A185--A189 form a separate prospective reduced-round progression: a fresh
+A185--A206 form a separate prospective reduced-round progression: a fresh
 ChaCha4 directional recovery, its exact ChaCha5 fixed-budget boundary, a
 prospectively retained eight-block search-shape change, a fresh ChaCha5
-cross-engine 40-bit recovery, and a fresh ChaCha6 width-20 transfer. Their
+cross-engine 40-bit recovery, complete ChaCha7--9 recoveries, and a sequence of
+exact ChaCha10 representation and structural-order boundaries. Their
 configs, portable formula bytes, result JSON, typed graphs, figures, reports,
 and focused no-solver replay tests are committed and hash-pinned together.
+A207 completes that calibrated structural-order portfolio under the separately
+published preflight: 352/352 new observations and all 416 combined A206/A207
+cell modes are valid `unknown`. The exact progress map identifies a systematic
+search-density outlier without converting the boundary into a recovery claim.
 
 ## Three connected methods
 
@@ -147,7 +165,7 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A189 full-round and reduced-round frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A206 frontiers plus the A207 preflight archive |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -170,10 +188,14 @@ commands, runtimes, expected files, and portability notes are
 in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
 The symbolic SHAKE tier additionally requires the external Z3 CLI at exact
-semantic version 4.15.4. Explicit A188/A189 production portfolios additionally
-require hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4. Retained-artifact tests
-rebuild every formula and verify identities, results, controls, graphs, and
-figures without launching those production solver portfolios.
+semantic version 4.15.4. Explicit A188--A203 production portfolios require the
+applicable hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4 identities. A204--A207
+add CaDiCaL 3.0.0 and use Kissat 4.0.4, CryptoMiniSat 5.14.7, and MiniSat 2.2.1
+for the frozen A204 calibration matrix. `brew bundle` installs the declared
+standalone-CNF CLI set on macOS; the pinned `z3-solver` wheel supplies exact Z3
+4.15.4. Retained-artifact tests verify identities, results, controls,
+graphs, figures, order archives, and inverse mappings without launching the
+production solver portfolios.
 
 ## Repository map
 
@@ -182,7 +204,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A189 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A207 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

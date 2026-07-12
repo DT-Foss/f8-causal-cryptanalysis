@@ -31,6 +31,32 @@ export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
   tests/test_chacha20_smt_shared_key_multiblock_transfer.py \
   tests/test_chacha20_bitwuzla_round5_transfer.py \
   tests/test_chacha20_bitwuzla_round6_width20_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_width18_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round7_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round8_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round9_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_width20_partition_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_split9_transfer.py \
+  tests/test_chacha20_bitwuzla_round10_width12_refinement.py \
+  tests/test_chacha20_bitwuzla_round10_b8_partition_transfer.py \
+  tests/test_chacha20_formula_operator_atlas.py \
+  tests/test_chacha20_formula_operator_atlas_figure.py \
+  tests/test_chacha20_round10_public_geometry_partition.py \
+  tests/test_chacha20_round10_public_geometry_partition_figure.py \
+  tests/test_chacha20_phase_conjugacy_holdout.py \
+  tests/test_chacha20_phase_conjugacy_holdout_figure.py \
+  tests/test_chacha20_round10_b8_global_cse.py \
+  tests/test_chacha20_round10_b8_global_cse_figure.py \
+  tests/test_chacha20_round10_b8_lane_major.py \
+  tests/test_chacha20_round10_b8_lane_major_figure.py \
+  tests/test_chacha20_round10_external_cnf_reverse.py \
+  tests/test_chacha20_a188_cnf_structural_ordering.py \
+  tests/test_chacha20_round10_bidirectional_min_distance.py \
+  tests/test_chacha20_round10_structural_order_archive.py \
+  tests/test_chacha20_round10_structural_portfolio.py \
+  tests/test_chacha20_round10_structural_portfolio_result.py \
+  tests/test_chacha20_cnf_structural_figures.py \
   tests/test_chacha20_smt_round5_retained_figures.py \
   tests/test_shake_native_window_solver.py \
   tests/test_shake_boolean_cnf_reader.py \

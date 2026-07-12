@@ -1,0 +1,87 @@
+{
+  "schema": "chacha20-bitwuzla-round10-b8-partition-transfer-protocol-v1",
+  "attempt_id": "A198",
+  "protocol_state": "frozen_after_A197_boundary_and_formula_reaudit_before_any_A198_solver_execution",
+  "anchors": {
+    "A187": {
+      "artifact": "research/results/v1/chacha20_smt_shared_key_multiblock_transfer_v1.json",
+      "sha256": "ec00786b9e778b3914cc2594919da11b763cfffa72f71fa110c2c90dc8e9e3e3",
+      "causal_sha256": "6c3eda1c3f84cac90bf04e63267728cd88581f73f85fe18e971e72caa67fd68d",
+      "retained_mechanism": "full_b8_reduces_decisions_20.93x_and_conflicts_75.54x_relative_to_b1_at_fixed_rlimit"
+    },
+    "A188": {
+      "artifact": "research/results/v1/chacha20_bitwuzla_round5_transfer_v1.json",
+      "sha256": "d1a75d6456f75257cbd0be41864fad0810540508aa5c30239b16bd3998eef73a",
+      "causal_sha256": "a717e615cfc005fe985a24059f7e6bedcd8008c460b274bb313f6ddfc53e7c78",
+      "retained_mechanism": "bitwuzla_bitblast_b8_returns_and_independently_confirms_the_fresh_round5_width40_assignment"
+    },
+    "A197": {
+      "artifact": "research/results/v1/chacha20_bitwuzla_round10_width12_refinement_v1.json",
+      "sha256": "177a76c130d3705e8e3ebcd35f517486b204c6f7d501adaae1cdba8dca90060c",
+      "causal_sha256": "f180d14b244a91d5dcbe22acd4972590d9facfb8099ee8846fb3d0d5cae92561",
+      "retained_boundary": "all_256_width12_cells_unknown_zero_models_over_the_complete_2^20_domain"
+    },
+    "formula_atlas_reaudit": {
+      "artifact": "research/results/v1/formula_atlas_transfer_coverage_v1.json",
+      "sha256": "feadca39a2cdb0caf38018e9d28ed6aecd56384f5771d7a6e6ab261f87ee1cc2",
+      "role": "requires_the_observed_shared_block_baseline_before_attributing_any_later_gain_to_a_new_transfer_family"
+    }
+  },
+  "mechanism_basis": {
+    "question": "does_the_retained_A187_A188_shared_key_b8_mechanism_cross_the_A197_round10_partition_boundary",
+    "same_low20_domain": true,
+    "same_split8_cut": true,
+    "same_five_bit_prefix_cells_as_A195": true,
+    "shared_counter_related_blocks": 8,
+    "target_bits_per_cell": 4096,
+    "block_definition_order": "reverse_7_to_0_matching_A187_A188",
+    "two_complete_budget_covers": true,
+    "budgets_milliseconds": [10000, 30000],
+    "same_formula_bytes_across_budgets": true,
+    "assignment_used_for_cell_or_budget_order": false
+  },
+  "challenge_reuse_boundary": {
+    "public_challenge_reference": "research/configs/chacha20_bitwuzla_round10_width12_refinement_v1.json",
+    "public_challenge_reference_sha256": "041782b106f6d956dd74f5051c285d7aebe00abc7e614c44790dc6fe525d5b2e",
+    "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+    "prior_returned_model_count": 0,
+    "unknown_assignment_recovered_before_A198": false,
+    "correct_prefix_known_before_A198": false
+  },
+  "solver_binaries": {
+    "bitwuzla": {
+      "version": "0.9.1",
+      "path_at_freeze": "/opt/homebrew/bin/bitwuzla",
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "sat_backend": "cadical"
+    }
+  },
+  "execution_plan_sha256": "6965f67a341a3e234b51c3ddc8e0e375d12803d8f603feac80dd5bae980c78c3",
+  "variant_plan": {
+    "variant_order_sha256": "804a858c7605347f4d64bf81f62f7e77d956af16f6ce48dc46ba594e6c1103a7",
+    "order": "budget_major_then_numeric_prefix",
+    "budgets_milliseconds": [10000, 30000],
+    "prefix_bits": 5,
+    "prefix_count_per_budget": 32,
+    "free_bits_per_cell": 15,
+    "candidate_count_per_cell": 32768,
+    "candidate_count_per_budget_cover": 1048576,
+    "wave_size": 4,
+    "wave_count": 16
+  },
+  "prospective_prediction": {
+    "primary": "the_complete_30000ms_b8_partition_cover_returns_at_least_one_independently_confirmed_model",
+    "secondary": "the_complete_10000ms_b8_partition_cover_returns_at_least_one_independently_confirmed_model",
+    "success_rule": "all_64_variants_execute_without_early_stop_and_any_returned_model_matches_all_4096_target_bits_while_rejecting_the_control",
+    "frozen_before_solver_execution": true,
+    "claim_type": "prospective_shared_key_stacking_depth_transfer"
+  },
+  "information_boundary": {
+    "prior_attempts_revealed_no_model_or_correct_prefix": true,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "A198_solver_outcomes_used_before_protocol_freeze": false,
+    "cell_budget_wave_or_formula_changed_after_any_A198_outcome": false,
+    "early_stop_permitted": false
+  }
+}

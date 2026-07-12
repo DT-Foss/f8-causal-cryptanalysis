@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="650" viewBox="0 0 1240 650" role="img">
+<style>.t{font:700 24px system-ui;fill:#17202a}.s{font:600 15px system-ui;fill:#334155}.x{font:12px system-ui;fill:#475569}</style>
+<rect width="1240" height="650" fill="#fff"/>
+<text x="36" y="42" class="t">A202 — global hash-consing meets the same internal DAG</text>
+<text x="36" y="69" class="s">Exact expression reuse only · no algebraic rewrite · same A198 ChaCha10 b8 challenge</text>
+<rect x="36" y="94" width="1168" height="174" rx="9" fill="#fafbfc" stroke="#9aa6b2"/>
+<text x="58" y="128" class="s">Source SMT-LIB2: 2,560 → 2,364 definitions; 196 exact reused occurrences</text>
+<rect x="58" y="154" width="900" height="32" fill="#cbd5e1"/><rect x="58" y="154" width="755.50" height="32" fill="#2563a8"/>
+<text x="978" y="176" class="s">177,158 → 148,714 bytes (−16.055724%)</text>
+<text x="58" y="222" class="s">Bitwuzla --pp-only --print-formula: byte-identical for original and CSE</text>
+<text x="58" y="246" class="x">231,733 bytes · 2,927 lines · 130 assertions · 0 define-fun · SHA 532479d8427f…1bd9</text>
+<rect x="36" y="292" width="1168" height="260" rx="9" fill="#fafbfc" stroke="#9aa6b2"/>
+<text x="58" y="326" class="s">Complete CSE numeric-prefix cover · 32 × 2¹⁵ = 2²⁰ · 10,000 ms/cell · 32 UNKNOWN · 0 models</text>
+<rect data-cell="00000" x="58" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="121" y="372" text-anchor="middle" class="x">00000 · UNKNOWN</text>
+<rect data-cell="00001" x="198" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="261" y="372" text-anchor="middle" class="x">00001 · UNKNOWN</text>
+<rect data-cell="00010" x="338" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="401" y="372" text-anchor="middle" class="x">00010 · UNKNOWN</text>
+<rect data-cell="00011" x="478" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="541" y="372" text-anchor="middle" class="x">00011 · UNKNOWN</text>
+<rect data-cell="00100" x="618" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="681" y="372" text-anchor="middle" class="x">00100 · UNKNOWN</text>
+<rect data-cell="00101" x="758" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="821" y="372" text-anchor="middle" class="x">00101 · UNKNOWN</text>
+<rect data-cell="00110" x="898" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="961" y="372" text-anchor="middle" class="x">00110 · UNKNOWN</text>
+<rect data-cell="00111" x="1038" y="350" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="1101" y="372" text-anchor="middle" class="x">00111 · UNKNOWN</text>
+<rect data-cell="01000" x="58" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="121" y="417" text-anchor="middle" class="x">01000 · UNKNOWN</text>
+<rect data-cell="01001" x="198" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="261" y="417" text-anchor="middle" class="x">01001 · UNKNOWN</text>
+<rect data-cell="01010" x="338" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="401" y="417" text-anchor="middle" class="x">01010 · UNKNOWN</text>
+<rect data-cell="01011" x="478" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="541" y="417" text-anchor="middle" class="x">01011 · UNKNOWN</text>
+<rect data-cell="01100" x="618" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="681" y="417" text-anchor="middle" class="x">01100 · UNKNOWN</text>
+<rect data-cell="01101" x="758" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="821" y="417" text-anchor="middle" class="x">01101 · UNKNOWN</text>
+<rect data-cell="01110" x="898" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="961" y="417" text-anchor="middle" class="x">01110 · UNKNOWN</text>
+<rect data-cell="01111" x="1038" y="395" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="1101" y="417" text-anchor="middle" class="x">01111 · UNKNOWN</text>
+<rect data-cell="10000" x="58" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="121" y="462" text-anchor="middle" class="x">10000 · UNKNOWN</text>
+<rect data-cell="10001" x="198" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="261" y="462" text-anchor="middle" class="x">10001 · UNKNOWN</text>
+<rect data-cell="10010" x="338" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="401" y="462" text-anchor="middle" class="x">10010 · UNKNOWN</text>
+<rect data-cell="10011" x="478" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="541" y="462" text-anchor="middle" class="x">10011 · UNKNOWN</text>
+<rect data-cell="10100" x="618" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="681" y="462" text-anchor="middle" class="x">10100 · UNKNOWN</text>
+<rect data-cell="10101" x="758" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="821" y="462" text-anchor="middle" class="x">10101 · UNKNOWN</text>
+<rect data-cell="10110" x="898" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="961" y="462" text-anchor="middle" class="x">10110 · UNKNOWN</text>
+<rect data-cell="10111" x="1038" y="440" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="1101" y="462" text-anchor="middle" class="x">10111 · UNKNOWN</text>
+<rect data-cell="11000" x="58" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="121" y="507" text-anchor="middle" class="x">11000 · UNKNOWN</text>
+<rect data-cell="11001" x="198" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="261" y="507" text-anchor="middle" class="x">11001 · UNKNOWN</text>
+<rect data-cell="11010" x="338" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="401" y="507" text-anchor="middle" class="x">11010 · UNKNOWN</text>
+<rect data-cell="11011" x="478" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="541" y="507" text-anchor="middle" class="x">11011 · UNKNOWN</text>
+<rect data-cell="11100" x="618" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="681" y="507" text-anchor="middle" class="x">11100 · UNKNOWN</text>
+<rect data-cell="11101" x="758" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="821" y="507" text-anchor="middle" class="x">11101 · UNKNOWN</text>
+<rect data-cell="11110" x="898" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="961" y="507" text-anchor="middle" class="x">11110 · UNKNOWN</text>
+<rect data-cell="11111" x="1038" y="485" width="126" height="34" rx="4" fill="#f1f3f5" stroke="#2563a8"/>
+<text x="1101" y="507" text-anchor="middle" class="x">11111 · UNKNOWN</text>
+<text x="58" y="586" class="s">Mechanism audit: external CSE changed source bytes, but Bitwuzla had already canonicalized the same internal preprocessed formula.</text>
+<text x="58" y="614" class="x">UNKNOWN is not UNSAT · no absence, recovery, or uniqueness claim</text>
+</svg>

@@ -44,6 +44,13 @@ such; empirical confirmations retain their sample counts.
 | A187 | Prospectively frozen eight-block shared-key stacking reduces fixed-resource ChaCha5 search decisions/conflicts by 20.93x/75.54x for complete b8 versus b1; every fixed-total-512-bit sparse stacked view also improves both counters. | `chacha20_smt_shared_key_multiblock_transfer_v1.*`, fullround-transfer manifest |
 | A188 | A predeclared Bitwuzla bitblast b8 view recovers the fresh reduced ChaCha5 40-bit assignment `0x5345585503`; independent recomputation matches all 4,096 target bits and rejects the control. | `chacha20_bitwuzla_round5_transfer_v1.*`, fullround-transfer manifest |
 | A189 | The prospectively selected Bitwuzla b8 route recovers fresh reduced ChaCha6 low20 assignment `0x6fa70`; bitblast/preprop b8 independently confirm 4,096 bits and the b1 route confirms 512 bits. | `chacha20_bitwuzla_round6_width20_transfer_v1.*`, fullround-transfer manifest |
+| A190--A194 | Complete assignment-free partitioning crosses the A190 ChaCha7 monolithic boundary and yields confirmed reduced-round assignments at rounds 7, 8, and 9; all stated complete-domain and open-cell boundaries are retained exactly. | `chacha20_bitwuzla_round{7,8,9}_*_v1.*`, fullround-transfer manifest |
+| A195--A198 | Four complete ChaCha10 covers—split8, split9, width-12 refinement, and eight-block two-budget—retain exact all-UNKNOWN representation/resource frontiers without shrinking the `2^20` candidate domain. | `chacha20_bitwuzla_round10_*_v1.*`, fullround-transfer manifest |
+| A199--A203 | Formula-atlas operators expose exact public ChaCha structure; layout conjugacy explains the dominant phase contrast; affine geometry, global CSE, and lane-major transfers retain their measured ChaCha10 boundaries. | `chacha20_{formula_operator_atlas,phase_conjugacy_holdout,round10_*}_v1.*`, fullround-transfer manifest |
+| A204 | Exact standalone-CNF calibration and 70-probe literal mapping independently recover the A188 model; the selected CaDiCaL reverse rule yields 32 valid UNKNOWN observations on the complete prospective ChaCha10 cover. | `chacha20_round10_external_cnf_reverse_v1.*`, fullround-transfer manifest |
+| A205-r2 | A complete 23-order by two-mode A188 calibration contains 16 confirmed SAT witnesses and 12 non-control structural candidates; `bidirectional_min_distance` is uniquely successful in both modes. The r2 correction changes metadata only. | `chacha20_a188_cnf_structural_ordering_v1.*`, fullround-transfer manifest |
+| A206 | The robust A205-r2 order transferred to every ChaCha10 prefix and both solver modes yields 64 valid UNKNOWN observations, with exact transforms and progress counters retained. | `chacha20_round10_bidirectional_min_distance_v1.*`, fullround-transfer manifest |
+| A207 | Twelve exact structural permutations and the 11-mode/352-cell plan are frozen before execution. All 352 new and 416 combined calibrated cells are valid UNKNOWN; reverse `output_unit_bfs_far` retains a systematic 2.759x-conflict/5.686x-decision progress outlier. | `chacha20_round10_structural_{order_archive,orders,portfolio}*`, fullround-transfer manifest |
 
 The filenames above are rooted at `research/results/v1/`; full hashes are in
 `FULLROUND_TRANSFER_SHA256SUMS`, `SHAKE_NATIVE_EXTENDED_SHA256SUMS`, and
@@ -83,6 +90,13 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | ChaCha A187 block stacking | All ten formulas return `unknown`; the retained object is the prospectively predicted fixed-resource search-shape change, not a recovered model. |
 | ChaCha A188 engine portfolio | Fresh reduced round 5 with 40 unknown key bits; the stored Z3 `invalid` row is the exact no-status-token parser boundary, while the predeclared Bitwuzla b8 model passes independent confirmation. |
 | ChaCha A189 round-depth transfer | Fresh reduced round 6 with 20 unknown and 236 known key bits; the recovered object is the stated low20 assignment. |
+| ChaCha A190--A194 partition transfers | A191/A192 cover their complete domains and retain the stated UNSAT cells; A193/A194 confirm one model while the other 31 cells remain UNKNOWN, so uniqueness is not asserted there. |
+| ChaCha A195--A198 round-10 frontiers | Complete structural coverage is not proof of absence when every bounded cell is UNKNOWN. |
+| ChaCha A199--A203 formula transfers | Public operator structure and representation effects are measured objects; A201 attributes the dominant contrast to known layout conjugacy and does not relabel it as a new break. |
+| ChaCha A204 external CNF | The A188 known-positive calibration is separate from the prospective A204 round-10 cover; the former recovers a model and the latter remains 32 UNKNOWN. |
+| ChaCha A205-r2 structural ordering | The known-positive model is available only for post-witness confirmation, not order construction or solver input; the r2 change corrects this metadata without rerunning or changing observations. |
+| ChaCha A206 structural transfer | All 64 statuses are UNKNOWN, not UNSAT; no round-10 partial-key recovery or uniqueness is claimed. |
+| ChaCha A207 structural portfolio | All 416 calibrated statuses are UNKNOWN, not UNSAT. The progress-map ratios are mechanistic solver counters measured under the frozen schedule, not a recovered model. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -102,7 +116,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A151 and A185--A189 claims above are governed by their newer JSON/Reader evidence and
+The A107--A151 and A185--A207 claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

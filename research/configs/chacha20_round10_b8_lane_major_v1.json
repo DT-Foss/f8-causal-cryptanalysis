@@ -1,0 +1,86 @@
+{
+  "anchors": {
+    "A188": {
+      "calibration_role": "known_round5_basis_selection_only",
+      "causal_sha256": "a717e615cfc005fe985a24059f7e6bedcd8008c460b274bb313f6ddfc53e7c78",
+      "original_b8_status": "sat",
+      "sha256": "d1a75d6456f75257cbd0be41864fad0810540508aa5c30239b16bd3998eef73a"
+    },
+    "A202": {
+      "causal_sha256": "fb2dd421e7a6ff89c668f908d6760a53a91728f2ce5881cde8188bff10522ac3",
+      "evidence_stage": "ROUND10_GLOBAL_CSE_COMPLETE_PARTITION_BOUNDARY_RETAINED",
+      "sha256": "4fbfc950984d3cb8eee85ba5532217cab2edae43e7ed8444ff2363259d3e990b"
+    }
+  },
+  "attempt_id": "A203",
+  "basis_calibration": {
+    "adjacent_xor": {
+      "formula_sha256": "b62616f260bb95816b205b36488133d4e26c5fa60330ab8dd7d76037c9fd0a25",
+      "status_at_A188_5000ms": "unknown"
+    },
+    "identity_lane_major": {
+      "formula_sha256": "9d8eac9eccea57e4139513a887c7825cf1759d66ec7d67a3b8e9750cd7649bbe",
+      "status_at_A188_5000ms": "sat"
+    },
+    "selection_rule": "retain_the_only_transformed_basis_that_preserves_A188_b8_SAT_at_the_original_5000ms_budget",
+    "zeta_cnot": {
+      "formula_sha256": "357382dea434c41f97f0fd4cc61d2546dca16fd12699166c577584d9acbe476f",
+      "status_at_A188_5000ms": "unknown"
+    }
+  },
+  "challenge_reuse_boundary": {
+    "correct_prefix_known_before_A203": false,
+    "public_challenge_reference": "research/configs/chacha20_bitwuzla_round10_width12_refinement_v1.json",
+    "public_challenge_reference_sha256": "041782b106f6d956dd74f5051c285d7aebe00abc7e614c44790dc6fe525d5b2e",
+    "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+    "unknown_assignment_recovered_before_A203": false
+  },
+  "compiler_plan": {
+    "assertion_order": "lane_major_then_block_ascending_0_through_7",
+    "definition_block_order": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "definition_count": 2364,
+    "formula_hash_list_sha256": "975ec27298fa731ee9d015aa379da7ddc6c999378f7373ae5a0b09ad58a698e6",
+    "formula_plan_sha256": "a428f38f62ddb69ea5b2b0a6d68407fe1b0cc6304b4f1332fb9082c9bae235fc",
+    "lane_major_base_bytes": 148714,
+    "lane_major_base_sha256": "d311596ae628e37cd7be30c61b03478cd2b72437c1f54f3739152f62a9a6cb66",
+    "output_equality_count": 128,
+    "preprocessed_baseline_sha256": "532479d8427f02b6fa1304f9acc95c7f6806c53130d561fb438c5d61ef851bd9",
+    "preprocessed_bytes": 231733,
+    "preprocessed_lane_major_sha256": "7722f9deb96030d57244029facee525211b3b267027744fe80a7f79a34e69da8",
+    "semantic_rule": "reorder_the_same_128_midstate_equalities_only_without_adding_removing_or_rewriting_any_equality"
+  },
+  "execution_plan_sha256": "df08ae1393541d19d6d8ca3c74b2afeb94813c3176116dc52a3fa3293d14e2d6",
+  "information_boundary": {
+    "A203_solver_outcomes_used_before_protocol_freeze": false,
+    "assertion_order_budget_or_cell_order_changed_after_any_A203_outcome": false,
+    "early_stop_permitted": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false
+  },
+  "prospective_predictions": {
+    "primary": "the_complete_10000ms_lane_major_prefix_cover_returns_at_least_one_independently_confirmed_model",
+    "secondary": "the_complete_lane_major_cover_resolves_at_least_one_cell_as_SAT_or_UNSAT_within_10000ms",
+    "success_rule": "all_32_lane_major_cells_execute_without_early_stop_and_every_returned_model_matches_all_4096_target_bits_while_rejecting_the_control"
+  },
+  "protocol_state": "frozen_after_A188_basis_calibration_and_A202_boundary_before_any_A203_solver_execution",
+  "schema": "chacha20-round10-b8-lane-major-protocol-v1",
+  "solver_binaries": {
+    "bitwuzla": {
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "path_at_freeze": "/opt/homebrew/bin/bitwuzla",
+      "sat_backend": "cadical",
+      "version": "0.9.1"
+    }
+  },
+  "solver_time_limit_milliseconds": 10000,
+  "variant_order_sha256": "8d95a151a7cabf5267b2cc2d3e282784d592eaa5795d7ad1422447954928d17c"
+}

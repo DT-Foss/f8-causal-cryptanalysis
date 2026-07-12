@@ -1,0 +1,131 @@
+{
+  "anchors": {
+    "A198": {
+      "causal_sha256": "b7c4e1302594e266c7958057221fb4101fb5ef5ee284792d6ca93e43386dd514",
+      "evidence_stage": "ROUND10_B8_COMPLETE_PARTITION_BOUNDARY_RETAINED",
+      "result": "research/results/v1/chacha20_bitwuzla_round10_b8_partition_transfer_v1.json",
+      "sha256": "693367464ab488c49d386c1d011e8c45e7fb094cceeb37352934dde121773373"
+    },
+    "A199": {
+      "causal_sha256": "bb509b61239bf3bc4396bac2b882820204deba6683186f9f5a89f65c1968fc89",
+      "evidence_stage": "PUBLIC_FORMULA_OPERATOR_ATLAS_MIXED_BOUNDARY_RETAINED",
+      "result": "research/results/v1/chacha20_formula_operator_atlas_v1.json",
+      "sha256": "16c1025308bae64e2c45339804ec0a39d5fcb927c1cd0a1dcbf2ca8dfd3d5c48"
+    }
+  },
+  "attempt_id": "A200",
+  "challenge_reuse_boundary": {
+    "correct_cell_known_before_A200": false,
+    "prior_complete_numeric_prefix_covers": {
+      "10000_milliseconds": "32_of_32_unknown",
+      "30000_milliseconds": "32_of_32_unknown"
+    },
+    "public_challenge_reference": "research/configs/chacha20_bitwuzla_round10_width12_refinement_v1.json",
+    "public_challenge_reference_sha256": "041782b106f6d956dd74f5051c285d7aebe00abc7e614c44790dc6fe525d5b2e",
+    "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+    "unknown_assignment_recovered_before_A200": false
+  },
+  "execution_plan_sha256": "a9cc44aece75c0f13933e980dd8876eaaeae6cf747f4292196065ffdc111245f",
+  "geometry_masks_sha256": "9b05f02259ed38e9590092b5bbdc31512f2644a14863440c426fa471cef4b457",
+  "geometry_plan": {
+    "fiedler_filtration": {
+      "derivation": "A199_greedy_nested_thresholds_8_through_12_of_oriented_laplacian_mode_1",
+      "mask_hex_order": [
+        "0x0087f",
+        "0x00c7f",
+        "0x10c7f",
+        "0x12c7f",
+        "0x1ac7f"
+      ],
+      "syndrome_map_sha256": "7d5f36876224beb1fa9981a161c6217b227aaa31e7a8549dcd7ba64edff93507"
+    },
+    "gray_prefix_control": {
+      "derivation": "top_five_bits_of_x_xor_x_shift_right_1",
+      "mask_hex_order": [
+        "0x80000",
+        "0xc0000",
+        "0x60000",
+        "0x30000",
+        "0x18000"
+      ],
+      "syndrome_map_sha256": "1f5832a50066ae2a7807c72693bf31adebe6ad85fefa6395c7e5c30229ca5033"
+    },
+    "laplacian_distinct_modes": {
+      "derivation": "top_10_oriented_coordinates_from_each_of_public_normalized_laplacian_modes_1_through_5",
+      "mask_hex_order": [
+        "0x10c7f",
+        "0x2a9e3",
+        "0xf806d",
+        "0x9b05b",
+        "0x4a6cd"
+      ],
+      "source_mode_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "syndrome_map_sha256": "3e8ecf4f02ad12ebcc94ca7b11ee30d11e300f63cd40b5917f60d0f14eb97401"
+    },
+    "signed_svd_distinct_modes": {
+      "derivation": "top_10_coordinates_of_paired_sign_oriented_U_minus_V_for_nonleading_cross_copy_SVD_modes_1_through_5",
+      "mask_hex_order": [
+        "0x12e57",
+        "0x833d9",
+        "0xe8d31",
+        "0xfa05c",
+        "0x95333"
+      ],
+      "source_mode_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "syndrome_map_sha256": "bc17192f06d797951651a0c27023b43816f662851346311d6e1bbf68340e306a"
+    }
+  },
+  "geometry_order": [
+    "gray_prefix_control",
+    "fiedler_filtration",
+    "laplacian_distinct_modes",
+    "signed_svd_distinct_modes"
+  ],
+  "information_boundary": {
+    "A200_solver_outcomes_used_before_protocol_freeze": false,
+    "cell_or_geometry_order_changed_after_any_A200_outcome": false,
+    "early_stop_permitted": false,
+    "geometry_masks_selected_from_public_A199_data_only": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false
+  },
+  "partition_invariants": {
+    "candidate_count_per_cell": 32768,
+    "cell_count_per_geometry": 32,
+    "complete_candidate_count_per_geometry": 1048576,
+    "every_geometry_binary_rank": 5,
+    "every_geometry_complete_and_disjoint": true,
+    "free_bits_per_cell": 15,
+    "geometry_count": 4,
+    "same_b8_formula_same_challenge_same_budget": true
+  },
+  "prospective_predictions": {
+    "comparative": "laplacian_distinct_modes_or_signed_svd_distinct_modes_exceeds_fiedler_filtration_in_confirmed_model_count_or_failing_that_in_resolved_sat_plus_unsat_cell_count",
+    "primary": "at_least_one_of_fiedler_filtration_laplacian_distinct_modes_or_signed_svd_distinct_modes_returns_an_independently_confirmed_model",
+    "success_rule": "all_128_cells_execute_without_early_stop_and_every_returned_model_matches_all_4096_target_bits_while_rejecting_the_control"
+  },
+  "protocol_state": "frozen_after_A199_public_geometry_derivation_before_any_A200_solver_execution",
+  "schema": "chacha20-round10-public-geometry-partition-protocol-v1",
+  "solver_binaries": {
+    "bitwuzla": {
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "path_at_freeze": "/opt/homebrew/bin/bitwuzla",
+      "sat_backend": "cadical",
+      "version": "0.9.1"
+    }
+  },
+  "solver_time_limit_milliseconds": 10000,
+  "variant_order_sha256": "3202edb869a43a6457b3a44ea45cce257227d217f36f66584749ca6b5814d6f9"
+}

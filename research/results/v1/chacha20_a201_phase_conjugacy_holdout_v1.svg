@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="680" viewBox="0 0 1240 680" role="img" aria-labelledby="title desc">
+  <title id="title">A201 ChaCha phase-conjugacy holdout</title>
+  <desc id="desc">Eight unseen public batches show that correct row-rotation conjugation removes the dominant raw column-diagonal layout mismatch, leaving a smaller residual at same-phase scale.</desc>
+<style>.title{font:700 24px system-ui,sans-serif;fill:#17202a}.sub{font:600 15px system-ui,sans-serif;fill:#334155}.small{font:12px system-ui,sans-serif;fill:#475569}.grid{stroke:#d8dee7}.axis{stroke:#64748b;stroke-width:1.2}</style>
+<rect width="1240" height="680" fill="#fff"/>
+<text x="36" y="42" class="title">A201 — prospective ChaCha phase-conjugacy holdout</text>
+<text x="36" y="69" class="sub">8 unseen public SHAKE256 batches × 16 states · 20 rounds · no hidden assignment · no solver</text>
+<rect x="36" y="94" width="1168" height="432" rx="9" fill="#fafbfc" stroke="#9aa6b2"/>
+<line x1="94.0" y1="474.00" x2="1172.0" y2="474.00" class="grid"/>
+<text x="82" y="478.00" text-anchor="end" class="small">0.0</text>
+<line x1="94.0" y1="411.45" x2="1172.0" y2="411.45" class="grid"/>
+<text x="82" y="415.45" text-anchor="end" class="small">0.1</text>
+<line x1="94.0" y1="348.91" x2="1172.0" y2="348.91" class="grid"/>
+<text x="82" y="352.91" text-anchor="end" class="small">0.2</text>
+<line x1="94.0" y1="286.36" x2="1172.0" y2="286.36" class="grid"/>
+<text x="82" y="290.36" text-anchor="end" class="small">0.3</text>
+<line x1="94.0" y1="223.82" x2="1172.0" y2="223.82" class="grid"/>
+<text x="82" y="227.82" text-anchor="end" class="small">0.4</text>
+<line x1="94.0" y1="161.27" x2="1172.0" y2="161.27" class="grid"/>
+<text x="82" y="165.27" text-anchor="end" class="small">0.5</text>
+<text x="94.00" y="500" text-anchor="middle" class="small">batch 0</text>
+<text x="248.00" y="500" text-anchor="middle" class="small">batch 1</text>
+<text x="402.00" y="500" text-anchor="middle" class="small">batch 2</text>
+<text x="556.00" y="500" text-anchor="middle" class="small">batch 3</text>
+<text x="710.00" y="500" text-anchor="middle" class="small">batch 4</text>
+<text x="864.00" y="500" text-anchor="middle" class="small">batch 5</text>
+<text x="1018.00" y="500" text-anchor="middle" class="small">batch 6</text>
+<text x="1172.00" y="500" text-anchor="middle" class="small">batch 7</text>
+<circle data-series="raw" cx="94.00" cy="148.33" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="248.00" cy="149.15" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="402.00" cy="148.79" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="556.00" cy="148.18" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="710.00" cy="147.79" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="864.00" cy="148.70" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="1018.00" cy="149.00" r="4" fill="#c2413b"/>
+<circle data-series="raw" cx="1172.00" cy="147.37" r="4" fill="#c2413b"/>
+<polyline data-line="raw" points="94.00,148.33 248.00,149.15 402.00,148.79 556.00,148.18 710.00,147.79 864.00,148.70 1018.00,149.00 1172.00,147.37" fill="none" stroke="#c2413b" stroke-width="2.6"/>
+<circle data-series="wrong conjugation" cx="94.00" cy="369.19" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="248.00" cy="368.92" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="402.00" cy="369.22" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="556.00" cy="369.37" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="710.00" cy="369.89" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="864.00" cy="368.89" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="1018.00" cy="368.91" r="4" fill="#d97706"/>
+<circle data-series="wrong conjugation" cx="1172.00" cy="369.21" r="4" fill="#d97706"/>
+<polyline data-line="wrong conjugation" points="94.00,369.19 248.00,368.92 402.00,369.22 556.00,369.37 710.00,369.89 864.00,368.89 1018.00,368.91 1172.00,369.21" fill="none" stroke="#d97706" stroke-width="2.6"/>
+<circle data-series="correct conjugation" cx="94.00" cy="465.22" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="248.00" cy="465.36" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="402.00" cy="466.69" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="556.00" cy="465.52" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="710.00" cy="465.77" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="864.00" cy="465.15" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="1018.00" cy="464.28" r="4" fill="#2563a8"/>
+<circle data-series="correct conjugation" cx="1172.00" cy="465.11" r="4" fill="#2563a8"/>
+<polyline data-line="correct conjugation" points="94.00,465.22 248.00,465.36 402.00,466.69 556.00,465.52 710.00,465.77 864.00,465.15 1018.00,464.28 1172.00,465.11" fill="none" stroke="#2563a8" stroke-width="2.6"/>
+<circle data-series="same-phase lag 2" cx="94.00" cy="465.44" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="248.00" cy="465.71" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="402.00" cy="465.84" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="556.00" cy="465.67" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="710.00" cy="465.46" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="864.00" cy="464.90" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="1018.00" cy="465.36" r="4" fill="#0f766e"/>
+<circle data-series="same-phase lag 2" cx="1172.00" cy="466.28" r="4" fill="#0f766e"/>
+<polyline data-line="same-phase lag 2" points="94.00,465.44 248.00,465.71 402.00,465.84 556.00,465.67 710.00,465.46 864.00,464.90 1018.00,465.36 1172.00,466.28" fill="none" stroke="#0f766e" stroke-width="2.6"/>
+<line x1="300" y1="112" x2="324" y2="112" stroke="#c2413b" stroke-width="3"/>
+<text x="330" y="117" class="small">raw</text>
+<line x1="520" y1="112" x2="544" y2="112" stroke="#d97706" stroke-width="3"/>
+<text x="550" y="117" class="small">wrong conjugation</text>
+<line x1="740" y1="112" x2="764" y2="112" stroke="#2563a8" stroke-width="3"/>
+<text x="770" y="117" class="small">correct conjugation</text>
+<line x1="960" y1="112" x2="984" y2="112" stroke="#0f766e" stroke-width="3"/>
+<text x="990" y="117" class="small">same-phase lag 2</text>
+<rect x="36" y="548" width="1168" height="96" rx="9" fill="#f8fafc" stroke="#9aa6b2"/>
+<text x="58" y="578" class="sub">Correct alignment: 0.011691–0.015537; raw/aligned ratio 33.44–44.47×.</text>
+<text x="58" y="607" class="small">Mechanism: known Column/Diagonal row-rotation conjugacy explains the dominant raw factor-40 signal.</text>
+<text x="58" y="629" class="small">A smaller nonzero state-dependent residual remains at same-phase scale; this is not a new carry leak or cryptanalytic break.</text>
+</svg>
