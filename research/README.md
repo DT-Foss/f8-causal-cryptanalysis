@@ -747,6 +747,16 @@ and restarts rise in every child relative to its matched A207 parent, and
 decision/propagation density rises in all 32 parent groups. See
 `reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md`.
 
+A210 composes A209's decision-rich reset with a native CaDiCaL assumptions
+loop that retains solver state across each eight-child sibling family. Numeric
+and local three-bit Gray orders execute as independent complete 256-cell
+covers. All 512 outcomes remain valid `unknown`, while every parent-mode group
+has more decisions and conflicts in its first child than in every later child.
+Aggregate decisions fall to about 14.1% and conflicts to about 29% of matched
+fresh A209 cells; the near-equal Numeric/Gray totals isolate retained learned
+state as the dominant mechanism. See
+`reports/CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md`.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs

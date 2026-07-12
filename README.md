@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A209 full-round, reduced-round, and frozen
+evidence, and the subsequent A107--A210 full-round, reduced-round, and frozen
 pre-execution relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
@@ -93,6 +93,7 @@ precisely:
 | A207 | ChaCha10 complete structural portfolio | All 352 new and 416 combined calibrated cell modes are valid UNKNOWN; `output_unit_bfs_far` is a systematic 2.759x-conflict/5.686x-decision progress outlier | Prospectively frozen 12-order archive; 11 remaining modes; complete 32-prefix cover; no early stop | Exact structural-order boundary and progress map | [result](research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md), [preflight](research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_PREFLIGHT_V1.md) |
 | A208 | ChaCha10 BFS-far long-budget transfer | All 32 cells remain valid UNKNOWN at 60 seconds; exact integer counters show an all-prefix transition from conflict/decision work toward propagation/restart work after the first ten seconds | Same complete partition, eight-block global-CSE CNF, `output_unit_bfs_far`, reverse CaDiCaL; no early stop | Exact temporal search-phase boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md) |
 | A209 | ChaCha10 BFS-far Width-12 composition | All 256 cells remain valid UNKNOWN, while complete refinement restores a decision-rich phase: decisions, propagations, and restarts rise in 256/256 children and decision/propagation density rises in 32/32 parent groups | Complete `2^20` Width-12 cover; eight-block global CSE; rederived multi-source BFS-far order; ten seconds per child | Exact phase-reset composition boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md) |
+| A210 | ChaCha10 incremental sibling learning | Both independent 256-cell covers remain valid UNKNOWN, while retained clauses reduce aggregate decisions to 14.1% and conflicts to about 29% of fresh A209 cells; the first child dominates every later sibling in all 64 parent-mode groups | Native CaDiCaL 3.0 assumptions; complete Numeric and three-bit Gray covers; solver state retained only within each eight-child parent | Exact learned-state transfer mechanism | [report](research/reports/CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -112,7 +113,7 @@ indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_
 and the append-only [attempt log](research/ATTEMPT_LOG.md). The earlier
 A107--A151 class ledger remains in [docs/RESULTS.md](docs/RESULTS.md).
 
-A185--A206 form a separate prospective reduced-round progression: a fresh
+A185--A210 form a separate prospective reduced-round progression: a fresh
 ChaCha4 directional recovery, its exact ChaCha5 fixed-budget boundary, a
 prospectively retained eight-block search-shape change, a fresh ChaCha5
 cross-engine 40-bit recovery, complete ChaCha7--9 recoveries, and a sequence of
@@ -127,7 +128,11 @@ A208 transfers that outlier to 60 seconds on every prefix and isolates a
 systematic late propagation/restart phase. A209 composes the retained mechanism
 with the complete Width-12 cover and systematically resets the search toward
 decision-rich work across all 256 children, while retaining the exact UNKNOWN
-status boundary.
+status boundary. A210 then retains globally valid learned clauses across each
+eight-child sibling family: all 512 cells remain UNKNOWN, but decisions collapse
+after the first child in every one of the 64 parent-mode groups. The independent
+Numeric/Gray control shows that retained state, not local traversal order,
+dominates this transfer.
 
 ## Three connected methods
 
@@ -172,7 +177,7 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A209 frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A210 frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -196,11 +201,13 @@ in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
 The symbolic SHAKE tier additionally requires the external Z3 CLI at exact
 semantic version 4.15.4. Explicit A188--A203 production portfolios require the
-applicable hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4 identities. A204--A209
+applicable hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4 identities. A204--A210
 add CaDiCaL 3.0.0 and use Kissat 4.0.4, CryptoMiniSat 5.14.7, and MiniSat 2.2.1
 for the frozen A204 calibration matrix. `brew bundle` installs the declared
 standalone-CNF CLI set on macOS; the pinned `z3-solver` wheel supplies exact Z3
-4.15.4. Retained-artifact tests verify identities, results, controls,
+4.15.4. A210 additionally compiles its committed C++17 assumptions helper
+against the hash-gated CaDiCaL header and static library. Retained-artifact
+tests verify identities, results, controls,
 graphs, figures, order archives, and inverse mappings without launching the
 production solver portfolios.
 
@@ -211,7 +218,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A209 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A210 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

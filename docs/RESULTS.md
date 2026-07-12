@@ -608,9 +608,9 @@ typed Causal graphs, and deterministic figures are authenticated by
 `FULLROUND_TRANSFER_SHA256SUMS`. Focused tests reconstruct this evidence without
 rerunning the production solvers.
 
-## ChaCha partition, formula, and structural-CNF progression: A190--A209
+## ChaCha partition, formula, and structural-CNF progression: A190--A210
 
-A190--A209 continue the same reduced-round program with complete domain covers,
+A190--A210 continue the same reduced-round program with complete domain covers,
 explicit `unknown`/`unsat` separation, independent model confirmation, and
 prospectively frozen search-phase transfers.
 
@@ -667,8 +667,14 @@ prospectively frozen search-phase transfers.
   rederived BFS-far order. All 256 cells remain valid UNKNOWN; decisions,
   propagations, and restarts rise in every child, and decision/propagation
   density rises in all 32 parent groups.
+- [A210](../research/reports/CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md)
+  executes independent Numeric and three-bit Gray complete covers through a
+  native CaDiCaL assumptions loop. All 512 cells remain valid UNKNOWN, while
+  retained clauses reduce total decisions to about 14.1% and conflicts to
+  about 29% of matched fresh A209 cells. The first child dominates every later
+  sibling in all 64 parent-mode groups, isolating learned state as the transfer.
 
-All A190--A209 retained artifacts, Causal graphs, figures, formula/order
+All A190--A210 retained artifacts, Causal graphs, figures, formula/order
 archives, and focused no-solver tests are included in the transfer manifest.
 
 ## Direct-output and PQC program

@@ -58,6 +58,7 @@ export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
   tests/test_chacha20_round10_structural_portfolio_result.py \
   tests/test_chacha20_round10_bfs_far_long_budget.py \
   tests/test_chacha20_round10_bfs_far_width12_refinement.py \
+  tests/test_chacha20_round10_incremental_sibling_learning.py \
   tests/test_chacha20_cnf_structural_figures.py \
   tests/test_chacha20_smt_round5_retained_figures.py \
   tests/test_shake_native_window_solver.py \

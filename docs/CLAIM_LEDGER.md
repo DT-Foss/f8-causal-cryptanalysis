@@ -53,6 +53,7 @@ such; empirical confirmations retain their sample counts.
 | A207 | Twelve exact structural permutations and the 11-mode/352-cell plan are frozen before execution. All 352 new and 416 combined calibrated cells are valid UNKNOWN; reverse `output_unit_bfs_far` retains a systematic 2.759x-conflict/5.686x-decision progress outlier. | `chacha20_round10_structural_{order_archive,orders,portfolio}*`, fullround-transfer manifest |
 | A208 | The selected reverse `output_unit_bfs_far` order remains a complete 32-cell UNKNOWN boundary at sixty seconds, while exact early/late integer counters establish a systematic all-prefix transition toward propagation/restart work after ten seconds. | `chacha20_round10_bfs_far_long_budget_v1.*`, fullround-transfer manifest |
 | A209 | Complete Width-12 refinement plus a rederived multi-source BFS-far order retains 256 UNKNOWN cells but systematically resets the search phase: decisions, propagations, and restarts increase in every child and decision/propagation density increases in every parent group. | `chacha20_round10_bfs_far_width12_refinement_v1.*`, fullround-transfer manifest |
+| A210 | Two independent assumption-incremental 256-cell covers retain complete UNKNOWN status vectors while learned state systematically replaces repeated branching: every parent-mode group's first child has more decisions and conflicts than all seven later siblings, and aggregate decisions fall to about 14.1% of matched fresh A209 cells. | `chacha20_round10_incremental_sibling_learning_v1.*`, native helper source, fullround-transfer manifest |
 
 The filenames above are rooted at `research/results/v1/`; full hashes are in
 `FULLROUND_TRANSFER_SHA256SUMS`, `SHAKE_NATIVE_EXTENDED_SHA256SUMS`, and
@@ -101,6 +102,7 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | ChaCha A207 structural portfolio | All 416 calibrated statuses are UNKNOWN, not UNSAT. The progress-map ratios are mechanistic solver counters measured under the frozen schedule, not a recovered model. |
 | ChaCha A208 long-budget phase | All 32 statuses are UNKNOWN, not UNSAT. The retained result is an exact temporal solver-counter transition for the selected order, not a recovered model or an all-order theorem. |
 | ChaCha A209 Width-12 phase reset | All 256 statuses are UNKNOWN, not UNSAT. The systematic counter-density reset is a representation/search-phase result, not a recovered key or terminal cell. |
+| ChaCha A210 incremental sibling learning | All 512 statuses are UNKNOWN, not UNSAT. The retained object is a complete-domain learned-state transfer and exact Numeric/Gray traversal control; it is not a recovered key, terminal cell, or complete-domain resolution. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -120,7 +122,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A151 and A185--A209 claims above are governed by their newer JSON/Reader evidence and
+The A107--A151 and A185--A210 claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

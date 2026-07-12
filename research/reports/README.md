@@ -412,3 +412,13 @@ rederived BFS-far order. All 256 cells remain valid internal-timeout `unknown`,
 but the phase reset is systematic: decisions, propagations, and restarts
 increase in 256/256 children, while decision/propagation density increases in
 all 32 parent groups.
+
+`CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md` records
+A210's complete native assumption-incremental factorial. Numeric and local
+three-bit Gray modes each cover all 256 Width-12 cells with no invalid output
+or early stop. All cells remain `unknown`, but retained sibling state reduces
+total decisions to about 14.1% and conflicts to about 29% of fresh A209 cells.
+The first child has more decisions and conflicts than every later sibling in
+all 64 parent-mode groups, while Numeric and Gray aggregate metrics remain near
+each other. This isolates retained learned state, rather than local traversal
+order, as the dominant transfer.

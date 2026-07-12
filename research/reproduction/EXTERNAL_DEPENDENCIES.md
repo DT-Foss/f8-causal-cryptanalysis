@@ -57,19 +57,29 @@ and validate the stored solver identity records without invoking or requiring
 any of these executables. An explicit new execution is fail-closed unless every
 identity required by the applicable frozen protocol matches.
 
-## A204--A209 standalone CNF portfolio
+## A204--A210 standalone CNF portfolio
 
 A204 exports the exact Bitwuzla bitblast formulas to DIMACS and calibrates four
-standalone SAT engines. A205--A209 use the retained CaDiCaL identity. The
-executable paths themselves are host-local; every frozen protocol gates version
-and binary digest:
+standalone SAT engines. A205--A209 use the retained CaDiCaL CLI identity. A210
+compiles its committed C++17 assumption-loop helper against the retained
+CaDiCaL 3.0.0 API identity. Executable paths themselves are host-local; every
+frozen protocol gates version and binary digest:
 
 | Solver | Version | Executable SHA-256 | Role |
 |---|---|---|---|
-| CaDiCaL | 3.0.0 | `c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3` | A204 calibration; A204--A209 default/reverse execution |
+| CaDiCaL | 3.0.0 | `c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3` | A204 calibration; A204--A209 default/reverse CLI execution |
 | Kissat | 4.0.4 | `05d6f3e9c402a1fe8853b0746e384e1b3d1c4a550e255f11daa2461d279aa848` | A204 calibration matrix |
 | CryptoMiniSat | 5.14.7 | `c1f313d66f9253964a778455ee84bc64dbe786602b0d85c9d55813d3ee0682fe` | A204 calibration matrix |
 | MiniSat | 2.2.1 | `260899613fcfdbb5d1667c4ca57e8a5d75d6ba396109c2209c3e3ff99e9c3ab7` | A204 calibration matrix |
+
+A210's separately pinned native build inputs are:
+
+| Build input | Identity | SHA-256 |
+|---|---|---|
+| Apple Clang | `21.0.0 (clang-2100.1.1.101)` | `179301dcb41ea78accc3fa0048a7e6f6710d891945a751a34addd622020c1818` |
+| CaDiCaL header | 3.0.0 API | `b7111690c61935b9c096d3701be59b3c3d26c555eab8e070f19eb2a97dc5d38c` |
+| CaDiCaL static library | 3.0.0 | `44cae3728485b4fd5736ce7cb986021236652daeda9cca227a2c4ac17d3a8a7f` |
+| Compiled A210 helper | source `d5742b03...69c6` | `b214c67932ff7092f802976fa132977a9b5447d0d05f76c64da0dd83d307301e` |
 
 On macOS, `brew bundle` installs the declared standalone-CNF CLI set; exact Z3
 4.15.4 comes from the pinned `z3-solver` wheel. Homebrew does not guarantee

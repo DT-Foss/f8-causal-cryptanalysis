@@ -17,6 +17,8 @@ TEXT_SUFFIXES = {
     ".cff",
     ".cls",
     ".csv",
+    ".cnf",
+    ".cpp",
     ".json",
     ".md",
     ".py",
@@ -228,6 +230,9 @@ def main() -> int:
         "chacha20_round10_bfs_far_width12_refinement": (
             "CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md"
         ),
+        "chacha20_round10_incremental_sibling_learning": (
+            "CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md"
+        ),
     }
     for stem, report in retained_chacha_transfers.items():
         required.extend(
@@ -271,11 +276,27 @@ def main() -> int:
             "tests/test_chacha20_round10_structural_order_archive.py",
             "tests/test_chacha20_round10_structural_portfolio.py",
             "tests/test_chacha20_round10_structural_portfolio_result.py",
+            "research/native/cadical_incremental_assumptions.cpp",
+            "tests/fixtures/cadical_incremental_assumptions_toy.cnf",
+            "tests/fixtures/cadical_incremental_assumptions_base_unsat.cnf",
         ]
     )
     for item in required:
         if not (ROOT / item).is_file():
             failures.append(f"missing publication file: {item}")
+
+    forbidden_checkpoint_files = [
+        "research/configs/chacha20_round10_global_incremental_cover_v1.json",
+        "research/experiments/chacha20_round10_global_incremental_cover.py",
+        "research/native/cadical_global_incremental_assumptions.cpp",
+        "research/native/build/cadical_incremental_assumptions",
+        "research/results/v1/chacha20_round10_global_incremental_cover_v1.json",
+        "research/results/v1/chacha20_round10_global_incremental_cover_v1.causal",
+        "tests/test_chacha20_round10_global_incremental_cover.py",
+    ]
+    for item in forbidden_checkpoint_files:
+        if (ROOT / item).exists():
+            failures.append(f"out-of-scope checkpoint file: {item}")
 
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     if "https://github.com/DT-Foss/f8-causal-cryptanalysis" not in citation:
@@ -416,6 +437,80 @@ def main() -> int:
         == 1.614886051905536
     ):
         failures.append("A209 complete Width-12 phase-reset boundary differs")
+
+    a210_result_path = results / "chacha20_round10_incremental_sibling_learning_v1.json"
+    if (
+        hashlib.sha256(a210_result_path.read_bytes()).hexdigest()
+        != "1765ddabcec9c35d778bbb6e4c4e4aadc66277e7d9255d1f2a8ffdcd7b8152ce"
+        or hashlib.sha256(
+            (results / "chacha20_round10_incremental_sibling_learning_v1.causal").read_bytes()
+        ).hexdigest()
+        != "ff7f2019001d4c0e8478dd35476d975dde5b6faa1110c0383fbffba9091a6586"
+    ):
+        failures.append("A210 retained artifact identity differs")
+    a210 = json.loads(a210_result_path.read_bytes())
+    a210_counts = a210["comparisons"]["per_mode_status_counts"]
+    a210_metrics = a210["comparative_metrics"]["mode_vs_A209_summaries"]
+    observations = a210["execution"]["observations"]
+    grouped: dict[tuple[str, str], list[dict]] = {}
+    for row in observations:
+        grouped.setdefault((row["mode"], row["parent_prefix5"]), []).append(row)
+    first_child_dominance = all(
+        len(rows) == 8
+        and sorted(rows, key=lambda row: row["child_index"])[0]["metrics_delta"]["decisions"]
+        > max(
+            row["metrics_delta"]["decisions"]
+            for row in sorted(rows, key=lambda row: row["child_index"])[1:]
+        )
+        and sorted(rows, key=lambda row: row["child_index"])[0]["metrics_delta"]["conflicts"]
+        > max(
+            row["metrics_delta"]["conflicts"]
+            for row in sorted(rows, key=lambda row: row["child_index"])[1:]
+        )
+        for rows in grouped.values()
+    )
+    if not (
+        a210["evidence_stage"] == "ROUND10_INCREMENTAL_COMPLETE_BOUNDARY_RETAINED"
+        and a210_counts
+        == {
+            "gray_incremental": {"invalid": 0, "sat": 0, "unknown": 256, "unsat": 0},
+            "numeric_incremental": {
+                "invalid": 0,
+                "sat": 0,
+                "unknown": 256,
+                "unsat": 0,
+            },
+        }
+        and a210["comparisons"]["parent_run_count"] == 64
+        and a210["comparisons"]["child_observation_count"] == 512
+        and a210["comparisons"]["early_stop_used"] is False
+        and a210["confirmations"] == []
+        and len(observations) == 512
+        and len(a210["execution"]["parent_runs"]) == 64
+        and len(grouped) == 64
+        and first_child_dominance
+        and a210_metrics["numeric_incremental"]["decisions"]["total_ratio"]
+        == 0.14107693425789813
+        and a210_metrics["gray_incremental"]["decisions"]["total_ratio"]
+        == 0.14185557384819422
+        and a210_metrics["numeric_incremental"]["conflicts"]["total_ratio"]
+        == 0.2991561572326791
+        and a210_metrics["gray_incremental"]["conflicts"]["total_ratio"]
+        == 0.29287909485276054
+        and a210["comparative_metrics"]["ordered_mode_summary"]["gray_over_numeric"][
+            "decisions"
+        ]["total_ratio"]
+        == 1.0055192551099295
+        and a210["comparative_metrics"]["ordered_mode_summary"]["gray_over_numeric"][
+            "conflicts"
+        ]["total_ratio"]
+        == 0.9790174387918871
+        and a210["causal"]["graph_sha256"]
+        == "cc450abd4035fc9f823234a8001a37f59cd1a7ec8a6e2839a366d8b34a229363"
+        and a210["causal"]["explicit_triplets"] == 8
+        and a210["causal"]["provenance_verified"] is True
+    ):
+        failures.append("A210 complete incremental learned-state boundary differs")
 
     deck = ROOT / "paper/nano2026/presentation/Foss_CASI_Nano-IoT_IEEE_NANO_2026.pptx"
     if deck.is_file():

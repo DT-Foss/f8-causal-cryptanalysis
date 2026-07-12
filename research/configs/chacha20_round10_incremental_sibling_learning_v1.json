@@ -1,0 +1,229 @@
+{
+  "schema": "chacha20-round10-incremental-sibling-learning-protocol-v1",
+  "attempt_id": "A210",
+  "protocol_state": "frozen_after_complete_A209_phase_reset_boundary_and_native_incremental_toy_validation_before_any_A210_round10_helper_execution",
+  "anchors": {
+    "A209": {
+      "protocol": "research/configs/chacha20_round10_bfs_far_width12_refinement_v1.json",
+      "protocol_sha256": "48ccb1bdbd69a2de0db29eab4dabe8939c8ed98c633b757b0a911738ba3b958f",
+      "runner": "research/experiments/chacha20_round10_bfs_far_width12_refinement.py",
+      "runner_sha256": "02d0209b3e07893400169e3d620b9a08d1eef7e0bcda09c5907bfe13e641f884",
+      "artifact": "research/results/v1/chacha20_round10_bfs_far_width12_refinement_v1.json",
+      "sha256": "242a87fd56da3fcf60e6ae4c1a5dd75effc9a2293a41496ea71f4c4342cc5c1e",
+      "causal_artifact": "research/results/v1/chacha20_round10_bfs_far_width12_refinement_v1.causal",
+      "causal_sha256": "577f8fdbf41d95d6a61316103c48cc6f366311821b830ac2e4d11b7f4f79eb7f",
+      "causal_graph_sha256": "21090e1289ff3cd46ec5403c1a0ab81a5272f056eb5a72ce6da08491aa48eeb1",
+      "evidence_stage": "ROUND10_BFS_FAR_WIDTH12_COMPLETE_BOUNDARY_RETAINED"
+    }
+  },
+  "selection_basis": {
+    "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+    "A209_status_counts": {
+      "sat": 0,
+      "unsat": 0,
+      "unknown": 256,
+      "invalid": 0
+    },
+    "A209_compute_normalized_child_over_parent": {
+      "conflicts": 1.0398057000026804,
+      "decisions": 2.7925087307017944,
+      "propagations": 1.614886051905536,
+      "restarts": 6.634065550906555,
+      "decisions_per_propagation": 1.7292295808776634
+    },
+    "A209_all_256_child_directions": {
+      "decisions_above_parent": true,
+      "propagations_above_parent": true,
+      "restarts_above_parent": true
+    },
+    "A209_all_32_parent_decisions_per_propagation_above_parent": true,
+    "A209_parent_decisions_per_propagation_ratio_range": [
+      1.18197724560133,
+      2.1704799900516685
+    ],
+    "mechanistic_consequence": "retain_the_A209_decision_rich_width12_reset_but_share_globally_valid_learned_clauses_across_the_eight_sibling_assumption_cells_of_each_parent",
+    "formula_transfer_family": "T01_ordered_noncommutative_update_composition",
+    "order_factorial": "numeric_and_three_bit_binary_reflected_Gray_orders_each_execute_as_an_independent_complete_cover",
+    "any_A210_round10_incremental_outcome_known_at_selection": false
+  },
+  "native_helper": {
+    "source": "research/native/cadical_incremental_assumptions.cpp",
+    "source_sha256": "d5742b03db88677dee7fc52d3fa93e994153d909de0edc574e1ea611a6ef69c6",
+    "compiled_binary_sha256": "b214c67932ff7092f802976fa132977a9b5447d0d05f76c64da0dd83d307301e",
+    "compiler": "/usr/bin/clang++",
+    "compiler_sha256": "179301dcb41ea78accc3fa0048a7e6f6710d891945a751a34addd622020c1818",
+    "compiler_version_first_line": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+    "compile_arguments": [
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I/opt/homebrew/include",
+      "research/native/cadical_incremental_assumptions.cpp",
+      "/opt/homebrew/lib/libcadical.a",
+      "-lpthread"
+    ],
+    "cadical_header": "/opt/homebrew/include/cadical.hpp",
+    "cadical_header_sha256": "b7111690c61935b9c096d3701be59b3c3d26c555eab8e070f19eb2a97dc5d38c",
+    "cadical_static_library": "/opt/homebrew/lib/libcadical.a",
+    "cadical_static_library_sha256": "44cae3728485b4fd5736ce7cb986021236652daeda9cca227a2c4ac17d3a8a7f",
+    "cadical_signature": "cadical-3.0.0",
+    "cadical_version": "3.0.0",
+    "API_metric_names": [
+      "conflicts",
+      "decisions",
+      "search_propagations"
+    ],
+    "API_metric_semantics": "CaDiCaL_get_statistic_value_propagations_is_search_propagations_only",
+    "A209_metric_comparison_scope": [
+      "conflicts",
+      "decisions"
+    ],
+    "search_propagations_comparison_scope": "within_A210_numeric_vs_Gray_only_not_against_A209_CLI_total_propagations",
+    "toy_fixture": "tests/fixtures/cadical_incremental_assumptions_toy.cnf",
+    "toy_fixture_sha256": "68fca462b7c704fcaa13e02e12e583cc5aa43ffe7b360ea778aacab146c695d9",
+    "toy_expected_status_counts": {
+      "sat": 7,
+      "unsat": 1,
+      "unknown": 0
+    },
+    "base_unsat_toy_fixture": "tests/fixtures/cadical_incremental_assumptions_base_unsat.cnf",
+    "base_unsat_toy_fixture_sha256": "701ce9b3ba5e7fa5bacc1c82688f76b23d30f0d7b7935d2a64c575adfd09c8af",
+    "base_unsat_toy_expected_status_counts": {
+      "sat": 0,
+      "unsat": 8,
+      "unknown": 0
+    },
+    "base_unsat_toy_requires_empty_failed_assumption_cores": true,
+    "toy_validation_completed_before_freeze": true,
+    "toy_contains_round10_data": false,
+    "round10_helper_execution_completed_before_freeze": false
+  },
+  "parent_CNF_preflight": {
+    "source_family": "A204_exact_32_cell_global_CSE_parent_CNF_cover",
+    "parent_count": 32,
+    "source_header": "p cnf 232191 734180",
+    "order_source": "A209_rederived_output_unit_BFS_far_order",
+    "order_sha256": "814798f19a33a3a397a6af9f6fa126207e1e10e092d8ee80dcaba4ef3bae95c8",
+    "old_to_new_sha256": "50d03bfd6520685c3b17ec822ad08f4b5cce80f91c771a2b1b6377fffab2f30b",
+    "transformed_parent_manifest_sha256": "3fc86268d53150d75c90a5d69138801788a49f0001b39fbc5cb902bcb2e8baa0",
+    "transformed_parent_common_normalized_sha256": "22c9683b7ae6423ccb812735564581a04c7a819719362857acb03d283544157e",
+    "representative_parent_prefix5": "11111",
+    "representative_transformed_parent_sha256": "22c9683b7ae6423ccb812735564581a04c7a819719362857acb03d283544157e",
+    "representative_transformed_parent_bytes": 14158083,
+    "all_32_transforms_pairwise_distinct": true,
+    "all_32_inverse_byte_identical": true
+  },
+  "assumption_and_model_mapping": {
+    "child_bits_descending": [
+      14,
+      13,
+      12
+    ],
+    "transformed_child_one_literals_descending": [
+      225285,
+      225284,
+      225283
+    ],
+    "transformed_child_mapping_sha256": "6b292b65235d7e371a3f60d1bf15d5e321b1fae714605a430c39f58545ed3779",
+    "transformed_model_one_literals_bit0_through_bit14": [
+      215012,
+      215011,
+      215013,
+      215014,
+      215015,
+      195461,
+      195462,
+      195463,
+      195464,
+      195465,
+      195467,
+      195468,
+      225283,
+      225284,
+      225285
+    ],
+    "transformed_model_mapping_sha256": "cf460a84866266e64365facace638bbc35147f34f1e45d6aee7762f1b6ec2f51"
+  },
+  "incremental_modes": [
+    {
+      "name": "numeric_incremental",
+      "child_order": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "100",
+        "101",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "gray_incremental",
+      "child_order": [
+        "000",
+        "001",
+        "011",
+        "010",
+        "110",
+        "111",
+        "101",
+        "100"
+      ]
+    }
+  ],
+  "incremental_mode_manifest_sha256": "3765d1b5138a41de572d78add7ae153b8c77168d4f055e45f5c3148d8d6e0171",
+  "numeric_child_order_sha256": "60b99f51fb55272dfe4ecbd0fc0409f6b51467eebb6406fbf86cdc00e7806dbf",
+  "gray_child_order_sha256": "05df96d186d1a253b4c1ed9b3060f7a44ea748daaa8d656e101de393b87ebd67",
+  "execution_plan": {
+    "primitive": "ChaCha20_block_function",
+    "rounds": 10,
+    "unknown_key_bits": 20,
+    "parent_fixed_bits": 5,
+    "child_assumption_bits": 3,
+    "free_bits_per_child": 12,
+    "shared_key_block_count": 8,
+    "target_output_bits_per_cell": 4096,
+    "mode_order": [
+      "numeric_incremental",
+      "gray_incremental"
+    ],
+    "parent_prefix_order": "ascending_numeric_5bit",
+    "parent_run_count": 64,
+    "child_observation_count": 512,
+    "complete_domain_covered_once_per_mode": true,
+    "parent_run_order_sha256": "0126531188320ea019c45fe71db564c1310de7d651c5e62309461389f832cf0a",
+    "child_observation_order_sha256": "a66b809dd6804e11ba7e57d7d13774374e0aaf1f6b6b3c49b2eeed562abcaf18",
+    "solver_time_limit_seconds_per_child": 10,
+    "external_timeout_seconds_per_parent_run": 95,
+    "max_parallel_parent_runs": 4,
+    "wave_count": 16,
+    "learned_state_scope": "retained_across_eight_children_within_one_parent_and_reset_between_parents_and_modes",
+    "assumption_variables_frozen_before_first_child": true,
+    "all_eight_children_required_after_any_intermediate_status": true,
+    "parent_output_validation": "atomic_all_or_nothing_for_child_rows_and_summary",
+    "all_64_parent_runs_required": true,
+    "early_stop_permitted": false,
+    "model_confirmation": "prefix8_plus_known_key_bits_plus_all_eight_ChaCha10_blocks_4096_bits_plus_control_rejection"
+  },
+  "prospective_predictions": {
+    "confirmed_recovery": "at_least_one_child_returns_SAT_and_the_decoded_model_passes_the_full_independent_confirmation",
+    "complete_domain_resolution": "at_least_one_mode_returns_exactly_one_confirmed_SAT_and_255_UNSAT_with_no_UNKNOWN_or_invalid",
+    "incremental_resolution_transfer": "either_incremental_mode_resolves_more_SAT_plus_UNSAT_cells_than_the_exact_A209_fresh_solver_boundary",
+    "ordered_update_effect": "numeric_and_Gray_incremental_modes_differ_in_status_counts_or_matched_per_child_metric_deltas",
+    "boundary": "all_512_child_outcomes_are_retained_and_UNKNOWN_is_never_interpreted_as_UNSAT"
+  },
+  "information_boundary": {
+    "A209_outcomes_and_phase_reset_metrics_known_before_freeze": true,
+    "native_helper_toy_outcomes_known_before_freeze": true,
+    "any_A210_round10_helper_or_solver_outcome_known_before_freeze": false,
+    "unknown_assignment_in_protocol_source_helper_or_mapping": false,
+    "unknown_assignment_available_to_runner_or_helper_before_execution": false,
+    "correct_parent_or_child_prefix_known_before_execution": false,
+    "mode_parent_child_order_budget_or_predictions_changed_after_any_A210_round10_outcome": false,
+    "numeric_outcomes_used_to_change_gray_execution": false,
+    "early_stop_permitted": false
+  }
+}
