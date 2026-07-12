@@ -608,11 +608,11 @@ typed Causal graphs, and deterministic figures are authenticated by
 `FULLROUND_TRANSFER_SHA256SUMS`. Focused tests reconstruct this evidence without
 rerunning the production solvers.
 
-## ChaCha partition, formula, and structural-CNF progression: A190--A207
+## ChaCha partition, formula, and structural-CNF progression: A190--A209
 
-A190--A206 continue the same reduced-round program with complete domain covers,
-explicit `unknown`/`unsat` separation, and independent model confirmation.
-A207 is included only as a frozen pre-execution protocol.
+A190--A209 continue the same reduced-round program with complete domain covers,
+explicit `unknown`/`unsat` separation, independent model confirmation, and
+prospectively frozen search-phase transfers.
 
 - [A190](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_WIDTH18_BOUNDARY_V1.md)
   retains the fresh ChaCha7 width-18 monolithic boundary. [A191](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND7_PARTITION_RECOVERY_V1.md)
@@ -658,8 +658,17 @@ A207 is included only as a frozen pre-execution protocol.
   A206/A207 calibrated cells UNKNOWN. Reverse `output_unit_bfs_far` is a
   systematic progress outlier at 2.758577x conflicts, 5.685714x decisions, and
   0.593999x propagations relative to the A206 same-mode baseline.
+- [A208](../research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md)
+  transfers that selected order to sixty seconds on every prefix. All 32 cells
+  remain valid UNKNOWN, while exact early/late counter differences expose the
+  same propagation-dominated late phase on all 32 prefixes.
+- [A209](../research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md)
+  composes the complete Width-12 cover with eight-block global CSE and a
+  rederived BFS-far order. All 256 cells remain valid UNKNOWN; decisions,
+  propagations, and restarts rise in every child, and decision/propagation
+  density rises in all 32 parent groups.
 
-All A190--A207 retained artifacts, Causal graphs, figures, formula/order
+All A190--A209 retained artifacts, Causal graphs, figures, formula/order
 archives, and focused no-solver tests are included in the transfer manifest.
 
 ## Direct-output and PQC program

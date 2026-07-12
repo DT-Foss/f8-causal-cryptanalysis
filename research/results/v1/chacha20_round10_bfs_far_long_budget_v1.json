@@ -1,0 +1,5958 @@
+{
+  "anchor_gates": {
+    "A207_causal_graph_sha256": "ceb1013b7c5387dedbcf5dfe7c5072fe73c200ba72f5d42b5ff7b0866ddb9b14",
+    "A207_causal_provenance_verified": true,
+    "A207_causal_sha256": "0d23f4fcb91c6602b3222315afb84f203eff8f5d51b0e4df5f6f6430616d6dfa",
+    "A207_complete_352_unknown_boundary_retained": true,
+    "A207_result_sha256": "80ce896083b239e3bb95e31433fc8cdf6157491005bbb3b024182f730b545652",
+    "A207_selected_progress_outlier_retained": true,
+    "order_archive_sha256": "ea45134552a6ad3bb6c277ec6bd271d22764f902298b78bda568aef57a12f72f",
+    "order_causal_graph_sha256": "dad19e2848cb3d480713113b45cfc4a65344b3582ada2bccceec1ce9321c061b",
+    "order_causal_provenance_verified": true,
+    "order_causal_sha256": "71295ac95e3a2e5248e5d58cf3a40053bfe2a84f3ce30145f07b5abdbed9a58c",
+    "order_metadata_sha256": "b6dfb42095d176823c15d36a490297eb24bc85feedb916513b329d52808a73ce"
+  },
+  "attempt_id": "A208",
+  "causal": {
+    "explicit_triplets": 7,
+    "file_sha256": "9e5e35ec7a3a005f8bd10d1608dd078b7b79aaaf9bd1e4e77ac5e7201c4a0993",
+    "graph_sha256": "cc938bef2e6cfed1f629c5b034987676817be80b0f46c140b32617bd5901e21e",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 16229,
+      "explicit_triplets": 7,
+      "file_sha256": "9e5e35ec7a3a005f8bd10d1608dd078b7b79aaaf9bd1e4e77ac5e7201c4a0993",
+      "graph_sha256": "cc938bef2e6cfed1f629c5b034987676817be80b0f46c140b32617bd5901e21e",
+      "inferred_triplets": 0,
+      "triplets": 7
+    }
+  },
+  "comparison_sha256": "19050abc8736416bb7f27f43a48eeb2ae147deb2b2e095eb07d3636b4febb6a7",
+  "comparisons": {
+    "complete_cell_count": 32,
+    "complete_domain_candidate_count": 1048576,
+    "complete_domain_resolution_retained": false,
+    "complete_partition_and_disjoint_by_construction": true,
+    "complete_predeclared_execution": true,
+    "confirmed_combined_assignments": [],
+    "confirmed_prefixes": [],
+    "confirmed_recovery_retained": false,
+    "confirmed_variants": [],
+    "early_stop_used": false,
+    "recovered_unknown_low20_assignments": [],
+    "status_counts": {
+      "invalid": 0,
+      "sat": 0,
+      "unknown": 32,
+      "unsat": 0
+    },
+    "statuses": {
+      "output_unit_bfs_far__cse_prefix_00000__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00001__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00010__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00011__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00100__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00101__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00110__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_00111__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01000__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01001__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01010__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01011__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01100__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01101__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01110__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_01111__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10000__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10001__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10010__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10011__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10100__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10101__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10110__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_10111__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11000__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11001__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11010__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11011__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11100__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11101__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11110__reverse__long60": "unknown",
+      "output_unit_bfs_far__cse_prefix_11111__reverse__long60": "unknown"
+    }
+  },
+  "confirmation_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "confirmations": [],
+  "evidence_stage": "ROUND10_BFS_FAR_LONG_COMPLETE_BOUNDARY_RETAINED",
+  "execution": {
+    "complete_cell_plan_executed": true,
+    "early_stop_used": false,
+    "observations": [
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00000__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10664,
+          "decisions": 38815,
+          "propagations": 323356333,
+          "restarts": 548
+        },
+        "model": null,
+        "prefix": "00000",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00000",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c03daa44f402c271636219f831014839512182a8e571cfe149b133ac1f166ca6",
+        "transformed_cnf_sha256": "5cf3cb8719cd1a93215aa9d6936b12a24e223940ade27ba322f999d400e2023d",
+        "variant": "output_unit_bfs_far__cse_prefix_00000__reverse__long60",
+        "volatile_seconds": 60.0981875420548,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00001__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10708,
+          "decisions": 36086,
+          "propagations": 323325106,
+          "restarts": 523
+        },
+        "model": null,
+        "prefix": "00001",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00001",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "6a4eccf0dc16a9c3f5bfbb0286ef12e84b246c201ceeb5db7d10ca5f9941bc7b",
+        "transformed_cnf_sha256": "c5de72d2e73fdd29114646378bece77a0dedd0bc53ef115e92b1e550ad99b163",
+        "variant": "output_unit_bfs_far__cse_prefix_00001__reverse__long60",
+        "volatile_seconds": 60.07737045781687,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00010__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10740,
+          "decisions": 37868,
+          "propagations": 320875226,
+          "restarts": 312
+        },
+        "model": null,
+        "prefix": "00010",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00010",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "9f00ce186e18d1e21963ec4fdb032cd2d58ddb9bbc5f1e1cb1749752f932d9bd",
+        "transformed_cnf_sha256": "7fe575177b281b1c16d6546d3f206ddf410b886425832509b9af30fae5f4079b",
+        "variant": "output_unit_bfs_far__cse_prefix_00010__reverse__long60",
+        "volatile_seconds": 60.08771225018427,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00011__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 11299,
+          "decisions": 35886,
+          "propagations": 310070738,
+          "restarts": 276
+        },
+        "model": null,
+        "prefix": "00011",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00011",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "5f52fb290797f2ed3a809952fb770fa8d98111fe44ed3b1b1a9ad5f52ade2e4b",
+        "transformed_cnf_sha256": "75990deb0a3b712d45dae93999bc0b55dc4f7860a8dadb814acf7cdafb70d918",
+        "variant": "output_unit_bfs_far__cse_prefix_00011__reverse__long60",
+        "volatile_seconds": 60.05423833383247,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00100__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10150,
+          "decisions": 35717,
+          "propagations": 315115532,
+          "restarts": 142
+        },
+        "model": null,
+        "prefix": "00100",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00100",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f6c2c54111df8236e18b3a7947a13c719bbdd82b16f474f72ec440e412b3268c",
+        "transformed_cnf_sha256": "9bdd37efff050798f0846f8eaab2ba4d95d4b6d556b91669a086eea79ffacac7",
+        "variant": "output_unit_bfs_far__cse_prefix_00100__reverse__long60",
+        "volatile_seconds": 60.03509658295661,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00101__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10881,
+          "decisions": 35778,
+          "propagations": 318207396,
+          "restarts": 471
+        },
+        "model": null,
+        "prefix": "00101",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00101",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0ac69b4de772e7292b3e389eb2f1d05f80c13d8c40601dd1fa684fe34ea33e81",
+        "transformed_cnf_sha256": "6ed92995d21d2c0dcc3907aaa8f87ae73715c5fb795ee33e5d9e2fab9ad5fe4e",
+        "variant": "output_unit_bfs_far__cse_prefix_00101__reverse__long60",
+        "volatile_seconds": 60.03895670827478,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00110__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10504,
+          "decisions": 37023,
+          "propagations": 316121814,
+          "restarts": 225
+        },
+        "model": null,
+        "prefix": "00110",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00110",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "2cb1e7a626fa78fc512c082ec76f2e94d9826e8cb85675d68e2bf8bf5a8e5509",
+        "transformed_cnf_sha256": "18e329d5a73566b4cdd1b663c0f56f261cd0eead7ef3f87e854c41880a4fc201",
+        "variant": "output_unit_bfs_far__cse_prefix_00110__reverse__long60",
+        "volatile_seconds": 60.08222099998966,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00111__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10561,
+          "decisions": 36271,
+          "propagations": 316593807,
+          "restarts": 537
+        },
+        "model": null,
+        "prefix": "00111",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_00111",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "20636a1bbc29b526ec36dc4145f1fd32e809bac25117738f99003be613b2a883",
+        "transformed_cnf_sha256": "64e6768461da9c929104c6d65ed4f727e72ddc978db34ad3825a95351e7e79f2",
+        "variant": "output_unit_bfs_far__cse_prefix_00111__reverse__long60",
+        "volatile_seconds": 60.08346704207361,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01000__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10517,
+          "decisions": 34808,
+          "propagations": 324248371,
+          "restarts": 126
+        },
+        "model": null,
+        "prefix": "01000",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01000",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4980351796a155965ba828fffae12e7bd57fb5b3d54c5078986e68a0a2942921",
+        "transformed_cnf_sha256": "dbf8353bea9fdf4f84c2a61840192177b118f7df79c640f8fb0872f21ac16d31",
+        "variant": "output_unit_bfs_far__cse_prefix_01000__reverse__long60",
+        "volatile_seconds": 60.12226237496361,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01001__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 11021,
+          "decisions": 35310,
+          "propagations": 319190843,
+          "restarts": 258
+        },
+        "model": null,
+        "prefix": "01001",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01001",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f681887a38c0644e7a4bcfbf1fec07aa4b90cb2c11b760d7fd387ccfea84c583",
+        "transformed_cnf_sha256": "18ff000aacf2da8369109009e28aeca302f5b171ff29e1a18de95a3ebd817924",
+        "variant": "output_unit_bfs_far__cse_prefix_01001__reverse__long60",
+        "volatile_seconds": 60.06097837537527,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01010__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10476,
+          "decisions": 35543,
+          "propagations": 324082669,
+          "restarts": 452
+        },
+        "model": null,
+        "prefix": "01010",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01010",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0898a2f4c48758f9f34e6e370a3da078aa653a10b0afcb4351f47564aeacfce3",
+        "transformed_cnf_sha256": "07e18d57899bfd6bc29d1b867b8008739c1a6d5d466c41a943fec7ee44499060",
+        "variant": "output_unit_bfs_far__cse_prefix_01010__reverse__long60",
+        "volatile_seconds": 60.06447408301756,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01011__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10920,
+          "decisions": 35432,
+          "propagations": 319504143,
+          "restarts": 271
+        },
+        "model": null,
+        "prefix": "01011",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01011",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7cbd814a63568c7562d49c034726ecb318fe91e7362df576f46ff1e2b43acab5",
+        "transformed_cnf_sha256": "fdeddb77dc8a10b22bf342a6157cb974eb010b10d2460363df543f2068871344",
+        "variant": "output_unit_bfs_far__cse_prefix_01011__reverse__long60",
+        "volatile_seconds": 60.05814125016332,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01100__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10540,
+          "decisions": 40187,
+          "propagations": 321990674,
+          "restarts": 650
+        },
+        "model": null,
+        "prefix": "01100",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01100",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f58a15f8af73ec5ffcc6e02c8f2799d07a53cdfaee9d05093ad7cf25d9490b34",
+        "transformed_cnf_sha256": "8228bc6d0ca03224bb993525af82a18e039a72fdf9a21d14eacec7bf74bdf857",
+        "variant": "output_unit_bfs_far__cse_prefix_01100__reverse__long60",
+        "volatile_seconds": 60.09049241710454,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01101__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10777,
+          "decisions": 35558,
+          "propagations": 321862143,
+          "restarts": 306
+        },
+        "model": null,
+        "prefix": "01101",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01101",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f84f6738a2086f30a4deb692f3afc652bfa10ec520ed8c91be741189fc068e17",
+        "transformed_cnf_sha256": "dd8f533dec7e532c453d47a63d458d62f8a470acb503717113c5edec6d70d0f1",
+        "variant": "output_unit_bfs_far__cse_prefix_01101__reverse__long60",
+        "volatile_seconds": 60.04268412524834,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01110__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 11112,
+          "decisions": 34710,
+          "propagations": 322011505,
+          "restarts": 311
+        },
+        "model": null,
+        "prefix": "01110",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01110",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e84f0c3b6145569f1e4e32d11934abb6a009df300cf5471209702a73b1da89b9",
+        "transformed_cnf_sha256": "b1a6e306bc3019109d591d5f1b7edd3eb730f08ce9460a88f8aa47a0076e8c11",
+        "variant": "output_unit_bfs_far__cse_prefix_01110__reverse__long60",
+        "volatile_seconds": 60.09761937521398,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01111__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10734,
+          "decisions": 36726,
+          "propagations": 320350558,
+          "restarts": 285
+        },
+        "model": null,
+        "prefix": "01111",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_01111",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "91a10abe3b660709d418f43d4551aa77b6739ac04386778662dbbccf05cd734b",
+        "transformed_cnf_sha256": "cf1a61d9fa09b1133b74f9f49fc43d19f03878d5674bdcc97ad0f810713de49d",
+        "variant": "output_unit_bfs_far__cse_prefix_01111__reverse__long60",
+        "volatile_seconds": 60.13845712505281,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10000__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 11030,
+          "decisions": 33571,
+          "propagations": 318937113,
+          "restarts": 142
+        },
+        "model": null,
+        "prefix": "10000",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10000",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "db49adce1927d2a84d839c6531bea7bb36446375f6f49ffe4812e1f297713326",
+        "transformed_cnf_sha256": "36cb26d4e7bf6ea0da37614ad32b2fe9f5cb8224b348b0f68a9cfac0493f5df0",
+        "variant": "output_unit_bfs_far__cse_prefix_10000__reverse__long60",
+        "volatile_seconds": 60.07935258327052,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10001__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 9520,
+          "decisions": 37410,
+          "propagations": 312236274,
+          "restarts": 455
+        },
+        "model": null,
+        "prefix": "10001",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10001",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "b3f2830fee8bf42859da2155839ae461e6e784ac9ddf48e285640b1b7ff37869",
+        "transformed_cnf_sha256": "1ed1758d69cfb21a50dd0cf8e7bed5d4e53b81cbf671e6f67b2c0142098fbdd4",
+        "variant": "output_unit_bfs_far__cse_prefix_10001__reverse__long60",
+        "volatile_seconds": 60.056771291885525,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10010__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10457,
+          "decisions": 36153,
+          "propagations": 315591499,
+          "restarts": 181
+        },
+        "model": null,
+        "prefix": "10010",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10010",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "39e55a29f038a447bd506603f0bd9d3828ca01719a9555d5e97fb8a764875d2c",
+        "transformed_cnf_sha256": "16a75dbbb30886573669b9ed05c9928cd21b1fbf9ed268d7122224d3893f1758",
+        "variant": "output_unit_bfs_far__cse_prefix_10010__reverse__long60",
+        "volatile_seconds": 60.075113916769624,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10011__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 9653,
+          "decisions": 34907,
+          "propagations": 314523644,
+          "restarts": 309
+        },
+        "model": null,
+        "prefix": "10011",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10011",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "03eb9741b111726aab8e2d8bea7fca5e4cb5e585a9825141d285b21219bbe3e6",
+        "transformed_cnf_sha256": "0f7945c0284b904991806756746a0b39ddc17c4e82ed36ac0196ff04ead74a46",
+        "variant": "output_unit_bfs_far__cse_prefix_10011__reverse__long60",
+        "volatile_seconds": 60.08859566692263,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10100__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 11141,
+          "decisions": 34189,
+          "propagations": 317267912,
+          "restarts": 70
+        },
+        "model": null,
+        "prefix": "10100",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10100",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "2671dd307b3061ff34045e2846f00938019073f7f0045d73cd109362c4a923ed",
+        "transformed_cnf_sha256": "1f7b4ae77085787488b2be36b99d621d7ff39809ab7639cc7e754969a6d09f8d",
+        "variant": "output_unit_bfs_far__cse_prefix_10100__reverse__long60",
+        "volatile_seconds": 60.044544083066285,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10101__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10258,
+          "decisions": 36246,
+          "propagations": 326648699,
+          "restarts": 327
+        },
+        "model": null,
+        "prefix": "10101",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10101",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "0392167a4877c2f8f2d3849c913cbbc88f4790a9a326b100d4327f1e51afbe3e",
+        "transformed_cnf_sha256": "69d6e5423f0bada4c2c97a826b61b4bd0531af7d73a73102a0765e0ab8b8a2bd",
+        "variant": "output_unit_bfs_far__cse_prefix_10101__reverse__long60",
+        "volatile_seconds": 60.088963207788765,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10110__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10366,
+          "decisions": 38190,
+          "propagations": 322120857,
+          "restarts": 535
+        },
+        "model": null,
+        "prefix": "10110",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10110",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "750c320d8e0efed8c4e139a323b5d3f438d7d9b12d1aa908fc8b93aedf317951",
+        "transformed_cnf_sha256": "17548d96dc11efc988d2acea075d1b096127fcb2a2284925c5c9b85ceac2dc8e",
+        "variant": "output_unit_bfs_far__cse_prefix_10110__reverse__long60",
+        "volatile_seconds": 60.050774042028934,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10111__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10782,
+          "decisions": 35820,
+          "propagations": 320598642,
+          "restarts": 393
+        },
+        "model": null,
+        "prefix": "10111",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_10111",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "643ca0e28910c9eb0ee2b2b86e06dc82f3c4cf34262b0793ac13cdf63471e4a2",
+        "transformed_cnf_sha256": "47abc542520231375da548066c2b46de2e687986926dd4b97efe06f96ab25ea8",
+        "variant": "output_unit_bfs_far__cse_prefix_10111__reverse__long60",
+        "volatile_seconds": 60.096742666792125,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11000__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10407,
+          "decisions": 34329,
+          "propagations": 321798223,
+          "restarts": 218
+        },
+        "model": null,
+        "prefix": "11000",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11000",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "da46496371aaa6540638b892075c2da79baa1daff7c72e2e986ce690b6bf47f5",
+        "transformed_cnf_sha256": "baf061afa0acb169be4262945b1f326643950e734d4cacd2701188b7dfbbada4",
+        "variant": "output_unit_bfs_far__cse_prefix_11000__reverse__long60",
+        "volatile_seconds": 60.103668292053044,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11001__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10791,
+          "decisions": 36207,
+          "propagations": 321652677,
+          "restarts": 377
+        },
+        "model": null,
+        "prefix": "11001",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11001",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "327548905834b3cfbfc26ca6066e5bb383766d8110de1f7127576ccf986cff08",
+        "transformed_cnf_sha256": "12d349821da9d05c740464c9a31956d2a47de6c2e1e0ee59992689e5ea22fca7",
+        "variant": "output_unit_bfs_far__cse_prefix_11001__reverse__long60",
+        "volatile_seconds": 60.108427457977086,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11010__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10536,
+          "decisions": 34695,
+          "propagations": 319719315,
+          "restarts": 177
+        },
+        "model": null,
+        "prefix": "11010",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11010",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4337d40706e01e846fe605b5179ac60796b7288e8baeaa72fcece1cedd862d9f",
+        "transformed_cnf_sha256": "ea3985b7670504d1bd46ae4f93e66300d1844db4571caedfce95e0944c738ade",
+        "variant": "output_unit_bfs_far__cse_prefix_11010__reverse__long60",
+        "volatile_seconds": 60.09162524994463,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11011__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10778,
+          "decisions": 34901,
+          "propagations": 313934662,
+          "restarts": 332
+        },
+        "model": null,
+        "prefix": "11011",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11011",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "da394dc3ece1ef156988b5391063a317ddc6f2969d922382f65266d164abc8e4",
+        "transformed_cnf_sha256": "47833efbf5b76224f7d7738bdb2f1e49eff5d5ab4ceed3ccd13c4cd301c449bf",
+        "variant": "output_unit_bfs_far__cse_prefix_11011__reverse__long60",
+        "volatile_seconds": 60.093238290864974,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11100__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 11377,
+          "decisions": 35007,
+          "propagations": 304704673,
+          "restarts": 143
+        },
+        "model": null,
+        "prefix": "11100",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11100",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a2194dd11200558309ef4ef8621c81f15e94bac322e9adf26230a2cae72edfce",
+        "transformed_cnf_sha256": "51352a6032fc04d54cc6b64632463f48a3a3d8c120222219181ab758cd034668",
+        "variant": "output_unit_bfs_far__cse_prefix_11100__reverse__long60",
+        "volatile_seconds": 60.05080054095015,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11101__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10384,
+          "decisions": 35774,
+          "propagations": 319388440,
+          "restarts": 292
+        },
+        "model": null,
+        "prefix": "11101",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11101",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "6821321627074e787897794ce9e48c6f7cb56772ef60843f8d15f02d0002c352",
+        "transformed_cnf_sha256": "f53d6a33897b8016cb6c2764ae920e320c61266900e08302ca371b715bf65a83",
+        "variant": "output_unit_bfs_far__cse_prefix_11101__reverse__long60",
+        "volatile_seconds": 60.03701674984768,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11110__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10439,
+          "decisions": 35960,
+          "propagations": 318838084,
+          "restarts": 145
+        },
+        "model": null,
+        "prefix": "11110",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11110",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4e96337f2540d995964aeb56b9258e8d97d10ab7ba41a35cead9919a75644bc5",
+        "transformed_cnf_sha256": "17ad464b4cd434efb21916e90f3d299d804a4642f458b3acac89b226647d830b",
+        "variant": "output_unit_bfs_far__cse_prefix_11110__reverse__long60",
+        "volatile_seconds": 60.108241375070065,
+        "witness_assignment_count": 0
+      },
+      {
+        "candidate": "output_unit_bfs_far",
+        "command": [
+          "/opt/homebrew/bin/cadical",
+          "--reverse=true",
+          "-t",
+          "60",
+          "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11111__output_unit_bfs_far.cnf"
+        ],
+        "externally_timed_out": false,
+        "internal_timeout_marker": true,
+        "invalid_reason": null,
+        "metrics": {
+          "conflicts": 10031,
+          "decisions": 34460,
+          "propagations": 316707946,
+          "restarts": 155
+        },
+        "model": null,
+        "prefix": "11111",
+        "returncode": 0,
+        "solver_mode": "reverse",
+        "source_variant": "cse_prefix_11111",
+        "status": "unknown",
+        "status_line": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "273348d1b23b650969190ea80ba3406d14b4641ef63f169e2b83c95bbb66fd56",
+        "transformed_cnf_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+        "variant": "output_unit_bfs_far__cse_prefix_11111__reverse__long60",
+        "volatile_seconds": 60.11926579196006,
+        "witness_assignment_count": 0
+      }
+    ],
+    "returned_model_count": 0,
+    "round10_unknown_assignment_available_to_runner_before_execution": false,
+    "variant_order": [
+      "output_unit_bfs_far__cse_prefix_00000__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00001__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00010__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00011__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00100__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00101__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00110__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_00111__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01000__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01001__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01010__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01011__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01100__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01101__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01110__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_01111__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10000__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10001__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10010__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10011__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10100__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10101__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10110__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_10111__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11000__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11001__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11010__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11011__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11100__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11101__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11110__reverse__long60",
+      "output_unit_bfs_far__cse_prefix_11111__reverse__long60"
+    ],
+    "wave_observations": [
+      {
+        "maximum_volatile_seconds": 60.0981875420548,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_00000__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_00001__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_00010__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_00011__reverse__long60"
+        ],
+        "wave_index": 0
+      },
+      {
+        "maximum_volatile_seconds": 60.08346704207361,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_00100__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_00101__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_00110__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_00111__reverse__long60"
+        ],
+        "wave_index": 1
+      },
+      {
+        "maximum_volatile_seconds": 60.12226237496361,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_01000__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_01001__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_01010__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_01011__reverse__long60"
+        ],
+        "wave_index": 2
+      },
+      {
+        "maximum_volatile_seconds": 60.13845712505281,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_01100__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_01101__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_01110__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_01111__reverse__long60"
+        ],
+        "wave_index": 3
+      },
+      {
+        "maximum_volatile_seconds": 60.08859566692263,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_10000__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_10001__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_10010__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_10011__reverse__long60"
+        ],
+        "wave_index": 4
+      },
+      {
+        "maximum_volatile_seconds": 60.096742666792125,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_10100__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_10101__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_10110__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_10111__reverse__long60"
+        ],
+        "wave_index": 5
+      },
+      {
+        "maximum_volatile_seconds": 60.108427457977086,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_11000__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_11001__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_11010__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_11011__reverse__long60"
+        ],
+        "wave_index": 6
+      },
+      {
+        "maximum_volatile_seconds": 60.11926579196006,
+        "statuses": [
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "variants": [
+          "output_unit_bfs_far__cse_prefix_11100__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_11101__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_11110__reverse__long60",
+          "output_unit_bfs_far__cse_prefix_11111__reverse__long60"
+        ],
+        "wave_index": 7
+      }
+    ]
+  },
+  "execution_plan": {
+    "cell_count": 32,
+    "complete_cell_plan_required": true,
+    "early_stop_permitted": false,
+    "execution_order": "prefix_ascending",
+    "external_timeout_seconds_per_cell": 65,
+    "independent_confirmation": "NumPy_ChaCha10_all_eight_blocks_4096_bits_and_control_rejection",
+    "inverse_restore_prefix_endpoints": [
+      "00000",
+      "11111"
+    ],
+    "max_parallel_workers": 4,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 10,
+    "shared_key_block_count": 8,
+    "solver": "external_CaDiCaL_3.0.0",
+    "solver_configuration": [
+      "--reverse=true"
+    ],
+    "solver_time_limit_seconds_per_cell": 60,
+    "target_output_bits_per_cell": 4096,
+    "unknown_key_bits": 20,
+    "witness_decode": "candidate_specific_transformed_literal_map_plus_public_prefix_and_known_upper12"
+  },
+  "execution_plan_sha256": "4e785a3f977634d26f182ab8316f0a46522b98d0c1eecfa03ebbe46a166a5946",
+  "execution_sha256": "299e0545f91c4fc2218221aec25d6d66e8b9d055f143559c8ad642ea427ee5f4",
+  "formula_plan": [
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00000",
+      "reused_definition_occurrences": 196,
+      "sha256": "4f75c03d4a1f4a22fb33ddde3bd6f37cad3060aa376cee6c497f44201a04f436",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00000"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00001",
+      "reused_definition_occurrences": 196,
+      "sha256": "7922fc761c96e64e3301b2f0e1160d8b64c5bfb5f83201452d5b7de95d17c2cb",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00001"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00010",
+      "reused_definition_occurrences": 196,
+      "sha256": "dad8621d9d13781d878d0ef1239806d16a4d7be97a2e6fe5d4a3f2d139028b48",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00010"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00011",
+      "reused_definition_occurrences": 196,
+      "sha256": "5388185fe62a8842689bbeb59dd21a65277205d4950beefee3dcc8d11e3777a1",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00011"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00100",
+      "reused_definition_occurrences": 196,
+      "sha256": "291550a81da5687b6936173983b22cd460e8efba3f250dfc3d29b66dc8bf0541",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00100"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00101",
+      "reused_definition_occurrences": 196,
+      "sha256": "f2f20c540bc4860fe0ffe0d1e7c6e35f290b5994404a9f7c02ed0bce13a146b4",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00101"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00110",
+      "reused_definition_occurrences": 196,
+      "sha256": "7cab6209ddbc735f7b48a7db8b746d36b46d23dd8e4d1e237e44f59bacec8e9c",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00110"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "00111",
+      "reused_definition_occurrences": 196,
+      "sha256": "c062da0f28c397852279bbf5c4c0dde2608886518ed6f4f53d8825a8a1b06a42",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_00111"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01000",
+      "reused_definition_occurrences": 196,
+      "sha256": "e1b62c637f094950d44854e823edce10305f72a550b4d5599e2816cdd1ebfb57",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01000"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01001",
+      "reused_definition_occurrences": 196,
+      "sha256": "e21efbf20fae7bef947f6b4c2b8ef4cf09db2f4e5fc193271b34dabb8b2c1845",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01001"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01010",
+      "reused_definition_occurrences": 196,
+      "sha256": "04d982c43a1960e1dccd5c572f5511e681eb5b9a903efc4a139243bab5f03af5",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01010"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01011",
+      "reused_definition_occurrences": 196,
+      "sha256": "9016e01be8afceb8bcaf16f47df39ee9b17e3864c7c114cc60338e9f9e46ce61",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01011"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01100",
+      "reused_definition_occurrences": 196,
+      "sha256": "6028dcd9df61115e4f603a474531bcfddafdb0e8a3b5923cf33e976f17363ac9",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01100"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01101",
+      "reused_definition_occurrences": 196,
+      "sha256": "15716aa316b13eb56d226f9ca72feffb40836d160862967cfaa56bfb748badd7",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01101"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01110",
+      "reused_definition_occurrences": 196,
+      "sha256": "ee2dd0d1641b148203959455abda31ab56a6c7f155e4aea7285edad6f5500f8e",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01110"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "01111",
+      "reused_definition_occurrences": 196,
+      "sha256": "b2bcf059bed94fb6b6d5bb998e657f85ae3307b02a52d87b241b7a2ff081cf4d",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_01111"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10000",
+      "reused_definition_occurrences": 196,
+      "sha256": "b1b7566fd661f8d845b0ae87552776065b84e131b7ad296b6fbb4d3a932fc825",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10000"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10001",
+      "reused_definition_occurrences": 196,
+      "sha256": "010c73a97429ed92706312863cc057a84ef1cf437bcc512b534dd68f79fae8cc",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10001"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10010",
+      "reused_definition_occurrences": 196,
+      "sha256": "1977648587bc0858142e37906b3dd8fc095739ca1182fb7b3dc2c777e6e65d9f",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10010"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10011",
+      "reused_definition_occurrences": 196,
+      "sha256": "d41fd028419051786ad4bf86297dc868dc2ba05aa75e93baae31af84e915c4b6",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10011"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10100",
+      "reused_definition_occurrences": 196,
+      "sha256": "6ac5f1a22951e93a1399cb5d0b1ceba1927fe50c0cd4a3bb5782992537f28971",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10100"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10101",
+      "reused_definition_occurrences": 196,
+      "sha256": "b53ff7f0af664b6f4eb26f9372fbd0ab9de5e8fbe1e3be78b42d0026f763a14b",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10101"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10110",
+      "reused_definition_occurrences": 196,
+      "sha256": "6335341d134332c8c87d0cdd8b4eb07c04a0b014068bdf5f8d6a6efb107af554",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10110"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "10111",
+      "reused_definition_occurrences": 196,
+      "sha256": "cc8a4c00e0c5c567159f38ded8250acd7eeaa2462832a48af8db42f41e66b7a1",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_10111"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11000",
+      "reused_definition_occurrences": 196,
+      "sha256": "3e5c810b074f3b4c6e3115566acee8b25ea879046bb1426d26ad414f801f6132",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11000"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11001",
+      "reused_definition_occurrences": 196,
+      "sha256": "c2ca0e3870332f8d7d691fb3f13b2998aeadea5b6619b9deea80f3c3c0b94ad2",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11001"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11010",
+      "reused_definition_occurrences": 196,
+      "sha256": "aa9cb6e72327e799962ba4334c9d8cb346596bc66a4174bf091c8a13c72e5e6e",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11010"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11011",
+      "reused_definition_occurrences": 196,
+      "sha256": "1a64727e4dbf1e217c33485022da8e10f36e1d7266b9995b86869afdf977ef72",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11011"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11100",
+      "reused_definition_occurrences": 196,
+      "sha256": "07412da014f44211f977606b27bb3d1bf43bcab5660a1f99f37a6422f78a7e45",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11100"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11101",
+      "reused_definition_occurrences": 196,
+      "sha256": "0355beeaba970cd1fff044f8eeb2b45cfff5ad450dfa4236533edf082cad8620",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11101"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11110",
+      "reused_definition_occurrences": 196,
+      "sha256": "f07f9c057d529c95a2093f7282552d7d0478c95749eb75f4d78145485b7d092a",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11110"
+    },
+    {
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 148758,
+      "candidate_count": 32768,
+      "cse_definition_count": 2364,
+      "fixed_key_coordinates": [
+        19,
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_key_coordinates": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "original_definition_count": 2560,
+      "portable_smtlib2": true,
+      "prefix": "11111",
+      "reused_definition_occurrences": 196,
+      "sha256": "50c5083db98723eea8a105cee53f177ee74adea82a6933c53601da83b60f113c",
+      "shared_key_block_count": 8,
+      "target_output_bits": 4096,
+      "variant": "cse_prefix_11111"
+    }
+  ],
+  "formula_plan_sha256": "81d2468b21fa1296ce046303cc325fc7ef1e2cd4e4062a3ca7ec1d68b0275427",
+  "order_archive": {
+    "archive_row_index": 5,
+    "archive_sha256": "ea45134552a6ad3bb6c277ec6bd271d22764f902298b78bda568aef57a12f72f",
+    "candidate": "output_unit_bfs_far",
+    "metadata_sha256": "b6dfb42095d176823c15d36a490297eb24bc85feedb916513b329d52808a73ce",
+    "old_to_new_sha256": "7ed58987174cd64065d9bf0e7451843e2e92e328eeb0ceeecff9ed0bc9c5d519",
+    "order_sha256": "7d324874eef605c9b648ad50511d74a2bb351878a42c7f79bb96ded9a6633370"
+  },
+  "order_archive_sha256": "44995760475aa4981779e77244d5bc9a215ce9da5818db3ecb9a40b50199030b",
+  "protocol_gate": {
+    "artifact_sha256": "c5c08f078b3b3d9487d593850bcf469f4bd95f788bb4d0bca85b8ae7a58ee104",
+    "information_boundary": {
+      "A207_outcomes_and_progress_map_known_before_freeze": true,
+      "any_A208_solver_outcome_known_before_freeze": false,
+      "candidate_order_mode_prefix_order_budget_or_predictions_changed_after_any_A208_outcome": false,
+      "early_stop_permitted": false,
+      "round10_unknown_assignment_available_to_runner_before_execution": false,
+      "round10_unknown_assignment_in_protocol_source_or_order_archive": false,
+      "selection_used_only_complete_A207_progress_metrics_not_volatile_seconds": true
+    },
+    "prospective_predictions": {
+      "boundary": "all_other_complete_outcome_patterns_are_retained_without_interpreting_UNKNOWN_as_UNSAT",
+      "complete_domain_resolution": "exactly_one_prefix_is_SAT_and_31_prefixes_are_UNSAT_with_no_UNKNOWN_or_invalid",
+      "confirmed_recovery": "at_least_one_cell_returns_SAT_and_the_decoded_model_passes_independent_4096_bit_confirmation_and_control_rejection",
+      "search_density_persistence": "retain_per_prefix_and_total_conflict_decision_propagation_restart_rates_against_the_exact_A207_10_second_selected_candidate_baseline"
+    },
+    "protocol_state": "frozen_after_complete_A207_progress_map_selection_before_any_A208_solver_execution"
+  },
+  "public_challenge": {
+    "block_count": 8,
+    "control_target_block_sha256": "371b6b0aac44efe9552551ac05246b4334e42bb87e9deee0bc9ccbb3e4c1b669",
+    "control_target_words": [
+      3820916839,
+      1323546180,
+      2253887088,
+      2195522491,
+      3413675301,
+      2717751684,
+      2321696374,
+      2293604882,
+      716648311,
+      3797132267,
+      1516671341,
+      653922503,
+      3497447029,
+      3621313759,
+      3230410577,
+      1292039831
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 2387731084,
+    "known_key_word0_upper12": 3408920576,
+    "known_key_word1": 4228395691,
+    "known_key_words_2_through_7": [
+      341722506,
+      1427073392,
+      3059730674,
+      3758436877,
+      392279394,
+      2165016602
+    ],
+    "known_material_derivation_label": "f8-causal:A195:chacha20:r10-width20-partition:known-material:d1a8b58f313467851d5162998d1ed8a71e250f64ee5d98d5ea6024c0e814227b",
+    "known_material_derivation_sha256": "40044d942ad2dc135f1228bde509731f9d1416f0c1a9bb38de851db1f95af53d",
+    "nonce_words": [
+      4110696659,
+      4105903274,
+      921818962
+    ],
+    "rounds": 10,
+    "target_block_sha256": [
+      "7f0a78ae0914bd1181ca383fd48957b49695cd37b0ca04e05999477128e5f240",
+      "7bfc458d75e9a4a32e84474ad118fbe167b459b4c157480003a41c2b3faa94e7",
+      "588f6dea4ec2448f836fdab7d3d854d77ed1f83d1de372959892f7a57deaaafe",
+      "0bebcecad3d4df080f88ace7ea4bdf60b31d2b3e9cda26f50a1e50b9f36f25d5",
+      "c808751c103f358adbe77aca27ab1f221764ce79abb430109088914554a3f124",
+      "421648d8f07eaf5cc02a0c167af069d5a1f3aea1d970ffd66759eda2f1b566f5",
+      "3daec7c709418f42e7824f14addc87a06fa3281768f4b2eb95d802ccfeff30c6",
+      "87af1e4e4ac9193f7a52781692fc9337f3d832f73301f6bdb50edfb915020c8b"
+    ],
+    "target_words": [
+      [
+        3820916838,
+        1323546180,
+        2253887088,
+        2195522491,
+        3413675301,
+        2717751684,
+        2321696374,
+        2293604882,
+        716648311,
+        3797132267,
+        1516671341,
+        653922503,
+        3497447029,
+        3621313759,
+        3230410577,
+        1292039831
+      ],
+      [
+        732207373,
+        1740163591,
+        2518382058,
+        2199961672,
+        286112687,
+        715256519,
+        814192384,
+        3316690796,
+        3675749687,
+        381745800,
+        3333747033,
+        2378113482,
+        1622077407,
+        3644553547,
+        2706611326,
+        1779070028
+      ],
+      [
+        2414627429,
+        2404500052,
+        1063482692,
+        2198823000,
+        50235317,
+        1228861736,
+        2748455526,
+        3728469711,
+        2566338621,
+        1094295508,
+        3828285166,
+        320163351,
+        1491013885,
+        3179547028,
+        1337412877,
+        608667191
+      ],
+      [
+        4009548788,
+        1514524083,
+        2603617027,
+        3250075655,
+        3400726238,
+        1865734809,
+        2790261476,
+        3965872483,
+        3727152748,
+        3103745511,
+        3093327203,
+        2351295662,
+        2737807559,
+        673078038,
+        1836699500,
+        3786217959
+      ],
+      [
+        3980898622,
+        2980025561,
+        4073352014,
+        1522298503,
+        2054014556,
+        2546020074,
+        513242055,
+        3245049321,
+        1112385591,
+        1288441846,
+        285425487,
+        270927772,
+        105398904,
+        14709194,
+        4135423154,
+        713433075
+      ],
+      [
+        2544509466,
+        3144296601,
+        1884875346,
+        3301692892,
+        2940253805,
+        3729418243,
+        1292826447,
+        750957334,
+        1615752785,
+        342816510,
+        2799339337,
+        4140237866,
+        1913071736,
+        1601345710,
+        3535494265,
+        4778027
+      ],
+      [
+        3339765665,
+        2651416091,
+        2435969587,
+        970620562,
+        3642902785,
+        4264610823,
+        1809062102,
+        2004687213,
+        3427688462,
+        466576817,
+        785895982,
+        2958977597,
+        3538613522,
+        3299209078,
+        272434270,
+        2220178898
+      ],
+      [
+        1195873186,
+        3539223411,
+        419059,
+        1975269579,
+        3945384175,
+        3044276912,
+        1027743294,
+        1415914633,
+        1750985139,
+        871096212,
+        3044879999,
+        3287045870,
+        534806173,
+        1647890876,
+        4229685846,
+        1407327114
+      ]
+    ],
+    "unknown_assignment_bits": 20,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_low_bits": 20,
+    "unknown_key_word0_low_value_included": false
+  },
+  "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+  "rate_comparison": {
+    "A207_nominal_budget_seconds": 10,
+    "A208_nominal_budget_seconds": 60,
+    "baseline": "A207_output_unit_bfs_far_reverse_same_prefix_at_10_seconds",
+    "cell_rows": [
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00000__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00000__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3647,
+            "A208_total": 10664,
+            "nominal_per_second_ratio": 0.48734119367516676,
+            "raw_total_ratio": 2.924047162051001,
+            "volatile_per_second_ratio": 0.4881618061666893
+          },
+          "decisions": {
+            "A207_total": 27166,
+            "A208_total": 38815,
+            "nominal_per_second_ratio": 0.23813467815161107,
+            "raw_total_ratio": 1.4288080689096665,
+            "volatile_per_second_ratio": 0.23853566270635845
+          },
+          "propagations": {
+            "A207_total": 24835958,
+            "A208_total": 323356333,
+            "nominal_per_second_ratio": 2.1699473870372414,
+            "raw_total_ratio": 13.019684322223448,
+            "volatile_per_second_ratio": 2.1736012664031956
+          },
+          "restarts": {
+            "A207_total": 26,
+            "A208_total": 548,
+            "nominal_per_second_ratio": 3.5128205128205123,
+            "raw_total_ratio": 21.076923076923077,
+            "volatile_per_second_ratio": 3.5187355974279884
+          }
+        },
+        "prefix": "00000"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00001__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00001__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3690,
+            "A208_total": 10708,
+            "nominal_per_second_ratio": 0.4836495031616983,
+            "raw_total_ratio": 2.90189701897019,
+            "volatile_per_second_ratio": 0.48447458341435723
+          },
+          "decisions": {
+            "A207_total": 25305,
+            "A208_total": 36086,
+            "nominal_per_second_ratio": 0.23767371402226173,
+            "raw_total_ratio": 1.4260422841335705,
+            "volatile_per_second_ratio": 0.2380791726999487
+          },
+          "propagations": {
+            "A207_total": 24950022,
+            "A208_total": 323325106,
+            "nominal_per_second_ratio": 2.159818442912261,
+            "raw_total_ratio": 12.958910657473568,
+            "volatile_per_second_ratio": 2.163502977962801
+          },
+          "restarts": {
+            "A207_total": 12,
+            "A208_total": 523,
+            "nominal_per_second_ratio": 7.263888888888889,
+            "raw_total_ratio": 43.583333333333336,
+            "volatile_per_second_ratio": 7.276280695849409
+          }
+        },
+        "prefix": "00001"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00010__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00010__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4046,
+            "A208_total": 10740,
+            "nominal_per_second_ratio": 0.4424122590212555,
+            "raw_total_ratio": 2.6544735541275335,
+            "volatile_per_second_ratio": 0.44363304200768827
+          },
+          "decisions": {
+            "A207_total": 26273,
+            "A208_total": 37868,
+            "nominal_per_second_ratio": 0.2402212664459077,
+            "raw_total_ratio": 1.4413275986754464,
+            "volatile_per_second_ratio": 0.24088412790391808
+          },
+          "propagations": {
+            "A207_total": 24516848,
+            "A208_total": 320875226,
+            "nominal_per_second_ratio": 2.18132462759215,
+            "raw_total_ratio": 13.087947765552897,
+            "volatile_per_second_ratio": 2.1873437284171184
+          },
+          "restarts": {
+            "A207_total": 9,
+            "A208_total": 312,
+            "nominal_per_second_ratio": 5.777777777777778,
+            "raw_total_ratio": 34.666666666666664,
+            "volatile_per_second_ratio": 5.793720855001958
+          }
+        },
+        "prefix": "00010"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00011__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00011__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5755,
+            "A208_total": 11299,
+            "nominal_per_second_ratio": 0.32722270489429484,
+            "raw_total_ratio": 1.9633362293657688,
+            "volatile_per_second_ratio": 0.32840231082175814
+          },
+          "decisions": {
+            "A207_total": 29949,
+            "A208_total": 35886,
+            "nominal_per_second_ratio": 0.19970616715082307,
+            "raw_total_ratio": 1.1982370029049383,
+            "volatile_per_second_ratio": 0.2004260884001697
+          },
+          "propagations": {
+            "A207_total": 24564557,
+            "A208_total": 310070738,
+            "nominal_per_second_ratio": 2.103781327435839,
+            "raw_total_ratio": 12.622687964615034,
+            "volatile_per_second_ratio": 2.111365253877409
+          },
+          "restarts": {
+            "A207_total": 28,
+            "A208_total": 276,
+            "nominal_per_second_ratio": 1.6428571428571428,
+            "raw_total_ratio": 9.857142857142858,
+            "volatile_per_second_ratio": 1.6487794825808357
+          }
+        },
+        "prefix": "00011"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00100__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00100__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4099,
+            "A208_total": 10150,
+            "nominal_per_second_ratio": 0.41270228511018947,
+            "raw_total_ratio": 2.476213710661137,
+            "volatile_per_second_ratio": 0.41488234900589077
+          },
+          "decisions": {
+            "A207_total": 28602,
+            "A208_total": 35717,
+            "nominal_per_second_ratio": 0.20812647134233037,
+            "raw_total_ratio": 1.2487588280539823,
+            "volatile_per_second_ratio": 0.20922588130995867
+          },
+          "propagations": {
+            "A207_total": 26876700,
+            "A208_total": 315115532,
+            "nominal_per_second_ratio": 1.9540812426128704,
+            "raw_total_ratio": 11.724487455677222,
+            "volatile_per_second_ratio": 1.9644035066758136
+          },
+          "restarts": {
+            "A207_total": 12,
+            "A208_total": 142,
+            "nominal_per_second_ratio": 1.9722222222222223,
+            "raw_total_ratio": 11.833333333333334,
+            "volatile_per_second_ratio": 1.9826403144307942
+          }
+        },
+        "prefix": "00100"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00101__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00101__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5854,
+            "A208_total": 10881,
+            "nominal_per_second_ratio": 0.30978817902289035,
+            "raw_total_ratio": 1.858729074137342,
+            "volatile_per_second_ratio": 0.312896565992542
+          },
+          "decisions": {
+            "A207_total": 30492,
+            "A208_total": 35778,
+            "nominal_per_second_ratio": 0.19555949101403647,
+            "raw_total_ratio": 1.1733569460842188,
+            "volatile_per_second_ratio": 0.19752171751208125
+          },
+          "propagations": {
+            "A207_total": 26853499,
+            "A208_total": 318207396,
+            "nominal_per_second_ratio": 1.974959240879559,
+            "raw_total_ratio": 11.849755445277355,
+            "volatile_per_second_ratio": 1.9947758058282485
+          },
+          "restarts": {
+            "A207_total": 33,
+            "A208_total": 471,
+            "nominal_per_second_ratio": 2.378787878787879,
+            "raw_total_ratio": 14.272727272727273,
+            "volatile_per_second_ratio": 2.4026564242866515
+          }
+        },
+        "prefix": "00101"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00110__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00110__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5126,
+            "A208_total": 10504,
+            "nominal_per_second_ratio": 0.34152685654831577,
+            "raw_total_ratio": 2.0491611392898945,
+            "volatile_per_second_ratio": 0.3427131808002236
+          },
+          "decisions": {
+            "A207_total": 30414,
+            "A208_total": 37023,
+            "nominal_per_second_ratio": 0.20288354047478133,
+            "raw_total_ratio": 1.217301242848688,
+            "volatile_per_second_ratio": 0.2035882746992306
+          },
+          "propagations": {
+            "A207_total": 25389098,
+            "A208_total": 316121814,
+            "nominal_per_second_ratio": 2.0751808118586963,
+            "raw_total_ratio": 12.451084871152178,
+            "volatile_per_second_ratio": 2.082389139042926
+          },
+          "restarts": {
+            "A207_total": 23,
+            "A208_total": 225,
+            "nominal_per_second_ratio": 1.6304347826086958,
+            "raw_total_ratio": 9.782608695652174,
+            "volatile_per_second_ratio": 1.6360982444614802
+          }
+        },
+        "prefix": "00110"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_00111__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_00111__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3990,
+            "A208_total": 10561,
+            "nominal_per_second_ratio": 0.4411445279866333,
+            "raw_total_ratio": 2.6468671679197997,
+            "volatile_per_second_ratio": 0.4438873367552495
+          },
+          "decisions": {
+            "A207_total": 26870,
+            "A208_total": 36271,
+            "nominal_per_second_ratio": 0.2249782905346731,
+            "raw_total_ratio": 1.3498697432080387,
+            "volatile_per_second_ratio": 0.22637708931575082
+          },
+          "propagations": {
+            "A207_total": 26620124,
+            "A208_total": 316593807,
+            "nominal_per_second_ratio": 1.982170875687882,
+            "raw_total_ratio": 11.893025254127291,
+            "volatile_per_second_ratio": 1.994494990153373
+          },
+          "restarts": {
+            "A207_total": 20,
+            "A208_total": 537,
+            "nominal_per_second_ratio": 4.475,
+            "raw_total_ratio": 26.85,
+            "volatile_per_second_ratio": 4.50282323810198
+          }
+        },
+        "prefix": "00111"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01000__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01000__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4973,
+            "A208_total": 10517,
+            "nominal_per_second_ratio": 0.35247000469200346,
+            "raw_total_ratio": 2.114820028152021,
+            "volatile_per_second_ratio": 0.35303875961452824
+          },
+          "decisions": {
+            "A207_total": 28467,
+            "A208_total": 34808,
+            "nominal_per_second_ratio": 0.20379152468940645,
+            "raw_total_ratio": 1.2227491481364388,
+            "volatile_per_second_ratio": 0.20412036808400172
+          },
+          "propagations": {
+            "A207_total": 32882237,
+            "A208_total": 324248371,
+            "nominal_per_second_ratio": 1.643482928690851,
+            "raw_total_ratio": 9.860897572145106,
+            "volatile_per_second_ratio": 1.6461348962152793
+          },
+          "restarts": {
+            "A207_total": 12,
+            "A208_total": 126,
+            "nominal_per_second_ratio": 1.7500000000000002,
+            "raw_total_ratio": 10.5,
+            "volatile_per_second_ratio": 1.7528238462881063
+          }
+        },
+        "prefix": "01000"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01001__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01001__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5928,
+            "A208_total": 11021,
+            "nominal_per_second_ratio": 0.309857174988754,
+            "raw_total_ratio": 1.8591430499325237,
+            "volatile_per_second_ratio": 0.3118433195268379
+          },
+          "decisions": {
+            "A207_total": 30050,
+            "A208_total": 35310,
+            "nominal_per_second_ratio": 0.19584026622296172,
+            "raw_total_ratio": 1.1750415973377704,
+            "volatile_per_second_ratio": 0.19709557707742154
+          },
+          "propagations": {
+            "A207_total": 27527829,
+            "A208_total": 319190843,
+            "nominal_per_second_ratio": 1.9325343031349598,
+            "raw_total_ratio": 11.595205818809758,
+            "volatile_per_second_ratio": 1.9449215988332782
+          },
+          "restarts": {
+            "A207_total": 44,
+            "A208_total": 258,
+            "nominal_per_second_ratio": 0.9772727272727272,
+            "raw_total_ratio": 5.863636363636363,
+            "volatile_per_second_ratio": 0.9835369194430765
+          }
+        },
+        "prefix": "01001"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01010__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01010__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4568,
+            "A208_total": 10476,
+            "nominal_per_second_ratio": 0.38222416812609455,
+            "raw_total_ratio": 2.2933450087565674,
+            "volatile_per_second_ratio": 0.383049739854862
+          },
+          "decisions": {
+            "A207_total": 27456,
+            "A208_total": 35543,
+            "nominal_per_second_ratio": 0.21575733294483296,
+            "raw_total_ratio": 1.2945439976689976,
+            "volatile_per_second_ratio": 0.21622335045290103
+          },
+          "propagations": {
+            "A207_total": 32405658,
+            "A208_total": 324082669,
+            "nominal_per_second_ratio": 1.6668008459098922,
+            "raw_total_ratio": 10.000805075459354,
+            "volatile_per_second_ratio": 1.6704009941229558
+          },
+          "restarts": {
+            "A207_total": 14,
+            "A208_total": 452,
+            "nominal_per_second_ratio": 5.380952380952381,
+            "raw_total_ratio": 32.285714285714285,
+            "volatile_per_second_ratio": 5.392574780920802
+          }
+        },
+        "prefix": "01010"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01011__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01011__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5931,
+            "A208_total": 10920,
+            "nominal_per_second_ratio": 0.30686224919912325,
+            "raw_total_ratio": 1.8411734951947396,
+            "volatile_per_second_ratio": 0.30873340299498664
+          },
+          "decisions": {
+            "A207_total": 30350,
+            "A208_total": 35432,
+            "nominal_per_second_ratio": 0.1945744096650192,
+            "raw_total_ratio": 1.1674464579901154,
+            "volatile_per_second_ratio": 0.1957608659533792
+          },
+          "propagations": {
+            "A207_total": 27488454,
+            "A208_total": 319504143,
+            "nominal_per_second_ratio": 1.9372020885568901,
+            "raw_total_ratio": 11.623212531341341,
+            "volatile_per_second_ratio": 1.9490145648416657
+          },
+          "restarts": {
+            "A207_total": 22,
+            "A208_total": 271,
+            "nominal_per_second_ratio": 2.0530303030303028,
+            "raw_total_ratio": 12.318181818181818,
+            "volatile_per_second_ratio": 2.065549064965222
+          }
+        },
+        "prefix": "01011"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01100__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01100__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4371,
+            "A208_total": 10540,
+            "nominal_per_second_ratio": 0.4018912529550827,
+            "raw_total_ratio": 2.4113475177304964,
+            "volatile_per_second_ratio": 0.4030920450840756
+          },
+          "decisions": {
+            "A207_total": 27946,
+            "A208_total": 40187,
+            "nominal_per_second_ratio": 0.23967055511820415,
+            "raw_total_ratio": 1.438023330709225,
+            "volatile_per_second_ratio": 0.24038665559071049
+          },
+          "propagations": {
+            "A207_total": 33166318,
+            "A208_total": 321990674,
+            "nominal_per_second_ratio": 1.618060597903371,
+            "raw_total_ratio": 9.708363587420225,
+            "volatile_per_second_ratio": 1.6228951256914463
+          },
+          "restarts": {
+            "A207_total": 54,
+            "A208_total": 650,
+            "nominal_per_second_ratio": 2.006172839506173,
+            "raw_total_ratio": 12.037037037037036,
+            "volatile_per_second_ratio": 2.0121669897579264
+          }
+        },
+        "prefix": "01100"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01101__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01101__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4742,
+            "A208_total": 10777,
+            "nominal_per_second_ratio": 0.3787782932658513,
+            "raw_total_ratio": 2.2726697595951078,
+            "volatile_per_second_ratio": 0.3798255354561493
+          },
+          "decisions": {
+            "A207_total": 26251,
+            "A208_total": 35558,
+            "nominal_per_second_ratio": 0.2257564791182558,
+            "raw_total_ratio": 1.3545388747095348,
+            "volatile_per_second_ratio": 0.22638064822685847
+          },
+          "propagations": {
+            "A207_total": 31785050,
+            "A208_total": 321862143,
+            "nominal_per_second_ratio": 1.6877019384899503,
+            "raw_total_ratio": 10.126211630939704,
+            "volatile_per_second_ratio": 1.6923680788312978
+          },
+          "restarts": {
+            "A207_total": 9,
+            "A208_total": 306,
+            "nominal_per_second_ratio": 5.666666666666666,
+            "raw_total_ratio": 34.0,
+            "volatile_per_second_ratio": 5.682333806302686
+          }
+        },
+        "prefix": "01101"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01110__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01110__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5709,
+            "A208_total": 11112,
+            "nominal_per_second_ratio": 0.3244000700648099,
+            "raw_total_ratio": 1.9464004203888596,
+            "volatile_per_second_ratio": 0.3248031551624573
+          },
+          "decisions": {
+            "A207_total": 28314,
+            "A208_total": 34710,
+            "nominal_per_second_ratio": 0.20431588613406795,
+            "raw_total_ratio": 1.2258953168044078,
+            "volatile_per_second_ratio": 0.2045697599661445
+          },
+          "propagations": {
+            "A207_total": 31298510,
+            "A208_total": 322011505,
+            "nominal_per_second_ratio": 1.7147328791903087,
+            "raw_total_ratio": 10.288397275141852,
+            "volatile_per_second_ratio": 1.7168635299941428
+          },
+          "restarts": {
+            "A207_total": 17,
+            "A208_total": 311,
+            "nominal_per_second_ratio": 3.0490196078431375,
+            "raw_total_ratio": 18.294117647058822,
+            "volatile_per_second_ratio": 3.05280818398651
+          }
+        },
+        "prefix": "01110"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_01111__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_01111__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3902,
+            "A208_total": 10734,
+            "nominal_per_second_ratio": 0.4584828293182983,
+            "raw_total_ratio": 2.75089697590979,
+            "volatile_per_second_ratio": 0.4623973917542163
+          },
+          "decisions": {
+            "A207_total": 27801,
+            "A208_total": 36726,
+            "nominal_per_second_ratio": 0.2201719362612856,
+            "raw_total_ratio": 1.3210316175677135,
+            "volatile_per_second_ratio": 0.22205178155977415
+          },
+          "propagations": {
+            "A207_total": 32505435,
+            "A208_total": 320350558,
+            "nominal_per_second_ratio": 1.6425486896781005,
+            "raw_total_ratio": 9.855292138068602,
+            "volatile_per_second_ratio": 1.656572899503669
+          },
+          "restarts": {
+            "A207_total": 39,
+            "A208_total": 285,
+            "nominal_per_second_ratio": 1.217948717948718,
+            "raw_total_ratio": 7.3076923076923075,
+            "volatile_per_second_ratio": 1.2283476598398362
+          }
+        },
+        "prefix": "01111"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10000__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10000__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3936,
+            "A208_total": 11030,
+            "nominal_per_second_ratio": 0.46705623306233063,
+            "raw_total_ratio": 2.8023373983739837,
+            "volatile_per_second_ratio": 0.46902195356699783
+          },
+          "decisions": {
+            "A207_total": 26032,
+            "A208_total": 33571,
+            "nominal_per_second_ratio": 0.2149341835689408,
+            "raw_total_ratio": 1.2896051014136447,
+            "volatile_per_second_ratio": 0.2158387867021121
+          },
+          "propagations": {
+            "A207_total": 32494692,
+            "A208_total": 318937113,
+            "nominal_per_second_ratio": 1.6358421092281779,
+            "raw_total_ratio": 9.815052655369067,
+            "volatile_per_second_ratio": 1.6427269512426483
+          },
+          "restarts": {
+            "A207_total": 8,
+            "A208_total": 142,
+            "nominal_per_second_ratio": 2.958333333333333,
+            "raw_total_ratio": 17.75,
+            "volatile_per_second_ratio": 2.970784203445579
+          }
+        },
+        "prefix": "10000"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10001__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10001__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3449,
+            "A208_total": 9520,
+            "nominal_per_second_ratio": 0.46003672562095294,
+            "raw_total_ratio": 2.7602203537257175,
+            "volatile_per_second_ratio": 0.46386695524360033
+          },
+          "decisions": {
+            "A207_total": 27196,
+            "A208_total": 37410,
+            "nominal_per_second_ratio": 0.22926165612590088,
+            "raw_total_ratio": 1.3755699367554053,
+            "volatile_per_second_ratio": 0.2311704706568393
+          },
+          "propagations": {
+            "A207_total": 35566157,
+            "A208_total": 312236274,
+            "nominal_per_second_ratio": 1.463171266999693,
+            "raw_total_ratio": 8.779027601998157,
+            "volatile_per_second_ratio": 1.4753535159762374
+          },
+          "restarts": {
+            "A207_total": 49,
+            "A208_total": 455,
+            "nominal_per_second_ratio": 1.5476190476190474,
+            "raw_total_ratio": 9.285714285714286,
+            "volatile_per_second_ratio": 1.5605044021801702
+          }
+        },
+        "prefix": "10001"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10010__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10010__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4550,
+            "A208_total": 10457,
+            "nominal_per_second_ratio": 0.383040293040293,
+            "raw_total_ratio": 2.2982417582417582,
+            "volatile_per_second_ratio": 0.38497620866450505
+          },
+          "decisions": {
+            "A207_total": 29231,
+            "A208_total": 36153,
+            "nominal_per_second_ratio": 0.20613389894290307,
+            "raw_total_ratio": 1.2368033936574185,
+            "volatile_per_second_ratio": 0.2071757158036722
+          },
+          "propagations": {
+            "A207_total": 31574607,
+            "A208_total": 315591499,
+            "nominal_per_second_ratio": 1.6658507631359167,
+            "raw_total_ratio": 9.995104578815502,
+            "volatile_per_second_ratio": 1.674270103290351
+          },
+          "restarts": {
+            "A207_total": 26,
+            "A208_total": 181,
+            "nominal_per_second_ratio": 1.1602564102564101,
+            "raw_total_ratio": 6.961538461538462,
+            "volatile_per_second_ratio": 1.1661204369750595
+          }
+        },
+        "prefix": "10010"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10011__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10011__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 3700,
+            "A208_total": 9653,
+            "nominal_per_second_ratio": 0.4348198198198198,
+            "raw_total_ratio": 2.608918918918919,
+            "volatile_per_second_ratio": 0.4359412352837628
+          },
+          "decisions": {
+            "A207_total": 26723,
+            "A208_total": 34907,
+            "nominal_per_second_ratio": 0.2177088400753408,
+            "raw_total_ratio": 1.3062530404520452,
+            "volatile_per_second_ratio": 0.21827031875862338
+          },
+          "propagations": {
+            "A207_total": 34535017,
+            "A208_total": 314523644,
+            "nominal_per_second_ratio": 1.5178972500095578,
+            "raw_total_ratio": 9.107383500057347,
+            "volatile_per_second_ratio": 1.5218119598991453
+          },
+          "restarts": {
+            "A207_total": 4,
+            "A208_total": 309,
+            "nominal_per_second_ratio": 12.875,
+            "raw_total_ratio": 77.25,
+            "volatile_per_second_ratio": 12.908205073550347
+          }
+        },
+        "prefix": "10011"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10100__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10100__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5930,
+            "A208_total": 11141,
+            "nominal_per_second_ratio": 0.31312535132096686,
+            "raw_total_ratio": 1.878752107925801,
+            "volatile_per_second_ratio": 0.31811855959017044
+          },
+          "decisions": {
+            "A207_total": 28858,
+            "A208_total": 34189,
+            "nominal_per_second_ratio": 0.19745535611153464,
+            "raw_total_ratio": 1.1847321366692078,
+            "volatile_per_second_ratio": 0.20060404947914395
+          },
+          "propagations": {
+            "A207_total": 28863161,
+            "A208_total": 317267912,
+            "nominal_per_second_ratio": 1.8320233647774522,
+            "raw_total_ratio": 10.992140188664713,
+            "volatile_per_second_ratio": 1.8612374612272933
+          },
+          "restarts": {
+            "A207_total": 9,
+            "A208_total": 70,
+            "nominal_per_second_ratio": 1.2962962962962963,
+            "raw_total_ratio": 7.777777777777778,
+            "volatile_per_second_ratio": 1.3169674982884017
+          }
+        },
+        "prefix": "10100"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10101__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10101__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4237,
+            "A208_total": 10258,
+            "nominal_per_second_ratio": 0.4035087719298246,
+            "raw_total_ratio": 2.4210526315789473,
+            "volatile_per_second_ratio": 0.40526112438278894
+          },
+          "decisions": {
+            "A207_total": 28689,
+            "A208_total": 36246,
+            "nominal_per_second_ratio": 0.21056851057896755,
+            "raw_total_ratio": 1.2634110634738054,
+            "volatile_per_second_ratio": 0.21148296466695524
+          },
+          "propagations": {
+            "A207_total": 32574760,
+            "A208_total": 326648699,
+            "nominal_per_second_ratio": 1.6712770818060774,
+            "raw_total_ratio": 10.027662490836464,
+            "volatile_per_second_ratio": 1.6785350813778819
+          },
+          "restarts": {
+            "A207_total": 20,
+            "A208_total": 327,
+            "nominal_per_second_ratio": 2.725,
+            "raw_total_ratio": 16.35,
+            "volatile_per_second_ratio": 2.736834093250291
+          }
+        },
+        "prefix": "10101"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10110__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10110__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4019,
+            "A208_total": 10366,
+            "nominal_per_second_ratio": 0.42987476154930754,
+            "raw_total_ratio": 2.579248569295845,
+            "volatile_per_second_ratio": 0.4307218004426843
+          },
+          "decisions": {
+            "A207_total": 29578,
+            "A208_total": 38190,
+            "nominal_per_second_ratio": 0.21519372506592738,
+            "raw_total_ratio": 1.2911623503955643,
+            "volatile_per_second_ratio": 0.21561774962155503
+          },
+          "propagations": {
+            "A207_total": 31101335,
+            "A208_total": 322120857,
+            "nominal_per_second_ratio": 1.7261898725569176,
+            "raw_total_ratio": 10.357139235341505,
+            "volatile_per_second_ratio": 1.7295912119473467
+          },
+          "restarts": {
+            "A207_total": 13,
+            "A208_total": 535,
+            "nominal_per_second_ratio": 6.858974358974359,
+            "raw_total_ratio": 41.15384615384615,
+            "volatile_per_second_ratio": 6.872489500058211
+          }
+        },
+        "prefix": "10110"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_10111__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_10111__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4737,
+            "A208_total": 10782,
+            "nominal_per_second_ratio": 0.37935402153261555,
+            "raw_total_ratio": 2.2761241291956935,
+            "volatile_per_second_ratio": 0.38068273576675304
+          },
+          "decisions": {
+            "A207_total": 27913,
+            "A208_total": 35820,
+            "nominal_per_second_ratio": 0.21387883781750439,
+            "raw_total_ratio": 1.2832730269050263,
+            "volatile_per_second_ratio": 0.21462796354191555
+          },
+          "propagations": {
+            "A207_total": 28511236,
+            "A208_total": 320598642,
+            "nominal_per_second_ratio": 1.8741070011836738,
+            "raw_total_ratio": 11.244642007102042,
+            "volatile_per_second_ratio": 1.88067119322442
+          },
+          "restarts": {
+            "A207_total": 27,
+            "A208_total": 393,
+            "nominal_per_second_ratio": 2.4259259259259256,
+            "raw_total_ratio": 14.555555555555555,
+            "volatile_per_second_ratio": 2.43442290269638
+          }
+        },
+        "prefix": "10111"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11000__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11000__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4561,
+            "A208_total": 10407,
+            "nominal_per_second_ratio": 0.38028941021705764,
+            "raw_total_ratio": 2.281736461302346,
+            "volatile_per_second_ratio": 0.38128070415070375
+          },
+          "decisions": {
+            "A207_total": 27474,
+            "A208_total": 34329,
+            "nominal_per_second_ratio": 0.20825143772293803,
+            "raw_total_ratio": 1.2495086263376283,
+            "volatile_per_second_ratio": 0.2087942832015171
+          },
+          "propagations": {
+            "A207_total": 33674964,
+            "A208_total": 321798223,
+            "nominal_per_second_ratio": 1.5926679882023531,
+            "raw_total_ratio": 9.556007929214118,
+            "volatile_per_second_ratio": 1.5968195687423326
+          },
+          "restarts": {
+            "A207_total": 19,
+            "A208_total": 218,
+            "nominal_per_second_ratio": 1.9122807017543861,
+            "raw_total_ratio": 11.473684210526315,
+            "volatile_per_second_ratio": 1.9172654113154428
+          }
+        },
+        "prefix": "11000"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11001__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11001__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5027,
+            "A208_total": 10791,
+            "nominal_per_second_ratio": 0.35776805251641136,
+            "raw_total_ratio": 2.1466083150984683,
+            "volatile_per_second_ratio": 0.3586372804597488
+          },
+          "decisions": {
+            "A207_total": 27982,
+            "A208_total": 36207,
+            "nominal_per_second_ratio": 0.2156564934600815,
+            "raw_total_ratio": 1.293938960760489,
+            "volatile_per_second_ratio": 0.2161804492715609
+          },
+          "propagations": {
+            "A207_total": 32079796,
+            "A208_total": 321652677,
+            "nominal_per_second_ratio": 1.6711072445722535,
+            "raw_total_ratio": 10.026643467433521,
+            "volatile_per_second_ratio": 1.6751673418981015
+          },
+          "restarts": {
+            "A207_total": 24,
+            "A208_total": 377,
+            "nominal_per_second_ratio": 2.618055555555556,
+            "raw_total_ratio": 15.708333333333334,
+            "volatile_per_second_ratio": 2.6244163444244673
+          }
+        },
+        "prefix": "11001"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11010__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11010__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4544,
+            "A208_total": 10536,
+            "nominal_per_second_ratio": 0.386443661971831,
+            "raw_total_ratio": 2.318661971830986,
+            "volatile_per_second_ratio": 0.3900547851677295
+          },
+          "decisions": {
+            "A207_total": 27485,
+            "A208_total": 34695,
+            "nominal_per_second_ratio": 0.21038748408222666,
+            "raw_total_ratio": 1.26232490449336,
+            "volatile_per_second_ratio": 0.21235345014315135
+          },
+          "propagations": {
+            "A207_total": 32094689,
+            "A208_total": 319719315,
+            "nominal_per_second_ratio": 1.6602919099792492,
+            "raw_total_ratio": 9.961751459875495,
+            "volatile_per_second_ratio": 1.6758065094359893
+          },
+          "restarts": {
+            "A207_total": 12,
+            "A208_total": 177,
+            "nominal_per_second_ratio": 2.4583333333333335,
+            "raw_total_ratio": 14.75,
+            "volatile_per_second_ratio": 2.4813052316896265
+          }
+        },
+        "prefix": "11010"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11011__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11011__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4657,
+            "A208_total": 10778,
+            "nominal_per_second_ratio": 0.38572757855557943,
+            "raw_total_ratio": 2.3143654713334767,
+            "volatile_per_second_ratio": 0.38812691974212965
+          },
+          "decisions": {
+            "A207_total": 27723,
+            "A208_total": 34901,
+            "nominal_per_second_ratio": 0.20981976457574333,
+            "raw_total_ratio": 1.2589185874544602,
+            "volatile_per_second_ratio": 0.21112490641907233
+          },
+          "propagations": {
+            "A207_total": 30807704,
+            "A208_total": 313934662,
+            "nominal_per_second_ratio": 1.698355829005195,
+            "raw_total_ratio": 10.19013497403117,
+            "volatile_per_second_ratio": 1.7089201114586539
+          },
+          "restarts": {
+            "A207_total": 23,
+            "A208_total": 332,
+            "nominal_per_second_ratio": 2.4057971014492754,
+            "raw_total_ratio": 14.434782608695652,
+            "volatile_per_second_ratio": 2.420761880720713
+          }
+        },
+        "prefix": "11011"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11100__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11100__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 5394,
+            "A208_total": 11377,
+            "nominal_per_second_ratio": 0.35153256704980845,
+            "raw_total_ratio": 2.1091954022988504,
+            "volatile_per_second_ratio": 0.3524093288613099
+          },
+          "decisions": {
+            "A207_total": 28746,
+            "A208_total": 35007,
+            "nominal_per_second_ratio": 0.2029673693731302,
+            "raw_total_ratio": 1.217804216238781,
+            "volatile_per_second_ratio": 0.20347359285034802
+          },
+          "propagations": {
+            "A207_total": 36805630,
+            "A208_total": 304704673,
+            "nominal_per_second_ratio": 1.3797919548358952,
+            "raw_total_ratio": 8.27875172901537,
+            "volatile_per_second_ratio": 1.3832333113621758
+          },
+          "restarts": {
+            "A207_total": 20,
+            "A208_total": 143,
+            "nominal_per_second_ratio": 1.1916666666666667,
+            "raw_total_ratio": 7.15,
+            "volatile_per_second_ratio": 1.1946388175377538
+          }
+        },
+        "prefix": "11100"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11101__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11101__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4874,
+            "A208_total": 10384,
+            "nominal_per_second_ratio": 0.3550813842155656,
+            "raw_total_ratio": 2.1304883052933934,
+            "volatile_per_second_ratio": 0.356742332718112
+          },
+          "decisions": {
+            "A207_total": 29704,
+            "A208_total": 35774,
+            "nominal_per_second_ratio": 0.20072493042463416,
+            "raw_total_ratio": 1.204349582547805,
+            "volatile_per_second_ratio": 0.20166385256314348
+          },
+          "propagations": {
+            "A207_total": 39602481,
+            "A208_total": 319388440,
+            "nominal_per_second_ratio": 1.344143228467597,
+            "raw_total_ratio": 8.064859370805582,
+            "volatile_per_second_ratio": 1.350430667859733
+          },
+          "restarts": {
+            "A207_total": 49,
+            "A208_total": 292,
+            "nominal_per_second_ratio": 0.9931972789115645,
+            "raw_total_ratio": 5.959183673469388,
+            "volatile_per_second_ratio": 0.9978431139411471
+          }
+        },
+        "prefix": "11101"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11110__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11110__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4550,
+            "A208_total": 10439,
+            "nominal_per_second_ratio": 0.3823809523809524,
+            "raw_total_ratio": 2.2942857142857145,
+            "volatile_per_second_ratio": 0.3826807995503256
+          },
+          "decisions": {
+            "A207_total": 28203,
+            "A208_total": 35960,
+            "nominal_per_second_ratio": 0.21250694370575235,
+            "raw_total_ratio": 1.275041662234514,
+            "volatile_per_second_ratio": 0.21267358277379572
+          },
+          "propagations": {
+            "A207_total": 36739009,
+            "A208_total": 318838084,
+            "nominal_per_second_ratio": 1.446410290126951,
+            "raw_total_ratio": 8.678461740761707,
+            "volatile_per_second_ratio": 1.4475445046544955
+          },
+          "restarts": {
+            "A207_total": 16,
+            "A208_total": 145,
+            "nominal_per_second_ratio": 1.5104166666666665,
+            "raw_total_ratio": 9.0625,
+            "volatile_per_second_ratio": 1.5116010723209075
+          }
+        },
+        "prefix": "11110"
+      },
+      {
+        "A207_variant": "output_unit_bfs_far__cse_prefix_11111__reverse",
+        "A208_variant": "output_unit_bfs_far__cse_prefix_11111__reverse__long60",
+        "metrics": {
+          "conflicts": {
+            "A207_total": 4732,
+            "A208_total": 10031,
+            "nominal_per_second_ratio": 0.35330374753451677,
+            "raw_total_ratio": 2.1198224852071004,
+            "volatile_per_second_ratio": 0.35325073934325935
+          },
+          "decisions": {
+            "A207_total": 28460,
+            "A208_total": 34460,
+            "nominal_per_second_ratio": 0.20180370110096044,
+            "raw_total_ratio": 1.2108222066057626,
+            "volatile_per_second_ratio": 0.2017734233321593
+          },
+          "propagations": {
+            "A207_total": 39147352,
+            "A208_total": 316707946,
+            "nominal_per_second_ratio": 1.34835831722837,
+            "raw_total_ratio": 8.09014990337022,
+            "volatile_per_second_ratio": 1.3481560152826308
+          },
+          "restarts": {
+            "A207_total": 24,
+            "A208_total": 155,
+            "nominal_per_second_ratio": 1.076388888888889,
+            "raw_total_ratio": 6.458333333333333,
+            "volatile_per_second_ratio": 1.0762273920791672
+          }
+        },
+        "prefix": "11111"
+      }
+    ],
+    "total_metrics": {
+      "conflicts": {
+        "A207_full_baseline_total": 149228,
+        "A207_metric_missing_count": 0,
+        "A207_metric_observation_count": 32,
+        "A207_total": 149228,
+        "A208_all_observed_total": 339554,
+        "A208_metric_missing_count": 0,
+        "A208_metric_observation_count": 32,
+        "A208_total": 339554,
+        "cell_nominal_rate_ratio_count": 32,
+        "cell_nominal_rate_ratio_max": 0.48734119367516676,
+        "cell_nominal_rate_ratio_median": 0.3823025602535235,
+        "cell_nominal_rate_ratio_min": 0.30686224919912325,
+        "matched_prefix_count": 32,
+        "nominal_per_second_ratio": 0.37923401327722234,
+        "raw_total_ratio": 2.275404079663334,
+        "totals_use_only_same_prefix_matched_metric_pairs": true
+      },
+      "decisions": {
+        "A207_full_baseline_total": 901703,
+        "A207_metric_missing_count": 0,
+        "A207_metric_observation_count": 32,
+        "A207_total": 901703,
+        "A208_all_observed_total": 1149537,
+        "A208_metric_missing_count": 0,
+        "A208_metric_observation_count": 32,
+        "A208_total": 1149537,
+        "cell_nominal_rate_ratio_count": 32,
+        "cell_nominal_rate_ratio_max": 0.2402212664459077,
+        "cell_nominal_rate_ratio_median": 0.2104779973305971,
+        "cell_nominal_rate_ratio_min": 0.1945744096650192,
+        "matched_prefix_count": 32,
+        "nominal_per_second_ratio": 0.21247517198013094,
+        "raw_total_ratio": 1.2748510318807855,
+        "totals_use_only_same_prefix_matched_metric_pairs": true
+      },
+      "propagations": {
+        "A207_full_baseline_total": 989838887,
+        "A207_metric_missing_count": 0,
+        "A207_metric_observation_count": 32,
+        "A207_total": 989838887,
+        "A208_all_observed_total": 10201575518,
+        "A208_metric_missing_count": 0,
+        "A208_metric_observation_count": 32,
+        "A208_total": 10201575518,
+        "cell_nominal_rate_ratio_count": 32,
+        "cell_nominal_rate_ratio_max": 2.18132462759215,
+        "cell_nominal_rate_ratio_median": 1.6794895101480138,
+        "cell_nominal_rate_ratio_min": 1.344143228467597,
+        "matched_prefix_count": 32,
+        "nominal_per_second_ratio": 1.7177164977691295,
+        "raw_total_ratio": 10.306298986614777,
+        "totals_use_only_same_prefix_matched_metric_pairs": true
+      },
+      "restarts": {
+        "A207_full_baseline_total": 717,
+        "A207_metric_missing_count": 0,
+        "A207_metric_observation_count": 32,
+        "A207_total": 717,
+        "A208_all_observed_total": 9944,
+        "A208_metric_missing_count": 0,
+        "A208_metric_observation_count": 32,
+        "A208_total": 9944,
+        "cell_nominal_rate_ratio_count": 32,
+        "cell_nominal_rate_ratio_max": 12.875,
+        "cell_nominal_rate_ratio_median": 2.215909090909091,
+        "cell_nominal_rate_ratio_min": 0.9772727272727272,
+        "matched_prefix_count": 32,
+        "nominal_per_second_ratio": 2.311483031148303,
+        "raw_total_ratio": 13.868898186889819,
+        "totals_use_only_same_prefix_matched_metric_pairs": true
+      }
+    }
+  },
+  "rate_comparison_sha256": "7cee747dc5deb9722e47c6d9a5d1a67b9df5cdcf31774ba6d45c531474c63e89",
+  "result": "The systematic A207 output-unit-BFS-far search-density outlier is executed prospectively over every Round-10 prefix cell at a 60-second budget.",
+  "schema": "chacha20-round10-bfs-far-long-budget-transfer-v1",
+  "scope": "Reduced ChaCha10 20-bit partial-key recovery over eight shared-key blocks.",
+  "selection": {
+    "A207_all_prefix_direction_gates": {
+      "conflicts_ratio_min": 1.703481842006739,
+      "decisions_ratio_min": 3.3145624103299856,
+      "propagations_ratio_max": 0.7555339998822715
+    },
+    "A207_total_ratios": {
+      "conflicts": 2.7585773439810706,
+      "conflicts_per_propagation": 4.644075913140431,
+      "decisions": 5.685713565082508,
+      "decisions_per_propagation": 9.571921365274823,
+      "propagations": 0.5939991928589421,
+      "restarts": 0.478
+    },
+    "archive_row_index": 5,
+    "selected_after_A207_before_any_A208_outcome": true,
+    "selected_candidate": "output_unit_bfs_far",
+    "selection_rule": "select_the_candidate_with_the_largest_total_conflicts_per_propagation_ratio_and_largest_total_decisions_per_propagation_ratio_against_A206_while_requiring_the_direction_to_hold_on_every_prefix",
+    "selection_source": "complete_A207_same_prefix_same_mode_progress_map",
+    "selection_time_data_used": false,
+    "solver_mode": "reverse"
+  },
+  "selection_sha256": "861b798682dcfde21e69fc90b3d427c32d0977c7f8e2c6876079b29435449d6c",
+  "solver_identities": {
+    "bitwuzla": {
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "path": "/opt/homebrew/bin/bitwuzla",
+      "version": "0.9.1"
+    },
+    "cadical": {
+      "executable_sha256": "c7b63954503d7fb1c8532efa37689715398683b5dea59d9bf6d80f06169e09b3",
+      "path": "/opt/homebrew/bin/cadical",
+      "version": "3.0.0"
+    }
+  },
+  "source_exports": [
+    {
+      "bytes": 14088296,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00000.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00000",
+      "returncode": 0,
+      "sha256": "ccdcb5a64fb4cffb4843d631a56aff00bf7d12acbff6396a850f1a4621229fa3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        -48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00000",
+      "volatile_seconds": 3.1208087080158293
+    },
+    {
+      "bytes": 14088295,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00001.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00001",
+      "returncode": 0,
+      "sha256": "d7eefe5c0fef97b97a30310718b4f0821c64482735c7ad155df198f0fbde908a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        -48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00001",
+      "volatile_seconds": 3.1457436671480536
+    },
+    {
+      "bytes": 14088295,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00010.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00010",
+      "returncode": 0,
+      "sha256": "6d459353f34629a921dab81ed248efc0b2548d8371a8c4b15ef55396c6b53e33",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        -48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00010",
+      "volatile_seconds": 3.1499076671898365
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00011.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00011",
+      "returncode": 0,
+      "sha256": "95717b914e16d6dba2e2f3965c3081fcc40b5769145a6f563bdff42710add53e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        -48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00011",
+      "volatile_seconds": 3.1405172501690686
+    },
+    {
+      "bytes": 14088295,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00100.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00100",
+      "returncode": 0,
+      "sha256": "f3001f0c474849ce41f4dae1c95d53e44c280d5dd25ba1b00e449f1a9de7bc0b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00100",
+      "volatile_seconds": 3.173638958018273
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00101.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00101",
+      "returncode": 0,
+      "sha256": "e3bd915179a50dba4eaafc66123f0b627544deb8668af07c385dd9257c7cddaa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00101",
+      "volatile_seconds": 3.177061582915485
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00110.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00110",
+      "returncode": 0,
+      "sha256": "1f5f2a430dd77d96b034cccbac954f2de0d3ec1697d5f48e0f8c2e24ac83586c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00110",
+      "volatile_seconds": 3.1553499582223594
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_00111.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "00111",
+      "returncode": 0,
+      "sha256": "dcbc3bcd23f76afb7e9f1c22db9ff2bab2d96f9239f9739e1c1ceca19480c643",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        48,
+        -57,
+        -50
+      ],
+      "variant": "cse_prefix_00111",
+      "volatile_seconds": 3.1432377081364393
+    },
+    {
+      "bytes": 14088295,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01000.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01000",
+      "returncode": 0,
+      "sha256": "cd0aa8d44da052a0a0bf380a7ece6a88018b44dfdb182a4713ec3866be9fd510",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        -48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01000",
+      "volatile_seconds": 3.1405759998597205
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01001.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01001",
+      "returncode": 0,
+      "sha256": "a52700266d61ab6ef5cd1232702cfe2b1b4e17fdb951ac4e4be227ccea31658e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        -48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01001",
+      "volatile_seconds": 3.1496629579924047
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01010.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01010",
+      "returncode": 0,
+      "sha256": "e0c42f8853846b769f64034d113b1d23c29d424e31c6243c9f6df16aa39c8aba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        -48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01010",
+      "volatile_seconds": 3.1480503333732486
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01011.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01011",
+      "returncode": 0,
+      "sha256": "f59e64002930bde671d775ac6078f8becfbdd26b8d4f989df7d54b158449b64f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        -48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01011",
+      "volatile_seconds": 3.1478027082048357
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01100.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01100",
+      "returncode": 0,
+      "sha256": "4ad4103cb7d168d66ed086ab68a18fd545db9dc7385a135b5df26720764cf91c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01100",
+      "volatile_seconds": 3.1483758753165603
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01101.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01101",
+      "returncode": 0,
+      "sha256": "9fdb92ec27acbaa8241027987dc5e4f311bc8f02440850e986f196aeb1031045",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01101",
+      "volatile_seconds": 3.1614114167168736
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01110.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01110",
+      "returncode": 0,
+      "sha256": "d2b3d0e887173c0b892add6e4cf0676d51fdb8608a7eb0801d3bff0e2eb6da85",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01110",
+      "volatile_seconds": 3.149189000017941
+    },
+    {
+      "bytes": 14088292,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_01111.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "01111",
+      "returncode": 0,
+      "sha256": "6b7c1d968a1d0ab2ee4d3ee74c55c0574214453e2969c2504412611c39b9f221",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        48,
+        -57,
+        50
+      ],
+      "variant": "cse_prefix_01111",
+      "volatile_seconds": 3.1268502906896174
+    },
+    {
+      "bytes": 14088295,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10000.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10000",
+      "returncode": 0,
+      "sha256": "168c562b0cba9acae724323fc951d8db35839ebc18c99488093d1228ac8f2d44",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        -48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10000",
+      "volatile_seconds": 3.131848624907434
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10001.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10001",
+      "returncode": 0,
+      "sha256": "39426ec2c560df93883d9d634cf46e39b0f9408e8a75ddec59cc7785fcb6f381",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        -48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10001",
+      "volatile_seconds": 3.1266357502900064
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10010.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10010",
+      "returncode": 0,
+      "sha256": "72402ba94b2d5ec55a757f654f64c4bc9711f24780939da308b52eeb4bdd70d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        -48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10010",
+      "volatile_seconds": 3.135009417310357
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10011.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10011",
+      "returncode": 0,
+      "sha256": "7e8217503e0510d3293cf903edee1cd6c18747f6f671dff87424de5dd51c13ea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        -48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10011",
+      "volatile_seconds": 3.1378967501223087
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10100.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10100",
+      "returncode": 0,
+      "sha256": "0b832f079b1f4e4e86810c9ac49569d8d5a897f1a0fdba50cfa92b25df74ce9c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10100",
+      "volatile_seconds": 3.1044878750108182
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10101.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10101",
+      "returncode": 0,
+      "sha256": "fe7abb097cea9ae2e1afd9fabb834407fc1764b9ee6bbd9b432052ebb5033516",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10101",
+      "volatile_seconds": 3.1425501252524555
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10110.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10110",
+      "returncode": 0,
+      "sha256": "380136a8ce7566856e8e3c16475b5ab7c777d6da9c9850bb9067f126eb7cc025",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10110",
+      "volatile_seconds": 3.12056641606614
+    },
+    {
+      "bytes": 14088292,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_10111.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "10111",
+      "returncode": 0,
+      "sha256": "090a36f4f5926be35a2150b695735778e97ee15cfdc698d72df6270765fb0cbc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        48,
+        57,
+        -50
+      ],
+      "variant": "cse_prefix_10111",
+      "volatile_seconds": 3.1507747499272227
+    },
+    {
+      "bytes": 14088294,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11000.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11000",
+      "returncode": 0,
+      "sha256": "044213b6bcceb708bd8b4174a29ee13b5ea122b8ec6c2552dbc34884d7b0ab04",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        -48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11000",
+      "volatile_seconds": 3.1289505418390036
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11001.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11001",
+      "returncode": 0,
+      "sha256": "b738002b434394e69eef271f8dbf71c021c183cc7e9a5ddc3ca880a9b0dea86a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        -48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11001",
+      "volatile_seconds": 3.154156000353396
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11010.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11010",
+      "returncode": 0,
+      "sha256": "1134262d9116c164f0a10fa57e5a5f82351380440608c71bf8647cc825c8ca7a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        -48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11010",
+      "volatile_seconds": 3.1261576670221984
+    },
+    {
+      "bytes": 14088292,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11011.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11011",
+      "returncode": 0,
+      "sha256": "7501941d7916b74735ea60f181e99e05e8aa50203d84206a1d1f5bb13bd56b9f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        -48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11011",
+      "volatile_seconds": 3.1544751659967005
+    },
+    {
+      "bytes": 14088293,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11100.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11100",
+      "returncode": 0,
+      "sha256": "85fc88e45fd3d6f9b64ea3c2f2f1657b2c94abe2742c9331c37c23686633db73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        -46,
+        48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11100",
+      "volatile_seconds": 3.1261899578385055
+    },
+    {
+      "bytes": 14088292,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11101.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11101",
+      "returncode": 0,
+      "sha256": "fda2793ec34bd14b1e34c7e4592ee17f8269f57bd4aa6b70a89ee736e363986d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        -46,
+        48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11101",
+      "volatile_seconds": 3.0969922081567347
+    },
+    {
+      "bytes": 14088292,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11110.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11110",
+      "returncode": 0,
+      "sha256": "747f241f2758c157d052d4341067eb928173dfa2668454719af67bfdc9110aa6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        -44,
+        46,
+        48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11110",
+      "volatile_seconds": 3.1411272077821195
+    },
+    {
+      "bytes": 14088291,
+      "command": [
+        "/opt/homebrew/bin/bitwuzla",
+        "--lang",
+        "smt2",
+        "--time-limit",
+        "3000",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--write-cnf=/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/a208-bfs-far-long-5mx5ozut/cse_prefix_11111.cnf"
+      ],
+      "export_status": "unknown",
+      "externally_timed_out": false,
+      "header": "p cnf 232191 734180",
+      "normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11111",
+      "returncode": 0,
+      "sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+      "tail_units": [
+        44,
+        46,
+        48,
+        57,
+        50
+      ],
+      "variant": "cse_prefix_11111",
+      "volatile_seconds": 3.112331874668598
+    }
+  ],
+  "source_exports_sha256": "c8fa202c2b50904fe40b5cde0b01e779b9ad99c708fc8c8f275b421c688e0370",
+  "transform_manifest": [
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": true,
+      "inverse_restored_sha256": "ccdcb5a64fb4cffb4843d631a56aff00bf7d12acbff6396a850f1a4621229fa3",
+      "prefix": "00000",
+      "source_cnf_sha256": "ccdcb5a64fb4cffb4843d631a56aff00bf7d12acbff6396a850f1a4621229fa3",
+      "source_variant": "cse_prefix_00000",
+      "transformed_cnf_bytes": 14156703,
+      "transformed_cnf_sha256": "5cf3cb8719cd1a93215aa9d6936b12a24e223940ade27ba322f999d400e2023d",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        -225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00001",
+      "source_cnf_sha256": "d7eefe5c0fef97b97a30310718b4f0821c64482735c7ad155df198f0fbde908a",
+      "source_variant": "cse_prefix_00001",
+      "transformed_cnf_bytes": 14156702,
+      "transformed_cnf_sha256": "c5de72d2e73fdd29114646378bece77a0dedd0bc53ef115e92b1e550ad99b163",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        -225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00010",
+      "source_cnf_sha256": "6d459353f34629a921dab81ed248efc0b2548d8371a8c4b15ef55396c6b53e33",
+      "source_variant": "cse_prefix_00010",
+      "transformed_cnf_bytes": 14156702,
+      "transformed_cnf_sha256": "7fe575177b281b1c16d6546d3f206ddf410b886425832509b9af30fae5f4079b",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        -225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00011",
+      "source_cnf_sha256": "95717b914e16d6dba2e2f3965c3081fcc40b5769145a6f563bdff42710add53e",
+      "source_variant": "cse_prefix_00011",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "75990deb0a3b712d45dae93999bc0b55dc4f7860a8dadb814acf7cdafb70d918",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        -225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00100",
+      "source_cnf_sha256": "f3001f0c474849ce41f4dae1c95d53e44c280d5dd25ba1b00e449f1a9de7bc0b",
+      "source_variant": "cse_prefix_00100",
+      "transformed_cnf_bytes": 14156702,
+      "transformed_cnf_sha256": "9bdd37efff050798f0846f8eaab2ba4d95d4b6d556b91669a086eea79ffacac7",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00101",
+      "source_cnf_sha256": "e3bd915179a50dba4eaafc66123f0b627544deb8668af07c385dd9257c7cddaa",
+      "source_variant": "cse_prefix_00101",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "6ed92995d21d2c0dcc3907aaa8f87ae73715c5fb795ee33e5d9e2fab9ad5fe4e",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00110",
+      "source_cnf_sha256": "1f5f2a430dd77d96b034cccbac954f2de0d3ec1697d5f48e0f8c2e24ac83586c",
+      "source_variant": "cse_prefix_00110",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "18e329d5a73566b4cdd1b663c0f56f261cd0eead7ef3f87e854c41880a4fc201",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "00111",
+      "source_cnf_sha256": "dcbc3bcd23f76afb7e9f1c22db9ff2bab2d96f9239f9739e1c1ceca19480c643",
+      "source_variant": "cse_prefix_00111",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "64e6768461da9c929104c6d65ed4f727e72ddc978db34ad3825a95351e7e79f2",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        225288,
+        -225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01000",
+      "source_cnf_sha256": "cd0aa8d44da052a0a0bf380a7ece6a88018b44dfdb182a4713ec3866be9fd510",
+      "source_variant": "cse_prefix_01000",
+      "transformed_cnf_bytes": 14156702,
+      "transformed_cnf_sha256": "dbf8353bea9fdf4f84c2a61840192177b118f7df79c640f8fb0872f21ac16d31",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        -225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01001",
+      "source_cnf_sha256": "a52700266d61ab6ef5cd1232702cfe2b1b4e17fdb951ac4e4be227ccea31658e",
+      "source_variant": "cse_prefix_01001",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "18ff000aacf2da8369109009e28aeca302f5b171ff29e1a18de95a3ebd817924",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        -225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01010",
+      "source_cnf_sha256": "e0c42f8853846b769f64034d113b1d23c29d424e31c6243c9f6df16aa39c8aba",
+      "source_variant": "cse_prefix_01010",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "07e18d57899bfd6bc29d1b867b8008739c1a6d5d466c41a943fec7ee44499060",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        -225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01011",
+      "source_cnf_sha256": "f59e64002930bde671d775ac6078f8becfbdd26b8d4f989df7d54b158449b64f",
+      "source_variant": "cse_prefix_01011",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "fdeddb77dc8a10b22bf342a6157cb974eb010b10d2460363df543f2068871344",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        -225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01100",
+      "source_cnf_sha256": "4ad4103cb7d168d66ed086ab68a18fd545db9dc7385a135b5df26720764cf91c",
+      "source_variant": "cse_prefix_01100",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "8228bc6d0ca03224bb993525af82a18e039a72fdf9a21d14eacec7bf74bdf857",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01101",
+      "source_cnf_sha256": "9fdb92ec27acbaa8241027987dc5e4f311bc8f02440850e986f196aeb1031045",
+      "source_variant": "cse_prefix_01101",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "dd8f533dec7e532c453d47a63d458d62f8a470acb503717113c5edec6d70d0f1",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01110",
+      "source_cnf_sha256": "d2b3d0e887173c0b892add6e4cf0676d51fdb8608a7eb0801d3bff0e2eb6da85",
+      "source_variant": "cse_prefix_01110",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "b1a6e306bc3019109d591d5f1b7edd3eb730f08ce9460a88f8aa47a0076e8c11",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "01111",
+      "source_cnf_sha256": "6b7c1d968a1d0ab2ee4d3ee74c55c0574214453e2969c2504412611c39b9f221",
+      "source_variant": "cse_prefix_01111",
+      "transformed_cnf_bytes": 14156699,
+      "transformed_cnf_sha256": "cf1a61d9fa09b1133b74f9f49fc43d19f03878d5674bdcc97ad0f810713de49d",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        225288,
+        -225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10000",
+      "source_cnf_sha256": "168c562b0cba9acae724323fc951d8db35839ebc18c99488093d1228ac8f2d44",
+      "source_variant": "cse_prefix_10000",
+      "transformed_cnf_bytes": 14156702,
+      "transformed_cnf_sha256": "36cb26d4e7bf6ea0da37614ad32b2fe9f5cb8224b348b0f68a9cfac0493f5df0",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        -225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10001",
+      "source_cnf_sha256": "39426ec2c560df93883d9d634cf46e39b0f9408e8a75ddec59cc7785fcb6f381",
+      "source_variant": "cse_prefix_10001",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "1ed1758d69cfb21a50dd0cf8e7bed5d4e53b81cbf671e6f67b2c0142098fbdd4",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        -225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10010",
+      "source_cnf_sha256": "72402ba94b2d5ec55a757f654f64c4bc9711f24780939da308b52eeb4bdd70d9",
+      "source_variant": "cse_prefix_10010",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "16a75dbbb30886573669b9ed05c9928cd21b1fbf9ed268d7122224d3893f1758",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        -225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10011",
+      "source_cnf_sha256": "7e8217503e0510d3293cf903edee1cd6c18747f6f671dff87424de5dd51c13ea",
+      "source_variant": "cse_prefix_10011",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "0f7945c0284b904991806756746a0b39ddc17c4e82ed36ac0196ff04ead74a46",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        -225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10100",
+      "source_cnf_sha256": "0b832f079b1f4e4e86810c9ac49569d8d5a897f1a0fdba50cfa92b25df74ce9c",
+      "source_variant": "cse_prefix_10100",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "1f7b4ae77085787488b2be36b99d621d7ff39809ab7639cc7e754969a6d09f8d",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10101",
+      "source_cnf_sha256": "fe7abb097cea9ae2e1afd9fabb834407fc1764b9ee6bbd9b432052ebb5033516",
+      "source_variant": "cse_prefix_10101",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "69d6e5423f0bada4c2c97a826b61b4bd0531af7d73a73102a0765e0ab8b8a2bd",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10110",
+      "source_cnf_sha256": "380136a8ce7566856e8e3c16475b5ab7c777d6da9c9850bb9067f126eb7cc025",
+      "source_variant": "cse_prefix_10110",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "17548d96dc11efc988d2acea075d1b096127fcb2a2284925c5c9b85ceac2dc8e",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "10111",
+      "source_cnf_sha256": "090a36f4f5926be35a2150b695735778e97ee15cfdc698d72df6270765fb0cbc",
+      "source_variant": "cse_prefix_10111",
+      "transformed_cnf_bytes": 14156699,
+      "transformed_cnf_sha256": "47abc542520231375da548066c2b46de2e687986926dd4b97efe06f96ab25ea8",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        225288,
+        225290,
+        -225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11000",
+      "source_cnf_sha256": "044213b6bcceb708bd8b4174a29ee13b5ea122b8ec6c2552dbc34884d7b0ab04",
+      "source_variant": "cse_prefix_11000",
+      "transformed_cnf_bytes": 14156701,
+      "transformed_cnf_sha256": "baf061afa0acb169be4262945b1f326643950e734d4cacd2701188b7dfbbada4",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        -225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11001",
+      "source_cnf_sha256": "b738002b434394e69eef271f8dbf71c021c183cc7e9a5ddc3ca880a9b0dea86a",
+      "source_variant": "cse_prefix_11001",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "12d349821da9d05c740464c9a31956d2a47de6c2e1e0ee59992689e5ea22fca7",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        -225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11010",
+      "source_cnf_sha256": "1134262d9116c164f0a10fa57e5a5f82351380440608c71bf8647cc825c8ca7a",
+      "source_variant": "cse_prefix_11010",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "ea3985b7670504d1bd46ae4f93e66300d1844db4571caedfce95e0944c738ade",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        -225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11011",
+      "source_cnf_sha256": "7501941d7916b74735ea60f181e99e05e8aa50203d84206a1d1f5bb13bd56b9f",
+      "source_variant": "cse_prefix_11011",
+      "transformed_cnf_bytes": 14156699,
+      "transformed_cnf_sha256": "47833efbf5b76224f7d7738bdb2f1e49eff5d5ab4ceed3ccd13c4cd301c449bf",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        -225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11100",
+      "source_cnf_sha256": "85fc88e45fd3d6f9b64ea3c2f2f1657b2c94abe2742c9331c37c23686633db73",
+      "source_variant": "cse_prefix_11100",
+      "transformed_cnf_bytes": 14156700,
+      "transformed_cnf_sha256": "51352a6032fc04d54cc6b64632463f48a3a3d8c120222219181ab758cd034668",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        -225287,
+        225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11101",
+      "source_cnf_sha256": "fda2793ec34bd14b1e34c7e4592ee17f8269f57bd4aa6b70a89ee736e363986d",
+      "source_variant": "cse_prefix_11101",
+      "transformed_cnf_bytes": 14156699,
+      "transformed_cnf_sha256": "f53d6a33897b8016cb6c2764ae920e320c61266900e08302ca371b715bf65a83",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        -225287,
+        225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": false,
+      "inverse_restored_sha256": null,
+      "prefix": "11110",
+      "source_cnf_sha256": "747f241f2758c157d052d4341067eb928173dfa2668454719af67bfdc9110aa6",
+      "source_variant": "cse_prefix_11110",
+      "transformed_cnf_bytes": 14156699,
+      "transformed_cnf_sha256": "17ad464b4cd434efb21916e90f3d299d804a4642f458b3acac89b226647d830b",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        -225286,
+        225287,
+        225288,
+        225290,
+        225289
+      ]
+    },
+    {
+      "candidate": "output_unit_bfs_far",
+      "inverse_endpoint_checked": true,
+      "inverse_restored_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "prefix": "11111",
+      "source_cnf_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+      "source_variant": "cse_prefix_11111",
+      "transformed_cnf_bytes": 14156698,
+      "transformed_cnf_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_header": "p cnf 232191 734180",
+      "transformed_normalized_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+      "transformed_tail_units": [
+        225286,
+        225287,
+        225288,
+        225290,
+        225289
+      ]
+    }
+  ],
+  "transform_manifest_sha256": "f9ae77ed7bcae1e22f5084c0c23a906a7d40ae947a9ba4f744fe8ba6185dcca8"
+}

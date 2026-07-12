@@ -733,6 +733,20 @@ A206 same-mode baseline (2.758577x conflicts, 5.685714x decisions, 0.593999x
 propagations); see
 `reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md`.
 
+A208 transfers the selected reverse `output_unit_bfs_far` mechanism from ten
+to sixty seconds on every cell of the same complete 32-prefix cover. All 32
+outcomes remain valid `unknown`, but exact integer-counter differencing exposes
+the same temporal transition on every prefix: late conflict and decision rates
+fall while propagation rates rise. See
+`reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md`.
+
+A209 composes the complete A197 Width-12 cover with A208's eight-block global-
+CSE mechanism and a BFS-far order rederived after the three new unit sources.
+All 256 cells remain valid `unknown`; nevertheless, decisions, propagations,
+and restarts rise in every child relative to its matched A207 parent, and
+decision/propagation density rises in all 32 parent groups. See
+`reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md`.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs

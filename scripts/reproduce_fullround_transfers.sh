@@ -286,6 +286,8 @@ fi
   tests/test_chacha20_round10_structural_order_archive.py \
   tests/test_chacha20_round10_structural_portfolio.py \
   tests/test_chacha20_round10_structural_portfolio_result.py \
+  tests/test_chacha20_round10_bfs_far_long_budget.py \
+  tests/test_chacha20_round10_bfs_far_width12_refinement.py \
   tests/test_chacha20_cnf_structural_figures.py \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -610,6 +612,18 @@ shasum -a 256 \
   research/results/v1/chacha20_round10_structural_orders_v1.npy \
   research/results/v1/chacha20_round10_structural_portfolio_v1.json \
   research/results/v1/chacha20_round10_structural_portfolio_v1.causal \
+  research/configs/chacha20_round10_bfs_far_long_budget_v1.json \
+  research/experiments/chacha20_round10_bfs_far_long_budget.py \
+  tests/test_chacha20_round10_bfs_far_long_budget.py \
+  research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md \
+  research/results/v1/chacha20_round10_bfs_far_long_budget_v1.json \
+  research/results/v1/chacha20_round10_bfs_far_long_budget_v1.causal \
+  research/configs/chacha20_round10_bfs_far_width12_refinement_v1.json \
+  research/experiments/chacha20_round10_bfs_far_width12_refinement.py \
+  tests/test_chacha20_round10_bfs_far_width12_refinement.py \
+  research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md \
+  research/results/v1/chacha20_round10_bfs_far_width12_refinement_v1.json \
+  research/results/v1/chacha20_round10_bfs_far_width12_refinement_v1.causal \
   research/results/v1/chacha20_a187_fixed_rlimit_search_shape_v1.svg \
   research/results/v1/chacha20_a188_solver_portfolio_v1.svg \
   research/results/v1/chacha20_a189_round6_width20_portfolio_v1.svg \
@@ -634,4 +648,4 @@ shasum -a 256 \
   research/results/v1/formula_atlas_transfer_coverage_v1.json \
   > research/results/v1/FULLROUND_TRANSFER_SHA256SUMS
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, shared-encoder, native width-32, partial-key, vector-packing, Metal width-36/38/40, reduced-round SMT direction, shared-key stacking, portable solver portfolio, complete round-7 partitions, round-8/9 depth-transfer recoveries, round-10 split8/split9/width12/eight-block/public-geometry/CNF-order boundaries, the formula-atlas transfer ledger, and the complete A207 structural portfolio validated."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, shared-encoder, native width-32, partial-key, vector-packing, Metal width-36/38/40, reduced-round SMT direction, shared-key stacking, portable solver portfolio, complete round-7 partitions, round-8/9 depth-transfer recoveries, round-10 split8/split9/width12/eight-block/public-geometry/CNF-order boundaries, the formula-atlas transfer ledger, and the complete A207--A209 structural/phase progression validated."

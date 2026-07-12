@@ -42,6 +42,8 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-12 | A204--A206 exact-CNF continuation: standalone solver calibration, structural graph-order outliers on A188, and the complete robust-order ChaCha10 transfer boundary |
 | 2026-07-12 | A207 pre-execution record: twelve exact archived CNF permutations and the frozen 11-mode/352-cell remaining portfolio, committed as an internal hash-gated state before solver outcomes |
 | 2026-07-12 | A207 completed record: 352/352 new and 416/416 combined calibrated cells valid UNKNOWN, plus the exact systematic `output_unit_bfs_far` progress-map outlier |
+| 2026-07-12 | A208 completed record: complete 32-cell sixty-second transfer with a systematic all-prefix late propagation/restart phase measured by exact integer-counter differences |
+| 2026-07-12 | A209 completed record: complete 256-cell Width-12 composition with a systematic decision-rich phase reset across every child and parent group |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -56,7 +58,7 @@ invented here.
 | `paper/nano2026/main.tex` | `1269cfc7c24fb6ad2d3551ccea74f60fde4404967fe8b6710ba3acb8df887ed2` |
 | Sanitized Nanjing presentation source | `577607f1e1b2893234836f98999428ace0894a5362b5b85b6609565c1a70356c` |
 | `ANCHOR_SHA256SUMS` | `90f50ecdbe01e4de0afa4c858a57d916fc1794344375303a501a301c80e192e8` |
-| `FULLROUND_TRANSFER_SHA256SUMS` | `a02fa90472b717c59fa3f99f7a61705fccc50aff9050c2dd7fa367f6f1dddaed` |
+| `FULLROUND_TRANSFER_SHA256SUMS` | `b6fb9079d47f8eb4d640ba843e65b8085627473db6cd9953f9086ae155e349d8` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
 | `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `c4ba0fd7770f414aad6f67e9f3c171cf97890ce2997d53f75edb65d6ccf65717` |
 
@@ -66,7 +68,7 @@ with `scripts/verify_hash_manifest.py`.
 
 ## Result identifiers
 
-The stable A107--A207 identifiers are defined in
+The stable A107--A209 identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -122,6 +124,8 @@ publication:
 - A206: complete 64-cell-mode transfer of the robust structural order;
 - A207: exact 12-order pre-execution archive followed by the protocol-identical
   complete 352-cell execution, 416-cell combined boundary, and progress map;
+- A208: complete long-budget transfer and exact all-prefix temporal phase map;
+- A209: complete Width-12 BFS-far composition and systematic phase-reset map;
 
 ## Presentation sanitization
 
@@ -143,7 +147,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A207, include the exact follow-up commit containing the artifact; obtain
+A133--A209, include the exact follow-up commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a
 DOI or long-term archive guarantee.

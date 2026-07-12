@@ -397,3 +397,18 @@ complete execution under that freeze. All 352 new and all 416 combined
 A206/A207 observations are valid `unknown`. The retained progress map identifies
 reverse `output_unit_bfs_far` as a systematic conflict/decision-density outlier
 without a model or resolved cell.
+
+`CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md` records A208's
+complete 60-second transfer of the A207 `output_unit_bfs_far`/reverse
+search-density outlier. All 32 cells remain valid internal-timeout `unknown`,
+with no model. Exact early-versus-late integer metrics expose a systematic
+all-prefix phase transition: late conflict and decision rates decrease on
+32/32 prefixes while propagation rates increase on 32/32. The exact rational
+density ratios determine the subsequent Width-12 composition rule.
+
+`CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md` records A209's
+composition of the complete Width-12 cover with eight-block global CSE and a
+rederived BFS-far order. All 256 cells remain valid internal-timeout `unknown`,
+but the phase reset is systematic: decisions, propagations, and restarts
+increase in 256/256 children, while decision/propagation density increases in
+all 32 parent groups.

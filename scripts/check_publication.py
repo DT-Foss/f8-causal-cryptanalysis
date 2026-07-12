@@ -222,6 +222,12 @@ def main() -> int:
         "chacha20_round10_bidirectional_min_distance": (
             "CAUSAL_CHACHA20_ROUND10_BIDIRECTIONAL_MIN_DISTANCE_BOUNDARY_V1.md"
         ),
+        "chacha20_round10_bfs_far_long_budget": (
+            "CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md"
+        ),
+        "chacha20_round10_bfs_far_width12_refinement": (
+            "CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md"
+        ),
     }
     for stem, report in retained_chacha_transfers.items():
         required.extend(
@@ -365,6 +371,51 @@ def main() -> int:
         and progress["propagations"]["total_ratio"] == 0.5939991928589421
     ):
         failures.append("A207 progress-map outlier differs")
+
+    a208_result_path = results / "chacha20_round10_bfs_far_long_budget_v1.json"
+    if (
+        hashlib.sha256(a208_result_path.read_bytes()).hexdigest()
+        != "58af841aa508978857f629c43c3fdb679e620eb9ec365b5211b4f708d287203c"
+        or hashlib.sha256(
+            (results / "chacha20_round10_bfs_far_long_budget_v1.causal").read_bytes()
+        ).hexdigest()
+        != "9e5e35ec7a3a005f8bd10d1608dd078b7b79aaaf9bd1e4e77ac5e7201c4a0993"
+    ):
+        failures.append("A208 retained artifact identity differs")
+    a208 = json.loads(a208_result_path.read_bytes())
+    if not (
+        a208["evidence_stage"] == "ROUND10_BFS_FAR_LONG_COMPLETE_BOUNDARY_RETAINED"
+        and a208["comparisons"]["status_counts"]
+        == {"invalid": 0, "sat": 0, "unknown": 32, "unsat": 0}
+        and a208["confirmations"] == []
+        and len(a208["rate_comparison"]["cell_rows"]) == 32
+    ):
+        failures.append("A208 complete long-budget boundary differs")
+
+    a209_result_path = results / "chacha20_round10_bfs_far_width12_refinement_v1.json"
+    if (
+        hashlib.sha256(a209_result_path.read_bytes()).hexdigest()
+        != "242a87fd56da3fcf60e6ae4c1a5dd75effc9a2293a41496ea71f4c4342cc5c1e"
+        or hashlib.sha256(
+            (results / "chacha20_round10_bfs_far_width12_refinement_v1.causal").read_bytes()
+        ).hexdigest()
+        != "577f8fdbf41d95d6a61316103c48cc6f366311821b830ac2e4d11b7f4f79eb7f"
+    ):
+        failures.append("A209 retained artifact identity differs")
+    a209 = json.loads(a209_result_path.read_bytes())
+    a209_totals = a209["phase_reset_comparison"]["total_metrics"]
+    if not (
+        a209["evidence_stage"] == "ROUND10_BFS_FAR_WIDTH12_COMPLETE_BOUNDARY_RETAINED"
+        and a209["comparisons"]["status_counts"]
+        == {"invalid": 0, "sat": 0, "unknown": 256, "unsat": 0}
+        and a209["confirmations"] == []
+        and len(a209["phase_reset_comparison"]["cell_rows"]) == 256
+        and a209_totals["decisions"]["compute_normalized_mean_child_over_parent"]
+        == 2.7925087307017944
+        and a209_totals["propagations"]["compute_normalized_mean_child_over_parent"]
+        == 1.614886051905536
+    ):
+        failures.append("A209 complete Width-12 phase-reset boundary differs")
 
     deck = ROOT / "paper/nano2026/presentation/Foss_CASI_Nano-IoT_IEEE_NANO_2026.pptx"
     if deck.is_file():

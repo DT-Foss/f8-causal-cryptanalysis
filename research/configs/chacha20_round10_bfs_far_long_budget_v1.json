@@ -1,0 +1,174 @@
+{
+  "schema": "chacha20-round10-bfs-far-long-budget-transfer-protocol-v1",
+  "attempt_id": "A208",
+  "protocol_state": "frozen_after_complete_A207_progress_map_selection_before_any_A208_solver_execution",
+  "anchors": {
+    "A207": {
+      "protocol": "research/configs/chacha20_round10_structural_portfolio_v1.json",
+      "protocol_sha256": "05bbf03fac0f6d817e4af040df070673a6da1e6f618cca8193c860819fb20127",
+      "runner": "research/experiments/chacha20_round10_structural_portfolio.py",
+      "runner_sha256": "420dc4f30c6bea9da848a4ffe08bcca4b424ff0dbdd7b39b4a0a18f35122cc19",
+      "artifact": "research/results/v1/chacha20_round10_structural_portfolio_v1.json",
+      "sha256": "80ce896083b239e3bb95e31433fc8cdf6157491005bbb3b024182f730b545652",
+      "causal_artifact": "research/results/v1/chacha20_round10_structural_portfolio_v1.causal",
+      "causal_sha256": "0d23f4fcb91c6602b3222315afb84f203eff8f5d51b0e4df5f6f6430616d6dfa",
+      "causal_graph_sha256": "ceb1013b7c5387dedbcf5dfe7c5072fe73c200ba72f5d42b5ff7b0866ddb9b14",
+      "progress_map_sha256": "5501397d4957c99077e2d628e030b402775e37c600686c1f18fa206e7e0c6977",
+      "evidence_stage": "ROUND10_STRUCTURAL_PORTFOLIO_COMPLETE_BOUNDARY_RETAINED"
+    },
+    "order_archive": {
+      "archive": "research/results/v1/chacha20_round10_structural_orders_v1.npy",
+      "archive_sha256": "ea45134552a6ad3bb6c277ec6bd271d22764f902298b78bda568aef57a12f72f",
+      "metadata": "research/results/v1/chacha20_round10_structural_order_archive_v1.json",
+      "metadata_sha256": "b6dfb42095d176823c15d36a490297eb24bc85feedb916513b329d52808a73ce",
+      "causal_sha256": "71295ac95e3a2e5248e5d58cf3a40053bfe2a84f3ce30145f07b5abdbed9a58c",
+      "causal_graph_sha256": "dad19e2848cb3d480713113b45cfc4a65344b3582ada2bccceec1ce9321c061b"
+    }
+  },
+  "selection": {
+    "selected_candidate": "output_unit_bfs_far",
+    "archive_row_index": 5,
+    "solver_mode": "reverse",
+    "selection_time_data_used": false,
+    "selection_source": "complete_A207_same_prefix_same_mode_progress_map",
+    "selection_rule": "select_the_candidate_with_the_largest_total_conflicts_per_propagation_ratio_and_largest_total_decisions_per_propagation_ratio_against_A206_while_requiring_the_direction_to_hold_on_every_prefix",
+    "A207_total_ratios": {
+      "conflicts": 2.7585773439810706,
+      "decisions": 5.685713565082508,
+      "propagations": 0.5939991928589421,
+      "restarts": 0.478,
+      "conflicts_per_propagation": 4.644075913140431,
+      "decisions_per_propagation": 9.571921365274823
+    },
+    "A207_all_prefix_direction_gates": {
+      "conflicts_ratio_min": 1.703481842006739,
+      "decisions_ratio_min": 3.3145624103299856,
+      "propagations_ratio_max": 0.7555339998822715
+    },
+    "selected_after_A207_before_any_A208_outcome": true
+  },
+  "candidate_order": {
+    "order_sha256": "7d324874eef605c9b648ad50511d74a2bb351878a42c7f79bb96ded9a6633370",
+    "old_to_new_sha256": "7ed58987174cd64065d9bf0e7451843e2e92e328eeb0ceeecff9ed0bc9c5d519",
+    "representative_transformed_cnf_sha256": "8d07fd2e682aedeb1f1471b9b25dcd92c203a503c4732fd927b1e8434170f4c9",
+    "representative_transformed_cnf_bytes": 14156698,
+    "inverse_restored_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+    "transformed_free_k0_bit_one_literal_mapping": [
+      215065,
+      215064,
+      215066,
+      215067,
+      215068,
+      195639,
+      195640,
+      195641,
+      195642,
+      195643,
+      195644,
+      195645,
+      195646,
+      195648,
+      195649
+    ],
+    "transformed_free_mapping_sha256": "0abad3b8e94eafc01d30c436b4d01e1a1eafb200d20b765236007ec06ddb6653"
+  },
+  "round10_source": {
+    "source_family": "A202_exact_global_CSE_32_cell_complete_numeric_prefix_cover_replayed_through_A204",
+    "cell_count": 32,
+    "partition_fixed_bits": 5,
+    "partition_free_bits": 15,
+    "complete_domain_candidates": 1048576,
+    "common_header": "p cnf 232191 734180",
+    "common_normalized_sha256": "a9cd80dc9e7934f3c29681a78e4d734d598205e81b9796e9413b78be85e4fa2b",
+    "free_k0_bit_one_literal_mapping": [
+      16,
+      15,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "prefix_order": [
+      "00000",
+      "00001",
+      "00010",
+      "00011",
+      "00100",
+      "00101",
+      "00110",
+      "00111",
+      "01000",
+      "01001",
+      "01010",
+      "01011",
+      "01100",
+      "01101",
+      "01110",
+      "01111",
+      "10000",
+      "10001",
+      "10010",
+      "10011",
+      "10100",
+      "10101",
+      "10110",
+      "10111",
+      "11000",
+      "11001",
+      "11010",
+      "11011",
+      "11100",
+      "11101",
+      "11110",
+      "11111"
+    ]
+  },
+  "execution_plan": {
+    "primitive": "ChaCha20_block_function",
+    "rounds": 10,
+    "unknown_key_bits": 20,
+    "shared_key_block_count": 8,
+    "target_output_bits_per_cell": 4096,
+    "solver": "external_CaDiCaL_3.0.0",
+    "solver_configuration": [
+      "--reverse=true"
+    ],
+    "solver_time_limit_seconds_per_cell": 60,
+    "external_timeout_seconds_per_cell": 65,
+    "max_parallel_workers": 4,
+    "cell_count": 32,
+    "execution_order": "prefix_ascending",
+    "inverse_restore_prefix_endpoints": [
+      "00000",
+      "11111"
+    ],
+    "complete_cell_plan_required": true,
+    "early_stop_permitted": false,
+    "witness_decode": "candidate_specific_transformed_literal_map_plus_public_prefix_and_known_upper12",
+    "independent_confirmation": "NumPy_ChaCha10_all_eight_blocks_4096_bits_and_control_rejection"
+  },
+  "prospective_predictions": {
+    "confirmed_recovery": "at_least_one_cell_returns_SAT_and_the_decoded_model_passes_independent_4096_bit_confirmation_and_control_rejection",
+    "complete_domain_resolution": "exactly_one_prefix_is_SAT_and_31_prefixes_are_UNSAT_with_no_UNKNOWN_or_invalid",
+    "search_density_persistence": "retain_per_prefix_and_total_conflict_decision_propagation_restart_rates_against_the_exact_A207_10_second_selected_candidate_baseline",
+    "boundary": "all_other_complete_outcome_patterns_are_retained_without_interpreting_UNKNOWN_as_UNSAT"
+  },
+  "information_boundary": {
+    "A207_outcomes_and_progress_map_known_before_freeze": true,
+    "any_A208_solver_outcome_known_before_freeze": false,
+    "round10_unknown_assignment_in_protocol_source_or_order_archive": false,
+    "round10_unknown_assignment_available_to_runner_before_execution": false,
+    "selection_used_only_complete_A207_progress_metrics_not_volatile_seconds": true,
+    "candidate_order_mode_prefix_order_budget_or_predictions_changed_after_any_A208_outcome": false,
+    "early_stop_permitted": false
+  }
+}

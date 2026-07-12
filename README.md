@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A207 full-round, reduced-round, and frozen
+evidence, and the subsequent A107--A209 full-round, reduced-round, and frozen
 pre-execution relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
@@ -91,6 +91,8 @@ precisely:
 | A205-r2 | A188 structural CNF ordering | Complete 46-cell matrix has 16 SAT, 30 UNKNOWN, and 12 confirmed structural candidates; one succeeds in both solver modes | Known-positive A188 calibration; 23 exact graph orders; default/reverse CaDiCaL | Robust structural ordering outlier | [report](research/reports/CAUSAL_CHACHA20_A188_CNF_STRUCTURAL_ORDERING_V1.md) |
 | A206 | ChaCha10 robust-order transfer | Both modes of all 32 cells return valid UNKNOWN; exact transforms and progress counters retained | Prospectively selected `bidirectional_min_distance`; complete 64-cell-mode execution | Exact structural-transfer boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BIDIRECTIONAL_MIN_DISTANCE_BOUNDARY_V1.md) |
 | A207 | ChaCha10 complete structural portfolio | All 352 new and 416 combined calibrated cell modes are valid UNKNOWN; `output_unit_bfs_far` is a systematic 2.759x-conflict/5.686x-decision progress outlier | Prospectively frozen 12-order archive; 11 remaining modes; complete 32-prefix cover; no early stop | Exact structural-order boundary and progress map | [result](research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_BOUNDARY_V1.md), [preflight](research/reports/CAUSAL_CHACHA20_ROUND10_STRUCTURAL_PORTFOLIO_PREFLIGHT_V1.md) |
+| A208 | ChaCha10 BFS-far long-budget transfer | All 32 cells remain valid UNKNOWN at 60 seconds; exact integer counters show an all-prefix transition from conflict/decision work toward propagation/restart work after the first ten seconds | Same complete partition, eight-block global-CSE CNF, `output_unit_bfs_far`, reverse CaDiCaL; no early stop | Exact temporal search-phase boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md) |
+| A209 | ChaCha10 BFS-far Width-12 composition | All 256 cells remain valid UNKNOWN, while complete refinement restores a decision-rich phase: decisions, propagations, and restarts rise in 256/256 children and decision/propagation density rises in 32/32 parent groups | Complete `2^20` Width-12 cover; eight-block global CSE; rederived multi-source BFS-far order; ten seconds per child | Exact phase-reset composition boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -121,6 +123,11 @@ A207 completes that calibrated structural-order portfolio under the separately
 published preflight: 352/352 new observations and all 416 combined A206/A207
 cell modes are valid `unknown`. The exact progress map identifies a systematic
 search-density outlier without converting the boundary into a recovery claim.
+A208 transfers that outlier to 60 seconds on every prefix and isolates a
+systematic late propagation/restart phase. A209 composes the retained mechanism
+with the complete Width-12 cover and systematically resets the search toward
+decision-rich work across all 256 children, while retaining the exact UNKNOWN
+status boundary.
 
 ## Three connected methods
 
@@ -165,7 +172,7 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A206 frontiers plus the A207 preflight archive |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A209 frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -189,7 +196,7 @@ in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
 The symbolic SHAKE tier additionally requires the external Z3 CLI at exact
 semantic version 4.15.4. Explicit A188--A203 production portfolios require the
-applicable hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4 identities. A204--A207
+applicable hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4 identities. A204--A209
 add CaDiCaL 3.0.0 and use Kissat 4.0.4, CryptoMiniSat 5.14.7, and MiniSat 2.2.1
 for the frozen A204 calibration matrix. `brew bundle` installs the declared
 standalone-CNF CLI set on macOS; the pinned `z3-solver` wheel supplies exact Z3
@@ -204,7 +211,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A207 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A209 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

@@ -97,12 +97,13 @@ This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
 SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A151
 SHAKE observability, affine, algebraic, compression, symbolic, partition,
 strategy, assignment-free, and minimum-cover frontiers. Retained validation
-continues through A206, including the A179 vector-256 replay, A181 Metal replay,
+continues through A209, including the A179 vector-256 replay, A181 Metal replay,
 A182--A184 fresh width-36/38/40 Metal recoveries, A185--A203 reduced-round,
 partition, formula, and compiler transfers, and the retained A204--A206 exact-
 CNF structural sequence. It also verifies the A207 pre-execution order archive,
-frozen portfolio, and completed 352-cell result. It then runs focused
-tests, opens all `.causal` files, and rewrites
+frozen portfolio, and completed 352-cell result; A208's complete long-budget
+phase boundary; and A209's complete Width-12 phase-reset composition. It then
+runs focused tests, opens all `.causal` files, and rewrites
 `research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
 The script creates `.venv` if absent and applies the same exact Z3 4.15.4
@@ -196,7 +197,9 @@ formula/operator transfers, and deterministic figures. A204--A206 add exact
 DIMACS/literal-map, structural-order, and complete transfer evidence. A207's
 tests open all 12 archived permutations, the frozen 11-mode plan, all 352
 stored observations, the combined 416-cell boundary, the progress map, and the
-final Causal graph. The following gate launches no solver:
+final Causal graph. A208 and A209 additionally reopen the complete 32-cell
+long-budget and 256-cell Width-12 results, verify their exact phase metrics,
+and read both Causal graphs. The following gate launches no solver:
 
 ```bash
 PYTHONPATH=.:src python -m pytest -q \
@@ -220,6 +223,8 @@ PYTHONPATH=.:src python -m pytest -q \
   tests/test_chacha20_round10_structural_order_archive.py \
   tests/test_chacha20_round10_structural_portfolio.py \
   tests/test_chacha20_round10_structural_portfolio_result.py \
+  tests/test_chacha20_round10_bfs_far_long_budget.py \
+  tests/test_chacha20_round10_bfs_far_width12_refinement.py \
   tests/test_chacha20_cnf_structural_figures.py
 PYTHONPATH=.:src python \
   research/experiments/chacha20_smt_round5_retained_figures.py --check
@@ -246,7 +251,7 @@ external files are absent.
 
 Explicit production portfolio executions remain separate. A188--A203 fail
 closed unless the applicable Bitwuzla 0.9.1, Z3 4.15.4, and Boolector 3.2.4
-identities match. A204--A207 additionally gate the applicable CaDiCaL 3.0.0,
+identities match. A204--A209 additionally gate the applicable CaDiCaL 3.0.0,
 Kissat 4.0.4, CryptoMiniSat 5.14.7, and MiniSat 2.2.1 identities. On macOS,
 `brew bundle` installs the standalone-CNF CLI set; the pinned `z3-solver` wheel
 supplies exact Z3 4.15.4. Exact executable digests are in
