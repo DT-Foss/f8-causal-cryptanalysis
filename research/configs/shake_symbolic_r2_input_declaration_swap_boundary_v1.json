@@ -1,0 +1,88 @@
+{
+  "schema": "shake-symbolic-r2-input-declaration-swap-boundary-protocol-v1",
+  "attempt_id": "A176",
+  "protocol_state": "frozen_before_any_A176_solver_execution",
+  "anchors": {
+    "A175": {
+      "artifact": "research/results/v1/shake_symbolic_r2_alpha_renamed_center_boundary_v1.json",
+      "sha256": "1c432037567c74397b95d0d75c84a0eac406d63398e57c7214bdf7c730cb2894",
+      "alpha_boundary_result_sha256": "d6f1f34041830e50b86f0481d9afed748c80880fba49f04d3aabcfbfbc52df07",
+      "directional_delta": 2594
+    },
+    "A174": {
+      "artifact": "research/results/v1/shake_symbolic_r2_center_alias_partner_transfer_v1.json",
+      "sha256": "e1683380ec9f5714d2c75a700b8dd2bf50f3b9cd5ee8106c48bb21f7c1b45eae",
+      "partner_transfer_result_sha256": "a874c0d51d7eb38bb97e1a997113021b69af2aa5da3e087250a18868df11b3c0",
+      "directional_delta": 2196
+    }
+  },
+  "causal_question": "Does A174's positive central direction depend on the parser declaration order of x11 and x12, or survive when only those two declaration lines are reversed while every assertion byte and graph edge remains unchanged?",
+  "declaration_intervention": {
+    "semantic_change": false,
+    "new_formula_count": 4,
+    "swapped_input_names": ["x11", "x12"],
+    "changed_declaration_indices_zero_based": [11, 12],
+    "changed_declaration_line_count": 2,
+    "formula_byte_count_changed": false,
+    "declaration_multiset_changed": false,
+    "assertion_bytes_changed": false,
+    "graph_topology_changed": false,
+    "symbol_names_changed": false,
+    "solver_input_get_value_order_changed": false,
+    "compiler_arms_changed": false,
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false,
+    "second_swap_recovers_original_formula_bytes": true
+  },
+  "prospective_prediction": {
+    "direction": "declaration_swapped_directional_delta_remains_strictly_positive",
+    "frozen_basis": "A167 removed downstream declaration-ID shift as an explanation and A175 retained the positive direction under complete symbol alpha-renaming.",
+    "exact_invariance_outcome": "all_four_canonical_observations_exactly_equal",
+    "directional_invariance_outcome": "central_boundary_declaration_order_robust",
+    "zero_outcome": "declaration_order_exact_boundary",
+    "opposite_outcome": "input_declaration_order_conditioned"
+  },
+  "declaration_plan": {
+    "sha256": "d52797f854631ebab0c2ce26bfc87d75cf62afa5f18e0d6289b3298f1f4753a9",
+    "inline_declaration_count": 121575,
+    "materialized_declaration_count": 121576,
+    "changed_lines": [["x11", "x12"], ["x12", "x11"]],
+    "declaration_swap_sha256": "4825c92d507e2f06341ce01f170e206cf1a282bb777148142974d44eae409f1a"
+  },
+  "formula_plan": {
+    "sha256": "d7aaafcd4a03708f44b946172b28b7e0c7871f00b01f57c81972ec22de40c21d",
+    "rows": [
+      ["declaration_swap_x11_x12__weighted_desc_center_22_before_12__inline_negative_alias", 8899711, "dbdd463461907e309aa845a05668d3ef599acc861651009374fdc0f8af8464af", "4825c92d507e2f06341ce01f170e206cf1a282bb777148142974d44eae409f1a"],
+      ["declaration_swap_x11_x12__weighted_desc_center_22_before_12__materialized_negative_alias", 8899767, "f51ea8bd7412fc4b0f8790a4fe7256b095b7de0ad886a5c416103ec47c705ed5", "4825c92d507e2f06341ce01f170e206cf1a282bb777148142974d44eae409f1a"],
+      ["declaration_swap_x11_x12__weighted_desc_center_12_before_22__inline_negative_alias", 8899711, "f7c7eb8d643ff3027ce13623250d2d33cadb73076ed75e8bbf404d784d9c9253", "4825c92d507e2f06341ce01f170e206cf1a282bb777148142974d44eae409f1a"],
+      ["declaration_swap_x11_x12__weighted_desc_center_12_before_22__materialized_negative_alias", 8899767, "3413f4208cd9b2470d0b31b13071985cda95831742515e1a51c0218a6241e7ee", "4825c92d507e2f06341ce01f170e206cf1a282bb777148142974d44eae409f1a"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "interpretation_rules": {
+    "all_four_observations_exact": "exact_input_declaration_order_invariance",
+    "positive_delta_without_exact_observations": "central_boundary_declaration_order_robust",
+    "zero_delta": "declaration_order_exact_boundary",
+    "negative_delta": "input_declaration_order_conditioned",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_fixed_resource_declaration_intervention_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A175_outcomes_used_to_select_the_declaration_intervention": true,
+    "A175_outcomes_used_to_select_any_A176_formula_arm_or_resource_limit": false,
+    "declaration_swap_derived_only_from_A174_formula_lines": true,
+    "target_rate_used_in_declaration_swap": false,
+    "instrumented_assignment_used": false,
+    "A176_solver_outcomes_used_before_formula_freeze": false
+  }
+}

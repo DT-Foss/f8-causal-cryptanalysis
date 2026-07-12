@@ -249,14 +249,17 @@ mkdir -p research/results/v1
 
 # A156--A158 contain four 120-second executions; A159/A161 contain four;
 # A163/A164/A169/A170 contain eight fixed-rlimit executions each; A166--A168
-# and A172--A175 contain four each. They are retained and hash-gated here; their
-# dedicated reports give the explicit long-run commands. A160 and A162 are
-# regenerated, and A171 is intentionally unused.
+# and A172--A176 contain four each. They are retained and hash-gated here; their
+# dedicated reports give the explicit long-run commands. A177's SHAKE256 and
+# A178's ChaCha20 complete `2^32` native executions are also retained and
+# hash-gated here. A160 and A162 are regenerated, and A171 is intentionally
+# unused.
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
   tests/test_chacha20_fullround_feedforward_reader.py \
   tests/test_chacha20_feedforward_xor_carry_spectrum.py \
+  tests/test_chacha20_native_fullround_partial_key_recovery.py \
   tests/test_shake_fullround_rate_reader.py \
   tests/test_shake_capacity_jacobian_reader.py \
   tests/test_shake_capacity_window_inference.py \
@@ -305,6 +308,8 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r2_center_position_family_contrast.py \
   tests/test_shake_symbolic_r2_center_alias_partner_transfer.py \
   tests/test_shake_symbolic_r2_alpha_renamed_center_boundary.py \
+  tests/test_shake_symbolic_r2_input_declaration_swap_boundary.py \
+  tests/test_shake256_native_fullround_width32_prospective.py \
   tests/test_feal32x_fullround_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_shacal2_fullround_cancellation.py \
@@ -452,6 +457,15 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r2_center_alias_partner_transfer_v1.causal \
   research/configs/shake_symbolic_r2_alpha_renamed_center_boundary_v1.json \
   research/results/v1/shake_symbolic_r2_alpha_renamed_center_boundary_v1.json \
-  research/results/v1/shake_symbolic_r2_alpha_renamed_center_boundary_v1.causal
+  research/results/v1/shake_symbolic_r2_alpha_renamed_center_boundary_v1.causal \
+  research/configs/shake_symbolic_r2_input_declaration_swap_boundary_v1.json \
+  research/results/v1/shake_symbolic_r2_input_declaration_swap_boundary_v1.json \
+  research/results/v1/shake_symbolic_r2_input_declaration_swap_boundary_v1.causal \
+  research/configs/shake256_native_fullround_width32_prospective_v1.json \
+  research/results/v1/shake256_native_fullround_width32_prospective_v1.json \
+  research/results/v1/shake256_native_fullround_width32_prospective_v1.causal \
+  research/configs/chacha20_native_fullround_partial_key_recovery_v1.json \
+  research/results/v1/chacha20_native_fullround_partial_key_recovery_v1.json \
+  research/results/v1/chacha20_native_fullround_partial_key_recovery_v1.causal
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, gauge-factorial, native and alias-order Reader mechanisms validated."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, gauge-factorial, native width-32, partial-key and alias-order Reader mechanisms validated."

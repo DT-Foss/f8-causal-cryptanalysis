@@ -487,6 +487,34 @@ positive and rises from +2,196 to +2,594.  The frozen classification is
 `central_boundary_alpha_robust`: numeric names modulate one trajectory without
 reversing the tested boundary direction.
 
+A176 isolates input-declaration order by swapping only `x11` and `x12` at
+declaration indices 11/12, corresponding to physical SMT lines 14/15 after the
+three-line preamble.  Formula size and declaration multiset are unchanged; all
+assertions, symbol names, graph edges and the `get-value` input order remain
+byte-identical, and a second swap restores the exact A174 bytes.  All four
+decision counts, every retained counter and every canonical observation
+reproduce A174 exactly.  The +2,196 delta is unchanged, yielding
+`exact_input_declaration_order_invariance` with no model claim.
+
+A177 opens the hash-pinned native SHAKE256 Causal Reader recipe and executes a
+new prospectively frozen 32-bit capacity-window relation.  The complete `2^32`
+domain becomes 67,108,864 native 64-candidate packs across 64 batches, with no
+early stop and no resumed packs.  The 128-bit filter returns only assignment
+2,761,171,082; an independent NumPy core confirms all 24 rounds and all 1,088
+rate bits.  The bit-flipped control has zero filter and full matches.  Only
+after complete-domain execution does the runner extract the instrumented value,
+which matches the reconstructed singleton exactly.
+
+A178 transfers the complete width-32 native execution pattern to standard
+ChaCha20 partial-key recovery.  Key word 0 at initial lane 4 is generated once
+from OS cryptographic randomness and discarded after forming the frozen public
+target; it is absent from the protocol, runner, native source, and pre-execution
+artifacts.  With the other 224 key bits, counter, nonce, and full 512-bit block
+output known, all 4,294,967,296 word values execute as 67,108,864 native packs.
+The unique 64-bit filter and independent 512-bit match is `0x903db747`; the
+bit-flipped control returns no candidate.  This is fullround 32-bit partial-key
+recovery over the exact declared standard ChaCha20 scope.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs

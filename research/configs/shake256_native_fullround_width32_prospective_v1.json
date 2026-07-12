@@ -1,0 +1,88 @@
+{
+  "schema": "shake256-native-fullround-width32-prospective-protocol-v1",
+  "attempt_id": "A177",
+  "protocol_state": "frozen_before_any_A177_candidate_execution",
+  "anchors": {
+    "A176": {
+      "artifact": "research/results/v1/shake_symbolic_r2_input_declaration_swap_boundary_v1.json",
+      "sha256": "4b609a6f4388c9a759625169aebe94309b808608e061b4f033c66a22cc992a60",
+      "mechanism_sha256": "69055a782b8db1102d136004a7719a05fbd5c10fd918c2b8ff7a8f90321b727a",
+      "classification": "exact_input_declaration_order_invariance"
+    },
+    "native_reader": {
+      "artifact": "research/results/v1/shake_native_window_solver_v1.json",
+      "sha256": "8497ccb7938da721b71876cf481bcc4175b7f5b25c5f3300a87e09a6f123e604",
+      "causal_artifact": "research/results/v1/shake_native_window_solver_v1.causal",
+      "causal_sha256": "f90cf74a0d97f07b0d037639dc9d9beee2e0f7dec3360c51ebf802e27e04550f",
+      "native_source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81",
+      "retained_SHAKE256_width28_assignment": [63935659]
+    }
+  },
+  "public_relation": {
+    "variant": "SHAKE256",
+    "seed": 679417920,
+    "seed_derivation_label": "f8-causal:A177:shake256:32:4b609a6f4388c9a759625169aebe94309b808608e061b4f033c66a22cc992a60",
+    "seed_derivation_sha256": "287f1840310ee763cceb6275e07ccf081c01681ce034493db880036d3894fbcc",
+    "window_bits": 32,
+    "capacity_window_positions": [184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215],
+    "capacity_window_positions_sha256": "a11708366dd174e74599b59905cde9969aae3294a3aade1f773e0cd2e9726e39",
+    "capacity_window_start_bit": 184,
+    "capacity_window_stop_bit_exclusive": 216,
+    "cleared_template_sha256": "6154abe45a4b15942c808b05a04543b0f827d2901b12a0fb369eb6fa1cf1a962",
+    "message_sha256": "2bd95982a2e6dca777191c7bd135e94edbab9d188f5829acbc27c0f29e6bc0bd",
+    "target_rate_lanes": 17,
+    "target_rate_bits": 1088,
+    "target_rate_sha256": "62f4f1019011f2e380a676e70395092b114b76790ae05a7cee7f2157408c6f6c",
+    "control_target_rule": "flip_bit_0_of_first_public_target_rate_lane",
+    "control_target_rate_sha256": "8ea194e51e0c815c163f96ddb7ecd91b81e8b47ecbf98f13b4da3124736cb5f5",
+    "instrumented_assignment_included": false
+  },
+  "reader_plan": {
+    "variant": "SHAKE256",
+    "representation": "candidate_axis_bitsliced_into_native_uint64",
+    "operation": "native_threaded_bitsliced_keccak_f1600_exact_rate_filter",
+    "permutation_rounds": 24,
+    "capacity_bits": 512,
+    "rate_lanes": 17,
+    "candidates_per_machine_word": 64,
+    "filter_lanes": 2,
+    "full_confirmation": "independent_scalar_complete_rate_equality"
+  },
+  "execution_plan": {
+    "variant": "SHAKE256",
+    "permutation_rounds": 24,
+    "window_bits": 32,
+    "logical_candidate_count": 4294967296,
+    "candidates_per_machine_word": 64,
+    "packed_state_count": 67108864,
+    "native_threads": 10,
+    "stream_pack_count": 1048576,
+    "stream_batch_count": 64,
+    "maximum_mask_memory_bytes": 16777216,
+    "filter_rate_lanes": 2,
+    "filter_rate_bits": 128,
+    "complete_domain_required": true,
+    "early_stop_used": false,
+    "checkpoint_resume_enabled": true,
+    "full_confirmation": "independent_NumPy_lane_core_all_1088_rate_bits",
+    "control_target_required": true,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "b9c263610522fcdedda070298bc3e5d4bd81a6f15369c1c7ad1cf1a968f14104",
+  "prospective_prediction": {
+    "prediction": "the_complete_2^32_domain_returns_one_exact_SHAKE256_model_and_the_bit_flipped_control_returns_zero",
+    "frozen_before_candidate_execution": true,
+    "domain_scale_vs_retained_SHAKE256_width28": 16,
+    "domain_scale_vs_A165_SHAKE128_width24": 256,
+    "success_rule": "complete_domain_and_unique_full_rate_match_and_control_rejection_and_posthoc_identity"
+  },
+  "information_boundary": {
+    "A176_result_used_only_for_seed_derivation_and_mechanism_anchor": true,
+    "native_width28_result_used_to_select_width32_scaling_step": true,
+    "A177_instrumented_assignment_in_protocol": false,
+    "A177_instrumented_assignment_used_for_candidate_generation": false,
+    "A177_instrumented_assignment_read_before_complete_domain_execution": false,
+    "A177_candidate_outcomes_used_before_protocol_freeze": false,
+    "early_stop_permitted": false
+  }
+}

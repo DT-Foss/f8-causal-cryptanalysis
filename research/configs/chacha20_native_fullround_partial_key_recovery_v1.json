@@ -1,0 +1,87 @@
+{
+  "schema": "chacha20-native-fullround-partial-key-recovery-protocol-v1",
+  "attempt_id": "A178",
+  "protocol_state": "frozen_before_any_A178_candidate_execution",
+  "anchors": {
+    "A177": {
+      "artifact": "research/results/v1/shake256_native_fullround_width32_prospective_v1.json",
+      "sha256": "d6b85ca7f15bc198513cd05100187f2ccc0ab97d1f22a906383ccd4a62eda544",
+      "complete_domain_executed": true,
+      "logical_candidate_count": 4294967296
+    },
+    "A119": {
+      "artifact": "research/results/v1/chacha20_fullround_feedforward_reader_v1.json",
+      "sha256": "af1a7199c5eb45daf415246565b9bf2f4e0eb6a723ffc92bba8f8d7452a3c3e2",
+      "causal_artifact": "research/results/v1/chacha20_fullround_feedforward_reader_v1.causal",
+      "causal_sha256": "ed86f9b3fcae2e06a099d841aece72b896b86a3611ced1f10314fc66d72ed302",
+      "rounds": 20,
+      "standard_block_feedforward": true
+    }
+  },
+  "native_kernel": {
+    "source": "research/experiments/chacha20_bitsliced_native.c",
+    "source_sha256": "ec2759fc66e86b7b50ea7fece66b2994d1961bb5b84d9081aff3514f25cacb8e",
+    "language": "C11_POSIX_threads",
+    "candidate_pack_width": 64,
+    "required_cross_implementation_gate": "64_independent_initial_states_all_32768_output_bits"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "5e346bbcce4f88533f842f53c638d68a6c3b60d07a132ed1b01ae309dd7d6cce",
+    "control_target_words": [2939146885, 3092613172, 2346149664, 1650595438, 206270238, 2747247950, 3719485339, 4079226425, 2856130963, 768289538, 2817377504, 1367716319, 2878977457, 710334390, 2048719306, 3797845056],
+    "counter": 4151466506,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_words_1_through_7": [1255541214, 2851553524, 2641010920, 2310928799, 3501193204, 479982514, 1251466334],
+    "known_material_derivation_label": "f8-causal:A178:chacha20:known-material:d6b85ca7f15bc198513cd05100187f2ccc0ab97d1f22a906383ccd4a62eda544",
+    "known_material_derivation_sha256": "ce551fd4a3dbf291a36933c17fe81cb01da278546473532639c35abbebaa63d3",
+    "known_material_seed": 1314201556,
+    "nonce_words": [180930671, 3631515899, 3372413312],
+    "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+    "target_words": [2939146884, 3092613172, 2346149664, 1650595438, 206270238, 2747247950, 3719485339, 4079226425, 2856130963, 768289538, 2817377504, 1367716319, 2878977457, 710334390, 2048719306, 3797845056],
+    "unknown_initial_lane": 4,
+    "unknown_key_word_index": 0,
+    "unknown_word_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_word_included": false
+  },
+  "public_challenge_sha256": "58f9244e4a41f2e04f7d6350c628c40feafa252affdcdb25b0a2699862a57b48",
+  "execution_plan": {
+    "candidates_per_machine_word": 64,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "known_key_bits": 224,
+    "logical_candidate_count": 4294967296,
+    "maximum_mask_memory_bytes": 16777216,
+    "native_threads": 10,
+    "nonce_bits_known": 96,
+    "packed_state_count": 67108864,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 20,
+    "stream_batch_count": 64,
+    "stream_pack_count": 1048576,
+    "unknown_key_word_bits": 32,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "d386bc846e4098fddd104431e23aa1f59d434ea8e1b68f8495b3459567e019be",
+  "prospective_prediction": {
+    "prediction": "complete_2^32_enumeration_returns_one_key_word_matching_all_512_standard_block_output_bits_and_the_bit_flipped_control_returns_zero",
+    "frozen_before_candidate_execution": true,
+    "success_rule": "complete_domain_and_unique_full_block_match_and_control_rejection",
+    "claim_type": "fullround_32_bit_partial_key_recovery"
+  },
+  "information_boundary": {
+    "unknown_key_word_generated_once_from_os_randomness": true,
+    "unknown_key_word_used_only_to_form_public_target_before_freeze": true,
+    "unknown_key_word_persisted_before_execution": false,
+    "unknown_key_word_in_protocol_or_source": false,
+    "unknown_key_word_available_to_runner_before_execution": false,
+    "public_target_and_known_key_complement_are_the_only_search_inputs": true,
+    "A178_candidate_outcomes_used_before_protocol_freeze": false,
+    "early_stop_permitted": false
+  }
+}

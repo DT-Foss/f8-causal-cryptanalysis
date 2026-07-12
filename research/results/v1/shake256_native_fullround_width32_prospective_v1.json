@@ -1,0 +1,225 @@
+{
+  "anchor_gates": {
+    "A176_mechanism_sha256": "69055a782b8db1102d136004a7719a05fbd5c10fd918c2b8ff7a8f90321b727a",
+    "A176_result_sha256": "4b609a6f4388c9a759625169aebe94309b808608e061b4f033c66a22cc992a60",
+    "native_causal_graph_sha256": "f3853005b0e48cd42edf8257559350e4575819b3cee13291383b12342c244d2e",
+    "native_causal_provenance_verified": true,
+    "native_causal_sha256": "f90cf74a0d97f07b0d037639dc9d9beee2e0f7dec3360c51ebf802e27e04550f",
+    "native_reader_recipe": {
+      "candidates_per_machine_word": 64,
+      "capacity_bits": 512,
+      "capacity_lane_offset": 17,
+      "filter_lanes": 2,
+      "full_confirmation": "independent_scalar_complete_rate_equality",
+      "known": "rate_and_capacity_complement",
+      "native_source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81",
+      "operation": "native_threaded_bitsliced_keccak_f1600_exact_rate_filter",
+      "permutation_rounds": 24,
+      "rate_lanes": 17,
+      "representation": "candidate_axis_bitsliced_into_native_uint64",
+      "variable": "declared_capacity_window",
+      "variant": "SHAKE256"
+    },
+    "native_result_sha256": "8497ccb7938da721b71876cf481bcc4175b7f5b25c5f3300a87e09a6f123e604",
+    "native_source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81",
+    "retained_SHAKE256_width28_assignment": [
+      63935659
+    ]
+  },
+  "attempt_id": "A177",
+  "causal": {
+    "explicit_triplets": 5,
+    "file_sha256": "05ce09d28994ee6e414ff9e62265c20c3ab819b1d2b343240d3c030943a8c5ab",
+    "graph_sha256": "147294256873d0018e064bd181b120b380f273bd0a3279c99e17ce98f9e05055",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2423,
+      "explicit_triplets": 5,
+      "file_sha256": "05ce09d28994ee6e414ff9e62265c20c3ab819b1d2b343240d3c030943a8c5ab",
+      "graph_sha256": "147294256873d0018e064bd181b120b380f273bd0a3279c99e17ce98f9e05055",
+      "inferred_triplets": 0,
+      "triplets": 5
+    }
+  },
+  "confirmation_sha256": "c8abd5902d058fb6c7ecd2e12121b81aaf57854c2efbe9808d4202987715a5a9",
+  "current_build_cross_implementation_gate": {
+    "exact_match": true,
+    "input_sha256": "4d7a9b2d8d667cf59f9f309592160f0e3f07d504e04693ecc0fafb22b87c32c3",
+    "output_sha256": "7f4c5acda1181b105d424e991d9639cc66215288f5392e36727860efa8439396",
+    "state_bits_checked": 102400,
+    "states": 64
+  },
+  "evidence_stage": "SHAKE256_NATIVE_FULLROUND_WIDTH32_RECONSTRUCTION_RETAINED",
+  "execution": {
+    "candidate_pack_width": 64,
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "control_target_rule": "flip_bit_0_of_first_public_target_rate_lane",
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "assignment": 2761171082,
+        "candidate_rate_sha256": "62f4f1019011f2e380a676e70395092b114b76790ae05a7cee7f2157408c6f6c",
+        "complete_rate_match": true,
+        "implementation": "independent_NumPy_lane_core",
+        "rate_bits_checked": 1088,
+        "rate_lanes_checked": 17,
+        "target_rate_sha256": "62f4f1019011f2e380a676e70395092b114b76790ae05a7cee7f2157408c6f6c"
+      }
+    ],
+    "factual_filter_matches": [
+      2761171082
+    ],
+    "factual_full_matches": [
+      2761171082
+    ],
+    "filter_rate_bits": 128,
+    "filter_rate_lanes": 2,
+    "instrumented_assignment_input_used": false,
+    "logical_candidate_count": 4294967296,
+    "native_threads": 10,
+    "newly_executed_pack_count": 67108864,
+    "packed_evaluation_reduction_factor": 64.0,
+    "packed_state_count": 67108864,
+    "posthoc_assignment_read_before_candidate_execution": false,
+    "resumed_pack_count": 0,
+    "stream_batch_count": 64,
+    "stream_pack_count": 1048576,
+    "unique_exact_public_model": true,
+    "window_bits": 32
+  },
+  "execution_plan": {
+    "candidates_per_machine_word": 64,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "early_stop_used": false,
+    "filter_rate_bits": 128,
+    "filter_rate_lanes": 2,
+    "full_confirmation": "independent_NumPy_lane_core_all_1088_rate_bits",
+    "logical_candidate_count": 4294967296,
+    "maximum_mask_memory_bytes": 16777216,
+    "native_threads": 10,
+    "packed_state_count": 67108864,
+    "permutation_rounds": 24,
+    "stream_batch_count": 64,
+    "stream_pack_count": 1048576,
+    "variant": "SHAKE256",
+    "wallclock_excluded_from_canonical_result": true,
+    "window_bits": 32
+  },
+  "execution_plan_sha256": "b9c263610522fcdedda070298bc3e5d4bd81a6f15369c1c7ad1cf1a968f14104",
+  "execution_sha256": "2f5597ba3730a2ab6163db47a3b36ca9a7bad3193c271ec3bc9ed8157a32f84d",
+  "native_build": {
+    "candidate_pack_width": 64,
+    "compiler_native_flag_attempted": true,
+    "language": "C11_POSIX_threads",
+    "optimization": "O3",
+    "source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81"
+  },
+  "parameters": {
+    "logical_candidate_count": 4294967296,
+    "native_threads": 10,
+    "seed": 679417920,
+    "stream_pack_count": 1048576,
+    "variant": "SHAKE256",
+    "volatile_wallclock_excluded_from_canonical_result": true,
+    "window_bits": 32
+  },
+  "posthoc_comparison": {
+    "instrumented_assignment": 2761171082,
+    "instrumented_assignment_independent_check": {
+      "assignment": 2761171082,
+      "candidate_rate_sha256": "62f4f1019011f2e380a676e70395092b114b76790ae05a7cee7f2157408c6f6c",
+      "complete_rate_match": true,
+      "implementation": "independent_NumPy_lane_core",
+      "rate_bits_checked": 1088,
+      "rate_lanes_checked": 17,
+      "target_rate_sha256": "62f4f1019011f2e380a676e70395092b114b76790ae05a7cee7f2157408c6f6c"
+    },
+    "read_only_after_complete_domain_execution": true,
+    "recovered_assignments": [
+      2761171082
+    ],
+    "unique_reconstruction_matches_instrumented_assignment": true,
+    "used_for_candidate_generation_filtering_or_confirmation": false
+  },
+  "protocol_gate": {
+    "artifact_sha256": "f4e3ee4b43a536d7ccf51964de768953019ecf96819f661a50edaa549d6db068",
+    "information_boundary": {
+      "A176_result_used_only_for_seed_derivation_and_mechanism_anchor": true,
+      "A177_candidate_outcomes_used_before_protocol_freeze": false,
+      "A177_instrumented_assignment_in_protocol": false,
+      "A177_instrumented_assignment_read_before_complete_domain_execution": false,
+      "A177_instrumented_assignment_used_for_candidate_generation": false,
+      "early_stop_permitted": false,
+      "native_width28_result_used_to_select_width32_scaling_step": true
+    },
+    "prospective_prediction": {
+      "domain_scale_vs_A165_SHAKE128_width24": 256,
+      "domain_scale_vs_retained_SHAKE256_width28": 16,
+      "frozen_before_candidate_execution": true,
+      "prediction": "the_complete_2^32_domain_returns_one_exact_SHAKE256_model_and_the_bit_flipped_control_returns_zero",
+      "success_rule": "complete_domain_and_unique_full_rate_match_and_control_rejection_and_posthoc_identity"
+    },
+    "protocol_state": "frozen_before_any_A177_candidate_execution"
+  },
+  "public_relation": {
+    "capacity_window_positions": [
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215
+    ],
+    "capacity_window_positions_sha256": "a11708366dd174e74599b59905cde9969aae3294a3aade1f773e0cd2e9726e39",
+    "capacity_window_start_bit": 184,
+    "capacity_window_stop_bit_exclusive": 216,
+    "cleared_template_sha256": "6154abe45a4b15942c808b05a04543b0f827d2901b12a0fb369eb6fa1cf1a962",
+    "control_target_rate_sha256": "8ea194e51e0c815c163f96ddb7ecd91b81e8b47ecbf98f13b4da3124736cb5f5",
+    "control_target_rule": "flip_bit_0_of_first_public_target_rate_lane",
+    "instrumented_assignment_included": false,
+    "message_sha256": "2bd95982a2e6dca777191c7bd135e94edbab9d188f5829acbc27c0f29e6bc0bd",
+    "seed": 679417920,
+    "seed_derivation_label": "f8-causal:A177:shake256:32:4b609a6f4388c9a759625169aebe94309b808608e061b4f033c66a22cc992a60",
+    "seed_derivation_sha256": "287f1840310ee763cceb6275e07ccf081c01681ce034493db880036d3894fbcc",
+    "target_rate_bits": 1088,
+    "target_rate_lanes": 17,
+    "target_rate_sha256": "62f4f1019011f2e380a676e70395092b114b76790ae05a7cee7f2157408c6f6c",
+    "variant": "SHAKE256",
+    "window_bits": 32
+  },
+  "result": "The retained native Causal Reader executes the complete prospective SHAKE256 32-bit public relation and independently confirms every exact full-round model.",
+  "schema": "shake256-native-fullround-width32-prospective-v1",
+  "scope": "Known-complement SHAKE256 state-window reconstruction over the complete 2^32 declared capacity-window domain and all 1,088 next-rate bits."
+}

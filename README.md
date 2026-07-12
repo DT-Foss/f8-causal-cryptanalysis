@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A175 full-round relations as code, typed
+evidence, and the subsequent A107--A178 full-round relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -64,14 +64,19 @@ precisely:
 | A169--A170 | SHAKE alias fanout and order reversal | Exact two-consumer Mobius decomposition yields nonzero interaction in every order; complete order reversal flips two effect signs and preserves two | Eight fanout-one and eight reversed-order fixed-resource formulas; no model emitted | Joint consumer/order traversal boundary | [fanout report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ALIAS_FANOUT_MOBIUS_V1.md), [reversal report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_REVERSED_ORDER_ALIAS_POLARITY_V1.md) |
 | A172--A174 | SHAKE central alias-boundary transfers | The frozen adjacent `0/12` direction fails in Greedy-Max, remains positive in a position-matched Weighted-Descending contrast, and transfers prospectively from partner `0` to partner `22` | Four paired formulas per experiment; central positions 11/12; fixed full-round relation, gauge and resource cap | Exact compiler x adjacent-order interaction across two partners | [A172](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ADJACENT_0_12_TRANSFER_V1.md), [A173](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_CENTER_POSITION_FAMILY_CONTRAST_V1.md), [A174](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_CENTER_ALIAS_PARTNER_TRANSFER_V1.md) |
 | A175 | SHAKE alpha-renamed central boundary | Bijective `suffix+1` renaming is byte-reversible; three decision counts reproduce exactly, the fourth changes by 398, and the positive boundary delta survives at +2,594 | Same graph, orders, semantics and resource cap under complete declared-symbol renaming | Alpha-robust boundary direction with name-sensitive trajectory | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ALPHA_RENAMED_CENTER_BOUNDARY_V1.md) |
+| A176 | SHAKE input-declaration-order boundary | Swapping only the `x11`/`x12` declaration lines leaves every retained solver counter and all four canonical observations bit-identical to A174 | Same assertions, symbols, graph, `get-value` order, semantics and fixed resource cap; exact second-swap inverse | Exact declaration-order invariance for the tested parser/solver scope | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_INPUT_DECLARATION_SWAP_BOUNDARY_V1.md) |
+| A177 | SHAKE256 prospective width-32 native Reader | Complete `2^32` enumeration returns the singleton assignment 2,761,171,082, independently matches all 1,088 rate bits, and returns zero matches for the bit-flipped control | Prospectively frozen 32-bit capacity window; known state complement and complete next-rate target; no early stop or resumed packs | Unique 32-coordinate full-round model | [report](research/reports/FULLROUND_CAUSAL_SHAKE256_NATIVE_WIDTH32_RECONSTRUCTION_V1.md) |
+| A178 | ChaCha20 fullround partial-key Reader | Complete `2^32` candidate execution uniquely recovers key word 0 as `0x903db747`; independent 512-bit confirmation is exact and the bit-flipped control has zero matches | Standard ChaCha20 block; other 224 key bits, counter, nonce and complete 512-bit block output known; prospectively hidden word absent before execution | Recovered 32-bit key word | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_NATIVE_PARTIAL_KEY_RECOVERY_V1.md) |
 
 A152 was frozen on public `main` before its unseen instance was generated, then
-executed under that exact protocol. A154--A175 follow the resulting affine
+executed under that exact protocol. A154--A178 follow the resulting affine
 interface through an exact basis, the R2 K24 transition, three full-round
 encoder frontiers, deterministic fixed-resource replay, complete affine-gauge
 optimization, a four-gauge by four-order factorial, native full-domain model
-reconstruction, and an exact alias/order solver-graph decomposition. A171 is
-intentionally unused. The full sequence, including A153's phase-flag control, is
+reconstruction, an exact alias/order solver-graph decomposition, complete
+SHAKE256 width-32 native reconstruction, and prospectively frozen ChaCha20
+partial-key recovery. A171 is intentionally unused. The full sequence,
+including A153's phase-flag control, is
 indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_MATRIX_V1.md)
 and the append-only [attempt log](research/ATTEMPT_LOG.md). The earlier
 A107--A151 class ledger remains in [docs/RESULTS.md](docs/RESULTS.md).
@@ -119,9 +124,9 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A175 SHAKE frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A178 full-round frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
-| `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A175 prospective, affine, encoder, resource, native, and alias/order Readers |
+| `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
 
 Expected quick-tier terminus:
@@ -148,7 +153,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A175 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A178 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

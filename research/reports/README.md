@@ -193,3 +193,22 @@ the fourth changes by +398, while all canonical observations differ.  The
 positive boundary delta increases from +2,196 to +2,594, establishing
 `central_boundary_alpha_robust`: names modulate one fixed-resource trajectory
 without reversing the exact tested direction.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_INPUT_DECLARATION_SWAP_BOUNDARY_V1.md`
+swaps only the `x11`/`x12` declaration lines at declaration indices 11/12
+(physical SMT lines 14/15).  Every assertion, symbol and `get-value` byte is
+unchanged, and a second swap exactly reconstructs A174.  All four canonical
+observations and the +2,196 delta reproduce bit-for-bit, establishing
+`exact_input_declaration_order_invariance` for this fixed parser/solver scope.
+
+`FULLROUND_CAUSAL_SHAKE256_NATIVE_WIDTH32_RECONSTRUCTION_V1.md` records A177's
+prospectively frozen SHAKE256 full-round width-32 reconstruction.  The complete
+`2^32` domain executes as 67,108,864 native packs without early stopping; the
+unique assignment 2,761,171,082 passes an independent 1,088-bit confirmation,
+the bit-flipped control returns zero models, and the posthoc identity is exact.
+
+`FULLROUND_CAUSAL_CHACHA20_NATIVE_PARTIAL_KEY_RECOVERY_V1.md` records A178's
+fullround 32-bit partial-key recovery for standard ChaCha20.  With one key word
+unknown and 224 key bits plus counter, nonce, and full block output known, the
+complete `2^32` domain uniquely returns `0x903db747`; an independent 512-bit
+check is exact and the bit-flipped control has zero matches.
