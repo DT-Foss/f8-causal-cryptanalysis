@@ -1,0 +1,116 @@
+{
+  "schema": "shake-symbolic-r2-reversed-order-alias-polarity-frontier-protocol-v1",
+  "attempt_id": "A170",
+  "protocol_state": "frozen_before_any_A170_solver_execution",
+  "anchors": {
+    "A169": {
+      "artifact": "research/results/v1/shake_symbolic_r2_alias_fanout_mobius_frontier_v1.json",
+      "sha256": "b19c1b85bfad77c5e7aa909ba11a02821fce21f6603daa3174bfe5899a0c1334",
+      "mobius_decomposition_sha256": "af6b94835b169aeb9ef0e32b721623c0536ccb0e98cb1c156508f419907ec2ea",
+      "base_materialization_effects": [-2008, 977, 1623, 1182]
+    },
+    "A168": {
+      "artifact": "research/results/v1/shake_symbolic_r2_normalized_materialized_alias_frontier_v1.json",
+      "sha256": "becb3013cb079c2d45ee2a297d2847d5d85542843cb598e5b6288dc45b9eab76",
+      "role": "normalized_materialized_compiler_anchor"
+    },
+    "A166": {
+      "artifact": "research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json",
+      "sha256": "e6cdc6a69e36e8632bfd5389b77914f744a61f45fbdb84e13c5701e3f2fbc6db",
+      "role": "inline_compiler_anchor"
+    }
+  },
+  "causal_question": "Does exact reversal of each complete 24-coordinate solver order systematically reverse the sign of the connected negative-alias materialization effect?",
+  "reversal_design": {
+    "semantic_change": false,
+    "new_formula_count": 8,
+    "base_order_count": 4,
+    "arms_per_reversed_order": 2,
+    "transform": "exact_vector_reversal",
+    "involution_required": true,
+    "all_reversed_orders_absent_from_base_set": true,
+    "inline_arm_variables": 121575,
+    "inline_arm_assertions": 122895,
+    "materialized_arm_variables": 121576,
+    "materialized_arm_assertions": 122896,
+    "affine_shift": "0x4e1e28",
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "reversal_plan": {
+    "sha256": "ad32560fae33eac765403ae6cc5de579ca13d07561707c78a75ce740870c661a",
+    "orders": [
+      {
+        "base": "weighted_degree_descending",
+        "base_alias_position": 10,
+        "reversed_alias_position": 13,
+        "base_effect": -2008
+      },
+      {
+        "base": "weighted_degree_ascending",
+        "base_alias_position": 14,
+        "reversed_alias_position": 9,
+        "base_effect": 977
+      },
+      {
+        "base": "greedy_max_remaining_weight",
+        "base_alias_position": 8,
+        "reversed_alias_position": 15,
+        "base_effect": 1623
+      },
+      {
+        "base": "greedy_min_remaining_weight",
+        "base_alias_position": 9,
+        "reversed_alias_position": 14,
+        "base_effect": 1182
+      }
+    ]
+  },
+  "formula_plan": {
+    "sha256": "7f23984189baf93086fec55ab053d2396d9e48855ddaeef55ec1298e13201f68",
+    "rows": [
+      ["reversed_weighted_degree_descending__inline_negative_alias", 8900219, "8906897c35310a08afe3a9eb5f6f411d8d244547d0401a525107a483d38aa25c"],
+      ["reversed_weighted_degree_descending__materialized_negative_alias", 8900275, "7a7394570d07eeaff46f100a2091fda57afa25a774c7402748f911838694bafd"],
+      ["reversed_weighted_degree_ascending__inline_negative_alias", 8899679, "0e4f73be83500b4a0de23d96d7467e0edf63323b904729129c5006348db229f8"],
+      ["reversed_weighted_degree_ascending__materialized_negative_alias", 8899736, "0895eeb15b51628be63633bf81462299d5ea6cd793dc39c238dd23828f9c0585"],
+      ["reversed_greedy_max_remaining_weight__inline_negative_alias", 8900242, "89381620ea9e766af21f35d80011ab7772b90a3d3668f5cc5cc32f60765241a9"],
+      ["reversed_greedy_max_remaining_weight__materialized_negative_alias", 8900298, "2621f5939fbb6e6bfaf2c293054429263282ad52c9c3526803ff1c2044812c0e"],
+      ["reversed_greedy_min_remaining_weight__inline_negative_alias", 8899708, "280a345ce28c55fea735b48b6c209f07f0f5e5021715f7c3056478bda4ee928e"],
+      ["reversed_greedy_min_remaining_weight__materialized_negative_alias", 8899764, "376775bc43a872597b6b84c6664e48db13b50f6aeb768bb61d7bea19407db6db"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "polarity_rules": {
+    "reversed_effect": "reversed_materialized_decisions_minus_reversed_inline_decisions",
+    "flipped": "nonzero_reversed_effect_sign_is_the_negative_of_base_effect_sign",
+    "preserved": "nonzero_reversed_effect_sign_equals_base_effect_sign",
+    "zero": "reversed_effect_equals_zero",
+    "four_flipped": "universal_order_reversal_polarity_flip",
+    "four_preserved": "universal_order_reversal_polarity_preservation",
+    "otherwise": "mixed_order_reversal_response"
+  },
+  "interpretation_rules": {
+    "universal_flip": "complete_order_orientation_controls_the_alias_materialization_sign_across_all_four_order_families",
+    "universal_preservation": "materialization_sign_is_invariant_to_complete_order_orientation",
+    "mixed_reversal_response": "orientation_alone_is_not_a_universal_sign_rule_and_the_order_content_interacts_with_reversal",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_paired_reversal_traversal_frontier_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A169_outcomes_used_to_select_the_order_reversal_question": true,
+    "A169_outcomes_used_to_select_any_A170_reversed_vector_formula_arm_or_resource_limit": false,
+    "target_rate_used_in_reversal_selection": false,
+    "instrumented_assignment_used": false,
+    "A170_solver_outcomes_used_before_formula_freeze": false
+  }
+}

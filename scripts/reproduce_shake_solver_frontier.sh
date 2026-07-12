@@ -174,10 +174,12 @@ mkdir -p research/results/v1
 
 # A156 contains four sequential 120-second solver executions. The aggregate
 # gate rebuilds all four formulas byte-for-byte and validates the retained
-# execution. A157--A159, A161, A163 and A164 do the same for shared-R2
-# encoders, weighted orders, fixed-rlimit replay, affine-gauge transfers and the
-# nonrepeating factorial completion; use their dedicated reports to repeat the
-# long solver frontiers. A160/A162 are regenerated above.
+# execution. A157--A159, A161, A163, A164, A166--A170 and A172--A175 do the
+# same for shared-R2 encoders, weighted orders, fixed-rlimit replay,
+# affine-gauge transfers, the nonrepeating factorial completion, signed-alias
+# controls, fanout decomposition, order reversal, central transfers and exact
+# alpha-renaming. Use their dedicated reports to repeat the long solver
+# frontiers. A160/A162 are regenerated above; A171 is intentionally unused.
 .venv/bin/pytest -q \
   tests/test_shake_boolean_cnf_reader.py \
   tests/test_shake_prefix_observability_frontier.py \
@@ -213,7 +215,16 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r2_order_weighted_gauge_reader.py \
   tests/test_shake_symbolic_r2_order_weighted_gauge_solver_frontier.py \
   tests/test_shake_symbolic_r2_four_gauge_factorial_completion.py \
-  tests/test_shake_a152_native_fullround_reader_transfer.py
+  tests/test_shake_a152_native_fullround_reader_transfer.py \
+  tests/test_shake_symbolic_r2_signed_alias_compiler_frontier.py \
+  tests/test_shake_symbolic_r2_id_preserving_signed_alias_frontier.py \
+  tests/test_shake_symbolic_r2_normalized_materialized_alias_frontier.py \
+  tests/test_shake_symbolic_r2_alias_fanout_mobius_frontier.py \
+  tests/test_shake_symbolic_r2_reversed_order_alias_polarity_frontier.py \
+  tests/test_shake_symbolic_r2_adjacent_0_12_transfer_frontier.py \
+  tests/test_shake_symbolic_r2_center_position_family_contrast.py \
+  tests/test_shake_symbolic_r2_center_alias_partner_transfer.py \
+  tests/test_shake_symbolic_r2_alpha_renamed_center_boundary.py
 .venv/bin/python scripts/validate_causal_artifacts.py >/dev/null
 
 .venv/bin/python scripts/write_hash_manifest.py \
@@ -290,6 +301,33 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.causal \
   research/configs/shake_a152_native_fullround_reader_transfer_v1.json \
   research/results/v1/shake_a152_native_fullround_reader_transfer_v1.json \
-  research/results/v1/shake_a152_native_fullround_reader_transfer_v1.causal
+  research/results/v1/shake_a152_native_fullround_reader_transfer_v1.causal \
+  research/configs/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_id_preserving_signed_alias_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_id_preserving_signed_alias_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_id_preserving_signed_alias_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_normalized_materialized_alias_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_normalized_materialized_alias_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_normalized_materialized_alias_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_alias_fanout_mobius_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_alias_fanout_mobius_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_alias_fanout_mobius_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_reversed_order_alias_polarity_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_reversed_order_alias_polarity_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_reversed_order_alias_polarity_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_adjacent_0_12_transfer_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_adjacent_0_12_transfer_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_adjacent_0_12_transfer_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_center_position_family_contrast_v1.json \
+  research/results/v1/shake_symbolic_r2_center_position_family_contrast_v1.json \
+  research/results/v1/shake_symbolic_r2_center_position_family_contrast_v1.causal \
+  research/configs/shake_symbolic_r2_center_alias_partner_transfer_v1.json \
+  research/results/v1/shake_symbolic_r2_center_alias_partner_transfer_v1.json \
+  research/results/v1/shake_symbolic_r2_center_alias_partner_transfer_v1.causal \
+  research/configs/shake_symbolic_r2_alpha_renamed_center_boundary_v1.json \
+  research/results/v1/shake_symbolic_r2_alpha_renamed_center_boundary_v1.json \
+  research/results/v1/shake_symbolic_r2_alpha_renamed_center_boundary_v1.causal
 
-echo "SHAKE Boolean, algebraic, symbolic-split, partition, strategy, prospective, affine-basis, gauge-factorial and native Readers validated."
+echo "SHAKE Boolean, algebraic, symbolic-split, partition, strategy, prospective, affine-basis, gauge-factorial, native and alias-order Readers validated."

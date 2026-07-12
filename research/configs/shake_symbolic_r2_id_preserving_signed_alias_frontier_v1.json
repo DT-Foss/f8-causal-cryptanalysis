@@ -1,0 +1,100 @@
+{
+  "schema": "shake-symbolic-r2-id-preserving-signed-alias-frontier-protocol-v1",
+  "attempt_id": "A167",
+  "protocol_state": "frozen_before_any_A167_solver_execution",
+  "anchors": {
+    "A166": {
+      "artifact": "research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json",
+      "sha256": "e6cdc6a69e36e8632bfd5389b77914f744a61f45fbdb84e13c5701e3f2fbc6db",
+      "comparison_sha256": "1977e8c279a7d965f4723dc60de25e26a9a39b95eabcd2293d1b670cddc65418"
+    },
+    "A164": {
+      "artifact": "research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.json",
+      "sha256": "c8b4f7446b3e78b3914f90e5fbbc201d00771a917c7fafe16eba6e134e0f55ab",
+      "universal_gauge": "0x4e1e28"
+    },
+    "A163": {
+      "artifact": "research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.json",
+      "sha256": "6528a62e4c12739966d06a0eff910fdf3b2739b53e83cc0dd2577a4afa1d6c8d",
+      "role": "original_ID_greedy_max_formula_source"
+    }
+  },
+  "causal_question": "Does A166's mixed three-versus-one traversal response arise from removing the connected negative-alias equality node or from shifting every subsequently declared solver variable by one position?",
+  "control_intervention": {
+    "semantic_change": false,
+    "selected_affine_shift": "0x4e1e28",
+    "negative_alias_coordinate": 917,
+    "negative_alias_literal": "not_x12_in_shifted_input_basis_before_order_permutation",
+    "connected_alias_definition_removed": 1,
+    "disconnected_ID_padding_declarations_added": 1,
+    "ID_padding_inserted_at_original_alias_coordinate": true,
+    "ID_padding_name_in_all_four_formulas": "s1215",
+    "ID_padding_connected_to_any_assertion": false,
+    "downstream_declaration_sequence_equal_to_A164": true,
+    "complete_declaration_sequence_sha256": "6ae51cff0ad3707df512db5933edd29dac9bf981b89b0201962ab1c1d79cfd61",
+    "variables_equal_to_A164_per_formula": 121576,
+    "assertions_removed_relative_to_A164_per_formula": 1,
+    "variables_added_relative_to_A166_per_formula": 1,
+    "assertions_equal_to_A166_per_formula": 122895,
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "control_plan": {
+    "sha256": "055c3c829573cbe39c783a686fbe2fc9665ec081b6857cdad04d8133a55650e7",
+    "orders": [
+      "weighted_degree_descending",
+      "weighted_degree_ascending",
+      "greedy_max_remaining_weight",
+      "greedy_min_remaining_weight"
+    ],
+    "original_formula_sources": {
+      "A164": 3,
+      "A163": 1
+    }
+  },
+  "formula_plan": {
+    "sha256": "ecdd9c3d43173ae07921f635c831bc67223215589d6aeaff17032d146c8a03cc",
+    "rows": [
+      ["weighted_degree_descending__id_preserving_signed_alias", 8899746, "820a8194d49d916fc8a758e06b4caf2f0f39ca1653340c0a8aa704da63e29095", "6ae51cff0ad3707df512db5933edd29dac9bf981b89b0201962ab1c1d79cfd61"],
+      ["weighted_degree_ascending__id_preserving_signed_alias", 8900254, "21e6f5e9f5c4369d60eb19cb971d92e5d6fe67142df7ba69faf47ac14cf2f6ca", "6ae51cff0ad3707df512db5933edd29dac9bf981b89b0201962ab1c1d79cfd61"],
+      ["greedy_max_remaining_weight__id_preserving_signed_alias", 8899729, "b185f101a58c369d915a329cb194da1c7965e46cbe3492dd6688e46517a53ffa", "6ae51cff0ad3707df512db5933edd29dac9bf981b89b0201962ab1c1d79cfd61"],
+      ["greedy_min_remaining_weight__id_preserving_signed_alias", 8900232, "55575f27f1524e9382adf77c2535c1f0e8932cff3afc97b472d5e176a196f14c", "6ae51cff0ad3707df512db5933edd29dac9bf981b89b0201962ab1c1d79cfd61"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "effect_decomposition": {
+    "alias_node_effect": "A167_decisions_minus_A164_decisions",
+    "downstream_ID_shift_effect": "A166_decisions_minus_A167_decisions",
+    "total_effect": "A166_decisions_minus_A164_decisions",
+    "exact_identity": "alias_node_effect_plus_downstream_ID_shift_effect_equals_total_effect",
+    "aggregate_comparison": "sum_absolute_alias_node_effect_versus_sum_absolute_downstream_ID_shift_effect",
+    "per_order_dominance": "larger_absolute_component_with_balanced_on_exact_tie"
+  },
+  "interpretation_rules": {
+    "alias_L1_greater_than_ID_L1": "alias_node_removal_is_the_aggregate_dominant_component",
+    "ID_L1_greater_than_alias_L1": "downstream_ID_shift_is_the_aggregate_dominant_component",
+    "equal_L1": "the_two_components_are_aggregate_balanced",
+    "all_alias_directions_match_A166_total": "alias_node_removal_preserves_the_direction_of_the_mixed_A166_response_under_original_IDs",
+    "any_alias_direction_differs": "at_least_one_A166_direction_requires_the_downstream_ID_shift_interaction",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_three_arm_traversal_decomposition_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A166_solver_outcomes_used_to_select_the_ID_preserving_question": true,
+    "A166_outcomes_used_to_select_any_A167_formula_order_or_resource_limit": false,
+    "A164_and_A163_formulas_regenerated_only_to_bind_original_declaration_IDs": true,
+    "target_rate_used_in_control_selection": false,
+    "instrumented_assignment_used": false,
+    "A167_solver_outcomes_used_before_formula_freeze": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "shake-symbolic-r2-alpha-renamed-center-boundary-protocol-v1",
+  "attempt_id": "A175",
+  "protocol_state": "frozen_before_any_A175_solver_execution",
+  "anchors": {
+    "A174": {
+      "artifact": "research/results/v1/shake_symbolic_r2_center_alias_partner_transfer_v1.json",
+      "sha256": "e1683380ec9f5714d2c75a700b8dd2bf50f3b9cd5ee8106c48bb21f7c1b45eae",
+      "partner_transfer_result_sha256": "a874c0d51d7eb38bb97e1a997113021b69af2aa5da3e087250a18868df11b3c0",
+      "directional_delta": 2196
+    },
+    "A173": {
+      "artifact": "research/results/v1/shake_symbolic_r2_center_position_family_contrast_v1.json",
+      "sha256": "b3ae48350a75430b1b1aea55ebe59442949dd6b5fe19f30453583ede6da6d01b",
+      "weighted_desc_directional_delta": 10955
+    }
+  },
+  "causal_question": "Is A174's positive central alias-position direction invariant under a byte-reversible bijective alpha-renaming, or conditioned on the concrete numeric identities of the SMT symbols?",
+  "alpha_intervention": {
+    "semantic_change": false,
+    "new_formula_count": 4,
+    "numeric_suffix_offset": 1,
+    "transformation": "every_declared_symbol_prefix_N_maps_to_the_same_prefix_N_plus_1",
+    "bijection": true,
+    "inverse_transform_recovers_original_formula_bytes": true,
+    "declaration_order_changed": false,
+    "assertion_order_changed": false,
+    "graph_topology_changed": false,
+    "solver_input_order_changed": false,
+    "compiler_arms_changed": false,
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "prospective_prediction": {
+    "direction": "renamed_directional_delta_remains_strictly_positive",
+    "frozen_basis": "A173 and A174 observed the same positive alias-position direction across two partners at the same relative x11/x12 graph boundary.",
+    "exact_invariance_outcome": "all_four_canonical_observations_exactly_equal",
+    "directional_invariance_outcome": "central_boundary_alpha_robust",
+    "zero_outcome": "alpha_renamed_exact_boundary",
+    "opposite_outcome": "numeric_symbol_identity_conditioned"
+  },
+  "alpha_plan": {
+    "sha256": "031193f031b90706fc20c2c05a55ec191fdbec234c3181212d23ddcfb3a7e6e9",
+    "inline_declaration_count": 121575,
+    "materialized_declaration_count": 121576,
+    "inline_changed_symbol_token_count": 529945,
+    "materialized_changed_symbol_token_count": 529948,
+    "inline_mapping_sha256": "cc680d0930e25c0305c249af5a5fc6d980e763fc0bbc0e07d24034002e3486c4",
+    "materialized_mapping_sha256": "6c512161244eda8325d3f5f8155e774155e996e2b68f41a3021ec294aa3df585",
+    "first_input_mapping": ["x0", "x1"],
+    "A174_center_input_names": ["x11", "x12"],
+    "A175_center_input_names": ["x12", "x13"]
+  },
+  "formula_plan": {
+    "sha256": "c9167fc6a6ec8056135c9cd512a9e87322118addc2575e2f6cdf4e5b278e56da",
+    "rows": [
+      ["alpha_plus_1__weighted_desc_center_22_before_12__inline_negative_alias", 8900139, "5e767d72c8da66223a3e727c05d7c61918042db8835ce6871f5e389cce2788f7", "cc680d0930e25c0305c249af5a5fc6d980e763fc0bbc0e07d24034002e3486c4"],
+      ["alpha_plus_1__weighted_desc_center_22_before_12__materialized_negative_alias", 8900196, "e254879f000584b42824f9beb7ed26758fb6bf6aa0b03fcfca66f94d259d1137", "6c512161244eda8325d3f5f8155e774155e996e2b68f41a3021ec294aa3df585"],
+      ["alpha_plus_1__weighted_desc_center_12_before_22__inline_negative_alias", 8900139, "d0ba2dbf1e44f08b38b0f3c47dc444747ff9ab1e0b24568a0b0a727a40547332", "cc680d0930e25c0305c249af5a5fc6d980e763fc0bbc0e07d24034002e3486c4"],
+      ["alpha_plus_1__weighted_desc_center_12_before_22__materialized_negative_alias", 8900196, "bf9a845ef90d65fc59af65ef497c5410cbe4f924dfc25fb68215e84319b08028", "6c512161244eda8325d3f5f8155e774155e996e2b68f41a3021ec294aa3df585"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "interpretation_rules": {
+    "all_four_observations_exact": "exact_alpha_invariance",
+    "positive_delta_without_exact_observations": "central_boundary_alpha_robust",
+    "zero_delta": "alpha_renamed_exact_boundary",
+    "negative_delta": "numeric_symbol_identity_conditioned",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_fixed_resource_alpha_intervention_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A174_outcomes_used_to_select_the_alpha_intervention": true,
+    "A174_outcomes_used_to_select_any_A175_formula_arm_or_resource_limit": false,
+    "alpha_mapping_derived_only_from_A174_declared_symbols": true,
+    "target_rate_used_in_alpha_mapping": false,
+    "instrumented_assignment_used": false,
+    "A175_solver_outcomes_used_before_formula_freeze": false
+  }
+}

@@ -128,3 +128,68 @@ enumerates the complete `2^24` domain, reconstructs the unique assignment
 9,279,571, independently confirms all 1,344 rate bits, and fully rejects a
 bit-flipped target control.  The fresh end-to-end run measured 1.61 seconds on
 an Apple M4 Mac mini.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_SIGNED_ALIAS_COMPILER_V1.md` proves that
+the exact static suffix cone selects `0x498a92`, not A164's universal
+`0x4e1e28` gauge, at every depth.  It then normalizes all five exact signed R2
+unit-affine aliases with no semantic change.  The one-variable intervention
+improves three orders but worsens descending, establishing an order interaction
+and a new 3,425-decision fixed-resource traversal minimum.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ID_PRESERVING_ALIAS_V1.md` decomposes the
+A166 compiler intervention with a third, ID-preserving arm.  A disconnected
+`s1215` declaration restores A164's exact downstream declaration IDs while the
+negative alias remains inlined.  Decisions match A166 in all four orders, so
+the signed-alias-node effect has L1 magnitude 5,790 and the downstream ID-shift
+decision effect has L1 magnitude zero.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_NORMALIZED_ALIAS_V1.md` keeps the negative
+alias node connected and every declaration ID fixed while rewriting its sole
+definition from `xor(true,x)` to `not(x)`.  All four original decision counts
+are reproduced exactly, giving RHS-syntax effect `[0,0,0,0]` and retaining the
+complete connected-node-removal effect `[+2008,-977,-1623,-1182]`.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ALIAS_FANOUT_MOBIUS_V1.md` resolves that
+connected alias into its exact column and theta consumers.  Eight
+single-consumer formulas complete the fanout-zero/one/two Boolean lattice for
+all four orders.  The column and theta main-effect L1 magnitudes are 4,247 and
+4,222 decisions, the interaction L1 is 3,289, and every order has a nonzero
+interaction; neither consumer alone explains the connected-node response.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_REVERSED_ORDER_ALIAS_POLARITY_V1.md`
+reverses each complete frozen order and tests paired inline/materialized alias
+arms.  Reversed effects `[-1281,-2898,-942,+1018]` produce two polarity flips
+and two preservations, excluding global order reversal as a sufficient law.
+The completed weighted subset also exposes a matched adjacent `0`/`12` swap as
+the next exact intervention without treating it as A170's prospective target.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ADJACENT_0_12_TRANSFER_V1.md`
+prospectively transfers the matched weighted `0/12` direction into a new
+central Greedy-Max pair.  Effects -581 for `0,12` and -125 for `12,0` give a
++456 directional delta, reversing the frozen prediction.  Both materialized
+arms remain beneficial, but the orientation ranking is context-dependent:
+transfer failed and a new order-family/insertion-context condition is retained.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_CENTER_POSITION_FAMILY_CONTRAST_V1.md`
+holds A172's central 11/12 positions fixed while changing the surrounding
+family from Greedy-Max to Weighted Descending.  The directional delta remains
+positive and grows from +456 to +10,955, selecting
+`central_position_supported`.  Effects -5,087 for `0,12` and +5,868 for
+`12,0` establish an exact, sign-changing compiler x adjacent-order interaction
+without a model claim.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_CENTER_ALIAS_PARTNER_TRANSFER_V1.md`
+prospectively replaces partner `0` with alias coordinate `12`'s original
+Weighted-Descending right neighbor `22` at the same x11/x12 boundary.  Effects
+-3,979 and -1,783 yield a +2,196 delta, confirming the frozen
+`central_alias_boundary_transfers` branch.  The retained conclusion is an exact
+two-partner fixed-resource solvergraph transfer, not universal partner
+independence or a model-recovery claim.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ALPHA_RENAMED_CENTER_BOUNDARY_V1.md`
+renames every declared SMT symbol by bijective numeric `suffix+1`; the inverse
+recovers all A174 bytes exactly.  The first three decision counts reproduce and
+the fourth changes by +398, while all canonical observations differ.  The
+positive boundary delta increases from +2,196 to +2,594, establishing
+`central_boundary_alpha_robust`: names modulate one fixed-resource trajectory
+without reversing the exact tested direction.

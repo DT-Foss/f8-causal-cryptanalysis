@@ -1,0 +1,84 @@
+{
+  "schema": "shake-symbolic-r2-center-position-family-contrast-protocol-v1",
+  "attempt_id": "A173",
+  "protocol_state": "frozen_before_any_A173_solver_execution",
+  "anchors": {
+    "A172": {
+      "artifact": "research/results/v1/shake_symbolic_r2_adjacent_0_12_transfer_frontier_v1.json",
+      "sha256": "f1252babeb729f9b58102d24d522daa0fa337506e25f9f282b2b4fb9a4d693c3",
+      "transfer_result_sha256": "7b20ad6787fb555b55239522a43977ac268a7423c0f5d067def935ca27b6a4fd",
+      "greedy_max_center_directional_delta": 456
+    },
+    "A170": {
+      "artifact": "research/results/v1/shake_symbolic_r2_reversed_order_alias_polarity_frontier_v1.json",
+      "sha256": "f28d4a767d26b6514eb90d6324e8a19d2842d1418fd7587ff0068ca9512cb97f"
+    }
+  },
+  "causal_question": "Was A172's reversed 0/12 direction caused by the central positions 11/12 or by the Greedy-Max surrounding 22-coordinate family context?",
+  "contrast_design": {
+    "semantic_change": false,
+    "new_formula_count": 4,
+    "source_order": "weighted_degree_descending",
+    "position_matched_to_A172": [11, 12],
+    "family_changed_relative_to_A172": "greedy_max_to_weighted_descending",
+    "remove_coordinates": [0, 12],
+    "preserve_relative_order_of_other_coordinates": 22,
+    "orientations": ["0_before_12", "12_before_0"],
+    "compiler_arms": ["inline", "materialized"],
+    "inline_arm_variables": 121575,
+    "inline_arm_assertions": 122895,
+    "materialized_arm_variables": 121576,
+    "materialized_arm_assertions": 122896,
+    "affine_shift": "0x4e1e28",
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "mechanism_rules": {
+    "weighted_center_delta_negative": "family_context_supported",
+    "weighted_center_delta_positive": "central_position_supported",
+    "weighted_center_delta_zero": "weighted_center_boundary",
+    "directional_delta": "effect_12_before_0_minus_effect_0_before_12",
+    "A172_greedy_max_center_delta": 456
+  },
+  "contrast_plan": {
+    "sha256": "2ab440c8cc5cbdf7d8896b2cead2c5f13499cda1ecfebef9ccde18798c14a99e",
+    "source_without_0_12": [11, 2, 15, 7, 16, 4, 8, 9, 3, 22, 21, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1],
+    "zero_before_twelve_order": [11, 2, 15, 7, 16, 4, 8, 9, 3, 22, 21, 0, 12, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1],
+    "twelve_before_zero_order": [11, 2, 15, 7, 16, 4, 8, 9, 3, 22, 21, 12, 0, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1]
+  },
+  "formula_plan": {
+    "sha256": "aa400b39dff773acf94c5aca38de11a6e26503e84dfd986482adbc6f38e7696f",
+    "rows": [
+      ["weighted_desc_center_0_before_12__inline_negative_alias", 8899674, "b2c62ea34bef321dbf4f8bfbaf54333052c3f22f4324ab147b509985427c3c7c"],
+      ["weighted_desc_center_0_before_12__materialized_negative_alias", 8899730, "f5fef9ba963c416b9fa2a69ea62cdb87ac89e576334d115f849be5c62e3753f6"],
+      ["weighted_desc_center_12_before_0__inline_negative_alias", 8899674, "bd09f8dfe0709e038f0b9e8670e8e93bceedd5f486cded456cd1e922848c1889"],
+      ["weighted_desc_center_12_before_0__materialized_negative_alias", 8899730, "f6a3b7da24bc6e2e18575949c59969b19657f7ac84201b0b4c2669688ced73fa"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "interpretation_rules": {
+    "family_context_supported": "same_central_position_recovers_the_weighted_negative_direction_so_the_surrounding_22_coordinate_context_controls_the_A172_reversal",
+    "central_position_supported": "same_central_position_repeats_A172_positive_direction_across_families",
+    "weighted_center_boundary": "weighted_context_reaches_zero_direction_at_the_central_boundary",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_position_matched_family_contrast_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A172_outcomes_used_to_select_the_position_matched_family_contrast": true,
+    "A172_outcomes_used_to_select_any_A173_formula_arm_or_resource_limit": false,
+    "weighted_descending_selected_as_the_original_negative_weighted_context": true,
+    "target_rate_used_in_contrast_selection": false,
+    "instrumented_assignment_used": false,
+    "A173_solver_outcomes_used_before_formula_freeze": false
+  }
+}

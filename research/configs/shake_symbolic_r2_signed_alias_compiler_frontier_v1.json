@@ -1,0 +1,80 @@
+{
+  "schema": "shake-symbolic-r2-signed-alias-compiler-frontier-protocol-v1",
+  "attempt_id": "A166",
+  "protocol_state": "frozen_before_any_A166_solver_execution",
+  "anchors": {
+    "A164": {
+      "artifact": "research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.json",
+      "sha256": "c8b4f7446b3e78b3914f90e5fbbc201d00771a917c7fafe16eba6e134e0f55ab",
+      "universal_gauge": "0x4e1e28"
+    },
+    "A162": {
+      "artifact": "research/results/v1/shake_symbolic_r2_order_weighted_gauge_reader_v1.json",
+      "sha256": "d91b3210a107a815934ee7498c37f9da2740e2c03019feb8af23fe8c9df3549a"
+    }
+  },
+  "structural_analysis": {
+    "sha256": "ba3acec7cfcbf7f10e5f1fe1bc98b77a1a47aff7d85e64629319537426da75cd",
+    "suffix_cone_plan_sha256": "b7163b88f68faf3bf8bca58c82ccb617bd060b260c23dd0cdefb92cad24538dc",
+    "unit_affine_theorem_sha256": "64c7ae36eb2c763dd29ac983addaf493b46b067b8debc78a5a218de7d531a7dc",
+    "suffix_depths": 23,
+    "static_cone_winner_at_every_depth": "0x498a92",
+    "A164_winner_selected_by_static_cone": false,
+    "unit_affine_coordinates": [453, 516, 917, 990, 1454],
+    "A164_winner_positive_aliases": [453, 516, 990, 1454],
+    "A164_winner_negative_aliases_materialized_by_old_compiler": [917]
+  },
+  "compiler_intervention": {
+    "semantic_change": false,
+    "old_behavior": "inline_only_single_positive_linear_literal",
+    "new_behavior": "inline_single_positive_or_negative_linear_literal",
+    "selected_affine_shift": "0x4e1e28",
+    "old_direct_alias_count": 4,
+    "new_signed_alias_count": 5,
+    "variables_removed_per_formula": 1,
+    "assertions_removed_per_formula": 1,
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "formula_plan": {
+    "sha256": "fd2ed7f25529335e7403aafc638d21fa07a99e8bde81333518e4e8fdbb4a25f7",
+    "rows": [
+      ["weighted_degree_descending__signed_unit_affine_alias", 8899711, "f5e9d9843c5ff13fb3df020aaa74313ab2787487b2e51d7b872b6f4263484724"],
+      ["weighted_degree_ascending__signed_unit_affine_alias", 8900219, "eab43da12ff6fb5afa4e62fd6d23093cad7490c8220a24bf657e7e594aa9e7f8"],
+      ["greedy_max_remaining_weight__signed_unit_affine_alias", 8899694, "f330e85d8602ac070b398bc6c50355d1392d7e76e5ef66dffcfad39b8e020407"],
+      ["greedy_min_remaining_weight__signed_unit_affine_alias", 8900197, "c517f3bb2b275cc37c8a97368c1fe458b2279f8fc10d6c48e7f31b745f6f61fd"]
+    ]
+  },
+  "execution": {
+    "orders": [
+      "weighted_degree_descending",
+      "weighted_degree_ascending",
+      "greedy_max_remaining_weight",
+      "greedy_min_remaining_weight"
+    ],
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "interpretation_rules": {
+    "four_decision_deltas_negative": "signed_alias_materialization_was_uniformly_harmful",
+    "mixed_decision_delta_signs": "signed_alias_effect_interacts_with_order",
+    "zero_negative_decision_deltas": "signed_alias_elimination_is_not_the_universal_gauge_mechanism",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_exact_traversal_intervention_without_model_claim"
+  },
+  "information_boundary": {
+    "A164_solver_counters_used_to_select_the_universal_gauge": true,
+    "A164_counters_used_to_select_signed_alias_rule": false,
+    "target_bit_values_used_in_suffix_cone": false,
+    "target_rate_used_in_compiler_selection": false,
+    "instrumented_assignment_used": false,
+    "A166_solver_outcomes_used_before_formula_freeze": false
+  }
+}

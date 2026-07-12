@@ -1,0 +1,103 @@
+{
+  "schema": "shake-symbolic-r2-normalized-materialized-alias-frontier-protocol-v1",
+  "attempt_id": "A168",
+  "protocol_state": "frozen_before_any_A168_solver_execution",
+  "anchors": {
+    "A167": {
+      "artifact": "research/results/v1/shake_symbolic_r2_id_preserving_signed_alias_frontier_v1.json",
+      "sha256": "24ad17ce715c3471bef30979a16e973f742163931e9cd9e4acae93562f00fcdc",
+      "effect_decomposition_sha256": "524a5f785e461ba210652f3337be915ecac06ff4e8cf7701a58de51caaebcfde",
+      "downstream_ID_shift_effect_L1": 0
+    },
+    "A166": {
+      "artifact": "research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json",
+      "sha256": "e6cdc6a69e36e8632bfd5389b77914f744a61f45fbdb84e13c5701e3f2fbc6db"
+    },
+    "A164": {
+      "artifact": "research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.json",
+      "sha256": "c8b4f7446b3e78b3914f90e5fbbc201d00771a917c7fafe16eba6e134e0f55ab"
+    },
+    "A163": {
+      "artifact": "research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.json",
+      "sha256": "6528a62e4c12739966d06a0eff910fdf3b2739b53e83cc0dd2577a4afa1d6c8d",
+      "role": "original_greedy_max_formula_source"
+    }
+  },
+  "causal_question": "Is A166's exact connected-alias branching response caused by the materialized alias node itself or by the old xor(true,x) right-hand-side syntax used to define that node?",
+  "intervention": {
+    "semantic_change": false,
+    "selected_affine_shift": "0x4e1e28",
+    "negative_alias_coordinate": 917,
+    "connected_alias_name": "s1215",
+    "old_RHS": "xor(true,x_k)",
+    "new_RHS": "not(x_k)",
+    "changed_assertions_per_formula": 1,
+    "changed_lines_per_formula": 1,
+    "changed_line_index_zero_based": 2410,
+    "variables_per_formula": 121576,
+    "assertions_per_formula": 122896,
+    "declaration_sequence_sha256": "6ae51cff0ad3707df512db5933edd29dac9bf981b89b0201962ab1c1d79cfd61",
+    "connected_alias_node_preserved": true,
+    "all_declarations_preserved": true,
+    "all_other_assertions_byte_identical": true,
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "intervention_plan": {
+    "sha256": "2c732672fdbe0ef5cb5549a3b5b73ac6c8042762d411032575cf54b1184c6944",
+    "orders": [
+      "weighted_degree_descending",
+      "weighted_degree_ascending",
+      "greedy_max_remaining_weight",
+      "greedy_min_remaining_weight"
+    ],
+    "original_formula_sources": {
+      "A164": 3,
+      "A163": 1
+    }
+  },
+  "formula_plan": {
+    "sha256": "ee4cad05d03be839c54034076272e71b1426b34975e943b66597479a9bb17db9",
+    "rows": [
+      ["weighted_degree_descending__normalized_materialized_alias", 8899767, "08c9b39e856abf5cfcb63b88b9f2170a218419aeb15ab7d50ff5590d3f463d8d", "ece2e1c5a0bf46cd1b02e6084c712a313249108e5b4aacdd01a3561ae52bc955"],
+      ["weighted_degree_ascending__normalized_materialized_alias", 8900275, "ef43719f879ffa43d79ef60deefdc9a4ef3854fc9cc6b17e4f2c9652bc7b5729", "9e0ec4c438cf69266fb6b922cb7e80f3d812908c69d83d83badb7f6988ff4a34"],
+      ["greedy_max_remaining_weight__normalized_materialized_alias", 8899751, "4dbe647c784bda9b81cc6f1dbc945a56d5e4903b5cfd3d699eebaa1c291a3162", "7c2fe88c88928bb949fb81b8ebc0bd8b7d57eeb877695946183133d42a275300"],
+      ["greedy_min_remaining_weight__normalized_materialized_alias", 8900254, "3b65d808d948823f700e3c0868fedf8f22a1b49501cae73b87b17552b7da3a72", "44ce0cdc5fcc98cb9d4f72eaf94ea08c25b6a87ea27d297af68c36bf3898c5a8"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "effect_decomposition": {
+    "RHS_syntax_effect": "A168_decisions_minus_A164_decisions",
+    "connected_node_removal_effect": "A166_decisions_minus_A168_decisions",
+    "total_effect": "A166_decisions_minus_A164_decisions",
+    "exact_identity": "RHS_syntax_effect_plus_connected_node_removal_effect_equals_total_effect",
+    "aggregate_comparison": "sum_absolute_RHS_syntax_effect_versus_sum_absolute_connected_node_removal_effect",
+    "per_order_dominance": "larger_absolute_component_with_balanced_on_exact_tie"
+  },
+  "interpretation_rules": {
+    "syntax_L1_zero": "xor_true_and_not_RHS_forms_have_identical_decision_traversal_when_the_alias_node_is_preserved",
+    "node_L1_zero": "RHS_syntax_normalization_fully_explains_the_A166_decision_response",
+    "syntax_L1_greater_than_node_L1": "RHS_syntax_is_the_aggregate_dominant_component",
+    "node_L1_greater_than_syntax_L1": "connected_node_removal_is_the_aggregate_dominant_component",
+    "neither_component_zero": "both_RHS_syntax_and_connected_node_removal_contribute",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_three_arm_single_assertion_traversal_decomposition_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A167_outcomes_used_to_select_the_single_assertion_question": true,
+    "A167_outcomes_used_to_select_any_A168_formula_order_or_resource_limit": false,
+    "target_rate_used_in_intervention_selection": false,
+    "instrumented_assignment_used": false,
+    "A168_solver_outcomes_used_before_formula_freeze": false
+  }
+}

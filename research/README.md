@@ -396,6 +396,97 @@ stop.  The sole 128-bit filter match is assignment 9,279,571; an independent
 matches, and the reconstruction equals A152's posthoc value when read after
 execution.  The complete fresh run measured 1.61 seconds on an M4 Mac mini.
 
+A166 resolves two structural explanations for A164's universal gauge under a
+frozen semantics-preserving compiler intervention.  Exact backward suffix-cone
+incidence chooses `0x498a92` at all 23 depths and never the `0x4e1e28` winner.
+The R2 interface has exactly five unit-affine coordinates; normalizing the one
+negative alias previously left materialized removes one variable and assertion
+per formula.  Decision deltas versus the matched A164 controls are +2,008,
+-977, -1,623 and -1,182, proving an order interaction rather than a uniform
+alias mechanism.  Weighted-degree ascending reaches a new 3,425-decision
+fixed-resource minimum on the unchanged full-round relation.
+
+A167 separates alias-node removal from the declaration-ID shift introduced by
+A166.  It inlines the same negative R2 alias but restores A164's complete
+declaration sequence with a disconnected `s1215` placeholder.  All four runs
+again exhaust the fixed limit as `unknown`, and decisions exactly match A166:
+7,347, 3,425, 5,247 and 5,323.  The alias-node effects are +2,008, -977,
+-1,623 and -1,182, while every downstream ID-shift effect is zero.  Conflicts,
+restarts and resource counts also match A166; raw propagation counters differ
+slightly and are retained exactly in the result.
+
+A168 separates the connected alias node from its Boolean RHS spelling.  It
+keeps `s1215` connected at its original ID and changes exactly one assertion in
+each formula from `xor(true,x)` to `not(x)`.  The four runs reproduce the
+original controls in decisions, conflicts, restarts and resource counts, so
+the RHS-syntax decision effect is identically zero and the connected-node
+removal effect retains L1 magnitude 5,790.  Three complete canonical
+observations are bit-identical; greedy-min differs only by +78 propagations and
+-29 binary propagations, which the artifact records without broadening the
+decision-level conclusion.
+
+A169 decomposes that connected alias across its two exact first-suffix-round
+consumers, column node `c2173` and theta node `t3453`.  Eight formulas preserve
+the alias definition and exactly one consumer at a time, with one
+semantics-preserving line rewrite and the same 500,000,000-unit cap.  Joining
+those fanout-one arms to A166 fanout zero and A168 fanout two gives exact
+per-order Mobius coefficients.  Column and theta main-effect L1 magnitudes are
+4,247 and 4,222 decisions; interaction L1 is 3,289, and every order has a
+nonzero interaction.  The connected-node response is therefore a joint
+two-consumer solver-graph effect whose sign and magnitude depend on input
+order.
+
+A170 tests complete order orientation directly by reversing all four frozen
+24-coordinate vectors and pairing the same inline and materialized alias arms.
+The reversed effects are -1,281, -2,898, -942 and +1,018 decisions.  Exactly
+two polarities flip and two remain unchanged, so reversal is not a universal
+polarity law.  A post-completion matched comparison sharpens the breadcrumb:
+weighted ascending differs from reverse(descending) only by the adjacent
+coordinates `0` and `12` at positions 13/14, while descending differs from
+reverse(ascending) only at positions 9/10.  This adjacent-swap relation was not
+the prospective A170 target and is retained as a follow-up mechanism.
+
+A172 executes that follow-up as a prospectively frozen cross-family transfer.
+It removes coordinates `0` and `12` from Greedy-Max, preserves the relative
+order of the other 22 coordinates, and inserts the pair at central positions
+11/12 in both orientations.  The predicted `12,0` advantage reverses: effects
+are -581 for `0,12` and -125 for `12,0`, producing delta +456 rather than the
+required negative value.  Both effects remain negative, so connected-alias
+materialization still improves both arms while their relative orientation
+ranking reverses.  Transfer failed; order-family/insertion context is the new
+identified condition.
+
+A173 separates central position from surrounding order family.  It constructs
+the same `0/12` pair at positions 11/12 from Weighted Descending while
+preserving the other 22 coordinates' relative order.  The effects are -5,087
+for `0,12` and +5,868 for `12,0`, giving a +10,955 directional delta.  A172's
+same-position Greedy-Max delta is +456, so the frozen classifier returns
+`central_position_supported`; changing family increases the delta by 10,499
+without changing its positive direction.  The sign change between the two
+compiler arms is an exact compiler x adjacent-order interaction, and no solver
+model is claimed.
+
+A174 tests partner transfer at that same x11/x12 solvergraph boundary.  It
+replaces coordinate `0` with coordinate `22`, alias coordinate `12`'s original
+Weighted-Descending right neighbor, and preserves the other 22 coordinates'
+relative order.  Inline/materialized decisions are 10,816/6,837 with the alias
+at position 12 and 7,772/5,989 with the alias at position 11, giving effects
+-3,979 and -1,783.  The +2,196 directional delta matches A173's positive sign,
+so the frozen classifier returns `central_alias_boundary_transfers`.  The claim
+is limited to the exact two partners, relation, gauge and fixed-resource solver
+graph; no model is emitted.
+
+A175 applies a byte-reversible bijective `suffix+1` alpha-renaming to every
+declared symbol in the four A174 graphs.  It renames 121,575/121,576
+declarations and 529,945/529,948 symbol occurrences while preserving graph,
+declaration/assertion order, input order, semantics and resources; the inverse
+restores every A174 formula byte-for-byte.  Decisions reproduce A174 in the
+first three arms and increase by 398 in the fourth.  All four canonical hashes
+differ, so exact observation invariance fails, but the directional delta stays
+positive and rises from +2,196 to +2,594.  The frozen classification is
+`central_boundary_alpha_robust`: numeric names modulate one trajectory without
+reversing the tested boundary direction.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs

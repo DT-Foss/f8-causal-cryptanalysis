@@ -1,0 +1,104 @@
+{
+  "schema": "shake-symbolic-r2-adjacent-0-12-transfer-frontier-protocol-v1",
+  "attempt_id": "A172",
+  "protocol_state": "frozen_before_any_A172_solver_execution",
+  "anchors": {
+    "A170": {
+      "artifact": "research/results/v1/shake_symbolic_r2_reversed_order_alias_polarity_frontier_v1.json",
+      "sha256": "f28d4a767d26b6514eb90d6324e8a19d2842d1418fd7587ff0068ca9512cb97f",
+      "polarity_frontier_sha256": "8fe2d08594044697a0aa27f17c3fd1dda253b76eea6ae2bca39a6f6da24e9a92"
+    },
+    "A169": {
+      "artifact": "research/results/v1/shake_symbolic_r2_alias_fanout_mobius_frontier_v1.json",
+      "sha256": "b19c1b85bfad77c5e7aa909ba11a02821fce21f6603daa3174bfe5899a0c1334",
+      "mobius_decomposition_sha256": "af6b94835b169aeb9ef0e32b721623c0536ccb0e98cb1c156508f419907ec2ea"
+    }
+  },
+  "causal_question": "Does the locally discovered rule that adjacent 12-before-0 lowers the connected-alias materialization effect transfer prospectively from two weighted contexts to a new central Greedy-Max context?",
+  "discovery_evidence": {
+    "sha256": "d74aada82dace4327f3820493eff50c704e32a6ebd27ccf7d1bc11b1a953b098",
+    "matched_contexts": [
+      {
+        "name": "late_weighted_context",
+        "positions": [13, 14],
+        "effect_0_before_12": 977,
+        "effect_12_before_0": -1281,
+        "directional_delta": -2258
+      },
+      {
+        "name": "early_weighted_context",
+        "positions": [9, 10],
+        "effect_0_before_12": -2008,
+        "effect_12_before_0": -2898,
+        "directional_delta": -890
+      }
+    ]
+  },
+  "transfer_design": {
+    "semantic_change": false,
+    "new_formula_count": 4,
+    "source_order": "greedy_max_remaining_weight",
+    "cross_family_relative_to_discovery": true,
+    "remove_coordinates": [0, 12],
+    "preserve_relative_order_of_other_coordinates": 22,
+    "deterministic_insertion_boundary_zero_based": [11, 12],
+    "orientations": ["0_before_12", "12_before_0"],
+    "compiler_arms": ["inline", "materialized"],
+    "inline_arm_variables": 121575,
+    "inline_arm_assertions": 122895,
+    "materialized_arm_variables": 121576,
+    "materialized_arm_assertions": 122896,
+    "affine_shift": "0x4e1e28",
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "prospective_prediction": {
+    "frozen_before_execution": true,
+    "direction": "effect_12_before_0_is_strictly_lower_than_effect_0_before_12",
+    "test_statistic": "materialization_effect_12_before_0_minus_materialization_effect_0_before_12",
+    "confirmed_if": "test_statistic_is_negative",
+    "exact_tie_if": "test_statistic_is_zero",
+    "reversed_if": "test_statistic_is_positive"
+  },
+  "transfer_plan": {
+    "sha256": "de15046300be637bcf4fa9de7183c1fbd4d619265455f8edc274f086920be424",
+    "source_without_0_12": [11, 2, 15, 7, 4, 16, 3, 9, 22, 20, 8, 21, 10, 5, 6, 18, 19, 17, 14, 1, 13, 23],
+    "zero_before_twelve_order": [11, 2, 15, 7, 4, 16, 3, 9, 22, 20, 8, 0, 12, 21, 10, 5, 6, 18, 19, 17, 14, 1, 13, 23],
+    "twelve_before_zero_order": [11, 2, 15, 7, 4, 16, 3, 9, 22, 20, 8, 12, 0, 21, 10, 5, 6, 18, 19, 17, 14, 1, 13, 23]
+  },
+  "formula_plan": {
+    "sha256": "bedd957db8a405bdecd98a0f4742842362888eea58e02df8262d98e22eecdf95",
+    "rows": [
+      ["greedy_max_center_0_before_12__inline_negative_alias", 8899715, "e883450ba22cff021b4bd816375b89c5f652f1af78fa55d4e9705cfd61ea3fba"],
+      ["greedy_max_center_0_before_12__materialized_negative_alias", 8899771, "e846ab0386b692a1363724726c6e67575ecd333bf1a4b607433ce25e5fbe7a5e"],
+      ["greedy_max_center_12_before_0__inline_negative_alias", 8899715, "8d4ba9f22615e9c848e4d9901c9bcab9e74e26b9ec615a7b9dc92f547354fb93"],
+      ["greedy_max_center_12_before_0__materialized_negative_alias", 8899771, "6076d05cd2c15478af715e6c96045951cc1d89a9668e048d7db3de1f9240c5d5"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "interpretation_rules": {
+    "negative_directional_delta": "prospective_cross_family_transfer_confirmed",
+    "zero_directional_delta": "adjacent_orientation_has_no_effect_at_the_new_central_context",
+    "positive_directional_delta": "prospective_direction_reversed_and_a_new_context_condition_is_required",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_paired_prospective_traversal_test_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A170_outcomes_used_to_discover_the_two_matched_weighted_contexts": true,
+    "A170_outcomes_used_to_select_the_cross_family_source_and_central_boundary": false,
+    "source_and_boundary_selection_rule": "greedy_max_first_nonweighted_family_and_floor_24_div_2_minus_1_boundary",
+    "target_rate_used_in_transfer_selection": false,
+    "instrumented_assignment_used": false,
+    "A172_solver_outcomes_used_before_formula_freeze": false
+  }
+}

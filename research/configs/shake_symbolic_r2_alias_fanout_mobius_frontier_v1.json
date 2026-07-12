@@ -1,0 +1,102 @@
+{
+  "schema": "shake-symbolic-r2-alias-fanout-mobius-frontier-protocol-v1",
+  "attempt_id": "A169",
+  "protocol_state": "frozen_before_any_A169_solver_execution",
+  "anchors": {
+    "A168": {
+      "artifact": "research/results/v1/shake_symbolic_r2_normalized_materialized_alias_frontier_v1.json",
+      "sha256": "becb3013cb079c2d45ee2a297d2847d5d85542843cb598e5b6288dc45b9eab76",
+      "effect_decomposition_sha256": "138cfc343738d5d5ad4a52ebb7825c1932ad2ef314f0cdfbd7f228097b774f48",
+      "connected_node_removal_effect_L1": 5790
+    },
+    "A166": {
+      "artifact": "research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json",
+      "sha256": "e6cdc6a69e36e8632bfd5389b77914f744a61f45fbdb84e13c5701e3f2fbc6db",
+      "role": "fanout_zero_inline_anchor"
+    }
+  },
+  "causal_question": "How do the exact column and direct-theta consumers of the single connected negative-alias node contribute individually and interact to produce its mixed four-order full-round traversal response?",
+  "fanout_design": {
+    "semantic_change": false,
+    "new_formula_count": 8,
+    "orders": 4,
+    "new_single_consumer_arms_per_order": 2,
+    "alias_coordinate": 917,
+    "alias_name": "s1215",
+    "alias_definition_line_zero_based": 2410,
+    "column_consumer": {
+      "name": "c2173",
+      "line_zero_based": 4326,
+      "baseline_line": "(assert (= c2173 (xor s577 s895 s1215 s1534 s1853)))"
+    },
+    "theta_consumer": {
+      "name": "t3453",
+      "line_zero_based": 6886,
+      "baseline_line": "(assert (= t3453 (xor s1215 d2493)))"
+    },
+    "column_only_arm": "retain_s1215_in_c2173_and_inline_not_xk_in_t3453",
+    "theta_only_arm": "inline_not_xk_in_c2173_and_retain_s1215_in_t3453",
+    "changed_lines_per_formula": 1,
+    "variables_per_formula": 121576,
+    "assertions_per_formula": 122896,
+    "declarations_changed": false,
+    "alias_definition_changed": false,
+    "other_assertions_changed": false,
+    "suffix_round_count_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "fanout_plan": {
+    "sha256": "b1476bcf5eeb3a03cf22d8fa7e09391e96d3150027e191125bdd248650dc68c3",
+    "execution_order": "for_each_frozen_order_then_column_only_then_theta_only"
+  },
+  "formula_plan": {
+    "sha256": "c321e346f7edb78ff69c83bc1998b3156bfe0481236da6b775b29422760ea535",
+    "rows": [
+      ["weighted_degree_descending__column_only_alias_fanout", 8899771, "77f2d234359d03c4a497ca86d28a9d1d9c95d375f39d5f14a4f94ac8435716a4", "7f6592e3c47643729f07947309be9666b9fe73886c4516f006ac4113ecad152c"],
+      ["weighted_degree_descending__theta_only_alias_fanout", 8899771, "af34834afa430dba9a28ca92ff9d28f7cf203cb440657113ffdfcaeadf28edc7", "d4b5c579036cc40176a5dc719e69b943107a55e6642ab963997455ba29f7c455"],
+      ["weighted_degree_ascending__column_only_alias_fanout", 8900279, "6ba909d46a0ebe60cced50a2e698061480c536daef8a9a1a0abcb3edde687d39", "997d13841d8ca85230c3772029edee9f3f663adee083fcb776bb99c1925c3791"],
+      ["weighted_degree_ascending__theta_only_alias_fanout", 8900279, "37062d68a0110c8f4b930b69317bbdee4d3eb5bdc731823f77c33743e96e226d", "8c5fb280a15bd8dd79b621392dead9edc152c5baa70730ee2cdfe09408014cc0"],
+      ["greedy_max_remaining_weight__column_only_alias_fanout", 8899754, "051fde4f39816a35b0ecd997522315453e8aaeb4dfea5b022b4c49d41e976736", "a7a399d6bde539e0f786b24155439841476539a0513f897bb24185379692fbde"],
+      ["greedy_max_remaining_weight__theta_only_alias_fanout", 8899754, "9fcfb59924ad1cbfd98c74b0bdc85e30cf4cb910b2a8783e8478050a4c1d07c8", "ffd20ed0385e896e7eff40684adc7cc443eb82c6c34e5752942aaac101d0e8cb"],
+      ["greedy_min_remaining_weight__column_only_alias_fanout", 8900257, "c06e1267c3dd38cffd39beba655d2218bd8d69be7992a17854be452516130781", "41e3aa8b09cdf85f27bdd1a8f56890fb2d1d919b7b6552c4e02f9b5c84700266"],
+      ["greedy_min_remaining_weight__theta_only_alias_fanout", 8900257, "ed1cab808c1d3c24427d4bc5d92cce35e854365a0ffe58ff20650284c7c02a4c", "8b925520c35fb2e7dd20cf336bfc59a1a2a5957f6a21ab440f487f371132bbe3"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "mobius_decomposition": {
+    "fanout0_inline": "A166_decisions",
+    "fanout1_column_only": "A169_column_only_decisions",
+    "fanout1_theta_only": "A169_theta_only_decisions",
+    "fanout2_both": "A168_decisions",
+    "column_main": "fanout1_column_only_minus_fanout0_inline",
+    "theta_main": "fanout1_theta_only_minus_fanout0_inline",
+    "interaction": "fanout2_both_minus_fanout1_column_only_minus_fanout1_theta_only_plus_fanout0_inline",
+    "total": "fanout2_both_minus_fanout0_inline",
+    "exact_identity": "column_main_plus_theta_main_plus_interaction_equals_total"
+  },
+  "interpretation_rules": {
+    "all_interactions_zero": "column_and_theta_consumer_effects_are_additive_in_all_four_orders",
+    "any_interaction_nonzero": "the_two_consumers_have_order_specific_joint_branching_effects",
+    "largest_component_L1": "aggregate_dominant_alias_fanout_component",
+    "per_order_largest_absolute_component": "dominant_component_for_that_order",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_boolean_lattice_traversal_decomposition_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A168_outcomes_used_to_select_the_two_consumer_question": true,
+    "A168_outcomes_used_to_select_any_A169_formula_order_or_resource_limit": false,
+    "target_rate_used_in_fanout_selection": false,
+    "instrumented_assignment_used": false,
+    "A169_solver_outcomes_used_before_formula_freeze": false
+  }
+}

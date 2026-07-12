@@ -1,0 +1,95 @@
+{
+  "schema": "shake-symbolic-r2-center-alias-partner-transfer-protocol-v1",
+  "attempt_id": "A174",
+  "protocol_state": "frozen_before_any_A174_solver_execution",
+  "anchors": {
+    "A173": {
+      "artifact": "research/results/v1/shake_symbolic_r2_center_position_family_contrast_v1.json",
+      "sha256": "b3ae48350a75430b1b1aea55ebe59442949dd6b5fe19f30453583ede6da6d01b",
+      "family_contrast_result_sha256": "7cffb3b309666c431ec056c24101512b167550db2a5a0085b1ed8ffde5dcb909",
+      "weighted_desc_directional_delta": 10955
+    },
+    "A170": {
+      "artifact": "research/results/v1/shake_symbolic_r2_reversed_order_alias_polarity_frontier_v1.json",
+      "sha256": "f28d4a767d26b6514eb90d6324e8a19d2842d1418fd7587ff0068ca9512cb97f"
+    },
+    "A166": {
+      "artifact": "research/results/v1/shake_symbolic_r2_signed_alias_compiler_frontier_v1.json",
+      "sha256": "e6cdc6a69e36e8632bfd5389b77914f744a61f45fbdb84e13c5701e3f2fbc6db"
+    }
+  },
+  "causal_question": "Does the positive x11/x12 alias-position direction transfer when coordinate 0 is replaced by alias coordinate 12's original Weighted-Descending right neighbor 22?",
+  "partner_design": {
+    "semantic_change": false,
+    "new_formula_count": 4,
+    "source_order": "weighted_degree_descending",
+    "alias_coordinate": 12,
+    "control_partner_coordinate": 22,
+    "control_partner_is_original_right_neighbor": true,
+    "position_matched_to_A173": [11, 12],
+    "remove_coordinates": [12, 22],
+    "preserve_relative_order_of_other_coordinates": 22,
+    "orientations": ["22_before_12", "12_before_22"],
+    "compiler_arms": ["inline", "materialized"],
+    "inline_arm_variables": 121575,
+    "inline_arm_assertions": 122895,
+    "materialized_arm_variables": 121576,
+    "materialized_arm_assertions": 122896,
+    "affine_shift": "0x4e1e28",
+    "suffix_rounds_changed": false,
+    "target_assertions_changed": false,
+    "model_mapping_changed": false
+  },
+  "prospective_prediction": {
+    "direction": "effect_12_before_22_is_strictly_higher_than_effect_22_before_12",
+    "frozen_basis": "A173 observed a positive directional delta when alias coordinate 12 crossed from solver position 12 to 11 with partner coordinate 0 under the same Weighted-Descending family.",
+    "confirming_outcome": "directional_delta_alias_position_11_minus_12_is_positive",
+    "zero_outcome": "exact_partner_boundary",
+    "opposite_outcome": "coordinate_0_specific_direction"
+  },
+  "partner_plan": {
+    "sha256": "4fd8d79ef6581ad82303b96a2432f6f933fe55fc38e1e4e0b726f3d1508ffb46",
+    "source_order": [11, 2, 15, 7, 16, 4, 8, 9, 3, 0, 12, 22, 21, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1],
+    "source_without_12_22": [11, 2, 15, 7, 16, 4, 8, 9, 3, 0, 21, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1],
+    "partner_before_alias_order": [11, 2, 15, 7, 16, 4, 8, 9, 3, 0, 21, 22, 12, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1],
+    "alias_before_partner_order": [11, 2, 15, 7, 16, 4, 8, 9, 3, 0, 21, 12, 22, 20, 18, 5, 10, 19, 6, 17, 14, 13, 23, 1],
+    "alias_solver_positions": {
+      "22_before_12": 12,
+      "12_before_22": 11
+    }
+  },
+  "formula_plan": {
+    "sha256": "7aeb5ae8e759affecfed70292223460d30281481aeb49e955c74507719fcdb39",
+    "rows": [
+      ["weighted_desc_center_22_before_12__inline_negative_alias", 8899711, "8d5554b488a3f6edebac7fe512b506a897e0d3a9f0ca091f7273da928350fe4b"],
+      ["weighted_desc_center_22_before_12__materialized_negative_alias", 8899767, "cbcb738e87abefd57264762b1bc39ff2ab779e7e3983eb252e263107c604b214"],
+      ["weighted_desc_center_12_before_22__inline_negative_alias", 8899711, "9c733d671b5f270e53ce2798ace93038af406338426bf259c5af854b2ea8be88"],
+      ["weighted_desc_center_12_before_22__materialized_negative_alias", 8899767, "07c6f29091c51fc83a8af45d092e69949b30cf5cd9cc147fe24baa635c66fce6"]
+    ]
+  },
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "interpretation_rules": {
+    "positive_directional_delta": "central_alias_boundary_transfers_from_partner_0_to_original_neighbor_22",
+    "zero_directional_delta": "the_12_22_pair_reaches_an_exact_partner_boundary",
+    "negative_directional_delta": "the_A173_positive_direction_depends_on_partner_coordinate_0",
+    "any_confirmed_model": "retain_only_after_inverse_permutation_affine_mapping_and_independent_1344_bit_check",
+    "all_unknown": "retain_the_exact_fixed_resource_partner_transfer_without_a_model_claim"
+  },
+  "information_boundary": {
+    "A173_outcomes_used_to_select_the_partner_transfer": true,
+    "A173_outcomes_used_to_select_any_A174_formula_arm_or_resource_limit": false,
+    "coordinate_22_selected_as_coordinate_12_original_right_neighbor": true,
+    "target_rate_used_in_partner_selection": false,
+    "instrumented_assignment_used": false,
+    "A174_solver_outcomes_used_before_formula_freeze": false
+  }
+}
