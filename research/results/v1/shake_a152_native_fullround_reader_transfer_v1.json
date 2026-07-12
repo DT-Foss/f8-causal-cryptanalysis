@@ -1,0 +1,188 @@
+{
+  "anchor_gates": {
+    "A152_result_sha256": "0e01e3e6ff0b9a80ff66ad6614f846305188d96a4497ca38857eac81097a1561",
+    "native_causal_graph_sha256": "f3853005b0e48cd42edf8257559350e4575819b3cee13291383b12342c244d2e",
+    "native_causal_provenance_verified": true,
+    "native_causal_sha256": "f90cf74a0d97f07b0d037639dc9d9beee2e0f7dec3360c51ebf802e27e04550f",
+    "native_reader_recipe": {
+      "candidates_per_machine_word": 64,
+      "capacity_bits": 256,
+      "capacity_lane_offset": 21,
+      "filter_lanes": 2,
+      "full_confirmation": "independent_scalar_complete_rate_equality",
+      "known": "rate_and_capacity_complement",
+      "native_source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81",
+      "operation": "native_threaded_bitsliced_keccak_f1600_exact_rate_filter",
+      "permutation_rounds": 24,
+      "rate_lanes": 21,
+      "representation": "candidate_axis_bitsliced_into_native_uint64",
+      "variable": "declared_capacity_window",
+      "variant": "SHAKE128"
+    },
+    "native_result_sha256": "8497ccb7938da721b71876cf481bcc4175b7f5b25c5f3300a87e09a6f123e604",
+    "native_source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81"
+  },
+  "attempt_id": "A165",
+  "causal": {
+    "explicit_triplets": 5,
+    "file_sha256": "be53ad7b6948abe7465b41a50bc4128ff8f20aa3150a32936927f309ddbac02e",
+    "graph_sha256": "1ef4fe5a6ced7cfe84d86f6d8dffe1788f915cb77f03b6ade629bcd1bfd007c3",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2113,
+      "explicit_triplets": 5,
+      "file_sha256": "be53ad7b6948abe7465b41a50bc4128ff8f20aa3150a32936927f309ddbac02e",
+      "graph_sha256": "1ef4fe5a6ced7cfe84d86f6d8dffe1788f915cb77f03b6ade629bcd1bfd007c3",
+      "inferred_triplets": 0,
+      "triplets": 5
+    }
+  },
+  "confirmation_sha256": "81fcf52e58b3a66ade72204d121a804581dab1d36e2167510e4d77e3a859ed37",
+  "current_build_cross_implementation_gate": {
+    "exact_match": true,
+    "input_sha256": "1a4a5fac1453fa4cb3fe044cc8951f694b1850fe3104bb9f94f9cf6e57337176",
+    "output_sha256": "2588e848ab326b7ffd9c5e1aa5a7937cd1327f7fb1b7dedbe87a0e665d00adfd",
+    "state_bits_checked": 102400,
+    "states": 64
+  },
+  "evidence_stage": "A152_NATIVE_FULLROUND_MODEL_RECONSTRUCTION_RETAINED",
+  "execution": {
+    "A152_posthoc_assignment_read_before_candidate_execution": false,
+    "candidate_pack_width": 64,
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "control_target_rule": "flip_bit_0_of_first_public_target_rate_lane",
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "assignment": 9279571,
+        "candidate_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c",
+        "complete_rate_match": true,
+        "implementation": "independent_NumPy_lane_core",
+        "rate_bits_checked": 1344,
+        "rate_lanes_checked": 21,
+        "target_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c"
+      }
+    ],
+    "factual_filter_matches": [
+      9279571
+    ],
+    "factual_full_matches": [
+      9279571
+    ],
+    "filter_rate_bits": 128,
+    "filter_rate_lanes": 2,
+    "instrumented_assignment_input_used": false,
+    "logical_candidate_count": 16777216,
+    "native_threads": 10,
+    "newly_executed_pack_count": 262144,
+    "packed_evaluation_reduction_factor": 64.0,
+    "packed_state_count": 262144,
+    "resumed_pack_count": 0,
+    "stream_batch_count": 1,
+    "stream_pack_count": 262144,
+    "unique_exact_public_model": true,
+    "window_bits": 24
+  },
+  "execution_sha256": "ac8e9820e4b501b2eda98c68e0d16ab579685ccdc9b7de0bea24dc307a63d5fc",
+  "native_build": {
+    "candidate_pack_width": 64,
+    "compiler_native_flag_attempted": true,
+    "language": "C11_POSIX_threads",
+    "optimization": "O3",
+    "source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81"
+  },
+  "parameters": {
+    "logical_candidate_count": 16777216,
+    "native_threads": 10,
+    "seed": 260592673,
+    "stream_pack_count": 262144,
+    "variant": "SHAKE128",
+    "volatile_wallclock_excluded_from_canonical_result": true,
+    "window_bits": 24
+  },
+  "posthoc_comparison": {
+    "A152_instrumented_assignment": 9279571,
+    "A152_instrumented_assignment_independent_check": {
+      "candidate_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c",
+      "complete_rate_match": true,
+      "performed": true,
+      "rate_bits_checked": 1344,
+      "rate_lanes_checked": 21,
+      "reason": null,
+      "target_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c"
+    },
+    "read_only_after_complete_domain_execution": true,
+    "recovered_assignments": [
+      9279571
+    ],
+    "unique_reconstruction_matches_A152_instrumented_assignment": true,
+    "used_for_candidate_generation_filtering_or_confirmation": false
+  },
+  "protocol_gate": {
+    "artifact_sha256": "66369688662b77a5a9b5fe49ab3bad5f6a513e809260e5293773dd8b3fe42498",
+    "protocol_state": "frozen_before_A165_candidate_execution",
+    "reader_plan": {
+      "A152_posthoc_assignment_read_before_candidate_execution": false,
+      "candidate_domain": "all_24_bit_assignments",
+      "candidate_order": "ascending_unsigned_integer",
+      "candidate_pack_width": 64,
+      "complete_domain_must_execute": true,
+      "control_target_rule": "flip_bit_0_of_first_public_target_rate_lane",
+      "early_stop_allowed": false,
+      "filter_rate_bits": 128,
+      "filter_rate_lanes": 2,
+      "full_confirmation_rate_bits": 1344,
+      "full_confirmation_rate_lanes": 21,
+      "instrumented_assignment_input_used": false,
+      "logical_candidate_count": 16777216,
+      "native_threads": 10,
+      "packed_state_count": 262144,
+      "stream_pack_count": 262144
+    }
+  },
+  "public_relation": {
+    "capacity_window_positions": [
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166
+    ],
+    "capacity_window_start_bit": 143,
+    "capacity_window_stop_bit_exclusive": 167,
+    "cleared_template_sha256": "8dd7a73132ae11987e86866552701cc7d093771ec911ee94883d114d3afb33d2",
+    "instrumented_assignment_included": false,
+    "seed": 260592673,
+    "target_rate_bits": 1344,
+    "target_rate_lanes": 21,
+    "target_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c",
+    "variant": "SHAKE128",
+    "window_bits": 24
+  },
+  "result": "The retained native Causal Reader executes the complete A152 24-bit public relation and independently confirms every exact full-round model.",
+  "schema": "shake-a152-native-fullround-reader-transfer-v1",
+  "scope": "Known-complement SHAKE128 state-window reconstruction over the complete 2^24 declared capacity-window domain and all 1,344 next-rate bits."
+}

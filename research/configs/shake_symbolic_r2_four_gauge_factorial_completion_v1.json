@@ -1,0 +1,81 @@
+{
+  "schema": "shake-symbolic-r2-four-gauge-factorial-completion-protocol-v1",
+  "attempt_id": "A164",
+  "protocol_state": "frozen_before_any_A164_solver_execution",
+  "design_scope": {
+    "orders": [
+      "weighted_degree_descending",
+      "weighted_degree_ascending",
+      "greedy_max_remaining_weight",
+      "greedy_min_remaining_weight"
+    ],
+    "affine_shifts_hex": [
+      "0x498a92",
+      "0x4e1e28",
+      "0x8c161b",
+      "0x954b3c"
+    ],
+    "complete_cells": 16,
+    "cells_already_executed_by_A163": 8,
+    "new_cells_executed_by_A164": 8
+  },
+  "anchors": {
+    "A162": {
+      "artifact": "research/results/v1/shake_symbolic_r2_order_weighted_gauge_reader_v1.json",
+      "sha256": "d91b3210a107a815934ee7498c37f9da2740e2c03019feb8af23fe8c9df3549a"
+    },
+    "A163": {
+      "artifact": "research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.json",
+      "sha256": "6528a62e4c12739966d06a0eff910fdf3b2739b53e83cc0dd2577a4afa1d6c8d"
+    }
+  },
+  "selection_rule": {
+    "definition": "cartesian_product_of_A158_orders_and_A162_unique_gauges_minus_the_eight_A162_generating_pairs",
+    "uses_A163_solver_counters": false,
+    "uses_A163_pair_ranking": false,
+    "uses_target_rate": false,
+    "uses_instrumented_assignment": false,
+    "repeats_an_A163_cell": false
+  },
+  "frozen_plans": {
+    "full_factorial_plan_sha256": "91c0ffb122d42731a192cef73b79fd0ef4df14df91ecff6dd53738b10ed814d7",
+    "missing_cell_plan_sha256": "65ed6a97f06325dcb1538b5601f650aa462135697b43575caf844474a70afb2e",
+    "formula_plan_sha256": "4c68011dd6173883900828bf7f6510918c3f30776ed9b6211fb17579087e49ff"
+  },
+  "missing_cells": [
+    ["weighted_degree_descending", "0x4e1e28"],
+    ["weighted_degree_descending", "0x8c161b"],
+    ["weighted_degree_ascending", "0x4e1e28"],
+    ["weighted_degree_ascending", "0x8c161b"],
+    ["greedy_max_remaining_weight", "0x8c161b"],
+    ["greedy_max_remaining_weight", "0x954b3c"],
+    ["greedy_min_remaining_weight", "0x498a92"],
+    ["greedy_min_remaining_weight", "0x4e1e28"]
+  ],
+  "formula_hashes": [
+    ["weighted_degree_descending__gauge_4e1e28", 8899772, "15d797dc7e2cdc7fdb68a03ba68a2a0e6d63385eedda9aea07782f42e98148b3"],
+    ["weighted_degree_descending__gauge_8c161b", 8900041, "4acdf793adbe5c70d143a5da8b9ccfcd7b82447d53a3ae11cf9732862f05de67"],
+    ["weighted_degree_ascending__gauge_4e1e28", 8900280, "13da8bd8f6d57b9a45a7e689def2137174b9955e547acc56ea96ad596dd74e44"],
+    ["weighted_degree_ascending__gauge_8c161b", 8900345, "72e2729849ef404be1116cfc03bdf2ba12f662306bf5cc5b5cb74f73988a279b"],
+    ["greedy_max_remaining_weight__gauge_8c161b", 8900022, "e1d876e8c03e0fb0f087987c9c9f2cef591140b744608cf84f7f36287ff063a6"],
+    ["greedy_max_remaining_weight__gauge_954b3c", 8899885, "342bfdbcd985215fcc8ac12f988a193878561c34c38f0fd976a27e260be670d9"],
+    ["greedy_min_remaining_weight__gauge_498a92", 8899983, "3410d83eb0d4c119d562a9c1f5bf9f7a1df4464efe60c59175e3dbd66e3431f2"],
+    ["greedy_min_remaining_weight__gauge_4e1e28", 8900259, "89632fbba577a3ede5c99aa0c77fe057882eca61bfc59ef83276935c96741e62"]
+  ],
+  "execution": {
+    "solver": "Z3 4.15.4",
+    "logic": "QF_UF",
+    "rlimit_per_formula": 500000000,
+    "solver_threads_per_formula": 1,
+    "execution_mode": "sequential",
+    "solver_wallclock_limit_used": false,
+    "external_safety_timeout_seconds": 300,
+    "volatile_timing_and_memory_excluded": true
+  },
+  "verification": {
+    "inverse_order_permutation_then_affine_XOR_mapping": true,
+    "independent_complete_rate_bits_checked_per_model": 1344,
+    "instrumented_assignment_extracted_only_after_all_A164_executions": true,
+    "global_uniqueness_claimed": false
+  }
+}

@@ -243,10 +243,14 @@ mkdir -p research/results/v1
 .venv/bin/python research/experiments/shake_symbolic_r1_affine_basis_reader.py
 .venv/bin/python research/experiments/shake_symbolic_r2_pivot_basis_reader.py
 .venv/bin/python research/experiments/shake_symbolic_r2_affine_gauge_reader.py
+.venv/bin/python research/experiments/shake_symbolic_r2_order_weighted_gauge_reader.py
+.venv/bin/python research/experiments/shake_a152_native_fullround_reader_transfer.py \
+  --no-resume
 
-# A156--A158 contain four 120-second executions and A159 four fixed-rlimit
-# executions. They are retained and hash-gated here; their dedicated reports
-# give the explicit long-run commands.
+# A156--A158 contain four 120-second executions; A159/A161 contain four and
+# A163/A164 contain eight fixed-rlimit executions each. They are retained and
+# hash-gated here; their dedicated reports give the explicit long-run commands.
+# A160 and A162 are regenerated.
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -286,6 +290,11 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r2_weighted_input_order_frontier.py \
   tests/test_shake_symbolic_r2_fixed_rlimit_order_frontier.py \
   tests/test_shake_symbolic_r2_affine_gauge_reader.py \
+  tests/test_shake_symbolic_r2_affine_gauge_solver_frontier.py \
+  tests/test_shake_symbolic_r2_order_weighted_gauge_reader.py \
+  tests/test_shake_symbolic_r2_order_weighted_gauge_solver_frontier.py \
+  tests/test_shake_symbolic_r2_four_gauge_factorial_completion.py \
+  tests/test_shake_a152_native_fullround_reader_transfer.py \
   tests/test_feal32x_fullround_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_shacal2_fullround_cancellation.py \
@@ -394,6 +403,18 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.json \
   research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.causal \
   research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.json \
-  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.causal
+  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_affine_gauge_solver_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_affine_gauge_solver_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_four_gauge_factorial_completion_v1.json \
+  research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.json \
+  research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.causal \
+  research/configs/shake_a152_native_fullround_reader_transfer_v1.json \
+  research/results/v1/shake_a152_native_fullround_reader_transfer_v1.json \
+  research/results/v1/shake_a152_native_fullround_reader_transfer_v1.causal
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis and shared-encoder mechanisms validated."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, gauge-factorial and native Reader mechanisms validated."

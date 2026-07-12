@@ -1,0 +1,61 @@
+{
+  "schema": "shake-a152-native-fullround-reader-transfer-protocol-v1",
+  "attempt_id": "A165",
+  "protocol_state": "frozen_before_A165_candidate_execution",
+  "anchors": {
+    "A152_prospective_instance": {
+      "artifact": "research/results/v1/shake_symbolic_r1_width24_prospective_transfer_v1.json",
+      "sha256": "0e01e3e6ff0b9a80ff66ad6614f846305188d96a4497ca38857eac81097a1561"
+    },
+    "native_reader": {
+      "artifact": "research/results/v1/shake_native_window_solver_v1.json",
+      "sha256": "8497ccb7938da721b71876cf481bcc4175b7f5b25c5f3300a87e09a6f123e604",
+      "causal_artifact": "research/results/v1/shake_native_window_solver_v1.causal",
+      "causal_sha256": "f90cf74a0d97f07b0d037639dc9d9beee2e0f7dec3360c51ebf802e27e04550f",
+      "native_source_sha256": "3189f301d25b1bc38c867dae840edb3c8e710ffa5960e02035b43a72c0889d81"
+    }
+  },
+  "public_relation": {
+    "variant": "SHAKE128",
+    "seed": 260592673,
+    "window_bits": 24,
+    "capacity_window_start_bit": 143,
+    "capacity_window_stop_bit_exclusive": 167,
+    "cleared_template_sha256": "8dd7a73132ae11987e86866552701cc7d093771ec911ee94883d114d3afb33d2",
+    "target_rate_bits": 1344,
+    "target_rate_sha256": "435edcaaa1288f8b812aea055dacc9aadc6dc1dd7416a2102459d2bc7526141c"
+  },
+  "reader_plan": {
+    "candidate_domain": "all_24_bit_assignments",
+    "candidate_order": "ascending_unsigned_integer",
+    "logical_candidate_count": 16777216,
+    "candidate_pack_width": 64,
+    "packed_state_count": 262144,
+    "native_threads": 10,
+    "stream_pack_count": 262144,
+    "complete_domain_must_execute": true,
+    "early_stop_allowed": false,
+    "filter_rate_lanes": 2,
+    "filter_rate_bits": 128,
+    "full_confirmation_rate_lanes": 21,
+    "full_confirmation_rate_bits": 1344,
+    "control_target_rule": "flip_bit_0_of_first_public_target_rate_lane",
+    "instrumented_assignment_input_used": false,
+    "A152_posthoc_assignment_read_before_candidate_execution": false
+  },
+  "acceptance": {
+    "retain_every_128_bit_filter_candidate": true,
+    "confirm_every_filter_candidate_with_independent_scalar_24_round_core": true,
+    "record_all_complete_rate_matches": true,
+    "compare_with_A152_posthoc_assignment_only_after_complete_domain_execution": true,
+    "wrong_target_control_must_be_fully_enumerated": true,
+    "global_uniqueness_claimed_only_if_exactly_one_complete_rate_match": true
+  },
+  "artifact_contract": {
+    "result_filename": "shake_a152_native_fullround_reader_transfer_v1.json",
+    "causal_filename": "shake_a152_native_fullround_reader_transfer_v1.causal",
+    "checkpoint_filename": "shake_a152_native_fullround_reader_transfer_v1.checkpoint.json",
+    "json_and_causal_reopened_after_final_write": true,
+    "volatile_wallclock_excluded_from_canonical_result": true
+  }
+}

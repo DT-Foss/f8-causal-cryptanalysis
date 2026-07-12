@@ -168,12 +168,16 @@ mkdir -p research/results/v1
 .venv/bin/python research/experiments/shake_symbolic_r1_affine_basis_reader.py
 .venv/bin/python research/experiments/shake_symbolic_r2_pivot_basis_reader.py
 .venv/bin/python research/experiments/shake_symbolic_r2_affine_gauge_reader.py
+.venv/bin/python research/experiments/shake_symbolic_r2_order_weighted_gauge_reader.py
+.venv/bin/python research/experiments/shake_a152_native_fullround_reader_transfer.py \
+  --no-resume
 
 # A156 contains four sequential 120-second solver executions. The aggregate
 # gate rebuilds all four formulas byte-for-byte and validates the retained
-# execution. A157--A159 do the same for shared-R2 encoders, weighted orders,
-# and the fixed-rlimit replay; use their dedicated reports to repeat the long
-# solver frontiers.
+# execution. A157--A159, A161, A163 and A164 do the same for shared-R2
+# encoders, weighted orders, fixed-rlimit replay, affine-gauge transfers and the
+# nonrepeating factorial completion; use their dedicated reports to repeat the
+# long solver frontiers. A160/A162 are regenerated above.
 .venv/bin/pytest -q \
   tests/test_shake_boolean_cnf_reader.py \
   tests/test_shake_prefix_observability_frontier.py \
@@ -204,7 +208,12 @@ mkdir -p research/results/v1
   tests/test_shake_symbolic_r2_shared_monomial_encoder_frontier.py \
   tests/test_shake_symbolic_r2_weighted_input_order_frontier.py \
   tests/test_shake_symbolic_r2_fixed_rlimit_order_frontier.py \
-  tests/test_shake_symbolic_r2_affine_gauge_reader.py
+  tests/test_shake_symbolic_r2_affine_gauge_reader.py \
+  tests/test_shake_symbolic_r2_affine_gauge_solver_frontier.py \
+  tests/test_shake_symbolic_r2_order_weighted_gauge_reader.py \
+  tests/test_shake_symbolic_r2_order_weighted_gauge_solver_frontier.py \
+  tests/test_shake_symbolic_r2_four_gauge_factorial_completion.py \
+  tests/test_shake_a152_native_fullround_reader_transfer.py
 .venv/bin/python scripts/validate_causal_artifacts.py >/dev/null
 
 .venv/bin/python scripts/write_hash_manifest.py \
@@ -269,6 +278,18 @@ mkdir -p research/results/v1
   research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.json \
   research/results/v1/shake_symbolic_r2_fixed_rlimit_order_frontier_v1.causal \
   research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.json \
-  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.causal
+  research/results/v1/shake_symbolic_r2_affine_gauge_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_affine_gauge_solver_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_affine_gauge_solver_frontier_v1.causal \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_reader_v1.json \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_reader_v1.causal \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.json \
+  research/results/v1/shake_symbolic_r2_order_weighted_gauge_solver_frontier_v1.causal \
+  research/configs/shake_symbolic_r2_four_gauge_factorial_completion_v1.json \
+  research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.json \
+  research/results/v1/shake_symbolic_r2_four_gauge_factorial_completion_v1.causal \
+  research/configs/shake_a152_native_fullround_reader_transfer_v1.json \
+  research/results/v1/shake_a152_native_fullround_reader_transfer_v1.json \
+  research/results/v1/shake_a152_native_fullround_reader_transfer_v1.causal
 
-echo "SHAKE Boolean, algebraic, symbolic-split, partition, strategy, prospective, affine-basis and shared-encoder Readers validated."
+echo "SHAKE Boolean, algebraic, symbolic-split, partition, strategy, prospective, affine-basis, gauge-factorial and native Readers validated."

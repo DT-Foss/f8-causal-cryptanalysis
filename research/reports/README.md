@@ -94,3 +94,37 @@ unique global minimum at `0x8e26db`, reducing linear R2 incidence from 8,698 to
 8,413 while preserving every quadratic coefficient and the K24 graph.  The
 result is a target- and assignment-free polarity gauge ready for fixed-resource
 full-round transfer.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_AFFINE_GAUGE_SOLVER_V1.md` performs that
+four-order transfer under A159's exact fixed resource protocol.  The gauge
+reduces decisions by 27.1--60.2% in three orders but raises them by 70.9% in
+the former minimum, changing the complete rank order while every status remains
+`unknown`.  This directly selects an order-weighted Walsh objective.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ORDER_WEIGHTED_GAUGE_V1.md` evaluates the
+front- and back-loaded positional objective for each frozen order over all
+`2^24` shifts.  All eight optima are unique and collapse to four exact gauges;
+every one improves zero and A160 under its declared objective, preserves the
+complete quadratic interface, and passes independent semantic checks.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_ORDER_WEIGHTED_GAUGE_SOLVER_V1.md`
+executes all eight frozen order/gauge cells under the same 500,000,000-unit
+resource cap.  Seven cells reduce decisions against their same-order zero
+gauge, only two reduce them against A160's unweighted gauge, and all eight
+remain `unknown`.  The resulting factorial map retains structural gauge/order
+coupling and removes a single positional incidence objective as a sufficient
+traversal predictor.
+
+`FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_FOUR_GAUGE_FACTORIAL_V1.md` executes only
+the eight cells missing from the frozen four-gauge by four-order product.
+Gauge `0x4e1e28` wins every order; its weighted-degree-ascending cell reaches a
+new 4,402-decision fixed-resource minimum, 24.4% below the previous best.  The
+complete matrix and exact rational decomposition separate a transferable gauge
+main effect from still-large order interactions.
+
+`FULLROUND_CAUSAL_SHAKE_A152_NATIVE_RECONSTRUCTION_V1.md` transfers the
+retained native Causal Reader to A152's exact prospective relation.  It
+enumerates the complete `2^24` domain, reconstructs the unique assignment
+9,279,571, independently confirms all 1,344 rate bits, and fully rejects a
+bit-flipped target control.  The fresh end-to-end run measured 1.61 seconds on
+an Apple M4 Mac mini.

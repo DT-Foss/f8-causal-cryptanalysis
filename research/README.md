@@ -355,6 +355,47 @@ K24 graph remain unchanged, and 307,200 independent state-bit checks pass.
 This supplies a globally certified, assignment-free polarity transform for the
 next fixed-resource full-round encoder transfer.
 
+A161 performs that transfer with the same four orders and A159 resource cap.
+The gauge changes decisions by +70.9%, -27.1%, -56.2% and -60.2% respectively;
+the best counter moves from weighted-degree descending to greedy-max.  Since
+all four still exhaust the cap as `unknown`, the retained result is a strong
+gauge-by-order traversal interaction, not a model claim.  The next exact
+Reader makes the Walsh objective order-aware instead of minimizing only the
+unweighted total incidence.
+
+A162 completes that Reader with front-loaded and back-loaded position weights
+for all four orders.  Eight full `2^24` transforms yield eight unique optima
+but only four distinct gauges: `0x498a92`, `0x4e1e28`, `0x8c161b` and
+`0x954b3c`.  Every selected mask beats both zero and A160 under its own exact
+weighted objective, preserves all 1,600 quadratic coefficient sets, and passes
+its independent semantic gate.  The resulting eight-pair plan is ready for a
+fixed-resource factorial solver transfer.
+
+A163 completes that transfer.  Seven of eight positional gauges beat the
+same-order zero gauge in decisions, while only two beat A160's unweighted gauge
+and all eight exhaust the identical resource cap as `unknown`.  Front loading
+wins for descending, ascending and greedy-min; back loading wins for
+greedy-max.  The exact result is a reproducible gauge-by-order factorial map and
+a new boundary: positional linear incidence alone does not determine solver
+traversal.
+
+A164 removes the remaining confound by executing exactly the eight missing
+cells of the already frozen four-gauge by four-order product.  `0x4e1e28` wins
+all four orders, with a 5,779-decision mean versus 8,858.375 overall.  Its
+weighted-degree-ascending cell reaches 4,402 decisions, improving the previous
+global fixed-resource minimum by 24.4%.  Exact rational decomposition retains
+both a strong transferable gauge main effect and interactions as large as
+3,095.625 decisions.
+
+A165 resolves the original prospective A152 instance directly with the
+retained native Causal Reader.  The runner reads the executable recipe from the
+hash-pinned `.causal` file, receives only the cleared template, public target
+and ordered coordinates, and evaluates all `2^24` candidates without early
+stop.  The sole 128-bit filter match is assignment 9,279,571; an independent
+24-round core confirms all 1,344 rate bits, the full control target has zero
+matches, and the reconstruction equals A152's posthoc value when read after
+execution.  The complete fresh run measured 1.61 seconds on an M4 Mac mini.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs
