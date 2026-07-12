@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A178 full-round relations as code, typed
+evidence, and the subsequent A107--A184 full-round relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -67,15 +67,21 @@ precisely:
 | A176 | SHAKE input-declaration-order boundary | Swapping only the `x11`/`x12` declaration lines leaves every retained solver counter and all four canonical observations bit-identical to A174 | Same assertions, symbols, graph, `get-value` order, semantics and fixed resource cap; exact second-swap inverse | Exact declaration-order invariance for the tested parser/solver scope | [report](research/reports/FULLROUND_CAUSAL_SHAKE_SYMBOLIC_R2_INPUT_DECLARATION_SWAP_BOUNDARY_V1.md) |
 | A177 | SHAKE256 prospective width-32 native Reader | Complete `2^32` enumeration returns the singleton assignment 2,761,171,082, independently matches all 1,088 rate bits, and returns zero matches for the bit-flipped control | Prospectively frozen 32-bit capacity window; known state complement and complete next-rate target; no early stop or resumed packs | Unique 32-coordinate full-round model | [report](research/reports/FULLROUND_CAUSAL_SHAKE256_NATIVE_WIDTH32_RECONSTRUCTION_V1.md) |
 | A178 | ChaCha20 fullround partial-key Reader | Complete `2^32` candidate execution uniquely recovers key word 0 as `0x903db747`; independent 512-bit confirmation is exact and the bit-flipped control has zero matches | Standard ChaCha20 block; other 224 key bits, counter, nonce and complete 512-bit block output known; prospectively hidden word absent before execution | Recovered 32-bit key word | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_NATIVE_PARTIAL_KEY_RECOVERY_V1.md) |
+| A179 | ChaCha20 vector-256 complete-domain replay | All `2^32` candidates reproduce A178's unique word and empty control while reducing native states exactly fourfold | Known A178 challenge; frozen four-sublane representation; scalar, boundary-mask and v1/v2 equivalence gates; no early stop | Exact semantic equivalence and packing advance | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_VECTOR256_REPLAY_V1.md) |
+| A181 | ChaCha20 Apple M4 Metal complete-domain replay | Sixteen GPU batches cover all `2^32` candidates, reproduce `0x903db747`, reject the control and confirm all 512 bits | Known A178/A179 challenge; persistent runtime-compiled Metal host; warnings-as-errors Swift build; no early stop | Exact Metal complete-domain equivalence and execution acceleration | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_METAL_REPLAY_V1.md) |
+| A182 | ChaCha20 fullround 36-bit partial-key Reader | Complete `2^36` execution uniquely recovers `0x3069630b3`; the control is empty and independent confirmation covers all 512 bits | Fresh frozen target; 220 known key bits; 16 complete word domains; 256 Metal batches | Recovered 36-bit partial-key assignment | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH36_PARTIAL_KEY_RECOVERY_V1.md) |
+| A183 | ChaCha20 fullround 38-bit partial-key Reader | Complete `2^38` execution uniquely recovers `0x1a15b63e04`; the control is empty and independent confirmation covers all 512 bits | Fresh frozen target; 218 known key bits; 64 complete word domains; 1,024 Metal batches | Recovered 38-bit partial-key assignment | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH38_PARTIAL_KEY_RECOVERY_V1.md) |
+| A184 | ChaCha20 fullround 40-bit partial-key Reader | Complete `2^40` execution uniquely recovers `0x2874913214`; the control is empty and independent confirmation covers all 512 bits | Fresh frozen target; 216 known key bits; 256 complete word domains; 4,096 Metal batches | Recovered 40-bit partial-key assignment | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH40_PARTIAL_KEY_RECOVERY_V1.md) |
 
 A152 was frozen on public `main` before its unseen instance was generated, then
-executed under that exact protocol. A154--A178 follow the resulting affine
+executed under that exact protocol. A154--A184 follow the resulting affine
 interface through an exact basis, the R2 K24 transition, three full-round
 encoder frontiers, deterministic fixed-resource replay, complete affine-gauge
 optimization, a four-gauge by four-order factorial, native full-domain model
 reconstruction, an exact alias/order solver-graph decomposition, complete
-SHAKE256 width-32 native reconstruction, and prospectively frozen ChaCha20
-partial-key recovery. A171 is intentionally unused. The full sequence,
+SHAKE256 width-32 native reconstruction, prospectively frozen ChaCha20
+partial-key recovery, vector-256 equivalence, Metal replay, and fresh
+36-/38-/40-bit Metal recoveries. A171 and A180 are intentionally unused. The full sequence,
 including A153's phase-flag control, is
 indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_MATRIX_V1.md)
 and the append-only [attempt log](research/ATTEMPT_LOG.md). The earlier
@@ -124,7 +130,7 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A178 full-round frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A184 full-round frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -137,9 +143,13 @@ full-round transfer manifest: OK
 causal artifacts: all valid
 ```
 
-The native Reader is C11/POSIX and builds with Apple Clang on Apple Silicon or
-GCC/Clang on Linux. The 32-coordinate run is bounded-memory, ten-threaded, and
-resumable. Full commands, runtimes, expected files, and portability notes are
+The CPU-native Readers are C11/POSIX and build with Apple Clang on Apple
+Silicon or GCC/Clang on Linux. The Metal Reader is retained in full as
+warnings-as-errors Swift plus runtime-compiled Metal source; its native host
+and synthetic mapping gates execute on Apple Silicon, while portable retention,
+hash, Causal Reader and analysis gates remain active on non-Darwin CI. The
+32-coordinate CPU run is bounded-memory, ten-threaded, and resumable. Full
+commands, runtimes, expected files, and portability notes are
 in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
 The symbolic solver tier additionally requires the external Z3 CLI at exact
@@ -153,7 +163,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A178 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A184 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

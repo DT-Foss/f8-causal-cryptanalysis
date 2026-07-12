@@ -1,0 +1,93 @@
+{
+  "schema": "chacha20-vector256-fullround-replay-protocol-v1",
+  "attempt_id": "A179",
+  "protocol_state": "frozen_after_small_implementation_gates_before_any_A179_complete_domain_execution",
+  "anchors": {
+    "A178": {
+      "artifact": "research/results/v1/chacha20_native_fullround_partial_key_recovery_v1.json",
+      "sha256": "80fee52a0a2222efab161d74eb7ee124f6d94b56ca0cf759c5ffc4ca2881bea1",
+      "causal_artifact": "research/results/v1/chacha20_native_fullround_partial_key_recovery_v1.causal",
+      "causal_sha256": "94c651c6ea5432f482c054ae6d839c84563e8eae81e98625beb158344da16995",
+      "rounds": 20,
+      "complete_domain_executed": true,
+      "logical_candidate_count": 4294967296,
+      "recovered_key_word": 2419963719
+    },
+    "A178_native_v1": {
+      "source": "research/experiments/chacha20_bitsliced_native.c",
+      "source_sha256": "ec2759fc66e86b7b50ea7fece66b2994d1961bb5b84d9081aff3514f25cacb8e",
+      "candidate_pack_width": 64,
+      "packed_state_count": 67108864
+    }
+  },
+  "native_kernel": {
+    "source": "research/experiments/chacha20_bitsliced_vector256.c",
+    "source_sha256": "4b4807911580831d0f7925cd74c886694d3d6b19e30be2f0e21a602a6e6ba9dc",
+    "language": "C11_POSIX_threads_with_compiler_vector_extension",
+    "logical_candidate_width": 256,
+    "uint64_sublanes": 4,
+    "required_cross_implementation_gate": "256_independent_initial_states_all_131072_output_bits",
+    "required_boundary_mask_packs": [0, 1, 257, 16777215]
+  },
+  "pre_freeze_implementation_qualification": {
+    "strict_C11_compile_with_Wall_Wextra_Wpedantic_Werror": true,
+    "cross_gate_seed": 179032,
+    "cross_gate_input_sha256": "4988b523384fb1b19bd10c69d84b1a107bcc0d47066b274a71878b342872819c",
+    "cross_gate_output_sha256": "6c52fa41d8c972bd016af82afdbb4084ffe9177f9fd2b27eff4c64d8f4800947",
+    "boundary_mask_packs_checked": [0, 1, 257, 16777215],
+    "boundary_factual_mask_sha256": "6d8547cabf8f0aeaf7a9b3598cba769f545c61e8873ffd6d5e7ee9c1c5527f95",
+    "exact_scalar_identity": true,
+    "complete_domain_execution_performed": false
+  },
+  "public_challenge": {
+    "source_attempt": "A178",
+    "sha256": "58f9244e4a41f2e04f7d6350c628c40feafa252affdcdb25b0a2699862a57b48",
+    "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+    "control_target_block_sha256": "5e346bbcce4f88533f842f53c638d68a6c3b60d07a132ed1b01ae309dd7d6cce",
+    "unknown_key_word_index": 0,
+    "unknown_initial_lane": 4,
+    "unknown_word_included": false
+  },
+  "execution_plan": {
+    "A178_uint64_pack_count": 67108864,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "known_key_bits": 224,
+    "logical_candidate_count": 4294967296,
+    "logical_candidates_per_vector_state": 256,
+    "maximum_mask_memory_bytes": 16777216,
+    "native_threads": 10,
+    "nonce_bits_known": 96,
+    "primitive": "ChaCha20_block_function",
+    "replays_A178_public_challenge": true,
+    "rounds": 20,
+    "stream_batch_count": 64,
+    "stream_vector_state_count": 262144,
+    "structural_vector_state_reduction_factor": 4,
+    "uint64_sublanes_per_vector_state": 4,
+    "unknown_key_word_bits": 32,
+    "vector_state_count": 16777216,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "0fbeaf04432d70f81aa2c4f144b43f8c61ec6c74199a683495c0e10c22a66f63",
+  "prospective_prediction": {
+    "prediction": "the_vector256_reader_executes_all_2^32_assignments_returns_the_exact_A178_key_word_rejects_the_bit_flipped_control_and_reduces_vector_state_count_exactly_fourfold",
+    "frozen_before_complete_domain_execution": true,
+    "success_rule": "complete_domain_exact_A178_match_control_rejection_and_fourfold_vector_state_reduction",
+    "claim_type": "fullround_vectorized_complete_domain_equivalence_and_packing_advance"
+  },
+  "information_boundary": {
+    "A178_recovery_outcome_known_at_A179_freeze": true,
+    "A178_recovered_word_used_to_prune_or_stop_enumeration": false,
+    "A178_recovered_word_used_only_after_complete_domain_for_equivalence_gate": true,
+    "small_implementation_gates_completed_before_freeze": true,
+    "A179_complete_domain_outcome_used_before_freeze": false,
+    "early_stop_permitted": false
+  }
+}

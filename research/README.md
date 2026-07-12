@@ -515,6 +515,68 @@ The unique 64-bit filter and independent 512-bit match is `0x903db747`; the
 bit-flipped control returns no candidate.  This is fullround 32-bit partial-key
 recovery over the exact declared standard ChaCha20 scope.
 
+A179 prospectively freezes a four-sublane compiler-vector representation after
+only small implementation gates, then replays the known A178 challenge over the
+same complete `2^32` domain.  Its 256-block scalar gate covers all 131,072 output
+bits; boundary-mask gates cover vector packs 0, 1, 257, and 16,777,215; direct
+A178-v1/A179-v2 mask gates cover the first, recovered-word, and last packs.  The
+complete run reproduces `0x903db747`, rejects the control, and reduces native
+states from 67,108,864 to 16,777,216 exactly.  Because the A178 answer was known
+at freeze and used only after complete execution, A179 is a complete-domain
+equivalence and packing advance rather than a new blind recovery.
+
+A181 freezes an Apple M4 Metal path after Swift warnings-as-errors compilation,
+host identity, a 256-block/131,072-bit scalar gate, three boundary filters, and
+a five-repetition throughput qualification.  A persistent runtime-compiled
+shader then executes the full known A178/A179 challenge as 16 batches of
+268,435,456 candidates.  All `2^32` candidates execute with no early stop;
+`0x903db747` is the unique independent 512-bit match and the control is empty.
+The pre-freeze local median of approximately 1.469 billion candidates/s is
+qualification only.  The observed 4.66-second integrated full command is also
+volatile and noncanonical.  A181 is complete-domain Metal equivalence and
+execution acceleration on a known challenge, not a new blind recovery.
+
+A182 freezes a fresh public target before any candidate execution and omits one
+complete key word plus the low nibble of the adjacent key word.  The unknown
+36-bit assignment is generated once from OS cryptographic randomness, used
+only for the target, and discarded; literal decimal/hex grep gates confirm its
+absence from protocol, runner, and unchanged Metal source.  Sixteen complete
+32-bit word domains cover all 68,719,476,736 assignments in 256 Metal batches.
+The unique combined result is 12,995,408,051 (`0x3069630b3`), decomposing to
+word 0 `0x069630b3` and word-1 low nibble `3`; the control is empty and an
+independent implementation confirms all 512 output bits.  This is genuinely
+fresh exhaustive fullround 36-bit partial-key recovery with 220 known key bits,
+not full 256-bit key recovery.  The observed 48.72-second end-to-end local run
+is volatile and excluded from the canonical result.
+
+A183 freezes another fresh public target before any candidate execution and
+omits one complete key word plus the low six bits of the adjacent key word.  The
+unknown 38-bit assignment is generated once from OS cryptographic randomness,
+used only for the target, and discarded; literal decimal/hex grep gates confirm
+its absence from protocol, runner, and unchanged Metal source.  Sixty-four
+complete 32-bit word domains cover all 274,877,906,944 assignments in 1,024
+Metal batches.  The unique combined result is 112,033,414,660
+(`0x1a15b63e04`), decomposing to word 0 `0x15b63e04` and word-1 low six bits
+`0x1a`; the control is empty and an independent implementation confirms all
+512 output bits.  This is genuinely fresh exhaustive fullround 38-bit
+partial-key recovery with 218 known key bits, not full 256-bit key recovery.
+The observed 189.66-second end-to-end local run is volatile and excluded from
+the canonical result.
+
+A184 freezes a third fresh public target before any candidate execution and
+omits one complete key word plus the low byte of the adjacent key word.  The
+unknown 40-bit assignment is generated once from OS cryptographic randomness,
+used only for the target, and discarded; literal decimal/exact-hex grep gates
+confirm its absence from protocol, runner, and unchanged Metal source.  Two
+hundred fifty-six complete 32-bit word domains cover all 1,099,511,627,776
+assignments in 4,096 Metal batches.  The unique combined result is
+173,754,364,436 (`0x2874913214`), decomposing to word 0 `0x74913214` and
+word-1 low byte `0x28`; the control is empty and an independent implementation
+confirms all 512 output bits.  This is genuinely fresh exhaustive fullround
+40-bit partial-key recovery with 216 known key bits, not full 256-bit key
+recovery.  The observed 753.87-second end-to-end local run is volatile and
+excluded from the canonical result.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs

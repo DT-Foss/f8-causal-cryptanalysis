@@ -7,6 +7,12 @@ The reference publication was validated on Apple Silicon/macOS with Python
 path. The Python package supports Python 3.10 or newer. CI exercises Linux with
 GCC/Clang-compatible C11 and the pinned Python dependencies.
 
+A181--A184 additionally retain the complete Swift 6 host and runtime-compiled
+Metal shader. Their native gates require macOS, `swiftc`, a Metal-capable Apple
+Silicon device, and execute with `-warnings-as-errors`. Linux CI runs every
+portable hash, retained-result, Causal Reader and analysis gate and skips only
+tests that instantiate the real Swift/Metal host.
+
 The native SHAKE Reader requires:
 
 - a C11 compiler available as `cc`, `clang`, or `gcc`;
@@ -83,7 +89,10 @@ the committed JSON and write exploratory reruns to a separate worktree or copy.
 This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
 SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A151
 SHAKE observability, affine, algebraic, compression, symbolic, partition,
-strategy, assignment-free, and minimum-cover frontiers. It then runs focused tests, opens all `.causal` files, and rewrites
+strategy, assignment-free, and minimum-cover frontiers. Retained validation
+continues through A184, including the A179 vector-256 replay, A181 Metal replay,
+and A182--A184 fresh width-36/38/40 Metal recoveries. It then runs focused
+tests, opens all `.causal` files, and rewrites
 `research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
 The script creates `.venv` if absent and applies the same exact Z3 4.15.4
@@ -94,6 +103,34 @@ stable. Compare a deliberate rerun with the committed manifest using:
 python scripts/verify_hash_manifest.py \
   research/results/v1/FULLROUND_TRANSFER_SHA256SUMS
 ```
+
+The retained A179/A181--A184 evidence can be reopened without launching any
+complete-domain execution:
+
+```bash
+python research/experiments/chacha20_vector256_fullround_replay.py --analyze-only
+python research/experiments/chacha20_metal_fullround_replay.py --analyze-only
+python research/experiments/chacha20_metal_width36_partial_key_recovery.py --analyze-only
+python research/experiments/chacha20_metal_width38_partial_key_recovery.py --analyze-only
+python research/experiments/chacha20_metal_width40_partial_key_recovery.py --analyze-only
+```
+
+On Apple Silicon, the focused tests compile the retained Swift source with
+warnings as errors, identify the Metal host, and execute the bounded scalar,
+boundary-filter and synthetic slice-mapping gates:
+
+```bash
+python -m pytest -q \
+  tests/test_chacha20_vector256_fullround_replay.py \
+  tests/test_chacha20_metal_fullround_replay.py \
+  tests/test_chacha20_metal_width36_partial_key_recovery.py \
+  tests/test_chacha20_metal_width38_partial_key_recovery.py \
+  tests/test_chacha20_metal_width40_partial_key_recovery.py
+```
+
+The complete `2^32`, `2^36`, `2^38`, and `2^40` production invocations,
+checkpoint semantics, frozen challenge boundaries, and expected hashes are
+recorded in the five corresponding reports under `research/reports/`.
 
 ### Extended native SHAKE
 

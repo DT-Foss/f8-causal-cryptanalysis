@@ -212,3 +212,34 @@ fullround 32-bit partial-key recovery for standard ChaCha20.  With one key word
 unknown and 224 key bits plus counter, nonce, and full block output known, the
 complete `2^32` domain uniquely returns `0x903db747`; an independent 512-bit
 check is exact and the bit-flipped control has zero matches.
+
+`FULLROUND_CAUSAL_CHACHA20_VECTOR256_REPLAY_V1.md` records A179's prospectively
+frozen complete-domain replay of the known A178 challenge.  It preserves the
+exact recovered word and empty control while reducing native state count from
+67,108,864 uint64 packs to 16,777,216 vector-256 states, an exact fourfold
+packing advance with scalar, boundary, and v1/v2 equivalence gates.
+
+`FULLROUND_CAUSAL_CHACHA20_METAL_REPLAY_V1.md` records A181's prospectively
+frozen Apple M4 Metal complete-domain equivalence.  Sixteen batches cover all
+`2^32` candidates, reproduce `0x903db747`, reject the control, and independently
+confirm 512 bits.  The local 4.66-second integrated command and pre-freeze
+throughput probe are explicitly volatile, noncanonical execution context.
+
+`FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH36_PARTIAL_KEY_RECOVERY_V1.md` records
+A182's genuinely fresh exhaustive fullround 36-bit partial-key recovery.  With
+220 key bits known, 16 nibble slices and 256 Metal batches cover all `2^36`
+assignments, uniquely recover `0x3069630b3`, reject the control, and confirm all
+512 bits.  The scope is 36 unknown key bits, not full 256-bit key recovery.
+
+`FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH38_PARTIAL_KEY_RECOVERY_V1.md` records
+A183's genuinely fresh exhaustive fullround 38-bit partial-key recovery.  With
+218 key bits known, 64 low-bit slices and 1,024 Metal batches cover all `2^38`
+assignments, uniquely recover `0x1a15b63e04`, reject the control, and confirm
+all 512 bits.  The scope is 38 unknown key bits, not full 256-bit key recovery.
+
+`FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH40_PARTIAL_KEY_RECOVERY_V1.md` records
+A184's genuinely fresh exhaustive fullround 40-bit partial-key recovery.  With
+216 key bits known, 256 low-byte slices and 4,096 Metal batches cover all
+`2^40` assignments, uniquely recover `0x2874913214`, reject the control, and
+confirm all 512 bits.  The scope is 40 unknown key bits, not full 256-bit key
+recovery.

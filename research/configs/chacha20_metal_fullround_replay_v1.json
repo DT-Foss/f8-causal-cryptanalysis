@@ -1,0 +1,97 @@
+{
+  "schema": "chacha20-metal-fullround-replay-protocol-v1",
+  "attempt_id": "A181",
+  "protocol_state": "frozen_after_small_cross_gates_and_throughput_qualification_before_any_A181_complete_domain_execution",
+  "anchors": {
+    "A179": {
+      "artifact": "research/results/v1/chacha20_vector256_fullround_replay_v1.json",
+      "sha256": "73874897bf3747a0c640e00e5325f9c0502d2db7b77f6fe01590c87494f7fb93",
+      "causal_artifact": "research/results/v1/chacha20_vector256_fullround_replay_v1.causal",
+      "causal_sha256": "ab627294751d40647d3b1c9d5f20d852195d64fa449dea761b8cad15b24291a1",
+      "complete_domain_executed": true,
+      "logical_candidate_count": 4294967296,
+      "recovered_key_word": 2419963719,
+      "vector_state_count": 16777216,
+      "volatile_local_wallclock_seconds": 71.11
+    }
+  },
+  "native_host": {
+    "source": "research/experiments/chacha20_metal_native.swift",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "host_language": "Swift_6",
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "host_version": "chacha20-metal-native-v1",
+    "strict_compile_flags": ["-O", "-whole-module-optimization", "-warnings-as-errors"]
+  },
+  "pre_freeze_implementation_qualification": {
+    "metal_device": "Apple M4",
+    "metal_support": "Metal 4",
+    "thread_execution_width": 32,
+    "max_threads_per_threadgroup": 1024,
+    "cross_gate_first_candidate": 123456789,
+    "cross_gate_candidate_count": 256,
+    "cross_gate_output_sha256": "eacb62b978ae444278f0034793ce5ad9c31bfdbed02735053f1b2697d9e8600c",
+    "cross_gate_output_bits_checked": 131072,
+    "boundary_filter_intervals": [[0, 256], [2419963591, 256], [4294967040, 256]],
+    "boundary_expected_factual_matches": [[], [2419963719], []],
+    "boundary_expected_control_matches": [[], [], []],
+    "exact_scalar_identity": true,
+    "volatile_throughput_probe_candidate_count": 268435456,
+    "volatile_throughput_probe_repetitions": 5,
+    "volatile_median_candidates_per_second": 1469068029.6250117,
+    "throughput_is_not_part_of_the_success_rule": true,
+    "complete_domain_execution_performed": false
+  },
+  "public_challenge": {
+    "source_attempt": "A178",
+    "sha256": "58f9244e4a41f2e04f7d6350c628c40feafa252affdcdb25b0a2699862a57b48",
+    "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+    "control_target_block_sha256": "5e346bbcce4f88533f842f53c638d68a6c3b60d07a132ed1b01ae309dd7d6cce",
+    "unknown_key_word_index": 0,
+    "unknown_initial_lane": 4,
+    "unknown_word_included": false
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "gpu_logical_thread_count": 4294967296,
+    "gpu_threads_per_candidate": 1,
+    "known_key_bits": 224,
+    "logical_candidate_count": 4294967296,
+    "maximum_result_memory_bytes": 520,
+    "metal_thread_execution_width": 32,
+    "nonce_bits_known": 96,
+    "persistent_host_process": true,
+    "primitive": "ChaCha20_block_function",
+    "replays_A178_public_challenge": true,
+    "result_capacity_per_batch": 64,
+    "rounds": 20,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 16,
+    "stream_candidate_count": 268435456,
+    "threads_per_threadgroup": 256,
+    "unknown_key_word_bits": 32,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "49607cf3600a9f59bc41984094a5ee33bea30511817056f1543735ab72737cda",
+  "prospective_prediction": {
+    "prediction": "the_persistent_Metal_reader_executes_all_2^32_assignments_returns_the_exact_A179_key_word_and_rejects_the_bit_flipped_control",
+    "frozen_before_complete_domain_execution": true,
+    "success_rule": "complete_domain_exact_A179_match_control_rejection_and_independent_512_bit_confirmation",
+    "claim_type": "fullround_Metal_complete_domain_equivalence_and_execution_acceleration"
+  },
+  "information_boundary": {
+    "A179_recovery_outcome_known_at_A181_freeze": true,
+    "A179_recovered_word_used_to_prune_or_stop_GPU_enumeration": false,
+    "A179_recovered_word_used_only_after_complete_domain_for_equivalence_gate": true,
+    "small_cross_and_throughput_gates_completed_before_freeze": true,
+    "A181_complete_domain_outcome_used_before_freeze": false,
+    "early_stop_permitted": false
+  }
+}

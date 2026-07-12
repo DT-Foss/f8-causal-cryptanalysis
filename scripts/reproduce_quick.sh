@@ -21,6 +21,11 @@ export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
   tests/test_crypto_causal.py \
   tests/test_present_exact_mechanism.py \
   tests/test_sha2_fullround_feedforward.py \
+  tests/test_chacha20_vector256_fullround_replay.py \
+  tests/test_chacha20_metal_fullround_replay.py \
+  tests/test_chacha20_metal_width36_partial_key_recovery.py \
+  tests/test_chacha20_metal_width38_partial_key_recovery.py \
+  tests/test_chacha20_metal_width40_partial_key_recovery.py \
   tests/test_shake_native_window_solver.py \
   tests/test_shake_boolean_cnf_reader.py \
   tests/test_shake_prefix_observability_frontier.py \

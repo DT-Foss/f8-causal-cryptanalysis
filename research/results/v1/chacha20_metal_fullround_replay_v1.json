@@ -1,0 +1,320 @@
+{
+  "anchor_gates": {
+    "A179_causal_graph_sha256": "1681bf6f2647e7545a2f56163774ac7e4220fc0df171dbc9569e7eda63c5957d",
+    "A179_causal_provenance_verified": true,
+    "A179_causal_sha256": "ab627294751d40647d3b1c9d5f20d852195d64fa449dea761b8cad15b24291a1",
+    "A179_complete_domain_executed": true,
+    "A179_recovered_key_word": 2419963719,
+    "A179_result_sha256": "73874897bf3747a0c640e00e5325f9c0502d2db7b77f6fe01590c87494f7fb93",
+    "Metal_native_source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816"
+  },
+  "attempt_id": "A181",
+  "causal": {
+    "explicit_triplets": 5,
+    "file_sha256": "b16a7a2fc0fc78084443ee5ada8fb9a2c6fa9149f5b6333d98764401a07f662e",
+    "graph_sha256": "00e13f58cdb6382c390a978401dc3a6217d98dcc1fa608f96fc6cec37fa5c1a8",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2576,
+      "explicit_triplets": 5,
+      "file_sha256": "b16a7a2fc0fc78084443ee5ada8fb9a2c6fa9149f5b6333d98764401a07f662e",
+      "graph_sha256": "00e13f58cdb6382c390a978401dc3a6217d98dcc1fa608f96fc6cec37fa5c1a8",
+      "inferred_triplets": 0,
+      "triplets": 5
+    }
+  },
+  "equivalence": {
+    "A179_recovered_key_word": 2419963719,
+    "A181_control_full_matches": [],
+    "A181_factual_filter_matches": [
+      2419963719
+    ],
+    "A181_factual_full_matches": [
+      2419963719
+    ],
+    "complete_domain_executed": true,
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "exact_A179_recovery_identity": true,
+    "independent_confirmation_bits": 512
+  },
+  "equivalence_sha256": "e02b59ec226de5cf37792b0ca03b3b4e1695c3396ad83eb9a4485eb960577004",
+  "evidence_stage": "CHACHA20_FULLROUND_METAL_COMPLETE_DOMAIN_EQUIVALENCE_RETAINED",
+  "execution": {
+    "A179_recovered_word_used_to_prune_or_stop_GPU_enumeration": false,
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "candidate_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+        "candidate_key_word": 2419963719,
+        "complete_block_match": true,
+        "implementation": "independent_NumPy_RFC8439_ChaCha20_core",
+        "output_bits_checked": 512,
+        "output_words_checked": 16,
+        "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae"
+      }
+    ],
+    "factual_filter_matches": [
+      2419963719
+    ],
+    "factual_full_matches": [
+      2419963719
+    ],
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "gpu_logical_thread_count": 4294967296,
+    "gpu_threads_per_candidate": 1,
+    "logical_candidate_count": 4294967296,
+    "newly_executed_candidate_count": 4294967296,
+    "resumed_candidate_count": 0,
+    "stream_batch_count": 16,
+    "stream_candidate_count": 268435456,
+    "unique_exact_key_word": true,
+    "unknown_initial_lane": 4,
+    "unknown_key_word_index": 0
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "gpu_logical_thread_count": 4294967296,
+    "gpu_threads_per_candidate": 1,
+    "known_key_bits": 224,
+    "logical_candidate_count": 4294967296,
+    "maximum_result_memory_bytes": 520,
+    "metal_thread_execution_width": 32,
+    "nonce_bits_known": 96,
+    "persistent_host_process": true,
+    "primitive": "ChaCha20_block_function",
+    "replays_A178_public_challenge": true,
+    "result_capacity_per_batch": 64,
+    "rounds": 20,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 16,
+    "stream_candidate_count": 268435456,
+    "threads_per_threadgroup": 256,
+    "unknown_key_word_bits": 32,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "49607cf3600a9f59bc41984094a5ee33bea30511817056f1543735ab72737cda",
+  "execution_sha256": "9e51013009ae313ee00ea624cd4a81e0e4fe3e8ef319cd4daf2a8e9cd66cf3a6",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "kat": {
+    "counter": 1,
+    "expected": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e",
+    "key": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "match": true,
+    "nonce": "000000090000004a00000000",
+    "observed": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3.2"
+  },
+  "native_boundary_filter_gate": {
+    "exact_expected_identity": true,
+    "intervals_checked": 3,
+    "logical_candidates_checked": 768,
+    "rows": [
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "exact_expected_identity": true,
+        "factual_matches": [],
+        "first_candidate": 0
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "exact_expected_identity": true,
+        "factual_matches": [
+          2419963719
+        ],
+        "first_candidate": 2419963591
+      },
+      {
+        "candidate_count": 256,
+        "control_matches": [],
+        "exact_expected_identity": true,
+        "factual_matches": [],
+        "first_candidate": 4294967040
+      }
+    ]
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "native_cross_implementation_gate": {
+    "exact_match": true,
+    "first_candidate": 123456789,
+    "output_sha256": "eacb62b978ae444278f0034793ce5ad9c31bfdbed02735053f1b2697d9e8600c",
+    "state_bits_checked": 131072,
+    "states": 256,
+    "words_checked": 4096
+  },
+  "parameters": {
+    "execution_backend": "Apple_M4_Metal_GPU",
+    "logical_candidate_count": 4294967296,
+    "rounds": 20,
+    "stream_candidate_count": 268435456,
+    "unknown_key_word_bits": 32,
+    "volatile_wallclock_excluded_from_canonical_result": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "9bc042c28256d3da46b9c1f5cf0b7d81b52035d0df67d40d7d32848492eaef2d",
+    "information_boundary": {
+      "A179_recovered_word_used_only_after_complete_domain_for_equivalence_gate": true,
+      "A179_recovered_word_used_to_prune_or_stop_GPU_enumeration": false,
+      "A179_recovery_outcome_known_at_A181_freeze": true,
+      "A181_complete_domain_outcome_used_before_freeze": false,
+      "early_stop_permitted": false,
+      "small_cross_and_throughput_gates_completed_before_freeze": true
+    },
+    "pre_freeze_implementation_qualification": {
+      "boundary_expected_control_matches": [
+        [],
+        [],
+        []
+      ],
+      "boundary_expected_factual_matches": [
+        [],
+        [
+          2419963719
+        ],
+        []
+      ],
+      "boundary_filter_intervals": [
+        [
+          0,
+          256
+        ],
+        [
+          2419963591,
+          256
+        ],
+        [
+          4294967040,
+          256
+        ]
+      ],
+      "complete_domain_execution_performed": false,
+      "cross_gate_candidate_count": 256,
+      "cross_gate_first_candidate": 123456789,
+      "cross_gate_output_bits_checked": 131072,
+      "cross_gate_output_sha256": "eacb62b978ae444278f0034793ce5ad9c31bfdbed02735053f1b2697d9e8600c",
+      "exact_scalar_identity": true,
+      "max_threads_per_threadgroup": 1024,
+      "metal_device": "Apple M4",
+      "metal_support": "Metal 4",
+      "thread_execution_width": 32,
+      "throughput_is_not_part_of_the_success_rule": true,
+      "volatile_median_candidates_per_second": 1469068029.6250117,
+      "volatile_throughput_probe_candidate_count": 268435456,
+      "volatile_throughput_probe_repetitions": 5
+    },
+    "prospective_prediction": {
+      "claim_type": "fullround_Metal_complete_domain_equivalence_and_execution_acceleration",
+      "frozen_before_complete_domain_execution": true,
+      "prediction": "the_persistent_Metal_reader_executes_all_2^32_assignments_returns_the_exact_A179_key_word_and_rejects_the_bit_flipped_control",
+      "success_rule": "complete_domain_exact_A179_match_control_rejection_and_independent_512_bit_confirmation"
+    },
+    "protocol_state": "frozen_after_small_cross_gates_and_throughput_qualification_before_any_A181_complete_domain_execution"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "5e346bbcce4f88533f842f53c638d68a6c3b60d07a132ed1b01ae309dd7d6cce",
+    "control_target_words": [
+      2939146885,
+      3092613172,
+      2346149664,
+      1650595438,
+      206270238,
+      2747247950,
+      3719485339,
+      4079226425,
+      2856130963,
+      768289538,
+      2817377504,
+      1367716319,
+      2878977457,
+      710334390,
+      2048719306,
+      3797845056
+    ],
+    "counter": 4151466506,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_words_1_through_7": [
+      1255541214,
+      2851553524,
+      2641010920,
+      2310928799,
+      3501193204,
+      479982514,
+      1251466334
+    ],
+    "known_material_derivation_label": "f8-causal:A178:chacha20:known-material:d6b85ca7f15bc198513cd05100187f2ccc0ab97d1f22a906383ccd4a62eda544",
+    "known_material_derivation_sha256": "ce551fd4a3dbf291a36933c17fe81cb01da278546473532639c35abbebaa63d3",
+    "known_material_seed": 1314201556,
+    "nonce_words": [
+      180930671,
+      3631515899,
+      3372413312
+    ],
+    "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+    "target_words": [
+      2939146884,
+      3092613172,
+      2346149664,
+      1650595438,
+      206270238,
+      2747247950,
+      3719485339,
+      4079226425,
+      2856130963,
+      768289538,
+      2817377504,
+      1367716319,
+      2878977457,
+      710334390,
+      2048719306,
+      3797845056
+    ],
+    "unknown_initial_lane": 4,
+    "unknown_key_word_index": 0,
+    "unknown_word_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_word_included": false
+  },
+  "public_challenge_sha256": "58f9244e4a41f2e04f7d6350c628c40feafa252affdcdb25b0a2699862a57b48",
+  "result": "The native Apple M4 Metal Causal Reader executes the complete 2^32 ChaCha20 key-word domain, reproduces the exact A179 full-block match, and rejects the bit-flipped control.",
+  "schema": "chacha20-metal-fullround-replay-v1",
+  "scope": "Standard 20-round ChaCha20 block-function replay of the frozen A178 32-bit partial-key challenge on the Apple M4 Metal GPU."
+}

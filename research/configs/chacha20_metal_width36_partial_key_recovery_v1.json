@@ -1,0 +1,110 @@
+{
+  "schema": "chacha20-metal-width36-partial-key-recovery-protocol-v1",
+  "attempt_id": "A182",
+  "protocol_state": "frozen_before_any_A182_candidate_execution",
+  "anchors": {
+    "A181": {
+      "artifact": "research/results/v1/chacha20_metal_fullround_replay_v1.json",
+      "sha256": "f58e24cdb76a90ce8cd0ea2a14adce98ffa8f760707f9ea169d5a8d2748bacee",
+      "causal_artifact": "research/results/v1/chacha20_metal_fullround_replay_v1.causal",
+      "causal_sha256": "b16a7a2fc0fc78084443ee5ada8fb9a2c6fa9149f5b6333d98764401a07f662e",
+      "complete_domain_executed": true,
+      "logical_candidate_count": 4294967296,
+      "execution_backend": "Apple_M4_Metal_GPU"
+    }
+  },
+  "native_host": {
+    "source": "research/experiments/chacha20_metal_native.swift",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "host_version": "chacha20-metal-native-v1",
+    "required_device": "Apple M4",
+    "required_thread_execution_width": 32
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "ebe207cfa4c7baae79be17bcaac3106c2b333915bc623095a06862f6a498f951",
+    "control_target_words": [1934421854, 854265975, 989860900, 1490495958, 3744462600, 859782928, 3451624749, 3891453205, 3771573127, 1952817314, 580313173, 2512892793, 115171509, 3952729662, 3444352585, 2676430739],
+    "counter": 2343498758,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_word1_upper28": 2787805328,
+    "known_key_words_2_through_7": [980367453, 2758288433, 2082228156, 3896845939, 1262353283, 956668868],
+    "known_material_derivation_label": "f8-causal:A182:chacha20:known-material:f58e24cdb76a90ce8cd0ea2a14adce98ffa8f760707f9ea169d5a8d2748bacee",
+    "known_material_derivation_sha256": "7a3b211ff000f9887612e64c03af199f76aaed5e836296a08673622ec1ebc591",
+    "nonce_words": [16594113, 927055920, 3776127407],
+    "target_block_sha256": "b1de7d354eb0c3707a37cefac54f8ede5233310a245f6d69e6c0e112d02de509",
+    "target_words": [1934421855, 854265975, 989860900, 1490495958, 3744462600, 859782928, 3451624749, 3891453205, 3771573127, 1952817314, 580313173, 2512892793, 115171509, 3952729662, 3444352585, 2676430739],
+    "unknown_assignment_bits": 36,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 4,
+    "unknown_key_word1_low_nibble_included": false
+  },
+  "public_challenge_sha256": "b129968a51b2b1693181038da390b5d50c665e60b4721c65b7e81a84f81af27e",
+  "required_validation_gates": {
+    "A181_result_and_causal_hash_gate": true,
+    "known_material_derivation_gate": true,
+    "public_target_byte_fingerprint_gate": true,
+    "synthetic_slice_mapping_gate": {
+      "nibbles": [0, 7, 15],
+      "first_key_word0": 182032,
+      "candidate_count_per_nibble": 256,
+      "complete_output_bits_per_nibble": 131072
+    },
+    "candidate_execution_against_public_A182_target_before_freeze": false
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "key_word1_low_nibble_times_2^32_plus_key_word0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "gpu_logical_thread_count": 68719476736,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_nibble_slice": true,
+    "inner_word_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 220,
+    "logical_candidate_count": 68719476736,
+    "maximum_result_memory_bytes": 520,
+    "metal_thread_execution_width": 32,
+    "nonce_bits_known": 96,
+    "outer_nibble_slice_count": 16,
+    "persistent_host_process": true,
+    "primitive": "ChaCha20_block_function",
+    "result_capacity_per_batch": 64,
+    "rounds": 20,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 256,
+    "stream_batches_per_slice": 16,
+    "stream_candidate_count": 268435456,
+    "threads_per_threadgroup": 256,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 36,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word1_low_bits": 4,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "d38b357697268ec6e953b0ddc62f975040205dd5e6a987e618b810ab4a0fb028",
+  "prospective_prediction": {
+    "prediction": "complete_2^36_enumeration_returns_one_assignment_matching_all_512_standard_block_output_bits_and_the_bit_flipped_control_returns_zero",
+    "frozen_before_candidate_execution": true,
+    "success_rule": "complete_domain_and_unique_full_block_match_and_control_rejection",
+    "claim_type": "fresh_fullround_36_bit_partial_key_recovery"
+  },
+  "information_boundary": {
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_used_only_to_form_public_target_before_freeze": true,
+    "unknown_assignment_persisted_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "public_target_and_known_220_key_bits_counter_nonce_are_the_only_search_inputs": true,
+    "A182_candidate_outcomes_used_before_protocol_freeze": false,
+    "early_stop_permitted": false
+  }
+}

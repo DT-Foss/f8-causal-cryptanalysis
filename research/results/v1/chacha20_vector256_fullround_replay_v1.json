@@ -1,0 +1,343 @@
+{
+  "A178_native_build": {
+    "candidate_pack_width": 64,
+    "compiler_native_flag_attempted": true,
+    "language": "C11_POSIX_threads",
+    "optimization": "O3",
+    "selected_flags": [
+      "-mcpu=native",
+      "-O3",
+      "-std=c11",
+      "-fPIC",
+      "-shared",
+      "-pthread"
+    ],
+    "source_sha256": "ec2759fc66e86b7b50ea7fece66b2994d1961bb5b84d9081aff3514f25cacb8e"
+  },
+  "anchor_gates": {
+    "A178_causal_graph_sha256": "cea6f5b1c277a875be22f5e76744a2a42cbe73aa1e042a8018201bf4416a156a",
+    "A178_causal_provenance_verified": true,
+    "A178_causal_sha256": "94c651c6ea5432f482c054ae6d839c84563e8eae81e98625beb158344da16995",
+    "A178_complete_domain_executed": true,
+    "A178_native_source_sha256": "ec2759fc66e86b7b50ea7fece66b2994d1961bb5b84d9081aff3514f25cacb8e",
+    "A178_recovered_key_word": 2419963719,
+    "A178_result_sha256": "80fee52a0a2222efab161d74eb7ee124f6d94b56ca0cf759c5ffc4ca2881bea1"
+  },
+  "attempt_id": "A179",
+  "causal": {
+    "explicit_triplets": 5,
+    "file_sha256": "ab627294751d40647d3b1c9d5f20d852195d64fa449dea761b8cad15b24291a1",
+    "graph_sha256": "1681bf6f2647e7545a2f56163774ac7e4220fc0df171dbc9569e7eda63c5957d",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2639,
+      "explicit_triplets": 5,
+      "file_sha256": "ab627294751d40647d3b1c9d5f20d852195d64fa449dea761b8cad15b24291a1",
+      "graph_sha256": "1681bf6f2647e7545a2f56163774ac7e4220fc0df171dbc9569e7eda63c5957d",
+      "inferred_triplets": 0,
+      "triplets": 5
+    }
+  },
+  "equivalence": {
+    "A178_recovered_key_word": 2419963719,
+    "A178_uint64_pack_count": 67108864,
+    "A179_control_full_matches": [],
+    "A179_factual_filter_matches": [
+      2419963719
+    ],
+    "A179_factual_full_matches": [
+      2419963719
+    ],
+    "A179_vector_state_count": 16777216,
+    "complete_domain_executed": true,
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "exact_A178_recovery_identity": true,
+    "exact_vector_state_reduction_factor": 4.0
+  },
+  "equivalence_sha256": "ab44522328a109f8089b801c09b4515257c0a89d2373c49963c439998a5a0b45",
+  "evidence_stage": "CHACHA20_FULLROUND_VECTOR256_COMPLETE_DOMAIN_EQUIVALENCE_RETAINED",
+  "execution": {
+    "A178_recovered_word_used_to_prune_or_stop_enumeration": false,
+    "A178_uint64_pack_count": 67108864,
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "candidate_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+        "candidate_key_word": 2419963719,
+        "complete_block_match": true,
+        "implementation": "independent_NumPy_RFC8439_ChaCha20_core",
+        "output_bits_checked": 512,
+        "output_words_checked": 16,
+        "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae"
+      }
+    ],
+    "factual_filter_matches": [
+      2419963719
+    ],
+    "factual_full_matches": [
+      2419963719
+    ],
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "logical_candidate_count": 4294967296,
+    "logical_candidates_per_vector_state": 256,
+    "logical_packing_factor": 256.0,
+    "native_threads": 10,
+    "newly_executed_vector_state_count": 16777216,
+    "resumed_vector_state_count": 0,
+    "stream_batch_count": 64,
+    "stream_vector_state_count": 262144,
+    "structural_vector_state_reduction_factor_vs_A178": 4.0,
+    "uint64_sublanes_per_vector_state": 4,
+    "unique_exact_key_word": true,
+    "unknown_initial_lane": 4,
+    "unknown_key_word_index": 0,
+    "vector_state_count": 16777216
+  },
+  "execution_plan": {
+    "A178_uint64_pack_count": 67108864,
+    "checkpoint_resume_enabled": true,
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "known_key_bits": 224,
+    "logical_candidate_count": 4294967296,
+    "logical_candidates_per_vector_state": 256,
+    "maximum_mask_memory_bytes": 16777216,
+    "native_threads": 10,
+    "nonce_bits_known": 96,
+    "primitive": "ChaCha20_block_function",
+    "replays_A178_public_challenge": true,
+    "rounds": 20,
+    "stream_batch_count": 64,
+    "stream_vector_state_count": 262144,
+    "structural_vector_state_reduction_factor": 4,
+    "uint64_sublanes_per_vector_state": 4,
+    "unknown_key_word_bits": 32,
+    "vector_state_count": 16777216,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "0fbeaf04432d70f81aa2c4f144b43f8c61ec6c74199a683495c0e10c22a66f63",
+  "execution_sha256": "caec14a08dc9798b8a5230bb94f97727ba413ad1963cbd1bae06194b304b5e1e",
+  "kat": {
+    "counter": 1,
+    "expected": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e",
+    "key": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "match": true,
+    "nonce": "000000090000004a00000000",
+    "observed": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3.2"
+  },
+  "native_boundary_mask_gate": {
+    "boundary_rows": [
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_scalar_identity": true,
+        "expected_assignment": 173,
+        "factual_mask_sha256": "6d8547cabf8f0aeaf7a9b3598cba769f545c61e8873ffd6d5e7ee9c1c5527f95",
+        "first_candidate": 0,
+        "vector_pack": 0
+      },
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_scalar_identity": true,
+        "expected_assignment": 429,
+        "factual_mask_sha256": "6d8547cabf8f0aeaf7a9b3598cba769f545c61e8873ffd6d5e7ee9c1c5527f95",
+        "first_candidate": 256,
+        "vector_pack": 1
+      },
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_scalar_identity": true,
+        "expected_assignment": 65965,
+        "factual_mask_sha256": "6d8547cabf8f0aeaf7a9b3598cba769f545c61e8873ffd6d5e7ee9c1c5527f95",
+        "first_candidate": 65792,
+        "vector_pack": 257
+      },
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_scalar_identity": true,
+        "expected_assignment": 4294967213,
+        "factual_mask_sha256": "6d8547cabf8f0aeaf7a9b3598cba769f545c61e8873ffd6d5e7ee9c1c5527f95",
+        "first_candidate": 4294967040,
+        "vector_pack": 16777215
+      }
+    ],
+    "exact_scalar_identity": true,
+    "logical_candidates_checked": 1024,
+    "vector_packs_checked": [
+      0,
+      1,
+      257,
+      16777215
+    ]
+  },
+  "native_build": {
+    "language": "C11_POSIX_threads_with_compiler_vector_extension",
+    "logical_candidate_width": 256,
+    "optimization": "O3",
+    "selected_flags": [
+      "-mcpu=native",
+      "-O3",
+      "-std=c11",
+      "-fPIC",
+      "-shared",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror"
+    ],
+    "shared_library_sha256": "af3d3e931ea7aa7db480a832dabdb413550b1cba0682f92babe96ee48a890551",
+    "source_sha256": "4b4807911580831d0f7925cd74c886694d3d6b19e30be2f0e21a602a6e6ba9dc",
+    "strict_warning_gate": true,
+    "uint64_sublanes": 4
+  },
+  "native_cross_implementation_gate": {
+    "exact_match": true,
+    "input_sha256": "4988b523384fb1b19bd10c69d84b1a107bcc0d47066b274a71878b342872819c",
+    "output_sha256": "6c52fa41d8c972bd016af82afdbb4084ffe9177f9fd2b27eff4c64d8f4800947",
+    "seed": 179032,
+    "state_bits_checked": 131072,
+    "states": 256,
+    "words_checked": 4096
+  },
+  "native_v1_v2_filter_equivalence_gate": {
+    "exact_v1_v2_identity": true,
+    "logical_candidates_checked": 768,
+    "rows": [
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_v1_v2_identity": true,
+        "factual_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "first_candidate": 0,
+        "vector_pack": 0
+      },
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_v1_v2_identity": true,
+        "factual_mask_sha256": "c8387bf8dbadf1c9ba583a8d27b620f4bd13cee4ea2ef98bcb0e1bdfd6f3d8c8",
+        "first_candidate": 2419963648,
+        "vector_pack": 9452983
+      },
+      {
+        "control_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "exact_v1_v2_identity": true,
+        "factual_mask_sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925",
+        "first_candidate": 4294967040,
+        "vector_pack": 16777215
+      }
+    ],
+    "vector_packs_checked": [
+      0,
+      9452983,
+      16777215
+    ]
+  },
+  "parameters": {
+    "logical_candidate_count": 4294967296,
+    "logical_candidates_per_vector_state": 256,
+    "native_threads": 10,
+    "rounds": 20,
+    "stream_vector_state_count": 262144,
+    "uint64_sublanes_per_vector_state": 4,
+    "unknown_key_word_bits": 32,
+    "volatile_wallclock_excluded_from_canonical_result": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "fc552a21f14a827293996cdff6707dd7b31ac6ffdcc18cc55ac45b624d784e40",
+    "information_boundary": {
+      "A178_recovered_word_used_only_after_complete_domain_for_equivalence_gate": true,
+      "A178_recovered_word_used_to_prune_or_stop_enumeration": false,
+      "A178_recovery_outcome_known_at_A179_freeze": true,
+      "A179_complete_domain_outcome_used_before_freeze": false,
+      "early_stop_permitted": false,
+      "small_implementation_gates_completed_before_freeze": true
+    },
+    "prospective_prediction": {
+      "claim_type": "fullround_vectorized_complete_domain_equivalence_and_packing_advance",
+      "frozen_before_complete_domain_execution": true,
+      "prediction": "the_vector256_reader_executes_all_2^32_assignments_returns_the_exact_A178_key_word_rejects_the_bit_flipped_control_and_reduces_vector_state_count_exactly_fourfold",
+      "success_rule": "complete_domain_exact_A178_match_control_rejection_and_fourfold_vector_state_reduction"
+    },
+    "protocol_state": "frozen_after_small_implementation_gates_before_any_A179_complete_domain_execution"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "5e346bbcce4f88533f842f53c638d68a6c3b60d07a132ed1b01ae309dd7d6cce",
+    "control_target_words": [
+      2939146885,
+      3092613172,
+      2346149664,
+      1650595438,
+      206270238,
+      2747247950,
+      3719485339,
+      4079226425,
+      2856130963,
+      768289538,
+      2817377504,
+      1367716319,
+      2878977457,
+      710334390,
+      2048719306,
+      3797845056
+    ],
+    "counter": 4151466506,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_words_1_through_7": [
+      1255541214,
+      2851553524,
+      2641010920,
+      2310928799,
+      3501193204,
+      479982514,
+      1251466334
+    ],
+    "known_material_derivation_label": "f8-causal:A178:chacha20:known-material:d6b85ca7f15bc198513cd05100187f2ccc0ab97d1f22a906383ccd4a62eda544",
+    "known_material_derivation_sha256": "ce551fd4a3dbf291a36933c17fe81cb01da278546473532639c35abbebaa63d3",
+    "known_material_seed": 1314201556,
+    "nonce_words": [
+      180930671,
+      3631515899,
+      3372413312
+    ],
+    "target_block_sha256": "0e6d649e11ef271fbd2505f6d707f20ee4857b2b81ef7f296be9ec8c5853d3ae",
+    "target_words": [
+      2939146884,
+      3092613172,
+      2346149664,
+      1650595438,
+      206270238,
+      2747247950,
+      3719485339,
+      4079226425,
+      2856130963,
+      768289538,
+      2817377504,
+      1367716319,
+      2878977457,
+      710334390,
+      2048719306,
+      3797845056
+    ],
+    "unknown_initial_lane": 4,
+    "unknown_key_word_index": 0,
+    "unknown_word_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_word_included": false
+  },
+  "public_challenge_sha256": "58f9244e4a41f2e04f7d6350c628c40feafa252affdcdb25b0a2699862a57b48",
+  "result": "The four-sublane native Causal Reader executes the complete 2^32 ChaCha20 key-word domain, reproduces the exact A178 full-block match, rejects the control, and reduces vector-state count exactly fourfold.",
+  "schema": "chacha20-vector256-fullround-replay-v1",
+  "scope": "Standard 20-round ChaCha20 block-function replay of the frozen A178 32-bit partial-key challenge using 256 logical candidates per vector state."
+}

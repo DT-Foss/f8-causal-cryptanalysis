@@ -1,0 +1,300 @@
+{
+  "anchor_gates": {
+    "A181_causal_graph_sha256": "00e13f58cdb6382c390a978401dc3a6217d98dcc1fa608f96fc6cec37fa5c1a8",
+    "A181_causal_provenance_verified": true,
+    "A181_causal_sha256": "b16a7a2fc0fc78084443ee5ada8fb9a2c6fa9149f5b6333d98764401a07f662e",
+    "A181_complete_domain_executed": true,
+    "A181_logical_candidate_count": 4294967296,
+    "A181_result_sha256": "f58e24cdb76a90ce8cd0ea2a14adce98ffa8f760707f9ea169d5a8d2748bacee",
+    "Metal_native_source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816"
+  },
+  "attempt_id": "A182",
+  "causal": {
+    "explicit_triplets": 5,
+    "file_sha256": "aad208518d6718cac73937c198d0919c0e6305a56ac8a43345d02155eefdb110",
+    "graph_sha256": "be83fdf5fc214cc21230c08c51178e2a4290814d94db62fc100766e75dd6db86",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2391,
+      "explicit_triplets": 5,
+      "file_sha256": "aad208518d6718cac73937c198d0919c0e6305a56ac8a43345d02155eefdb110",
+      "graph_sha256": "be83fdf5fc214cc21230c08c51178e2a4290814d94db62fc100766e75dd6db86",
+      "inferred_triplets": 0,
+      "triplets": 5
+    }
+  },
+  "confirmation_sha256": "81baeb0ab4d6e8182a717ad08aa85c052cac84c61adc25ab23af041a084b9893",
+  "evidence_stage": "CHACHA20_FULLROUND_36BIT_PARTIAL_KEY_RECOVERY_RETAINED",
+  "execution": {
+    "complete_domain_executed": true,
+    "control_confirmations": [],
+    "control_filter_matches": [],
+    "control_full_matches": [],
+    "control_target_rejected": true,
+    "early_stop_used": false,
+    "factual_confirmations": [
+      {
+        "candidate_block_sha256": "b1de7d354eb0c3707a37cefac54f8ede5233310a245f6d69e6c0e112d02de509",
+        "combined_assignment": 12995408051,
+        "complete_block_match": true,
+        "implementation": "independent_NumPy_RFC8439_ChaCha20_core",
+        "key_word0": 110506163,
+        "key_word1_low_nibble": 3,
+        "output_bits_checked": 512,
+        "output_words_checked": 16,
+        "target_block_sha256": "b1de7d354eb0c3707a37cefac54f8ede5233310a245f6d69e6c0e112d02de509"
+      }
+    ],
+    "factual_filter_matches": [
+      12995408051
+    ],
+    "factual_full_matches": [
+      12995408051
+    ],
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "gpu_logical_thread_count": 68719476736,
+    "gpu_threads_per_candidate": 1,
+    "inner_word_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 220,
+    "logical_candidate_count": 68719476736,
+    "newly_executed_assignment_count": 68719476736,
+    "outer_nibble_slice_count": 16,
+    "resumed_assignment_count": 0,
+    "stream_batch_count": 256,
+    "stream_candidate_count": 268435456,
+    "unique_exact_assignment": true,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 36
+  },
+  "execution_plan": {
+    "checkpoint_resume_enabled": true,
+    "combined_assignment_encoding": "key_word1_low_nibble_times_2^32_plus_key_word0",
+    "complete_domain_required": true,
+    "control_target_required": true,
+    "counter_bits_known": 32,
+    "early_stop_used": false,
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "fresh_public_challenge": true,
+    "full_confirmation": "independent_NumPy_ChaCha20_all_512_output_bits",
+    "gpu_logical_thread_count": 68719476736,
+    "gpu_threads_per_candidate": 1,
+    "host_reconfiguration_per_nibble_slice": true,
+    "inner_word_candidate_count_per_slice": 4294967296,
+    "known_key_bits": 220,
+    "logical_candidate_count": 68719476736,
+    "maximum_result_memory_bytes": 520,
+    "metal_thread_execution_width": 32,
+    "nonce_bits_known": 96,
+    "outer_nibble_slice_count": 16,
+    "persistent_host_process": true,
+    "primitive": "ChaCha20_block_function",
+    "result_capacity_per_batch": 64,
+    "rounds": 20,
+    "runtime_shader_compilation": true,
+    "stream_batch_count": 256,
+    "stream_batches_per_slice": 16,
+    "stream_candidate_count": 268435456,
+    "threads_per_threadgroup": 256,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 36,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word1_low_bits": 4,
+    "wallclock_excluded_from_canonical_result": true
+  },
+  "execution_plan_sha256": "d38b357697268ec6e953b0ddc62f975040205dd5e6a987e618b810ab4a0fb028",
+  "execution_sha256": "bbff0b5f615e41b9397b61a2324451df1f61780576e928a41f71df05412c4c26",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "kat": {
+    "counter": 1,
+    "expected": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e",
+    "key": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "match": true,
+    "nonce": "000000090000004a00000000",
+    "observed": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3.2"
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "parameters": {
+    "execution_backend": "Apple_M4_Metal_GPU",
+    "known_key_bits": 220,
+    "logical_candidate_count": 68719476736,
+    "rounds": 20,
+    "stream_candidate_count": 268435456,
+    "unknown_key_bits": 36,
+    "volatile_wallclock_excluded_from_canonical_result": true
+  },
+  "protocol_gate": {
+    "artifact_sha256": "8c69a87b101f7f7e718b1c162a96798484f1bc6f252775c69f197c2770c72bfc",
+    "information_boundary": {
+      "A182_candidate_outcomes_used_before_protocol_freeze": false,
+      "early_stop_permitted": false,
+      "public_target_and_known_220_key_bits_counter_nonce_are_the_only_search_inputs": true,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_persisted_before_execution": false,
+      "unknown_assignment_used_only_to_form_public_target_before_freeze": true
+    },
+    "prospective_prediction": {
+      "claim_type": "fresh_fullround_36_bit_partial_key_recovery",
+      "frozen_before_candidate_execution": true,
+      "prediction": "complete_2^36_enumeration_returns_one_assignment_matching_all_512_standard_block_output_bits_and_the_bit_flipped_control_returns_zero",
+      "success_rule": "complete_domain_and_unique_full_block_match_and_control_rejection"
+    },
+    "protocol_state": "frozen_before_any_A182_candidate_execution"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "ebe207cfa4c7baae79be17bcaac3106c2b333915bc623095a06862f6a498f951",
+    "control_target_words": [
+      1934421854,
+      854265975,
+      989860900,
+      1490495958,
+      3744462600,
+      859782928,
+      3451624749,
+      3891453205,
+      3771573127,
+      1952817314,
+      580313173,
+      2512892793,
+      115171509,
+      3952729662,
+      3444352585,
+      2676430739
+    ],
+    "counter": 2343498758,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_word1_upper28": 2787805328,
+    "known_key_words_2_through_7": [
+      980367453,
+      2758288433,
+      2082228156,
+      3896845939,
+      1262353283,
+      956668868
+    ],
+    "known_material_derivation_label": "f8-causal:A182:chacha20:known-material:f58e24cdb76a90ce8cd0ea2a14adce98ffa8f760707f9ea169d5a8d2748bacee",
+    "known_material_derivation_sha256": "7a3b211ff000f9887612e64c03af199f76aaed5e836296a08673622ec1ebc591",
+    "nonce_words": [
+      16594113,
+      927055920,
+      3776127407
+    ],
+    "target_block_sha256": "b1de7d354eb0c3707a37cefac54f8ede5233310a245f6d69e6c0e112d02de509",
+    "target_words": [
+      1934421855,
+      854265975,
+      989860900,
+      1490495958,
+      3744462600,
+      859782928,
+      3451624749,
+      3891453205,
+      3771573127,
+      1952817314,
+      580313173,
+      2512892793,
+      115171509,
+      3952729662,
+      3444352585,
+      2676430739
+    ],
+    "unknown_assignment_bits": 36,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 4,
+    "unknown_key_word1_low_nibble_included": false
+  },
+  "public_challenge_sha256": "b129968a51b2b1693181038da390b5d50c665e60b4721c65b7e81a84f81af27e",
+  "recovery": {
+    "first_reveal_occurs_after_complete_domain_execution": true,
+    "recovered_combined_assignments": [
+      12995408051
+    ],
+    "recovered_key_word0": [
+      110506163
+    ],
+    "recovered_key_word1_low_nibble": [
+      3
+    ],
+    "unknown_assignment_source_was_discarded_before_runner_construction": true
+  },
+  "result": "The native Metal Causal Reader executes the complete fresh 36-bit ChaCha20 partial-key domain and independently confirms the unique assignment matching the standard 20-round block output.",
+  "schema": "chacha20-metal-width36-partial-key-recovery-v1",
+  "scope": "Standard ChaCha20 block-function partial-key recovery with key word 0 and the low four bits of key word 1 unknown, the other 220 key bits plus counter and nonce known, and complete 2^36 enumeration.",
+  "synthetic_slice_mapping_gate": {
+    "complete_output_bits_checked": 393216,
+    "exact_scalar_and_mapping_identity": true,
+    "logical_candidates_checked": 768,
+    "nibbles_checked": [
+      0,
+      7,
+      15
+    ],
+    "rows": [
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 131072,
+        "control_matches": [],
+        "exact_scalar_identity": true,
+        "factual_combined_assignment": 182105,
+        "factual_key_word0": 182105,
+        "first_key_word0": 182032,
+        "key_word1_low_nibble": 0,
+        "output_sha256": "e97c1216c32b79e5978cb15023b6fd90d30aada82bd85f15f2ab6891088244d4"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 131072,
+        "control_matches": [],
+        "exact_scalar_identity": true,
+        "factual_combined_assignment": 30064953177,
+        "factual_key_word0": 182105,
+        "first_key_word0": 182032,
+        "key_word1_low_nibble": 7,
+        "output_sha256": "3eaf601edba720e7dc654aba18f535b584b48a25c6e5fd4a96765fba86e24870"
+      },
+      {
+        "candidate_count": 256,
+        "complete_output_bits_checked": 131072,
+        "control_matches": [],
+        "exact_scalar_identity": true,
+        "factual_combined_assignment": 64424691545,
+        "factual_key_word0": 182105,
+        "first_key_word0": 182032,
+        "key_word1_low_nibble": 15,
+        "output_sha256": "dd1f53aea975db1f6f307a020e15fdbedb36dd939859446892bee05784cb0f9d"
+      }
+    ]
+  }
+}
