@@ -217,9 +217,7 @@ def _compile_native(build_dir: Path, cc: str) -> tuple[Path, dict[str, Any]]:
     suffix = _A178._A177._NATIVE._shared_library_suffix()
     output = build_dir / f"libchacha20_vector256_{source_sha[:16]}{suffix}"
     temporary = output.with_name(f".{output.name}.tmp")
-    base_flags = [
-        "-O3",
-        "-std=c11",
+    strict_tail = [
         "-fPIC",
         "-shared",
         "-pthread",
@@ -228,7 +226,14 @@ def _compile_native(build_dir: Path, cc: str) -> tuple[Path, dict[str, Any]]:
         "-Wpedantic",
         "-Werror",
     ]
-    attempts = [["-mcpu=native", *base_flags], ["-march=native", *base_flags], base_flags]
+    c11_flags = ["-O3", "-std=c11", *strict_tail]
+    c2x_flags = ["-O3", "-std=c2x", *strict_tail]
+    attempts = [
+        ["-mcpu=native", *c11_flags],
+        ["-march=native", *c11_flags],
+        ["-mavx2", *c2x_flags],
+        c11_flags,
+    ]
     selected_flags: list[str] | None = None
     diagnostics = []
     for flags in attempts:
@@ -254,7 +259,12 @@ def _compile_native(build_dir: Path, cc: str) -> tuple[Path, dict[str, Any]]:
     return output, {
         "source_sha256": source_sha,
         "shared_library_sha256": _file_sha256(output),
-        "language": "C11_POSIX_threads_with_compiler_vector_extension",
+        "language": (
+            "C2x_POSIX_threads_with_compiler_vector_extension"
+            if "-std=c2x" in selected_flags
+            else "C11_POSIX_threads_with_compiler_vector_extension"
+        ),
+        "portable_strict_c2x_avx2_fallback": "-std=c2x" in selected_flags,
         "optimization": "O3",
         "logical_candidate_width": VECTOR_WIDTH,
         "uint64_sublanes": UINT64_SUBLANES,

@@ -81,6 +81,12 @@ Compilation is fail-closed under C11/POSIX threads with `-Wall`, `-Wextra`,
 rotation tuple `(16, 12, 8, 7)`, ten double rounds, and full initial-state
 feedforward.
 
+The retained Apple-Clang production build uses that exact C11 gate. For GCC,
+the repository builder preserves the byte-identical hash-bound source and uses
+a strict `-std=c2x -mavx2` fallback with the same four warning flags. This
+resolves GCC's pre-C2x nested-array qualification diagnostic and makes the
+256-bit vector ABI explicit without changing the scientific kernel.
+
 ## Pre-freeze implementation qualification
 
 Three independent gates bind the new representation before complete-domain

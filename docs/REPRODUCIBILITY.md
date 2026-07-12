@@ -20,6 +20,13 @@ The native SHAKE Reader requires:
 - a 64-bit target;
 - no platform-specific vector intrinsic.
 
+A179's retained production build uses strict C11 with the compiler vector
+extension. GCC diagnoses its nested-array qualification as a pre-C2x pedantic
+error and requires an explicit 256-bit vector ABI, so the portable builder
+falls back to `-std=c2x -mavx2` while retaining the strict warning gate
+(`-Wall`, `-Wextra`, `-Wpedantic`, and `-Werror`). The frozen C source and its
+SHA-256 anchor remain byte-identical.
+
 The Boolean/symbolic SHAKE Readers additionally require the Z3 command-line
 solver. Retained solver statistics were produced with Z3 4.15.4; the
 paper-scale solver runner checks that exact version before execution.
