@@ -569,6 +569,45 @@ instance, so the artifact is explicitly posthoc-informed and non-blind. The
 complete plan covers all `2^24` assignments, while planned coverage is kept
 distinct from the 20 branches actually executed before the verified stop.
 
+## Reduced-round ChaCha transfer: A185--A189
+
+The five retained reports form one hash-linked progression from the fresh
+full-round 40-bit A184 relation into direction selection, shared-key stacking,
+portable solver transfer, and a deeper-round prospective recovery.
+
+- [A185](../research/reports/CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND4_TRANSFER_V1.md)
+  freezes a fresh reduced ChaCha4 40-bit target and five semantically matched
+  QF_BV views. Split1 and split2 independently recover `0x230f1aee2d` and each
+  passes a complete 512-bit confirmation; forward, inverse, and split3 reach the
+  equal 30-second resource boundary.
+- [A186](../research/reports/CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND5_BOUNDARY_V1.md)
+  transfers the same direction family to a fresh ChaCha5 40-bit target. All six
+  predeclared views return `unknown` under the same budget, retaining the exact
+  round-4→round-5 representation/resource boundary with no early stop.
+- [A187](../research/reports/CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md)
+  freezes ten fixed-resource formulas over one fresh 40-bit key shared across
+  eight counter-related ChaCha5 blocks. Complete b8 reduces decisions from
+  35,285 to 1,686 and conflicts from 29,385 to 389 relative to b1. All three
+  fixed-total-512-bit sparse stacked views improve both counters.
+- [A188](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md)
+  executes a complete predeclared Bitwuzla/Z3/Boolector portfolio on another
+  fresh ChaCha5 40-bit challenge. Bitwuzla bitblast b8 returns
+  `0x5345585503`; independent recomputation matches all 4,096 target bits and
+  rejects the control, while the tested b4 modes retain the exact instance
+  boundary.
+- [A189](../research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md)
+  prospectively transfers the b8 Reader to a fresh ChaCha6 low-20-bit challenge
+  with 236 known key bits. Predicted bitblast b8 and preprop b8 independently
+  recover `0x6fa70` and confirm all 4,096 bits; the predeclared b1 view returns
+  the identical assignment and confirms 512 bits.
+
+Each production challenge was generated from OS randomness, used to construct
+the public targets, and discarded before execution. The committed configs,
+portable formula hashes, complete status vectors, independent confirmations,
+typed Causal graphs, and deterministic figures are authenticated by
+`FULLROUND_TRANSFER_SHA256SUMS`. Focused tests reconstruct this evidence without
+rerunning the production solvers.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.

@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A184 full-round relations as code, typed
+evidence, and the subsequent A107--A189 full-round and reduced-round relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -73,6 +73,16 @@ precisely:
 | A183 | ChaCha20 fullround 38-bit partial-key Reader | Complete `2^38` execution uniquely recovers `0x1a15b63e04`; the control is empty and independent confirmation covers all 512 bits | Fresh frozen target; 218 known key bits; 64 complete word domains; 1,024 Metal batches | Recovered 38-bit partial-key assignment | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH38_PARTIAL_KEY_RECOVERY_V1.md) |
 | A184 | ChaCha20 fullround 40-bit partial-key Reader | Complete `2^40` execution uniquely recovers `0x2874913214`; the control is empty and independent confirmation covers all 512 bits | Fresh frozen target; 216 known key bits; 256 complete word domains; 4,096 Metal batches | Recovered 40-bit partial-key assignment | [report](research/reports/FULLROUND_CAUSAL_CHACHA20_METAL_WIDTH40_PARTIAL_KEY_RECOVERY_V1.md) |
 
+### Prospective ChaCha direction and engine transfer
+
+| Evidence | Reduced-round relation | Retained result | Frozen execution scope | Recovered object | Primary evidence |
+|---|---|---|---|---|---|
+| A185 | ChaCha4 directional SMT transfer | Split1 and split2 independently return `0x230f1aee2d` and each confirms all 512 target bits; forward, inverse, and split3 reach the fixed 30-second boundary | Fresh 40-bit challenge; five predeclared shared-DAG QF_BV views; Z3 4.15.4; complete fixed-order execution | Recovered 40-bit partial-key assignment | [report](research/reports/CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND4_TRANSFER_V1.md) |
+| A186 | ChaCha5 directional SMT boundary | Forward, inverse, and split1--split4 all return `unknown` under the identical fixed budget, with the complete six-view order retained | Fresh 40-bit challenge; six semantically matched views; 30-second internal budget and 40-second guard | Exact round-4→round-5 representation/resource boundary | [report](research/reports/CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND5_BOUNDARY_V1.md) |
+| A187 | ChaCha5 shared-key multiblock compiler | Complete b8 reduces decisions/conflicts by 20.93x/75.54x relative to b1; every fixed-total-512-bit sparse b2/b4/b8 view also beats b1 on both counters | Fresh 40-bit key shared across eight counter-related blocks; ten predeclared formulas at `rlimit=10,000,000` | Exact prospective search-shape transfer | [report](research/reports/CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md) |
+| A188 | ChaCha5 portable solver portfolio | The predeclared Bitwuzla bitblast b8 view returns `0x5345585503`; independent recomputation matches all 4,096 target bits and rejects the control | Fresh 40-bit challenge; complete eight-variant Bitwuzla/Z3/Boolector portfolio; five-second variants | Recovered 40-bit partial-key assignment and b4→b8 instance boundary | [report](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md) |
+| A189 | ChaCha6 prospective width-20 transfer | Predicted Bitwuzla bitblast b8 and preprop b8 independently return `0x6fa70` and confirm all 4,096 bits; bitblast b1 also returns the same model with a 512-bit gate | Fresh 20-bit challenge with 236 known key bits; complete eight-variant portfolio | Recovered 20-bit partial-key assignment | [report](research/reports/CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md) |
+
 A152 was frozen on public `main` before its unseen instance was generated, then
 executed under that exact protocol. A154--A184 follow the resulting affine
 interface through an exact basis, the R2 K24 transition, three full-round
@@ -86,6 +96,13 @@ including A153's phase-flag control, is
 indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_MATRIX_V1.md)
 and the append-only [attempt log](research/ATTEMPT_LOG.md). The earlier
 A107--A151 class ledger remains in [docs/RESULTS.md](docs/RESULTS.md).
+
+A185--A189 form a separate prospective reduced-round progression: a fresh
+ChaCha4 directional recovery, its exact ChaCha5 fixed-budget boundary, a
+prospectively retained eight-block search-shape change, a fresh ChaCha5
+cross-engine 40-bit recovery, and a fresh ChaCha6 width-20 transfer. Their
+configs, portable formula bytes, result JSON, typed graphs, figures, reports,
+and focused no-solver replay tests are committed and hash-pinned together.
 
 ## Three connected methods
 
@@ -130,7 +147,7 @@ Five evidence tiers make cost explicit:
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
-| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A184 full-round frontiers |
+| `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A189 full-round and reduced-round frontiers |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -152,9 +169,11 @@ hash, Causal Reader and analysis gates remain active on non-Darwin CI. The
 commands, runtimes, expected files, and portability notes are
 in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
-The symbolic solver tier additionally requires the external Z3 CLI at exact
-semantic version 4.15.4. Both solver reproduction scripts fail closed before
-execution when this version is unavailable or different.
+The symbolic SHAKE tier additionally requires the external Z3 CLI at exact
+semantic version 4.15.4. Explicit A188/A189 production portfolios additionally
+require hash-gated Bitwuzla 0.9.1 and Boolector 3.2.4. Retained-artifact tests
+rebuild every formula and verify identities, results, controls, graphs, and
+figures without launching those production solver portfolios.
 
 ## Repository map
 
@@ -163,7 +182,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A184 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A189 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

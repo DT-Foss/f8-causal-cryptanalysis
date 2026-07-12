@@ -243,3 +243,32 @@ A184's genuinely fresh exhaustive fullround 40-bit partial-key recovery.  With
 `2^40` assignments, uniquely recover `0x2874913214`, reject the control, and
 confirm all 512 bits.  The scope is 40 unknown key bits, not full 256-bit key
 recovery.
+
+`CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND4_TRANSFER_V1.md` records A185's fresh
+prospectively frozen reduced ChaCha round-4 directional transfer. Five matched
+SMT views execute at the same 30-second budget: forward, inverse, and split3
+return `unknown`, while split1 and split2 independently return
+`0x230f1aee2d` and each confirms all 512 target bits.
+
+`CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND5_BOUNDARY_V1.md` records A186's fresh
+prospectively frozen reduced ChaCha round-5 boundary. Forward, inverse, and all
+four midstate cuts execute at the same 30-second budget; all six return
+`unknown`, the complete order is retained, and no assignment is emitted.
+
+`CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md` records A187's fresh
+prospectively frozen reduced ChaCha5 shared-key stacking transfer. Complete b8
+reduces decisions/conflicts by 20.93x/75.54x relative to b1, and all three
+fixed-total-512-bit sparse views beat b1 on both counts under the same fixed
+resource limit.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md` records A188's complete fresh
+eight-variant portable SMT-LIB2 portfolio. The predeclared Bitwuzla bitblast b8
+view returns `0x5345585503`; an independent implementation matches all 4,096
+target bits and rejects the control. The exact result includes the observed
+b4-to-b8 instance boundary.
+
+`CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md` records A189's fresh
+prospective reduced ChaCha6 width-20 transfer. The predicted Bitwuzla bitblast
+b8 view recovers low20 `0x6fa70` and independently confirms all 4,096 bits;
+preprop b8 and the predeclared b1 view return the identical assignment with
+independent confirmation.

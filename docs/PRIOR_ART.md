@@ -34,6 +34,9 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-11 | A139--A142 boundary ledger: three complete SHAKE128 width-20 R1 partition topologies and a monolithic SHAKE256 R1 cross-variant transfer, each retained with its exact resource schedule |
 | 2026-07-11 | A143--A147 structural continuation: complete Structural-6 and strategy boundaries, the posthoc-conditioned depth threshold, and the assignment-free width-20 graph Reader |
 | 2026-07-11 | A148--A151 width-24 continuation: exact nine-edge minimum-cover proof, resource-schedule audit, and final uniform-budget assignment-free Reader with explicit same-instance non-blind scope |
+| 2026-07-12 | A152--A177 prospective and mechanistic continuation: public protocol transfer, exact R1/R2 structure, compiler/gauge/order interventions, and complete native width-24/32 reconstruction |
+| 2026-07-12 | A178--A184 ChaCha20 full-round continuation: fresh 32-/36-/38-/40-bit partial-key recoveries, vector-256 equivalence, and Apple M4 Metal execution |
+| 2026-07-12 | A185--A189 reduced-round ChaCha continuation: prospective direction transfer, round-5 resource boundary, shared-key stacking, cross-engine round-5 recovery, and prospective round-6 width-20 recovery |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -48,7 +51,7 @@ invented here.
 | `paper/nano2026/main.tex` | `1269cfc7c24fb6ad2d3551ccea74f60fde4404967fe8b6710ba3acb8df887ed2` |
 | Sanitized Nanjing presentation source | `577607f1e1b2893234836f98999428ace0894a5362b5b85b6609565c1a70356c` |
 | `ANCHOR_SHA256SUMS` | `90f50ecdbe01e4de0afa4c858a57d916fc1794344375303a501a301c80e192e8` |
-| `FULLROUND_TRANSFER_SHA256SUMS` | `19eeee54fbc3ad9c4a7ecec9172bd81576af152584da40a0b62a9073eb4ee657` |
+| `FULLROUND_TRANSFER_SHA256SUMS` | `c590abe67a529b5500429783f727917e528c79b396b757420951fa4eb0498d30` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
 | `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `c4ba0fd7770f414aad6f67e9f3c171cf97890ce2997d53f75edb65d6ccf65717` |
 
@@ -56,9 +59,9 @@ The manifest digest authenticates the manifest; each manifest in turn lists the
 exact result JSON, `.causal`, source, or anchor file digests. Verify all layers
 with `scripts/verify_hash_manifest.py`.
 
-## Full-round result identifiers
+## Result identifiers
 
-The stable A107--A151 identifiers are defined in
+The stable A107--A189 identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -90,6 +93,18 @@ publication:
 - A147: assignment-free graph-selected width-20 model reconstruction;
 - A148--A151: exact width-24 minimum-cover threshold and final uniform-budget
   assignment-free model reconstruction, with same-instance non-blind scope.
+- A152--A177: prospective SHAKE transfer, exact affine/quadratic structure,
+  compiler/gauge/order mechanism isolation, and native width-24/32 Readers;
+- A178--A184: standard ChaCha20 full-round 32-/36-/38-/40-bit partial-key
+  recoveries plus vector-256 and Metal complete-domain equivalence;
+- A185--A186: prospective reduced ChaCha4 directional recovery and its exact
+  ChaCha5 fixed-budget boundary;
+- A187: prospectively retained reduced ChaCha5 shared-key stacking search-shape
+  transfer;
+- A188: fresh reduced ChaCha5 40-bit partial-key recovery in a predeclared
+  Bitwuzla/Z3/Boolector portfolio;
+- A189: fresh prospective reduced ChaCha6 20-bit partial-key recovery with 236
+  known key bits.
 
 ## Presentation sanitization
 
@@ -111,7 +126,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A151, include the exact follow-up commit containing the artifact; obtain
+A133--A189, include the exact follow-up commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a
 DOI or long-term archive guarantee.

@@ -1,0 +1,368 @@
+{
+  "anchor_gates": {
+    "A184_causal_graph_sha256": "864fe8a07d9770763110dc037619c91b5ca6fa36b5ee7e1dbd35d673311a3b28",
+    "A184_causal_provenance_verified": true,
+    "A184_causal_sha256": "b37bc0234966185e06eb15ae6926502535b0c50271b01f0b6bd8fe5394dabd0f",
+    "A184_complete_domain_executed": true,
+    "A184_result_sha256": "d467c06105d4a4afba9efaa7bdf6c4e58754b034d4640907486c778ad17e12a9"
+  },
+  "attempt_id": "A185",
+  "causal": {
+    "explicit_triplets": 5,
+    "file_sha256": "ea490a5ea59838faacddfc11ca80390e6cb87ff35943eb1e294cd1006f1e77ac",
+    "graph_sha256": "43f5b6a267de0fcd272136d46f84442697c2186b98bbb59dccaf74f9bba77824",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 2846,
+      "explicit_triplets": 5,
+      "file_sha256": "ea490a5ea59838faacddfc11ca80390e6cb87ff35943eb1e294cd1006f1e77ac",
+      "graph_sha256": "43f5b6a267de0fcd272136d46f84442697c2186b98bbb59dccaf74f9bba77824",
+      "inferred_triplets": 0,
+      "triplets": 5
+    }
+  },
+  "confirmation_sha256": "31c8585ed6cfe56b05556bbea0474802acb0eac946b2fb169d43482c204566f0",
+  "confirmations": [
+    {
+      "candidate_block_sha256": "0f577a89f5049326db0f8494f97d6e51db03315354efbb98732458a132cde154",
+      "combined_assignment": 150577278509,
+      "complete_block_match": true,
+      "implementation": "independent_NumPy_ChaCha4_block",
+      "key_word0": 253423149,
+      "key_word1_low_value": 35,
+      "output_bits_checked": 512,
+      "target_block_sha256": "0f577a89f5049326db0f8494f97d6e51db03315354efbb98732458a132cde154",
+      "variant": "split1"
+    },
+    {
+      "candidate_block_sha256": "0f577a89f5049326db0f8494f97d6e51db03315354efbb98732458a132cde154",
+      "combined_assignment": 150577278509,
+      "complete_block_match": true,
+      "implementation": "independent_NumPy_ChaCha4_block",
+      "key_word0": 253423149,
+      "key_word1_low_value": 35,
+      "output_bits_checked": 512,
+      "target_block_sha256": "0f577a89f5049326db0f8494f97d6e51db03315354efbb98732458a132cde154",
+      "variant": "split2"
+    }
+  ],
+  "evidence_stage": "PROSPECTIVE_CAUSAL_DIRECTION_TRANSFER_RETAINED",
+  "execution": {
+    "complete_variant_plan_executed": true,
+    "confirmed_assignment_count": 1,
+    "confirmed_assignments": [
+      150577278509
+    ],
+    "confirmed_directional_variants": [
+      "split1",
+      "split2"
+    ],
+    "early_stop_used": false,
+    "observations": [
+      {
+        "externally_timed_out": false,
+        "formula_bytes": 8865,
+        "formula_sha256": "432a117edc7996c2e99e0717d2fdc830ca53c38bb41ec57085884a46deda77e1",
+        "model": null,
+        "returncode": 1,
+        "statistics": {
+          "rlimit-count": 280061736,
+          "sat-conflicts": 161603,
+          "sat-decisions": 282804,
+          "sat-propagations-2ary": 52058049,
+          "sat-propagations-nary": 240247429,
+          "sat-restarts": 25139
+        },
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "9aca1658105251e9417a1d523f154a70763d05fd2f08cb606558cb9ac36d697a",
+        "variant": "forward"
+      },
+      {
+        "externally_timed_out": false,
+        "formula_bytes": 9138,
+        "formula_sha256": "f464ddd82ef51f9ac71a19d73314cb2c3b4822cb70b4e12cd2bf05d2b4e5f340",
+        "model": null,
+        "returncode": 1,
+        "statistics": {
+          "rlimit-count": 225592904,
+          "sat-conflicts": 343505,
+          "sat-decisions": 573082,
+          "sat-propagations-2ary": 57249054,
+          "sat-propagations-nary": 181327328,
+          "sat-restarts": 34278
+        },
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ba7d40eb7b6e54e1e094c97a932ba9f818c9744a074dfb9c6b14cdbf26c66ea4",
+        "variant": "inverse"
+      },
+      {
+        "externally_timed_out": false,
+        "formula_bytes": 9170,
+        "formula_sha256": "a3af7431ad1687fc7000a131df3e397b597e6092ae4bca998979c16908e6e0e3",
+        "model": {
+          "combined_assignment": 150577278509,
+          "key_word0": 253423149,
+          "key_word1_low_value": 35
+        },
+        "returncode": 0,
+        "statistics": {
+          "rlimit-count": 212945,
+          "sat-conflicts": 5,
+          "sat-decisions": 76,
+          "sat-propagations-2ary": 5966,
+          "sat-propagations-nary": 4914
+        },
+        "status": "sat",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "739dccfc46e2f2b1d63591dcd844442d8f86511c3bc3dcb140915a14e0c6eb1d",
+        "variant": "split1"
+      },
+      {
+        "externally_timed_out": false,
+        "formula_bytes": 9169,
+        "formula_sha256": "6104e272345919ca5fb1d138e19c0ef37eb6ebdee3b81af87a276ade0fe33983",
+        "model": {
+          "combined_assignment": 150577278509,
+          "key_word0": 253423149,
+          "key_word1_low_value": 35
+        },
+        "returncode": 0,
+        "statistics": {
+          "rlimit-count": 186246,
+          "sat-conflicts": 36,
+          "sat-decisions": 69,
+          "sat-propagations-2ary": 14053,
+          "sat-propagations-nary": 9443
+        },
+        "status": "sat",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "dc40f959f26fecc8f9e4d71ab88fd7214c970ebf349b13f01aae1318a38d73bf",
+        "variant": "split2"
+      },
+      {
+        "externally_timed_out": false,
+        "formula_bytes": 9169,
+        "formula_sha256": "6ce8fb1a329d157aec74434ffd4395ce80d1da762bfdeec25593b520baabb784",
+        "model": null,
+        "returncode": 1,
+        "statistics": {
+          "rlimit-count": 227418019,
+          "sat-conflicts": 411537,
+          "sat-decisions": 644169,
+          "sat-propagations-2ary": 51847336,
+          "sat-propagations-nary": 191088675,
+          "sat-restarts": 35293
+        },
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "fd8f87ca84b13682b11a48e243327c77e8de33075269ce592ed1f52719d9ebeb",
+        "variant": "split3"
+      }
+    ],
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "variant_order": [
+      "forward",
+      "inverse",
+      "split1",
+      "split2",
+      "split3"
+    ]
+  },
+  "execution_plan": {
+    "complete_variant_plan_required": true,
+    "early_stop_used": false,
+    "execution_mode": "sequential_one_thread_external_Z3",
+    "external_timeout_seconds_per_variant": 40,
+    "formula_representation": "shared_define_fun_DAG",
+    "independent_confirmation": "NumPy_ChaCha4_all_512_output_bits",
+    "known_key_bits": 216,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 4,
+    "target_output_bits": 512,
+    "timeout_milliseconds_per_variant": 30000,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "variant_execution_order": [
+      "forward",
+      "inverse",
+      "split1",
+      "split2",
+      "split3"
+    ],
+    "variants": [
+      "forward",
+      "inverse",
+      "split1",
+      "split2",
+      "split3"
+    ],
+    "wallclock_excluded_from_canonical_result": true,
+    "z3_version": "4.15.4"
+  },
+  "execution_plan_sha256": "3160f3c45617a04b99530a9d139b1eb00501a8e0f4485c3e021669c809d87a8f",
+  "execution_sha256": "3afe54a447dcef54d48d3c99f2c0c7d25a648c21e4621366134f3dcd2e82e04d",
+  "formula_plan": [
+    {
+      "bytes": 8865,
+      "sha256": "432a117edc7996c2e99e0717d2fdc830ca53c38bb41ec57085884a46deda77e1",
+      "variant": "forward"
+    },
+    {
+      "bytes": 9138,
+      "sha256": "f464ddd82ef51f9ac71a19d73314cb2c3b4822cb70b4e12cd2bf05d2b4e5f340",
+      "variant": "inverse"
+    },
+    {
+      "bytes": 9170,
+      "sha256": "a3af7431ad1687fc7000a131df3e397b597e6092ae4bca998979c16908e6e0e3",
+      "variant": "split1"
+    },
+    {
+      "bytes": 9169,
+      "sha256": "6104e272345919ca5fb1d138e19c0ef37eb6ebdee3b81af87a276ade0fe33983",
+      "variant": "split2"
+    },
+    {
+      "bytes": 9169,
+      "sha256": "6ce8fb1a329d157aec74434ffd4395ce80d1da762bfdeec25593b520baabb784",
+      "variant": "split3"
+    }
+  ],
+  "formula_plan_sha256": "fe884dd4396c2672221b16e4d4d37c032c9446d89eb84a2c4dde5777be04d08d",
+  "parameters": {
+    "known_key_bits": 216,
+    "rounds": 4,
+    "target_output_bits": 512,
+    "unknown_key_bits": 40,
+    "variants": [
+      "forward",
+      "inverse",
+      "split1",
+      "split2",
+      "split3"
+    ]
+  },
+  "protocol_gate": {
+    "artifact_sha256": "4132728bfd1a5ed6865d38e6adfa6ed2cc9e1e75073ec0960201d4076d323fa1",
+    "discovery_basis": {
+      "challenge": "A184_known_recovered_assignment_reduced_round_diagnostic",
+      "forward": {
+        "conflicts": 434391,
+        "decisions": 624545,
+        "status": "unknown"
+      },
+      "inverse": {
+        "decisions": 1,
+        "status": "sat",
+        "volatile_seconds": 0.06508620828390121
+      },
+      "rounds": 3,
+      "selection_rule": "transfer_all_three_sat_directions_plus_forward_control_to_a_fresh_round4_challenge",
+      "split1": {
+        "decisions": 1,
+        "status": "sat",
+        "volatile_seconds": 0.0286266659386456
+      },
+      "split2": {
+        "decisions": 1,
+        "status": "sat",
+        "volatile_seconds": 0.03879633313044906
+      },
+      "target_output_bits": 512,
+      "timeout_milliseconds": 30000,
+      "unknown_key_bits": 40
+    },
+    "information_boundary": {
+      "A185_solver_outcomes_used_before_protocol_freeze": false,
+      "early_stop_permitted": false,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_persisted_before_execution": false,
+      "unknown_assignment_used_only_to_form_public_target_before_freeze": true,
+      "variant_order_or_budget_changed_after_any_outcome": false
+    },
+    "prospective_prediction": {
+      "claim_type": "prospective_causal_direction_transfer",
+      "frozen_before_solver_execution": true,
+      "prediction": "at_least_one_inverse_or_split_view_returns_the_unique_fresh_40_bit_assignment_within_the_fixed_budget_while_the_forward_view_remains_strictly_more_expensive",
+      "success_rule": "independently_confirmed_fresh_assignment_from_an_inverse_or_split_view_and_complete_five_variant_execution"
+    },
+    "protocol_state": "frozen_before_any_A185_solver_execution"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "54a1cd0a046e81d6fdb4f2bf637ddeb96715e3ccfdc47afd07863e50258061c2",
+    "control_target_words": [
+      4273390610,
+      2038489739,
+      1307314613,
+      3382255868,
+      3075169381,
+      3212024352,
+      4037013298,
+      560257615,
+      2715081784,
+      3169360902,
+      3179597857,
+      1233900044,
+      1204265052,
+      966276486,
+      1821539836,
+      3893261701
+    ],
+    "counter": 2815690776,
+    "known_key_word1_upper24": 2399935232,
+    "known_key_words_2_through_7": [
+      2604420234,
+      557290727,
+      3886814758,
+      2162898117,
+      1792708585,
+      3299501353
+    ],
+    "known_material_derivation_label": "f8-causal:A185:chacha20:r4-direction:known-material:d467c06105d4a4afba9efaa7bdf6c4e58754b034d4640907486c778ad17e12a9",
+    "known_material_derivation_sha256": "04f9b57b70db9574c05e35830b5362d0ab433eec1eb16b400923f6dc76f0160a",
+    "nonce_words": [
+      2360016014,
+      2477948166,
+      2574760257
+    ],
+    "rounds": 4,
+    "target_block_sha256": "0f577a89f5049326db0f8494f97d6e51db03315354efbb98732458a132cde154",
+    "target_words": [
+      4273390611,
+      2038489739,
+      1307314613,
+      3382255868,
+      3075169381,
+      3212024352,
+      4037013298,
+      560257615,
+      2715081784,
+      3169360902,
+      3179597857,
+      1233900044,
+      1204265052,
+      966276486,
+      1821539836,
+      3893261701
+    ],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 8,
+    "unknown_key_word1_low_value_included": false
+  },
+  "public_challenge_sha256": "d477f28da2dc9fb87e124127ba7518ef90083a0ac6bf10c61fd3ef91e50ff9f7",
+  "result": "Five semantically matched forward, inverse, and split SMT views execute on a fresh four-round 40-bit ChaCha challenge; every SAT model is independently checked over the complete 512-bit block output.",
+  "schema": "chacha20-smt-directional-round4-transfer-v1",
+  "scope": "Prospective causal-direction transfer on four-round ChaCha with one full key word plus eight adjacent key bits unknown and 216 key bits known.",
+  "solver": {
+    "path": "/opt/homebrew/bin/z3",
+    "version": "4.15.4"
+  }
+}

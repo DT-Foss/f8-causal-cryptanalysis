@@ -97,8 +97,9 @@ This CPU tier regenerates A107--A126 for PRESENT-128, SHA-2, FEAL-32X,
 SHACAL-2, SPARKLE, BLAKE3, ChaCha20, and SHAKE, followed by the A129--A151
 SHAKE observability, affine, algebraic, compression, symbolic, partition,
 strategy, assignment-free, and minimum-cover frontiers. Retained validation
-continues through A184, including the A179 vector-256 replay, A181 Metal replay,
-and A182--A184 fresh width-36/38/40 Metal recoveries. It then runs focused
+continues through A189, including the A179 vector-256 replay, A181 Metal replay,
+A182--A184 fresh width-36/38/40 Metal recoveries, and A185--A189 reduced-round
+direction, block-stacking, and portable-solver transfers. It then runs focused
 tests, opens all `.causal` files, and rewrites
 `research/results/v1/FULLROUND_TRANSFER_SHA256SUMS`.
 
@@ -138,6 +139,60 @@ python -m pytest -q \
 The complete `2^32`, `2^36`, `2^38`, and `2^40` production invocations,
 checkpoint semantics, frozen challenge boundaries, and expected hashes are
 recorded in the five corresponding reports under `research/reports/`.
+
+The A185 retained-artifact path regenerates and hashes all five SMT formulas,
+validates the frozen protocol and secret boundary, replays both independent
+512-bit confirmations from the stored SAT models, and opens the exact Causal
+graph without invoking Z3:
+
+```bash
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_smt_directional_round4_transfer.py \
+  --analyze-only
+PYTHONPATH=.:src python -m pytest -q \
+  tests/test_chacha20_smt_directional_round4_transfer.py
+```
+
+A186 applies the same retained-artifact policy to all six round-5 formulas,
+the complete status/statistics vector, the empty confirmation digest, and its
+Causal provenance:
+
+```bash
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_smt_directional_round5_transfer.py \
+  --analyze-only
+PYTHONPATH=.:src python -m pytest -q \
+  tests/test_chacha20_smt_directional_round5_transfer.py
+```
+
+A187--A189 reconstruct and hash all 26 predeclared formula streams, validate
+the exact status/statistics vectors, replay the A188/A189 independent
+confirmations and control rejections, open all three Causal chains, and render
+all three deterministic SVGs byte-for-byte. These commands launch no solver:
+
+```bash
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_smt_shared_key_multiblock_transfer.py \
+  --analyze-only
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_bitwuzla_round5_transfer.py \
+  --analyze-only
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_bitwuzla_round6_width20_transfer.py \
+  --analyze-only
+PYTHONPATH=.:src python \
+  research/experiments/chacha20_smt_round5_retained_figures.py --check
+PYTHONPATH=.:src python -m pytest -q \
+  tests/test_chacha20_smt_shared_key_multiblock_transfer.py \
+  tests/test_chacha20_bitwuzla_round5_transfer.py \
+  tests/test_chacha20_bitwuzla_round6_width20_transfer.py \
+  tests/test_chacha20_smt_round5_retained_figures.py
+```
+
+Explicit production portfolio executions remain separate. A188/A189 fail
+closed unless Bitwuzla 0.9.1, Z3 4.15.4, and Boolector 3.2.4 match the frozen
+versions and executable digests listed in
+`research/reproduction/EXTERNAL_DEPENDENCIES.md`.
 
 ### Extended native SHAKE
 

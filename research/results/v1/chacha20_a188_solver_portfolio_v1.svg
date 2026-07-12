@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="510" viewBox="0 0 1240 510" role="img" aria-labelledby="title desc">
+  <title id="title">A188 predeclared ChaCha5 solver portfolio</title>
+  <desc id="desc">Complete eight-variant solver portfolio showing the Bitwuzla b8 recovery and b4 prediction boundary.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #17202a; }
+    .title { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 26px; font-weight: 700; }
+    .subtitle { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #43515d; }
+    .label { font-size: 13px; }
+    .small { font-size: 11px; fill: #43515d; }
+    .value { font-size: 11px; font-weight: 700; }
+  </style>
+  <text x="36" y="43" class="title">A188 — complete predeclared solver portfolio</text>
+  <text x="36" y="70" class="subtitle">Fresh reduced ChaCha5 challenge · 40 unknown key bits · eight counter-related blocks · 5 s per variant</text>
+  <rect x="36" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="46" y="135" class="label">bitwuzla</text>
+  <text x="46" y="158" class="small">bitblast</text>
+  <text x="46" y="181" class="small">blocks = 1</text>
+  <text x="105.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="105.5" y="350" text-anchor="middle" class="small">bitwuzla bitblast b1</text>
+  <rect x="184" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="194" y="135" class="label">bitwuzla</text>
+  <text x="194" y="158" class="small">bitblast</text>
+  <text x="194" y="181" class="small">blocks = 2</text>
+  <text x="253.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="253.5" y="350" text-anchor="middle" class="small">bitwuzla bitblast b2</text>
+  <rect x="332" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="342" y="135" class="label">bitwuzla</text>
+  <text x="342" y="158" class="small">bitblast</text>
+  <text x="342" y="181" class="small">blocks = 4</text>
+  <text x="401.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="401.5" y="276" text-anchor="middle" class="small">predeclared</text>
+  <text x="401.5" y="296" text-anchor="middle" class="small">prediction view</text>
+  <text x="401.5" y="350" text-anchor="middle" class="small">bitwuzla bitblast b4</text>
+  <rect x="480" y="106" width="139" height="258" rx="8" fill="#dff3e4" stroke="#238a4b" stroke-width="2"/>
+  <text x="490" y="135" class="label">bitwuzla</text>
+  <text x="490" y="158" class="small">bitblast</text>
+  <text x="490" y="181" class="small">blocks = 8</text>
+  <text x="549.5" y="225" text-anchor="middle" class="title" fill="#238a4b">SAT</text>
+  <text x="549.5" y="258" text-anchor="middle" class="value">0x5345585503</text>
+  <text x="549.5" y="280" text-anchor="middle" class="small">4096/4096 bits</text>
+  <text x="549.5" y="300" text-anchor="middle" class="small">control rejected</text>
+  <text x="549.5" y="330" text-anchor="middle" class="value">4.856995 s</text>
+  <text x="549.5" y="350" text-anchor="middle" class="small">bitwuzla bitblast b8</text>
+  <rect x="628" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="638" y="135" class="label">bitwuzla</text>
+  <text x="638" y="158" class="small">preprop</text>
+  <text x="638" y="181" class="small">blocks = 4</text>
+  <text x="697.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="697.5" y="276" text-anchor="middle" class="small">predeclared</text>
+  <text x="697.5" y="296" text-anchor="middle" class="small">prediction view</text>
+  <text x="697.5" y="350" text-anchor="middle" class="small">bitwuzla preprop b4</text>
+  <rect x="776" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="786" y="135" class="label">bitwuzla</text>
+  <text x="786" y="158" class="small">prop</text>
+  <text x="786" y="181" class="small">blocks = 4</text>
+  <text x="845.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="845.5" y="350" text-anchor="middle" class="small">bitwuzla prop b4</text>
+  <rect x="924" y="106" width="139" height="258" rx="8" fill="#fff0d5" stroke="#c57c00" stroke-width="2"/>
+  <text x="934" y="135" class="label">z3</text>
+  <text x="934" y="158" class="small">bitblast</text>
+  <text x="934" y="181" class="small">blocks = 4</text>
+  <text x="993.5" y="225" text-anchor="middle" class="title" fill="#c57c00">INVALID</text>
+  <text x="993.5" y="270" text-anchor="middle" class="small">no status token</text>
+  <text x="993.5" y="290" text-anchor="middle" class="small">parser boundary</text>
+  <text x="993.5" y="350" text-anchor="middle" class="small">z3 bitblast b4</text>
+  <rect x="1072" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="1082" y="135" class="label">boolector</text>
+  <text x="1082" y="158" class="small">fun</text>
+  <text x="1082" y="181" class="small">blocks = 4</text>
+  <text x="1141.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="1141.5" y="350" text-anchor="middle" class="small">boolector fun b4</text>
+  <path d="M 332 390 L 332 414 L 776 414 L 776 390" fill="none" stroke="#c57c00" stroke-width="2"/>
+  <text x="554" y="438" text-anchor="middle" class="subtitle">Frozen b4 prediction not retained; the predeclared b8 view is the recovered-instance boundary.</text>
+  <text x="36" y="478" class="small">All eight variants executed in fixed order without early stop. This is reduced-round partial-key recovery, not fullround ChaCha20.</text>
+</svg>

@@ -1,0 +1,168 @@
+{
+  "schema": "chacha20-smt-directional-round5-transfer-protocol-v1",
+  "attempt_id": "A186",
+  "protocol_state": "frozen_before_any_A186_solver_execution",
+  "anchors": {
+    "A185": {
+      "artifact": "research/results/v1/chacha20_smt_directional_round4_transfer_v1.json",
+      "sha256": "d87aefa46f4b85a71ab9fd2199401975075beb0fedf1545b9dc63842126c31e0",
+      "causal_artifact": "research/results/v1/chacha20_smt_directional_round4_transfer_v1.causal",
+      "causal_sha256": "ea490a5ea59838faacddfc11ca80390e6cb87ff35943eb1e294cd1006f1e77ac",
+      "rounds": 4,
+      "unknown_key_bits": 40,
+      "confirmed_directional_variants": [
+        "split1",
+        "split2"
+      ]
+    }
+  },
+  "discovery_basis": {
+    "challenge": "A185_fresh_prospectively_frozen_round4_directional_transfer",
+    "rounds": 4,
+    "unknown_key_bits": 40,
+    "target_output_bits": 512,
+    "timeout_milliseconds_per_variant": 30000,
+    "forward": {
+      "status": "unknown",
+      "decisions": 282804,
+      "conflicts": 161603
+    },
+    "inverse": {
+      "status": "unknown",
+      "decisions": 573082,
+      "conflicts": 343505
+    },
+    "split1": {
+      "status": "sat",
+      "decisions": 76,
+      "conflicts": 5
+    },
+    "split2": {
+      "status": "sat",
+      "decisions": 69,
+      "conflicts": 36
+    },
+    "split3": {
+      "status": "unknown",
+      "decisions": 644169,
+      "conflicts": 411537
+    },
+    "selection_rule": "transfer_both_prospectively_confirmed_early_splits_and_map_every_round5_cut_with_forward_and_inverse_controls"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "a4cd7424412a4c089b04c199e20e5f25ea938ddc2b7f2fae1b08976486279ed8",
+    "control_target_words": [
+      2323119894,
+      859891344,
+      3693768965,
+      373865058,
+      307009540,
+      1222946312,
+      480405059,
+      1323236224,
+      3000130565,
+      2319476244,
+      3177821675,
+      320922106,
+      2921112950,
+      2078122668,
+      1866290217,
+      1078318959
+    ],
+    "counter": 2050379699,
+    "known_key_word1_upper24": 512601600,
+    "known_key_words_2_through_7": [
+      2703658209,
+      3663322155,
+      2351864940,
+      3494944640,
+      4008594936,
+      3707401491
+    ],
+    "known_material_derivation_label": "f8-causal:A186:chacha20:r5-direction:known-material:d87aefa46f4b85a71ab9fd2199401975075beb0fedf1545b9dc63842126c31e0",
+    "known_material_derivation_sha256": "66e2279235428a619bb591c98a489e938492ba9fda0c7510e6c5b6f5f71695c3",
+    "nonce_words": [
+      622781791,
+      4164482560,
+      3756580514
+    ],
+    "rounds": 5,
+    "target_block_sha256": "ebc68b4c3bc69c78008fa4d4f6f7aae92df8b3d5ac0aa4b466f2e5f29287bb9e",
+    "target_words": [
+      2323119895,
+      859891344,
+      3693768965,
+      373865058,
+      307009540,
+      1222946312,
+      480405059,
+      1323236224,
+      3000130565,
+      2319476244,
+      3177821675,
+      320922106,
+      2921112950,
+      2078122668,
+      1866290217,
+      1078318959
+    ],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 8,
+    "unknown_key_word1_low_value_included": false
+  },
+  "public_challenge_sha256": "1ae9e4d48c61ec31513ae34024ebc4d1d0bebba81a32459265d94f54a06ab6af",
+  "execution_plan": {
+    "complete_variant_plan_required": true,
+    "early_stop_used": false,
+    "execution_mode": "sequential_one_thread_external_Z3",
+    "external_timeout_seconds_per_variant": 40,
+    "formula_representation": "shared_define_fun_DAG",
+    "independent_confirmation": "NumPy_ChaCha5_all_512_output_bits",
+    "known_key_bits": 216,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 5,
+    "target_output_bits": 512,
+    "timeout_milliseconds_per_variant": 30000,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "variant_execution_order": [
+      "forward",
+      "inverse",
+      "split1",
+      "split2",
+      "split3",
+      "split4"
+    ],
+    "variants": [
+      "forward",
+      "inverse",
+      "split1",
+      "split2",
+      "split3",
+      "split4"
+    ],
+    "wallclock_excluded_from_canonical_result": true,
+    "z3_version": "4.15.4"
+  },
+  "execution_plan_sha256": "8cdf3acf3400f8157f198ca6e6c2474b666214cb5d4cc527b1f513f56bc4aaa6",
+  "prospective_prediction": {
+    "prediction": "at_least_one_of_split1_or_split2_returns_the_unique_fresh_round5_40_bit_assignment_within_the_fixed_budget",
+    "frozen_before_solver_execution": true,
+    "success_rule": "independently_confirmed_fresh_assignment_from_split1_or_split2_and_complete_six_variant_execution",
+    "claim_type": "prospective_round_depth_causal_direction_transfer"
+  },
+  "information_boundary": {
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_used_only_to_form_public_target_before_freeze": true,
+    "unknown_assignment_persisted_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "A186_solver_outcomes_used_before_protocol_freeze": false,
+    "variant_order_or_budget_changed_after_any_outcome": false,
+    "early_stop_permitted": false
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema": "chacha20-smt-shared-key-multiblock-transfer-protocol-v1",
+  "attempt_id": "A187",
+  "protocol_state": "frozen_before_any_A187_solver_execution",
+  "anchors": {
+    "A186": {
+      "artifact": "research/results/v1/chacha20_smt_directional_round5_transfer_v1.json",
+      "sha256": "c47722b6110bfdac9b4688454235339cdb7f297011b1e6c7f959a0c947e4a953",
+      "causal_artifact": "research/results/v1/chacha20_smt_directional_round5_transfer_v1.causal",
+      "causal_sha256": "043f2b52fd13ca8298f713e374edd1aaa720c7748daf0a4b6c39453b32dff62a",
+      "causal_graph_sha256": "41afa2b30a1eec3d2a96719ce919e802a63d83fd904e6752663acb97e7f02ab8",
+      "rounds": 5,
+      "unknown_key_bits": 40,
+      "single_block_six_view_status": "all_unknown"
+    }
+  },
+  "discovery_basis": {
+    "challenge": "A185_retained_assignment_reencoded_as_round5_shared_key_blocks",
+    "scope": "retrospective_compiler_discovery_only",
+    "full_split4_stack_10s": [
+      {"blocks": 1, "decisions": 163171, "conflicts": 117085, "formula_sha256": "202c4641aad4202aff9e470cbcfed0970fcf1993fb03ef1a7d1cfb777cf1f3bf"},
+      {"blocks": 2, "decisions": 109912, "conflicts": 77746, "formula_sha256": "4ff7aefc80248f622cfb74de72f323c6197cde3620a5b8de8143d8020beea990"},
+      {"blocks": 4, "decisions": 14838, "conflicts": 9672, "formula_sha256": "166329bd4f5bc3d0839199390c4015731aaea6fdb80e430b696dbba4cfaccb33"},
+      {"blocks": 8, "decisions": 5451, "conflicts": 2099, "formula_sha256": "17fa9abe89387edd2eef518cb7c81c92f5fef08a0b675ebaa93d7daa754810b4"},
+      {"blocks": 16, "decisions": 3810, "conflicts": 900, "formula_sha256": "e57dcfeadae79c33d8c98ba7b718cae3e14d209d6c032d80e1e6bbbf1bbeb3df"}
+    ],
+    "fixed_512_observed_bits_10s": [
+      {"blocks": 1, "words_per_block": 16, "decisions": 103126, "conflicts": 57730, "formula_sha256": "570d1b7493815e0f7d7e338d496f92c031ae5d5a918eeb03257f46360a8295f5"},
+      {"blocks": 2, "words_per_block": 8, "decisions": 120665, "conflicts": 80357, "formula_sha256": "01a05b3a155fbbfc8c5c183bfc542e7f117e23fd277a33c10f3d353c5c862ee2"},
+      {"blocks": 4, "words_per_block": 4, "decisions": 16411, "conflicts": 11933, "formula_sha256": "7426cfbaf9dffc9ffc36541a6cd72ecfae74373604110009dc1896a5e2d6700b"},
+      {"blocks": 8, "words_per_block": 2, "decisions": 13871, "conflicts": 6721, "formula_sha256": "57ae94f288eb93cf56870610e29fe4f06e14e0f0b5702db4c989c28bf33f1013"},
+      {"blocks": 16, "words_per_block": 1, "decisions": 73455, "conflicts": 62685, "formula_sha256": "3b1f9f772238bbfa1b21c8d135be04d19ee02ae42c640e11228626734c4bc21f"}
+    ],
+    "fixed_rlimit_order_factorial": {
+      "rlimit": 5000000,
+      "minimum_decisions": 540,
+      "minimum_order": [7, 6, 5, 4, 3, 2, 1, 0],
+      "maximum_decisions": 2184,
+      "maximum_order": [0, 4, 2, 6, 1, 5, 3, 7],
+      "decision_ratio": 4.044444444444444
+    },
+    "correct_prefix_cube_frontier_5s": {
+      "free_12_bits": "unknown",
+      "free_8_bits": "sat_and_512_bit_confirmed",
+      "selection_consequence": "do_not_promote_cubing_as_complete_40_bit_algorithm"
+    },
+    "modular_delta_b8_10s": {
+      "status": "unknown",
+      "decisions": 5772,
+      "conflicts": 1533,
+      "formula_sha256": "90b70cf57a4e9df45d679a74a87c9f2cdf730c1e874f2ab2de067e242e56f15d"
+    },
+    "selection_rule": "prospectively_transfer_block_stacking_fixed_information_compression_and_modular_delta_encodings_to_one_fresh_hidden_assignment"
+  },
+  "public_challenge": {
+    "block_count": 8,
+    "control_target_block_sha256": "7ae03d1569929bc02773867ac514f8f428246867932b668545131adc5118669f",
+    "control_target_words": [1620774172, 2473244648, 800743865, 1510369293, 1398497411, 2869459435, 3453990499, 2947400438, 2759126778, 1901714789, 2848451672, 1069819745, 4130478231, 3503657733, 1165351445, 2404541343],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 1081719213,
+    "known_key_word1_upper24": 3865692928,
+    "known_key_words_2_through_7": [2880198170, 2473624424, 189888905, 1486567366, 4061353297, 2525966663],
+    "known_material_derivation_label": "f8-causal:A187:chacha20:r5-multiblock:known-material:c47722b6110bfdac9b4688454235339cdb7f297011b1e6c7f959a0c947e4a953",
+    "known_material_derivation_sha256": "3601335d1f54c775dfed03db9421ab83965d2c07407ac796ed89b686fe0da488",
+    "nonce_words": [2157063222, 611336699, 3535074228],
+    "rounds": 5,
+    "target_block_sha256": [
+      "54980dbdbce5b5dc816f7bfe2e5441ed7d1886e42644b9391e281db44ca7474b",
+      "4a221a29f67355904d93ff1541366e16877800fc546b7f46e0be2c22df0ac081",
+      "d22b5855b65d49944c69c5da001b0f988d7e11e491e82c79dcedfdcb9e12611c",
+      "2425166f67b8f9f7b24f83cbb1bcbcd3d3811ea70213d545cfa5c0023d82ae6c",
+      "9bdd35e1a8c7090e6bfec7d906e530063228ded57e23a43857d70e22ccf58761",
+      "20636a4c75cbd2cb5b114a53756523be7fd0a94ea57b355945b5b7e836259823",
+      "1357c9ad77fc6a6319aa41c64e534963630d5d9a6aa75f43492c4a44a5ec84c5",
+      "f6efecfb2f89fcddbaaf00a6f1eab5b202edcbce798d28b4e7da1f7c721311a3"
+    ],
+    "target_words": [
+      [1620774173, 2473244648, 800743865, 1510369293, 1398497411, 2869459435, 3453990499, 2947400438, 2759126778, 1901714789, 2848451672, 1069819745, 4130478231, 3503657733, 1165351445, 2404541343],
+      [2337411835, 3632932483, 3751589021, 716282117, 2620220444, 712856503, 1551788215, 2696306942, 2307485588, 1929429298, 3749995815, 889181442, 3438379967, 1527440560, 3572716312, 3870422758],
+      [2221043858, 2075758934, 956220675, 1606758082, 1467862341, 569642640, 2494384221, 690250478, 2521127948, 1617157439, 254119480, 3669345860, 1586559026, 2380991764, 3877526134, 874892007],
+      [2761874538, 2960505230, 2944034217, 2747520059, 4197039347, 991140191, 554192827, 678641521, 3793949501, 2085177427, 223145133, 2111818384, 85511529, 543916707, 3109488764, 305311966],
+      [2294495067, 2195975921, 3670081888, 1068885128, 1611502577, 3981509608, 2743420792, 3525263776, 3236426723, 3158337810, 1432921964, 557060028, 3847813662, 2607294220, 836946458, 684368038],
+      [4165914092, 701301541, 383415900, 999571699, 3034340716, 2413157641, 3709697711, 3464211932, 4075678611, 1646168400, 290781447, 3448923873, 3791772847, 1520439821, 3592291575, 1352072947],
+      [1376544439, 1823587662, 1143491707, 2162670272, 735667705, 4160813861, 2641676333, 128704218, 3355811459, 1390779488, 3084220520, 3563953922, 3181770611, 3968195497, 147444728, 3078288851],
+      [1325632441, 848269655, 1733439483, 3909953940, 1472676920, 3741306364, 3472212777, 3085260884, 2195323083, 1621993866, 3475365430, 2133845842, 977426966, 1255088105, 860890229, 2951984394]
+    ],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 8,
+    "unknown_key_word1_low_value_included": false
+  },
+  "public_challenge_sha256": "4ac8ea6d3f6fd61d3877fd63558e18dd3667fab700d74cc1637101c22193eb6c",
+  "execution_plan": {
+    "complete_variant_plan_required": true,
+    "early_stop_used": false,
+    "execution_mode": "sequential_one_thread_external_Z3_fixed_rlimit",
+    "external_timeout_seconds_per_variant": 40,
+    "formula_representation": "shared_define_fun_DAG_with_block_prefixes",
+    "known_key_bits": 216,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 5,
+    "solver_tactic": "simplify_then_solve_eqs_then_bit_blast_then_sat",
+    "target_output_bits_per_block": 512,
+    "timeout_milliseconds_per_variant": 30000,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "variant_execution_order": ["split4_full_b1", "split4_full_b2", "split4_full_b4", "split4_full_b8", "split4_sparse512_b2", "split4_sparse512_b4", "split4_sparse512_b8", "forward_delta_b2", "forward_delta_b4", "forward_delta_b8"],
+    "variants": ["split4_full_b1", "split4_full_b2", "split4_full_b4", "split4_full_b8", "split4_sparse512_b2", "split4_sparse512_b4", "split4_sparse512_b8", "forward_delta_b2", "forward_delta_b4", "forward_delta_b8"],
+    "z3_rlimit_per_variant": 10000000,
+    "z3_version": "4.15.4"
+  },
+  "execution_plan_sha256": "0df1a9768f16a21339b53dd1c33303b23149c0af942577757329ce00da6d711d",
+  "prospective_prediction": {
+    "prediction": "fresh_shared_key_block_stacking_reduces_both_decisions_and_conflicts_at_b8_relative_to_b1_under_identical_fixed_rlimit_and_fixed_semantics",
+    "secondary_prediction": "at_least_one_fixed_512_bit_sparse_multiblock_view_reduces_both_decisions_and_conflicts_relative_to_the_full_b1_512_bit_baseline",
+    "frozen_before_solver_execution": true,
+    "success_rule": "complete_ten_variant_execution_and_both_predeclared_search_shape_inequalities",
+    "sat_models_if_any_must_match_every_constituent_512_bit_block": true,
+    "claim_type": "prospective_shared_key_causal_stacking_transfer"
+  },
+  "information_boundary": {
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_used_only_to_form_eight_public_targets_before_freeze": true,
+    "unknown_assignment_persisted_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "A187_solver_outcomes_used_before_protocol_freeze": false,
+    "variant_order_or_budget_changed_after_any_outcome": false,
+    "early_stop_permitted": false
+  }
+}

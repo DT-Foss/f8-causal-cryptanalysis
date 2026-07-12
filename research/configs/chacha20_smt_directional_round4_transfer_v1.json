@@ -1,0 +1,84 @@
+{
+  "schema": "chacha20-smt-directional-round4-transfer-protocol-v1",
+  "attempt_id": "A185",
+  "protocol_state": "frozen_before_any_A185_solver_execution",
+  "anchors": {
+    "A184": {
+      "artifact": "research/results/v1/chacha20_metal_width40_partial_key_recovery_v1.json",
+      "sha256": "d467c06105d4a4afba9efaa7bdf6c4e58754b034d4640907486c778ad17e12a9",
+      "causal_artifact": "research/results/v1/chacha20_metal_width40_partial_key_recovery_v1.causal",
+      "causal_sha256": "b37bc0234966185e06eb15ae6926502535b0c50271b01f0b6bd8fe5394dabd0f",
+      "fullround_unknown_key_bits": 40,
+      "complete_domain_executed": true
+    }
+  },
+  "discovery_basis": {
+    "challenge": "A184_known_recovered_assignment_reduced_round_diagnostic",
+    "rounds": 3,
+    "unknown_key_bits": 40,
+    "target_output_bits": 512,
+    "timeout_milliseconds": 30000,
+    "forward": {"status": "unknown", "decisions": 624545, "conflicts": 434391},
+    "inverse": {"status": "sat", "decisions": 1, "volatile_seconds": 0.06508620828390121},
+    "split1": {"status": "sat", "decisions": 1, "volatile_seconds": 0.0286266659386456},
+    "split2": {"status": "sat", "decisions": 1, "volatile_seconds": 0.03879633313044906},
+    "selection_rule": "transfer_all_three_sat_directions_plus_forward_control_to_a_fresh_round4_challenge"
+  },
+  "public_challenge": {
+    "control_target_block_sha256": "54a1cd0a046e81d6fdb4f2bf637ddeb96715e3ccfdc47afd07863e50258061c2",
+    "control_target_words": [4273390610, 2038489739, 1307314613, 3382255868, 3075169381, 3212024352, 4037013298, 560257615, 2715081784, 3169360902, 3179597857, 1233900044, 1204265052, 966276486, 1821539836, 3893261701],
+    "counter": 2815690776,
+    "known_key_word1_upper24": 2399935232,
+    "known_key_words_2_through_7": [2604420234, 557290727, 3886814758, 2162898117, 1792708585, 3299501353],
+    "known_material_derivation_label": "f8-causal:A185:chacha20:r4-direction:known-material:d467c06105d4a4afba9efaa7bdf6c4e58754b034d4640907486c778ad17e12a9",
+    "known_material_derivation_sha256": "04f9b57b70db9574c05e35830b5362d0ab433eec1eb16b400923f6dc76f0160a",
+    "nonce_words": [2360016014, 2477948166, 2574760257],
+    "rounds": 4,
+    "target_block_sha256": "0f577a89f5049326db0f8494f97d6e51db03315354efbb98732458a132cde154",
+    "target_words": [4273390611, 2038489739, 1307314613, 3382255868, 3075169381, 3212024352, 4037013298, 560257615, 2715081784, 3169360902, 3179597857, 1233900044, 1204265052, 966276486, 1821539836, 3893261701],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 8,
+    "unknown_key_word1_low_value_included": false
+  },
+  "public_challenge_sha256": "d477f28da2dc9fb87e124127ba7518ef90083a0ac6bf10c61fd3ef91e50ff9f7",
+  "execution_plan": {
+    "complete_variant_plan_required": true,
+    "early_stop_used": false,
+    "execution_mode": "sequential_one_thread_external_Z3",
+    "external_timeout_seconds_per_variant": 40,
+    "formula_representation": "shared_define_fun_DAG",
+    "independent_confirmation": "NumPy_ChaCha4_all_512_output_bits",
+    "known_key_bits": 216,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 4,
+    "target_output_bits": 512,
+    "timeout_milliseconds_per_variant": 30000,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "variant_execution_order": ["forward", "inverse", "split1", "split2", "split3"],
+    "variants": ["forward", "inverse", "split1", "split2", "split3"],
+    "wallclock_excluded_from_canonical_result": true,
+    "z3_version": "4.15.4"
+  },
+  "execution_plan_sha256": "3160f3c45617a04b99530a9d139b1eb00501a8e0f4485c3e021669c809d87a8f",
+  "prospective_prediction": {
+    "prediction": "at_least_one_inverse_or_split_view_returns_the_unique_fresh_40_bit_assignment_within_the_fixed_budget_while_the_forward_view_remains_strictly_more_expensive",
+    "frozen_before_solver_execution": true,
+    "success_rule": "independently_confirmed_fresh_assignment_from_an_inverse_or_split_view_and_complete_five_variant_execution",
+    "claim_type": "prospective_causal_direction_transfer"
+  },
+  "information_boundary": {
+    "unknown_assignment_generated_once_from_os_randomness": true,
+    "unknown_assignment_used_only_to_form_public_target_before_freeze": true,
+    "unknown_assignment_persisted_before_execution": false,
+    "unknown_assignment_in_protocol_or_source": false,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "A185_solver_outcomes_used_before_protocol_freeze": false,
+    "variant_order_or_budget_changed_after_any_outcome": false,
+    "early_stop_permitted": false
+  }
+}

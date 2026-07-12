@@ -19,3 +19,20 @@ Hashes on 2026-07-10:
 The reproduction runner prefers the frozen bundle and records its hash in every
 run. The sibling path remains only as a discovery fallback if the bundle is
 absent.
+
+## A188/A189 external SMT portfolios
+
+A188/A189 production portfolios use three external command-line solvers. They
+are not pip dependencies and are not vendored. The frozen protocols and runners
+gate the exact version, executable digest, and command-line mode:
+
+| Solver | Version | Executable SHA-256 | Production mode |
+|---|---|---|---|
+| Bitwuzla | 0.9.1 | `9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a` | bitblast/preprop with CaDiCaL; prop control |
+| Z3 | 4.15.4 | `ae6c8df33db9c9ae9a80b6044e77cd66529a141d8b25f0620f1e89b409594f48` | SMT-LIB2 stdin with five-second CLI wall limit |
+| Boolector | 3.2.4 | `ad08034940a968ab4641fd885c75a98220685443240224500b6de0ab23f11edb` | `fun` engine with Lingeling |
+
+The retained-artifact tests rebuild all portable SMT-LIB2 bytes and validate
+the stored solver identity records without invoking these executables. An
+explicit new portfolio execution fails closed unless all three identities match
+the applicable frozen protocol.

@@ -9,7 +9,6 @@ import zipfile
 from pathlib import Path
 from urllib.parse import unquote
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SKIP_PARTS = {".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache"}
 TEXT_SUFFIXES = {
@@ -167,6 +166,43 @@ def main() -> int:
         "scripts/reproduce_shake_solver_frontier.sh",
         "PATENT_NOTICE.md",
     ]
+    retained_chacha_transfers = {
+        "chacha20_smt_directional_round4_transfer": (
+            "CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND4_TRANSFER_V1.md"
+        ),
+        "chacha20_smt_directional_round5_transfer": (
+            "CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND5_BOUNDARY_V1.md"
+        ),
+        "chacha20_smt_shared_key_multiblock_transfer": (
+            "CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md"
+        ),
+        "chacha20_bitwuzla_round5_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md"
+        ),
+        "chacha20_bitwuzla_round6_width20_transfer": (
+            "CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md"
+        ),
+    }
+    for stem, report in retained_chacha_transfers.items():
+        required.extend(
+            [
+                f"research/configs/{stem}_v1.json",
+                f"research/experiments/{stem}.py",
+                f"research/reports/{report}",
+                f"research/results/v1/{stem}_v1.json",
+                f"research/results/v1/{stem}_v1.causal",
+                f"tests/test_{stem}.py",
+            ]
+        )
+    required.extend(
+        [
+            "research/experiments/chacha20_smt_round5_retained_figures.py",
+            "research/results/v1/chacha20_a187_fixed_rlimit_search_shape_v1.svg",
+            "research/results/v1/chacha20_a188_solver_portfolio_v1.svg",
+            "research/results/v1/chacha20_a189_round6_width20_portfolio_v1.svg",
+            "tests/test_chacha20_smt_round5_retained_figures.py",
+        ]
+    )
     for item in required:
         if not (ROOT / item).is_file():
             failures.append(f"missing publication file: {item}")

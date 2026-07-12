@@ -252,9 +252,11 @@ mkdir -p research/results/v1
 # and A172--A176 contain four each. They are retained and hash-gated here; their
 # dedicated reports give the explicit long-run commands. A177's SHAKE256,
 # A178's ChaCha20 recovery, A179's vector-256 equivalence, A181's Apple M4
-# Metal equivalence, and A182--A184's fresh Metal width-36/38/40 recovery
-# complete-domain executions are also retained and hash-gated here. A160 and
-# A162 are regenerated; A171 and A180 are intentionally unused.
+# Metal equivalence, A182--A184's fresh Metal width-36/38/40 recovery, and
+# A185--A189's reduced-round direction, shared-key stacking, and portable solver
+# portfolios are also retained and hash-gated here. Their focused tests never
+# repeat the production solver or complete-domain executions. A160 and A162 are
+# regenerated; A171 and A180 are intentionally unused.
 .venv/bin/pytest -q \
   tests/test_blake3_fullcompression_reader.py \
   tests/test_blake3_output_borrow_spectrum.py \
@@ -266,6 +268,12 @@ mkdir -p research/results/v1
   tests/test_chacha20_metal_width36_partial_key_recovery.py \
   tests/test_chacha20_metal_width38_partial_key_recovery.py \
   tests/test_chacha20_metal_width40_partial_key_recovery.py \
+  tests/test_chacha20_smt_directional_round4_transfer.py \
+  tests/test_chacha20_smt_directional_round5_transfer.py \
+  tests/test_chacha20_smt_shared_key_multiblock_transfer.py \
+  tests/test_chacha20_bitwuzla_round5_transfer.py \
+  tests/test_chacha20_bitwuzla_round6_width20_transfer.py \
+  tests/test_chacha20_smt_round5_retained_figures.py \
   tests/test_shake_fullround_rate_reader.py \
   tests/test_shake_capacity_jacobian_reader.py \
   tests/test_shake_capacity_window_inference.py \
@@ -487,6 +495,24 @@ mkdir -p research/results/v1
   research/results/v1/chacha20_metal_width38_partial_key_recovery_v1.causal \
   research/configs/chacha20_metal_width40_partial_key_recovery_v1.json \
   research/results/v1/chacha20_metal_width40_partial_key_recovery_v1.json \
-  research/results/v1/chacha20_metal_width40_partial_key_recovery_v1.causal
+  research/results/v1/chacha20_metal_width40_partial_key_recovery_v1.causal \
+  research/configs/chacha20_smt_directional_round4_transfer_v1.json \
+  research/results/v1/chacha20_smt_directional_round4_transfer_v1.json \
+  research/results/v1/chacha20_smt_directional_round4_transfer_v1.causal \
+  research/configs/chacha20_smt_directional_round5_transfer_v1.json \
+  research/results/v1/chacha20_smt_directional_round5_transfer_v1.json \
+  research/results/v1/chacha20_smt_directional_round5_transfer_v1.causal \
+  research/configs/chacha20_smt_shared_key_multiblock_transfer_v1.json \
+  research/results/v1/chacha20_smt_shared_key_multiblock_transfer_v1.json \
+  research/results/v1/chacha20_smt_shared_key_multiblock_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round5_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round5_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round5_transfer_v1.causal \
+  research/configs/chacha20_bitwuzla_round6_width20_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round6_width20_transfer_v1.json \
+  research/results/v1/chacha20_bitwuzla_round6_width20_transfer_v1.causal \
+  research/results/v1/chacha20_a187_fixed_rlimit_search_shape_v1.svg \
+  research/results/v1/chacha20_a188_solver_portfolio_v1.svg \
+  research/results/v1/chacha20_a189_round6_width20_portfolio_v1.svg
 
-echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, shared-encoder, native width-32, partial-key, vector-packing, Metal, width-36, width-38 and width-40 mechanisms validated."
+echo "PRESENT-128, SHA-2, FEAL-32X, SHACAL-2, SPARKLE, BLAKE3, ChaCha20 and SHAKE endpoint, prospective, affine-basis, shared-encoder, native width-32, partial-key, vector-packing, Metal width-36/38/40, reduced-round SMT direction, shared-key stacking and portable solver portfolio mechanisms validated."

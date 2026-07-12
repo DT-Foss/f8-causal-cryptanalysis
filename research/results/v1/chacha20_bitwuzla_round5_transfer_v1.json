@@ -1,0 +1,811 @@
+{
+  "anchor_gates": {
+    "A187_causal_graph_sha256": "3d4a769c40a1be6ff8b697bbd73b42b7ee89b840a2494d9e71907415d1542d50",
+    "A187_causal_provenance_verified": true,
+    "A187_causal_sha256": "6c3eda1c3f84cac90bf04e63267728cd88581f73f85fe18e971e72caa67fd68d",
+    "A187_prospective_stacking_transfer_retained": true,
+    "A187_result_sha256": "ec00786b9e778b3914cc2594919da11b763cfffa72f71fa110c2c90dc8e9e3e3"
+  },
+  "attempt_id": "A188",
+  "causal": {
+    "explicit_triplets": 6,
+    "file_sha256": "a717e615cfc005fe985a24059f7e6bedcd8008c460b274bb313f6ddfc53e7c78",
+    "graph_sha256": "4db3b36f5a6b6c89d14905c861e6bb91035b5f5a9843af3345baf142dee294eb",
+    "provenance_verified": true,
+    "stats": {
+      "bytes": 4335,
+      "explicit_triplets": 6,
+      "file_sha256": "a717e615cfc005fe985a24059f7e6bedcd8008c460b274bb313f6ddfc53e7c78",
+      "graph_sha256": "4db3b36f5a6b6c89d14905c861e6bb91035b5f5a9843af3345baf142dee294eb",
+      "inferred_triplets": 0,
+      "triplets": 6
+    }
+  },
+  "comparison_sha256": "c0af73824da47d80d8ca9b16ec4dda937113fcf831d200c2a8f7d76d12afd8e3",
+  "comparisons": {
+    "fully_confirmed_assignments": [
+      357645702403
+    ],
+    "predicted_assignments_identical": false,
+    "predicted_variants": [
+      "bitwuzla_bitblast_b4",
+      "bitwuzla_preprop_b4"
+    ],
+    "predicted_variants_confirmed": [],
+    "prospective_prediction_retained": false
+  },
+  "confirmation_sha256": "fbc625b84b07f0e0b241da42e5773073123309b297ff92075cffe87e84abf2dc",
+  "confirmations": [
+    {
+      "all_blocks_match": true,
+      "block_count_checked": 8,
+      "block_matches": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "candidate_block_sha256": [
+        "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+        "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+        "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+        "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+        "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+        "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+        "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+        "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+      ],
+      "combined_assignment": 357645702403,
+      "control_first_block_match": false,
+      "implementation": "independent_NumPy_ChaCha5_blocks",
+      "key_word0": 1163416835,
+      "key_word1_low_value": 83,
+      "output_bits_checked": 4096,
+      "variant": "bitwuzla_bitblast_b8"
+    }
+  ],
+  "evidence_stage": "CROSS_ENGINE_ROUND5_RECOVERY_BOUNDARY_RETAINED",
+  "execution": {
+    "complete_variant_plan_executed": true,
+    "early_stop_used": false,
+    "fully_confirmed_assignment_count": 1,
+    "fully_confirmed_assignments": [
+      357645702403
+    ],
+    "observations": [
+      {
+        "block_count": 1,
+        "command": [
+          "/opt/homebrew/bin/bitwuzla",
+          "--lang",
+          "smt2",
+          "--time-limit",
+          "5000",
+          "--produce-models",
+          "--bv-output-format",
+          "16",
+          "--bv-solver",
+          "bitblast",
+          "--sat-solver",
+          "cadical"
+        ],
+        "engine": "bitwuzla",
+        "externally_timed_out": false,
+        "formula_bytes": 12361,
+        "formula_sha256": "b9174703c57ecd7dbbfb42f43f475c2b1b6d07d70622e5611be890eb3281748a",
+        "mode": "bitblast",
+        "model": null,
+        "returncode": 0,
+        "statistics": {},
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+        "variant": "bitwuzla_bitblast_b1",
+        "volatile_seconds": 5.0096407500095665
+      },
+      {
+        "block_count": 2,
+        "command": [
+          "/opt/homebrew/bin/bitwuzla",
+          "--lang",
+          "smt2",
+          "--time-limit",
+          "5000",
+          "--produce-models",
+          "--bv-output-format",
+          "16",
+          "--bv-solver",
+          "bitblast",
+          "--sat-solver",
+          "cadical"
+        ],
+        "engine": "bitwuzla",
+        "externally_timed_out": false,
+        "formula_bytes": 23780,
+        "formula_sha256": "c145e87c596d79fe3bed63e5c805740fffbc65263856a9c2d141dd0666b03b4d",
+        "mode": "bitblast",
+        "model": null,
+        "returncode": 0,
+        "statistics": {},
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+        "variant": "bitwuzla_bitblast_b2",
+        "volatile_seconds": 5.007607291918248
+      },
+      {
+        "block_count": 4,
+        "command": [
+          "/opt/homebrew/bin/bitwuzla",
+          "--lang",
+          "smt2",
+          "--time-limit",
+          "5000",
+          "--produce-models",
+          "--bv-output-format",
+          "16",
+          "--bv-solver",
+          "bitblast",
+          "--sat-solver",
+          "cadical"
+        ],
+        "engine": "bitwuzla",
+        "externally_timed_out": false,
+        "formula_bytes": 46618,
+        "formula_sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+        "mode": "bitblast",
+        "model": null,
+        "returncode": 0,
+        "statistics": {},
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+        "variant": "bitwuzla_bitblast_b4",
+        "volatile_seconds": 5.017956665717065
+      },
+      {
+        "block_count": 8,
+        "command": [
+          "/opt/homebrew/bin/bitwuzla",
+          "--lang",
+          "smt2",
+          "--time-limit",
+          "5000",
+          "--produce-models",
+          "--bv-output-format",
+          "16",
+          "--bv-solver",
+          "bitblast",
+          "--sat-solver",
+          "cadical"
+        ],
+        "engine": "bitwuzla",
+        "externally_timed_out": false,
+        "formula_bytes": 92294,
+        "formula_sha256": "004bbb7ef6ab6ab19898dface90ad7bee953e5a9ca5a3134fab41ac275bae590",
+        "mode": "bitblast",
+        "model": {
+          "combined_assignment": 357645702403,
+          "key_word0": 1163416835,
+          "key_word1_low_value": 83
+        },
+        "returncode": 0,
+        "statistics": {},
+        "status": "sat",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ac67390cfb0ea340f91cf57c9c04270157309646cba01f447d2a6b5263e43800",
+        "variant": "bitwuzla_bitblast_b8",
+        "volatile_seconds": 4.856995374895632
+      },
+      {
+        "block_count": 4,
+        "command": [
+          "/opt/homebrew/bin/bitwuzla",
+          "--lang",
+          "smt2",
+          "--time-limit",
+          "5000",
+          "--produce-models",
+          "--bv-output-format",
+          "16",
+          "--bv-solver",
+          "preprop",
+          "--sat-solver",
+          "cadical"
+        ],
+        "engine": "bitwuzla",
+        "externally_timed_out": false,
+        "formula_bytes": 46618,
+        "formula_sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+        "mode": "preprop",
+        "model": null,
+        "returncode": 0,
+        "statistics": {},
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+        "variant": "bitwuzla_preprop_b4",
+        "volatile_seconds": 5.01153774978593
+      },
+      {
+        "block_count": 4,
+        "command": [
+          "/opt/homebrew/bin/bitwuzla",
+          "--lang",
+          "smt2",
+          "--time-limit",
+          "5000",
+          "--produce-models",
+          "--bv-output-format",
+          "16",
+          "--bv-solver",
+          "prop"
+        ],
+        "engine": "bitwuzla",
+        "externally_timed_out": false,
+        "formula_bytes": 46618,
+        "formula_sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+        "mode": "prop",
+        "model": null,
+        "returncode": 0,
+        "statistics": {},
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "7f51b4fb44dbc72708fac0a474600c2e9d8af4ce3a8b8f1680330454f6a8d68f",
+        "variant": "bitwuzla_prop_b4",
+        "volatile_seconds": 5.0179242910817266
+      },
+      {
+        "block_count": 4,
+        "command": [
+          "/opt/homebrew/bin/z3",
+          "-in",
+          "-st",
+          "-T:5"
+        ],
+        "engine": "z3",
+        "externally_timed_out": false,
+        "formula_bytes": 46618,
+        "formula_sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+        "mode": "bitblast",
+        "model": null,
+        "returncode": 0,
+        "statistics": {
+          "rlimit-count": 55402653
+        },
+        "status": "invalid",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c1633c5a41eeb3842f6e0ad51772b115ca1524ac2ca6d1245e8da8509318a41c",
+        "variant": "z3_bitblast_b4",
+        "volatile_seconds": 5.019524584058672
+      },
+      {
+        "block_count": 4,
+        "command": [
+          "/opt/homebrew/bin/boolector",
+          "--smt2",
+          "--time=5",
+          "--model-gen",
+          "--hex",
+          "--engine=fun",
+          "--sat-engine=lingeling"
+        ],
+        "engine": "boolector",
+        "externally_timed_out": false,
+        "formula_bytes": 46618,
+        "formula_sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+        "mode": "fun",
+        "model": null,
+        "returncode": 0,
+        "statistics": {},
+        "status": "unknown",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "af7e4b84674ac9dde231aaff66ebc2e5cde8a4b12d78fbf0e44a07be6fc1fe5c",
+        "variant": "boolector_fun_b4",
+        "volatile_seconds": 5.0089844590984285
+      }
+    ],
+    "returned_model_count": 1,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "variant_order": [
+      "bitwuzla_bitblast_b1",
+      "bitwuzla_bitblast_b2",
+      "bitwuzla_bitblast_b4",
+      "bitwuzla_bitblast_b8",
+      "bitwuzla_preprop_b4",
+      "bitwuzla_prop_b4",
+      "z3_bitblast_b4",
+      "boolector_fun_b4"
+    ]
+  },
+  "execution_plan": {
+    "complete_variant_plan_required": true,
+    "early_stop_used": false,
+    "execution_mode": "sequential_external_solver_portfolio",
+    "external_timeout_seconds_per_variant": 8,
+    "formula_representation": "portable_SMTLIB2_shared_define_fun_DAG",
+    "known_key_bits": 216,
+    "primitive": "ChaCha20_block_function",
+    "rounds": 5,
+    "solver_time_limit_milliseconds_per_variant": 5000,
+    "target_output_bits_per_block": 512,
+    "unknown_assignment_available_to_runner_before_execution": false,
+    "unknown_key_bits": 40,
+    "variant_execution_order": [
+      "bitwuzla_bitblast_b1",
+      "bitwuzla_bitblast_b2",
+      "bitwuzla_bitblast_b4",
+      "bitwuzla_bitblast_b8",
+      "bitwuzla_preprop_b4",
+      "bitwuzla_prop_b4",
+      "z3_bitblast_b4",
+      "boolector_fun_b4"
+    ],
+    "variants": [
+      "bitwuzla_bitblast_b1",
+      "bitwuzla_bitblast_b2",
+      "bitwuzla_bitblast_b4",
+      "bitwuzla_bitblast_b8",
+      "bitwuzla_preprop_b4",
+      "bitwuzla_prop_b4",
+      "z3_bitblast_b4",
+      "boolector_fun_b4"
+    ]
+  },
+  "execution_plan_sha256": "f19a7653d73ee4bc2f66bba609766c3d5a7c037bcb009ed69d839378ebb5e0cf",
+  "execution_sha256": "a340a50456ce9f0fbf7e80abebf5cfd85ebb34bce99bc8632afbeaeea23dcffb",
+  "formula_plan": [
+    {
+      "block_count": 1,
+      "block_definition_order": [
+        0
+      ],
+      "bytes": 12361,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "bitwuzla",
+      "mode": "bitblast",
+      "portable_smtlib2": true,
+      "sha256": "b9174703c57ecd7dbbfb42f43f475c2b1b6d07d70622e5611be890eb3281748a",
+      "variant": "bitwuzla_bitblast_b1"
+    },
+    {
+      "block_count": 2,
+      "block_definition_order": [
+        1,
+        0
+      ],
+      "bytes": 23780,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "bitwuzla",
+      "mode": "bitblast",
+      "portable_smtlib2": true,
+      "sha256": "c145e87c596d79fe3bed63e5c805740fffbc65263856a9c2d141dd0666b03b4d",
+      "variant": "bitwuzla_bitblast_b2"
+    },
+    {
+      "block_count": 4,
+      "block_definition_order": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 46618,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "bitwuzla",
+      "mode": "bitblast",
+      "portable_smtlib2": true,
+      "sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+      "variant": "bitwuzla_bitblast_b4"
+    },
+    {
+      "block_count": 8,
+      "block_definition_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 92294,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "bitwuzla",
+      "mode": "bitblast",
+      "portable_smtlib2": true,
+      "sha256": "004bbb7ef6ab6ab19898dface90ad7bee953e5a9ca5a3134fab41ac275bae590",
+      "variant": "bitwuzla_bitblast_b8"
+    },
+    {
+      "block_count": 4,
+      "block_definition_order": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 46618,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "bitwuzla",
+      "mode": "preprop",
+      "portable_smtlib2": true,
+      "sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+      "variant": "bitwuzla_preprop_b4"
+    },
+    {
+      "block_count": 4,
+      "block_definition_order": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 46618,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "bitwuzla",
+      "mode": "prop",
+      "portable_smtlib2": true,
+      "sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+      "variant": "bitwuzla_prop_b4"
+    },
+    {
+      "block_count": 4,
+      "block_definition_order": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 46618,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "z3",
+      "mode": "bitblast",
+      "portable_smtlib2": true,
+      "sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+      "variant": "z3_bitblast_b4"
+    },
+    {
+      "block_count": 4,
+      "block_definition_order": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "bytes": 46618,
+      "declaration_order": [
+        "lo8",
+        "k0"
+      ],
+      "engine": "boolector",
+      "mode": "fun",
+      "portable_smtlib2": true,
+      "sha256": "edf3d3cabda04fc470f9482fbcdcfffa327dc4718fddfb97b61d7a40219bfae1",
+      "variant": "boolector_fun_b4"
+    }
+  ],
+  "formula_plan_sha256": "ef6b1485e607c44e1895d80c0d8f81c8c3ffd6a3976d8e6577c40926fe8f408b",
+  "parameters": {
+    "known_key_bits": 216,
+    "maximum_block_count": 8,
+    "rounds": 5,
+    "solver_time_limit_milliseconds": 5000,
+    "unknown_key_bits": 40,
+    "variants": [
+      "bitwuzla_bitblast_b1",
+      "bitwuzla_bitblast_b2",
+      "bitwuzla_bitblast_b4",
+      "bitwuzla_bitblast_b8",
+      "bitwuzla_preprop_b4",
+      "bitwuzla_prop_b4",
+      "z3_bitblast_b4",
+      "boolector_fun_b4"
+    ]
+  },
+  "protocol_gate": {
+    "artifact_sha256": "73d029af9d75d6d463d03b311b8c5cff66fe42219685a35024a430b6f31cb2ef",
+    "discovery_basis": {
+      "bitwuzla_bitblast_cadical": {
+        "all_2048_target_bits_confirmed": true,
+        "control_rejected": true,
+        "recovered_assignment": 28803648445,
+        "recovered_assignment_hex": "0x06b4d75cbd",
+        "status": "sat",
+        "stdout_sha256": "e3207028ce3b7301cd40f558123cf0fbd76bb19877a9b96cd263a39a60b14737",
+        "version": "0.9.1",
+        "volatile_seconds": 2.026858082972467
+      },
+      "bitwuzla_preprop_cadical": {
+        "all_2048_target_bits_confirmed": true,
+        "control_rejected": true,
+        "recovered_assignment": 28803648445,
+        "status": "sat",
+        "stdout_sha256": "e3207028ce3b7301cd40f558123cf0fbd76bb19877a9b96cd263a39a60b14737",
+        "version": "0.9.1",
+        "volatile_seconds": 2.0137522500008345
+      },
+      "block_count": 4,
+      "challenge": "A187_fresh_prospectively_frozen_shared_key_challenge",
+      "engine_selection_rule": "prospectively_transfer_both_independently_successful_Bitwuzla_modes_and_execute_block_count_and_engine_controls",
+      "portable_formula_bytes": 46618,
+      "portable_formula_sha256": "76104bc954fcefb913f69d15ec2c06d39c5594577ed252e7dec8d0f02a795a37",
+      "rounds": 5,
+      "unknown_key_bits": 40,
+      "z3_fixed_rlimit_50000000": {
+        "conflicts": 3000,
+        "decisions": 4345,
+        "status": "unknown",
+        "version": "4.15.4"
+      }
+    },
+    "information_boundary": {
+      "A188_solver_outcomes_used_before_protocol_freeze": false,
+      "early_stop_permitted": false,
+      "unknown_assignment_available_to_runner_before_execution": false,
+      "unknown_assignment_generated_once_from_os_randomness": true,
+      "unknown_assignment_in_protocol_or_source": false,
+      "unknown_assignment_persisted_before_execution": false,
+      "unknown_assignment_used_only_to_form_eight_public_targets_before_freeze": true,
+      "variant_order_or_budget_changed_after_any_outcome": false
+    },
+    "prospective_prediction": {
+      "claim_type": "prospective_cross_engine_partial_key_recovery_transfer",
+      "frozen_before_solver_execution": true,
+      "prediction": "both_Bitwuzla_bitblast_cadical_b4_and_preprop_cadical_b4_return_the_same_fresh_40_bit_assignment_within_5000ms",
+      "success_rule": "complete_eight_variant_execution_identical_two_mode_b4_assignments_independent_4x512_bit_confirmation_and_control_rejection"
+    },
+    "protocol_state": "frozen_before_any_A188_solver_execution"
+  },
+  "public_challenge": {
+    "block_count": 8,
+    "control_target_block_sha256": "b8623baf5c484570a115395778928e504d4b99e8bc4ef942bac3f46b0b4e4268",
+    "control_target_words": [
+      269490462,
+      2800631097,
+      1268913909,
+      1076618289,
+      2776233375,
+      1040928935,
+      1942910731,
+      2729385723,
+      4134813763,
+      1729595669,
+      2076559741,
+      2714225042,
+      4064529180,
+      1244303306,
+      3032254632,
+      1784720006
+    ],
+    "counter_schedule": "base_plus_block_index_mod_2^32",
+    "counter_start": 1095040779,
+    "known_key_word1_upper24": 1669409536,
+    "known_key_words_2_through_7": [
+      3418115250,
+      1981472289,
+      3172217068,
+      1375009607,
+      1997525851,
+      3842984462
+    ],
+    "known_material_derivation_label": "f8-causal:A188:chacha20:r5-bitwuzla-transfer:known-material:ec00786b9e778b3914cc2594919da11b763cfffa72f71fa110c2c90dc8e9e3e3",
+    "known_material_derivation_sha256": "7f11a25515a8451c0c1cff9602121a84ce463592f334e42a36d2dc291e56300e",
+    "nonce_words": [
+      3723195173,
+      1018900442,
+      2954623662
+    ],
+    "rounds": 5,
+    "target_block_sha256": [
+      "50e25510e6cccf48fd3d3ce1ebccb5c3a9f36b0fbd97453865346c8f3d622827",
+      "399516e145ee6ac0c5bf2fa5ab67bca664ba1d23c788737a13a516c409fb5424",
+      "08ba4e1832df036c286b928fa7752245df503f71d50df15865c2b32e8918b1e1",
+      "e26a9faf03505800abfbc4dbbc2527d2477f2ad9454c95db4fca366c4850e1fb",
+      "4251f3caf99c79ef08f175eca5364f103d5b89304e3d84cc7cb4a7b3fc5189a4",
+      "6bd8458333f56ccbefbe86487323da4674b6b797ab9d29ae0546cccd105a1c56",
+      "15f2c02bfe76f1f1d09e188e45195e64952325431721882911b6f20a4ec3c1bf",
+      "ed76c7d4c1722f25ef66ef5bb503ae2cd36919fa433189e0c2abbfe24bc6b0f3"
+    ],
+    "target_words": [
+      [
+        269490463,
+        2800631097,
+        1268913909,
+        1076618289,
+        2776233375,
+        1040928935,
+        1942910731,
+        2729385723,
+        4134813763,
+        1729595669,
+        2076559741,
+        2714225042,
+        4064529180,
+        1244303306,
+        3032254632,
+        1784720006
+      ],
+      [
+        4228195132,
+        4262603325,
+        3394466410,
+        2397816069,
+        3483850172,
+        1778978220,
+        597067990,
+        2181157038,
+        4217570185,
+        1817218669,
+        1792356217,
+        2018575841,
+        1639919731,
+        1868286119,
+        3118188749,
+        865004267
+      ],
+      [
+        919263504,
+        1945886196,
+        2715018834,
+        137080139,
+        136073949,
+        3693012028,
+        3181674077,
+        1080908559,
+        3349336332,
+        3084370164,
+        71301107,
+        625509095,
+        94362231,
+        2208632649,
+        1525739072,
+        1134914535
+      ],
+      [
+        2071743905,
+        103636797,
+        3968366020,
+        1930533817,
+        1906160089,
+        3746183949,
+        1593687588,
+        3561747373,
+        2864158103,
+        3795787507,
+        3048422378,
+        2767953630,
+        3075019407,
+        3181411690,
+        4231320766,
+        1229715057
+      ],
+      [
+        3812443064,
+        544161600,
+        3569307653,
+        1078778549,
+        3183053587,
+        2357660507,
+        2365669249,
+        2387532673,
+        3075480125,
+        614298707,
+        3711418567,
+        4115529005,
+        1821557460,
+        78643538,
+        523473318,
+        1998542504
+      ],
+      [
+        1732740948,
+        2541672783,
+        3947757127,
+        686200635,
+        659665343,
+        3808056027,
+        3818928152,
+        2269185042,
+        1044066536,
+        1041065857,
+        3074821324,
+        137816677,
+        2213903715,
+        783978207,
+        795979163,
+        3108077246
+      ],
+      [
+        540039625,
+        4215737435,
+        2759965258,
+        1652605772,
+        2519109627,
+        4239773679,
+        3680340333,
+        2943667118,
+        1587655826,
+        920786303,
+        548109773,
+        1061383167,
+        178800029,
+        1921178593,
+        3277254825,
+        547502440
+      ],
+      [
+        3688522310,
+        3172387756,
+        4063769001,
+        2662771361,
+        1360627072,
+        2785053835,
+        2850199689,
+        1584590466,
+        2195532979,
+        180127067,
+        3689850568,
+        524774427,
+        2558091708,
+        1234615231,
+        2712136626,
+        4233781514
+      ]
+    ],
+    "unknown_assignment_bits": 40,
+    "unknown_assignment_generation": "os_cryptographic_randomness_used_once_then_discarded",
+    "unknown_assignment_included": false,
+    "unknown_key_word0_bits": 32,
+    "unknown_key_word0_included": false,
+    "unknown_key_word1_low_bits": 8,
+    "unknown_key_word1_low_value_included": false
+  },
+  "public_challenge_sha256": "231ca751d07fefffbd54ce0715d8bc35f7a6d444df0f5c6f482b5b407e69ff9c",
+  "result": "A frozen portable SMT-LIB2 portfolio prospectively transfers the A187 shared-key ChaCha5 relation across Bitwuzla, Z3, and Boolector.",
+  "schema": "chacha20-bitwuzla-round5-transfer-v1",
+  "scope": "Prospective reduced five-round ChaCha partial-key recovery with one full key word plus eight adjacent bits unknown and 216 key bits known.",
+  "solver_identities": {
+    "bitwuzla": {
+      "executable_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+      "path": "/opt/homebrew/bin/bitwuzla",
+      "version": "0.9.1"
+    },
+    "boolector": {
+      "executable_sha256": "ad08034940a968ab4641fd885c75a98220685443240224500b6de0ab23f11edb",
+      "path": "/opt/homebrew/bin/boolector",
+      "version": "3.2.4"
+    },
+    "z3": {
+      "executable_sha256": "ae6c8df33db9c9ae9a80b6044e77cd66529a141d8b25f0620f1e89b409594f48",
+      "path": "/opt/homebrew/bin/z3",
+      "version": "4.15.4"
+    }
+  }
+}

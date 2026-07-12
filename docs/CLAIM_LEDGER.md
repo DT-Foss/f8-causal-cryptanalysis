@@ -39,6 +39,11 @@ such; empirical confirmations retain their sample counts.
 | A143--A146 | Exact R1-graph Structural-6 and solver-strategy experiments map the width-20 resource boundary; the explicitly posthoc-conditioned frontier first returns a complete-rate-verified model at depth eight. | `shake_symbolic_r1_structural6_partition_reader_v1.*`, `shake_symbolic_r1_structural_depth_frontier_v1.*`, `shake_symbolic_r1_z3_strategy_frontier_v1.*`, `shake_symbolic_r1_z3_structural6_partition_reader_v1.*`, solver-frontier manifest |
 | A147 | A frozen graph-only eight-coordinate schedule finds the width-20 assignment 227,581 without assignment, target projection, or outcome-prioritized branch order as runtime inputs and independently reproduces all 1,344 next-rate bits. | `shake_symbolic_r1_structural_k8_reader_v1.*`, solver-frontier manifest |
 | A148--A151 | The width-24 R1 graph consists of nine disjoint edges, so its minimum vertex-cover size is exactly nine; the final uniform complete-domain schedule finds assignment 4,845,375 in 4,734 decisions and independently reproduces all 1,344 next-rate bits. | `shake_symbolic_r1_width24_{depth_frontier,vertex_cover_reader}_v1.*`, solver-frontier manifest |
+| A185 | On a fresh reduced ChaCha4 40-bit relation, predeclared split1 and split2 SMT views independently recover `0x230f1aee2d` and each pass a complete 512-bit confirmation. | `chacha20_smt_directional_round4_transfer_v1.*`, fullround-transfer manifest |
+| A186 | On a fresh reduced ChaCha5 40-bit relation, all six matched directional/midstate views reach the identical fixed-resource boundary with the complete execution order and empty model fields retained. | `chacha20_smt_directional_round5_transfer_v1.*`, fullround-transfer manifest |
+| A187 | Prospectively frozen eight-block shared-key stacking reduces fixed-resource ChaCha5 search decisions/conflicts by 20.93x/75.54x for complete b8 versus b1; every fixed-total-512-bit sparse stacked view also improves both counters. | `chacha20_smt_shared_key_multiblock_transfer_v1.*`, fullround-transfer manifest |
+| A188 | A predeclared Bitwuzla bitblast b8 view recovers the fresh reduced ChaCha5 40-bit assignment `0x5345585503`; independent recomputation matches all 4,096 target bits and rejects the control. | `chacha20_bitwuzla_round5_transfer_v1.*`, fullround-transfer manifest |
+| A189 | The prospectively selected Bitwuzla b8 route recovers fresh reduced ChaCha6 low20 assignment `0x6fa70`; bitblast/preprop b8 independently confirm 4,096 bits and the b1 route confirms 512 bits. | `chacha20_bitwuzla_round6_width20_transfer_v1.*`, fullround-transfer manifest |
 
 The filenames above are rooted at `research/results/v1/`; full hashes are in
 `FULLROUND_TRANSFER_SHA256SUMS`, `SHAKE_NATIVE_EXTENDED_SHA256SUMS`, and
@@ -73,6 +78,11 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | SHAKE R1 structural depth | A145 supplies posthoc branch values to localize a mechanism threshold; it is not assignment-free search. A143/A146 retain complete plans and exact resource limits. |
 | SHAKE R1 assignment-free `k=8` | A147 verifies one width-20 model after eight complete waves; unresolved and unexecuted branches remain outside any global-uniqueness claim. |
 | SHAKE R1 width-24 vertex cover | A151's runtime accepts neither the assignment nor target projection. Its formula ordering and uniform 120-second cap were nevertheless developed from A148/A149 on the same instance, so the result is explicitly non-blind and posthoc-informed. All 512 branches are planned uniformly; only 20 execute before the verified complete-wave early stop. |
+| ChaCha A185 direction transfer | Fresh reduced round 4 with 40 unknown key bits and 216 known key bits; this is not the fullround A184 relation. |
+| ChaCha A186 direction boundary | Six `unknown` statuses under the frozen 30-second per-view budget retain an exact representation/resource boundary; they do not assert ambiguity. |
+| ChaCha A187 block stacking | All ten formulas return `unknown`; the retained object is the prospectively predicted fixed-resource search-shape change, not a recovered model. |
+| ChaCha A188 engine portfolio | Fresh reduced round 5 with 40 unknown key bits; the stored Z3 `invalid` row is the exact no-status-token parser boundary, while the predeclared Bitwuzla b8 model passes independent confirmation. |
+| ChaCha A189 round-depth transfer | Fresh reduced round 6 with 20 unknown and 236 known key bits; the recovered object is the stated low20 assignment. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -92,7 +102,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A151 claims above are governed by their newer JSON/Reader evidence and
+The A107--A151 and A185--A189 claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

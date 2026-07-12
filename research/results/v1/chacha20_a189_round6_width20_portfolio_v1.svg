@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="510" viewBox="0 0 1240 510" role="img" aria-labelledby="title desc">
+  <title id="title">A189 prospective ChaCha6 width-20 solver portfolio</title>
+  <desc id="desc">Complete eight-variant portfolio showing the retained b8 prediction, the independent preprop b8 recovery, and the b1 recovery.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #17202a; }
+    .title { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 26px; font-weight: 700; }
+    .subtitle { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #43515d; }
+    .label { font-size: 13px; }
+    .small { font-size: 11px; fill: #43515d; }
+    .value { font-size: 11px; font-weight: 700; }
+  </style>
+  <text x="36" y="43" class="title">A189 — prospective round-6 width-20 transfer</text>
+  <text x="36" y="70" class="subtitle">Fresh reduced ChaCha6 · 20 unknown key bits · 236 known key bits · eight counter-related blocks</text>
+  <rect x="36" y="106" width="139" height="258" rx="8" fill="#dff3e4" stroke="#238a4b" stroke-width="2"/>
+  <text x="46" y="135" class="label">bitwuzla</text>
+  <text x="46" y="158" class="small">bitblast</text>
+  <text x="46" y="181" class="small">blocks = 1</text>
+  <text x="105.5" y="225" text-anchor="middle" class="title" fill="#238a4b">SAT</text>
+  <text x="105.5" y="258" text-anchor="middle" class="value">low20 = 0x6fa70</text>
+  <text x="105.5" y="280" text-anchor="middle" class="small">512/512 bits</text>
+  <text x="105.5" y="300" text-anchor="middle" class="small">control rejected</text>
+  <text x="105.5" y="322" text-anchor="middle" class="value">3.044800 s</text>
+  <text x="105.5" y="342" text-anchor="middle" class="small">b1 boundary</text>
+  <rect x="184" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="194" y="135" class="label">bitwuzla</text>
+  <text x="194" y="158" class="small">bitblast</text>
+  <text x="194" y="181" class="small">blocks = 2</text>
+  <text x="253.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="253.5" y="350" text-anchor="middle" class="small">bitwuzla bitblast b2</text>
+  <rect x="332" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="342" y="135" class="label">bitwuzla</text>
+  <text x="342" y="158" class="small">bitblast</text>
+  <text x="342" y="181" class="small">blocks = 4</text>
+  <text x="401.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="401.5" y="350" text-anchor="middle" class="small">bitwuzla bitblast b4</text>
+  <rect x="480" y="106" width="139" height="258" rx="8" fill="#dff3e4" stroke="#238a4b" stroke-width="2"/>
+  <text x="490" y="135" class="label">bitwuzla</text>
+  <text x="490" y="158" class="small">bitblast</text>
+  <text x="490" y="181" class="small">blocks = 8</text>
+  <text x="549.5" y="225" text-anchor="middle" class="title" fill="#238a4b">SAT</text>
+  <text x="549.5" y="258" text-anchor="middle" class="value">low20 = 0x6fa70</text>
+  <text x="549.5" y="280" text-anchor="middle" class="small">4096/4096 bits</text>
+  <text x="549.5" y="300" text-anchor="middle" class="small">control rejected</text>
+  <text x="549.5" y="322" text-anchor="middle" class="value">19.674509 s</text>
+  <text x="549.5" y="342" text-anchor="middle" class="small">predicted b8</text>
+  <rect x="628" y="106" width="139" height="258" rx="8" fill="#dff3e4" stroke="#238a4b" stroke-width="2"/>
+  <text x="638" y="135" class="label">bitwuzla</text>
+  <text x="638" y="158" class="small">preprop</text>
+  <text x="638" y="181" class="small">blocks = 8</text>
+  <text x="697.5" y="225" text-anchor="middle" class="title" fill="#238a4b">SAT</text>
+  <text x="697.5" y="258" text-anchor="middle" class="value">low20 = 0x6fa70</text>
+  <text x="697.5" y="280" text-anchor="middle" class="small">4096/4096 bits</text>
+  <text x="697.5" y="300" text-anchor="middle" class="small">control rejected</text>
+  <text x="697.5" y="322" text-anchor="middle" class="value">22.287195 s</text>
+  <text x="697.5" y="342" text-anchor="middle" class="small">independent b8</text>
+  <rect x="776" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="786" y="135" class="label">bitwuzla</text>
+  <text x="786" y="158" class="small">prop</text>
+  <text x="786" y="181" class="small">blocks = 8</text>
+  <text x="845.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="845.5" y="350" text-anchor="middle" class="small">bitwuzla prop b8</text>
+  <rect x="924" y="106" width="139" height="258" rx="8" fill="#fff0d5" stroke="#c57c00" stroke-width="2"/>
+  <text x="934" y="135" class="label">z3</text>
+  <text x="934" y="158" class="small">bitblast</text>
+  <text x="934" y="181" class="small">blocks = 8</text>
+  <text x="993.5" y="225" text-anchor="middle" class="title" fill="#c57c00">INVALID</text>
+  <text x="993.5" y="270" text-anchor="middle" class="small">no status token</text>
+  <text x="993.5" y="290" text-anchor="middle" class="small">parser boundary</text>
+  <text x="993.5" y="350" text-anchor="middle" class="small">z3 bitblast b8</text>
+  <rect x="1072" y="106" width="139" height="258" rx="8" fill="#f1f3f5" stroke="#8d99a5" stroke-width="2"/>
+  <text x="1082" y="135" class="label">boolector</text>
+  <text x="1082" y="158" class="small">fun</text>
+  <text x="1082" y="181" class="small">blocks = 8</text>
+  <text x="1141.5" y="225" text-anchor="middle" class="title" fill="#8d99a5">UNKNOWN</text>
+  <text x="1141.5" y="350" text-anchor="middle" class="small">boolector fun b8</text>
+  <path d="M 480 390 L 480 414 L 776 414 L 776 390" fill="none" stroke="#238a4b" stroke-width="2"/>
+  <text x="628" y="438" text-anchor="middle" class="subtitle">Prospective bitblast b8 prediction retained; preprop b8 independently returns the same assignment.</text>
+  <text x="36" y="478" class="small">All eight variants executed without early stop. The predeclared b1 view also returns low20 = 0x6fa70 with an independent 512-bit check.</text>
+</svg>

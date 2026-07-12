@@ -26,6 +26,12 @@ export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
   tests/test_chacha20_metal_width36_partial_key_recovery.py \
   tests/test_chacha20_metal_width38_partial_key_recovery.py \
   tests/test_chacha20_metal_width40_partial_key_recovery.py \
+  tests/test_chacha20_smt_directional_round4_transfer.py \
+  tests/test_chacha20_smt_directional_round5_transfer.py \
+  tests/test_chacha20_smt_shared_key_multiblock_transfer.py \
+  tests/test_chacha20_bitwuzla_round5_transfer.py \
+  tests/test_chacha20_bitwuzla_round6_width20_transfer.py \
+  tests/test_chacha20_smt_round5_retained_figures.py \
   tests/test_shake_native_window_solver.py \
   tests/test_shake_boolean_cnf_reader.py \
   tests/test_shake_prefix_observability_frontier.py \

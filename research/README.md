@@ -577,6 +577,55 @@ confirms all 512 output bits.  This is genuinely fresh exhaustive fullround
 recovery.  The observed 753.87-second end-to-end local run is volatile and
 excluded from the canonical result.
 
+A185 prospectively freezes a new reduced ChaCha round-4 target over the same
+40-bit partial-key shape, with the assignment generated from OS randomness only
+to form the target and discarded before solver execution. A fixed
+`forward/inverse/split1/split2/split3` plan uses semantically matched shared-DAG
+QF_BV formulas, one-thread Z3 4.15.4, and an equal 30-second budget. All five
+views execute with no early stop: forward, inverse, and split3 return
+`unknown`, while split1 and split2 independently return 150,577,278,509
+(`0x230f1aee2d`). Independent confirmation matches all 512 target bits for both
+SAT views. The exact scope is reduced round 4 over a 40-bit partial-key
+relation. See
+`reports/CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND4_TRANSFER_V1.md`.
+
+A186 prospectively transfers A185's fixed direction/midstate family to a fresh
+reduced ChaCha round-5 single-block relation over the same 40-bit partial-key
+shape. Six matched views cover forward, inverse, and every midstate cut from
+split1 through split4 under the same 30-second budget. All six return
+`unknown`; every view executes in the frozen order, every model field remains
+empty, and no assignment is available to the runner. This is the exact measured
+round-4→round-5 fixed-budget boundary. See
+`reports/CAUSAL_CHACHA20_SMT_DIRECTIONAL_ROUND5_BOUNDARY_V1.md`.
+
+A187 changes the observation compiler. One fresh hidden 40-bit key is shared
+across eight counter-related reduced ChaCha5 blocks, and ten predeclared
+complete, fixed-total-512-bit sparse, and modular-delta formulas execute at an
+identical 10-million Z3 rlimit. All statuses remain `unknown`, while complete
+b8 reduces decisions from 35,285 to 1,686 and conflicts from 29,385 to 389
+relative to b1. Every sparse b2/b4/b8 view also reduces both counts relative to
+b1, retaining both prospective search-shape predictions. See
+`reports/CAUSAL_CHACHA20_SMT_SHARED_KEY_MULTIBLOCK_TRANSFER_V1.md`.
+
+A188 transfers the shared-key relation to a complete eight-variant portable
+SMT-LIB2 portfolio across Bitwuzla 0.9.1, Z3 4.15.4, and Boolector 3.2.4 on
+another fresh challenge. The predicted Bitwuzla b4 modes return `unknown`; the
+already-predeclared Bitwuzla bitblast b8 view returns 357,645,702,403
+(`0x5345585503`). Independent recomputation matches all 4,096 target bits and
+rejects the control. This is fresh reduced-round 40-bit partial-key recovery
+plus a b4-to-b8 instance boundary. See
+`reports/CAUSAL_CHACHA20_BITWUZLA_ROUND5_RECOVERY_V1.md`.
+
+A189 prospectively transfers that predeclared b8 Reader one round deeper to a
+fresh reduced ChaCha6 relation while narrowing the hidden domain to the low 20
+bits of key word 0; the other 236 key bits are known. The complete frozen
+eight-variant portfolio executes without early stop. Predicted Bitwuzla
+bitblast b8 returns 457,328 (`0x6fa70`) and matches all 4,096 bits independently;
+preprop b8 independently returns the same assignment and confirmation. The
+predeclared bitblast b1 view also returns the same low20 value and passes a
+complete 512-bit confirmation. See
+`reports/CAUSAL_CHACHA20_BITWUZLA_ROUND6_WIDTH20_RECOVERY_V1.md`.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs
