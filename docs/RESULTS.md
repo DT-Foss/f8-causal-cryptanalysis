@@ -677,6 +677,26 @@ prospectively frozen search-phase transfers.
 All A190--A210 retained artifacts, Causal graphs, figures, formula/order
 archives, and focused no-solver tests are included in the transfer manifest.
 
+## Retained-state and full-round trajectory progression: A211--A220P
+
+| Stage | Exact retained result | Boundary |
+|---|---|---|
+| A211 | Two independent complete global-state ChaCha10 covers recover low20 `0x7c596` and confirm all 4,096 output bits. | Reduced ten rounds; 20 unknown key bits; remaining cells are UNKNOWN, so uniqueness is not adjudicated. |
+| R20 transfer | Numeric and Gray8 independently recover full-round low20 `0xe4934` at complete-cover positions 228 and 184. | Standard 20 rounds plus feed-forward and 236 known key bits; this is partial-, not full-key recovery. |
+| A212--A213 | Public formula scheduling is executable; exact PCR/backprojection leaves all `2^20` candidates and zero forced key relations. | The first object is a schedule; the second is a hard-propagation boundary. |
+| A214--A216N | Three known-key/public-output Reader families are measured with disjoint validation and prereveal gates; A216 does not survive its selection-matched null. | These are representation and bias-control results, not retained target concentration. |
+| A217 | Numeric and Gray8 have nearly equal total work but low same-prefix correlation, low affine predictability and low cross-operator CKA. | Traversal order changes the learned-state path over the same CNF. |
+| A218--A219 | The selected A218 Reader has null `p=0.953846154`; its target rank is 211/256. A219 executes that frozen complete order and returns 256 UNKNOWN cells. | Exact target-blind Reader and fixed-budget solver boundaries; no A219 model. |
+| A220P | Six directions by two schedules execute 12 fresh processes, 3,072 cells and 7,680 stages with no parser, identity, continuity or watchdog failure. | Staged retained re-solve and one-shot are distinct interventions; direction is independently path-dependent. |
+| A220 | Protocol, public-only adapter, Reader core, feature families, exact matched null and fit/select/holdout split are frozen. | Main collection and untouched-holdout evaluation are in implementation and have no result claim. |
+
+The public A220 protocol SHA-256 is
+`70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`.
+The exact retained A220P result SHA-256 is
+`f5cc99ac3dcf679023e1a32b91b5dae26d94837db08673f23f0f5cb787afd946`;
+its scientific measurement projection is
+`a43f530b72dad576db5623e3c23f8c3dcb3ce666c4159b29d74c9bb7294cfdc7`.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.

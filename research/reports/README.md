@@ -422,3 +422,37 @@ The first child has more decisions and conflicts than every later sibling in
 all 64 parent-mode groups, while Numeric and Gray aggregate metrics remain near
 each other. This isolates retained learned state, rather than local traversal
 order, as the dominant transfer.
+
+`CAUSAL_CHACHA20_ROUND10_GLOBAL_INCREMENTAL_RECOVERY_V1.md` records A211's
+removal of the remaining inter-parent resets. Numeric and reflected Gray8 each
+execute the complete 256-cell cover, recover low20 `0x7c596`, and independently
+confirm all 4,096 target bits.
+
+`CAUSAL_CHACHA20_ROUND20_GLOBAL_INCREMENTAL_TRANSFER_V1.md` records the same
+common-CNF retained-state mechanism on standard 20-round ChaCha20 including
+feed-forward. Numeric and Gray8 recover low20 `0xe4934` independently at
+positions 228 and 184 while completing both covers.
+
+`SOLVER_TRAJECTORY_FORMULA_ATLAS_V1.md` and the A213--A216N reports retain the
+public formula schedule, exact propagation boundary, known-key propagation
+atlas, key-contrast degree frontier, harmonic Reader and its complete
+selection-matched null. The null explains the A216 validation signal and is
+carried forward rather than discarded.
+
+`CAUSAL_CHACHA20_ROUND20_OPERATOR_DIVERSITY_AUDIT_V1.md` records A217's
+operator audit. Numeric and Gray8 have nearly identical aggregate work but low
+same-prefix correlation, low affine predictability and low CKA, establishing
+distinct learned-state paths over the common substrate.
+
+`CAUSAL_CHACHA20_ROUND20_KNOWNKEY_TRAJECTORY_ATLAS_V1.md` and
+`CAUSAL_CHACHA20_ROUND20_RANKED_TARGET_RECOVERY_V1.md` retain A218's
+selection-matched Reader boundary and A219's complete target-blind execution.
+The target ranks 211/256 and every A219 cell remains `unknown`; no recovery is
+claimed.
+
+`CAUSAL_CHACHA20_ROUND20_MULTIHORIZON_PREFLIGHT_V1.md` records A220P's complete
+known-key six-direction by two-schedule execution. Staged retained re-solve
+and one-shot trajectories are not scaled replicas, and forward/reverse paths
+also have low same-prefix correlations. The separately committed A220 protocol
+freezes the subsequent factorial transfer; it is infrastructure, not a
+completed A220 result.

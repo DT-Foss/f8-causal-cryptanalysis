@@ -10,6 +10,12 @@ Fast integrity gate:
 ./scripts/reproduce_quick.sh
 ```
 
+Completed A211--A220P retained-evidence and frozen-protocol gate:
+
+```bash
+./scripts/reproduce_a211_a220p.sh
+```
+
 Hash-only authentication of the twelve original full-round F8 configurations:
 
 ```bash

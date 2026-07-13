@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/README.md": "8ce0bd18f940f8e89c2a90872ad49acfeecc81837f12150ffa9bdf1bc69912b4",
+    "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/config.json": "6aa1bf929065023468f67d07087ce153638c0384c32ee47d32c0667770579bc5",
+    "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/formula_plan.json": "85947a9fbb3dde01b8316ca70487b95fa6d990b127baf963b6bdd00d2c8fe4f6",
+    "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/reproduce.sh": "a0af9308790a1e0656da278d1305156d5025307e9582cb0a7b2026b574f180c9",
+    "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/runner.py": "1e42db72c0aa1e850e85dafd45ab8fa12459c3acc2a59d038db227f008be8f45",
+    "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/test_phase2.py": "d7c6866eb2621784c16a09a5bbbee0baa696fa2fc94cb76cad85e42446d2ad7c"
+  },
+  "execution_plan_sha256": "89a762bbe648a64a20a88feb1d56f589495f0e79549b9e640af025e9ed99cc48",
+  "formula_plan_file_sha256": "85947a9fbb3dde01b8316ca70487b95fa6d990b127baf963b6bdd00d2c8fe4f6",
+  "formula_plan_sha256": "69a75b0caf176578b7dc44bf46e0ca53bb214af48f48f6033f762fb4c04fa0b1",
+  "phase1_gates": {
+    "causal_sha256": "5fbed3eb974f5ef1be8a9f73dae196f656f94f03564db8622e25c7f00d92698b",
+    "config_sha256": "1714f6300d1660725b6c039d86b1836f518818c1802727dfae357997c805c7e7",
+    "formula_plan_file_sha256": "cc310bbe967d973414eecd3b2d4e92d13fb33eed284eb188ef20bf0d934ea4a2",
+    "hash_ledger_sha256": "9a414dbcbc5e64855415dda0ec1b6547a4c3415f2a352eec3118aec3aa8a2702",
+    "phase1_causal_graph_sha256": "4892b5f42eefca59841d5572b24e78ac3d25fc7ccfc4a37be21dea32c6751df8",
+    "phase1_causal_provenance_verified": true,
+    "phase1_status_counts": {
+      "external_timeout": 0,
+      "invalid": 0,
+      "sat": 0,
+      "unknown": 32,
+      "unsat": 0
+    },
+    "phase1_total_volatile_seconds": 320.3435839568265,
+    "result_sha256": "ad8063674b8362fd0b5d52e3dd4b8db439105145385dd4472e07d069d30c0caa",
+    "runner_sha256": "559556f88bb6a4c13715dbf52644f5cff1b77af37d65f5195d8c9adfb58ab7ef"
+  },
+  "phase2_solver_execution_started": false,
+  "phase_id": "PILOT_CHACHA20_R20_PARTITION_V1_PHASE2_SPLIT18",
+  "protocol_state": "frozen_after_complete_phase1_and_before_any_phase2_solver_execution",
+  "public_challenge_sha256": "98d375fb9432e17b9a701137617a6384ebc60a0ac9054ec203f2364a5338d762",
+  "schema": "chacha20-round20-width20-split18-phase2-freeze-ledger-v1",
+  "solver_identity": {
+    "path": "/opt/homebrew/bin/bitwuzla",
+    "sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+    "version_stdout": "0.9.1",
+    "version_stdout_sha256": "179a5390966e85c2071a87c1b31de13df67460665196f6529f8c4986842f81e5"
+  }
+}

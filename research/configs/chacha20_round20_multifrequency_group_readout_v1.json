@@ -1,0 +1,114 @@
+{
+  "schema": "chacha20-round20-multifrequency-group-readout-protocol-v1",
+  "attempt_id": "A216-CHACHA20-R20-MULTIFREQ-GROUP-READOUT-V1",
+  "protocol_state": "frozen_before_A216_feature_generation_model_selection_null_execution_prereveal_or_target_scoring",
+  "scientific_question": "Can O1-style multi-frequency character banks convert known-key standard-output structure into key-disjoint four-bit group scores that concentrate the full-round R20 low20 candidate domain?",
+  "anchors": {
+    "A215_protocol_sha256": "22f8d8b703575d19fb8ecfd5543b925f39d8f36693cc30748fb65f4d4941bd04",
+    "A215_prereveal_sha256": "aad591b55094f50497ebf19c0399bfae2c6e33c8d1e3c3cfdae764ef50813839",
+    "A215_result_sha256": "85448ceec849c8d65f088efd1abdf156c0b9f9f57145429e292606bec6fe9700",
+    "A215_measurement_sha256": "882ae2504851f1bac1f2350f8c160dba6cddd5b03afc4eb09f2252fc9b8cb5ff",
+    "A215_evidence_stage": "R3_RAW_OUTPUT_DEGREE_SATURATION_AND_R20_LOW_ORDER_REPRESENTATION_BOUNDARY",
+    "O1": {
+      "repository": "https://github.com/DT-Foss/O1",
+      "commit": "7280924231143ac8fc666ba7e282ad4054635b6c",
+      "multifrequency_source": "src/holographic_multifreq.py",
+      "multifrequency_source_sha256": "1f1578ec06e6b5865d895024711aa5323bdf5fcc366ceb2b6efee0d0ad80589f",
+      "polyphase_source": "src/holographic_z3.py",
+      "polyphase_source_sha256": "670999f51dda47980e0e4490751d4fd8cb21f3f1814ab11c2f9589ace4c6acf6",
+      "transfer": "replace_the_redundant_single_frequency_shifted_read_with_the_complete_Z16_character_bank_and_exact_inverse_DFT_class_prototypes"
+    }
+  },
+  "scope": {
+    "primitive": "standard_ChaCha20_20_round_block_function_with_feedforward",
+    "known_material": "same_high236_key_bits_counter_nonce_and_8_block_schedule_as_A215",
+    "training_keys": 5404,
+    "validation_keys": 1024,
+    "training_validation_source": "A215_key_disjoint_ledgers",
+    "target_view": "standard_public_8_block_R20_output_only",
+    "target_internal_states_forbidden": true,
+    "candidate_ChaCha_evaluation_during_rank_forbidden": true
+  },
+  "group_operator": {
+    "groups": [
+      {"name": "nibble_0", "bits": [0, 1, 2, 3]},
+      {"name": "nibble_1", "bits": [4, 5, 6, 7]},
+      {"name": "nibble_2", "bits": [8, 9, 10, 11]},
+      {"name": "nibble_3", "bits": [12, 13, 14, 15]},
+      {"name": "nibble_4", "bits": [16, 17, 18, 19]}
+    ],
+    "classes_per_group": 16,
+    "phase": "phi(c)=2*pi*c/16",
+    "harmonics": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "harmonic_accumulator": "S_h=(1/16)*sum_c(mu_c*exp(-2*pi*i*h*c/16))",
+    "inverse_read": "mu_hat_c=sum_h(S_h*exp(2*pi*i*h*c/16))",
+    "identity_gate": "maximum_absolute_inverse_DFT_reconstruction_error_at_most_1e-10",
+    "single_frequency_nphase_read_is_not_counted_as_independent_information": true
+  },
+  "representations_in_fixed_order": [
+    "raw_output_bits_pm1",
+    "adjacent_block_xor_bits_pm1",
+    "per_block_byte_histograms",
+    "per_block_bit_rfft_magnitudes"
+  ],
+  "feature_rules": {
+    "raw_output_bits_pm1": "unpack_all_4096_public_output_bits_and_map_0_to_minus1_1_to_plus1",
+    "adjacent_block_xor_bits_pm1": "XOR_each_adjacent_pair_of_512_bit_blocks_then_map_bits_to_pm1",
+    "per_block_byte_histograms": "16_bin_nibble_histograms_for_each_of_8_blocks_and_each_high_low_nibble_position_family",
+    "per_block_bit_rfft_magnitudes": "real_FFT_magnitude_of_each_512_bit_pm1_block",
+    "standardization": "training_global_mean_and_population_sd_per_coordinate_with_constant_coordinates_removed",
+    "target_conditioned_feature_selection": false
+  },
+  "prototype_models": {
+    "class_prototype": "per_group_per_class_training_mean_in_standardized_feature_space",
+    "shrinkage_to_global_mean": [0.0, 0.25, 0.5, 0.75, 0.9],
+    "score": "negative_mean_squared_distance_to_shrunken_class_prototype",
+    "per_group_selection": "maximum_validation_top1_accuracy_then_minimum_validation_mean_rank_then_representation_order_then_shrinkage_order",
+    "candidate_score": "sum_over_five_groups_of_within_group_z_scored_selected_class_scores",
+    "candidate_ties": "ascending_numeric_low20"
+  },
+  "validation": {
+    "primary": "five_group_macro_top1_accuracy_and_mean_true_class_rank_on_all_1024_disjoint_holdouts",
+    "joint_key_metric": "number_of_holdouts_with_all_five_nibbles_top1",
+    "complete_candidate_rank_challenges": 16,
+    "complete_candidate_rank_keys": "first_16_A215_holdouts",
+    "target_model_selection": "forbidden"
+  },
+  "controls": {
+    "phase_label_permutations": 64,
+    "phase_label_null": "independently_permute_training_group_labels_within_each_group_preserving_features_and_class_counts",
+    "wrong_group": "rotate_the_selected_group_operator_by_one_group_while_retaining_the_requested_label",
+    "single_harmonic_ablation": "retain_only_harmonic_h1_then_apply_the_same_scoring_rule",
+    "random_operator": "deterministic_Rademacher_projection_with_matching_output_dimension",
+    "decision_rule": "observed_validation_macro_accuracy_must_exceed_all_64_phase_label_null_accuracies"
+  },
+  "prereveal": {
+    "contains": [
+      "protocol_hash",
+      "output_corpus_hash",
+      "feature_hashes",
+      "all_character_banks",
+      "all_validation_metrics",
+      "all_64_null_metrics",
+      "selected_per_group_models",
+      "16_holdout_complete_domain_ranks"
+    ],
+    "excludes": [
+      "public_target_low20",
+      "public_target_group_scores",
+      "public_target_rank"
+    ],
+    "target_scoring_only_after_atomic_prereveal_hash": true
+  },
+  "prospective_outcomes": {
+    "fullround_multifrequency_group_rank_transfer": "validation_macro_accuracy_beats_all_64_phase_label_nulls_and_public_R20_target_rank_is_at_most_1024",
+    "fullround_multifrequency_group_enrichment": "validation_macro_accuracy_beats_all_64_phase_label_nulls_and_public_R20_target_rank_is_better_than_524288",
+    "group_specific_transfer": "at_least_one_group_beats_its_64_nulls_but_the_joint_operator_does_not_meet_full_transfer",
+    "representation_boundary": "no_selected_group_operator_beats_the_frozen_phase_label_null_rule",
+    "all_group_representation_and_control_results_retained": true
+  },
+  "next_step": {
+    "if_transfer": "use_the_selected_group_scores_as_a_prospectively_frozen_R20_cell_order_on_fresh_challenges",
+    "if_boundary": "move_the_same_character_bank_to_short_budget_solver_trajectory_features_or_the_A215_compressible_round_stacked_carry_substrate_without_claiming_standard_output_access_to_hidden_states"
+  }
+}

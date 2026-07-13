@@ -1,0 +1,76 @@
+{
+  "schema": "chacha20-round20-operator-diversity-audit-protocol-v1",
+  "attempt_id": "A217-CHACHA20-R20-OPERATOR-DIVERSITY-AUDIT-V1",
+  "analysis_state": "retrospective_exact_audit_after_the_operator_diversity_question_was_identified",
+  "scientific_question": "Do Numeric and true reflected-Gray8 act as nontrivial path-dependent solver operators over the same retained R20 CNF substrate, rather than as scaled copies of one trajectory?",
+  "anchors": {
+    "R20_result_sha256": "a5be062ebce29cbc864ef926c55a1f9dbaadd69c9edcc54aed43552304f8e3f0",
+    "R20_causal_sha256": "f9dd413e97c988335115f523a3a21d491564555d53020d902ac37854972c8e43",
+    "R20_evidence_stage": "FULLROUND_R20_GLOBAL_INCREMENTAL_CONFIRMED_RECOVERY_RETAINED",
+    "O1_repository": "https://github.com/DT-Foss/O1",
+    "O1_commit": "7280924231143ac8fc666ba7e282ad4054635b6c",
+    "O1_operator_readout_source": "src/operator_readout.py",
+    "O1_operator_readout_sha256": "73b31a869999a10cd618b07729b67a4de86e24db628d26649983c406f205501f"
+  },
+  "scope": {
+    "primitive": "standard_ChaCha20_20_round_block_function_with_feedforward",
+    "unknown_key_bits": 20,
+    "known_key_bits": 236,
+    "common_substrate": "same_R20_CNF_same_256_prefix_cover_same_CaDiCaL_build_and_budget",
+    "operators": [
+      "numeric_global_incremental",
+      "reflected_gray8_global_incremental"
+    ],
+    "paired_prefixes": 256,
+    "telemetry": [
+      "decisions",
+      "conflicts",
+      "search_propagations"
+    ],
+    "new_solver_execution": false
+  },
+  "metrics": {
+    "order_geometry": [
+      "Spearman_position_correlation",
+      "Kendall_tau_b_position_correlation",
+      "mean_consecutive_prefix_Hamming_distance"
+    ],
+    "same_prefix_trajectory": [
+      "Pearson",
+      "Spearman",
+      "Kendall_tau_b",
+      "top_k_overlap_for_k_8_16_32_64"
+    ],
+    "joint_operator": [
+      "linear_CKA_on_column_standardized_three_metric_views",
+      "multivariate_affine_R2_from_numeric_to_gray",
+      "singular_values_of_cross_operator_matrix"
+    ],
+    "status_and_work": [
+      "same_prefix_status_equality",
+      "aggregate_metric_ratios",
+      "recovered_model_equality"
+    ]
+  },
+  "controls": {
+    "row_permutations": 1024,
+    "seed": "0xA217000_plus_permutation_index",
+    "operation": "permute_gray_prefix_rows_while_preserving_each_operator_marginals",
+    "statistic": "linear_CKA",
+    "p_value": "exact_add_one_upper_tail",
+    "copy_control": "linear_CKA_of_each_operator_with_itself_must_equal_one"
+  },
+  "decision_rule": {
+    "evidence_stage": "FULLROUND_R20_OPERATOR_DIVERSITY_MECHANISM_LOCALIZED",
+    "requirements": [
+      "all_256_same_prefix_statuses_equal",
+      "both_modes_recover_the_same_confirmed_model",
+      "all_three_aggregate_metric_ratios_within_0.95_and_1.05",
+      "cross_operator_linear_CKA_below_0.10",
+      "mean_multivariate_affine_R2_below_0.20",
+      "absolute_same_prefix_Spearman_below_0.15_for_all_three_metrics",
+      "position_Kendall_tau_b_below_0.75"
+    ],
+    "otherwise": "R20_OPERATOR_DIVERSITY_PARTIAL_BOUNDARY"
+  }
+}

@@ -103,6 +103,14 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | ChaCha A208 long-budget phase | All 32 statuses are UNKNOWN, not UNSAT. The retained result is an exact temporal solver-counter transition for the selected order, not a recovered model or an all-order theorem. |
 | ChaCha A209 Width-12 phase reset | All 256 statuses are UNKNOWN, not UNSAT. The systematic counter-density reset is a representation/search-phase result, not a recovered key or terminal cell. |
 | ChaCha A210 incremental sibling learning | All 512 statuses are UNKNOWN, not UNSAT. The retained object is a complete-domain learned-state transfer and exact Numeric/Gray traversal control; it is not a recovered key, terminal cell, or complete-domain resolution. |
+| ChaCha A211 global retained state | Both complete covers recover and independently confirm the same 20-bit ChaCha10 assignment. The 255 other cells remain UNKNOWN, so recovery is retained without a uniqueness claim. |
+| ChaCha R20 global transfer | Both complete covers recover the same 20-bit assignment through standard ChaCha20 with feed-forward. With 236 key bits known, this is full-round partial-key recovery, not full-key recovery. |
+| ChaCha A212--A213 | Formula-derived traversal and exact CNF propagation are separate objects. A213's zero-bit entropy reduction is a measured propagation boundary, not evidence that no other Reader exists. |
+| ChaCha A214--A216N | Known-key and public-output ranks are retained exactly, including the selection-matched null that explains A216's validation signal. None is relabeled as target concentration. |
+| ChaCha A217 | Low trajectory similarity with nearly equal aggregate work establishes operator diversity for the measured pair; it is not a universal solver-order theorem. |
+| ChaCha A218--A219 | The target-blind order and its complete execution are retained. A218 does not beat its matched null and A219 returns no model; UNKNOWN is not UNSAT. |
+| ChaCha A220P | The known-key preflight establishes schedule and direction as separate solver interventions. It performs no prospective model selection or recovery. |
+| ChaCha A220 frozen protocol | The factorial collection, Reader selection and untouched holdout panel are preregistered only. No A220 result is claimed before those stages finish. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.
@@ -122,7 +130,7 @@ The statuses mean:
   historical wording;
 - `EXTERNAL_ONLY`: support depends on a cited external primary source.
 
-The A107--A151 and A185--A210 claims above are governed by their newer JSON/Reader evidence and
+The A107--A151 and A185--A220P claims above are governed by their newer JSON/Reader evidence and
 must not be inferred from the older manuscript table.
 
 ## Control and boundary results

@@ -98,7 +98,8 @@ echo "causal artifacts: OK ($CAUSAL_COUNT validated)"
   research/results/v1/PQC_SHA256SUMS \
   research/results/v1/FULLROUND_TRANSFER_SHA256SUMS \
   research/results/v1/SHAKE_NATIVE_EXTENDED_SHA256SUMS \
-  research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS
+  research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS \
+  research/results/v1/A211_A220P_SHA256SUMS
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m compileall -q src research/experiments tests
 
 echo "quick evidence tier: OK"

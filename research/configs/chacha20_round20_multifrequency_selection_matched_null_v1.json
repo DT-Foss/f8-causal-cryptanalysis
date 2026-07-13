@@ -1,0 +1,59 @@
+{
+  "schema": "chacha20-round20-multifrequency-selection-matched-null-protocol-v1",
+  "attempt_id": "A216N-CHACHA20-R20-MULTIFREQ-SELECTION-MATCHED-NULL-V1",
+  "protocol_state": "frozen_post_A216_discovery_before_selection_matched_null_execution",
+  "scientific_question": "Does A216's validation signal survive a phase-label null that repeats the complete four-representation by five-shrinkage model selection for every group and permutation?",
+  "anchors": {
+    "A216_result_sha256": "f85eb6034123b4aa5cae6114e35565bb3e613800f4102f04ae631edbc6e380da",
+    "A216_prereveal_sha256": "f0eee4aecb4f691ebb05fc03515b4b27e88d594d70d3eb1b269ea6d9a8fadb99",
+    "A216_measurements_sha256": "aa931bca62098372f0dd56655e43cbd2380127c50eaa75256006e72c4fe32b85",
+    "A216_measurement_payload_sha256": "a5afb58487f4847a240be90b2e75f765005b098fadd8464a40c271c6392106c8",
+    "A216_target_rank": 1041965,
+    "A216_evidence_stage_before_selection_matching": "GROUP_SPECIFIC_MULTIFREQUENCY_TRANSFER"
+  },
+  "scope": {
+    "primitive": "standard_ChaCha20_20_round_block_function_with_feedforward",
+    "training_keys": 5404,
+    "validation_keys": 1024,
+    "training_validation_and_features": "unchanged_A216_measurement_ledger_and_standardized_representations",
+    "post_discovery_bias_control": true,
+    "target_evaluation": "forbidden_and_unnecessary",
+    "target_rank_interpretation": "A216_target_rank_remains_a_standard_output_representation_boundary"
+  },
+  "representations_in_fixed_order": [
+    "raw_output_bits_pm1",
+    "adjacent_block_xor_bits_pm1",
+    "per_block_byte_histograms",
+    "per_block_bit_rfft_magnitudes"
+  ],
+  "shrinkages_in_fixed_order": [0.0, 0.25, 0.5, 0.75, 0.9],
+  "selection": {
+    "groups": 5,
+    "classes_per_group": 16,
+    "models_per_group": 20,
+    "rule": "maximum_validation_top1_accuracy_then_minimum_validation_mean_rank_then_representation_order_then_shrinkage_order",
+    "observed_replay": "run_the_same_20_model_optimizer_on_unpermuted_labels_and_require_exact_A216_selected_models_metrics_and_rank_hashes",
+    "null_replay": "run_the_same_20_model_optimizer_separately_for_every_group_in_every_training_label_permutation"
+  },
+  "null": {
+    "permutations": 64,
+    "seed": "0xA216100_plus_257_times_permutation_plus_group",
+    "operation": "shuffle_training_group_labels_only_while_preserving_training_features_validation_features_validation_labels_and_class_counts",
+    "permutation_statistic_by_group": "top1_accuracy_of_the_selected_best_of_20_model",
+    "permutation_macro_statistic": "mean_of_the_five_selected_group_top1_accuracies",
+    "p_value": "exact_add_one_upper_tail_(1_plus_count_null_greater_or_equal_observed)_divided_by_65",
+    "strict_confirmation": "observed_statistic_must_exceed_all_64_selection_matched_null_statistics"
+  },
+  "optimized_exact_evaluation": {
+    "rule": "derive_all_five_shrinkage_score_matrices_from_one_validation_by_class_mean_cross_product_per_group_representation_permutation",
+    "score": "negative_mean_squared_distance_to_shrunken_class_prototype",
+    "numeric_realization": "C_contiguous_float64_einsum_with_finite_input_and_output_gates",
+    "equivalence_gate": "observed_optimizer_must_reproduce_A216_selected_model_identity_top1_mean_rank_and_prediction_and_rank_hashes"
+  },
+  "prospective_outcomes": {
+    "macro_confirmation": "SELECTION_MATCHED_MULTIFREQUENCY_TRANSFER_CONFIRMED",
+    "group_confirmation": "GROUP_SPECIFIC_SELECTION_MATCHED_MULTIFREQUENCY_TRANSFER_CONFIRMED",
+    "selection_explanation": "MULTIFREQUENCY_MODEL_SELECTION_EXPLAINED",
+    "decision_order": "macro_then_group_then_selection_explanation"
+  }
+}

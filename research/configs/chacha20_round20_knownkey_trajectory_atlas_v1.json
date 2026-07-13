@@ -1,0 +1,160 @@
+{
+  "schema": "chacha20-round20-knownkey-trajectory-atlas-protocol-v1",
+  "attempt_id": "A218",
+  "protocol_state": "frozen_after_A218P_conflict_budget_calibration_and_before_new_target_generation_knownkey_trajectory_collection_feature_measurement_model_fitting_or_target_solver_execution",
+  "research_question": "Can two retained-state solver operators measured under a fixed tiny conflict horizon learn a key-disjoint full-round ChaCha20 R20 prefix order that transfers prospectively to a newly committed target?",
+  "anchors": {
+    "A214_template_protocol_path": "research/configs/chacha20_round20_knownkey_propagation_atlas_v3.json",
+    "A214_template_protocol_sha256": "aa5b7af87c74cbffe7f6d3e50332cc65c07f084435edb4314b32e4904b625698",
+    "A214_knownkey_helper_path": "research/experiments/chacha20_round20_knownkey_atlas_helpers.py",
+    "A214_knownkey_helper_sha256": "92773bfabbad02bfdcc630e5820c42f6daaf5d6db05ed9b139f89844cd4901c5",
+    "A214_symbolic_template_path": "research/experiments/chacha20_round20_symbolic_template.py",
+    "A214_symbolic_template_sha256": "34f4c5542f7fa12e7b0ff06ab7e042605c2414f23001f11894fa6dbdfc0b4721",
+    "A214_knownkey_ledger_sha256": "b0b1add2b4185c0b7a5ef02397ed54d3e504a19866a833601382e725adbdc91f",
+    "R20_runner_path": "research/experiments/chacha20_round20_global_incremental_transfer.py",
+    "R20_runner_sha256": "1825035b90317e9d6c8a2ee0894f2569eada44177ee01ced49d043ca37ec881d",
+    "A217_result_path": "research/results/v1/chacha20_round20_operator_diversity_audit_v1.json",
+    "A217_result_sha256": "7b1ca3ac4f6ab0717898e2cb204457d72a679a67fdd0fd795f96bbc5ccb6be65",
+    "A217_evidence_stage": "FULLROUND_R20_OPERATOR_DIVERSITY_MECHANISM_LOCALIZED",
+    "A218P_result_path": "research/results/v1/chacha20_round20_budgeted_trajectory_preflight_v1.json",
+    "A218P_result_sha256": "a419e940b66b491461263a7f65d41ed670412d9e3f3bf2a0f656aa40d639b0cf",
+    "A218P_measurement_sha256": "6db14386c896127bc5fc4078547d4983cd8a6c0f2487834891888863ce8a205f",
+    "trajectory_helper_path": "research/experiments/chacha20_round20_budgeted_trajectory.py",
+    "trajectory_helper_sha256": "bd66b45aa50a923af18d9fdbaa652cdfcd2617f3f0feeca45ca5f436269e29a1",
+    "native_budgeted_source_path": "research/native/cadical_global_incremental_budgeted.cpp",
+    "native_budgeted_source_sha256": "d0e7063ea6bf0aa11dd4cf85cfa9ac6a3663ae9280eeb2b5be2e1505859bd2f6"
+  },
+  "mechanism_provenance": {
+    "O1_operator_readout_path": "<source-o1>/src/operator_readout.py",
+    "O1_operator_readout_sha256": "73b31a869999a10cd618b07729b67a4de86e24db628d26649983c406f205501f",
+    "GSSM_gram_inverse_path": "<source-gssm-kernel-overnight>/src/freeidea_gram_inverse.py",
+    "GSSM_gram_inverse_sha256": "b3c98d0f1d181baf5438f5a9be65eed30cace3d0d639f0c4b9cf2819413027d7",
+    "GSSM_vision_path": "<source-gssm-copy>/src/foss_vision.py",
+    "GSSM_vision_sha256": "32f76b8d207de8aa28c3fb6132f6e0f69e469eb818b21646cef0983dd3e40266",
+    "GSSM_spatial_path": "<source-gssm-copy>/src/spatial_model_v2.py",
+    "GSSM_spatial_sha256": "584518eee38675434e4146cfcb2c4c771e00ab5b07472a4864b74afcd978e2a9",
+    "A212_formula_atlas_protocol_sha256": "d74edc91d2e02e4512c8798d71c4d7af457295c350d5abd561d1de4691e5de96",
+    "A212_formula_atlas_result_sha256": "d7fc64a9aac6f36483b238595332fd3a4f351c39e501de56b0d1f832903bc8cf"
+  },
+  "known_key_corpus": {
+    "source": "reuse_the_A214_SHAKE256_ledger_and_identical_public_high12_key_words_1_through_7_counter_nonce_and_block_count",
+    "training_keys": 16,
+    "validation_keys": 8,
+    "all_24_low20_values_unique": true,
+    "unit_of_independence": "complete_key_never_an_individual_cell",
+    "shared_formula_topology": "all_instances_share_the_exact_symbolic_R20_base_CNF_and_differ_only_in_512_public_output_unit_polarities"
+  },
+  "trajectory_measurement": {
+    "primitive": "standard_ChaCha20_20_round_block_function_with_feedforward",
+    "unknown_key_bits": 20,
+    "prefix_cell_bits": [19, 18, 17, 16, 15, 14, 13, 12],
+    "cell_count": 256,
+    "operators": ["numeric", "reflected_gray8"],
+    "state_retention": "one_CaDiCaL_instance_retained_across_all_256_cells_within_each_operator_and_reset_between_operators_and_keys",
+    "primary_budget": {"kind": "conflicts", "value_per_cell": 32},
+    "watchdog_seconds": 5.0,
+    "selected_by": "A218P_repeatable_measurement_sha256_6db14386c896127bc5fc4078547d4983cd8a6c0f2487834891888863ce8a205f",
+    "per_cell_channels": [
+      "conflicts_delta",
+      "decisions_delta",
+      "search_propagations_delta",
+      "active_variables_delta",
+      "irredundant_clauses_delta",
+      "redundant_clauses_delta"
+    ],
+    "excluded_from_every_feature": [
+      "status",
+      "returncode",
+      "budget_exhausted",
+      "watchdog_fired",
+      "seconds_budget_fired",
+      "model_bits",
+      "failed_assumptions",
+      "elapsed_time",
+      "process_wall_time",
+      "absolute_prefix_value",
+      "absolute_operator_position"
+    ]
+  },
+  "feature_protocol": {
+    "channel_transform": "log1p_for_nonnegative_search_deltas_and_sign_times_log1p_abs_for_signed_structure_deltas",
+    "within_challenge_views": [
+      "per_operator_zscore_with_zero_variance_mapped_to_zero",
+      "per_operator_centered_average_rank_in_minus1_plus1"
+    ],
+    "cross_operator_views": "orthonormal_sum_and_difference_of_aligned_numeric_and_gray_views",
+    "hypercube_view": "cell_value_minus_mean_of_the_eight_Hamming_distance_one_neighbors_for_each_local_view",
+    "path_view": "current_minus_predecessor_and_current_minus_successor_in_each_operator_path_with_cyclic_boundary",
+    "families": [
+      {"id": "F1_local", "contents": ["numeric_and_gray_zscores", "numeric_and_gray_centered_ranks"]},
+      {"id": "F2_cross", "contents": ["F1_local", "sum_difference_zscores", "sum_difference_centered_ranks"]},
+      {"id": "F3_cube", "contents": ["F2_cross", "Hamming1_local_residuals"]},
+      {"id": "F4_path", "contents": ["F2_cross", "operator_predecessor_and_successor_gradients"]},
+      {"id": "F5_all", "contents": ["F2_cross", "Hamming1_local_residuals", "operator_predecessor_and_successor_gradients"]}
+    ],
+    "no_data_dependent_feature_creation": true
+  },
+  "learning_protocol": {
+    "readouts": [
+      "class_balanced_standardized_ridge_logistic",
+      "standardized_Gram_Wiener_Fisher_inverse_covariance_mean_contrast"
+    ],
+    "ridge_lambda_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "training_rows": "16_times_256_cells",
+    "selection_rows": "8_disjoint_keys_times_256_cells",
+    "positive_label": "the_single_cell_matching_bits19_through12_of_the_known_low20_key",
+    "cell_score_tie_break": "ascending_prefix_integer",
+    "selection_objective": [
+      "minimum_validation_mean_log2_true_prefix_rank",
+      "minimum_validation_median_true_prefix_rank",
+      "maximum_validation_hit_at_16",
+      "maximum_validation_mean_reciprocal_rank",
+      "minimum_feature_count",
+      "declared_family_readout_lambda_order"
+    ],
+    "target_features_or_secret_used_for_selection": false
+  },
+  "selection_matched_null": {
+    "replicates": 64,
+    "seed_label": "f8-causal:A218:selection-matched-complete-key-null:v1",
+    "operation": "independently_permute_complete_training_key_labels_and_complete_validation_key_labels_without_row_level_shuffling",
+    "unique_train_validation_permutation_pairs": true,
+    "full_selection_repeated_per_replicate": true,
+    "repeated_scope": ["all_five_feature_families", "both_readouts", "all_five_ridge_lambdas", "the_exact_selection_objective"],
+    "primary_p_value": "add_one_lower_tail_for_selected_validation_mean_log2_rank"
+  },
+  "prospective_target_barrier": {
+    "generation_time": "after_this_protocol_file_is_hash_frozen",
+    "secret_source": "OS_CSPRNG_rejection_sampled_outside_the_24_A214_known_keys",
+    "commitment": "SHA256_of_domain_separator_plus_256bit_random_salt_plus_low20_little_endian",
+    "public_material": "same_fixed_material_as_A214_with_new_R20_target_blocks_and_no_low20_or_salt",
+    "sealed_secret_location": ".research_sealed/chacha20_round20_knownkey_trajectory_atlas_v1_secret.json",
+    "prereveal_must_contain": [
+      "all_candidate_validation_metrics",
+      "selected_model_and_coefficients",
+      "complete_selection_matched_null",
+      "target_feature_hash",
+      "complete_target_cell_order_sha256",
+      "target_top_64_prefixes"
+    ],
+    "secret_read_allowed_only_after_prereveal_atomic_write_and_sha256": true,
+    "future_solver_extension": "the_frozen_target_cell_order_may_be_executed_before_secret_reveal_as_a_separately_identified_end_to_end_operator_test"
+  },
+  "predeclared_readout": {
+    "validation_association": "selection_matched_null_lower_tail_plus_one_p_at_most_0.05",
+    "prospective_target_rank1": "new_target_true_prefix_is_rank_1_of_256",
+    "prospective_target_top16": "new_target_true_prefix_is_in_the_first_16_cells",
+    "prospective_target_top64": "new_target_true_prefix_is_in_the_first_64_cells",
+    "representation_boundary": "validation_does_not_beat_the_selection_matched_null_or_new_target_rank_is_not_better_than_the_declared_thresholds",
+    "all_boundaries_retained_as_mechanistic_evidence": true
+  },
+  "required_artifacts": {
+    "public_target": "research/challenges/chacha20_round20_knownkey_trajectory_atlas_v1_public.json",
+    "knownkey_corpus": "research/results/v1/chacha20_round20_knownkey_trajectory_corpus_v1.json",
+    "target_trajectory": "research/results/v1/chacha20_round20_target_trajectory_v1.json",
+    "prereveal": "research/results/v1/chacha20_round20_knownkey_trajectory_atlas_v1_prereveal.json",
+    "result": "research/results/v1/chacha20_round20_knownkey_trajectory_atlas_v1.json",
+    "causal": "research/results/v1/chacha20_round20_knownkey_trajectory_atlas_v1.causal",
+    "report": "research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_TRAJECTORY_ATLAS_V1.md"
+  }
+}

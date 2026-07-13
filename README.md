@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A210 full-round, reduced-round, and frozen
+evidence, and the subsequent A107--A220P full-round, reduced-round, and frozen
 pre-execution relations as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
@@ -94,6 +94,14 @@ precisely:
 | A208 | ChaCha10 BFS-far long-budget transfer | All 32 cells remain valid UNKNOWN at 60 seconds; exact integer counters show an all-prefix transition from conflict/decision work toward propagation/restart work after the first ten seconds | Same complete partition, eight-block global-CSE CNF, `output_unit_bfs_far`, reverse CaDiCaL; no early stop | Exact temporal search-phase boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_LONG_BUDGET_BOUNDARY_V1.md) |
 | A209 | ChaCha10 BFS-far Width-12 composition | All 256 cells remain valid UNKNOWN, while complete refinement restores a decision-rich phase: decisions, propagations, and restarts rise in 256/256 children and decision/propagation density rises in 32/32 parent groups | Complete `2^20` Width-12 cover; eight-block global CSE; rederived multi-source BFS-far order; ten seconds per child | Exact phase-reset composition boundary | [report](research/reports/CAUSAL_CHACHA20_ROUND10_BFS_FAR_WIDTH12_BOUNDARY_V1.md) |
 | A210 | ChaCha10 incremental sibling learning | Both independent 256-cell covers remain valid UNKNOWN, while retained clauses reduce aggregate decisions to 14.1% and conflicts to about 29% of fresh A209 cells; the first child dominates every later sibling in all 64 parent-mode groups | Native CaDiCaL 3.0 assumptions; complete Numeric and three-bit Gray covers; solver state retained only within each eight-child parent | Exact learned-state transfer mechanism | [report](research/reports/CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md) |
+| A211 | ChaCha10 global retained-state recovery | Numeric and reflected-Gray8 independently recover low20 `0x7c596`; both complete all 256 cells and confirm all 4,096 target bits | One common CNF; learned clauses retained across the entire Width-12 cover; ten seconds per cell | Confirmed 20-bit reduced-round partial-key assignment | [report](research/reports/CAUSAL_CHACHA20_ROUND10_GLOBAL_INCREMENTAL_RECOVERY_V1.md) |
+| R20 transfer | Standard ChaCha20 retained-state recovery | Numeric and Gray8 independently return low20 `0xe4934` at positions 228 and 184 and confirm eight full output blocks | Standard 20 rounds plus feed-forward; 236 key bits known; one common CNF; complete two-mode cover | Confirmed 20-bit full-round partial-key assignment; uniqueness not adjudicated | [report](research/reports/CAUSAL_CHACHA20_ROUND20_GLOBAL_INCREMENTAL_TRANSFER_V1.md) |
+| A212--A213 | Formula schedule and exact backprojection | A212 derives a public trajectory schedule without solver execution; A213's exact five-view propagation intersection leaves all `2^20` candidates and zero forced key relations | Public structure and exact CNF closure only | Exact schedule plus hard-propagation boundary | [A212](research/reports/SOLVER_TRAJECTORY_FORMULA_ATLAS_V1.md), [A213](research/reports/CAUSAL_CHACHA20_ROUND20_PCR_BACKPROJECTION_V1.md) |
+| A214--A216N | Known-key propagation, key-contrast and harmonic Readers | A214 target ranks remain below concentration; A215 localizes R3 degree saturation; A216's apparent validation gain does not survive its selection-matched null | Disjoint known-key training/validation, prereveal target barriers and complete-domain postseal ranks | Three exact representation boundaries and a retained selection-bias control | [A214](research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_PROPAGATION_ATLAS_V3.md), [A215](research/reports/CAUSAL_CHACHA20_ROUND20_KEY_CONTRAST_MOBIUS_ATLAS_V1.md), [A216](research/reports/CAUSAL_CHACHA20_ROUND20_MULTIFREQUENCY_GROUP_READOUT_V1.md), [A216N](research/reports/CAUSAL_CHACHA20_ROUND20_MULTIFREQUENCY_SELECTION_MATCHED_NULL_V1.md) |
+| A217 | R20 operator-diversity audit | Numeric and Gray8 have nearly identical aggregate work but low same-prefix rank correlation, low affine predictability and CKA `0.043672083` | Same common CNF, solver build, budget, complete cover and recovered model | Traversal order changes the retained-state path; operators are not scaled replicas | [report](research/reports/CAUSAL_CHACHA20_ROUND20_OPERATOR_DIVERSITY_AUDIT_V1.md) |
+| A218--A219 | Target-blind trajectory Reader and ranked execution | A218's selected Reader has selection-matched null `p=0.953846154` and target rank 211/256; A219 executes the frozen complete order and returns 256 UNKNOWN cells | Secret/correct prefix unopened until after the target-blind result was atomically written | Exact across-key Reader and ten-second solver boundaries; no A219 recovery | [A218](research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_TRAJECTORY_ATLAS_V1.md), [A219](research/reports/CAUSAL_CHACHA20_ROUND20_RANKED_TARGET_RECOVERY_V1.md) |
+| A220P | R20 multi-horizon factorial preflight | Twelve fresh processes show staged retained re-solve and one-shot trajectories are neither byte-identical nor scaled copies; forward/reverse same-prefix correlations are also low | One explicit known key; six directions by two schedules; 3,072 cells and 7,680 stages; no target/model selection | Direction and solve schedule are distinct solver interventions | [report](research/reports/CAUSAL_CHACHA20_ROUND20_MULTIHORIZON_PREFLIGHT_V1.md) |
+| A220 frozen | Factorial trajectory transfer protocol | Reader core, feature families, matched-null permutations, fit/select split and untouched holdout panel are hash-frozen; collection is in implementation and has no result claim | 52 fit/select keys under all 12 trajectories, then 92 untouched holdouts after Reader freeze | Preregistered protocol/infrastructure only | [protocol](research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -113,7 +121,7 @@ indexed in the [research report matrix](research/reports/NIGHTRUN_DIRECT_CAUSAL_
 and the append-only [attempt log](research/ATTEMPT_LOG.md). The earlier
 A107--A151 class ledger remains in [docs/RESULTS.md](docs/RESULTS.md).
 
-A185--A210 form a separate prospective reduced-round progression: a fresh
+A185--A220P form a prospective solver-representation progression: a fresh
 ChaCha4 directional recovery, its exact ChaCha5 fixed-budget boundary, a
 prospectively retained eight-block search-shape change, a fresh ChaCha5
 cross-engine 40-bit recovery, complete ChaCha7--9 recoveries, and a sequence of
@@ -133,6 +141,21 @@ eight-child sibling family: all 512 cells remain UNKNOWN, but decisions collapse
 after the first child in every one of the 64 parent-mode groups. The independent
 Numeric/Gray control shows that retained state, not local traversal order,
 dominates this transfer.
+
+A211 removes the remaining inter-parent resets and converts the same round-10
+cell into two independently confirmed models. The unchanged mechanism then
+transfers to the standard 20-round ChaCha20 block function: Numeric and Gray8
+independently recover the same 20-bit assignment while still executing their
+complete covers. A212--A219 test public formula schedules, exact propagation,
+known-key Readers, selection-matched nulls, operator diversity and a fresh
+target-blind ranked run. A220P then establishes experimentally that traversal
+direction and solve-boundary schedule are separate interventions. The A220
+factorial Reader protocol is committed at SHA-256
+`70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`;
+its main collection and untouched-holdout result are not yet claimed.
+
+The exact publication boundary, artifact identities, and fresh-clone gate for
+this update are collected in the [A220P release record](docs/RELEASE_A220P.md).
 
 ## Three connected methods
 
@@ -172,12 +195,13 @@ python -m pip install -r requirements.txt
 python -m pip install -e .
 ```
 
-Five evidence tiers make cost explicit:
+Six evidence tiers make cost explicit:
 
 | Tier | Command | Purpose |
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
 | `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A210 frontiers |
+| `retained` | `./scripts/reproduce_a211_a220p.sh` | authenticate A211--A220P evidence and the frozen A220 protocol without a production solve |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -187,6 +211,7 @@ Expected quick-tier terminus:
 ```text
 anchor manifest: OK
 full-round transfer manifest: OK
+A211-A220P manifest: OK
 causal artifacts: all valid
 ```
 
@@ -218,7 +243,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A210 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A220P evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

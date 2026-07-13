@@ -1,0 +1,188 @@
+{
+  "analysis_state": "retrospective_exact_audit_after_the_operator_diversity_question_was_identified",
+  "anchor_result_sha256": "a5be062ebce29cbc864ef926c55a1f9dbaadd69c9edcc54aed43552304f8e3f0",
+  "attempt_id": "A217-CHACHA20-R20-OPERATOR-DIVERSITY-AUDIT-V1",
+  "causal_artifact": {
+    "bytes": 925,
+    "explicit_triplets": 2,
+    "file_sha256": "062568745a0993c67251c31e311acacf2a73ff463e0d9ce2dabc0c21f3958735",
+    "graph_sha256": "7f784465484f382ae79b2ac0edc03096dae03080f829052f1881f965b5364f0e",
+    "inferred_triplets": 1,
+    "path": "<repository>/research/results/v1/chacha20_round20_operator_diversity_audit_v1.causal",
+    "reader_verified": true,
+    "triplets": 3
+  },
+  "decision_gates": {
+    "aggregate_ratios_within_0p95_1p05": true,
+    "all_256_same_prefix_statuses_equal": true,
+    "all_absolute_same_prefix_spearman_below_0p15": true,
+    "linear_CKA_below_0p10": true,
+    "mean_affine_R2_below_0p20": true,
+    "position_kendall_below_0p75": true,
+    "same_confirmed_model": true
+  },
+  "evidence_stage": "FULLROUND_R20_OPERATOR_DIVERSITY_MECHANISM_LOCALIZED",
+  "joint_operator": {
+    "cross_metric_Pearson_matrix": [
+      [
+        0.3301953109142748,
+        0.1532473271709739,
+        0.06030758587066218
+      ],
+      [
+        0.16190276313166935,
+        0.09077206447288422,
+        0.06608586572119625
+      ],
+      [
+        0.0687157914257009,
+        0.07019212607797559,
+        0.16216160422827608
+      ]
+    ],
+    "gray8_copy_control_CKA": 1.0,
+    "linear_CKA": 0.04367208347507524,
+    "mean_multivariate_affine_R2": 0.10981782931524646,
+    "numeric_copy_control_CKA": 1.0,
+    "numeric_to_gray8_multivariate_affine_R2": {
+      "conflicts": 0.04707136116851307,
+      "decisions": 0.254391895252035,
+      "search_propagations": 0.02799023152519131
+    },
+    "row_permutation_null": {
+      "float64_le_sha256": "bb3748ea6bded10fc3f453e161590cb1913f530bc1c9457faf950728f327a7c7",
+      "maximum": 0.07064615907388636,
+      "median": 0.004674788348048394,
+      "minimum": 0.00019316824929960347,
+      "permutations": 1024,
+      "upper_tail_add_one_p": 0.002926829268292683
+    },
+    "standardized_cross_operator_singular_values": [
+      111.85675474297075,
+      36.179479509359474,
+      1.2868047301901289
+    ]
+  },
+  "measurement_sha256": "720d0abeccf99e7e62cbd9fc225b5574e95b211d3685f35250bc8464aaca6e7f",
+  "order_geometry": {
+    "gray8_mean_consecutive_prefix_hamming": 1.0,
+    "gray8_order_uint8_sha256": "6ccee3ab08882a58e0debe15a25ada10de0891da82a9ac5fcf4ee591617b0c39",
+    "numeric_mean_consecutive_prefix_hamming": 1.968627450980392,
+    "numeric_order_uint8_sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+    "position_kendall_tau_b": 0.5019607843137255,
+    "position_spearman": 0.7500114442664225
+  },
+  "paired_prefixes": 256,
+  "protocol_sha256": "099455d5ecd7ae5a20817a065533a64162b90611ed9451e82f20c50e5603c5dc",
+  "recovered_low20": 936244,
+  "same_confirmed_model": true,
+  "same_prefix_statuses_equal": 256,
+  "same_prefix_trajectory": [
+    {
+      "gray8_over_numeric": 0.9990768000177752,
+      "gray8_total": 899299,
+      "kendall_tau_b": 0.05634018991954298,
+      "metric": "decisions",
+      "numeric_total": 900130,
+      "pearson": 0.3301953109142747,
+      "spearman": 0.0846906743184545,
+      "top_k_overlap": [
+        {
+          "intersection": 1,
+          "jaccard": 0.06666666666666667,
+          "k": 8,
+          "random_overlap_expectation": 0.25
+        },
+        {
+          "intersection": 2,
+          "jaccard": 0.06666666666666667,
+          "k": 16,
+          "random_overlap_expectation": 1.0
+        },
+        {
+          "intersection": 4,
+          "jaccard": 0.06666666666666667,
+          "k": 32,
+          "random_overlap_expectation": 4.0
+        },
+        {
+          "intersection": 17,
+          "jaccard": 0.15315315315315314,
+          "k": 64,
+          "random_overlap_expectation": 16.0
+        }
+      ]
+    },
+    {
+      "gray8_over_numeric": 0.9859613194760578,
+      "gray8_total": 764543,
+      "kendall_tau_b": 0.058927284223180255,
+      "metric": "conflicts",
+      "numeric_total": 775429,
+      "pearson": 0.09077206447288423,
+      "spearman": 0.09259087393658308,
+      "top_k_overlap": [
+        {
+          "intersection": 2,
+          "jaccard": 0.14285714285714285,
+          "k": 8,
+          "random_overlap_expectation": 0.25
+        },
+        {
+          "intersection": 2,
+          "jaccard": 0.06666666666666667,
+          "k": 16,
+          "random_overlap_expectation": 1.0
+        },
+        {
+          "intersection": 4,
+          "jaccard": 0.06666666666666667,
+          "k": 32,
+          "random_overlap_expectation": 4.0
+        },
+        {
+          "intersection": 20,
+          "jaccard": 0.18518518518518517,
+          "k": 64,
+          "random_overlap_expectation": 16.0
+        }
+      ]
+    },
+    {
+      "gray8_over_numeric": 0.9994878371686564,
+      "gray8_total": 14869769992,
+      "kendall_tau_b": 0.027696078431372548,
+      "metric": "search_propagations",
+      "numeric_total": 14877389638,
+      "pearson": 0.1621616042282761,
+      "spearman": 0.04009355687800412,
+      "top_k_overlap": [
+        {
+          "intersection": 4,
+          "jaccard": 0.3333333333333333,
+          "k": 8,
+          "random_overlap_expectation": 0.25
+        },
+        {
+          "intersection": 7,
+          "jaccard": 0.28,
+          "k": 16,
+          "random_overlap_expectation": 1.0
+        },
+        {
+          "intersection": 11,
+          "jaccard": 0.20754716981132076,
+          "k": 32,
+          "random_overlap_expectation": 4.0
+        },
+        {
+          "intersection": 20,
+          "jaccard": 0.18518518518518517,
+          "k": 64,
+          "random_overlap_expectation": 16.0
+        }
+      ]
+    }
+  ],
+  "schema": "chacha20-round20-operator-diversity-audit-v1"
+}

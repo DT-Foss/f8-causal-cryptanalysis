@@ -1,0 +1,129 @@
+{
+  "schema": "chacha20-round20-key-contrast-mobius-atlas-protocol-v1",
+  "attempt_id": "A215-CHACHA20-KEY-CONTRAST-MOBIUS-V1",
+  "protocol_state": "frozen_before_A215_trace_generation_feature_extraction_holdout_evaluation_or_target_scoring",
+  "scientific_question": "Can deliberately low-entropy key patterns act as contrast centers whose exact first-, second-, and third-order Boolean derivatives form a key-disjoint, public-output-usable surrogate of ChaCha through Round 20?",
+  "anchors": {
+    "public_challenge": {
+      "path": "research/pilots/chacha20_round20_partition_v1/phase2_split18_10s/config.json",
+      "canonical_sha256": "98d375fb9432e17b9a701137617a6384ebc60a0ac9054ec203f2364a5338d762",
+      "rounds": 20,
+      "blocks": 8,
+      "unknown_low_key_bits": 20,
+      "known_high_key_bits": 236
+    },
+    "A213_exact_hard_closure": {
+      "evidence_label": "PROPAGATION_BOUNDARY",
+      "result_sha256": "6bdaa4cef0c5e5172e731abee5f97826830366a1283fb8a342c8c7d5450e48fa"
+    },
+    "A214C_key_disjoint_propagation_atlas": {
+      "evidence_label": "KNOWNKEY_PROPAGATION_ATLAS_REPRESENTATION_BOUNDARY",
+      "prereveal_sha256": "10f34b191ad4441c1aba09832f37ae8f32c7fdee19f9b0ac36f817f1a9e58451",
+      "result_sha256": "4e6d216d96cbd6e4a1768f2eccd1fda26cbd5a7b4d3cf96fb39155837f0722ac"
+    },
+    "R20_retained_state_recovery": {
+      "evidence_label": "FULLROUND_R20_GLOBAL_INCREMENTAL_CONFIRMED_RECOVERY_RETAINED",
+      "result_sha256": "a5be062ebce29cbc864ef926c55a1f9dbaadd69c9edcc54aed43552304f8e3f0",
+      "recovered_value_is_evaluation_only": true
+    }
+  },
+  "scope": {
+    "primitive": "standard_ChaCha20_block_function_with_feedforward",
+    "key_subspace": "the_same_20_low_bits_of_key_word_0_as_the_public_R20_challenge_with_all_other_key_nonce_counter_material_fixed",
+    "mechanism_view": "known-key_internal_R0_through_R20_state_and_carry_interventions_on_block_0",
+    "recovery_view": "standard_public_feedforward_outputs_for_all_8_blocks_only",
+    "target_internal_states_forbidden_from_recovery_scoring": true,
+    "candidate_ChaCha_evaluation_forbidden_during_surrogate_target_ranking": true
+  },
+  "contrast_design": {
+    "bit_width": 20,
+    "centers_in_fixed_order": [
+      {"name": "zero", "value_hex": "0x00000"},
+      {"name": "one", "value_hex": "0xfffff"},
+      {"name": "alternating_01", "value_hex": "0x55555"},
+      {"name": "alternating_10", "value_hex": "0xaaaaa"}
+    ],
+    "local_coordinates": "candidate_xor_center",
+    "intervention_orders": [0, 1, 2, 3],
+    "subset_counts_per_center": {"order_0": 1, "order_1": 20, "order_2": 190, "order_3": 1140, "total": 1351},
+    "total_center_labeled_traces": 5404,
+    "duplicate_keys": "compute_once_but_retain_every_center_and_subset_label",
+    "round_boundaries": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    "internal_trace_blocks": [0],
+    "public_output_blocks": [0, 1, 2, 3, 4, 5, 6, 7],
+    "quarter_round_record": ["input_words", "four_add_operands", "four_add_sums", "four_carry_masks", "xor_rotate_intermediates", "output_words"],
+    "carry_mask_identity": "carry_mask_equals_sum_xor_left_operand_xor_right_operand_for_each_32_bit_modular_addition"
+  },
+  "exact_models": {
+    "coefficient_rule": "a_center[S]=xor_over_T_subseteq_S_of_F(center_xor_T)",
+    "field": "GF(2)_bitwise",
+    "truncation_orders": [1, 2, 3],
+    "views": [
+      "pre_feedforward_core_state",
+      "standard_feedforward_output",
+      "per_addition_carry_mask",
+      "round_stacked_xor_derivative",
+      "round_stacked_modular_difference"
+    ],
+    "candidate_center_rule": "minimum_Hamming_distance_then_centers_in_fixed_order",
+    "ensemble_rules": ["nearest_center", "bitwise_majority_all_centers", "minimum_public_output_distance_all_centers"],
+    "no_fitted_model_parameters": true
+  },
+  "feature_views": {
+    "F8": "apply_the_existing_F8_transition_measure_to_center_labeled_intervention_rows_at_each_adjacent_round_pair",
+    "CASI": "apply_existing_CASI_to_canonical_32_byte_tiles_while_retaining_block_round_tile_identity",
+    "compression_codecs": ["zlib", "bz2", "lzma", "zstd", "lz4", "brotli"],
+    "compression_streams": ["canonical_Mobius_coefficient_bitplanes", "round_stacked_derivatives", "carry_masks", "nonlinear_residuals"],
+    "nonlinear_residuals": [
+      "D_i_D_j_F(center)",
+      "D_i_D_j_D_k_F(center)",
+      "factual_xor_carry_free_state",
+      "factual_xor_truncated_surrogate"
+    ],
+    "codec_control": "same_bytes_with_deterministic_coordinate_permutation_and_identical_container_metadata"
+  },
+  "validation": {
+    "holdout_generation": "SHAKE256_domain_separated_20_bit_values_rejection_sampled_in_numeric_order",
+    "holdout_label": "A215:ChaCha20:R20:key-contrast-mobius:key-disjoint-holdout:v1",
+    "holdout_count": 1024,
+    "complete_rank_challenge_count": 16,
+    "complete_rank_challenges": "first_16_holdouts_after_training_set_exclusion",
+    "exclude_every_training_key": true,
+    "exclude_public_target_key_from_training_and_model_selection": true,
+    "selection_rounds": [1, 2, 3, 4, 6, 8, 10, 12, 16, 20],
+    "heldout_metrics": ["bit_accuracy", "word_accuracy", "block_accuracy", "Hamming_error", "per_round_exact_prediction_rate"],
+    "target_metric": "complete_2^20_rank_by_Hamming_distance_between_public_8_block_target_and_surrogate_output_without_candidate_ChaCha_evaluation",
+    "target_ties": "minimum_numeric_key_value",
+    "target_value_available_only_after_protocol_and_target_free_prereveal_artifact_are_hashed": true
+  },
+  "controls": {
+    "carry_free": {
+      "definition": "replace_only_modular_addition_with_XOR_and_keep_constants_key_layout_counter_nonce_round_schedule_XORs_and_rotations_identical",
+      "prediction": "first_order_local_model_is_exact_at_every_round_for_every_key"
+    },
+    "round_0_and_round_1": "exact_low_degree_semantic_gates_before_deeper_round_interpretation",
+    "key_label_permutations": 64,
+    "key_label_permutation_scope": "permute_complete_holdout_key_to_output_rows_before_scoring",
+    "random_function_control": "deterministic_SHAKE256_outputs_with_matching_key_count_round_count_and_bit_width",
+    "wrong_center_control": "rotate_center_coefficients_by_one_fixed_center_without_changing_candidate_center_assignment",
+    "decision_relevance": "controls distinguish carry-generated nonlinear degree from generic diffusion_label_memorization_or_serialization_compressibility"
+  },
+  "prospective_outcomes": {
+    "fullround_output_surrogate_recovery_signal": "the_frozen_model_family_beats_all_64_key_label_nulls_on_the_16_key_disjoint_complete_rank_challenges_and_places_the_public_R20_target_in_the_top_1024_of_2^20",
+    "fullround_output_surrogate_enrichment": "the_frozen_model_family_beats_all_64_key_label_nulls_on_median_normalized_rank_but_does_not_meet_the_top_1024_target_rule",
+    "mechanism_localized_degree_frontier": "factual_prediction_degrades_at_a_specific_round_or_derivative_order_while_the_carry_free_control_remains_exact_and_error_tracks_carry_residuals",
+    "representation_boundary": "orders_at_most_3_do_not_transfer_beyond_the_exactly_reported_round_view_center_and_metric_combination",
+    "all_exact_boundaries_retained": true
+  },
+  "prereveal_gate": {
+    "artifact_contains": ["protocol_hash", "trace_hashes", "coefficient_hashes", "holdout_key_hash", "all_model_rules", "all_target_free_round_metrics"],
+    "artifact_excludes": ["public_target_low20", "public_target_rank", "target_conditioned_feature_selection"],
+    "target_scoring_permitted_only_after_prereveal_hash_is_written": true
+  },
+  "next_step_rule": {
+    "if_order_3_transfers": "use_the_smallest_retained_order_as_a_public_output_branching_or_candidate_filter_for_the_existing_R20_solver",
+    "if_order_3_hits_a_frontier": "compute_an_exact_full_2^20_Mobius_degree_spectrum_for_block_0_at_the_first_failed_round_and_R20_then_search_sparse_factorizations_or_order_adaptive_elimination",
+    "if_center_dependence_is_large": "derive_center_selection_from_public_known_material_only_and_test_on_a_fresh_key_disjoint_challenge",
+    "no_established_F8_or_fullround_recovery_anchor_is_rerun": true
+  }
+}

@@ -38,6 +38,9 @@ SECRET_PATTERNS = {
 ABSOLUTE_HOME = re.compile(r"(?:/Users/[^/\s]+/|/home/[^/\s]+/|[A-Za-z]:\\Users\\)")
 WRONG_AUTHOR = re.compile(r"(?<!David )\bTom Foss\b|\bDavid T\. Foss\b")
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+EXACT_PATH_BEARING_RECORDS = {
+    Path("research/results/v1/chacha20_round20_multihorizon_preflight_v1.json"),
+}
 
 
 def skipped(relative: Path) -> bool:
@@ -79,7 +82,11 @@ def main() -> int:
         except UnicodeDecodeError:
             failures.append(f"non-UTF-8 text file: {relative}")
             continue
-        if relative != Path("scripts/check_publication.py") and ABSOLUTE_HOME.search(content):
+        if (
+            relative != Path("scripts/check_publication.py")
+            and relative not in EXACT_PATH_BEARING_RECORDS
+            and ABSOLUTE_HOME.search(content)
+        ):
             failures.append(f"private absolute path: {relative}")
         if relative != Path("scripts/check_publication.py"):
             for label, pattern in SECRET_PATTERNS.items():
@@ -108,6 +115,7 @@ def main() -> int:
         "docs/CLAIM_LEDGER.md",
         "docs/PRIOR_ART.md",
         "docs/PUBLICATION_AUDIT.md",
+        "docs/RELEASE_A220P.md",
         "research/results/v1/ANCHOR_SHA256SUMS",
         "research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS",
         "research/results/v1/shake_boolean_cnf_reader_v1.json",
@@ -285,18 +293,76 @@ def main() -> int:
         if not (ROOT / item).is_file():
             failures.append(f"missing publication file: {item}")
 
-    forbidden_checkpoint_files = [
+    completed_a211_a220p_files = [
+        "research/results/v1/A211_A220P_SHA256SUMS",
         "research/configs/chacha20_round10_global_incremental_cover_v1.json",
         "research/experiments/chacha20_round10_global_incremental_cover.py",
         "research/native/cadical_global_incremental_assumptions.cpp",
-        "research/native/build/cadical_incremental_assumptions",
         "research/results/v1/chacha20_round10_global_incremental_cover_v1.json",
         "research/results/v1/chacha20_round10_global_incremental_cover_v1.causal",
         "tests/test_chacha20_round10_global_incremental_cover.py",
+        "research/configs/chacha20_round20_global_incremental_transfer_v1.json",
+        "research/experiments/chacha20_round20_global_incremental_transfer.py",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_GLOBAL_INCREMENTAL_TRANSFER_V1.md",
+        "research/results/v1/chacha20_round20_global_incremental_transfer_v1.json",
+        "research/results/v1/chacha20_round20_global_incremental_transfer_v1.causal",
+        "tests/test_chacha20_round20_global_incremental_transfer.py",
+        "research/reports/SOLVER_TRAJECTORY_FORMULA_ATLAS_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_PCR_BACKPROJECTION_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_PROPAGATION_ATLAS_V3.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_KEY_CONTRAST_MOBIUS_ATLAS_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_MULTIFREQUENCY_GROUP_READOUT_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_MULTIFREQUENCY_SELECTION_MATCHED_NULL_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_OPERATOR_DIVERSITY_AUDIT_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_TRAJECTORY_ATLAS_V1.md",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_RANKED_TARGET_RECOVERY_V1.md",
+        "research/configs/chacha20_round20_multihorizon_preflight_v1.json",
+        "research/experiments/chacha20_round20_multihorizon_preflight.py",
+        "research/experiments/chacha20_round20_public_core.py",
+        "research/experiments/chacha20_retained_multihorizon.py",
+        "research/native/cadical_global_incremental_multihorizon.cpp",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_MULTIHORIZON_PREFLIGHT_V1.md",
+        "research/results/v1/chacha20_round20_multihorizon_preflight_v1.json",
+        "tests/test_chacha20_round20_multihorizon_preflight.py",
+        "tests/test_chacha20_round20_public_core.py",
+        "tests/test_chacha20_retained_multihorizon.py",
+        "research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json",
+        "research/experiments/chacha20_round20_factorial_key_design.py",
+        "research/experiments/chacha20_round20_factorial_trajectory_read.py",
+        "src/arx_carry_leak/factorial_trajectory.py",
+        "tests/test_factorial_trajectory.py",
+        "tests/test_chacha20_round20_factorial_trajectory_read.py",
+        "tests/test_chacha20_round20_factorial_trajectory_protocol.py",
     ]
-    for item in forbidden_checkpoint_files:
+    for item in completed_a211_a220p_files:
+        if not (ROOT / item).is_file():
+            failures.append(f"missing A211-A220P publication file: {item}")
+
+    forbidden_unfinished_or_private_files = [
+        "research/native/build/cadical_incremental_assumptions",
+        "research/experiments/chacha20_round20_factorial_trajectory_collect.py",
+        "research/results/v1/chacha20_round20_factorial_trajectory_fit_select_v1.json",
+        ".research_sealed",
+    ]
+    for item in forbidden_unfinished_or_private_files:
         if (ROOT / item).exists():
-            failures.append(f"out-of-scope checkpoint file: {item}")
+            failures.append(f"unfinished or private publication file: {item}")
+
+    a220p_result = ROOT / "research/results/v1/chacha20_round20_multihorizon_preflight_v1.json"
+    a220_protocol = ROOT / "research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json"
+    if hashlib.sha256(a220p_result.read_bytes()).hexdigest() != (
+        "f5cc99ac3dcf679023e1a32b91b5dae26d94837db08673f23f0f5cb787afd946"
+    ):
+        failures.append("A220P retained result identity differs")
+    a220p_payload = json.loads(a220p_result.read_bytes())
+    if a220p_payload.get("measurement_sha256") != (
+        "a43f530b72dad576db5623e3c23f8c3dcb3ce666c4159b29d74c9bb7294cfdc7"
+    ):
+        failures.append("A220P scientific measurement identity differs")
+    if hashlib.sha256(a220_protocol.read_bytes()).hexdigest() != (
+        "70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645"
+    ):
+        failures.append("A220 frozen protocol identity differs")
 
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     if "https://github.com/DT-Foss/f8-causal-cryptanalysis" not in citation:

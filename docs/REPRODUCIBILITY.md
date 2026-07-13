@@ -64,7 +64,8 @@ This tier is designed for minutes, not a paper-scale rerun. It performs:
 - Speck and Threefish vector gates;
 - focused F8, CASI, Reader, PRESENT, SHA-2, and native/Boolean-SHAKE tests;
 - repository-wide `.causal` Reader validation;
-- all nine retained SHA-256 manifest verifications;
+- all retained SHA-256 manifest verifications, including the dedicated
+  A211--A220P publication manifest;
 - `compileall` over active Python code.
 
 Expected final line: `quick evidence tier: OK`.
@@ -355,12 +356,34 @@ bounded representation and its independent gates.
 ## Other reproducible tracks
 
 ```bash
+./scripts/reproduce_a211_a220p.sh
 ./scripts/reproduce.sh quick
 ./scripts/reproduce_causal_mechanisms.sh
 ./scripts/reproduce_multi_cipher_atlas.sh
 ./scripts/reproduce_pqc.sh
 ./scripts/reproduce_research.sh
 ```
+
+`reproduce_a211_a220p.sh` authenticates the completed A220P result, the current
+frozen A220 protocol, the public-only R20 adapter and the completed factorial
+Reader core before running the focused retained-evidence suite. It does not
+start the A211/R20 production solves or the unfinished A220 collection.
+
+Host-specific paths in retained A211--A219 JSON are replaced by stable role
+paths in the publication copy. A220P is the single deliberate exception: its
+JSON remains byte-identical at
+`f5cc99ac3dcf679023e1a32b91b5dae26d94837db08673f23f0f5cb787afd946`
+because the final A220 protocol binds that exact whole-file identity. The
+embedded provenance paths are inert in retained-evidence mode, and the
+canonical scientific measurement projection is
+`a43f530b72dad576db5623e3c23f8c3dcb3ce666c4159b29d74c9bb7294cfdc7`.
+
+The 145 MB A215 raw NumPy measurement archive is intentionally not stored in
+Git. Its SHA-256
+`882ae2504851f1bac1f2350f8c160dba6cddd5b03afc4eb09f2252fc9b8cb5ff`
+remains bound in the protocol, result and report. Tests that require that
+archive are explicitly skipped in a fresh public clone; deterministic unit,
+result-hash, prereveal, Causal-Reader and A220 protocol gates remain active.
 
 The legacy paper runner is intentionally separate because it replays archived
 scripts and may require a Torch-capable interpreter for the recorded neural
@@ -384,7 +407,8 @@ python scripts/verify_hash_manifest.py \
   research/results/v1/PQC_SHA256SUMS \
   research/results/v1/FULLROUND_TRANSFER_SHA256SUMS \
   research/results/v1/SHAKE_NATIVE_EXTENDED_SHA256SUMS \
-  research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS
+  research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS \
+  research/results/v1/A211_A220P_SHA256SUMS
 ```
 
 The manifest parser rejects malformed hashes, duplicate entries, missing

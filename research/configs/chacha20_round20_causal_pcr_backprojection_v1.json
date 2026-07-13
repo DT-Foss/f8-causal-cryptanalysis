@@ -1,0 +1,176 @@
+{
+  "schema": "chacha20-round20-causal-pcr-backprojection-protocol-v1",
+  "attempt_id": "A213",
+  "protocol_state": "frozen_after_R20_numeric_and_reflected_gray_execution_started_but_before_any_atomic_mode_output_or_status_or_model_was_available_or_read",
+  "frozen_utc": "2026-07-12T19:52:00Z",
+  "research_question": "Can exact multi-view backward propagation through the frozen standard-output R20 CNF reduce or resolve the hidden 20-bit key domain without using solver outcomes or the hidden assignment?",
+  "conceptual_model": {
+    "name": "Causal-PCR exact multiview backprojection",
+    "signal_definition": "joint compatibility of a key candidate with the public input-output constraints across exact computational views",
+    "not_the_signal": "compressibility or non-randomness of the key bytes in isolation",
+    "amplification_definition": "recursive exact constraint propagation with complete source-clause provenance",
+    "overlay_definition": "set intersection of exact consequences; correlated derivations are never counted as independent evidence",
+    "pcr_mapping": {
+      "primer": "a signed key literal or signed key-literal pair",
+      "template": "the frozen R20 CNF encoding of eight public ChaCha20 input-output blocks",
+      "amplification": "unit propagation and exact implication closure",
+      "readout": "contradiction, forced key literal, exact pair nogood, or surviving candidate"
+    }
+  },
+  "anchors": {
+    "R20_global_transfer_protocol": {
+      "path": "research/configs/chacha20_round20_global_incremental_transfer_v1.json",
+      "sha256": "64470896de99dacabb0b53f81d8c94c2da82e7088be09c8e1b4d38665ae09946"
+    },
+    "R20_global_transfer_runner_frozen_semantics": {
+      "path": "research/experiments/chacha20_round20_global_incremental_transfer.py",
+      "sha256": "1825035b90317e9d6c8a2ee0894f2569eada44177ee01ced49d043ca37ec881d"
+    },
+    "public_challenge_sha256": "98d375fb9432e17b9a701137617a6384ebc60a0ac9054ec203f2364a5338d762",
+    "transformed_R20_CNF": {
+      "header": "p cnf 68783 216461",
+      "bytes": 3819903,
+      "sha256": "2c33afd9f78ed3e1a2180313571918af51d5eaf2e1cd3b09fb588b86745f19b1",
+      "transformed_one_literals_bit0_through_bit19": [
+        66567,
+        64061,
+        60957,
+        64063,
+        60959,
+        64065,
+        60961,
+        60963,
+        60965,
+        64066,
+        64068,
+        64069,
+        67910,
+        67911,
+        67912,
+        67913,
+        67914,
+        67915,
+        67916,
+        67917
+      ]
+    },
+    "native_helper_source": {
+      "path": "research/native/cadical_global_incremental_signed.cpp",
+      "sha256": "016fc73b402fc02e0ecf83639ae75950a5971ad3207c1ea66e980268343fbef3"
+    },
+    "A212_formula_atlas": {
+      "result_path": "research/results/v1/chacha20_solver_trajectory_formula_atlas_v1.json",
+      "result_sha256": "d7fc64a9aac6f36483b238595332fd3a4f351c39e501de56b0d1f832903bc8cf",
+      "causal_path": "research/results/v1/chacha20_solver_trajectory_formula_atlas_v1.causal",
+      "causal_sha256": "ce5b4f5859a4e4d4c33be185deb2625fa1dc113c1127f0635444ff6ff1789c49",
+      "formula_gray8_order_sha256": "ba9cf4d93c1937665772c77b9091d45cb575054c70037d9cc540ee70a9609127",
+      "score_rows_sha256": "a43027e25b2d4c9d13d4e04a4bdb81be067c20801e3061df6a5d395897b79fce"
+    }
+  },
+  "information_boundary": {
+    "R20_numeric_and_reflected_gray_processes_started_before_this_freeze": true,
+    "R20_atomic_mode_outputs_existed_before_this_freeze": false,
+    "R20_status_or_model_or_correct_cell_read_before_this_freeze": false,
+    "hidden_20_bit_assignment_in_public_challenge": false,
+    "hidden_20_bit_assignment_available_to_A213": false,
+    "A211_R10_result_used_to_choose_or_score_an_R20_candidate": false,
+    "A212_formula_schedule_used_as_hard_evidence": false,
+    "orders_rules_budgets_or_evidence_thresholds_may_change_after_freeze": false
+  },
+  "observable_scope": {
+    "available": "eight standard ChaCha20 R20 input-output blocks plus 236 declared known key bits encoded in the frozen CNF",
+    "not_available": "observed secret-key intermediate states for R1 through R19",
+    "scope_rule": "No candidate-generated intermediate trajectory may be treated as an independently observed round trace.",
+    "future_cross_round_oracle_arm": "A separate prospectively frozen experiment may expose R1 through R20 outputs and test per-round versus joint CASI-F8 conditional code length; it must be labeled cross-round-oracle scope and is not part of A213."
+  },
+  "dimacs_gates": {
+    "require_exact_header": true,
+    "require_exact_byte_sha256": true,
+    "require_declared_clause_count": true,
+    "require_all_clauses_terminated_by_zero": true,
+    "require_literals_within_declared_variable_range": true,
+    "reject_duplicate_literals_within_clause": true,
+    "reject_tautological_clauses": true,
+    "expected_clause_lengths": [1, 2, 3],
+    "expected_clause_length_counts": {
+      "1": 880,
+      "2": 118838,
+      "3": 96743
+    }
+  },
+  "exact_views": [
+    {
+      "id": "V1_base_unit_closure",
+      "algorithm": "deterministic_watched_occurrence_unit_propagation",
+      "assumptions": 0,
+      "outputs": ["base_conflict", "forced_variables", "forced_key_literals", "reason_clause_dag"]
+    },
+    {
+      "id": "V2_single_literal_backprojection",
+      "algorithm": "base_closure_plus_each_signed_key_literal",
+      "probe_count": 40,
+      "outputs": ["assumption_conflicts", "implied_signed_key_literals", "minimal_reachable_reason_clause_sets"]
+    },
+    {
+      "id": "V3_pair_literal_backprojection",
+      "algorithm": "base_closure_plus_every_two_distinct_key_bits_and_four_value_assignments",
+      "probe_count": 760,
+      "outputs": ["exact_pair_nogoods", "pair_conditioned_key_implications", "reason_clause_dags"]
+    },
+    {
+      "id": "V4_binary_implication_closure",
+      "algorithm": "exact_directed_implication_graph_from_binary_clauses_after_base_units",
+      "seed_literal_count": 40,
+      "outputs": ["signed_key_reachability", "strongly_connected_components", "equivalences", "forced_literals", "shortest_clause_provenance_paths"]
+    },
+    {
+      "id": "V5_exact_domain_overlay",
+      "algorithm": "enumerate_all_2_pow_20_assignments_and_intersect_only_exact_V1_to_V4_constraints",
+      "candidate_count": 1048576,
+      "outputs": ["surviving_candidate_count", "entropy_reduction_bits", "survivor_sha256", "unique_candidate_if_any"]
+    }
+  ],
+  "dependence_policy": {
+    "V1_to_V5_share_the_same_CNF": true,
+    "view_results_may_be_intersected_as_exact_constraints": true,
+    "view_counts_may_not_be_multiplied_as_independent_probabilities": true,
+    "one_best_provenance_path_per_identical_exact_conclusion": true,
+    "recursive_inference_max_hops": 4,
+    "fuzzy_or_semantic_entity_matching": false,
+    "soft_A212_schedule_or_solver_metrics_can_rank_but_never_eliminate_candidates": true
+  },
+  "candidate_confirmation": {
+    "run_only_if_V5_survivor_count_is_one": true,
+    "method": "independent_numpy_ChaCha20_R20_evaluation_of_all_4096_public_target_bits_plus_the_frozen_flipped_control",
+    "confirmation_is_not_used_during_inference": true
+  },
+  "evidence_ladder": [
+    {
+      "stage": "EXACT_CAUSAL_RELATION_GRAPH",
+      "predicate": "at least one nontrivial forced key literal, implication, equivalence, or pair nogood is derived"
+    },
+    {
+      "stage": "EXACT_KEY_DOMAIN_REDUCTION",
+      "predicate": "V5 surviving candidate count is strictly below 1048576"
+    },
+    {
+      "stage": "UNIQUE_CANDIDATE_DISCOVERY",
+      "predicate": "V5 surviving candidate count equals one"
+    },
+    {
+      "stage": "INDEPENDENTLY_CONFIRMED_PARTIAL_KEY_RECOVERY",
+      "predicate": "the unique candidate passes all 4096 target bits and the flipped control rejects"
+    },
+    {
+      "stage": "PROPAGATION_BOUNDARY",
+      "predicate": "no exact key-domain reduction is obtained; the exact closure depth and missing relation classes are retained as the next compiler requirement"
+    }
+  ],
+  "required_artifacts": {
+    "result_json": "research/results/v1/chacha20_round20_causal_pcr_backprojection_v1.json",
+    "causal_file": "research/results/v1/chacha20_round20_causal_pcr_backprojection_v1.causal",
+    "report": "research/reports/CAUSAL_CHACHA20_ROUND20_PCR_BACKPROJECTION_V1.md",
+    "test": "tests/test_chacha20_round20_causal_pcr_backprojection.py",
+    "reproducer": "scripts/reproduce_chacha20_round20_causal_pcr_backprojection.sh"
+  }
+}

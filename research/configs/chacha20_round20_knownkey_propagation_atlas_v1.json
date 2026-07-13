@@ -1,0 +1,149 @@
+{
+  "schema": "chacha20-round20-knownkey-propagation-atlas-protocol-v1",
+  "attempt_id": "A214",
+  "protocol_state": "frozen_after_A213_propagation_boundary_and_before_any_R20_solver_status_model_or_correct_target_key_was_available_or_read",
+  "research_question": "Can a key-disjoint atlas learned from exact propagation-amplification signatures of known low20 keys rank the hidden low20 key of the frozen standard-output R20 target?",
+  "anchors": {
+    "A213_protocol_sha256": "d84e69246b1d78499f464184f1e5d841e36cef5ea3849f150ebdba0094703d47",
+    "A213_result_sha256": "6bdaa4cef0c5e5172e731abee5f97826830366a1283fb8a342c8c7d5450e48fa",
+    "A213_causal_sha256": "6142c8415a01110e7370fd3840636840321feec1acb333b68a956addf89023b2",
+    "A213_causal_graph_sha256": "be4cee5319c3a30f0932cb683bbfe2ccdc08bda079bab273c6db446e7a0bf6f3",
+    "R20_global_transfer_protocol_sha256": "64470896de99dacabb0b53f81d8c94c2da82e7088be09c8e1b4d38665ae09946",
+    "R20_global_transfer_runner_sha256": "1825035b90317e9d6c8a2ee0894f2569eada44177ee01ced49d043ca37ec881d",
+    "public_target_challenge_sha256": "98d375fb9432e17b9a701137617a6384ebc60a0ac9054ec203f2364a5338d762",
+    "public_target_original_CNF_sha256": "df051ca805414ea33f065627573aea791d8bee073d0f7ed5b020ce89c953dbea",
+    "public_target_original_CNF_header": "p cnf 68783 216461",
+    "source_one_literals_bit0_through_bit19": [
+      16,
+      15,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      55,
+      60
+    ]
+  },
+  "breadcrumb": {
+    "A213_base_assigned_variables": 1649,
+    "A213_single_assumption_assigned_range": [1651, 1704],
+    "A213_pair_assumption_assigned_range": [1653, 1877],
+    "A213_exact_forced_key_relations": 0,
+    "interpretation_fixed_before_A214_measurement": "hard first-order closure does not reach another key variable, while propagation volume and topology vary strongly enough to define a prospective soft amplification surface"
+  },
+  "known_key_atlas": {
+    "fixed_public_material": "reuse the target high12 bits of key word0, key words1-through7, counter schedule, nonce, block count, and standard R20 implementation",
+    "vary_only": "low20 of key word0 and the resulting eight target blocks",
+    "derivation": "low20 = LE32(SHAKE256(label,4)) AND 0xfffff",
+    "training_labels": "f8-causal:A214:train:{index}:known-low20-v1 for index 0 through 15",
+    "validation_labels": "f8-causal:A214:validation:{index}:known-low20-v1 for index 0 through 7",
+    "training_key_count": 16,
+    "validation_key_count": 8,
+    "derived_row_ledger_sha256": "b0b1add2b4185c0b7a5ef02397ed54d3e504a19866a833601382e725adbdc91f",
+    "all_24_low20_values_must_be_unique": true,
+    "target_collision_policy": "if the independently revealed target low20 equals any atlas key, retain TARGET_KEY_COLLISION_BOUNDARY and make no unseen-key transfer claim"
+  },
+  "probe_cover_per_challenge": {
+    "base_unit_closure": 1,
+    "single_signed_key_literals": 40,
+    "all_distinct_keybit_pairs_times_four_values": 760,
+    "complete_probe_count": 801,
+    "triples": "not used in model fitting; after the target candidate order is frozen, exact triple probes may be applied only to a fixed top-k shortlist in a separately labeled extension"
+  },
+  "feature_families": [
+    {
+      "id": "F1_propagation_counts",
+      "features": [
+        "new_assigned_variables",
+        "new_satisfied_clauses",
+        "residual_unsatisfied_binary_clauses",
+        "residual_unsatisfied_ternary_clauses"
+      ]
+    },
+    {
+      "id": "F2_assignment_geometry",
+      "features": [
+        "assigned_variable_id_mean",
+        "assigned_variable_id_sd",
+        "assigned_id_gap_mean",
+        "assigned_id_gap_sd",
+        "assigned_mask_run_count",
+        "assigned_mask_lag1_autocorrelation"
+      ]
+    },
+    {
+      "id": "F3_multicodec_code_lengths",
+      "input": "packbits(newly_assigned_variable_mask) with an exact fixed header",
+      "codecs": ["zlib9", "bz2_9", "lzma6", "zstd9", "lz4_9", "brotli9"],
+      "features": "compressed bytes and delta from the base-mask code length for each codec"
+    },
+    {
+      "id": "F4_CASI_style_mask_profile",
+      "features": [
+        "byte_entropy",
+        "byte_frequency_reduced_chi_square",
+        "nibble_adjacent_mutual_information",
+        "spectral_low_frequency_energy_fraction"
+      ]
+    },
+    {
+      "id": "F5_multiview_consensus",
+      "features": "correlation-aware rank aggregation of F1, F2, F3, F4, and their combined model; no product of p-values"
+    }
+  ],
+  "learning_protocol": {
+    "unit_of_independence": "complete known key, never an individual probe row",
+    "models": ["F1", "F2", "F3", "F4", "F1_F2_F3_F4_combined"],
+    "row_tasks": [
+      "unary assumption matches the known key bit",
+      "pair assumption matches both known key bits"
+    ],
+    "model": "standardized ridge logistic regression fitted by deterministic L-BFGS",
+    "ridge_lambda_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "selection_data": "eight validation keys only",
+    "selection_objective": "lexicographic median true-key rank, hit_at_1024, mean reciprocal rank across validation keys",
+    "target_features_or_target_key_used_for_hyperparameter_selection": false,
+    "candidate_score": "sum of the fitted unary logit for each of 20 selected bit values plus the fitted pair logit for each of 190 selected bit-pair values",
+    "candidate_domain": 1048576,
+    "candidate_tie_break": "ascending low20 integer",
+    "consensus": "mean within-target percentile rank across the five frozen model orders",
+    "label_null": "64 deterministic nonzero circular rotations of complete training-key labels; never shuffle probe rows within a key"
+  },
+  "target_reveal_barrier": {
+    "before_reveal_write": "model coefficients, scalers, validation metrics, five complete target candidate-order SHA256 values, consensus candidate-order SHA256, and top-1024 lists",
+    "before_reveal_artifact": "research/results/v1/chacha20_round20_knownkey_propagation_atlas_v1_prereveal.json",
+    "target_low20_source_before_reveal": "unavailable",
+    "reveal_method_after_freeze": "independent exhaustive standard ChaCha20 R20 comparison over 2^20 low20 values",
+    "R20_solver_status_model_or_cell_may_be_read_before_reveal": false,
+    "no_model_weight_feature_header_or_candidate_order_may_change_after_reveal": true
+  },
+  "predeclared_readout": {
+    "ranks": [1, 8, 32, 256, 1024, 1048576],
+    "strong_transfer": "unseen target key ranks at most 1024 in the frozen consensus and validation keys beat the complete-key label null",
+    "direct_rank1_transfer": "unseen target key ranks first in the frozen consensus and passes all 4096 output bits while the flipped control rejects",
+    "useful_domain_reduction": "unseen target key lies in any predeclared top-k below the full domain",
+    "representation_boundary": "validation or target ranking is indistinguishable from the complete-key label null; retain which feature families and assumption arities fail"
+  },
+  "information_boundary": {
+    "A214_selected_after_A213_exact_propagation_boundary": true,
+    "R20_numeric_or_gray_solver_outcome_known_at_freeze": false,
+    "target_low20_known_at_freeze": false,
+    "A211_R10_key_or_schedule_used_in_A214_training": false,
+    "known_key_training_scope_is_explicit": true,
+    "target_is_key_disjoint_unless_collision_boundary_fires": true,
+    "candidate_generated_internal_round_states_are_not_observations": true,
+    "unknown_is_not_unsat": true
+  }
+}

@@ -757,6 +757,29 @@ fresh A209 cells; the near-equal Numeric/Gray totals isolate retained learned
 state as the dominant mechanism. See
 `reports/CAUSAL_CHACHA20_ROUND10_INCREMENTAL_SIBLING_LEARNING_BOUNDARY_V1.md`.
 
+A211 removes the five parent clauses and retains one sound solver state across
+the complete 256-cell cover. Independent Numeric and reflected-Gray8 states
+recover the same ChaCha10 low20 assignment `0x7c596`, confirm all eight blocks,
+and still execute every remaining cell. The mechanism then transfers to the
+standard 20-round ChaCha20 relation, where both complete covers independently
+recover low20 `0xe4934`; see the A211 and R20 global-incremental reports.
+
+A212--A219 separate public scheduling, exact propagation, known-key learning,
+matched-null validation and target-blind execution. A216's apparent harmonic
+validation gain is explained by its complete selection-matched null. A217
+establishes that Numeric and Gray8 are genuinely diverse solver trajectories.
+A218 does not beat its matched null, and A219 faithfully executes the frozen
+complete order without finding a model.
+
+A220P measures six directions under staged retained re-solve and one-shot
+conflict schedules on one explicit known key. All twelve fresh processes pass
+their identity and continuity gates; the resulting correlations establish
+schedule and direction as separate interventions. A220's subsequent 52-key
+fit/select and 92-key untouched-holdout protocol is frozen at SHA-256
+`70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`.
+The protocol, public-only adapter and completed Reader core are committed; no
+A220 main result is asserted before collection and holdout evaluation finish.
+
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,
 canonical graph digest, triplets, and inferred-edge provenance.  New AES runs

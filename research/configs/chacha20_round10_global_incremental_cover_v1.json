@@ -1,0 +1,154 @@
+{
+  "schema": "chacha20-round10-global-incremental-cover-protocol-v1",
+  "attempt_id": "A211",
+  "protocol_state": "frozen_after_complete_A210_local_incremental_boundary_and_global_base_preflight_before_any_A211_round10_helper_execution",
+  "anchors": {
+    "A210": {
+      "protocol_sha256": "9eb5183162d6aff09a956b482baa943a60a7c3770bde5e6d10cf67e125388258",
+      "runner_sha256": "48038ff750c5ca6a961fb7bc60f0d1c18b2f6910ed396bdbfc03c63327676378",
+      "native_source_sha256": "d5742b03db88677dee7fc52d3fa93e994153d909de0edc574e1ea611a6ef69c6",
+      "result_sha256": "1765ddabcec9c35d778bbb6e4c4e4aadc66277e7d9255d1f2a8ffdcd7b8152ce",
+      "causal_sha256": "ff7f2019001d4c0e8478dd35476d975dde5b6faa1110c0383fbffba9091a6586",
+      "causal_graph_sha256": "cc450abd4035fc9f823234a8001a37f59cd1a7ec8a6e2839a366d8b34a229363"
+    },
+    "A209": {
+      "result_sha256": "242a87fd56da3fcf60e6ae4c1a5dd75effc9a2293a41496ea71f4c4342cc5c1e",
+      "causal_sha256": "577f8fdbf41d95d6a61316103c48cc6f366311821b830ac2e4d11b7f4f79eb7f"
+    }
+  },
+  "selection_basis": {
+    "public_challenge_sha256": "5d17ed241b6b91224a4974f36b4b0b4ec5c677b9d975dd6bc8cec83b6ddbf86b",
+    "A210_per_mode_status_counts": {
+      "numeric_incremental": {"sat": 0, "unsat": 0, "unknown": 256, "invalid": 0},
+      "gray_incremental": {"sat": 0, "unsat": 0, "unknown": 256, "invalid": 0}
+    },
+    "A210_mode_vs_A209_total_ratios": {
+      "numeric_incremental": {
+        "conflicts": 0.2991561572326791,
+        "decisions": 0.14107693425789813
+      },
+      "gray_incremental": {
+        "conflicts": 0.29287909485276054,
+        "decisions": 0.14185557384819422
+      }
+    },
+    "A210_first_child_above_every_later_sibling": {
+      "numeric_decisions_parent_count": 32,
+      "numeric_conflicts_parent_count": 32,
+      "gray_decisions_parent_count": 32,
+      "gray_conflicts_parent_count": 32
+    },
+    "A210_numeric_first_child_decision_share": 0.8856242142055105,
+    "A210_gray_first_child_decision_share": 0.8683062507305199,
+    "A210_gray_over_numeric_total_ratios": {
+      "conflicts": 0.9790174387918871,
+      "decisions": 1.0055192551099295,
+      "search_propagations": 0.9440143699980178
+    },
+    "mechanistic_consequence": "remove_all_five_parent_units_and_retain_one_sound_incremental_solver_state_across_the_complete_256_cell_cover",
+    "formula_transfer_family": "T01_global_ordered_noncommutative_update_composition",
+    "any_A211_round10_global_incremental_outcome_known_at_selection": false
+  },
+  "global_base_preflight": {
+    "source_cell_count": 32,
+    "source_header": "p cnf 232191 734180",
+    "source_parent_unit_clause_count": 5,
+    "source_parent_unit_variables_in_tail_order": [44, 46, 48, 57, 50],
+    "source_parent_unit_key_bits_in_tail_order": [15, 16, 17, 19, 18],
+    "strip_rule": "remove_exactly_the_final_five_complete_parent_unit_lines_and_replace_only_the_header_clause_count_734180_with_734175",
+    "global_header": "p cnf 232191 734175",
+    "global_clause_count": 734175,
+    "global_original_bytes": 14088266,
+    "global_original_sha256": "581e891ec1433a6075b8de8b15869ae11da590d9e7dfe3f181c5f555c3bb1720",
+    "all_32_stripped_original_bases_byte_identical": true,
+    "global_transformed_bytes": 14158038,
+    "global_transformed_sha256": "138ceb0a8f47dae3fd2c25e8b93165c08862a3951f7c0b4f4022e47750125e8e",
+    "all_32_stripped_transformed_bases_byte_identical": true,
+    "all_32_original_and_transformed_cells_reconstruct_byte_exactly": true,
+    "global_clause_length_counts": {"unit": 6915, "binary": 402744, "ternary": 324516},
+    "none_of_the_eight_assumption_variables_is_a_base_unit": true,
+    "derive_permutation_from_frozen_A209_eight_unit_representative_before_stripping": true,
+    "reindex_then_inverse_reindex_byte_identical": true,
+    "order_sha256": "814798f19a33a3a397a6af9f6fa126207e1e10e092d8ee80dcaba4ef3bae95c8",
+    "old_to_new_sha256": "50d03bfd6520685c3b17ec822ad08f4b5cce80f91c771a2b1b6377fffab2f30b"
+  },
+  "assumption_and_model_mapping": {
+    "source_model_one_literals_bit0_through_bit19": [16, 15, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 57],
+    "transformed_model_one_literals_bit0_through_bit19": [215012, 215011, 215013, 215014, 215015, 195461, 195462, 195463, 195464, 195465, 195467, 195468, 225283, 225284, 225285, 225286, 225287, 225288, 225289, 225290],
+    "prefix_bits_descending": [19, 18, 17, 16, 15, 14, 13, 12],
+    "transformed_prefix_one_literals_descending": [225290, 225289, 225288, 225287, 225286, 225285, 225284, 225283],
+    "direct_existing_key_literals_used_without_selector_clauses": true
+  },
+  "native_helper": {
+    "source": "research/native/cadical_global_incremental_assumptions.cpp",
+    "source_sha256": "3b4a5aa0a8d537d6599ec20d9e17d173db0c7b5fbddf8864859346b5fd4a497c",
+    "compiled_binary_sha256": "fb822acdd0453a36bf6e5f6df763a72a7b999710e47ac9329160f28603d1ce84",
+    "compiler": "/usr/bin/clang++",
+    "compiler_sha256": "179301dcb41ea78accc3fa0048a7e6f6710d891945a751a34addd622020c1818",
+    "compiler_version_first_line": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+    "cadical_header": "/opt/homebrew/include/cadical.hpp",
+    "cadical_header_sha256": "b7111690c61935b9c096d3701be59b3c3d26c555eab8e070f19eb2a97dc5d38c",
+    "cadical_static_library": "/opt/homebrew/lib/libcadical.a",
+    "cadical_static_library_sha256": "44cae3728485b4fd5736ce7cb986021236652daeda9cca227a2c4ac17d3a8a7f",
+    "compile_arguments": [
+      "-std=c++17", "-O3", "-Wall", "-Wextra", "-Werror",
+      "-I/opt/homebrew/include",
+      "research/native/cadical_global_incremental_assumptions.cpp",
+      "/opt/homebrew/lib/libcadical.a", "-lpthread"
+    ],
+    "toy_fixture": "tests/fixtures/cadical_global_incremental_assumptions_toy.cnf",
+    "toy_fixture_sha256": "3852eb463a999ffbe661da6c13fa86df5a2e3dcdf88c4499c6fb7213cac3dd66",
+    "base_unsat_toy_fixture": "tests/fixtures/cadical_global_incremental_assumptions_base_unsat.cnf",
+    "base_unsat_toy_fixture_sha256": "511d4e8f9c157a5252ea66a4c0c2fd3d126d93f2e126c99dbd25b1928fe4dfcd",
+    "toy_validation_completed_before_freeze": true,
+    "toy_status_counts": {"sat": 1, "unsat": 255, "unknown": 0},
+    "base_unsat_toy_status_counts": {"sat": 0, "unsat": 256, "unknown": 0},
+    "base_unsat_toy_all_failed_assumption_cores_empty": true,
+    "round10_helper_execution_completed_before_freeze": false,
+    "API_metric_names": ["conflicts", "decisions", "search_propagations"],
+    "A209_and_A210_comparable_metric_names": ["conflicts", "decisions"]
+  },
+  "incremental_modes": [
+    {
+      "name": "numeric_global_incremental",
+      "order_rule": "eight_bit_binary_encoding_of_i_for_i_0_through_255",
+      "order_sha256": "31d5ffc95c2e51b8800e5aaf590fe08386b11a05ea646bf756f3026bece5aaa0"
+    },
+    {
+      "name": "reflected_gray8_global_incremental",
+      "order_rule": "eight_bit_binary_encoding_of_i_xor_i_shift_right_1_for_i_0_through_255",
+      "order_sha256": "1501c2c1050a88600b03f1735f7ac9285703229fa9ce4b6739d5260360a3b936"
+    }
+  ],
+  "execution_plan": {
+    "mode_run_count": 2,
+    "cells_per_mode": 256,
+    "child_observation_count": 512,
+    "solver_time_limit_seconds_per_cell": 10,
+    "external_timeout_seconds_per_mode": 3050,
+    "max_parallel_mode_runs": 2,
+    "fresh_solver_instance_per_mode": true,
+    "learned_state_retained_across_all_256_cells_within_mode": true,
+    "default_CaDiCaL_database_reduction_retained": true,
+    "mode_output_validation": "atomic_all_or_nothing_for_256_cell_rows_and_summary",
+    "early_stop_permitted": false,
+    "numeric_mode_exactly_matches_A210_numeric_prefix_sequence": true
+  },
+  "prospective_predictions": {
+    "confirmed_recovery": "at_least_one_cell_returns_SAT_and_the_decoded_model_passes_the_full_independent_confirmation",
+    "complete_domain_resolution": "at_least_one_mode_returns_exactly_one_confirmed_SAT_and_255_UNSAT_with_no_UNKNOWN_or_invalid",
+    "global_resolution_transfer": "either_global_mode_resolves_more_SAT_plus_UNSAT_cells_than_A210",
+    "global_state_transfer": "numeric_global_incremental_changes_matched_per_cell_conflict_or_decision_deltas_relative_to_A210_numeric_without_parent_resets",
+    "true_gray8_order_effect": "numeric_and_reflected_Gray8_global_modes_differ_in_status_counts_or_matched_per_cell_metric_deltas",
+    "boundary": "all_512_cell_outcomes_are_retained_and_UNKNOWN_is_never_interpreted_as_UNSAT"
+  },
+  "information_boundary": {
+    "any_A211_round10_helper_or_solver_outcome_known_before_freeze": false,
+    "unknown_assignment_in_protocol_source_helper_or_mapping": false,
+    "unknown_assignment_available_to_runner_or_helper_before_execution": false,
+    "correct_prefix_known_before_execution": false,
+    "mode_order_budget_or_predictions_changed_after_any_A211_round10_outcome": false,
+    "numeric_outcomes_used_to_change_Gray8_execution": false,
+    "early_stop_permitted": false
+  }
+}

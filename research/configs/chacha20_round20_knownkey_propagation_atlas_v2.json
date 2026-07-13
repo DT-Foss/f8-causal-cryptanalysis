@@ -1,0 +1,116 @@
+{
+  "schema": "chacha20-round20-knownkey-propagation-atlas-protocol-v2",
+  "attempt_id": "A214B",
+  "protocol_state": "frozen_after_A214_preflight_found_target_constant_dependent_Bitwuzla_CNF_drift_and_before_any_atlas_feature_model_candidate_order_target_key_or_R20_solver_outcome_was_available_or_read",
+  "parent_protocol": {
+    "path": "research/configs/chacha20_round20_knownkey_propagation_atlas_v1.json",
+    "sha256": "6a344841f044222f2354e11f791c4c84fd63211f5698f1280a4e4c42fb44ba85",
+    "inherited_sections": [
+      "known_key_atlas",
+      "probe_cover_per_challenge",
+      "feature_families",
+      "learning_protocol",
+      "target_reveal_barrier",
+      "predeclared_readout"
+    ]
+  },
+  "preflight_representation_boundary": {
+    "public_target_constant_folded_header": "p cnf 68783 216461",
+    "public_target_constant_folded_sha256": "df051ca805414ea33f065627573aea791d8bee073d0f7ed5b020ce89c953dbea",
+    "first_knownkey_constant_folded_header": "p cnf 68726 216311",
+    "first_knownkey_constant_folded_sha256": "a63213b0d74ee6ff775cceec76cbf35de9938621834dbff599c64daafb5b9237",
+    "first_knownkey_label": "f8-causal:A214:train:0:known-low20-v1",
+    "first_knownkey_low20_sha256": "71a4f6696a558729083582d18c7ebc65088f0ace754461157867567783338a97",
+    "features_or_models_computed_before_boundary_was_detected": false,
+    "correction": "compile_one_symbolic_R20_template_with_preprocessing_disabled_then_instantiate_every_knownkey_and_target_output_only_by_512_signed_unit_clauses",
+    "scientific_reason": "eliminate_target_constant_dependent_compiler_topology_as_a_possible_label_channel"
+  },
+  "symbolic_R20_template": {
+    "construction": "replace_the_16_public_target_words_in_the_pinned_split18_forward_backward_formula_by_declared_symbolic_t0_through_t15_words",
+    "formula_bytes": 38941,
+    "formula_sha256": "a85eaee1df0e2ceb7f4add6f92b88e368c48c630c7fec2cfc8f2ee8d83ac101f",
+    "Bitwuzla_path": "/opt/homebrew/bin/bitwuzla",
+    "Bitwuzla_sha256": "9896c88b523114e3eae00d737f1183ca71fbd83a99e8e45fe294715747a2ce7a",
+    "Bitwuzla_version": "0.9.1",
+    "arguments": [
+      "--lang",
+      "smt2",
+      "--time-limit",
+      "1000",
+      "--bv-solver",
+      "bitblast",
+      "--sat-solver",
+      "cadical",
+      "--preprocess=false",
+      "--rewrite-level",
+      "0"
+    ],
+    "base_header": "p cnf 79513 248590",
+    "base_bytes": 4387800,
+    "base_sha256": "45bdfedd4d9b5280524062e7918756006242eb216ed41197fa18c85b459ef567",
+    "base_body_sha256": "ed5c8048a660083296aeaeb6a46a7772ebf1de5bc8e0ded109127feb9d4bd458",
+    "base_clause_length_counts": {
+      "1": 1044,
+      "2": 136596,
+      "3": 110950
+    },
+    "mapping_probe_design": "zero_pattern_plus_five_binary_coordinate_patterns_for_low20_k0_and_each_of_16_output_words",
+    "mapping_export_count": 102,
+    "key_one_literals_bit0_through_bit19": [
+      23,
+      22,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51,
+      53,
+      55,
+      62,
+      67
+    ],
+    "output_one_literal_matrix_sha256": "67a6c7585881d759038c0889393f5b0a337ad1f0fa8e39317f8a9c960c6cbf71",
+    "instantiated_header": "p cnf 79513 249102",
+    "instantiated_target_bytes": 4392158,
+    "instantiated_target_sha256": "0bb07e119e3c759c65a74e9982892396b2838782dab759f28e4b57fb6e6d795a",
+    "instantiated_target_unit_int32le_sha256": "b9ba14233b5b79f4cfabbb96a5aa4608bde2d20e647a9f9234841a51d39801c4",
+    "instantiated_clause_length_counts": {
+      "1": 1556,
+      "2": 136596,
+      "3": 110950
+    },
+    "all_25_instantiated_graphs_share_exact_base_bytes_and_differ_only_in_the_final_512_unit_polarities": true
+  },
+  "anchors": {
+    "R20_global_transfer_protocol_sha256": "64470896de99dacabb0b53f81d8c94c2da82e7088be09c8e1b4d38665ae09946",
+    "R20_global_transfer_runner_sha256": "1825035b90317e9d6c8a2ee0894f2569eada44177ee01ced49d043ca37ec881d",
+    "public_target_challenge_sha256": "98d375fb9432e17b9a701137617a6384ebc60a0ac9054ec203f2364a5338d762",
+    "knownkey_ledger_sha256": "b0b1add2b4185c0b7a5ef02397ed54d3e504a19866a833601382e725adbdc91f",
+    "A213_result_sha256": "6bdaa4cef0c5e5172e731abee5f97826830366a1283fb8a342c8c7d5450e48fa",
+    "A213_causal_sha256": "6142c8415a01110e7370fd3840636840321feec1acb333b68a956addf89023b2"
+  },
+  "information_boundary": {
+    "target_low20_known_at_freeze": false,
+    "R20_numeric_or_gray_status_counts_models_or_cells_known_at_freeze": false,
+    "knownkey_training_scope_is_explicit": true,
+    "target_constant_compiler_drift_removed_before_any_feature_measurement": true,
+    "target_output_used_only_to_set_the_same_512_unit_coordinates_as_every_atlas_instance": true,
+    "candidate_generated_internal_round_states_are_not_observations": true,
+    "parent_learning_rules_headers_weights_nulls_and_readouts_changed_after_freeze": false
+  },
+  "required_artifacts": {
+    "prereveal": "research/results/v1/chacha20_round20_knownkey_propagation_atlas_v2_prereveal.json",
+    "result": "research/results/v1/chacha20_round20_knownkey_propagation_atlas_v2.json",
+    "causal": "research/results/v1/chacha20_round20_knownkey_propagation_atlas_v2.causal",
+    "report": "research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_PROPAGATION_ATLAS_V2.md"
+  }
+}

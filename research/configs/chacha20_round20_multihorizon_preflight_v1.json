@@ -1,0 +1,159 @@
+{
+  "schema": "chacha20-round20-multihorizon-preflight-protocol-v1",
+  "attempt_id": "A220P",
+  "protocol_state": "frozen_before_any_A220P_solver_process_or_multihorizon_measurement",
+  "scientific_scope": "Known-key calibration and interpretation preflight on the fixed A214 train_00 ChaCha20-R20 instance; this protocol performs no model selection, no prospective recovery, and no security claim.",
+  "anchors": {
+    "R20_runner_path": "research/experiments/chacha20_round20_global_incremental_transfer.py",
+    "R20_runner_sha256": "1825035b90317e9d6c8a2ee0894f2569eada44177ee01ced49d043ca37ec881d",
+    "A214_knownkey_helper_path": "research/experiments/chacha20_round20_knownkey_atlas_helpers.py",
+    "A214_knownkey_helper_sha256": "92773bfabbad02bfdcc630e5820c42f6daaf5d6db05ed9b139f89844cd4901c5",
+    "A214_symbolic_template_path": "research/experiments/chacha20_round20_symbolic_template.py",
+    "A214_symbolic_template_sha256": "34f4c5542f7fa12e7b0ff06ab7e042605c2414f23001f11894fa6dbdfc0b4721",
+    "A214_template_protocol_path": "research/configs/chacha20_round20_knownkey_propagation_atlas_v3.json",
+    "A214_template_protocol_sha256": "aa5b7af87c74cbffe7f6d3e50332cc65c07f084435edb4314b32e4904b625698",
+    "A214_knownkey_ledger_sha256": "b0b1add2b4185c0b7a5ef02397ed54d3e504a19866a833601382e725adbdc91f",
+    "A212_formula_protocol_path": "research/configs/chacha20_solver_trajectory_formula_atlas_v1.json",
+    "A212_formula_protocol_sha256": "d74edc91d2e02e4512c8798d71c4d7af457295c350d5abd561d1de4691e5de96",
+    "A212_formula_result_path": "research/results/v1/chacha20_solver_trajectory_formula_atlas_v1.json",
+    "A212_formula_result_sha256": "d7fc64a9aac6f36483b238595332fd3a4f351c39e501de56b0d1f832903bc8cf",
+    "multihorizon_wrapper_path": "research/experiments/chacha20_retained_multihorizon.py",
+    "multihorizon_wrapper_sha256": "befedcd5bd91acf60838c2a7a071972968aecec67e6e04860747074aa8cf328a",
+    "multihorizon_native_source_path": "research/native/cadical_global_incremental_multihorizon.cpp",
+    "multihorizon_native_source_sha256": "74a51893e43ba29322ac7d2fbf80d8d26b4341f8ac1d9accf633c091e5ae5952",
+    "multihorizon_content_addressed_binary_sha256": "a0a046229769e0f99655c94a4ceffc395adb2ba0ecb02a19b1b0f68da715cc71"
+  },
+  "known_key_anchor": {
+    "ledger_split": "train",
+    "ledger_index": 0,
+    "derivation_label": "f8-causal:A214:train:0:known-low20-v1",
+    "low20": 973392,
+    "low20_hex": "eda50",
+    "target_prefix8": "11101101",
+    "full_key_word0_hex": "f3ceda50",
+    "full_key_words_little_endian_sha256": "4d367cf79832e6ac62db2ab9c67459eb72768add30ca64550c24ac46d5ee871e"
+  },
+  "public_R20_material": {
+    "public_challenge_sha256": "98d375fb9432e17b9a701137617a6384ebc60a0ac9054ec203f2364a5338d762",
+    "known_key_word0_upper12": 4089446400,
+    "known_key_words_1_through_7": [3115479837, 546470789, 958710752, 1664960997, 1377489985, 3430547852, 1544098076],
+    "counter_start": 585373164,
+    "nonce_words": [1657072870, 2082171664, 2395412329],
+    "block_count": 8,
+    "rounds": 20,
+    "public_seed_hex": "1d0270332c10d920c081bcb7e0c1b1b8a27034b32862bb2d15949514c11726a4",
+    "known_train_00_block_sha256": [
+      "e2dc4801124f70820c7d8729fcb916c6aef5fb635be8902bbf6aa8e3895a05f8",
+      "1401f660e836c00d886a9dde1396306bfb007249a743ddfc7529794fba727dff",
+      "0e0cf16c782ee733f8f9966db010140f9f1a0b3295b2ba468f9e6c5e43ff8194",
+      "1ed6be3a9e151bdbb24670eb9a789bc8bdbbd008126ed2e2c87f56bb7429a814",
+      "904a8741be3ebb35673bdec753789cdc2ba3c193d3f06a5587b8c12316e7908b",
+      "54ad4926643debfb2389a9f6ed97837b6fee9482fd38b89359ad9d1a0ba63f9c",
+      "9bae0fecdbcfa5af43e641451c9182dfc4d4592ada761baed47596783bcd90e1",
+      "16b3ab03510d0a6219c80c5fb54020cf936c5bdabc93256d5ae4689946ed194d"
+    ],
+    "formula_constrained_block_index": 0,
+    "formula_constrained_output_bits": 512,
+    "blocks_1_through_7_generated_only_for_known_key_confirmation_metadata": true,
+    "all_eight_block_hashes_retained_as_known_key_confirmation_metadata": true,
+    "known_key_confirmation_bits": 4096
+  },
+  "symbolic_template": {
+    "base_cnf_sha256": "086368fd3825d8059b90d244c9b1e5d2912acc75e705f81d3c53265305348963",
+    "key_one_literals_bit0_through_bit19": [23, 22, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 62, 67],
+    "train_00_instantiated_header": "p cnf 80767 252887",
+    "train_00_instantiated_bytes": 4458156,
+    "train_00_instantiated_sha256": "aa5239805a60e5b9d52d74f352a6a5c877bc6eea4d6eb85e440a39d9a2966703",
+    "train_00_unit_count": 512,
+    "train_00_unit_int32le_sha256": "93b9642dd89d9cd6497243709551a41b509b646cd8415febc21984e7d5c6d6c3"
+  },
+  "operator_orders": [
+    {
+      "name": "numeric_forward",
+      "construction": "0_through_255",
+      "anchor_prefix8": "00000000",
+      "order_uint8_sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880"
+    },
+    {
+      "name": "numeric_reverse_same_anchor",
+      "construction": "0_then_255_down_to_1",
+      "reversal_semantics": "same_anchor_directional_stress_control_with_numeric_wrap_edge_substitution_not_a_pure_edge_matched_reversal",
+      "anchor_prefix8": "00000000",
+      "order_uint8_sha256": "17cbb2feea07cbe912f6f8c094c2469d98f9703052c950ab20796d5cea23217a"
+    },
+    {
+      "name": "reflected_gray8_forward",
+      "construction": "i_xor_i_shift_right_1_for_i_0_through_255",
+      "anchor_prefix8": "00000000",
+      "order_uint8_sha256": "6ccee3ab08882a58e0debe15a25ada10de0891da82a9ac5fcf4ee591617b0c39"
+    },
+    {
+      "name": "reflected_gray8_reverse_same_anchor",
+      "construction": "forward_anchor_then_reverse_of_forward_remainder",
+      "reversal_semantics": "exact_same_anchor_cycle_reversal",
+      "anchor_prefix8": "00000000",
+      "order_uint8_sha256": "adf6f4b68664cd53e55bbecbe52a2756640a73e55cab5f70c2d1dcddad2a3931"
+    },
+    {
+      "name": "formula_gray8_forward",
+      "construction": "A212_reflected_Gray8_source_bits_mapped_to_target_bits_5_4_3_7_6_0_1_2_then_xor_176",
+      "anchor_prefix8": "10110000",
+      "source_to_target_bit_map": [5, 4, 3, 7, 6, 0, 1, 2],
+      "xor_translation": 176,
+      "order_uint8_sha256": "ba9cf4d93c1937665772c77b9091d45cb575054c70037d9cc540ee70a9609127"
+    },
+    {
+      "name": "formula_gray8_reverse_same_anchor",
+      "construction": "A212_forward_anchor_then_reverse_of_A212_forward_remainder",
+      "reversal_semantics": "exact_same_anchor_cycle_reversal",
+      "anchor_prefix8": "10110000",
+      "source_to_target_bit_map": [5, 4, 3, 7, 6, 0, 1, 2],
+      "xor_translation": 176,
+      "order_uint8_sha256": "7116050e6dd5aef0a295cdd5291205b1ddac952883535f35370e521b190c5ae7"
+    }
+  ],
+  "execution": {
+    "schedules": {
+      "staged_retained_resolve": [8, 16, 32, 64],
+      "one_shot": [64]
+    },
+    "runs": 12,
+    "fresh_solver_process_per_run": true,
+    "maximum_concurrent_solver_processes": 2,
+    "exclusive_orchestrator_lock": true,
+    "watchdog_seconds_per_stage": 5.0,
+    "external_timeout_rule": "120_plus_256_times_stage_count_times_watchdog_seconds",
+    "retry_after_failure": false,
+    "checkpoint_after_each_completed_run": true,
+    "fail_closed": true,
+    "staged_semantics": "Each stage re-assumes the same cell prefix and calls solve again while retaining the same CaDiCaL instance; this is retained re-solve, not one uninterrupted solve."
+  },
+  "comparison": {
+    "alignment": "same_prefix_within_the_same_operator_order",
+    "left": "final cumulative per-cell delta of staged_retained_resolve",
+    "right": "per-cell delta of one_shot_64",
+    "channels": ["conflicts", "decisions", "search_propagations", "active_variables_delta", "irredundant_clauses_delta", "redundant_clauses_delta"],
+    "nonnegative_channel_transform": "log1p",
+    "signed_channel_transform": "sign_times_log1p_absolute_value",
+    "scale_comparison": "population_zscore_then_Pearson_with_zero_variance_reported_as_null",
+    "order_comparison": "average_tie_rank_then_Spearman_with_zero_variance_reported_as_null"
+  },
+  "information_boundary": {
+    "key_role": "explicit_known_calibration_key_from_A214_train_00",
+    "A214_public_challenge_accessed_only_for_the_unchanged_fixed_R20_material": true,
+    "prospective_target_secret_or_salt_loaded": false,
+    "prospective_target_result_or_rank_used": false,
+    "target_secret_dependency_paths": [],
+    "blocks_1_through_7_used_by_formula_or_solver": false,
+    "solver_status_or_model_used_to_change_later_run_order_schedule_or_budget": false,
+    "model_selection_or_recovery_claim_permitted": false
+  },
+  "measurement_hash_scope": {
+    "included": ["known_key_identity", "known_key_confirmation_metadata", "symbolic_template_manifest", "instantiated_CNF_manifest", "operator_order_manifests", "schedule_semantics", "all_12_scientific_run_records", "six_channel_staged_vs_one_shot_comparisons", "deterministic_source_binary_and_CNF_provenance", "orchestrator_source_start_and_end_hashes", "information_boundary_and_completion_gates"],
+    "excluded": ["native_build_elapsed_seconds", "per_stage_elapsed_seconds", "per_process_elapsed_seconds", "stdout_sha256_because_stdout_contains_elapsed_seconds", "filesystem_temporary_paths"]
+  },
+  "required_artifacts": {
+    "checkpoint": ".research_sealed/chacha20_round20_multihorizon_preflight_v1.checkpoint.json",
+    "result": "research/results/v1/chacha20_round20_multihorizon_preflight_v1.json"
+  }
+}

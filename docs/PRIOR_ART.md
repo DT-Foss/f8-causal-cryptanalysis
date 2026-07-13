@@ -45,6 +45,9 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-12 | A208 completed record: complete 32-cell sixty-second transfer with a systematic all-prefix late propagation/restart phase measured by exact integer-counter differences |
 | 2026-07-12 | A209 completed record: complete 256-cell Width-12 composition with a systematic decision-rich phase reset across every child and parent group |
 | 2026-07-12 | A210 completed record: two independent complete 256-cell assumption-incremental covers with systematic within-parent learned-state transfer and an exact Numeric/Gray order control |
+| 2026-07-12 | A211 and standard-R20 retained-state record: two independent complete covers recover and confirm the same 20-bit assignment at ten rounds and, separately, through all 20 ChaCha rounds plus feed-forward |
+| 2026-07-13 | A212--A219 Reader record: public scheduling, exact propagation, known-key feature families, matched-null correction, operator diversity, target-blind ranking, and complete ranked execution |
+| 2026-07-13 | A220P completed preflight: six traversal directions by two solve schedules execute 12 fresh processes, 3,072 cells, and 7,680 stages; the final A220 factorial transfer protocol is separately frozen without a result claim |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -62,6 +65,7 @@ invented here.
 | `FULLROUND_TRANSFER_SHA256SUMS` | `ddea7cf303ccdfbcd304574b81153d74302e2b5e554a2da9d5f269f4b0090532` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
 | `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `c4ba0fd7770f414aad6f67e9f3c171cf97890ce2997d53f75edb65d6ccf65717` |
+| `A211_A220P_SHA256SUMS` | `b9d66be9555d2f65787390748697ee7a4f77ae8d9b1268b522cf4465a238281b` |
 
 The manifest digest authenticates the manifest; each manifest in turn lists the
 exact result JSON, `.causal`, source, or anchor file digests. Verify all layers
@@ -69,7 +73,7 @@ with `scripts/verify_hash_manifest.py`.
 
 ## Result identifiers
 
-The stable A107--A210 identifiers are defined in
+The stable A107--A220P identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -129,6 +133,17 @@ publication:
 - A209: complete Width-12 BFS-far composition and systematic phase-reset map;
 - A210: complete Numeric/Gray incremental sibling-learning covers and systematic
   learned-state transfer map;
+- A211: two complete global-state ChaCha10 covers with independently confirmed
+  20-bit partial-key recovery;
+- standard-R20 transfer: the same global retained-state mechanism through all
+  20 ChaCha rounds plus feed-forward, with independently confirmed 20-bit
+  partial-key recovery and 236 key bits known;
+- A212--A219: public scheduling, exact propagation, known-key feature and null
+  controls, operator diversity, target-blind ranking, and complete fixed-budget
+  execution;
+- A220P: completed six-direction by two-schedule known-key trajectory preflight;
+- A220: hash-frozen factorial Reader protocol and public infrastructure only,
+  without a completed collection or result claim.
 
 ## Presentation sanitization
 
@@ -150,7 +165,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A210, include the exact follow-up commit containing the artifact; obtain
+A133--A220P, include the exact follow-up commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a
 DOI or long-term archive guarantee.

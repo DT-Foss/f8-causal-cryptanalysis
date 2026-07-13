@@ -1,0 +1,175 @@
+{
+  "attempt_id": "A212",
+  "schema": "chacha20-solver-trajectory-formula-atlas-protocol-v1",
+  "protocol_state": "frozen_after_A210_A211_before_any_A212_operator_measurement_or_future_round_transfer",
+  "scope": "Retrospective formula-operator analysis of the complete A210 reset-local and A211 retained-global CaDiCaL trajectories, followed by prospective freezing of a target-independent schedule for later ChaCha round transfers.",
+  "information_boundary": {
+    "A210_and_A211_outcomes_known_before_protocol_freeze": true,
+    "A212_is_claimed_as_prospective_for_A210_or_A211": false,
+    "A212_operator_values_used_before_protocol_freeze": false,
+    "future_R11_or_R20_solver_outcomes_used": false,
+    "hidden_key_assignment_fields_accessed_or_used_by_A212": false,
+    "known_SAT_prefix_used_in_feature_fit_or_schedule_score": false,
+    "solver_execution_in_A212": false,
+    "schedule_changed_after_future_solver_outcomes": false
+  },
+  "anchors": {
+    "formula_source_reaudit": {
+      "path": "research/reports/FORMULA_ATLAS_FULL_REAUDIT_V1.md",
+      "sha256": "a4d43be43e56590402cf74febcdb5faf40de9b7640bb47ca32e7779f5d4a5d87"
+    },
+    "A199_result": {
+      "path": "research/results/v1/chacha20_formula_operator_atlas_v1.json",
+      "sha256": "16c1025308bae64e2c45339804ec0a39d5fcb927c1cd0a1dcbf2ca8dfd3d5c48",
+      "required_evidence_stage": "PUBLIC_FORMULA_OPERATOR_ATLAS_MIXED_BOUNDARY_RETAINED"
+    },
+    "A199_causal": {
+      "path": "research/results/v1/chacha20_formula_operator_atlas_v1.causal",
+      "sha256": "bb509b61239bf3bc4396bac2b882820204deba6683186f9f5a89f65c1968fc89"
+    },
+    "A210_result": {
+      "path": "research/results/v1/chacha20_round10_incremental_sibling_learning_v1.json",
+      "sha256": "1765ddabcec9c35d778bbb6e4c4e4aadc66277e7d9255d1f2a8ffdcd7b8152ce",
+      "required_evidence_stage": "ROUND10_INCREMENTAL_COMPLETE_BOUNDARY_RETAINED"
+    },
+    "A210_causal": {
+      "path": "research/results/v1/chacha20_round10_incremental_sibling_learning_v1.causal",
+      "sha256": "ff7f2019001d4c0e8478dd35476d975dde5b6faa1110c0383fbffba9091a6586"
+    },
+    "A211_result": {
+      "path": "research/results/v1/chacha20_round10_global_incremental_cover_v1.json",
+      "sha256": "3dfe525c6340dd911d584c77a925a5eb01b246ff55f0981901f6400fd00d25c2",
+      "required_evidence_stage": "ROUND10_GLOBAL_INCREMENTAL_CONFIRMED_RECOVERY_RETAINED"
+    },
+    "A211_causal": {
+      "path": "research/results/v1/chacha20_round10_global_incremental_cover_v1.causal",
+      "sha256": "c5f30d2e55af6b38feca0b07136c7714f20b34b654d0d866d7e143588daf6881"
+    }
+  },
+  "observed_channels": [
+    "conflicts",
+    "decisions",
+    "search_propagations",
+    "active_variables",
+    "redundant_clauses",
+    "irredundant_clauses"
+  ],
+  "preprocessing": {
+    "metric_transform": "log1p",
+    "operator_standardization": "per_context_center_and_population_scale",
+    "schedule_scale": "A210_cross_mode_per_channel_positive_median",
+    "zero_scale_policy": "fail",
+    "elapsed_seconds_excluded": true,
+    "status_labels_excluded_from_features": true,
+    "model_values_excluded": true
+  },
+  "contexts": {
+    "A210_numeric_reset_local": {
+      "mode": "numeric_incremental",
+      "segments": 32,
+      "cells_per_segment": 8,
+      "transition_operator_count": 7
+    },
+    "A210_gray_reset_local": {
+      "mode": "gray_incremental",
+      "segments": 32,
+      "cells_per_segment": 8,
+      "transition_operator_count": 7
+    },
+    "A211_numeric_retained_global": {
+      "mode": "numeric_global_incremental",
+      "segments": 8,
+      "cells_per_segment": 32,
+      "transition_operator_count": 8
+    },
+    "A211_gray_retained_global": {
+      "mode": "reflected_gray8_global_incremental",
+      "segments": 8,
+      "cells_per_segment": 32,
+      "transition_operator_count": 8
+    }
+  },
+  "T01_ordered_products": {
+    "operator": "ridge_VAR1_without_intercept_on_prestandardized_channels",
+    "ridge_lambda": 0.001,
+    "normalization": "divide_each_operator_by_spectral_norm",
+    "products": ["chronological", "reversed"],
+    "commutators": ["adjacent", "lag2"],
+    "order_null_replicates": 4096,
+    "order_null": "deterministic_random_permutations_compared_with_each_own_reverse",
+    "upper_quantile": 0.975,
+    "gate": "finite_fits_positive_spectral_norm_and_exact_adjoint_identity"
+  },
+  "T02_triplet_cumulants": {
+    "lags": [0, 1, 2],
+    "tensor_shape": [6, 6, 6],
+    "statistics": ["l2_norm", "maximum_absolute_entry"],
+    "null_replicates": 512,
+    "nulls": [
+      "independent_within_segment_channel_permutation",
+      "independent_within_segment_channel_circular_shift"
+    ],
+    "marginal_preservation_required": true,
+    "multiple_testing": "Holm_over_4_contexts_x_2_nulls_x_2_statistics",
+    "retention_alpha": 0.05
+  },
+  "T03_characteristic_derivative_roots": {
+    "inputs": "all_T01_spectral_normalized_transition_operators",
+    "polynomial": "numpy_characteristic_polynomial",
+    "critical_points": "roots_of_analytic_characteristic_derivative",
+    "coefficient_reconstruction_relative_tolerance": 1e-08,
+    "root_residual_relative_tolerance": 1e-08,
+    "all_operator_gates_required": true
+  },
+  "T05_sum_difference": {
+    "copies": "numeric_and_Gray_metrics_aligned_by_identical_prefix8",
+    "physical_sum": "(numeric+gray)/sqrt(2)",
+    "signed_difference": "(numeric-gray)/sqrt(2)",
+    "copy_swap_control": "sum_invariant_difference_negated",
+    "known_SAT_prefix_policy": "A211_non_unknown_rows_excluded_from_descriptive_rankings",
+    "schedule_source": "A210_only"
+  },
+  "T06_cross_copy_SVD_matrix_log": {
+    "cross_matrix": "centered_cross_copy_correlation",
+    "singular_weight_rule": "mean_squared_first_left_and_right_singular_vector_loadings_then_unit_sum",
+    "log_input": "cross_matrix_transpose_times_cross_matrix_plus_epsilon_identity",
+    "epsilon_rule": "max(1e-12,largest_eigenvalue_times_1e-8)",
+    "matrix_log": "symmetric_eigendecomposition",
+    "reconstruction": "exp(-H)_must_reconstruct_regularized_log_input",
+    "relative_tolerance": 1e-08
+  },
+  "prospective_schedule": {
+    "source_rows": "all_256_A210_prefixes_only",
+    "source_status_requirement": "all_unknown",
+    "score": "weighted_positive_sum_energy_times_(1+weighted_difference_over_sum)",
+    "weights": "A210_T06_singular_weight_rule",
+    "path_family": "all_8_factorial_bit_permutations_of_reflected_Gray8_in_both_directions",
+    "start_prefix": "maximum_score_with_numeric_tie_break",
+    "xor_translation": "chosen_so_every_candidate_path_starts_at_start_prefix",
+    "selection_objective": "maximum_exponentially_discounted_score",
+    "discount_half_life_cells": 32.0,
+    "tie_break": "lexicographic_bit_permutation_then_direction",
+    "required_gates": [
+      "exact_permutation_of_all_256_prefixes",
+      "every_adjacent_Hamming_distance_is_one",
+      "schedule_sha256_frozen_before_any_future_solver_execution"
+    ],
+    "future_targets": ["fresh_R11_width20", "unchanged_prior_R20_width20"]
+  },
+  "prediction_registry": {
+    "T01": "At least one retained-global context has a chronological-versus-reverse product distance above its 97.5-percent order-null threshold; all algebraic gates pass.",
+    "T02": "At least one centered lag-(0,1,2) triplet statistic survives Holm correction against both declared marginal-preserving null families.",
+    "T03": "Every derivative-root diagnostic passes coefficient reconstruction and root-residual gates.",
+    "T05": "Every copy-swap identity is exact to 1e-12 and the A210-derived schedule uses no status or model field.",
+    "T06": "Every regularized matrix logarithm reconstructs its input within 1e-8 and has finite singular diagnostics.",
+    "schedule": "The selected formula-guided path is a complete Gray8 Hamiltonian path and has a strictly larger frozen discounted score than the standard reflected-Gray8 control starting at the same prefix."
+  },
+  "execution": {
+    "solver_processes": 0,
+    "network_access": false,
+    "randomness": "SHAKE256_domain_separated_from_protocol_identity",
+    "write_policy": "atomic_result_and_causal_artifacts",
+    "causal_reader_verification_required": true,
+    "analyze_only_must_not_write": true
+  }
+}

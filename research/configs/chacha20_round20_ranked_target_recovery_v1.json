@@ -1,0 +1,72 @@
+{
+  "schema": "chacha20-round20-ranked-target-recovery-protocol-v1",
+  "attempt_id": "A219",
+  "protocol_state": "frozen_after_A218_prereveal_and_selection_matched_validation_boundary_and_before_any_ranked_target_solver_execution_sat_model_or_secret_reveal",
+  "research_question": "Does the atomically frozen A218 target order recover a confirmed full-round ChaCha20 R20 model under one retained CaDiCaL state and ten seconds per cell without opening the committed target secret?",
+  "anchors": {
+    "A218_protocol_path": "research/configs/chacha20_round20_knownkey_trajectory_atlas_v1.json",
+    "A218_protocol_sha256": "037b415e25e0956a2d8b13cd0bd62a838c50dce6b831ddc8734bd03ed2ec44c7",
+    "A218_prereveal_path": "research/results/v1/chacha20_round20_knownkey_trajectory_atlas_v1_prereveal.json",
+    "A218_prereveal_sha256": "389fbfa38a8d93269e8a270ce69cf484f996c6364d2d3c6840d003627e5ee29e",
+    "A218_prereveal_measurement_sha256": "6453c06f1fe9c63903a66804fbeb132d223f520daf735a34e4e65aeb4c4ec3c3",
+    "A218_target_cell_order_uint8_sha256": "6d645e4c19563655dc1a14cf48dd9faf6679cc7891d9a87ca9836f15f59d0661",
+    "A218_selection_matched_null_p": 0.9538461538461539,
+    "A218_validation_evidence": "linear_across_key_reader_boundary_retained",
+    "public_target_path": "research/challenges/chacha20_round20_knownkey_trajectory_atlas_v1_public.json",
+    "public_target_sha256": "4eb696791a32954f81e3d9be5cc10b9a3161de1130b77d2c6c8cc092ce83b139",
+    "public_target_challenge_sha256": "d8a728af5c69cf6a352b0a2cadfccfbef97bf7d91e438cebe437348d5ec6a34a",
+    "target_commitment_sha256": "cc0b6e5f5c1fcd1c13ed7de31444d8dd34befd756bc53f3b96d2d0b284846d21",
+    "target_trajectory_path": "research/results/v1/chacha20_round20_target_trajectory_v1.json",
+    "target_trajectory_sha256": "dd61512090afc8830be4ceff4514037f50e3c248780ff15fd6a19d1fce9b8b57",
+    "R20_runner_path": "research/experiments/chacha20_round20_global_incremental_transfer.py",
+    "R20_runner_sha256": "1825035b90317e9d6c8a2ee0894f2569eada44177ee01ced49d043ca37ec881d",
+    "A214_template_protocol_path": "research/configs/chacha20_round20_knownkey_propagation_atlas_v3.json",
+    "A214_template_protocol_sha256": "aa5b7af87c74cbffe7f6d3e50332cc65c07f084435edb4314b32e4904b625698",
+    "A214_symbolic_template_path": "research/experiments/chacha20_round20_symbolic_template.py",
+    "A214_symbolic_template_sha256": "34f4c5542f7fa12e7b0ff06ab7e042605c2414f23001f11894fa6dbdfc0b4721",
+    "ranked_helper_source_path": "research/native/cadical_ranked_until_sat.cpp",
+    "ranked_helper_source_sha256": "8ff6e2621a5307f8bf04820debaa021ca60d33a1621406876e58531121e83f45",
+    "ranked_helper_wrapper_path": "research/experiments/chacha20_ranked_until_sat.py",
+    "ranked_helper_wrapper_sha256": "692b98ae740f17b672226a5158c44f1b3b8a962189a591a3e2a188a9494920af"
+  },
+  "solver_protocol": {
+    "formula": "the_same_target_independent_symbolic_R20_base_and_512_public_output_unit_instantiation_used_by_A218",
+    "cell_order": "exact_complete_A218_prereveal_order",
+    "state_retention": "one_CaDiCaL_instance_across_cells_until_the_first_SAT_or_all_256_cells",
+    "seconds_per_cell": 10.0,
+    "maximum_cells": 256,
+    "stop_condition": "first_SAT_only",
+    "unknown_semantics": "per_cell_time_horizon_exhausted_not_UNSAT",
+    "model_decode": "twenty_signed_key_literals_bit0_through_bit19",
+    "external_timeout_seconds": 2700.0
+  },
+  "information_boundary": {
+    "target_secret_or_salt_read_before_execution": false,
+    "correct_prefix_or_A218_target_rank_known_before_execution": false,
+    "A218_order_may_not_change_after_this_freeze": true,
+    "A218_validation_boundary_retained_without_relabeling": true,
+    "SAT_model_must_be_confirmed_against_all_eight_public_R20_blocks": true,
+    "flipped_control_must_reject": true
+  },
+  "predeclared_readout": {
+    "confirmed_recovery": "a_SAT_model_is_emitted_and_matches_all_4096_public_target_bits_while_the_flipped_control_rejects",
+    "early_ranked_recovery": "confirmed_recovery_occurs_within_the_first_16_frozen_cells",
+    "useful_ranked_recovery": "confirmed_recovery_occurs_within_the_first_64_frozen_cells",
+    "complete_order_recovery": "confirmed_recovery_occurs_within_all_256_frozen_cells",
+    "solver_boundary": "no_SAT_model_within_the_complete_frozen_order_and_budget",
+    "reader_claim_boundary": "A218_validation_did_not_beat_its_selection_matched_null_so_A219_cannot_by_itself_establish_across_key_reader_transfer"
+  },
+  "post_model_controls": {
+    "allowed_only_after_confirmed_SAT": [
+      "compare_recovered_prefix_position_in_numeric_order",
+      "compare_recovered_prefix_position_in_reflected_Gray8_order",
+      "open_salted_commitment_and_require_exact_low20_equality"
+    ],
+    "controls_do_not_change_the_frozen_execution": true
+  },
+  "required_artifacts": {
+    "result": "research/results/v1/chacha20_round20_ranked_target_recovery_v1.json",
+    "causal": "research/results/v1/chacha20_round20_ranked_target_recovery_v1.causal",
+    "report": "research/reports/CAUSAL_CHACHA20_ROUND20_RANKED_TARGET_RECOVERY_V1.md"
+  }
+}
