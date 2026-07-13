@@ -10,7 +10,8 @@ Fast integrity gate:
 ./scripts/reproduce_quick.sh
 ```
 
-Completed A211--A220P retained-evidence and A220 frozen-pipeline gate:
+Completed A211--A220P retained-evidence plus frozen A220/A220B/A222
+infrastructure gate:
 
 ```bash
 ./scripts/reproduce_a211_a220p.sh

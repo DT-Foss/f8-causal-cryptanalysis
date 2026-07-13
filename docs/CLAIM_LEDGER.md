@@ -111,6 +111,7 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | ChaCha A218--A219 | The target-blind order and its complete execution are retained. A218 does not beat its matched null and A219 returns no model; UNKNOWN is not UNSAT. |
 | ChaCha A220P | The known-key preflight establishes schedule and direction as separate solver interventions. It performs no prospective model selection or recovery. |
 | ChaCha A220 frozen protocol | The factorial collection, Reader selection, exact four-panel holdout evaluation and label-free prospective scoring path are preregistered and test-hardened. No A220 result is claimed before those stages finish. |
+| ChaCha A220B/A222 frozen protocols | A220B deterministically localizes a registered factorial boundary, while A222 fixes an all-eight-block equal-weight Reader overlay, a disjoint balanced 32-key ledger, and an exact paired 256-sign-flip retention test. These are pre-outcome infrastructure claims only: no A220 branch and no A222 improvement or recovery is asserted. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.

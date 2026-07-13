@@ -1,0 +1,91 @@
+{
+  "schema": "chacha20-round20-factorial-eight-block-ensemble-protocol-v1",
+  "attempt_id": "A222",
+  "protocol_state": "mechanism_frozen_before_A220_holdout_outcome_or_any_A222_solver_process",
+  "research_question": "Does a fixed equal-weight overlay of the same frozen trajectory Reader across all eight public ChaCha20 counter blocks suppress block-specific solver noise and improve cross-key prefix concentration?",
+  "anchors": {
+    "A220_protocol_path": "research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json",
+    "A220_protocol_sha256": "70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645",
+    "ensemble_core_path": "src/arx_carry_leak/factorial_target.py",
+    "ensemble_core_sha256": "e072cdb2db1d3a0f639f9c3bf71c06d428d86140d3f2ac3e73b3809dba36e015",
+    "ensemble_core_test_path": "tests/test_factorial_target.py",
+    "ensemble_core_test_sha256": "e940da0845407f329288dbafb3d5332ff75f2875c945b98bf1368caa7e26400a",
+    "key_design_path": "research/experiments/chacha20_round20_factorial_eight_block_key_design.py",
+    "key_design_sha256": "633d56ade07ecb30e7c1182fd98f2ba415d1a3d2f90bfbbccbac9ce9791f780f",
+    "key_design_test_path": "tests/test_chacha20_round20_factorial_eight_block_key_design.py",
+    "key_design_test_sha256": "2e9fbe04650618cc069cafabcd796bfa05ca415edbf020ec2ab9f5407a4e6cb2",
+    "key_ledger_sha256": "d482325d6f8592982cc6469aea7c7ccd14ce7bf4b70de27cb2a9bee21fd72300",
+    "key_ledger_order_sha256": "fff553cba37e681f492ee7505b83320a903341ecad77d45a5e495c6b5fd75fc0"
+  },
+  "execution": {
+    "counter_block_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "same_frozen_reader_for_every_block": true,
+    "same_selected_two_or_four_runs_for_every_block": true,
+    "complete_256_prefix_cover_per_run": true,
+    "maximum_concurrent_solver_processes": 2,
+    "atomic_reader_total_fresh_processes_per_key": 16,
+    "dual_schedule_reader_total_fresh_processes_per_key": 32,
+    "block_selection_weighting_or_dropping_permitted": false,
+    "outcome_dependent_retry_or_budget_change_permitted": false
+  },
+  "aggregation": {
+    "per_block_operation": "apply the same byte-frozen Reader to the exact selected run set",
+    "scale_normalization": "centered average ranks from minus one to plus one independently within each block",
+    "cross_block_operation": "equal arithmetic mean across all eight centered-rank vectors",
+    "tie_break": "ascending integer prefix",
+    "complete_prefix_order_required": true
+  },
+  "validation": {
+    "known_key_fit_permitted": false,
+    "reader_refit_or_reselection_permitted": false,
+    "ensemble_return_binds_selected_reader_canonical_sha256": true,
+    "ensemble_return_binds_selected_readout_sha256": true,
+    "orchestrator_must_bind_authoritative_reader_file_sha256": true,
+    "first_use": "the exact frozen 32-key A222 known-key paired holdout before any prospective target claim",
+    "primary_comparison": "same keys and budgets, block0-only frozen Reader order versus eight-block equal-weight ensemble order",
+    "subsequent_target_use_requires_retention": true,
+    "known_key_validation_ledger": {
+      "rows": 32,
+      "prefix_clusters": 8,
+      "suffix_replicates_per_cluster": 4,
+      "ledger_sha256": "d482325d6f8592982cc6469aea7c7ccd14ce7bf4b70de27cb2a9bee21fd72300",
+      "ledger_order_sha256": "fff553cba37e681f492ee7505b83320a903341ecad77d45a5e495c6b5fd75fc0",
+      "disjoint_from_A214_A218_A219_and_all_144_A220_keys": true,
+      "prefix_and_suffix_levels_disjoint_from_A220": true
+    },
+    "paired_primary_statistic": {
+      "per_key_delta": "log2(eight_block_equal_weight_rank)-log2(block0_only_rank)",
+      "lower_is_better": true,
+      "cluster_statistic": "arithmetic_mean_of_the_four_suffix_replicate_deltas_within_each_prefix_cluster",
+      "observed_statistic": "arithmetic_mean_of_the_eight_prefix_cluster_statistics",
+      "null": "all_2^8_cluster_level_sign_flips_including_identity",
+      "exact_null_transformations": 256,
+      "one_sided_p": "count(null_statistic_less_than_or_equal_to_observed_statistic)/256",
+      "retained_exactly_if": "one_sided_p_at_most_0.05_and_observed_statistic_strictly_below_0",
+      "retention_threshold": 0.05
+    },
+    "same_selected_reader_run_set_stage_budgets_and_key_order_in_both_arms": true,
+    "key_block_operator_retry_drop_weight_budget_or_threshold_adaptation_permitted": false
+  },
+  "information_boundary": {
+    "A220_holdout_outcome_opened_before_mechanism_freeze": false,
+    "target_label_secret_or_reveal_input_permitted": false,
+    "individual_block_selected_by_outcome": false,
+    "all_eight_blocks_required_even_if_an_earlier_block_is_favorable": true,
+    "block_observation_requires_embedded_index_counter_challenge_target_launch_measurement_and_projected_input_hashes": true,
+    "outer_block_index_must_equal_embedded_counter_block_index": true,
+    "counter_values_must_be_the_eight_consecutive_public_challenge_counters": true,
+    "authoritative_reader_file_hash_must_be_bound_by_the_future_collector": true,
+    "A222_known_key_validation_outcome_opened_before_protocol_freeze": false,
+    "A222_solver_process_started_before_protocol_freeze": false
+  }
+}

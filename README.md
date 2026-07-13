@@ -5,8 +5,8 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A220P full-round, reduced-round, and frozen
-pre-execution relations as code, typed
+evidence, and the subsequent A107--A220P results plus A220B/A222 frozen
+pre-outcome protocols as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -102,6 +102,7 @@ precisely:
 | A218--A219 | Target-blind trajectory Reader and ranked execution | A218's selected Reader has selection-matched null `p=0.953846154` and target rank 211/256; A219 executes the frozen complete order and returns 256 UNKNOWN cells | Secret/correct prefix unopened until after the target-blind result was atomically written | Exact across-key Reader and ten-second solver boundaries; no A219 recovery | [A218](research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_TRAJECTORY_ATLAS_V1.md), [A219](research/reports/CAUSAL_CHACHA20_ROUND20_RANKED_TARGET_RECOVERY_V1.md) |
 | A220P | R20 multi-horizon factorial preflight | Twelve fresh processes show staged retained re-solve and one-shot trajectories are neither byte-identical nor scaled copies; forward/reverse same-prefix correlations are also low | One explicit known key; six directions by two schedules; 3,072 cells and 7,680 stages; no target/model selection | Direction and solve schedule are distinct solver interventions | [report](research/reports/CAUSAL_CHACHA20_ROUND20_MULTIHORIZON_PREFLIGHT_V1.md) |
 | A220 frozen | Factorial trajectory transfer protocol | Fit/select collection, Reader freeze, exact holdout inference, crash-safe selected-bundle collection, strict evaluation, and label-free prospective scoring are implemented and hash-pinned; no A220 outcome is claimed | 52 fit/select keys under all 12 trajectories, then 92 untouched holdouts after Reader freeze | Preregistered protocol and tested infrastructure only | [protocol](research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json) |
+| A220B / A222 frozen | Boundary router and eight-block Reader ensemble | Exact factorial contrasts route every retained/boundary state deterministically; the same frozen Reader is overlaid with equal weight across all eight counter blocks | No A220 outcome input at freeze; A222 uses a disjoint, exactly balanced 32-key 8-by-4 ledger and all `2^8` paired cluster sign flips | **Pre-outcome protocol/infrastructure only; no A220/A222 outcome claim** | [protocol record](research/reports/CAUSAL_CHACHA20_ROUND20_A220B_A222_PROTOCOLS_V1.md) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -156,8 +157,18 @@ the fit/select collector, holdout core/collector/evaluator and label-free
 prospective scorer are now published with focused tests. No selected Reader,
 untouched-holdout score or recovery is claimed in this snapshot.
 
+The pre-outcome supplement additionally freezes A220B's deterministic
+factorial-boundary localization and A222's all-eight-block equal-weight Reader
+ensemble. A222's 32 known-key rows are disjoint from A214, A218/A219, and all
+144 A220 keys; its paired retention null enumerates exactly 256 cluster-level
+sign flips. Reader inputs are recursively screened for reveal/label/model
+fields and reduced to minimal projected channels before scoring. These are
+tested mechanisms and information-flow boundaries, not A220 retention,
+boundary, rank-improvement, or recovery results.
+
 The exact publication boundary, artifact identities, and fresh-clone gate for
-this update are collected in the [A220P release record](docs/RELEASE_A220P.md).
+this update are collected in the [A220P release record](docs/RELEASE_A220P.md)
+and the [A220B/A222 infrastructure supplement](docs/RELEASE_A220B_A222_INFRA.md).
 
 ## Three connected methods
 
@@ -203,7 +214,7 @@ Six evidence tiers make cost explicit:
 |---|---|---|
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
 | `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A210 frontiers |
-| `retained` | `./scripts/reproduce_a211_a220p.sh` | authenticate A211--A220P evidence and the frozen A220 protocol without a production solve |
+| `retained` | `./scripts/reproduce_a211_a220p.sh` | authenticate A211--A220P evidence and frozen A220/A220B/A222 infrastructure without a production solve |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -214,6 +225,7 @@ Expected quick-tier terminus:
 anchor manifest: OK
 full-round transfer manifest: OK
 A211-A220P manifest: OK
+A220B-A222 infrastructure manifest: OK
 causal artifacts: all valid
 ```
 

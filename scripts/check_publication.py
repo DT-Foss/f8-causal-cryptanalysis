@@ -116,6 +116,7 @@ def main() -> int:
         "docs/PRIOR_ART.md",
         "docs/PUBLICATION_AUDIT.md",
         "docs/RELEASE_A220P.md",
+        "docs/RELEASE_A220B_A222_INFRA.md",
         "research/results/v1/ANCHOR_SHA256SUMS",
         "research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS",
         "research/results/v1/shake_boolean_cnf_reader_v1.json",
@@ -348,9 +349,49 @@ def main() -> int:
         if not (ROOT / item).is_file():
             failures.append(f"missing A211-A220P publication file: {item}")
 
+    a220b_a222_infrastructure = {
+        "src/arx_carry_leak/factorial_boundary.py":
+            "8888b57c21cda56a746c938716f789c92957d5f443899cf477d035054709e7dc",
+        "tests/test_factorial_boundary.py":
+            "8c77f9b1bc587c5786abd7baf7856de48aa7a8e6478650569e8f9609a1d5d357",
+        "research/experiments/chacha20_round20_factorial_boundary_route.py":
+            "dd10dd48a37b158d005a0d42c3d4d0fbd59864a75fe2dd0e8d8e79f7e004536d",
+        "tests/test_chacha20_round20_factorial_boundary_route.py":
+            "356272aaf348442385b058d37da1af519e48becd1dff7824e361a419903eb982",
+        "research/configs/chacha20_round20_factorial_boundary_router_v1.json":
+            "e69cde426e264025aeadd209560b93ec4667ddc8e63faaf98f6459b281a343a5",
+        "src/arx_carry_leak/factorial_target.py":
+            "e072cdb2db1d3a0f639f9c3bf71c06d428d86140d3f2ac3e73b3809dba36e015",
+        "tests/test_factorial_target.py":
+            "e940da0845407f329288dbafb3d5332ff75f2875c945b98bf1368caa7e26400a",
+        "research/configs/chacha20_round20_factorial_eight_block_ensemble_v1.json":
+            "e3ee7ccc583ee778ca832877cf27a0fa9ad5d7c1544429e3b0277b30aa0fab51",
+        "research/experiments/chacha20_round20_factorial_eight_block_key_design.py":
+            "633d56ade07ecb30e7c1182fd98f2ba415d1a3d2f90bfbbccbac9ce9791f780f",
+        "tests/test_chacha20_round20_factorial_eight_block_key_design.py":
+            "2e9fbe04650618cc069cafabcd796bfa05ca415edbf020ec2ab9f5407a4e6cb2",
+    }
+    for item, expected in a220b_a222_infrastructure.items():
+        path = ROOT / item
+        if not path.is_file():
+            failures.append(f"missing A220B/A222 infrastructure file: {item}")
+        elif hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+            failures.append(f"A220B/A222 infrastructure identity differs: {item}")
+    for item in (
+        "research/results/v1/A220B_A222_INFRA_SHA256SUMS",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_A220B_A222_PROTOCOLS_V1.md",
+    ):
+        if not (ROOT / item).is_file():
+            failures.append(f"missing A220B/A222 publication record: {item}")
+
     forbidden_unfinished_or_private_files = [
         "research/native/build/cadical_incremental_assumptions",
         "research/results/v1/chacha20_round20_factorial_trajectory_fit_select_v1.json",
+        "research/results/v1/chacha20_round20_factorial_trajectory_reader_freeze_v1.json",
+        "research/results/v1/chacha20_round20_factorial_trajectory_holdout_v1.json",
+        "research/results/v1/chacha20_round20_factorial_boundary_route_v1.json",
+        "research/results/v1/chacha20_round20_factorial_eight_block_ensemble_v1.json",
+        "research/results/v1/chacha20_round20_factorial_prospective_target_v1_public.json",
         ".research_sealed",
     ]
     for item in forbidden_unfinished_or_private_files:

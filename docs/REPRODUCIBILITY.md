@@ -368,8 +368,10 @@ bounded representation and its independent gates.
 frozen A220 protocol, the public-only R20 adapter, fit/select collector,
 factorial Reader, exact holdout core, holdout collector/evaluator and
 label-free prospective scorer before running the focused retained-evidence
-suite. It does not start the A211/R20 production solves, A220 fit/select or
-holdout collection, or any prospective target execution.
+suite. It also validates the frozen pre-outcome A220B boundary router and A222
+eight-block ensemble/key-design infrastructure. It does not start the
+A211/R20 production solves, A220 fit/select or holdout collection, any
+prospective target execution, or any A222 solver process.
 
 The A220 infrastructure-only gates can also be run directly:
 
@@ -391,6 +393,26 @@ reconstruction, the 32/20/20/20 holdout panels, all 120 primary clustered-null
 permutations, strict/public-only artifact equality and complete label-free
 256-prefix ordering. They do not read a selected Reader or any production
 measurement from the active experiment.
+
+The A220B/A222 protocol-only suite contains exactly 100 tests:
+
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONWARNINGS=error \
+  PYTHONPATH=src .venv/bin/python -m pytest -q \
+  tests/test_factorial_boundary.py \
+  tests/test_chacha20_round20_factorial_boundary_route.py \
+  tests/test_factorial_target.py \
+  tests/test_chacha20_round20_factorial_eight_block_key_design.py
+
+.venv/bin/python scripts/verify_hash_manifest.py \
+  research/results/v1/A220B_A222_INFRA_SHA256SUMS
+```
+
+It checks exact factorial contrasts, deterministic routing, idempotent
+artifact commits, Reader reopening, recursive reveal/label/model rejection,
+minimal run projection, all-eight-block provenance binding, the exact disjoint
+and balanced 32-key ledger, and the registered paired 256-sign-flip null. No
+A220 or A222 outcome is required or opened.
 
 Host-specific paths in retained A211--A219 JSON are replaced by stable role
 paths in the publication copy. A220P is the single deliberate exception: its
@@ -431,7 +453,8 @@ python scripts/verify_hash_manifest.py \
   research/results/v1/FULLROUND_TRANSFER_SHA256SUMS \
   research/results/v1/SHAKE_NATIVE_EXTENDED_SHA256SUMS \
   research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS \
-  research/results/v1/A211_A220P_SHA256SUMS
+  research/results/v1/A211_A220P_SHA256SUMS \
+  research/results/v1/A220B_A222_INFRA_SHA256SUMS
 ```
 
 The manifest parser rejects malformed hashes, duplicate entries, missing

@@ -51,8 +51,14 @@ therefore have no A220 result claim in this snapshot.
 | A220 exact holdout core | `d2ab7a8f35a1160f7022f72cdd4ce3e18bb05b8ecd5a06136f8d2f9ea697c411` |
 | A220 holdout collector | `66d8d97625975548b7d42d423653e79e7333d233093ac3d6a341808faf6f8010` |
 | A220 holdout evaluator | `d3db06f9db83af2103b9761b0c6e7fdcfbd6752ac846e17829d49b5b2607eb5f` |
-| A220 label-free scorer | `0b47689bdb992e4c614d5e855eb6ccf969483ff532ddea20a35704b40958a730` |
-| A211--A220 infrastructure manifest | `d4cbc1a47c94376a14b665dc09d1ee33f8674fffe39b900baac173736e750c11` |
+| A220/A222 hardened label-free scorer | `e072cdb2db1d3a0f639f9c3bf71c06d428d86140d3f2ac3e73b3809dba36e015` |
+| A220B boundary core | `8888b57c21cda56a746c938716f789c92957d5f443899cf477d035054709e7dc` |
+| A220B router | `dd10dd48a37b158d005a0d42c3d4d0fbd59864a75fe2dd0e8d8e79f7e004536d` |
+| A220B protocol | `e69cde426e264025aeadd209560b93ec4667ddc8e63faaf98f6459b281a343a5` |
+| A222 ensemble protocol | `e3ee7ccc583ee778ca832877cf27a0fa9ad5d7c1544429e3b0277b30aa0fab51` |
+| A222 32-key design | `633d56ade07ecb30e7c1182fd98f2ba415d1a3d2f90bfbbccbac9ce9791f780f` |
+| A220B/A222 ten-file manifest | `2b7fe72b80ffa8735ba430ee39a39cc5fb8ae236719857d12147de00a22109af` |
+| A211--A220 infrastructure manifest | `ba8389e679c0bf3a2f6030b193915fb5081c6dd3882df333f4736daa53a2f7d2` |
 
 Verify the dedicated manifest and focused retained-evidence suite with:
 
@@ -72,4 +78,6 @@ not stored in Git. Its exact digest remains bound in the protocol, result, and
 report. No sealed secret, production checkpoint, compiled helper, fit/select
 measurement, selected Reader, holdout measurement or A220 result is included.
 The published collectors and evaluator are source/infrastructure artifacts
-only.
+only. A later supplement adds final audited A220B/A222 protocol infrastructure
+without adding an A220 or A222 outcome; see
+[`RELEASE_A220B_A222_INFRA.md`](RELEASE_A220B_A222_INFRA.md).

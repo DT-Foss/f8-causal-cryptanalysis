@@ -144,6 +144,9 @@ publication:
 - A220P: completed six-direction by two-schedule known-key trajectory preflight;
 - A220: hash-frozen factorial Reader protocol and public infrastructure only,
   without a completed collection or result claim.
+- A220B/A222: pre-outcome deterministic boundary localization, eight-block
+  equal-weight Reader aggregation, disjoint balanced 32-key design, and exact
+  paired cluster-null infrastructure only, without an A220 or A222 outcome.
 
 ## Presentation sanitization
 
@@ -165,7 +168,8 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A220P, include the exact follow-up commit containing the artifact; obtain
+A133--A220P and the A220B/A222 protocol supplement, include the exact follow-up
+commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a
 DOI or long-term archive guarantee.
