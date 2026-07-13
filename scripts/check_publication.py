@@ -328,9 +328,19 @@ def main() -> int:
         "tests/test_chacha20_retained_multihorizon.py",
         "research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json",
         "research/experiments/chacha20_round20_factorial_key_design.py",
+        "research/experiments/chacha20_round20_factorial_trajectory_collect.py",
+        "research/experiments/chacha20_round20_factorial_trajectory_holdout_collect.py",
+        "research/experiments/chacha20_round20_factorial_trajectory_holdout_evaluate.py",
         "research/experiments/chacha20_round20_factorial_trajectory_read.py",
+        "src/arx_carry_leak/factorial_holdout.py",
+        "src/arx_carry_leak/factorial_target.py",
         "src/arx_carry_leak/factorial_trajectory.py",
+        "tests/test_factorial_holdout.py",
+        "tests/test_factorial_target.py",
         "tests/test_factorial_trajectory.py",
+        "tests/test_chacha20_round20_factorial_trajectory_collect.py",
+        "tests/test_chacha20_round20_factorial_trajectory_holdout_collect.py",
+        "tests/test_chacha20_round20_factorial_trajectory_holdout_evaluate.py",
         "tests/test_chacha20_round20_factorial_trajectory_read.py",
         "tests/test_chacha20_round20_factorial_trajectory_protocol.py",
     ]
@@ -340,7 +350,6 @@ def main() -> int:
 
     forbidden_unfinished_or_private_files = [
         "research/native/build/cadical_incremental_assumptions",
-        "research/experiments/chacha20_round20_factorial_trajectory_collect.py",
         "research/results/v1/chacha20_round20_factorial_trajectory_fit_select_v1.json",
         ".research_sealed",
     ]

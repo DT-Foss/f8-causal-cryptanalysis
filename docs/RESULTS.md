@@ -688,7 +688,7 @@ archives, and focused no-solver tests are included in the transfer manifest.
 | A217 | Numeric and Gray8 have nearly equal total work but low same-prefix correlation, low affine predictability and low cross-operator CKA. | Traversal order changes the learned-state path over the same CNF. |
 | A218--A219 | The selected A218 Reader has null `p=0.953846154`; its target rank is 211/256. A219 executes that frozen complete order and returns 256 UNKNOWN cells. | Exact target-blind Reader and fixed-budget solver boundaries; no A219 model. |
 | A220P | Six directions by two schedules execute 12 fresh processes, 3,072 cells and 7,680 stages with no parser, identity, continuity or watchdog failure. | Staged retained re-solve and one-shot are distinct interventions; direction is independently path-dependent. |
-| A220 | Protocol, public-only adapter, Reader core, feature families, exact matched null and fit/select/holdout split are frozen. | Main collection and untouched-holdout evaluation are in implementation and have no result claim. |
+| A220 | Protocol, public-only adapter, fit/select collector, Reader core, exact four-panel holdout inference, selected-bundle collector, solver-free evaluator and label-free prospective scorer are frozen and tested. | No selected Reader, untouched-holdout score or recovery is claimed in this snapshot. |
 
 The public A220 protocol SHA-256 is
 `70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`.

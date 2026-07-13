@@ -779,6 +779,13 @@ fit/select and 92-key untouched-holdout protocol is frozen at SHA-256
 `70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`.
 The protocol, public-only adapter and completed Reader core are committed; no
 A220 main result is asserted before collection and holdout evaluation finish.
+The published execution layer now also contains the fit/select collector,
+exact four-panel holdout core, selected-bundle holdout collector, solver-free
+evaluator and label-free prospective scorer. Their tests cover hash-bound
+inputs, exact 92-row panel structure, all 120 primary cluster permutations,
+crash/resume reconstruction, strict versus public-only verification and
+deterministic complete 256-prefix ordering. These are protocol gates, not an
+A220 outcome.
 
 Every `.causal` artifact is an exact, typed cryptographic evidence graph, not
 an opaque sidecar.  `CryptoCausalReader` checks the CAUSAL header/version,

@@ -365,9 +365,32 @@ bounded representation and its independent gates.
 ```
 
 `reproduce_a211_a220p.sh` authenticates the completed A220P result, the current
-frozen A220 protocol, the public-only R20 adapter and the completed factorial
-Reader core before running the focused retained-evidence suite. It does not
-start the A211/R20 production solves or the unfinished A220 collection.
+frozen A220 protocol, the public-only R20 adapter, fit/select collector,
+factorial Reader, exact holdout core, holdout collector/evaluator and
+label-free prospective scorer before running the focused retained-evidence
+suite. It does not start the A211/R20 production solves, A220 fit/select or
+holdout collection, or any prospective target execution.
+
+The A220 infrastructure-only gates can also be run directly:
+
+```bash
+PYTHONWARNINGS=error PYTHONPATH=src python -m pytest -q \
+  tests/test_factorial_trajectory.py \
+  tests/test_factorial_holdout.py \
+  tests/test_factorial_target.py \
+  tests/test_chacha20_round20_factorial_trajectory_collect.py \
+  tests/test_chacha20_round20_factorial_trajectory_read.py \
+  tests/test_chacha20_round20_factorial_trajectory_holdout_collect.py \
+  tests/test_chacha20_round20_factorial_trajectory_holdout_evaluate.py \
+  tests/test_chacha20_round20_factorial_trajectory_protocol.py
+```
+
+These tests use synthetic/minimal fixtures and failure injection. They verify
+the exact 52/92 split, hash-bound source identities, crash-resume and torn-tail
+reconstruction, the 32/20/20/20 holdout panels, all 120 primary clustered-null
+permutations, strict/public-only artifact equality and complete label-free
+256-prefix ordering. They do not read a selected Reader or any production
+measurement from the active experiment.
 
 Host-specific paths in retained A211--A219 JSON are replaced by stable role
 paths in the publication copy. A220P is the single deliberate exception: its

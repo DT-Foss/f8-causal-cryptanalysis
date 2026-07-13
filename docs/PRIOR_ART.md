@@ -65,7 +65,7 @@ invented here.
 | `FULLROUND_TRANSFER_SHA256SUMS` | `ddea7cf303ccdfbcd304574b81153d74302e2b5e554a2da9d5f269f4b0090532` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
 | `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `c4ba0fd7770f414aad6f67e9f3c171cf97890ce2997d53f75edb65d6ccf65717` |
-| `A211_A220P_SHA256SUMS` | `b9d66be9555d2f65787390748697ee7a4f77ae8d9b1268b522cf4465a238281b` |
+| `A211_A220P_SHA256SUMS` | `d4cbc1a47c94376a14b665dc09d1ee33f8674fffe39b900baac173736e750c11` |
 
 The manifest digest authenticates the manifest; each manifest in turn lists the
 exact result JSON, `.causal`, source, or anchor file digests. Verify all layers

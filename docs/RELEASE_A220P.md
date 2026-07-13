@@ -23,10 +23,16 @@ author identity is **David Tom Foss**.
 ## Frozen next protocol
 
 A220 preregisters a 52-key fit/select panel across all 12 trajectories and a
-separate 92-key untouched holdout panel. Its public adapter, Reader core,
-feature families, matched-null permutation, and test gates are included. The
-main collection, Reader selection, and untouched-holdout evaluation are not
-complete and therefore have no result claim in this snapshot.
+separate 92-key untouched holdout panel. Its public adapter, fit/select
+collector, Reader core, feature families, selected-bundle holdout collector,
+strict evaluator, complete clustered null and label-free prospective scorer
+are included and test-hardened. The holdout path admits only the frozen
+Reader's two-run atomic or four-run dual-schedule bundle, evaluates the four
+predeclared 32/20/20/20 panels and enumerates all `5! = 120` whole-prefix
+cluster permutations for the primary panel. The evaluator has no solver,
+refit, reselection or raw-corpus fallback. The main collection outcome,
+selected Reader and untouched-holdout evaluation are not published and
+therefore have no A220 result claim in this snapshot.
 
 ## Cryptographic identities
 
@@ -41,7 +47,12 @@ complete and therefore have no result claim in this snapshot.
 | Final A220 Reader runner | `294e962e639b2058d3cf726949c05206e4ac14a4d663e1b482077f9c49ae8965` |
 | Final A220 Reader runner test | `bc9b825f1de9a59ec30fe3fc6c999e699bb5b195a0466413a46cd462622d3d66` |
 | A220 Reader core | `df05913df5b5c589eed73c5ab877c2776cbdb78e68338677bd4a1577358c2916` |
-| A211--A220P manifest | `b9d66be9555d2f65787390748697ee7a4f77ae8d9b1268b522cf4465a238281b` |
+| A220 fit/select collector | `5112a75ed09872dcc928f3ad42f669895c4f5bb5ec518f32edcd4f66328ed6d7` |
+| A220 exact holdout core | `d2ab7a8f35a1160f7022f72cdd4ce3e18bb05b8ecd5a06136f8d2f9ea697c411` |
+| A220 holdout collector | `66d8d97625975548b7d42d423653e79e7333d233093ac3d6a341808faf6f8010` |
+| A220 holdout evaluator | `d3db06f9db83af2103b9761b0c6e7fdcfbd6752ac846e17829d49b5b2607eb5f` |
+| A220 label-free scorer | `0b47689bdb992e4c614d5e855eb6ccf969483ff532ddea20a35704b40958a730` |
+| A211--A220 infrastructure manifest | `d4cbc1a47c94376a14b665dc09d1ee33f8674fffe39b900baac173736e750c11` |
 
 Verify the dedicated manifest and focused retained-evidence suite with:
 
@@ -58,5 +69,7 @@ retained-evidence gate. Other host paths in this publication update are
 replaced with role paths. The 145 MB A215 raw measurement archive exceeds the
 publication ceiling and is
 not stored in Git. Its exact digest remains bound in the protocol, result, and
-report. No sealed secret, checkpoint, compiled helper, unfinished collector,
-or unfinished A220 output is included.
+report. No sealed secret, production checkpoint, compiled helper, fit/select
+measurement, selected Reader, holdout measurement or A220 result is included.
+The published collectors and evaluator are source/infrastructure artifacts
+only.

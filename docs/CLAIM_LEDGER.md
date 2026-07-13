@@ -110,7 +110,7 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | ChaCha A217 | Low trajectory similarity with nearly equal aggregate work establishes operator diversity for the measured pair; it is not a universal solver-order theorem. |
 | ChaCha A218--A219 | The target-blind order and its complete execution are retained. A218 does not beat its matched null and A219 returns no model; UNKNOWN is not UNSAT. |
 | ChaCha A220P | The known-key preflight establishes schedule and direction as separate solver interventions. It performs no prospective model selection or recovery. |
-| ChaCha A220 frozen protocol | The factorial collection, Reader selection and untouched holdout panel are preregistered only. No A220 result is claimed before those stages finish. |
+| ChaCha A220 frozen protocol | The factorial collection, Reader selection, exact four-panel holdout evaluation and label-free prospective scoring path are preregistered and test-hardened. No A220 result is claimed before those stages finish. |
 
 These are compact attack-model definitions, not qualifications added after the
 result. They state the mathematical object that the code actually computes.

@@ -101,7 +101,7 @@ precisely:
 | A217 | R20 operator-diversity audit | Numeric and Gray8 have nearly identical aggregate work but low same-prefix rank correlation, low affine predictability and CKA `0.043672083` | Same common CNF, solver build, budget, complete cover and recovered model | Traversal order changes the retained-state path; operators are not scaled replicas | [report](research/reports/CAUSAL_CHACHA20_ROUND20_OPERATOR_DIVERSITY_AUDIT_V1.md) |
 | A218--A219 | Target-blind trajectory Reader and ranked execution | A218's selected Reader has selection-matched null `p=0.953846154` and target rank 211/256; A219 executes the frozen complete order and returns 256 UNKNOWN cells | Secret/correct prefix unopened until after the target-blind result was atomically written | Exact across-key Reader and ten-second solver boundaries; no A219 recovery | [A218](research/reports/CAUSAL_CHACHA20_ROUND20_KNOWNKEY_TRAJECTORY_ATLAS_V1.md), [A219](research/reports/CAUSAL_CHACHA20_ROUND20_RANKED_TARGET_RECOVERY_V1.md) |
 | A220P | R20 multi-horizon factorial preflight | Twelve fresh processes show staged retained re-solve and one-shot trajectories are neither byte-identical nor scaled copies; forward/reverse same-prefix correlations are also low | One explicit known key; six directions by two schedules; 3,072 cells and 7,680 stages; no target/model selection | Direction and solve schedule are distinct solver interventions | [report](research/reports/CAUSAL_CHACHA20_ROUND20_MULTIHORIZON_PREFLIGHT_V1.md) |
-| A220 frozen | Factorial trajectory transfer protocol | Reader core, feature families, matched-null permutations, fit/select split and untouched holdout panel are hash-frozen; collection is in implementation and has no result claim | 52 fit/select keys under all 12 trajectories, then 92 untouched holdouts after Reader freeze | Preregistered protocol/infrastructure only | [protocol](research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json) |
+| A220 frozen | Factorial trajectory transfer protocol | Fit/select collection, Reader freeze, exact holdout inference, crash-safe selected-bundle collection, strict evaluation, and label-free prospective scoring are implemented and hash-pinned; no A220 outcome is claimed | 52 fit/select keys under all 12 trajectories, then 92 untouched holdouts after Reader freeze | Preregistered protocol and tested infrastructure only | [protocol](research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -152,7 +152,9 @@ target-blind ranked run. A220P then establishes experimentally that traversal
 direction and solve-boundary schedule are separate interventions. The A220
 factorial Reader protocol is committed at SHA-256
 `70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`;
-its main collection and untouched-holdout result are not yet claimed.
+the fit/select collector, holdout core/collector/evaluator and label-free
+prospective scorer are now published with focused tests. No selected Reader,
+untouched-holdout score or recovery is claimed in this snapshot.
 
 The exact publication boundary, artifact identities, and fresh-clone gate for
 this update are collected in the [A220P release record](docs/RELEASE_A220P.md).

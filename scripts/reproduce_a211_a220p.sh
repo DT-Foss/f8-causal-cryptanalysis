@@ -24,6 +24,26 @@ anchors = {
         "294e962e639b2058d3cf726949c05206e4ac14a4d663e1b482077f9c49ae8965",
     "tests/test_chacha20_round20_factorial_trajectory_read.py":
         "bc9b825f1de9a59ec30fe3fc6c999e699bb5b195a0466413a46cd462622d3d66",
+    "research/experiments/chacha20_round20_factorial_trajectory_collect.py":
+        "5112a75ed09872dcc928f3ad42f669895c4f5bb5ec518f32edcd4f66328ed6d7",
+    "tests/test_chacha20_round20_factorial_trajectory_collect.py":
+        "511cd8c2d78cde72492391cffad821001fe579033c3d453ce8325c75a1423d91",
+    "src/arx_carry_leak/factorial_holdout.py":
+        "d2ab7a8f35a1160f7022f72cdd4ce3e18bb05b8ecd5a06136f8d2f9ea697c411",
+    "tests/test_factorial_holdout.py":
+        "73b1283c50e5eb9e843b8c9c1e473898738e331e050c6e7995884dfab1974e2d",
+    "research/experiments/chacha20_round20_factorial_trajectory_holdout_collect.py":
+        "66d8d97625975548b7d42d423653e79e7333d233093ac3d6a341808faf6f8010",
+    "tests/test_chacha20_round20_factorial_trajectory_holdout_collect.py":
+        "43b23caeeeab01d68e1bdafcb796eb88cb6537c45818200c05c7bd998f1603db",
+    "research/experiments/chacha20_round20_factorial_trajectory_holdout_evaluate.py":
+        "d3db06f9db83af2103b9761b0c6e7fdcfbd6752ac846e17829d49b5b2607eb5f",
+    "tests/test_chacha20_round20_factorial_trajectory_holdout_evaluate.py":
+        "24778441af01918737505013fc986b0f199381739d1b34bbcf283b27ebe2b9e6",
+    "src/arx_carry_leak/factorial_target.py":
+        "0b47689bdb992e4c614d5e855eb6ccf969483ff532ddea20a35704b40958a730",
+    "tests/test_factorial_target.py":
+        "ec067264f6651bff79f7ec23d22b5efa46c50daeeaf050c4214f157ffbb95a71",
 }
 for raw_path, expected in anchors.items():
     path = Path(raw_path)
@@ -59,7 +79,12 @@ PYTHONWARNINGS=error PYTHONPATH=src "$PYTHON" -m pytest -q \
   tests/test_chacha20_round20_multihorizon_preflight.py \
   tests/test_chacha20_round20_public_core.py \
   tests/test_factorial_trajectory.py \
+  tests/test_factorial_holdout.py \
+  tests/test_factorial_target.py \
+  tests/test_chacha20_round20_factorial_trajectory_collect.py \
+  tests/test_chacha20_round20_factorial_trajectory_holdout_collect.py \
+  tests/test_chacha20_round20_factorial_trajectory_holdout_evaluate.py \
   tests/test_chacha20_round20_factorial_trajectory_read.py \
   tests/test_chacha20_round20_factorial_trajectory_protocol.py
 
-echo "A211-A220P retained-evidence and protocol gates passed."
+echo "A211-A220P retained evidence and A220 frozen-pipeline gates passed."
