@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A277 result chain as code, typed
+evidence, and the subsequent A107--A286 result chain as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -17,8 +17,8 @@ precisely:
 - a **Reader** executes a relation stored in an audited `.causal` graph;
 - **state reconstruction** recovers the stated internal coordinates under the
   listed known variables;
-- **key recovery** is named only where a key is actually recovered. None of the
-  results below is relabeled as key recovery.
+- **key recovery** is named only where a key is actually recovered; each row
+  states its known-key model and recovered residual explicitly.
 
 ![SHAKE exact-search frontier](docs/figures/shake_frontier.svg)
 
@@ -106,6 +106,9 @@ precisely:
 | A237--A264 plus AES-W41 | Cross-family full-round residual-key recovery | Complete `2^38`--`2^44` Metal domains return one factual and zero control models for nine primitive configurations | 38--44 unknown master-key bits; remaining key material and public relation known; no early stop | Complete master key in each declared known-key model | [release record](docs/RELEASE_A223_A277.md) |
 | A242/A249--A272 | Fresh-state and learned-clause Reader progression | Candidate, clause, topology, flow, frequency, overlay, and trajectory-shape views use exact shared-XOR controls; A267 gives +1.329883 bits (`p=0.01953125`), and frozen A272 gives +1.618752 bits on 20 new keys (`p=0.00390625`) | Nested unseen-prefix validation followed by a disjoint 5,120-candidate prospective panel without refit | Prospectively retained selected-channel ranking signal | [A272 report](research/reports/CAUSAL_CHACHA20_ROUND20_SELECTED_CHANNEL_PROSPECTIVE_VALIDATION_V1.md) |
 | A273--A277 | Target-blind R20 recovery chain | A273 freezes a full order without the target label; A274 finds low20 `0x987f0` after 90/128 selected cells; A275 repeats on distinct material; A276 resolves the selected half UNSAT; A277 recovers low20 `0x5a770` in one global retained solve without complete remaining-half enumeration | Standard 20 rounds plus feed-forward, 236 key bits known, eight output blocks | Two confirmed 20-bit target-blind full-round partial-key assignments and one exact replication boundary | [A274](research/reports/CAUSAL_CHACHA20_ROUND20_SELECTED_CHANNEL_TARGET_RECOVERY_V1.md), [A277](research/reports/CAUSAL_CHACHA20_ROUND20_REPLICATION_RESIDUAL_TWO_PASS_V1.md) |
+| A278--A281 | Cross-material strict-subset R20 recovery | A278 freezes a public-material schedule; A279 discards the target label; A280 freezes the complete order; A281 recovers low20 `0xbf9f3` at rank 37 after 36 exact-UNSAT cells and 151,552/1,048,576 assignments | Standard 20 rounds plus feed-forward, 236 key bits known, eight output blocks; no complete residual-domain enumeration | Confirmed target-blind 20-bit partial-key assignment; 4,096 output bits | [release record](docs/RELEASE_A278_A286_RECORDS.md) |
+| A282--A286 | Four-target cross-material R20 panel | Four fresh public-material targets produce four confirmed recoveries; discovery modes `fallback/top128/top128/global`; applicable frozen ranks 254/55/107; third-reference recomputation covers 16,384 bits and all four controls are rejected | Same frozen 20-round, eight-block, W20 known-key model; zero target-label use; zero Reader refits; no complete residual-domain enumeration | Four independently confirmed 20-bit partial-key assignments | [A286 root](research/reports/CHACHA20_ROUND20_MULTITARGET_PANEL_ROOT_CONFIRMATION_A286_V1.md), [release record](docs/RELEASE_A278_A286_RECORDS.md) |
+| P128R1 / AES256R1 | New full-round complete-domain records | PRESENT-128 executes `2^38` through 31 rounds plus K32; AES-256 executes `2^41` through all 14 FIPS 197 rounds; each returns one factual and zero control models | 38/41 unknown master-key bits; 90/215 known key bits; two blocks; no early stop | Complete master key in each declared known-key model | [release record](docs/RELEASE_A278_A286_RECORDS.md) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -173,6 +176,17 @@ does not enumerate the complete remaining half. The complete release boundary,
 hashes, and reproduction gate are in
 [docs/RELEASE_A223_A277.md](docs/RELEASE_A223_A277.md).
 
+A278--A281 then remove same-material reuse: the full schedule and symbolic
+mapping are frozen before independently derived public material exists, the
+generation label is discarded, and the target-blind order recovers at rank 37
+after evaluating 14.453125% of the residual domain. A282--A286 repeat the
+protocol on four fresh targets. The A286 root confirmation replays every target
+through a third direct RFC-style implementation, checks 16,384 output bits,
+rejects four controls, and reads every canonical graph with the authoritative
+Causal Reader. In parallel, P128R1 and AES256R1 add complete `2^38` and `2^41`
+Metal records for PRESENT-128 and AES-256. The hashes and focused reproduction
+gate are in [docs/RELEASE_A278_A286_RECORDS.md](docs/RELEASE_A278_A286_RECORDS.md).
+
 ## Three connected methods
 
 ### F8
@@ -219,6 +233,7 @@ Six evidence tiers make cost explicit:
 | `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A210 frontiers |
 | `retained` | `./scripts/reproduce_a211_a220p.sh` | authenticate A211--A220P evidence and frozen A220/A220B/A222 infrastructure without a production solve |
 | `frontier` | `./scripts/reproduce_a223_a277.sh` | hash-check and test completed A223--A277 Reader, recovery, Causal, and cross-family records without rerunning complete production domains |
+| `records` | `./scripts/reproduce_a278_a286_records.sh` | verify A281/A286 strict-subset recoveries plus PRESENT-128 W38 and AES-256 W41 without rerunning production domains |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -261,7 +276,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A277 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A286 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

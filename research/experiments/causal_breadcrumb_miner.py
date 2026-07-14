@@ -4,14 +4,16 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
+import struct
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from arx_carry_leak._dotcausal import io as dotcausal_io
 from arx_carry_leak.crypto_causal import CryptoCausalReader
-
 
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 STOP_TOKENS = {
@@ -29,15 +31,61 @@ def _family(trigger: str) -> str:
     return trigger.split(":", 1)[0]
 
 
+def _read_causal(path: Path) -> tuple[dict[str, str], list[dict[str, Any]]]:
+    """Read either repository Causal encoding through its native Reader."""
+
+    encoded = path.read_bytes()
+    header = encoded[:8]
+    if header == b"CAUSAL\x03\x00":
+        reader = CryptoCausalReader(path)
+        if not reader.verify_provenance():
+            raise ValueError(f"invalid provenance: {path}")
+        graph = {
+            "experiment": str(reader.graph["experiment"]),
+            "graph_sha256": reader.graph_sha256,
+            "format": "crypto-causal-v3",
+        }
+        return graph, [dict(row) for row in reader.triplets(include_inferred=False)]
+
+    if header != b"CAUSAL\x00\x01" or len(encoded) < 96:
+        raise ValueError(f"unsupported or truncated Causal artifact: {path}")
+
+    stored_crc = encoded[20:28]
+    content = encoded[96:]
+    md5_crc = hashlib.md5(content).digest()[:8]
+    xxhash_crc = (
+        struct.pack("<Q", dotcausal_io.xxhash.xxh64(content).intdigest())
+        if dotcausal_io.HAS_XXHASH
+        else None
+    )
+    if stored_crc == md5_crc:
+        has_xxhash = False
+    elif xxhash_crc is not None and stored_crc == xxhash_crc:
+        has_xxhash = True
+    else:
+        raise ValueError(f"dotcausal content checksum differs: {path}")
+
+    original = dotcausal_io.HAS_XXHASH
+    dotcausal_io.HAS_XXHASH = has_xxhash
+    try:
+        reader = dotcausal_io.CausalReader(str(path), verify_integrity=True)
+    finally:
+        dotcausal_io.HAS_XXHASH = original
+    graph = {
+        "experiment": f"dotcausal:{reader.api_id}",
+        "graph_sha256": hashlib.sha256(encoded).hexdigest(),
+        "format": "dotcausal-v1",
+    }
+    return graph, [dict(row) for row in reader.get_all_triplets(include_inferred=False)]
+
+
 def mine(root: Path) -> dict[str, Any]:
     edges: list[dict[str, Any]] = []
     graphs = []
     for path in sorted(root.rglob("*.causal")):
-        reader = CryptoCausalReader(path)
-        if not reader.verify_provenance():
-            raise ValueError(f"invalid provenance: {path}")
-        graphs.append({"path": str(path), "experiment": reader.graph["experiment"], "graph_sha256": reader.graph_sha256})
-        for edge in reader.triplets(include_inferred=False):
+        graph, triplets = _read_causal(path)
+        graphs.append({"path": str(path), **graph})
+        for edge in triplets:
             row = dict(edge)
             row["artifact"] = str(path)
             row["family"] = _family(edge["trigger"])

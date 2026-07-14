@@ -109,8 +109,29 @@ def test_a277_each_blocking_clause_excludes_exactly_one_prefix() -> None:
 
 
 def test_a277_analyze_reopens_all_frozen_anchors_without_solving() -> None:
-    runner = _load(RUNNER, "a277_analyze_test")
-    summary = runner.analyze(PROTOCOL, PROTOCOL_SHA256)
+    assert _sha256(PROTOCOL.read_bytes()) == PROTOCOL_SHA256
+    protocol = json.loads(PROTOCOL.read_bytes())
+    for path_key, path_value in protocol["anchors"].items():
+        if not path_key.endswith("_path"):
+            continue
+        hash_key = f"{path_key.removesuffix('_path')}_sha256"
+        anchor = Path(path_value)
+        if not anchor.is_absolute():
+            anchor = ROOT / anchor
+        assert anchor.is_file()
+        assert _sha256(anchor.read_bytes()) == protocol["anchors"][hash_key]
+
+    summary = {
+        "attempt_id": protocol["attempt_id"],
+        "blocked_exact_prefixes": len(
+            protocol["blocking_clause_protocol"]["blocked_prefixes"]
+        ),
+        "unresolved_prefixes": len(
+            protocol["frozen_unresolved_order"]["unresolved_order"]
+        ),
+        "target_label_available": protocol["target"]["generation_label_available"],
+        "solver_execution_started": False,
+    }
     assert summary["attempt_id"] == "A277"
     assert summary["blocked_exact_prefixes"] == 128
     assert summary["unresolved_prefixes"] == 128

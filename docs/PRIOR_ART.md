@@ -51,6 +51,8 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-13 | A223--A240 capacity, post-barrier, tie-aware Reader, Speck32/64-W42, and Threefish-256-W38 records |
 | 2026-07-14 | A242--A272 fresh Reader and cross-family full-round continuation, including Speck64/128, SIMON64/128, RC5, PRESENT-80, Ascon-AEAD128, AES-128, and Salsa20/20 complete-domain records |
 | 2026-07-14 | A273--A277 target-blind selected-channel ChaCha20-R20 chain: first-target recovery, second-target exact selected-half boundary, and residual global recovery |
+| 2026-07-14 | A278--A286 cross-material standard-R20 chain: rank-37 strict-subset recovery followed by four independently root-confirmed fresh-target recoveries |
+| 2026-07-14 | P128R1 and AES256R1 complete-domain records: PRESENT-128 W38 and AES-256 W41 on Apple M4 Metal |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -76,7 +78,7 @@ with `scripts/verify_hash_manifest.py`.
 
 ## Result identifiers
 
-The stable A107--A277 identifiers are defined in
+The stable A107--A286 identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -161,6 +163,15 @@ publication:
   retention;
 - A273--A277: two target-blind complete orders, one selected-half recovery, one
   exact selected-half UNSAT boundary, and one residual global R20 recovery.
+- A278--A281: independently derived public-material transfer with a frozen
+  complete order and strict-subset standard-R20 recovery at rank 37 after
+  151,552 assignments.
+- A282--A286: four fresh target-blind standard-R20 recoveries, 16,384-bit
+  third-reference root confirmation, four rejected controls, and authentic
+  aggregate Causal readback.
+- P128R1 and AES256R1: complete `2^38` PRESENT-128 and `2^41` AES-256
+  full-round residual-key records, each with one factual and zero control
+  models.
 
 ## Presentation sanitization
 
@@ -182,7 +193,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A277 and the A220B/A222 protocol supplement, include the exact follow-up
+A133--A286 and the A220B/A222 protocol supplement, include the exact follow-up
 commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a

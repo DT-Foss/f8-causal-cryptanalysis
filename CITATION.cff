@@ -5,14 +5,14 @@ title: "F8-Causal: Full-Round Distinguishers, Causal Readers, and Reproducible C
 abstract: >-
   Reproducible implementations, controls, typed causal evidence graphs, and
   result artifacts for F8, CASI/LiveCASI, and full-round cryptanalytic Reader
-  relations across block ciphers, hash compression functions, ChaCha20, and
-  Keccak-f[1600].
+  relations and residual-key recoveries across block ciphers, hash compression
+  functions, ChaCha20, AES, PRESENT, and Keccak-f[1600].
 authors:
   - family-names: Foss
     given-names: David Tom
     email: d.foss@ieee.org
     orcid: "https://orcid.org/0009-0004-0289-7154"
-version: 0.3.0
+version: 0.4.0
 date-released: 2026-07-14
 license: BSD-3-Clause
 repository-code: "https://github.com/DT-Foss/f8-causal-cryptanalysis"
@@ -22,6 +22,8 @@ keywords:
   - full-round distinguisher
   - causal inference
   - state reconstruction
+  - key recovery
+  - strict-subset search
   - ARX
   - F8
   - CASI

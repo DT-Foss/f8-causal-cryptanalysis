@@ -49,7 +49,11 @@ jobs:
             research/results/v1/PQC_SHA256SUMS \
             research/results/v1/FULLROUND_TRANSFER_SHA256SUMS \
             research/results/v1/SHAKE_NATIVE_EXTENDED_SHA256SUMS \
-            research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS
+            research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS \
+            research/results/v1/A211_A220P_SHA256SUMS \
+            research/results/v1/A220B_A222_INFRA_SHA256SUMS \
+            research/results/v1/A223_A277_SHA256SUMS \
+            research/results/v1/A278_A286_RECORDS_SHA256SUMS
       - name: Verify deterministic figures
         run: python scripts/generate_publication_figures.py --check
       - name: Publication audit

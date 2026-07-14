@@ -58,3 +58,16 @@ Speck64/128, and SIMON64/128 implementations and their independently confirmed
 complete-domain recovery records. It does not reinterpret the historical Nano
 Speck/SIMON snapshot. A278--A281 and PRESENT-128 are outside this release and no
 result from those in-flight attempts is included.
+
+## A278--A286 record release boundary (2026-07-14)
+
+Release `0.4.0` publishes the completed A278--A281 cross-material recovery,
+the A282--A286 four-target panel, PRESENT-128 W38, and AES-256 W41. The
+authoritative manifest is
+`research/results/v1/A278_A286_RECORDS_SHA256SUMS`; the focused test inventory
+is `research/results/v1/A278_A286_RECORDS_TESTS.txt`, and the portable entry
+point is `scripts/reproduce_a278_a286_records.sh`.
+
+The A286 root confirmation supersedes only the failed A285 aggregate-file
+write caused by a nine-byte API id in an eight-byte Causal header field. It
+preserves and independently confirms all four completed target results.

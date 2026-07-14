@@ -142,3 +142,16 @@ boundary (A124), the corrected shared-route analyses, and independently tested
 representations that return the null distribution. They specify where a
 mechanism is and is not visible, prevent duplicate work, and determine the next
 experiment's representation.
+
+## A278--A286 and new complete-domain claims
+
+| Record | Direct claim | Exact boundary |
+|---|---|---|
+| A281 | The frozen cross-material schedule recovers one standard ChaCha20-R20 low20 residual at rank 37 after 151,552 assignments and confirms all 4,096 output bits. | 236 key bits known; eight blocks public; 36 exact-UNSAT cells then SAT; 14.453125% of the residual domain; not all-bits-unknown full-key recovery. |
+| A286 | Four fresh public-material targets produce four recovered low20 residuals; a third implementation recomputes 16,384 bits and all four one-bit controls are rejected. | Discovery modes `fallback/top128/top128/global`; no target label, Reader refit, or complete residual-domain enumeration. |
+| P128R1 | One complete `2^38` PRESENT-128 search through 31 rounds plus K32 returns one factual model and zero control models. | 38 unknown and 90 known master-key bits; two public block pairs. |
+| AES256R1 | One complete `2^41` FIPS 197 AES-256 search through all 14 rounds returns one factual model and zero control models. | 41 unknown and 215 known master-key bits; two public block pairs. |
+
+The A286 root confirmation and authentic Causal graph are the aggregate panel
+anchors. A285's nine-byte API-id failure affects only the first aggregate-file
+write; it does not alter any of the four per-target results.

@@ -697,6 +697,19 @@ The exact retained A220P result SHA-256 is
 its scientific measurement projection is
 `a43f530b72dad576db5623e3c23f8c3dcb3ce666c4159b29d74c9bb7294cfdc7`.
 
+## Cross-material R20 and complete-domain extension: A278--A286
+
+| Record | Executed result | Evidence gate |
+|---|---|---|
+| A281 | Low20 `0xbf9f3` recovered at frozen rank 37 after 36 exact-UNSAT cells and 151,552 assignments. | Target label unavailable; complete order frozen first; two implementations match all 4,096 output bits; one-bit control rejected. |
+| A286 | Four fresh targets recover `0x18e26`, `0xe28a0`, `0x57a0f`, and `0x2527d`. | Third implementation recomputes 16,384 bits; all four controls rejected; all canonical Causal graphs opened; no full residual enumeration. |
+| P128R1 | Complete `2^38` PRESENT-128 domain returns assignment `198790436326` and full key `0ad8100fd09c280e4ef73eee48d555e6`. | 31 rounds plus K32; one factual/zero control; independent 128-bit confirmation. |
+| AES256R1 | Complete `2^41` AES-256 domain returns assignment `534703724815` and full key `d9112d122cf54d9d03fda18db88bd78624056578beb89ae355dc1c7c7ed3590f`. | All 14 FIPS 197 rounds; one factual/zero control; two-reference 256-bit confirmation. |
+
+The release record and exact manifest are
+[docs/RELEASE_A278_A286_RECORDS.md](RELEASE_A278_A286_RECORDS.md) and
+`research/results/v1/A278_A286_RECORDS_SHA256SUMS`.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.

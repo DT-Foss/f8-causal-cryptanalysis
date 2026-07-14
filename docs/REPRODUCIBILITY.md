@@ -70,6 +70,20 @@ This tier is designed for minutes, not a paper-scale rerun. It performs:
 
 Expected final line: `quick evidence tier: OK`.
 
+### A278--A286 record tier
+
+```bash
+./scripts/reproduce_a278_a286_records.sh
+```
+
+This portable tier verifies the complete A278--A286 release manifest, runs the
+focused cross-material/panel/PRESENT-128/AES-256 tests, independently recomputes
+all retained outputs, rejects the controls, and opens every committed Causal
+graph. It authenticates the completed evidence without launching the production
+solver searches or multi-hour `2^38`/`2^41` Metal enumerations.
+
+Expected final line: `A278--A286 and complete-domain record tier: OK`.
+
 ### Anchors
 
 ```bash

@@ -43,6 +43,7 @@ EXACT_PATH_BEARING_RECORDS = {
 }
 PATH_BEARING_RELEASE_MANIFESTS = (
     Path("research/results/v1/A223_A277_SHA256SUMS"),
+    Path("research/results/v1/A278_A286_RECORDS_SHA256SUMS"),
 )
 
 
@@ -93,16 +94,6 @@ def main() -> int:
     all_files = files()
     text_files = [path for path in all_files if path.suffix.lower() in TEXT_SUFFIXES]
 
-    forbidden_inflight_markers = (
-        "aes256_metal_",
-        "chacha20_round20_cross_material_",
-        "present128_metal_",
-    )
-    for path in all_files:
-        relative_text = path.relative_to(ROOT).as_posix().lower()
-        if any(marker in relative_text for marker in forbidden_inflight_markers):
-            failures.append(f"in-flight A278-A281/PRESENT-128 file: {relative_text}")
-
     for path in all_files:
         relative = path.relative_to(ROOT)
         if path.stat().st_size > 50 * 1024 * 1024:
@@ -151,10 +142,23 @@ def main() -> int:
         "docs/RELEASE_A220P.md",
         "docs/RELEASE_A220B_A222_INFRA.md",
         "docs/RELEASE_A223_A277.md",
+        "docs/RELEASE_A278_A286_RECORDS.md",
         "research/results/v1/ANCHOR_SHA256SUMS",
         "research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS",
         "research/results/v1/A223_A277_SHA256SUMS",
         "research/results/v1/A223_A277_TESTS.txt",
+        "research/results/v1/A278_A286_RECORDS_SHA256SUMS",
+        "research/results/v1/A278_A286_RECORDS_TESTS.txt",
+        "scripts/reproduce_a278_a286_records.sh",
+        "research/results/v1/chacha20_round20_cross_material_composite_recovery_v1.json",
+        "research/results/v1/chacha20_round20_cross_material_composite_recovery_canonical_v1.causal",
+        "research/results/v1/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json",
+        "research/results/v1/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.causal",
+        "research/results/v1/present128_metal_width38_recovery_v1.json",
+        "research/results/v1/present128_metal_width38_recovery_v1.causal",
+        "research/results/v1/aes256_fips197_metal_width41_recovery_v1.json",
+        "research/results/v1/aes256_fips197_metal_width41_recovery_v1.causal",
+        "tests/test_a278_a286_completed_records.py",
         "research/results/v1/shake_boolean_cnf_reader_v1.json",
         "research/reports/FULLROUND_CAUSAL_SHAKE_SOLVER_FRONTIER_V1.md",
         "research/reports/FULLROUND_CAUSAL_SHAKE_AFFINE_HULL_V1.md",
@@ -671,6 +675,55 @@ def main() -> int:
         and a210["causal"]["provenance_verified"] is True
     ):
         failures.append("A210 complete incremental learned-state boundary differs")
+
+    a281_path = results / "chacha20_round20_cross_material_composite_recovery_v1.json"
+    a281 = json.loads(a281_path.read_bytes())
+    if (
+        hashlib.sha256(a281_path.read_bytes()).hexdigest()
+        != "0083e7e476844086b2ea58d6f490d0ab61cb9a7193371525aeac5252c12f1b05"
+        or a281["top_execution_summary"]["attempted_cells"] != 37
+        or a281["top_execution_summary"]["logical_assignments_inside_attempted_cells"]
+        != 151_552
+        or a281["confirmation"]["recovered_unknown_low20"] != 0xBF9F3
+        or a281["information_boundary"]["complete_full_domain_enumeration_used"] is not False
+    ):
+        failures.append("A281 strict-subset recovery identity differs")
+
+    a286_path = results / "chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json"
+    a286 = json.loads(a286_path.read_bytes())
+    if (
+        hashlib.sha256(a286_path.read_bytes()).hexdigest()
+        != "c171c61c1ce90c9e19faa06784205a7c9a24c2ddcb58db5ba74ecd00f1e32464"
+        or a286["headline"]["confirmed_recoveries"] != 4
+        or a286["headline"]["independently_recomputed_output_bits"] != 16_384
+        or a286["headline"]["all_one_bit_controls_rejected"] is not True
+        or a286["headline"]["complete_full_domain_enumeration_used"] is not False
+        or a286["causal"]["sha256"]
+        != "4c8ac373485a5f8f8db91f3d555ec041dad917182e101fd8833ec346683ade0b"
+    ):
+        failures.append("A286 four-target root confirmation identity differs")
+
+    present128_path = results / "present128_metal_width38_recovery_v1.json"
+    present128 = json.loads(present128_path.read_bytes())
+    if (
+        hashlib.sha256(present128_path.read_bytes()).hexdigest()
+        != "4a7935c561784f735d9519b2404faba69e1baf0069e11b78d3f67a60fceba121"
+        or present128["execution"]["logical_candidate_count"] != 2**38
+        or present128["execution"]["factual_full_matches"] != [198_790_436_326]
+        or present128["execution"]["control_full_matches"] != []
+    ):
+        failures.append("PRESENT-128 W38 record identity differs")
+
+    aes256_path = results / "aes256_fips197_metal_width41_recovery_v1.json"
+    aes256 = json.loads(aes256_path.read_bytes())
+    if (
+        hashlib.sha256(aes256_path.read_bytes()).hexdigest()
+        != "51b9d4c476d03acf92894f1cb259a59538fef14afebb2bdb6cd4b403556f60b3"
+        or aes256["execution"]["logical_candidate_count"] != 2**41
+        or aes256["execution"]["factual_full_matches"] != [534_703_724_815]
+        or aes256["execution"]["control_full_matches"] != []
+    ):
+        failures.append("AES-256 W41 record identity differs")
 
     deck = ROOT / "paper/nano2026/presentation/Foss_CASI_Nano-IoT_IEEE_NANO_2026.pptx"
     if deck.is_file():
