@@ -1,0 +1,111 @@
+{
+  "schema": "chacha20-round20-fresh-candidate-probe-protocol-v1",
+  "attempt_id": "A242",
+  "protocol_state": "frozen_after_one_development_key_and_before_any_disjoint_validation_key_fresh_state_measurement",
+  "scope": {
+    "primitive": "ChaCha20_with_feed_forward",
+    "rounds": 20,
+    "unknown_key_bits": 20,
+    "candidate_prefix_bits": 8,
+    "solver_unknown_suffix_bits_after_prefix_assumption": 12,
+    "public_output_bits_constrained": 512,
+    "fresh_solver_instance_per_candidate": true,
+    "candidate_count_per_key": 256
+  },
+  "development_observation": {
+    "label": "a220_fit_p00_fit_s00",
+    "true_prefix8_binary": "11010110",
+    "candidate_order": "numeric_0_through_255",
+    "conflict_horizons": [1, 2, 4, 8],
+    "process_elapsed_seconds": 121.57934429123998,
+    "primary_channel_selected_after_this_observation": "cumulative_search_propagations_at_horizon_2_higher_is_better",
+    "primary_true_value": 147641,
+    "primary_strict_high_rank": 9,
+    "primary_ties": 1,
+    "development_observation_is_not_validation_evidence": true
+  },
+  "validation": {
+    "labels": [
+      "a220_select_p00_fit_s00",
+      "a220_select_p00_fit_s01",
+      "a220_select_p00_fit_s02",
+      "a220_select_p00_fit_s03",
+      "a220_select_p01_fit_s00",
+      "a220_select_p01_fit_s01",
+      "a220_select_p01_fit_s02",
+      "a220_select_p01_fit_s03",
+      "a220_select_p02_fit_s00",
+      "a220_select_p02_fit_s01",
+      "a220_select_p02_fit_s02",
+      "a220_select_p02_fit_s03",
+      "a220_select_p03_fit_s00",
+      "a220_select_p03_fit_s01",
+      "a220_select_p03_fit_s02",
+      "a220_select_p03_fit_s03",
+      "a220_select_p04_fit_s00",
+      "a220_select_p04_fit_s01",
+      "a220_select_p04_fit_s02",
+      "a220_select_p04_fit_s03"
+    ],
+    "validation_key_count": 20,
+    "unseen_prefix_count": 5,
+    "suffixes_per_prefix": 4,
+    "candidate_order": "numeric_0_through_255",
+    "conflict_horizons": [1, 2, 4, 8],
+    "watchdog_seconds_per_stage": 2.0,
+    "maximum_concurrent_key_processes": 2,
+    "primary_channel": "cumulative_search_propagations_at_horizon_2",
+    "primary_direction": "higher_is_better",
+    "rank_definition": "one_plus_strictly_better_plus_half_of_other_ties",
+    "aggregate": "mean_log2_rank",
+    "uniform_reference": "mean_log2_of_integer_ranks_1_through_256",
+    "exact_control": "all_256_shared_xor_offsets_applied_to_the_true_prefix_labels",
+    "retention_gate": {
+      "maximum_exact_shared_xor_p": 0.05,
+      "minimum_mean_log2_rank_bit_gain": 0.0,
+      "all_twenty_validation_measurements_required": true
+    },
+    "secondary_channels_are_not_permitted_to_replace_primary_after_execution": true,
+    "secondary_channels": [
+      "cumulative_search_propagations_at_horizons_1_4_8",
+      "cumulative_decisions_at_horizons_1_2_4_8",
+      "cumulative_conflicts_at_horizons_1_2_4_8",
+      "opposite_rank_direction_controls"
+    ],
+    "order_replication": {
+      "label": "a220_select_p00_fit_s00",
+      "second_order": "reverse_numeric_255_through_0",
+      "required_identity": "all_nonvolatile_candidate_measurements_identical_after_prefix_reindexing"
+    }
+  },
+  "information_boundary": {
+    "all_validation_keys_are_explicit_known_key_calibration_keys": true,
+    "validation_labels_selected_before_validation_execution": true,
+    "primary_channel_selected_only_from_the_single_declared_development_key": true,
+    "validation_true_prefix_used_by_solver_order_budget_or_stopping": false,
+    "candidate_order_budget_and_horizons_are_identical_for_every_key": true,
+    "early_stop_permitted": false,
+    "historical_A220_holdout_measurements_loaded": false,
+    "future_prospective_unknown_target_opened": false
+  },
+  "anchors": {
+    "A220_protocol_path": "research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json",
+    "A220_protocol_sha256": "70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645",
+    "symbolic_template_protocol_path": "research/configs/chacha20_round20_knownkey_propagation_atlas_v3.json",
+    "symbolic_template_protocol_sha256": "aa5b7af87c74cbffe7f6d3e50332cc65c07f084435edb4314b32e4904b625698",
+    "public_core_path": "research/experiments/chacha20_round20_public_core.py",
+    "public_core_sha256": "953e4478d369b2eb39657d4b6f718fa97a46cac1855b0364cce1bc4e4753f77f",
+    "symbolic_template_path": "research/experiments/chacha20_round20_symbolic_template.py",
+    "symbolic_template_sha256": "34f4c5542f7fa12e7b0ff06ab7e042605c2414f23001f11894fa6dbdfc0b4721",
+    "factorial_design_path": "research/experiments/chacha20_round20_factorial_key_design.py",
+    "factorial_design_sha256": "ad34f5ee660e164ea6af63b1e6d0acd10108038afdb98266be2a80b954d4eeea",
+    "fresh_wrapper_path": "research/experiments/chacha20_fresh_multihorizon.py",
+    "fresh_wrapper_sha256": "55e1722d8478bf0aea95a544e5942fa6f6a3b17e8c9c54906e2ba34ddc2be386",
+    "fresh_native_source_path": "research/native/cadical_fresh_multihorizon.cpp",
+    "fresh_native_source_sha256": "b9c679b1566665e823534734919289b8acc0a1ba0965a96da604088889cc2210",
+    "fresh_wrapper_test_path": "tests/test_chacha20_fresh_multihorizon.py",
+    "fresh_wrapper_test_sha256": "fda522ae768ccfc29e38b16ad4b5c5641684193c9b12ae8663a05353a4ac0ba7",
+    "public_only_R20_material_sha256": "50adb54018c70c7553f7b8eedb2ca920b1082476b5f59a29144357353c699e9c",
+    "factorial_ledger_sha256": "820e792d740ce2f5aec5586dd1ab5e3ec79bbce8661706d21274d11c8246c0fe"
+  }
+}

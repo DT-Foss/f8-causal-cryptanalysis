@@ -1,0 +1,87 @@
+{
+  "A267_fixed_route_basis": {
+    "exact_shared_xor_p": 0.01953125,
+    "mean_log2_rank_bit_gain": 1.329883446167778,
+    "mean_rank": 60.05,
+    "outer_holdout_ranks": [
+      30.0,
+      41.0,
+      73.0,
+      30.0,
+      31.0,
+      27.0,
+      50.0,
+      82.0,
+      158.0,
+      200.0,
+      76.0,
+      108.0,
+      143.0,
+      74.0,
+      10.0,
+      12.0,
+      20.0,
+      5.0,
+      5.0,
+      26.0
+    ],
+    "top128_count": 17,
+    "top128_fraction": 0.85
+  },
+  "anchors": {
+    "A267_result_path": "research/results/v1/chacha20_round20_fresh_trajectory_shape_reader_v1.json",
+    "A267_result_sha256": "a6a623b442a0ad76eb6a15b90183c87a4dcd558a5856e625d48f2086da43f492",
+    "A268_preflight_path": "research/provenance/chacha20_round20_a268_prospective_trajectory_shape_preflight_v1.json",
+    "A268_preflight_sha256": "d8fdbb88254b40ea90812c29563baf8f82b693d5fa9980f28a116089abfa9a17",
+    "A268_protocol_path": "research/configs/chacha20_round20_prospective_trajectory_shape_validation_v1.json",
+    "A268_protocol_sha256": "274cdc5b4e2ef0a4887e67d13106b17b6011d0917d473de158e72cbc55f14221",
+    "frozen_model_sha256": "b096c08616a81712da881862b65f0c95388e4db3cf6b8e462bf7c2a072cb0da4"
+  },
+  "attempt_id": "A269",
+  "frozen_plan": {
+    "candidate_order": {
+      "all_256_positions_hash_frozen_before_deep_solver_execution": true,
+      "rule": "descending_frozen_logit_then_numeric_candidate_tiebreak"
+    },
+    "deep_recovery": {
+      "all_declared_targets_must_execute": true,
+      "early_stop_rule": "first_independently_confirmed_SAT_model_only",
+      "independent_confirmation": "standalone_RFC8439_all_eight_blocks_4096_output_bits",
+      "maximum_candidate_regions": 128,
+      "maximum_concurrent_targets": 2,
+      "seconds_per_region": 30.0,
+      "solver": "CaDiCaL_3.0.0_single_retained_state_per_target",
+      "strict_subset_of_complete_256_region_cover": true
+    },
+    "route_if_A268_does_not_pass": "do_not_generate_targets_test_local_pairwise_intervention_on_A268_without_model_refit",
+    "route_if_A268_passes": "generate_four_fresh_targets_freeze_all_orders_then_execute_ranked_strict_subset_recovery",
+    "shallow_measurement": {
+      "A268_rows_or_labels_used_for_fit_or_threshold_selection": false,
+      "candidate_regions": 256,
+      "complete_cover_required_before_scoring": true,
+      "conflict_horizons": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "fresh_solver_state_per_candidate": true,
+      "model_refit_or_coefficient_update_permitted": false,
+      "model_sha256": "b096c08616a81712da881862b65f0c95388e4db3cf6b8e462bf7c2a072cb0da4"
+    },
+    "target_count": 4,
+    "target_disjointness": "all_targets_unique_and_disjoint_from_A220_A267_A268_known_key_rows",
+    "target_generation": "one_shot_OS_random_low20_assignments_used_only_to_form_public_eight_block_R20_relations_then_discarded_with_builder_process_exit"
+  },
+  "frozen_plan_sha256": "039de11a15b25c75210dc0d35a7c7c2e4fccf36140ef82f6721dda20b04b6393",
+  "information_boundary": {
+    "A268_result_exists_at_freeze": false,
+    "A268_scores_ranks_or_XOR_controls_read_at_freeze": false,
+    "deep_subset_threshold_selected_from_A267_only": true,
+    "future_A268_outcome_can_change_only_route_not_threshold": true,
+    "future_target_generated_at_freeze": false,
+    "future_target_secret_or_output_available_at_freeze": false
+  },
+  "schema": "chacha20-round20-trajectory-shape-target-route-preflight-v1",
+  "state": "target_route_frozen_while_A268_measurement_is_in_progress_before_any_A268_rank_or_result"
+}

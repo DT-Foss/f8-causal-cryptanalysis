@@ -41,6 +41,28 @@ MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 EXACT_PATH_BEARING_RECORDS = {
     Path("research/results/v1/chacha20_round20_multihorizon_preflight_v1.json"),
 }
+PATH_BEARING_RELEASE_MANIFESTS = (
+    Path("research/results/v1/A223_A277_SHA256SUMS"),
+)
+
+
+def release_manifest_paths() -> set[Path]:
+    """Return explicitly hash-bound authentic records allowed to retain source paths."""
+    retained: set[Path] = set()
+    for relative_manifest in PATH_BEARING_RELEASE_MANIFESTS:
+        manifest = ROOT / relative_manifest
+        if not manifest.is_file():
+            continue
+        for line in manifest.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            _, separator, raw_path = line.partition("  ")
+            if not separator:
+                continue
+            relative = Path(raw_path)
+            if not relative.is_absolute() and ".." not in relative.parts:
+                retained.add(relative)
+    return retained
 
 
 def skipped(relative: Path) -> bool:
@@ -61,6 +83,7 @@ def files() -> list[Path]:
 
 def main() -> int:
     failures: list[str] = []
+    exact_path_bearing_records = EXACT_PATH_BEARING_RECORDS | release_manifest_paths()
     for entry in ROOT.rglob("*"):
         relative = entry.relative_to(ROOT)
         if skipped(relative):
@@ -69,6 +92,16 @@ def main() -> int:
             failures.append(f"symlink: {relative}")
     all_files = files()
     text_files = [path for path in all_files if path.suffix.lower() in TEXT_SUFFIXES]
+
+    forbidden_inflight_markers = (
+        "aes256_metal_",
+        "chacha20_round20_cross_material_",
+        "present128_metal_",
+    )
+    for path in all_files:
+        relative_text = path.relative_to(ROOT).as_posix().lower()
+        if any(marker in relative_text for marker in forbidden_inflight_markers):
+            failures.append(f"in-flight A278-A281/PRESENT-128 file: {relative_text}")
 
     for path in all_files:
         relative = path.relative_to(ROOT)
@@ -84,7 +117,7 @@ def main() -> int:
             continue
         if (
             relative != Path("scripts/check_publication.py")
-            and relative not in EXACT_PATH_BEARING_RECORDS
+            and relative not in exact_path_bearing_records
             and ABSOLUTE_HOME.search(content)
         ):
             failures.append(f"private absolute path: {relative}")
@@ -117,8 +150,11 @@ def main() -> int:
         "docs/PUBLICATION_AUDIT.md",
         "docs/RELEASE_A220P.md",
         "docs/RELEASE_A220B_A222_INFRA.md",
+        "docs/RELEASE_A223_A277.md",
         "research/results/v1/ANCHOR_SHA256SUMS",
         "research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS",
+        "research/results/v1/A223_A277_SHA256SUMS",
+        "research/results/v1/A223_A277_TESTS.txt",
         "research/results/v1/shake_boolean_cnf_reader_v1.json",
         "research/reports/FULLROUND_CAUSAL_SHAKE_SOLVER_FRONTIER_V1.md",
         "research/reports/FULLROUND_CAUSAL_SHAKE_AFFINE_HULL_V1.md",
@@ -174,6 +210,14 @@ def main() -> int:
         "research/results/v1/shake256_symbolic_r1_scaling_reader_v1.json",
         "research/results/v1/shake256_symbolic_r1_scaling_reader_v1.causal",
         "scripts/reproduce_shake_solver_frontier.sh",
+        "scripts/reproduce_a223_a277.sh",
+        "research/configs/chacha20_round20_replication_residual_two_pass_v1.json",
+        "research/results/v1/chacha20_round20_replication_residual_two_pass_v1.json",
+        "research/results/v1/chacha20_round20_replication_residual_two_pass_v1.causal",
+        "research/reports/CAUSAL_CHACHA20_ROUND20_REPLICATION_RESIDUAL_TWO_PASS_V1.md",
+        "research/results/v1/salsa20_20_metal_width42_recovery_v1.json",
+        "research/results/v1/salsa20_20_metal_width42_recovery_v1.causal",
+        "research/reports/FULLROUND_SALSA20_20_METAL_WIDTH42_RECOVERY_V1.md",
         "PATENT_NOTICE.md",
     ]
     retained_chacha_transfers = {

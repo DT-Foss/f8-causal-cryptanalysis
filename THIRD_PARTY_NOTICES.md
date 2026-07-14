@@ -58,6 +58,13 @@ MIT terms. The adjacent `live_casiv2_legacy.LICENSE` records those terms without
 changing the byte-exact ZIP required by the historical replay. The bundle
 contains source only and no compiled extension or credential.
 
+## dotcausal 0.3.1 Reader
+
+The minimal `dotcausal` Reader source under `src/arx_carry_leak/_dotcausal/`
+is vendored to reopen and integrity-check the AI-native `CAUSAL\0\1`
+artifacts without relying on an unpinned external checkout. Its original MIT
+license is retained at `provenance/vendor/dotcausal/LICENSE`.
+
 ## Scientific names and specifications
 
 Reference implementations follow public specifications and test vectors for

@@ -1,0 +1,106 @@
+{
+  "schema": "chacha20-round20-fresh-multichannel-reader-protocol-v1",
+  "attempt_id": "A249",
+  "protocol_state": "frozen_after_inspecting_only_A242_select_prefix_group_0_and_before_inspecting_groups_1_through_4_or_fitting_any_multichannel_model",
+  "purpose": "Test whether a translation-equivariant typed multihorizon reader transfers across completely unseen eight-bit key prefixes after the single A242 scalar channel reached its first-prefix boundary.",
+  "input": {
+    "attempt_id": "A242",
+    "measurement_schema": "chacha20-round20-fresh-candidate-probe-measurement-v1",
+    "required_order": "numeric",
+    "required_key_count": 20,
+    "required_candidates_per_key": 256,
+    "required_conflict_horizons": [1, 2, 4, 8],
+    "first_prefix_group_observed_before_freeze": {
+      "prefix_index": 0,
+      "prefix8": 85,
+      "labels": [
+        "a220_select_p00_fit_s00",
+        "a220_select_p00_fit_s01",
+        "a220_select_p00_fit_s02",
+        "a220_select_p00_fit_s03"
+      ],
+      "frozen_A242_primary_midranks": [130.0, 108.0, 248.0, 130.0],
+      "frozen_A242_primary_mean_log2_rank": 7.188454859651813,
+      "frozen_A242_primary_uniform_reference": 6.578110496969589,
+      "used_only_to_trigger_the_predeclared_multichannel_branch": true
+    },
+    "uninspected_prefix_groups_at_protocol_freeze": [1, 2, 3, 4]
+  },
+  "feature_contract": {
+    "base_horizons": [1, 2, 4, 8],
+    "per_horizon_channels": [
+      "cumulative_conflicts",
+      "cumulative_decisions",
+      "cumulative_search_propagations",
+      "stage_conflicts",
+      "stage_decisions",
+      "stage_search_propagations",
+      "active_variables_delta",
+      "irredundant_clauses_delta",
+      "redundant_clauses_delta"
+    ],
+    "base_channel_count": 36,
+    "value_transform": "signed_log1p",
+    "within_key_transform": "columnwise_z_score_over_all_256_candidates",
+    "xor_orbit_transforms": [
+      "raw_z",
+      "candidate_minus_mean_of_eight_Hamming1_XOR_neighbors",
+      "root_mean_square_Hamming1_XOR_gradient",
+      "maximum_absolute_Hamming1_XOR_gradient"
+    ],
+    "final_feature_count": 144,
+    "candidate_numeric_value_or_bits_included": false,
+    "known_low20_prefix_suffix_or_label_included_as_feature": false,
+    "mode_order_cell_index_elapsed_time_or_assumption_literal_ids_included": false,
+    "translation_equivariance_test_required": true
+  },
+  "evaluation": {
+    "outer_folds": "leave_one_of_five_prefix_groups_out",
+    "outer_prefix_groups": [
+      {"prefix_index": 0, "prefix8": 85},
+      {"prefix_index": 1, "prefix8": 106},
+      {"prefix_index": 2, "prefix8": 200},
+      {"prefix_index": 3, "prefix8": 159},
+      {"prefix_index": 4, "prefix8": 36}
+    ],
+    "keys_per_outer_test_fold": 4,
+    "keys_per_outer_training_fold": 16,
+    "model": "class_balanced_ridge_logistic",
+    "ridge_lambda_grid": [0.001, 0.01, 0.1, 1.0, 10.0],
+    "lambda_selection": "inner_leave_one_training_prefix_group_out_minimum_mean_log2_rank",
+    "lambda_tie_break": "largest_lambda",
+    "outer_score": "descending_logit_midrank_of_true_prefix",
+    "aggregate": "mean_log2_rank_over_all_twenty_outer_holdout_keys",
+    "uniform_reference": "mean_log2_of_integer_ranks_1_through_256",
+    "exact_control": "all_256_shared_XOR_offsets_applied_only_to_outer_holdout_true_labels",
+    "all_outer_scores_are_generated_by_models_that_never_train_on_the_test_prefix": true,
+    "secondary_model_or_feature_selection_after_outer_scores": false
+  },
+  "retention_gate": {
+    "maximum_exact_shared_xor_p": 0.05,
+    "minimum_aggregate_mean_log2_rank_bit_gain": 0.0,
+    "minimum_outer_prefix_folds_with_positive_bit_gain": 3,
+    "all_twenty_outer_holdout_keys_required": true
+  },
+  "information_boundary": {
+    "any_multichannel_model_fit_before_protocol_freeze": false,
+    "any_feature_coefficient_or_lambda_outcome_known_before_protocol_freeze": false,
+    "A242_prefix_groups_1_through_4_measurements_inspected_before_protocol_freeze": false,
+    "candidate_identity_feature_available_to_model": false,
+    "outer_test_prefix_available_to_corresponding_model_training": false,
+    "prospective_unknown_target_generated_or_opened": false,
+    "A242_measurement_collection_may_continue_under_its_own_prior_freeze": true
+  },
+  "anchors": {
+    "A242_protocol_path": "research/configs/chacha20_round20_fresh_candidate_probe_v1.json",
+    "A242_protocol_sha256": "cf53c0812b341b717f360477017c5449d56c0bf7bef9983ca11ff12e04682ac7",
+    "A242_runner_path": "research/experiments/chacha20_round20_fresh_candidate_probe.py",
+    "A242_runner_sha256_at_A249_freeze": "b2f35b28150203c61617252005d955be688c5644d7eee0aa07ffe13c082fd0b5",
+    "feature_reader_path": "src/arx_carry_leak/fresh_candidate_reader.py",
+    "feature_reader_sha256": "8d06390b3749754f2c34bfc2ccab9d877e2c9e5d47d20ea90b3b741fcbd4019e",
+    "feature_reader_test_path": "tests/test_fresh_candidate_reader.py",
+    "feature_reader_test_sha256": "8dbc23b97bfe76c460c6bf176a344e75f793c9355183cce64ddb065d8537b613",
+    "ridge_backend_path": "src/arx_carry_leak/key_atlas.py",
+    "ridge_backend_sha256": "3ec5fa9c363d930bb9cc62a83192f46faf8b50bfee28bdc9023fbbfa92ea32a6"
+  }
+}

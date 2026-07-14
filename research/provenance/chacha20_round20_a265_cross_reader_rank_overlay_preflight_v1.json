@@ -1,0 +1,130 @@
+{
+  "attempt_id": "A265",
+  "geometry": {
+    "candidates_per_key": 256,
+    "keys_per_prefix_group": 4,
+    "known_key_count": 20,
+    "labels_sha256": "554e461d0baeb8b5f88bd76bfba09c0d6d006ff6cc550e93b95567995794ae0c",
+    "prefix_groups": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "rank_scores_float32le_sha256": "3f6b3f3877ea62b079d1a18da93aff8d282d557c2dcf1d4ddfb496a8da9eddd4",
+    "reader_count": 7,
+    "reader_ids": [
+      "A249_multichannel_linear",
+      "A250_nonlinear_poe",
+      "A251_exact_clause_identity",
+      "A259_public_cnf_topology",
+      "A260_exact_operation_topology",
+      "A261_directed_flow_tokens",
+      "A262_continuous_flow"
+    ],
+    "true_prefixes_uint8_sha256": "9d5710a398a75b821786cd3eca51e1ffe0855352d82f4757f1aa20d1378c8877"
+  },
+  "information_boundary": {
+    "any_cross_reader_scores_combined": false,
+    "any_selected_coefficients_known": false,
+    "any_selection_corrected_XOR_curve_known": false,
+    "any_ternary_mode_applied_or_evaluated": false,
+    "future_prospective_unknown_target_generated_or_opened": false,
+    "individual_reader_results_already_known": true
+  },
+  "mode_family": {
+    "coefficient_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "complete_mode_count": 2186,
+    "expected_mode_count": 2186,
+    "mode_int8_sha256": "a142aab918e80f47db3873144992a5dfec8451ca402f28521d05a4fddb45d9ff",
+    "same_complete_mode_search_required_for_all_256_shared_XOR_offsets": true,
+    "zero_vector_excluded": true
+  },
+  "reader_ledger": [
+    {
+      "attempt_id": "A249",
+      "evidence_stage": "FULLROUND_R20_FRESH_MULTICHANNEL_LINEAR_BOUNDARY",
+      "exact_shared_xor_p": 0.29296875,
+      "mean_log2_rank": 6.387870363971352,
+      "mean_log2_rank_bit_gain": 0.1902401329982366,
+      "path": "research/results/v1/chacha20_round20_fresh_multichannel_reader_v1.json",
+      "reader_id": "A249_multichannel_linear",
+      "result_sha256": "ad8d5c56b4776059e6d9c0ce4270e72a7507dcfe2a847b4f648efceee4f05537",
+      "score_matrix_float64le_sha256": "ce55d864ca7dcf4c768df32444db60ca8efc088003407517b01f70ba6e3e3173"
+    },
+    {
+      "attempt_id": "A250",
+      "evidence_stage": "FULLROUND_R20_FRESH_NONLINEAR_POE_BOUNDARY",
+      "exact_shared_xor_p": 0.375,
+      "mean_log2_rank": 6.486609685517178,
+      "mean_log2_rank_bit_gain": 0.09150081145241096,
+      "path": "research/results/v1/chacha20_round20_fresh_nonlinear_poe_v1.json",
+      "reader_id": "A250_nonlinear_poe",
+      "result_sha256": "94d9b462fd8b8e65c2d350ddcc8cae3d3bb4c73ab1877673ef450f32443c71f7",
+      "score_matrix_float64le_sha256": "5e042458b279d1f81d309098fd951611131702d4da8ce474cd96d43b2aa7019c"
+    },
+    {
+      "attempt_id": "A251",
+      "evidence_stage": "FULLROUND_R20_EXACT_CLAUSE_IDENTITY_REPRESENTATION_BOUNDARY",
+      "exact_shared_xor_p": 0.4921875,
+      "mean_log2_rank": 6.681361104711202,
+      "mean_log2_rank_bit_gain": -0.10325060774161354,
+      "path": "research/results/v1/chacha20_round20_fresh_clause_identity_reader_v1.json",
+      "reader_id": "A251_exact_clause_identity",
+      "result_sha256": "7ae6488abd98a62021da64f1e2fd4960fe534fb1236c52ea098db90037da5732",
+      "score_matrix_float64le_sha256": "b4e40bcb7b207bc3289b48116cf6c555e3753a7d94508c5f2f90c14e18eaef63"
+    },
+    {
+      "attempt_id": "A259",
+      "evidence_stage": "FULLROUND_R20_PUBLIC_CNF_CLAUSE_TOPOLOGY_BOUNDARY",
+      "exact_shared_xor_p": 0.546875,
+      "mean_log2_rank": 6.768183864994356,
+      "mean_log2_rank_bit_gain": -0.19007336802476704,
+      "path": "research/results/v1/chacha20_round20_fresh_clause_topology_reader_v1.json",
+      "reader_id": "A259_public_cnf_topology",
+      "result_sha256": "8870521faf4d0a0b0721c18818129a783367815a328f56765c3dff3289bcbc52",
+      "score_matrix_float64le_sha256": "9191bcad18375fb88558109342f133018f2bbf0a408d74d73f53a573d8275964"
+    },
+    {
+      "attempt_id": "A260",
+      "evidence_stage": "FULLROUND_R20_EXACT_OPERATION_CLAUSE_TOPOLOGY_BOUNDARY",
+      "exact_shared_xor_p": 0.52734375,
+      "mean_log2_rank": 6.7261169954569215,
+      "mean_log2_rank_bit_gain": -0.14800649848733283,
+      "path": "research/results/v1/chacha20_round20_fresh_clause_operation_reader_v1.json",
+      "reader_id": "A260_exact_operation_topology",
+      "result_sha256": "822a8e6f4208ef02b53438f5681c5e2784fc029aff16e86f6fb245ffbfaf9b91",
+      "score_matrix_float64le_sha256": "d98383db6463cb2089db015396db8d38cd28f45746d3a44d8952fcd5a3bf8255"
+    },
+    {
+      "attempt_id": "A261",
+      "evidence_stage": "FULLROUND_R20_DIRECTED_OPERATION_FLOW_RESIDUAL_BOUNDARY",
+      "exact_shared_xor_p": 0.7421875,
+      "mean_log2_rank": 6.909554564293808,
+      "mean_log2_rank_bit_gain": -0.3314440673242194,
+      "path": "research/results/v1/chacha20_round20_fresh_clause_operation_flow_reader_v1.json",
+      "reader_id": "A261_directed_flow_tokens",
+      "result_sha256": "7c901942f91850da29dd498f0345fc657ea6c87d49c59269643874df4b199237",
+      "score_matrix_float64le_sha256": "045b44caf23c6abfab6458314e40e1057fc786e55e90a97e5769fe70d38b1753"
+    },
+    {
+      "attempt_id": "A262",
+      "evidence_stage": "FULLROUND_R20_CONTINUOUS_MATCHED_FLOW_BOUNDARY",
+      "exact_shared_xor_p": 0.8359375,
+      "mean_log2_rank": 7.014851520875281,
+      "mean_log2_rank_bit_gain": -0.43674102390569214,
+      "path": "research/results/v1/chacha20_round20_fresh_clause_continuous_flow_reader_v1.json",
+      "reader_id": "A262_continuous_flow",
+      "result_sha256": "0890430b42f42e2e18a5937610275efd388dff7c46d251105a62d9aa613620c1",
+      "score_matrix_float64le_sha256": "2aa7ea50a4658fc104f91831d055877627414fa88efa60088852571b77f501b0"
+    }
+  ],
+  "reader_ledger_sha256": "a7fe69efa5d9a3007527b49e4926ec1444578d1a2404062dde019a708b8abcf8",
+  "schema": "chacha20-round20-cross-reader-rank-overlay-preflight-v1",
+  "state": "reader_geometry_and_complete_mode_family_frozen_before_any_cross_reader_score_combination_or_mode_evaluation"
+}

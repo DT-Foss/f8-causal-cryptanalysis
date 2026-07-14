@@ -1,0 +1,43 @@
+{
+  "attempt_id": "A266",
+  "information_boundary": {
+    "any_A266_operator_outcome_known": false,
+    "used_any_A251_measurement_shard": false,
+    "used_any_A251_true_prefix": false,
+    "used_any_R20_learned_clause_or_candidate_value": false,
+    "used_only_synthetic_clause_payloads_and_synthetic_transfer_tables": true
+  },
+  "schema": "chacha20-round20-clause-frequency-preflight-v1",
+  "state": "synthetic_frequency_builder_and_nested_transfer_preflight_completed_before_any_A251_frequency_table_or_A266_model_fit",
+  "synthetic_builder": {
+    "accepted_clause_count": 2560,
+    "assumption_variable_count": 8,
+    "assumption_variables_projected_before_counting": true,
+    "feature_ledger_sha256": "687cb60cdfe446279979e9ad8a692955b287cdb2054f2e069bf4b1ee19213325",
+    "minimum_nonzero_candidates": 4,
+    "projected_empty_clause_count": 0,
+    "projected_literal_count": 5120,
+    "raw_feature_count": 203,
+    "retained_feature_families": {
+      "all_clause": 28,
+      "all_clause_length": 1,
+      "all_pair": 28,
+      "all_signed_variable": 11,
+      "all_unsigned_variable": 11,
+      "stage_clause": 28,
+      "stage_clause_length": 4,
+      "stage_pair": 28,
+      "stage_signed_variable": 32,
+      "stage_unsigned_variable": 32
+    },
+    "retained_varying_feature_count": 203,
+    "true_prefix_used_during_frequency_or_feature_retention": false
+  },
+  "synthetic_nested_transfer": {
+    "exact_shared_xor_p": 0.00390625,
+    "mean_log2_rank": 0.0,
+    "mean_log2_rank_bit_gain": 6.578110496969589,
+    "positive_outer_prefix_folds": 5
+  },
+  "synthetic_retained_feature_count": 203
+}

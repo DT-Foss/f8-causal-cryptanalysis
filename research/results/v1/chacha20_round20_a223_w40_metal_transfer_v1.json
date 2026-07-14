@@ -1,0 +1,1104 @@
+{
+  "anchors": {
+    "A223_cell_observation_count": 1792,
+    "A223_config_sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f",
+    "A223_result_sha256": "f1cd6009c9959e0ba3dc8339172a1f9c1eb009eeb5899d18aba5a5b2801f063e",
+    "A224_result_sha256": "3329772c53797ffa9a29b3badf5c06b90ed481ed38f1ed3c408df71312949444",
+    "A224_source_sha256": "b7c1e45bf05003c824ba6182b86954c0cda94dd155714c3bcf7709fda1cb6826",
+    "Metal_native_source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816"
+  },
+  "attempt_id": "R20-A225-A223-W40-METAL-TRANSFER-V1",
+  "confirmation": {
+    "all_blocks_match": true,
+    "block_count_checked": 8,
+    "block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "candidate_block_sha256": [
+      "d80d32fa5b20e7d4485f21a6a07c54bf4d7cb81904710aeb934bf9bcda9412a0",
+      "5eba9ae3ec39e190b2a264392b9c9737de5c5b0e9e45b913a61ec4c0b842ad9b",
+      "a115f0a448eb14c7dd0e28f63499d64b48d09454572ebd98330eecfbe6ac5def",
+      "23707c4e3f29f89d44ac03c0f6ad809d25d9c750804162c25c273782a47a1de7",
+      "f90b4dc375f845138a54bd1ff927608b1a1af0824bc8dbd8e44f845bb87d8257",
+      "354069e9013d52c34c2385a20ca9cb76e8141f59f9b7babd370b37f5761c6d07",
+      "1bd4ad7c4d88134257d2d76d31135e4998fe554c73ed2f9741a4ea9480cf3fb7",
+      "71711cef9cee0abd098c68e96f4c0b2be8a5da5e0051f3b0b3b29e18f6da1172"
+    ],
+    "flipped_control_rejected": true,
+    "implementation": "independent_Python_ChaCha20_block_function",
+    "output_bits_checked": 4096,
+    "recovered_combined_assignment": 880346067346,
+    "recovered_key_word0": 4172738962,
+    "recovered_key_word0_hex": "0xf8b6f192",
+    "recovered_key_word1_low_hex": "0xcc",
+    "recovered_key_word1_low_value": 204,
+    "target_block_sha256": [
+      "d80d32fa5b20e7d4485f21a6a07c54bf4d7cb81904710aeb934bf9bcda9412a0",
+      "5eba9ae3ec39e190b2a264392b9c9737de5c5b0e9e45b913a61ec4c0b842ad9b",
+      "a115f0a448eb14c7dd0e28f63499d64b48d09454572ebd98330eecfbe6ac5def",
+      "23707c4e3f29f89d44ac03c0f6ad809d25d9c750804162c25c273782a47a1de7",
+      "f90b4dc375f845138a54bd1ff927608b1a1af0824bc8dbd8e44f845bb87d8257",
+      "354069e9013d52c34c2385a20ca9cb76e8141f59f9b7babd370b37f5761c6d07",
+      "1bd4ad7c4d88134257d2d76d31135e4998fe554c73ed2f9741a4ea9480cf3fb7",
+      "71711cef9cee0abd098c68e96f4c0b2be8a5da5e0051f3b0b3b29e18f6da1172"
+    ],
+    "true_prefix8": "11001100"
+  },
+  "evidence_stage": "A224_FIXED_READOUT_TRANSFERRED_TO_INDEPENDENT_A223_W40_CHALLENGE",
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "information_boundary": {
+    "A223_W40_secret_was_discarded_after_target_construction": true,
+    "A223_trajectory_observations_modified": false,
+    "A223_trajectory_outcomes_used_to_change_A225_score": false,
+    "A224_score_and_directions_fixed_before_A225_label_recovery": true,
+    "ground_truth_obtained_only_from_complete_W40_domain_execution": true
+  },
+  "mapping_gate": {
+    "complete_output_bits_checked": 12288,
+    "exact_numpy_identity": true,
+    "logical_candidates_checked": 24,
+    "rows": [
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "first_key_word0": 610839552,
+        "key_word1_low_value": 0,
+        "output_sha256": "ba474240e37d3442c83ffca9d63ba9f1459f2b39fd4220fc227f8b6e5afe0ec9"
+      },
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "first_key_word0": 610839552,
+        "key_word1_low_value": 90,
+        "output_sha256": "c651591a3728ba841036d7edd504fc81fc12af09d1251c79bedd0f9eaf744546"
+      },
+      {
+        "candidate_count": 8,
+        "complete_output_bits_checked": 4096,
+        "first_key_word0": 610839552,
+        "key_word1_low_value": 255,
+        "output_sha256": "c494846f527fc9f24e9cc9adb53c1b6f112a1ea8a87d69b7245e0b1032c2b3c0"
+      }
+    ]
+  },
+  "metal_execution": {
+    "complete_domain_executed": true,
+    "control_filter_matches": [],
+    "early_stop_used": false,
+    "factual_filter_matches": [
+      880346067346
+    ],
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "inner_candidate_count_per_slice": 4294967296,
+    "logical_candidate_count": 1099511627776,
+    "newly_executed_assignment_count": 1099511627776,
+    "outer_slice_count": 256,
+    "resumed_assignment_count": 0,
+    "stream_batch_count": 4096,
+    "stream_candidate_count": 268435456
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "result": "The discarded A223 W40 assignment is recovered over the complete 2^40 domain, confirmed across all eight blocks, and read with the unchanged A224 trajectory operator on both pre-existing A223 W40 arms.",
+  "schema": "chacha20-round20-a223-w40-metal-transfer-v1",
+  "scope": {
+    "known_key_bits": 216,
+    "primitive": "standard_ChaCha20_20_rounds_with_feedforward",
+    "target_blocks": 8,
+    "target_output_bits": 4096,
+    "unknown_key_bits": 40
+  },
+  "trajectory_readouts": {
+    "gray8_w40": {
+      "best_observed_true_cell_rank": 50,
+      "hypothesis_fixed_before_label_readout": "The satisfiable prefix should exhibit more constraint propagation per decision/conflict than incompatible prefixes; constraint_coherence is therefore ranked descending, with an eight-cell local residual as a retained-state transition view.",
+      "observation_count": 256,
+      "rank_directions": {
+        "coherence_local_residual": "descending",
+        "conflicts": "ascending",
+        "conflicts_per_decision": "ascending",
+        "constraint_coherence": "descending",
+        "decisions": "ascending",
+        "propagations_per_conflict": "descending",
+        "propagations_per_decision": "descending",
+        "search_propagations": "descending"
+      },
+      "score_definition": "ln(1+search_propagations)-ln(1+decisions)-ln(1+conflicts)",
+      "top16_coherence_local_residual": [
+        {
+          "cell_index": 17,
+          "coherence_local_residual": 2.9521781579663084,
+          "conflicts": 14.0,
+          "conflicts_per_decision": 0.3333333333333333,
+          "constraint_coherence": 8.745207466126141,
+          "decisions": 42.0,
+          "prefix8": "00011001",
+          "propagations_per_conflict": 289352.28571428574,
+          "propagations_per_decision": 96450.76190476191,
+          "search_propagations": 4050932.0
+        },
+        {
+          "cell_index": 18,
+          "coherence_local_residual": 1.662877706194977,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.8292682926829268,
+          "constraint_coherence": 7.45590701435481,
+          "decisions": 164.0,
+          "prefix8": "00011011",
+          "propagations_per_conflict": 287557.61029411765,
+          "propagations_per_decision": 238462.40853658537,
+          "search_propagations": 39107835.0
+        },
+        {
+          "cell_index": 27,
+          "coherence_local_residual": 1.3118474054785159,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.68,
+          "constraint_coherence": 7.242415713368451,
+          "decisions": 200.0,
+          "prefix8": "00010110",
+          "propagations_per_conflict": 282955.98529411765,
+          "propagations_per_decision": 192410.07,
+          "search_propagations": 38482014.0
+        },
+        {
+          "cell_index": 15,
+          "coherence_local_residual": 1.169128953940107,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.5112781954887218,
+          "constraint_coherence": 6.96215826209994,
+          "decisions": 266.0,
+          "prefix8": "00001000",
+          "propagations_per_conflict": 284000.9705882353,
+          "propagations_per_decision": 145203.5037593985,
+          "search_propagations": 38624132.0
+        },
+        {
+          "cell_index": 35,
+          "coherence_local_residual": 1.1034853641193951,
+          "conflicts": 146.0,
+          "conflicts_per_decision": 0.8390804597701149,
+          "constraint_coherence": 7.394543948636139,
+          "decisions": 174.0,
+          "prefix8": "00110010",
+          "propagations_per_conflict": 286689.7397260274,
+          "propagations_per_decision": 240555.75862068965,
+          "search_propagations": 41856702.0
+        },
+        {
+          "cell_index": 20,
+          "coherence_local_residual": 1.0265037573236695,
+          "conflicts": 150.0,
+          "conflicts_per_decision": 0.5725190839694656,
+          "constraint_coherence": 6.961405450538831,
+          "decisions": 262.0,
+          "prefix8": "00011110",
+          "propagations_per_conflict": 279345.32,
+          "propagations_per_decision": 159930.52671755725,
+          "search_propagations": 41901798.0
+        },
+        {
+          "cell_index": 28,
+          "coherence_local_residual": 0.9929996760099202,
+          "conflicts": 142.0,
+          "conflicts_per_decision": 0.5772357723577236,
+          "constraint_coherence": 6.96170598606435,
+          "decisions": 246.0,
+          "prefix8": "00010010",
+          "propagations_per_conflict": 262527.6971830986,
+          "propagations_per_decision": 151540.3780487805,
+          "search_propagations": 37278933.0
+        },
+        {
+          "cell_index": 4,
+          "coherence_local_residual": 0.8770409411526909,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.8395061728395061,
+          "constraint_coherence": 7.471174313062316,
+          "decisions": 162.0,
+          "prefix8": "00000110",
+          "propagations_per_conflict": 288442.35294117645,
+          "propagations_per_decision": 242149.13580246913,
+          "search_propagations": 39228160.0
+        },
+        {
+          "cell_index": 5,
+          "coherence_local_residual": 0.8705445692963023,
+          "conflicts": 132.0,
+          "conflicts_per_decision": 0.8098159509202454,
+          "constraint_coherence": 7.464677941205927,
+          "decisions": 163.0,
+          "prefix8": "00000111",
+          "propagations_per_conflict": 288396.5,
+          "propagations_per_decision": 233548.08588957056,
+          "search_propagations": 38068338.0
+        },
+        {
+          "cell_index": 46,
+          "coherence_local_residual": 0.6794913355473282,
+          "conflicts": 148.0,
+          "conflicts_per_decision": 0.48366013071895425,
+          "constraint_coherence": 6.780147102862993,
+          "decisions": 306.0,
+          "prefix8": "00111001",
+          "propagations_per_conflict": 272046.6554054054,
+          "propagations_per_decision": 131578.1209150327,
+          "search_propagations": 40262905.0
+        },
+        {
+          "cell_index": 7,
+          "coherence_local_residual": 0.6431934090532687,
+          "conflicts": 143.0,
+          "conflicts_per_decision": 0.7900552486187845,
+          "constraint_coherence": 7.328999167273536,
+          "decisions": 181.0,
+          "prefix8": "00000100",
+          "propagations_per_conflict": 279281.2167832168,
+          "propagations_per_decision": 220647.591160221,
+          "search_propagations": 39937214.0
+        },
+        {
+          "cell_index": 47,
+          "coherence_local_residual": 0.6427227728526459,
+          "conflicts": 155.0,
+          "conflicts_per_decision": 0.5272108843537415,
+          "constraint_coherence": 6.788348361984531,
+          "decisions": 294.0,
+          "prefix8": "00111000",
+          "propagations_per_conflict": 263485.75483870966,
+          "propagations_per_decision": 138912.55782312926,
+          "search_propagations": 40840292.0
+        },
+        {
+          "cell_index": 66,
+          "coherence_local_residual": 0.5743630299283771,
+          "conflicts": 160.0,
+          "conflicts_per_decision": 0.8556149732620321,
+          "constraint_coherence": 6.988018870860072,
+          "decisions": 187.0,
+          "prefix8": "01100011",
+          "propagations_per_conflict": 204984.85,
+          "propagations_per_decision": 175388.10695187165,
+          "search_propagations": 32797576.0
+        },
+        {
+          "cell_index": 65,
+          "coherence_local_residual": 0.5355895453227335,
+          "conflicts": 160.0,
+          "conflicts_per_decision": 0.8421052631578947,
+          "constraint_coherence": 6.949245386254429,
+          "decisions": 190.0,
+          "prefix8": "01100001",
+          "propagations_per_conflict": 200335.61875,
+          "propagations_per_decision": 168703.67894736843,
+          "search_propagations": 32053699.0
+        },
+        {
+          "cell_index": 115,
+          "coherence_local_residual": 0.5194083976273633,
+          "conflicts": 88.0,
+          "conflicts_per_decision": 0.7787610619469026,
+          "constraint_coherence": 7.471214814959827,
+          "decisions": 113.0,
+          "prefix8": "01001010",
+          "propagations_per_conflict": 202544.06818181818,
+          "propagations_per_decision": 157733.4336283186,
+          "search_propagations": 17823878.0
+        },
+        {
+          "cell_index": 67,
+          "coherence_local_residual": 0.5188320678223004,
+          "conflicts": 164.0,
+          "conflicts_per_decision": 0.8497409326424871,
+          "constraint_coherence": 6.932487908753996,
+          "decisions": 193.0,
+          "prefix8": "01100010",
+          "propagations_per_conflict": 200070.5,
+          "propagations_per_decision": 170008.09326424872,
+          "search_propagations": 32811562.0
+        }
+      ],
+      "top16_constraint_coherence": [
+        {
+          "cell_index": 17,
+          "coherence_local_residual": 2.9521781579663084,
+          "conflicts": 14.0,
+          "conflicts_per_decision": 0.3333333333333333,
+          "constraint_coherence": 8.745207466126141,
+          "decisions": 42.0,
+          "prefix8": "00011001",
+          "propagations_per_conflict": 289352.28571428574,
+          "propagations_per_decision": 96450.76190476191,
+          "search_propagations": 4050932.0
+        },
+        {
+          "cell_index": 115,
+          "coherence_local_residual": 0.5194083976273633,
+          "conflicts": 88.0,
+          "conflicts_per_decision": 0.7787610619469026,
+          "constraint_coherence": 7.471214814959827,
+          "decisions": 113.0,
+          "prefix8": "01001010",
+          "propagations_per_conflict": 202544.06818181818,
+          "propagations_per_decision": 157733.4336283186,
+          "search_propagations": 17823878.0
+        },
+        {
+          "cell_index": 4,
+          "coherence_local_residual": 0.8770409411526909,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.8395061728395061,
+          "constraint_coherence": 7.471174313062316,
+          "decisions": 162.0,
+          "prefix8": "00000110",
+          "propagations_per_conflict": 288442.35294117645,
+          "propagations_per_decision": 242149.13580246913,
+          "search_propagations": 39228160.0
+        },
+        {
+          "cell_index": 5,
+          "coherence_local_residual": 0.8705445692963023,
+          "conflicts": 132.0,
+          "conflicts_per_decision": 0.8098159509202454,
+          "constraint_coherence": 7.464677941205927,
+          "decisions": 163.0,
+          "prefix8": "00000111",
+          "propagations_per_conflict": 288396.5,
+          "propagations_per_decision": 233548.08588957056,
+          "search_propagations": 38068338.0
+        },
+        {
+          "cell_index": 18,
+          "coherence_local_residual": 1.662877706194977,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.8292682926829268,
+          "constraint_coherence": 7.45590701435481,
+          "decisions": 164.0,
+          "prefix8": "00011011",
+          "propagations_per_conflict": 287557.61029411765,
+          "propagations_per_decision": 238462.40853658537,
+          "search_propagations": 39107835.0
+        },
+        {
+          "cell_index": 35,
+          "coherence_local_residual": 1.1034853641193951,
+          "conflicts": 146.0,
+          "conflicts_per_decision": 0.8390804597701149,
+          "constraint_coherence": 7.394543948636139,
+          "decisions": 174.0,
+          "prefix8": "00110010",
+          "propagations_per_conflict": 286689.7397260274,
+          "propagations_per_decision": 240555.75862068965,
+          "search_propagations": 41856702.0
+        },
+        {
+          "cell_index": 168,
+          "coherence_local_residual": 0.39955287143358564,
+          "conflicts": 98.0,
+          "conflicts_per_decision": 0.7777777777777778,
+          "constraint_coherence": 7.372732827290114,
+          "decisions": 126.0,
+          "prefix8": "11111100",
+          "propagations_per_conflict": 204244.32653061225,
+          "propagations_per_decision": 158856.6984126984,
+          "search_propagations": 20015944.0
+        },
+        {
+          "cell_index": 7,
+          "coherence_local_residual": 0.6431934090532687,
+          "conflicts": 143.0,
+          "conflicts_per_decision": 0.7900552486187845,
+          "constraint_coherence": 7.328999167273536,
+          "decisions": 181.0,
+          "prefix8": "00000100",
+          "propagations_per_conflict": 279281.2167832168,
+          "propagations_per_decision": 220647.591160221,
+          "search_propagations": 39937214.0
+        },
+        {
+          "cell_index": 160,
+          "coherence_local_residual": 0.157272041430514,
+          "conflicts": 116.0,
+          "conflicts_per_decision": 0.8169014084507042,
+          "constraint_coherence": 7.256083152449968,
+          "decisions": 142.0,
+          "prefix8": "11110000",
+          "propagations_per_conflict": 204334.0603448276,
+          "propagations_per_decision": 166920.78169014084,
+          "search_propagations": 23702751.0
+        },
+        {
+          "cell_index": 27,
+          "coherence_local_residual": 1.3118474054785159,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.68,
+          "constraint_coherence": 7.242415713368451,
+          "decisions": 200.0,
+          "prefix8": "00010110",
+          "propagations_per_conflict": 282955.98529411765,
+          "propagations_per_decision": 192410.07,
+          "search_propagations": 38482014.0
+        },
+        {
+          "cell_index": 158,
+          "coherence_local_residual": 0.09001703589492394,
+          "conflicts": 124.0,
+          "conflicts_per_decision": 0.8157894736842105,
+          "constraint_coherence": 7.1888281469143775,
+          "decisions": 152.0,
+          "prefix8": "11010001",
+          "propagations_per_conflict": 204290.48387096773,
+          "propagations_per_decision": 166658.02631578947,
+          "search_propagations": 25332020.0
+        },
+        {
+          "cell_index": 159,
+          "coherence_local_residual": 0.08127227583516916,
+          "conflicts": 126.0,
+          "conflicts_per_decision": 0.8235294117647058,
+          "constraint_coherence": 7.180083386854623,
+          "decisions": 153.0,
+          "prefix8": "11010000",
+          "propagations_per_conflict": 203809.52380952382,
+          "propagations_per_decision": 167843.13725490196,
+          "search_propagations": 25680000.0
+        },
+        {
+          "cell_index": 161,
+          "coherence_local_residual": 0.06570428540490436,
+          "conflicts": 128.0,
+          "conflicts_per_decision": 0.8311688311688312,
+          "constraint_coherence": 7.178954770071704,
+          "decisions": 154.0,
+          "prefix8": "11110001",
+          "propagations_per_conflict": 204876.3671875,
+          "propagations_per_decision": 170286.85064935064,
+          "search_propagations": 26224175.0
+        },
+        {
+          "cell_index": 145,
+          "coherence_local_residual": 0.09863201991354664,
+          "conflicts": 132.0,
+          "conflicts_per_decision": 0.8301886792452831,
+          "constraint_coherence": 7.141714304559793,
+          "decisions": 159.0,
+          "prefix8": "11011001",
+          "propagations_per_conflict": 203706.45454545456,
+          "propagations_per_decision": 169114.79245283018,
+          "search_propagations": 26889252.0
+        },
+        {
+          "cell_index": 241,
+          "coherence_local_residual": 0.1433902278461927,
+          "conflicts": 132.0,
+          "conflicts_per_decision": 0.8354430379746836,
+          "constraint_coherence": 7.1414584386333075,
+          "decisions": 158.0,
+          "prefix8": "10001001",
+          "propagations_per_conflict": 202381.5,
+          "propagations_per_decision": 169078.21518987342,
+          "search_propagations": 26714358.0
+        },
+        {
+          "cell_index": 150,
+          "coherence_local_residual": 0.037951622718433775,
+          "conflicts": 134.0,
+          "conflicts_per_decision": 0.8375,
+          "constraint_coherence": 7.138156642940541,
+          "decisions": 160.0,
+          "prefix8": "11011101",
+          "propagations_per_conflict": 204228.74626865672,
+          "propagations_per_decision": 171041.575,
+          "search_propagations": 27366652.0
+        }
+      ],
+      "true_cell_features": {
+        "cell_index": 136,
+        "coherence_local_residual": 0.0459698671827633,
+        "conflicts": 148.0,
+        "conflicts_per_decision": 0.8505747126436781,
+        "constraint_coherence": 7.053697757286801,
+        "decisions": 174.0,
+        "prefix8": "11001100",
+        "propagations_per_conflict": 203865.9054054054,
+        "propagations_per_decision": 173403.183908046,
+        "search_propagations": 30172154.0
+      },
+      "true_cell_in_top16_on_any_fixed_view": false,
+      "true_cell_ranks": {
+        "coherence_local_residual": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.3203125,
+          "rank": 82,
+          "target_value": 0.0459698671827633,
+          "tied_count": 1
+        },
+        "conflicts": {
+          "direction": "ascending",
+          "empirical_top_fraction": 0.25390625,
+          "rank": 65,
+          "target_value": 148.0,
+          "tied_count": 8
+        },
+        "conflicts_per_decision": {
+          "direction": "ascending",
+          "empirical_top_fraction": 0.47265625,
+          "rank": 121,
+          "target_value": 0.8505747126436781,
+          "tied_count": 1
+        },
+        "constraint_coherence": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.203125,
+          "rank": 52,
+          "target_value": 7.053697757286801,
+          "tied_count": 1
+        },
+        "decisions": {
+          "direction": "ascending",
+          "empirical_top_fraction": 0.1953125,
+          "rank": 50,
+          "target_value": 174.0,
+          "tied_count": 2
+        },
+        "propagations_per_conflict": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.4375,
+          "rank": 112,
+          "target_value": 203865.9054054054,
+          "tied_count": 1
+        },
+        "propagations_per_decision": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.390625,
+          "rank": 100,
+          "target_value": 173403.183908046,
+          "tied_count": 1
+        },
+        "search_propagations": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.78125,
+          "rank": 200,
+          "target_value": 30172154.0,
+          "tied_count": 1
+        }
+      },
+      "true_prefix8": "11001100",
+      "true_prefix_execution_rank": 137,
+      "true_prefix_gray_order_cell_index": 136,
+      "true_prefix_gray_order_execution_rank": 137,
+      "true_prefix_numeric_value": 204
+    },
+    "numeric_w40": {
+      "best_observed_true_cell_rank": 50,
+      "hypothesis_fixed_before_label_readout": "The satisfiable prefix should exhibit more constraint propagation per decision/conflict than incompatible prefixes; constraint_coherence is therefore ranked descending, with an eight-cell local residual as a retained-state transition view.",
+      "observation_count": 256,
+      "rank_directions": {
+        "coherence_local_residual": "descending",
+        "conflicts": "ascending",
+        "conflicts_per_decision": "ascending",
+        "constraint_coherence": "descending",
+        "decisions": "ascending",
+        "propagations_per_conflict": "descending",
+        "propagations_per_decision": "descending",
+        "search_propagations": "descending"
+      },
+      "score_definition": "ln(1+search_propagations)-ln(1+decisions)-ln(1+conflicts)",
+      "top16_coherence_local_residual": [
+        {
+          "cell_index": 10,
+          "coherence_local_residual": 1.8379206256454603,
+          "conflicts": 128.0,
+          "conflicts_per_decision": 0.8258064516129032,
+          "constraint_coherence": 7.514187617971079,
+          "decisions": 155.0,
+          "prefix8": "00001010",
+          "propagations_per_conflict": 288319.8515625,
+          "propagations_per_decision": 238096.3935483871,
+          "search_propagations": 36904941.0
+        },
+        {
+          "cell_index": 11,
+          "coherence_local_residual": 1.497207054877138,
+          "conflicts": 133.0,
+          "conflicts_per_decision": 0.7112299465240641,
+          "constraint_coherence": 7.3142443942133335,
+          "decisions": 187.0,
+          "prefix8": "00001011",
+          "propagations_per_conflict": 284411.3834586466,
+          "propagations_per_decision": 202281.89304812835,
+          "search_propagations": 37826714.0
+        },
+        {
+          "cell_index": 27,
+          "coherence_local_residual": 1.4364478570217871,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.7120418848167539,
+          "constraint_coherence": 7.293279678485182,
+          "decisions": 191.0,
+          "prefix8": "00011011",
+          "propagations_per_conflict": 284389.7867647059,
+          "propagations_per_decision": 202497.4397905759,
+          "search_propagations": 38677011.0
+        },
+        {
+          "cell_index": 40,
+          "coherence_local_residual": 1.207340298909128,
+          "conflicts": 137.0,
+          "conflicts_per_decision": 0.845679012345679,
+          "constraint_coherence": 7.461155317670893,
+          "decisions": 162.0,
+          "prefix8": "00101000",
+          "propagations_per_conflict": 285551.6642335766,
+          "propagations_per_decision": 241485.04938271604,
+          "search_propagations": 39120578.0
+        },
+        {
+          "cell_index": 37,
+          "coherence_local_residual": 1.1506701893379203,
+          "conflicts": 145.0,
+          "conflicts_per_decision": 0.5942622950819673,
+          "constraint_coherence": 7.040065476153085,
+          "decisions": 244.0,
+          "prefix8": "00100101",
+          "propagations_per_conflict": 281586.9448275862,
+          "propagations_per_decision": 167336.50409836066,
+          "search_propagations": 40830107.0
+        },
+        {
+          "cell_index": 227,
+          "coherence_local_residual": 1.1504443217396911,
+          "conflicts": 30.0,
+          "conflicts_per_decision": 0.5357142857142857,
+          "constraint_coherence": 8.144176701095546,
+          "decisions": 56.0,
+          "prefix8": "11100011",
+          "propagations_per_conflict": 202808.53333333333,
+          "propagations_per_decision": 108647.42857142857,
+          "search_propagations": 6084256.0
+        },
+        {
+          "cell_index": 38,
+          "coherence_local_residual": 1.0565919680915137,
+          "conflicts": 140.0,
+          "conflicts_per_decision": 0.5447470817120622,
+          "constraint_coherence": 7.000033913941289,
+          "decisions": 257.0,
+          "prefix8": "00100110",
+          "propagations_per_conflict": 284961.95,
+          "propagations_per_decision": 155232.1906614786,
+          "search_propagations": 39894673.0
+        },
+        {
+          "cell_index": 41,
+          "coherence_local_residual": 1.0262447517986315,
+          "conflicts": 137.0,
+          "conflicts_per_decision": 0.7135416666666666,
+          "constraint_coherence": 7.280059770560396,
+          "decisions": 192.0,
+          "prefix8": "00101001",
+          "propagations_per_conflict": 282101.63503649633,
+          "propagations_per_decision": 201291.27083333334,
+          "search_propagations": 38647924.0
+        },
+        {
+          "cell_index": 8,
+          "coherence_local_residual": 0.8737413809075756,
+          "conflicts": 150.0,
+          "conflicts_per_decision": 0.30991735537190085,
+          "constraint_coherence": 6.266392134668878,
+          "decisions": 484.0,
+          "prefix8": "00001000",
+          "propagations_per_conflict": 257091.04,
+          "propagations_per_decision": 79676.97520661158,
+          "search_propagations": 38563656.0
+        },
+        {
+          "cell_index": 42,
+          "coherence_local_residual": 0.8144565649055346,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.8553459119496856,
+          "constraint_coherence": 7.481120375339725,
+          "decisions": 159.0,
+          "prefix8": "00101010",
+          "propagations_per_conflict": 285963.7132352941,
+          "propagations_per_decision": 244597.893081761,
+          "search_propagations": 38891065.0
+        },
+        {
+          "cell_index": 32,
+          "coherence_local_residual": 0.7576111764349962,
+          "conflicts": 137.0,
+          "conflicts_per_decision": 0.46440677966101696,
+          "constraint_coherence": 6.673669663288325,
+          "decisions": 295.0,
+          "prefix8": "00100000",
+          "propagations_per_conflict": 235932.69343065695,
+          "propagations_per_decision": 109568.74237288136,
+          "search_propagations": 32322779.0
+        },
+        {
+          "cell_index": 9,
+          "coherence_local_residual": 0.7040934150657785,
+          "conflicts": 128.0,
+          "conflicts_per_decision": 0.2585858585858586,
+          "constraint_coherence": 6.24114142767617,
+          "decisions": 495.0,
+          "prefix8": "00001001",
+          "propagations_per_conflict": 256657.9296875,
+          "propagations_per_decision": 66368.11111111111,
+          "search_propagations": 32852215.0
+        },
+        {
+          "cell_index": 75,
+          "coherence_local_residual": 0.6854108978004803,
+          "conflicts": 66.0,
+          "conflicts_per_decision": 0.6875,
+          "constraint_coherence": 7.614218089382216,
+          "decisions": 96.0,
+          "prefix8": "01001011",
+          "propagations_per_conflict": 199579.28787878787,
+          "propagations_per_decision": 137210.76041666666,
+          "search_propagations": 13172233.0
+        },
+        {
+          "cell_index": 16,
+          "coherence_local_residual": 0.5629624129161828,
+          "conflicts": 78.0,
+          "conflicts_per_decision": 0.2815884476534296,
+          "constraint_coherence": 6.885725673308479,
+          "decisions": 277.0,
+          "prefix8": "00010000",
+          "propagations_per_conflict": 275429.1666666667,
+          "propagations_per_decision": 77557.6714801444,
+          "search_propagations": 21483475.0
+        },
+        {
+          "cell_index": 116,
+          "coherence_local_residual": 0.508683281397885,
+          "conflicts": 92.0,
+          "conflicts_per_decision": 0.8,
+          "constraint_coherence": 7.442065482452541,
+          "decisions": 115.0,
+          "prefix8": "01110100",
+          "propagations_per_conflict": 200078.79347826086,
+          "propagations_per_decision": 160063.0347826087,
+          "search_propagations": 18407249.0
+        },
+        {
+          "cell_index": 168,
+          "coherence_local_residual": 0.4513887965291925,
+          "conflicts": 96.0,
+          "conflicts_per_decision": 0.8135593220338984,
+          "constraint_coherence": 7.415683874927737,
+          "decisions": 118.0,
+          "prefix8": "10101000",
+          "propagations_per_conflict": 199819.57291666666,
+          "propagations_per_decision": 162565.07627118644,
+          "search_propagations": 19182679.0
+        }
+      ],
+      "top16_constraint_coherence": [
+        {
+          "cell_index": 227,
+          "coherence_local_residual": 1.1504443217396911,
+          "conflicts": 30.0,
+          "conflicts_per_decision": 0.5357142857142857,
+          "constraint_coherence": 8.144176701095546,
+          "decisions": 56.0,
+          "prefix8": "11100011",
+          "propagations_per_conflict": 202808.53333333333,
+          "propagations_per_decision": 108647.42857142857,
+          "search_propagations": 6084256.0
+        },
+        {
+          "cell_index": 75,
+          "coherence_local_residual": 0.6854108978004803,
+          "conflicts": 66.0,
+          "conflicts_per_decision": 0.6875,
+          "constraint_coherence": 7.614218089382216,
+          "decisions": 96.0,
+          "prefix8": "01001011",
+          "propagations_per_conflict": 199579.28787878787,
+          "propagations_per_decision": 137210.76041666666,
+          "search_propagations": 13172233.0
+        },
+        {
+          "cell_index": 10,
+          "coherence_local_residual": 1.8379206256454603,
+          "conflicts": 128.0,
+          "conflicts_per_decision": 0.8258064516129032,
+          "constraint_coherence": 7.514187617971079,
+          "decisions": 155.0,
+          "prefix8": "00001010",
+          "propagations_per_conflict": 288319.8515625,
+          "propagations_per_decision": 238096.3935483871,
+          "search_propagations": 36904941.0
+        },
+        {
+          "cell_index": 42,
+          "coherence_local_residual": 0.8144565649055346,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.8553459119496856,
+          "constraint_coherence": 7.481120375339725,
+          "decisions": 159.0,
+          "prefix8": "00101010",
+          "propagations_per_conflict": 285963.7132352941,
+          "propagations_per_decision": 244597.893081761,
+          "search_propagations": 38891065.0
+        },
+        {
+          "cell_index": 40,
+          "coherence_local_residual": 1.207340298909128,
+          "conflicts": 137.0,
+          "conflicts_per_decision": 0.845679012345679,
+          "constraint_coherence": 7.461155317670893,
+          "decisions": 162.0,
+          "prefix8": "00101000",
+          "propagations_per_conflict": 285551.6642335766,
+          "propagations_per_decision": 241485.04938271604,
+          "search_propagations": 39120578.0
+        },
+        {
+          "cell_index": 44,
+          "coherence_local_residual": 0.2978149097858296,
+          "conflicts": 140.0,
+          "conflicts_per_decision": 0.8588957055214724,
+          "constraint_coherence": 7.45787753314257,
+          "decisions": 163.0,
+          "prefix8": "00101100",
+          "propagations_per_conflict": 286318.8714285714,
+          "propagations_per_decision": 245918.0490797546,
+          "search_propagations": 40084642.0
+        },
+        {
+          "cell_index": 45,
+          "coherence_local_residual": 0.09404103157890908,
+          "conflicts": 140.0,
+          "conflicts_per_decision": 0.8536585365853658,
+          "constraint_coherence": 7.450710771154773,
+          "decisions": 164.0,
+          "prefix8": "00101101",
+          "propagations_per_conflict": 286007.60714285716,
+          "propagations_per_decision": 244152.83536585365,
+          "search_propagations": 40041065.0
+        },
+        {
+          "cell_index": 116,
+          "coherence_local_residual": 0.508683281397885,
+          "conflicts": 92.0,
+          "conflicts_per_decision": 0.8,
+          "constraint_coherence": 7.442065482452541,
+          "decisions": 115.0,
+          "prefix8": "01110100",
+          "propagations_per_conflict": 200078.79347826086,
+          "propagations_per_decision": 160063.0347826087,
+          "search_propagations": 18407249.0
+        },
+        {
+          "cell_index": 47,
+          "coherence_local_residual": -0.006523665776347443,
+          "conflicts": 144.0,
+          "conflicts_per_decision": 0.8622754491017964,
+          "constraint_coherence": 7.435970885648699,
+          "decisions": 167.0,
+          "prefix8": "00101111",
+          "propagations_per_conflict": 286890.3263888889,
+          "propagations_per_decision": 247378.48502994012,
+          "search_propagations": 41312207.0
+        },
+        {
+          "cell_index": 46,
+          "coherence_local_residual": -0.007716908177732407,
+          "conflicts": 144.0,
+          "conflicts_per_decision": 0.8622754491017964,
+          "constraint_coherence": 7.434278331695319,
+          "decisions": 167.0,
+          "prefix8": "00101110",
+          "propagations_per_conflict": 286405.15972222225,
+          "propagations_per_decision": 246960.1377245509,
+          "search_propagations": 41242343.0
+        },
+        {
+          "cell_index": 43,
+          "coherence_local_residual": 0.4132300135441431,
+          "conflicts": 144.0,
+          "conflicts_per_decision": 0.8622754491017964,
+          "constraint_coherence": 7.43327970859133,
+          "decisions": 167.0,
+          "prefix8": "00101011",
+          "propagations_per_conflict": 286119.2916666667,
+          "propagations_per_decision": 246713.64071856288,
+          "search_propagations": 41201178.0
+        },
+        {
+          "cell_index": 168,
+          "coherence_local_residual": 0.4513887965291925,
+          "conflicts": 96.0,
+          "conflicts_per_decision": 0.8135593220338984,
+          "constraint_coherence": 7.415683874927737,
+          "decisions": 118.0,
+          "prefix8": "10101000",
+          "propagations_per_conflict": 199819.57291666666,
+          "propagations_per_decision": 162565.07627118644,
+          "search_propagations": 19182679.0
+        },
+        {
+          "cell_index": 48,
+          "coherence_local_residual": -0.11882183131804602,
+          "conflicts": 144.0,
+          "conflicts_per_decision": 0.7700534759358288,
+          "constraint_coherence": 7.32451899708369,
+          "decisions": 187.0,
+          "prefix8": "00110000",
+          "propagations_per_conflict": 287184.8541666667,
+          "propagations_per_decision": 221147.69518716578,
+          "search_propagations": 41354619.0
+        },
+        {
+          "cell_index": 11,
+          "coherence_local_residual": 1.497207054877138,
+          "conflicts": 133.0,
+          "conflicts_per_decision": 0.7112299465240641,
+          "constraint_coherence": 7.3142443942133335,
+          "decisions": 187.0,
+          "prefix8": "00001011",
+          "propagations_per_conflict": 284411.3834586466,
+          "propagations_per_decision": 202281.89304812835,
+          "search_propagations": 37826714.0
+        },
+        {
+          "cell_index": 27,
+          "coherence_local_residual": 1.4364478570217871,
+          "conflicts": 136.0,
+          "conflicts_per_decision": 0.7120418848167539,
+          "constraint_coherence": 7.293279678485182,
+          "decisions": 191.0,
+          "prefix8": "00011011",
+          "propagations_per_conflict": 284389.7867647059,
+          "propagations_per_decision": 202497.4397905759,
+          "search_propagations": 38677011.0
+        },
+        {
+          "cell_index": 41,
+          "coherence_local_residual": 1.0262447517986315,
+          "conflicts": 137.0,
+          "conflicts_per_decision": 0.7135416666666666,
+          "constraint_coherence": 7.280059770560396,
+          "decisions": 192.0,
+          "prefix8": "00101001",
+          "propagations_per_conflict": 282101.63503649633,
+          "propagations_per_decision": 201291.27083333334,
+          "search_propagations": 38647924.0
+        }
+      ],
+      "true_cell_features": {
+        "cell_index": 204,
+        "coherence_local_residual": 0.019174044937153134,
+        "conflicts": 150.0,
+        "conflicts_per_decision": 0.8620689655172413,
+        "constraint_coherence": 7.043293134134935,
+        "decisions": 174.0,
+        "prefix8": "11001100",
+        "propagations_per_conflict": 201737.7,
+        "propagations_per_decision": 173911.8103448276,
+        "search_propagations": 30260655.0
+      },
+      "true_cell_in_top16_on_any_fixed_view": false,
+      "true_cell_ranks": {
+        "coherence_local_residual": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.4140625,
+          "rank": 106,
+          "target_value": 0.019174044937153134,
+          "tied_count": 1
+        },
+        "conflicts": {
+          "direction": "ascending",
+          "empirical_top_fraction": 0.27734375,
+          "rank": 71,
+          "target_value": 150.0,
+          "tied_count": 7
+        },
+        "conflicts_per_decision": {
+          "direction": "ascending",
+          "empirical_top_fraction": 0.58984375,
+          "rank": 151,
+          "target_value": 0.8620689655172413,
+          "tied_count": 6
+        },
+        "constraint_coherence": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.234375,
+          "rank": 60,
+          "target_value": 7.043293134134935,
+          "tied_count": 1
+        },
+        "decisions": {
+          "direction": "ascending",
+          "empirical_top_fraction": 0.1953125,
+          "rank": 50,
+          "target_value": 174.0,
+          "tied_count": 11
+        },
+        "propagations_per_conflict": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.546875,
+          "rank": 140,
+          "target_value": 201737.7,
+          "tied_count": 1
+        },
+        "propagations_per_decision": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.3671875,
+          "rank": 94,
+          "target_value": 173911.8103448276,
+          "tied_count": 1
+        },
+        "search_propagations": {
+          "direction": "descending",
+          "empirical_top_fraction": 0.79296875,
+          "rank": 203,
+          "target_value": 30260655.0,
+          "tied_count": 1
+        }
+      },
+      "true_prefix8": "11001100",
+      "true_prefix_execution_rank": 205,
+      "true_prefix_gray_order_cell_index": 204,
+      "true_prefix_gray_order_execution_rank": 205,
+      "true_prefix_numeric_value": 204
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "attempt_id": "A255",
+  "files": {
+    "compiled_qualification_host": {
+      "path": "research/build/ascon_aead128_metal_a255/ascon_aead128_metal_e4c54e5e4405166d",
+      "sha256": "62ff4ffec0ffc74a94c625a6446d4f58974cfc6a95a7cb07c13a773edcc6bf32"
+    },
+    "cpu_reference": {
+      "path": "src/arx_carry_leak/ascon_aead128_reference.py",
+      "sha256": "e43873f67fb33a3d210eb71fcc3aa69d6ebe85fa0e811cdfba6de3c93450f09a"
+    },
+    "metal_native": {
+      "path": "research/experiments/ascon_aead128_metal_native.swift",
+      "sha256": "e4c54e5e4405166de3d7da514af70c4e5f8fa96aa046522e1215c42fe86c41f3"
+    },
+    "protocol_factory": {
+      "path": "research/experiments/ascon_aead128_metal_protocol_factory.py",
+      "sha256": "335dc1275066cb5388774218e5f5bb9c350710a6690a9f648d694de8c879270c"
+    },
+    "prospective_recovery": {
+      "path": "research/experiments/ascon_aead128_metal_recovery.py",
+      "sha256": "6df36e0354024f63ed54ab753bec104551770416e57d2fc67d1087bfcef6ed64"
+    },
+    "qualification": {
+      "path": "research/experiments/ascon_aead128_metal_qualification.py",
+      "sha256": "ed119d72916c4be9bc3ce99fa4576c281c3736947d006f9aa0793e2b31ea0ed0"
+    },
+    "qualification_artifact": {
+      "path": "research/results/v1/ascon_aead128_metal_a255_qualification_v1.json",
+      "sha256": "e85272303429f91a1b1c54c3a8dfa4d9b44ccce3b756e8a12501182297b401d2"
+    },
+    "qualification_report": {
+      "path": "research/reports/ASCON_AEAD128_A255_RECORD_FACTORY_PREFLIGHT_V1.md",
+      "sha256": "db69395f62dd4d03ac8c582dbeca8ba065c02c16f913b28abf10a1e992f2d270"
+    },
+    "reproduction_script": {
+      "path": "scripts/reproduce_ascon_aead128_metal_factory.sh",
+      "sha256": "4d56250718ed915b44d5aaeded335455e9b1e07dcebdd5608543aff3d8e8ad5f"
+    },
+    "tests": {
+      "path": "tests/test_ascon_aead128_record_factory.py",
+      "sha256": "96be0c5671189902d01bf97958ac716c90f90e3c03ac11002e79b5f9343fbe78"
+    }
+  },
+  "official_sources": {
+    "ascon_c_commit": "446347f21b209f3921c65ece70027c366cbe1693",
+    "kat_path": "crypto_aead/asconaead128/LWC_AEAD_KAT_128_128.txt",
+    "kat_sha256": "bbbc34692fe05e5fda0a3b025585622ab3e3747495e5e3655b29aae8c2a4bd33",
+    "nist_sp800_232_pdf_sha256": "1be9bb9a5fef3665ee8b258babe54b8e500d667fcfbbcc99710fe6077c6bad27"
+  },
+  "qualification_outcome": {
+    "device": "Apple M4",
+    "minimum_end_to_end_candidates_per_second": 200088221.24233952,
+    "production_challenge_frozen": false,
+    "projected_selected_width_seconds_at_minimum": 5495.134201049805,
+    "selected_stream_candidate_count": 1073741824,
+    "selected_width": 40,
+    "full_domain_launched": false
+  },
+  "schema": "ascon-aead128-a255-record-factory-content-manifest-v1"
+}

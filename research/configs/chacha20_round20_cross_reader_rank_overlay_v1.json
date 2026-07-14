@@ -1,0 +1,84 @@
+{
+  "schema": "chacha20-round20-cross-reader-rank-overlay-protocol-v1",
+  "attempt_id": "A265",
+  "protocol_state": "frozen_after_reader_geometry_and_complete_ternary_mode_family_preflight_before_any_cross_reader_score_combination_coefficient_selection_or_selection_corrected_curve_evaluation",
+  "purpose": "Test whether the seven distinct full-round R20 readers retain complementary rank information that becomes measurable only after score-scale removal and a complete signed rank overlay, while charging the exact shared-XOR control for selection over every reader subset and coefficient sign.",
+  "causal_derivation": {
+    "source_attempts": ["A249", "A250", "A251", "A259", "A260", "A261", "A262"],
+    "observed_pattern": "The readers project the same 20 complete candidate covers through algebraically and semantically different operators; their individual gains span positive and negative values, so signed combinations can test complementary information rather than average only similarly oriented scores.",
+    "user_hypothesis": "Apply several inference algorithms to the same cipher evidence and overlay their outputs so coherent structure separates from reader-specific noise.",
+    "chosen_test": "Convert every reader row to centered descending midranks, exhaust the complete nonzero {-1,0,+1}^7 coefficient family, and repeat that identical best-of-2186 search under every one of the 256 shared-XOR label offsets.",
+    "selection_correction": "The observed best overlay is compared with the minimum-over-all-modes null curve at every offset; no coefficient vector is treated as prospectively selected."
+  },
+  "input": {
+    "preflight_path": "research/provenance/chacha20_round20_a265_cross_reader_rank_overlay_preflight_v1.json",
+    "preflight_sha256": "9e76cdfa5db79d2b522cf31c90a31a6ff95a2d94a7ba4f7536143f61e78c5609",
+    "required_reader_ids": [
+      "A249_multichannel_linear",
+      "A250_nonlinear_poe",
+      "A251_exact_clause_identity",
+      "A259_public_cnf_topology",
+      "A260_exact_operation_topology",
+      "A261_directed_flow_tokens",
+      "A262_continuous_flow"
+    ],
+    "required_reader_count": 7,
+    "required_known_key_count": 20,
+    "required_candidates_per_key": 256,
+    "required_prefix_groups": [0, 1, 2, 3, 4],
+    "required_keys_per_prefix_group": 4,
+    "new_solver_measurements_permitted": false
+  },
+  "operator": {
+    "per_reader_row_transform": "descending_candidate_midranks_then_center_to_[minus1_plus1]",
+    "score_scale_or_absolute_magnitude_retained": false,
+    "coefficient_alphabet": [-1, 0, 1],
+    "zero_vector_excluded": true,
+    "complete_mode_count": 2186,
+    "mode_int8_sha256": "a142aab918e80f47db3873144992a5dfec8451ca402f28521d05a4fddb45d9ff",
+    "combined_score": "signed_sum_of_centered_reader_rank_scores_divided_by_active_absolute_coefficient_mass",
+    "candidate_rank": "descending_combined_score_midrank",
+    "observed_mode_selection": "minimum_mean_log2_true_candidate_rank_over_all_2186_modes_with_lexical_coefficient_tie_break",
+    "no_continuous_weight_optimization": true
+  },
+  "evaluation": {
+    "outer_reader_scores_are_already_out_of_fold": true,
+    "shared_xor_offsets": 256,
+    "selection_corrected_null": "For each XOR offset, repeat the complete 2186-mode search and retain that offset's minimum mean log2 rank.",
+    "exact_selection_corrected_p": "fraction_of_256_selection_corrected_offset_minima_not_greater_than_the_observed_offset_zero_selected_mode_statistic",
+    "aggregate": "mean_log2_midrank_over_all_twenty_keys",
+    "uniform_reference": "mean_log2_of_integer_ranks_1_through_256",
+    "fold_summary": "mean_log2_rank_inside_each_of_the_five held-out prefix groups for the selected discovery mode",
+    "all_twenty_rows_required": true
+  },
+  "retention_gate": {
+    "maximum_selection_corrected_exact_shared_xor_p": 0.05,
+    "minimum_aggregate_mean_log2_rank_bit_gain": 0.0,
+    "minimum_outer_prefix_folds_with_positive_bit_gain": 3,
+    "all_twenty_rows_required": true,
+    "next_if_passed": "freeze_the_selected_signed_rank_overlay_then_generate_entirely_new_disjoint_known_key_prefix_groups_for_prospective_validation",
+    "next_if_not_passed": "retain_the_selection_corrected_overlay_boundary_and_move_to_exact_clause_continuous_frequency_or_solver_native_trajectory_delta_readers"
+  },
+  "information_boundary": {
+    "individual_reader_results_known_before_protocol_freeze": true,
+    "reader_geometry_and_complete_mode_family_preflight_known_before_protocol_freeze": true,
+    "any_cross_reader_scores_combined_before_protocol_freeze": false,
+    "any_ternary_mode_applied_or_evaluated_before_protocol_freeze": false,
+    "any_selected_coefficients_known_before_protocol_freeze": false,
+    "any_selection_corrected_XOR_curve_known_before_protocol_freeze": false,
+    "A265_is_selection_corrected_discovery_on_existing_out_of_fold_reader_scores_not_a_prospective_new_key_claim": true,
+    "future_prospective_unknown_target_generated_or_opened": false
+  },
+  "anchors": {
+    "preflight_path": "research/provenance/chacha20_round20_a265_cross_reader_rank_overlay_preflight_v1.json",
+    "preflight_sha256": "9e76cdfa5db79d2b522cf31c90a31a6ff95a2d94a7ba4f7536143f61e78c5609",
+    "rank_overlay_module_path": "src/arx_carry_leak/cross_reader_rank_ensemble.py",
+    "rank_overlay_module_sha256": "3a77168eea890da411033ba1d64e45e2dc1f098348ec4545f6de2a7905dd1a2c",
+    "rank_overlay_test_path": "tests/test_cross_reader_rank_ensemble.py",
+    "rank_overlay_test_sha256": "2398f2564295c0d2e37de34021c1e0116b187a9f9473fb2952d6d682f1cb4da5",
+    "preflight_runner_path": "research/experiments/chacha20_round20_cross_reader_rank_overlay_preflight.py",
+    "preflight_runner_sha256": "8a6c15b272e53a39987280504b92827f13c518b61d9537c3412fea38697b89f4",
+    "preflight_test_path": "tests/test_chacha20_round20_cross_reader_rank_overlay_preflight.py",
+    "preflight_test_sha256": "105aaf88b4d9ba2ae97f61b2b95d9eeb099be2fa43a889debae91c840adf91ab"
+  }
+}

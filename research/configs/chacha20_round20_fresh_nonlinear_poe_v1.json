@@ -1,0 +1,97 @@
+{
+  "schema": "chacha20-round20-fresh-nonlinear-poe-protocol-v1",
+  "attempt_id": "A250",
+  "protocol_state": "frozen_after_A249_personal_causal_readback_and_before_any_nonlinear_PoE_fit",
+  "purpose": "Test whether the weak but four-of-five-fold typed multichannel structure exposed by A249 is band-shaped or energy-shaped and therefore invisible to a linear hyperplane reader.",
+  "causal_derivation": {
+    "source_attempt": "A249",
+    "observed_evidence_stage": "FULLROUND_R20_FRESH_MULTICHANNEL_LINEAR_BOUNDARY",
+    "observed_mean_log2_rank_bit_gain": 0.1902401329982366,
+    "observed_positive_outer_prefix_folds": 4,
+    "observed_exact_shared_xor_p": 0.29296875,
+    "personally_read_gap_subject": "A249:linear_multichannel_transfer_boundary",
+    "personally_read_expected_object_type": "nonlinear_or_clause_identity_typed_reader",
+    "chosen_branch": "nonlinear_prefix_blind_reader_on_existing_measurements_before_collecting_clause_identity_data"
+  },
+  "input": {
+    "measurement_attempt": "A242",
+    "measurement_schema": "chacha20-round20-fresh-candidate-probe-measurement-v1",
+    "required_order": "numeric",
+    "required_key_count": 20,
+    "required_candidates_per_key": 256,
+    "required_outer_prefix_groups": 5,
+    "keys_per_prefix_group": 4,
+    "feature_attempt": "A249",
+    "feature_count": 144,
+    "new_solver_measurements_permitted": false
+  },
+  "operator": {
+    "model": "clipped_diagonal_gaussian_product_of_experts",
+    "feature_set": "all_144_A249_translation_equivariant_features_without_selection",
+    "per_feature_relation": "Gaussian_log_density_correct_candidate_minus_Gaussian_log_density_wrong_candidate",
+    "nonlinearity": "quadratic_distance_to_each_class_mean_plus_per_expert_clipping",
+    "aggregate": "arithmetic_mean_of_144_clipped_log_likelihood_ratios",
+    "candidate_numeric_value_or_bits_included": false,
+    "prefix_suffix_label_or_low20_included_as_feature": false,
+    "positive_variance_shrinkage_grid": [0.0, 0.25, 0.5, 0.75, 0.9],
+    "expert_log_ratio_cap_grid": [0.25, 0.5, 1.0, 2.0],
+    "variance_floor": "max(1e-8, pooled_variance_times_1e-6)"
+  },
+  "evaluation": {
+    "outer_folds": "leave_one_of_five_prefix_groups_out",
+    "outer_prefix_groups": [
+      {"prefix_index": 0, "prefix8": 85},
+      {"prefix_index": 1, "prefix8": 106},
+      {"prefix_index": 2, "prefix8": 200},
+      {"prefix_index": 3, "prefix8": 159},
+      {"prefix_index": 4, "prefix8": 36}
+    ],
+    "inner_selection": "leave_one_training_prefix_group_out_minimum_mean_log2_rank_over_the_frozen_20_operator_settings",
+    "tie_break": "largest_positive_variance_shrinkage_then_smallest_expert_cap",
+    "outer_score": "descending_PoE_score_midrank_of_true_prefix",
+    "aggregate": "mean_log2_rank_over_all_twenty_outer_holdout_keys",
+    "uniform_reference": "mean_log2_of_integer_ranks_1_through_256",
+    "exact_control": "all_256_shared_XOR_offsets_applied_only_to_outer_holdout_true_labels",
+    "all_outer_scores_are_generated_by_models_that_never_train_on_the_test_prefix": true
+  },
+  "retention_gate": {
+    "maximum_exact_shared_xor_p": 0.05,
+    "minimum_aggregate_mean_log2_rank_bit_gain": 0.0,
+    "minimum_outer_prefix_folds_with_positive_bit_gain": 3,
+    "all_twenty_outer_holdout_keys_required": true,
+    "next_if_passed": "freeze_A251_and_measure_entirely_new_disjoint_known_key_prefix_groups_before_any_unknown_target",
+    "next_if_not_passed": "collect_exact_propagated_variable_and_clause_identity_channels"
+  },
+  "information_boundary": {
+    "A249_linear_result_known_before_protocol_freeze": true,
+    "any_nonlinear_PoE_fit_before_protocol_freeze": false,
+    "any_nonlinear_PoE_coefficient_hyperparameter_or_rank_outcome_known_before_protocol_freeze": false,
+    "existing_A242_measurements_and_labels_already_available": true,
+    "A250_is_model_family_discovery_not_a_prospective_new_key_claim": true,
+    "outer_test_prefix_available_to_corresponding_model_training": false,
+    "candidate_identity_feature_available_to_model": false,
+    "prospective_unknown_target_generated_or_opened": false
+  },
+  "anchors": {
+    "A242_protocol_path": "research/configs/chacha20_round20_fresh_candidate_probe_v1.json",
+    "A242_protocol_sha256": "cf53c0812b341b717f360477017c5449d56c0bf7bef9983ca11ff12e04682ac7",
+    "A242_runner_path": "research/experiments/chacha20_round20_fresh_candidate_probe.py",
+    "A242_runner_sha256": "b2f35b28150203c61617252005d955be688c5644d7eee0aa07ffe13c082fd0b5",
+    "A242_result_path": "research/results/v1/chacha20_round20_fresh_candidate_probe_v1.json",
+    "A242_result_sha256": "14346b86ee4096b713a65278dacb9a00db360d8d2df0860d55255d9b65a2be70",
+    "A249_protocol_path": "research/configs/chacha20_round20_fresh_multichannel_reader_v1.json",
+    "A249_protocol_sha256": "1fb24cbf34150e21132b409bd3fc7c7dfb5a77fb5016d272994010e1feb7e261",
+    "A249_runner_path": "research/experiments/chacha20_round20_fresh_multichannel_reader.py",
+    "A249_runner_sha256": "5e3c8da77a28254a768000a5a205628a2be3bf805c33df45289dcc4ec5ed2677",
+    "A249_result_path": "research/results/v1/chacha20_round20_fresh_multichannel_reader_v1.json",
+    "A249_result_sha256": "ad8d5c56b4776059e6d9c0ce4270e72a7507dcfe2a847b4f648efceee4f05537",
+    "A249_causal_path": "research/results/v1/chacha20_round20_fresh_multichannel_reader_v1.causal",
+    "A249_causal_sha256": "69af2639ff51dbfbb91687c204165fe37738a84c1330cde1077fa2fd17d0e03b",
+    "feature_reader_path": "src/arx_carry_leak/fresh_candidate_reader.py",
+    "feature_reader_sha256": "8d06390b3749754f2c34bfc2ccab9d877e2c9e5d47d20ea90b3b741fcbd4019e",
+    "nonlinear_reader_path": "src/arx_carry_leak/fresh_candidate_nonlinear.py",
+    "nonlinear_reader_sha256": "7a77276b3670fa636ced4f8787a2dc319f798f37a71f17cceba842f213793b19",
+    "nonlinear_reader_test_path": "tests/test_fresh_candidate_nonlinear.py",
+    "nonlinear_reader_test_sha256": "7871b0f1a3af258cbe2772b0639a5a7a78dfaf34b175fb2c42d056e6cd763142"
+  }
+}

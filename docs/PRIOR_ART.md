@@ -48,6 +48,9 @@ The tag is annotated but not asserted to be cryptographically signed unless
 | 2026-07-12 | A211 and standard-R20 retained-state record: two independent complete covers recover and confirm the same 20-bit assignment at ten rounds and, separately, through all 20 ChaCha rounds plus feed-forward |
 | 2026-07-13 | A212--A219 Reader record: public scheduling, exact propagation, known-key feature families, matched-null correction, operator diversity, target-blind ranking, and complete ranked execution |
 | 2026-07-13 | A220P completed preflight: six traversal directions by two solve schedules execute 12 fresh processes, 3,072 cells, and 7,680 stages; the final A220 factorial transfer protocol is separately frozen without a result claim |
+| 2026-07-13 | A223--A240 capacity, post-barrier, tie-aware Reader, Speck32/64-W42, and Threefish-256-W38 records |
+| 2026-07-14 | A242--A272 fresh Reader and cross-family full-round continuation, including Speck64/128, SIMON64/128, RC5, PRESENT-80, Ascon-AEAD128, AES-128, and Salsa20/20 complete-domain records |
+| 2026-07-14 | A273--A277 target-blind selected-channel ChaCha20-R20 chain: first-target recovery, second-target exact selected-half boundary, and residual global recovery |
 | `v0.1.0-prior-art` | First public, audited F8-Causal publication tree |
 
 The conference names and year come from the author's source metadata. No DOI,
@@ -65,7 +68,7 @@ invented here.
 | `FULLROUND_TRANSFER_SHA256SUMS` | `ddea7cf303ccdfbcd304574b81153d74302e2b5e554a2da9d5f269f4b0090532` |
 | `SHAKE_NATIVE_EXTENDED_SHA256SUMS` | `64f650b7b44e5db37cd2c53e97e52a20da3e31b5d6a3002b66398b6b3e509371` |
 | `SHAKE_SOLVER_FRONTIER_SHA256SUMS` | `c4ba0fd7770f414aad6f67e9f3c171cf97890ce2997d53f75edb65d6ccf65717` |
-| `A211_A220P_SHA256SUMS` | `d4cbc1a47c94376a14b665dc09d1ee33f8674fffe39b900baac173736e750c11` |
+| `A211_A220P_SHA256SUMS` | `3acd17f3ef52ce357b646a503d7ce81ba60442ebe2c5e76646c2e30ffa8da363` |
 
 The manifest digest authenticates the manifest; each manifest in turn lists the
 exact result JSON, `.causal`, source, or anchor file digests. Verify all layers
@@ -73,7 +76,7 @@ with `scripts/verify_hash_manifest.py`.
 
 ## Result identifiers
 
-The stable A107--A220P identifiers are defined in
+The stable A107--A277 identifiers are defined in
 `research/ATTEMPT_LOG.md`. Their promoted artifacts are immutable inputs to the
 publication:
 
@@ -147,6 +150,17 @@ publication:
 - A220B/A222: pre-outcome deterministic boundary localization, eight-block
   equal-weight Reader aggregation, disjoint balanced 32-key design, and exact
   paired cluster-null infrastructure only, without an A220 or A222 outcome.
+- A223--A235: seven-arm capacity boundary, complete post-barrier labels,
+  restricted-region tests, tie-aware ranks, matched nulls, and authentic Causal
+  readback;
+- A236--A264 plus AES-W41: qualification and independently confirmed
+  full-round complete-domain residual-key records for nine primitive
+  configurations;
+- A242/A249--A272: fresh candidate, clause, flow, topology, overlay, and
+  trajectory-shape Readers with exact nulls and prospective selected-channel
+  retention;
+- A273--A277: two target-blind complete orders, one selected-half recovery, one
+  exact selected-half UNSAT boundary, and one residual global R20 recovery.
 
 ## Presentation sanitization
 
@@ -168,7 +182,7 @@ or reproduction code needed to audit the claims.
 
 Use `CITATION.cff` and cite the specific result JSON hash for numeric claims.
 For A001--A132, include the resolved commit of `v0.1.0-prior-art`. For
-A133--A220P and the A220B/A222 protocol supplement, include the exact follow-up
+A133--A277 and the A220B/A222 protocol supplement, include the exact follow-up
 commit containing the artifact; obtain
 it from the checkout with `git rev-parse HEAD`. The original tag and release
 remain unchanged by design. A GitHub release is a distribution pointer, not a

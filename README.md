@@ -5,8 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A220P results plus A220B/A222 frozen
-pre-outcome protocols as code, typed
+evidence, and the subsequent A107--A277 result chain as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -103,6 +102,10 @@ precisely:
 | A220P | R20 multi-horizon factorial preflight | Twelve fresh processes show staged retained re-solve and one-shot trajectories are neither byte-identical nor scaled copies; forward/reverse same-prefix correlations are also low | One explicit known key; six directions by two schedules; 3,072 cells and 7,680 stages; no target/model selection | Direction and solve schedule are distinct solver interventions | [report](research/reports/CAUSAL_CHACHA20_ROUND20_MULTIHORIZON_PREFLIGHT_V1.md) |
 | A220 frozen | Factorial trajectory transfer protocol | Fit/select collection, Reader freeze, exact holdout inference, crash-safe selected-bundle collection, strict evaluation, and label-free prospective scoring are implemented and hash-pinned; no A220 outcome is claimed | 52 fit/select keys under all 12 trajectories, then 92 untouched holdouts after Reader freeze | Preregistered protocol and tested infrastructure only | [protocol](research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json) |
 | A220B / A222 frozen | Boundary router and eight-block Reader ensemble | Exact factorial contrasts route every retained/boundary state deterministically; the same frozen Reader is overlaid with equal weight across all eight counter blocks | No A220 outcome input at freeze; A222 uses a disjoint, exactly balanced 32-key 8-by-4 ledger and all `2^8` paired cluster sign flips | **Pre-outcome protocol/infrastructure only; no A220/A222 outcome claim** | [protocol record](research/reports/CAUSAL_CHACHA20_ROUND20_A220B_A222_PROTOCOLS_V1.md) |
+| A223--A235 | R20 capacity and region-ranking chain | A223 completes seven frozen arms without a model; A224/A225 recover the withheld W32/W40 labels by complete Metal enumeration; A227/A229 retain restricted-region boundaries; A232 corrects tied ranks to `[64,4,136,188,38,17,37]`; A233 places 1/7 disjoint labels in the Top 64 under its registered uniform baseline | Standard R20, eight blocks, explicit pre/post barriers | Exact capacity/representation boundaries and post-barrier labels | [release record](docs/RELEASE_A223_A277.md) |
+| A237--A264 plus AES-W41 | Cross-family full-round residual-key recovery | Complete `2^38`--`2^44` Metal domains return one factual and zero control models for nine primitive configurations | 38--44 unknown master-key bits; remaining key material and public relation known; no early stop | Complete master key in each declared known-key model | [release record](docs/RELEASE_A223_A277.md) |
+| A242/A249--A272 | Fresh-state and learned-clause Reader progression | Candidate, clause, topology, flow, frequency, overlay, and trajectory-shape views use exact shared-XOR controls; A267 gives +1.329883 bits (`p=0.01953125`), and frozen A272 gives +1.618752 bits on 20 new keys (`p=0.00390625`) | Nested unseen-prefix validation followed by a disjoint 5,120-candidate prospective panel without refit | Prospectively retained selected-channel ranking signal | [A272 report](research/reports/CAUSAL_CHACHA20_ROUND20_SELECTED_CHANNEL_PROSPECTIVE_VALIDATION_V1.md) |
+| A273--A277 | Target-blind R20 recovery chain | A273 freezes a full order without the target label; A274 finds low20 `0x987f0` after 90/128 selected cells; A275 repeats on distinct material; A276 resolves the selected half UNSAT; A277 recovers low20 `0x5a770` in one global retained solve without complete remaining-half enumeration | Standard 20 rounds plus feed-forward, 236 key bits known, eight output blocks | Two confirmed 20-bit target-blind full-round partial-key assignments and one exact replication boundary | [A274](research/reports/CAUSAL_CHACHA20_ROUND20_SELECTED_CHANNEL_TARGET_RECOVERY_V1.md), [A277](research/reports/CAUSAL_CHACHA20_ROUND20_REPLICATION_RESIDUAL_TWO_PASS_V1.md) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -145,30 +148,30 @@ dominates this transfer.
 
 A211 removes the remaining inter-parent resets and converts the same round-10
 cell into two independently confirmed models. The unchanged mechanism then
-transfers to the standard 20-round ChaCha20 block function: Numeric and Gray8
-independently recover the same 20-bit assignment while still executing their
-complete covers. A212--A219 test public formula schedules, exact propagation,
-known-key Readers, selection-matched nulls, operator diversity and a fresh
-target-blind ranked run. A220P then establishes experimentally that traversal
-direction and solve-boundary schedule are separate interventions. The A220
-factorial Reader protocol is committed at SHA-256
-`70df07cb4f4f22115e3aa63765de0fca0dd610607cc87356946a188f53fe5645`;
-the fit/select collector, holdout core/collector/evaluator and label-free
-prospective scorer are now published with focused tests. No selected Reader,
-untouched-holdout score or recovery is claimed in this snapshot.
+transfers to standard ChaCha20-R20: Numeric and Gray8 independently recover the
+same 20-bit assignment while executing complete covers. A212--A219 test public
+formula schedules, exact propagation, known-key Readers, selection-matched
+nulls, operator diversity and a target-blind ranked run. A220P separates
+traversal direction from solve-boundary scheduling; A220B/A222 retain their
+original frozen pre-outcome status.
 
-The pre-outcome supplement additionally freezes A220B's deterministic
-factorial-boundary localization and A222's all-eight-block equal-weight Reader
-ensemble. A222's 32 known-key rows are disjoint from A214, A218/A219, and all
-144 A220 keys; its paired retention null enumerates exactly 256 cluster-level
-sign flips. Reader inputs are recursively screened for reveal/label/model
-fields and reduced to minimal projected channels before scoring. These are
-tested mechanisms and information-flow boundaries, not A220 retention,
-boundary, rank-improvement, or recovery results.
+A223--A235 map retained-state capacity and restricted-region ranking, including
+complete post-barrier Metal labels and authentic in-file Causal readback. In
+parallel, A236--A264 extend complete-domain residual-key recovery across nine
+additional primitive configurations. The fresh-reader line A242/A249--A272
+moves through typed solver channels, exact learned clauses, operation topology,
+continuous flow, selection-corrected overlays, scale-free trajectory shape,
+and a prospectively retained eight-feature channel on twenty disjoint keys.
 
-The exact publication boundary, artifact identities, and fresh-clone gate for
-this update are collected in the [A220P release record](docs/RELEASE_A220P.md)
-and the [A220B/A222 infrastructure supplement](docs/RELEASE_A220B_A222_INFRA.md).
+A273 applies the unchanged A272 Reader to a target whose generation label is
+unavailable and freezes all 256 cells before recovery. A274 confirms a model
+after 90 of the selected 128 cells. A275 repeats the process on distinct public
+material; A276 resolves all selected top-half cells as UNSAT. A277 uses that
+exact boundary in one global retained-state solve, confirms low20 `0x5a770`
+across 4,096 bits with two implementations, rejects the flipped control, and
+does not enumerate the complete remaining half. The complete release boundary,
+hashes, and reproduction gate are in
+[docs/RELEASE_A223_A277.md](docs/RELEASE_A223_A277.md).
 
 ## Three connected methods
 
@@ -215,6 +218,7 @@ Six evidence tiers make cost explicit:
 | `quick` | `./scripts/reproduce_quick.sh` | vectors, focused tests, Reader validation, manifest verification |
 | `standard` | `./scripts/reproduce_fullround_transfers.sh` | regenerate A107--A126 transfers and validate retained A129--A210 frontiers |
 | `retained` | `./scripts/reproduce_a211_a220p.sh` | authenticate A211--A220P evidence and frozen A220/A220B/A222 infrastructure without a production solve |
+| `frontier` | `./scripts/reproduce_a223_a277.sh` | hash-check and test completed A223--A277 Reader, recovery, Causal, and cross-family records without rerunning complete production domains |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -257,7 +261,7 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A220P evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A277 evidence ledger
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

@@ -1,0 +1,65 @@
+{
+  "schema": "fullround-residual-key-recovery-transfer-v1",
+  "result": "The complete-domain recovery architecture is retained on standard full-round ChaCha20, Speck32/64, and Threefish-256.",
+  "attempts": [
+    {
+      "attempt_id": "A184",
+      "primitive": "ChaCha20_block_function_with_feedforward",
+      "rounds": 20,
+      "unknown_key_bits": 40,
+      "known_key_bits": 216,
+      "logical_candidate_count": 1099511627776,
+      "factual_full_matches": 1,
+      "control_full_matches": 0,
+      "independent_confirmation_bits": 512,
+      "result_path": "research/results/v1/chacha20_metal_width40_partial_key_recovery_v1.json",
+      "result_sha256": "d467c06105d4a4afba9efaa7bdf6c4e58754b034d4640907486c778ad17e12a9"
+    },
+    {
+      "attempt_id": "A237",
+      "primitive": "Speck32/64",
+      "rounds": 22,
+      "unknown_key_bits": 42,
+      "known_key_bits": 22,
+      "known_plaintext_ciphertext_pairs": 3,
+      "logical_candidate_count": 4398046511104,
+      "factual_full_matches": 1,
+      "control_full_matches": 0,
+      "independent_confirmation_bits": 96,
+      "gpu_seconds": 959.8156910734251,
+      "candidates_per_gpu_second": 4582178174.421565,
+      "result_path": "research/results/v1/speck32_64_metal_width42_recovery_v1.json",
+      "result_sha256": "2b8f77c219b4291d6eaa70418ae70c5501deca6acebba62aaf04bf28f7ad59c2",
+      "causal_path": "research/results/v1/speck32_64_metal_width42_recovery_v1.causal",
+      "causal_sha256": "3c768ff374a5c71fb6a80346017ff1467ea44f7218f3e2d554e4fd3afc404130"
+    },
+    {
+      "attempt_id": "A240",
+      "primitive": "Threefish-256",
+      "rounds": 72,
+      "unknown_key_bits": 38,
+      "known_key_bits": 218,
+      "known_tweak_bits": 128,
+      "known_plaintext_ciphertext_pairs": 1,
+      "logical_candidate_count": 274877906944,
+      "factual_full_matches": 1,
+      "control_full_matches": 0,
+      "independent_confirmation_bits": 256,
+      "gpu_seconds": 860.7408324554563,
+      "candidates_per_gpu_second": 319350374.2117696,
+      "result_path": "research/results/v1/threefish256_metal_width38_recovery_v1.json",
+      "result_sha256": "bde3c083d911d638fa54f78551c05c138d65a8764dfbbfef58dbd58fadb25e6a",
+      "causal_path": "research/results/v1/threefish256_metal_width38_recovery_v1.causal",
+      "causal_sha256": "3c7853c5728c6a98d87599d41585bb6af5cc25bb755a8919fc4e0b1745c2a813"
+    }
+  ],
+  "claim_boundary": {
+    "full_round_execution": true,
+    "complete_residual_domains": true,
+    "full_master_keys_reconstructed_within_declared_known_key_models": true,
+    "asymptotic_search_reduction_claimed": false,
+    "next_distinct_gain": "prospectively_frozen_strict_subset_or_full_master_key_solver"
+  },
+  "report_path": "research/reports/FULLROUND_RESIDUAL_KEY_RECOVERY_TRANSFER_V1.md",
+  "report_sha256": "1c31e806cafaa69c8085d1031aca82294b82593f24a5d765897a80fdc554e710"
+}

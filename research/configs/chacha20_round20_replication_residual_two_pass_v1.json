@@ -1,0 +1,1608 @@
+{
+  "A276_exact_boundary": {
+    "attempted_cells": 128,
+    "causal_sha256": "34451043514d131b0185607cfa4081abe6e79de8169b27c2c71a524425c02eae",
+    "exact_logical_assignments": 524288,
+    "exact_unsat_cells": 128,
+    "result_sha256": "7f83f0851be7e2c5fbf044dffd13608a5cdf3379d007ae0464c2496037a2b84d",
+    "retained_state_continuity_verified": true
+  },
+  "anchors": {
+    "A275_causal_path": "research/results/v1/chacha20_round20_selected_channel_target_replication_order_v1.causal",
+    "A275_causal_sha256": "fadae6b3dece94cb207f3eba4572d9fc1bfd6796e4256a5bd7b3de5e11e03f3b",
+    "A275_measurement_path": "research/results/v1/chacha20_round20_selected_channel_target_replication_order_v1/target.numeric.measurement.json.zst",
+    "A275_measurement_sha256": "0452f3c418bb29b1904170f7dd7a2a8278b4de68d056b8537ead6985ae97ddde",
+    "A275_protocol_path": "research/configs/chacha20_round20_selected_channel_target_replication_v1.json",
+    "A275_protocol_sha256": "d6e753defe3eba1e9989e8e6f792a6e731d8371487788917db0d7cff518c75f9",
+    "A275_result_path": "research/results/v1/chacha20_round20_selected_channel_target_replication_order_v1.json",
+    "A275_result_sha256": "2c9236c2aff721ba18f1c4009fdd1dd1724b0ba0d5799268ac49c0ac2d4a672a",
+    "A276_causal_path": "research/results/v1/chacha20_round20_selected_channel_target_replication_recovery_v1.causal",
+    "A276_causal_sha256": "34451043514d131b0185607cfa4081abe6e79de8169b27c2c71a524425c02eae",
+    "A276_protocol_path": "research/configs/chacha20_round20_selected_channel_target_replication_recovery_v1.json",
+    "A276_protocol_sha256": "b40a8d6da6a5ce3af80e6f34f0eae28f87f1eb22448985ee95e5382ae455b9e5",
+    "A276_result_path": "research/results/v1/chacha20_round20_selected_channel_target_replication_recovery_v1.json",
+    "A276_result_sha256": "7f83f0851be7e2c5fbf044dffd13608a5cdf3379d007ae0464c2496037a2b84d",
+    "A276_runner_path": "research/experiments/chacha20_round20_selected_channel_target_replication_recovery.py",
+    "A276_runner_sha256": "e82f3e8d8d98c38b13f7674ed31657737276b021025dc652af790e608b53a931",
+    "preflight_path": "research/experiments/chacha20_round20_replication_residual_two_pass_preflight.py",
+    "preflight_sha256": "59351499fda8574634feccf13062cc68bdc6a22bad3764e7b0d8257d4b9fcc3c",
+    "runner_path": "research/experiments/chacha20_round20_replication_residual_two_pass.py",
+    "runner_sha256": "7710e978fd7a1ba33155bf12919d49b243806342c78fc0517bdeee02c2bf6e60",
+    "two_pass_native_path": "research/native/cadical_residual_two_pass.cpp",
+    "two_pass_native_sha256": "b0fcd4a8a08579055bed98003c01fcbadfd8782731745ad87f007dbd7db679dd",
+    "two_pass_wrapper_path": "research/experiments/chacha20_residual_two_pass.py",
+    "two_pass_wrapper_sha256": "023c23008f62c062fcb9a4b1485e22417707c649d7354ec0357e73b082dc59e6"
+  },
+  "attempt_id": "A277",
+  "authentic_causal_readback": {
+    "A276_gap": {
+      "confidence": 1.0,
+      "expected_object_type": "ordered_clause_timing_or_budget_reallocation_after_top128_boundary",
+      "predicate": "next_required_object",
+      "subject": "A276:top128_retained_solver_boundary",
+      "suggested_queries": [
+        "Which top-128 cells showed the strongest retained progress trajectory?",
+        "Can ordered clause timing re-rank the unresolved cells prospectively?"
+      ]
+    },
+    "read_personally_by_main_before_freeze": true,
+    "reader_source": {
+      "io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+      "module": "dotcausal.io"
+    }
+  },
+  "blocking_clause_protocol": {
+    "blocked_prefixes": [
+      197,
+      229,
+      209,
+      199,
+      49,
+      159,
+      85,
+      36,
+      144,
+      75,
+      204,
+      44,
+      214,
+      35,
+      12,
+      161,
+      4,
+      76,
+      14,
+      48,
+      82,
+      138,
+      18,
+      54,
+      133,
+      220,
+      109,
+      194,
+      6,
+      247,
+      222,
+      81,
+      137,
+      255,
+      240,
+      65,
+      182,
+      221,
+      177,
+      150,
+      230,
+      32,
+      58,
+      38,
+      87,
+      164,
+      73,
+      1,
+      184,
+      19,
+      88,
+      185,
+      56,
+      104,
+      99,
+      180,
+      121,
+      132,
+      96,
+      124,
+      198,
+      186,
+      23,
+      107,
+      237,
+      16,
+      216,
+      172,
+      187,
+      145,
+      80,
+      94,
+      41,
+      227,
+      173,
+      17,
+      70,
+      60,
+      89,
+      24,
+      147,
+      101,
+      154,
+      128,
+      188,
+      95,
+      28,
+      152,
+      148,
+      63,
+      84,
+      146,
+      134,
+      86,
+      25,
+      151,
+      254,
+      238,
+      100,
+      165,
+      208,
+      0,
+      46,
+      212,
+      64,
+      92,
+      27,
+      245,
+      233,
+      192,
+      239,
+      163,
+      235,
+      135,
+      110,
+      105,
+      115,
+      113,
+      117,
+      153,
+      123,
+      98,
+      155,
+      37,
+      201,
+      31,
+      156,
+      167
+    ],
+    "blocked_prefixes_uint8_sha256": "bafa306920a9cb656fe278cd81331ccc37676c79568137b3d53e677d9f737bef",
+    "clause_count": 128,
+    "clause_width": 8,
+    "remaining_prefixes": [
+      2,
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      20,
+      21,
+      22,
+      26,
+      29,
+      30,
+      33,
+      34,
+      39,
+      40,
+      42,
+      43,
+      45,
+      47,
+      50,
+      51,
+      52,
+      53,
+      55,
+      57,
+      59,
+      61,
+      62,
+      66,
+      67,
+      68,
+      69,
+      71,
+      72,
+      74,
+      77,
+      78,
+      79,
+      83,
+      90,
+      91,
+      93,
+      97,
+      102,
+      103,
+      106,
+      108,
+      111,
+      112,
+      114,
+      116,
+      118,
+      119,
+      120,
+      122,
+      125,
+      126,
+      127,
+      129,
+      130,
+      131,
+      136,
+      139,
+      140,
+      141,
+      142,
+      143,
+      149,
+      157,
+      158,
+      160,
+      162,
+      166,
+      168,
+      169,
+      170,
+      171,
+      174,
+      175,
+      176,
+      178,
+      179,
+      181,
+      183,
+      189,
+      190,
+      191,
+      193,
+      195,
+      196,
+      200,
+      202,
+      203,
+      205,
+      206,
+      207,
+      210,
+      211,
+      213,
+      215,
+      217,
+      218,
+      219,
+      223,
+      224,
+      225,
+      226,
+      228,
+      231,
+      232,
+      234,
+      236,
+      241,
+      242,
+      243,
+      244,
+      246,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253
+    ],
+    "remaining_prefixes_uint8_sha256": "9dd1b19d086979918bb9d412f82805c22b16b1ca3af8becc8150c5e66956f06e",
+    "semantics": "one negated-assumption clause per exact-UNSAT prefix",
+    "solution_preserving": true,
+    "source": "A276_exact_UNSAT_top128"
+  },
+  "frozen_unresolved_order": {
+    "correct_prefix_or_rank_known": false,
+    "group_order": "descending proved-top occupancy, descending maximum remaining A275 score, descending mean remaining A275 score, ascending upper6",
+    "name": "proof_core_quartet_cluster_then_A275_score",
+    "proof_core_support": {
+      "A276_result_sha256": "7f83f0851be7e2c5fbf044dffd13608a5cdf3379d007ae0464c2496037a2b84d",
+      "assumption_variables_by_prefix_position_MSB_to_LSB": [
+        67,
+        62,
+        55,
+        53,
+        51,
+        49,
+        47,
+        45
+      ],
+      "failed_assumption_core_width_histogram": {
+        "6": 1,
+        "7": 18,
+        "8": 109
+      },
+      "generalized_core_count": 19,
+      "key_bits_by_prefix_position_MSB_to_LSB": [
+        19,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12
+      ],
+      "omitted_assumption_variable_histogram": {
+        "45": 14,
+        "47": 4,
+        "47,45": 1,
+        "none": 109
+      },
+      "omitted_key_bit_histogram": {
+        "12": 14,
+        "13": 4,
+        "13,12": 1,
+        "none": 109
+      },
+      "source": "A276_execution_rows_failed_assumptions",
+      "supported_partition": "prefix8_upper6_fixed_low2_free",
+      "target_label_used": false
+    },
+    "quartet_definition": "prefix8_upper6_fixed_low2_free",
+    "quartet_groups": [
+      {
+        "maximum_remaining_A275_score": 0.004183642239673655,
+        "mean_remaining_A275_score": 0.004183642239673655,
+        "proved_top_members": [
+          148,
+          150,
+          151
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          149
+        ],
+        "remaining_order": [
+          149
+        ],
+        "upper6": 37
+      },
+      {
+        "maximum_remaining_A275_score": 0.00325374691341587,
+        "mean_remaining_A275_score": 0.00325374691341587,
+        "proved_top_members": [
+          80,
+          81,
+          82
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          83
+        ],
+        "remaining_order": [
+          83
+        ],
+        "upper6": 20
+      },
+      {
+        "maximum_remaining_A275_score": -0.006807757559808883,
+        "mean_remaining_A275_score": -0.006807757559808883,
+        "proved_top_members": [
+          104,
+          105,
+          107
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          106
+        ],
+        "remaining_order": [
+          106
+        ],
+        "upper6": 26
+      },
+      {
+        "maximum_remaining_A275_score": -0.008130311571241212,
+        "mean_remaining_A275_score": -0.008130311571241212,
+        "proved_top_members": [
+          237,
+          238,
+          239
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          236
+        ],
+        "remaining_order": [
+          236
+        ],
+        "upper6": 59
+      },
+      {
+        "maximum_remaining_A275_score": -0.013718030637428309,
+        "mean_remaining_A275_score": -0.013718030637428309,
+        "proved_top_members": [
+          197,
+          198,
+          199
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          196
+        ],
+        "remaining_order": [
+          196
+        ],
+        "upper6": 49
+      },
+      {
+        "maximum_remaining_A275_score": -0.015985136504238877,
+        "mean_remaining_A275_score": -0.015985136504238877,
+        "proved_top_members": [
+          220,
+          221,
+          222
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          223
+        ],
+        "remaining_order": [
+          223
+        ],
+        "upper6": 55
+      },
+      {
+        "maximum_remaining_A275_score": -0.01798735462194276,
+        "mean_remaining_A275_score": -0.01798735462194276,
+        "proved_top_members": [
+          24,
+          25,
+          27
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          26
+        ],
+        "remaining_order": [
+          26
+        ],
+        "upper6": 6
+      },
+      {
+        "maximum_remaining_A275_score": -0.019881149151778948,
+        "mean_remaining_A275_score": -0.019881149151778948,
+        "proved_top_members": [
+          164,
+          165,
+          167
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          166
+        ],
+        "remaining_order": [
+          166
+        ],
+        "upper6": 41
+      },
+      {
+        "maximum_remaining_A275_score": -0.033180335760859506,
+        "mean_remaining_A275_score": -0.033180335760859506,
+        "proved_top_members": [
+          96,
+          98,
+          99
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          97
+        ],
+        "remaining_order": [
+          97
+        ],
+        "upper6": 24
+      },
+      {
+        "maximum_remaining_A275_score": -0.03965120963229015,
+        "mean_remaining_A275_score": -0.03965120963229015,
+        "proved_top_members": [
+          92,
+          94,
+          95
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          93
+        ],
+        "remaining_order": [
+          93
+        ],
+        "upper6": 23
+      },
+      {
+        "maximum_remaining_A275_score": -0.04457186279213988,
+        "mean_remaining_A275_score": -0.04457186279213988,
+        "proved_top_members": [
+          36,
+          37,
+          38
+        ],
+        "proved_top_occupancy": 3,
+        "remaining_members": [
+          39
+        ],
+        "remaining_order": [
+          39
+        ],
+        "upper6": 9
+      },
+      {
+        "maximum_remaining_A275_score": 0.0032657239031426318,
+        "mean_remaining_A275_score": -0.002801487767235985,
+        "proved_top_members": [
+          64,
+          65
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          66,
+          67
+        ],
+        "remaining_order": [
+          67,
+          66
+        ],
+        "upper6": 16
+      },
+      {
+        "maximum_remaining_A275_score": 0.002783258137066854,
+        "mean_remaining_A275_score": -0.022125166217626564,
+        "proved_top_members": [
+          156,
+          159
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          157,
+          158
+        ],
+        "remaining_order": [
+          158,
+          157
+        ],
+        "upper6": 39
+      },
+      {
+        "maximum_remaining_A275_score": 0.0022895247904805064,
+        "mean_remaining_A275_score": -0.0019811315559090685,
+        "proved_top_members": [
+          254,
+          255
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          252,
+          253
+        ],
+        "remaining_order": [
+          252,
+          253
+        ],
+        "upper6": 63
+      },
+      {
+        "maximum_remaining_A275_score": 0.002223735059805737,
+        "mean_remaining_A275_score": -0.0022667502766571847,
+        "proved_top_members": [
+          137,
+          138
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          136,
+          139
+        ],
+        "remaining_order": [
+          136,
+          139
+        ],
+        "upper6": 34
+      },
+      {
+        "maximum_remaining_A275_score": 0.0021877503042165044,
+        "mean_remaining_A275_score": -0.022712512200540855,
+        "proved_top_members": [
+          48,
+          49
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          50,
+          51
+        ],
+        "remaining_order": [
+          50,
+          51
+        ],
+        "upper6": 12
+      },
+      {
+        "maximum_remaining_A275_score": 0.0018305418062641771,
+        "mean_remaining_A275_score": -0.0018177444105484965,
+        "proved_top_members": [
+          12,
+          14
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          13,
+          15
+        ],
+        "remaining_order": [
+          13,
+          15
+        ],
+        "upper6": 3
+      },
+      {
+        "maximum_remaining_A275_score": 0.001646734144005162,
+        "mean_remaining_A275_score": 0.001041049873766415,
+        "proved_top_members": [
+          208,
+          209
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          210,
+          211
+        ],
+        "remaining_order": [
+          210,
+          211
+        ],
+        "upper6": 52
+      },
+      {
+        "maximum_remaining_A275_score": -0.0019089108379149854,
+        "mean_remaining_A275_score": -0.009252544971971772,
+        "proved_top_members": [
+          4,
+          6
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          5,
+          7
+        ],
+        "remaining_order": [
+          5,
+          7
+        ],
+        "upper6": 1
+      },
+      {
+        "maximum_remaining_A275_score": -0.0029592826696040564,
+        "mean_remaining_A275_score": -0.009361315319086117,
+        "proved_top_members": [
+          88,
+          89
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          90,
+          91
+        ],
+        "remaining_order": [
+          91,
+          90
+        ],
+        "upper6": 22
+      },
+      {
+        "maximum_remaining_A275_score": -0.003911171207740506,
+        "mean_remaining_A275_score": -0.020857189811818496,
+        "proved_top_members": [
+          212,
+          214
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          213,
+          215
+        ],
+        "remaining_order": [
+          213,
+          215
+        ],
+        "upper6": 53
+      },
+      {
+        "maximum_remaining_A275_score": -0.003998647763432598,
+        "mean_remaining_A275_score": -0.01625001868035902,
+        "proved_top_members": [
+          192,
+          194
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          193,
+          195
+        ],
+        "remaining_order": [
+          195,
+          193
+        ],
+        "upper6": 48
+      },
+      {
+        "maximum_remaining_A275_score": -0.00415607161707756,
+        "mean_remaining_A275_score": -0.004935009651538789,
+        "proved_top_members": [
+          172,
+          173
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          174,
+          175
+        ],
+        "remaining_order": [
+          175,
+          174
+        ],
+        "upper6": 43
+      },
+      {
+        "maximum_remaining_A275_score": -0.0051654973537280284,
+        "mean_remaining_A275_score": -0.024291217632046707,
+        "proved_top_members": [
+          121,
+          123
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          120,
+          122
+        ],
+        "remaining_order": [
+          120,
+          122
+        ],
+        "upper6": 30
+      },
+      {
+        "maximum_remaining_A275_score": -0.006724054508817138,
+        "mean_remaining_A275_score": -0.009418422141747243,
+        "proved_top_members": [
+          60,
+          63
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          61,
+          62
+        ],
+        "remaining_order": [
+          61,
+          62
+        ],
+        "upper6": 15
+      },
+      {
+        "maximum_remaining_A275_score": -0.006835560163948387,
+        "mean_remaining_A275_score": -0.02738012069870334,
+        "proved_top_members": [
+          113,
+          115
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          112,
+          114
+        ],
+        "remaining_order": [
+          112,
+          114
+        ],
+        "upper6": 28
+      },
+      {
+        "maximum_remaining_A275_score": -0.008913723335335962,
+        "mean_remaining_A275_score": -0.013079729342497192,
+        "proved_top_members": [
+          32,
+          35
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          33,
+          34
+        ],
+        "remaining_order": [
+          34,
+          33
+        ],
+        "upper6": 8
+      },
+      {
+        "maximum_remaining_A275_score": -0.009362800139952176,
+        "mean_remaining_A275_score": -0.020942705997794374,
+        "proved_top_members": [
+          73,
+          75
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          72,
+          74
+        ],
+        "remaining_order": [
+          74,
+          72
+        ],
+        "upper6": 18
+      },
+      {
+        "maximum_remaining_A275_score": -0.009658180033498573,
+        "mean_remaining_A275_score": -0.036594758417396754,
+        "proved_top_members": [
+          56,
+          58
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          57,
+          59
+        ],
+        "remaining_order": [
+          57,
+          59
+        ],
+        "upper6": 14
+      },
+      {
+        "maximum_remaining_A275_score": -0.015861011238894766,
+        "mean_remaining_A275_score": -0.033535181250943236,
+        "proved_top_members": [
+          161,
+          163
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          160,
+          162
+        ],
+        "remaining_order": [
+          160,
+          162
+        ],
+        "upper6": 40
+      },
+      {
+        "maximum_remaining_A275_score": -0.01911091333648143,
+        "mean_remaining_A275_score": -0.030048462780737875,
+        "proved_top_members": [
+          0,
+          1
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          2,
+          3
+        ],
+        "remaining_order": [
+          2,
+          3
+        ],
+        "upper6": 0
+      },
+      {
+        "maximum_remaining_A275_score": -0.023695811070509932,
+        "mean_remaining_A275_score": -0.03114825269006303,
+        "proved_top_members": [
+          229,
+          230
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          228,
+          231
+        ],
+        "remaining_order": [
+          231,
+          228
+        ],
+        "upper6": 57
+      },
+      {
+        "maximum_remaining_A275_score": -0.027440593242992955,
+        "mean_remaining_A275_score": -0.03367260528252484,
+        "proved_top_members": [
+          28,
+          31
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          29,
+          30
+        ],
+        "remaining_order": [
+          30,
+          29
+        ],
+        "upper6": 7
+      },
+      {
+        "maximum_remaining_A275_score": -0.032059831905372524,
+        "mean_remaining_A275_score": -0.035593509179710804,
+        "proved_top_members": [
+          233,
+          235
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          232,
+          234
+        ],
+        "remaining_order": [
+          234,
+          232
+        ],
+        "upper6": 58
+      },
+      {
+        "maximum_remaining_A275_score": -0.03415481296931577,
+        "mean_remaining_A275_score": -0.03753689774833048,
+        "proved_top_members": [
+          100,
+          101
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          102,
+          103
+        ],
+        "remaining_order": [
+          102,
+          103
+        ],
+        "upper6": 25
+      },
+      {
+        "maximum_remaining_A275_score": -0.0361696436964604,
+        "mean_remaining_A275_score": -0.049229061766285075,
+        "proved_top_members": [
+          245,
+          247
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          244,
+          246
+        ],
+        "remaining_order": [
+          244,
+          246
+        ],
+        "upper6": 61
+      },
+      {
+        "maximum_remaining_A275_score": -0.04508357368146264,
+        "mean_remaining_A275_score": -0.04583459255257037,
+        "proved_top_members": [
+          180,
+          182
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          181,
+          183
+        ],
+        "remaining_order": [
+          183,
+          181
+        ],
+        "upper6": 45
+      },
+      {
+        "maximum_remaining_A275_score": -0.046261449733692665,
+        "mean_remaining_A275_score": -0.048869045609274006,
+        "proved_top_members": [
+          109,
+          110
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          108,
+          111
+        ],
+        "remaining_order": [
+          111,
+          108
+        ],
+        "upper6": 27
+      },
+      {
+        "maximum_remaining_A275_score": -0.050975674358646875,
+        "mean_remaining_A275_score": -0.05574523312628722,
+        "proved_top_members": [
+          44,
+          46
+        ],
+        "proved_top_occupancy": 2,
+        "remaining_members": [
+          45,
+          47
+        ],
+        "remaining_order": [
+          47,
+          45
+        ],
+        "upper6": 11
+      },
+      {
+        "maximum_remaining_A275_score": 0.0039475767777666475,
+        "mean_remaining_A275_score": -0.011472845652589556,
+        "proved_top_members": [
+          70
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          68,
+          69,
+          71
+        ],
+        "remaining_order": [
+          69,
+          68,
+          71
+        ],
+        "upper6": 17
+      },
+      {
+        "maximum_remaining_A275_score": 0.003610340145910311,
+        "mean_remaining_A275_score": -0.02564542373434259,
+        "proved_top_members": [
+          76
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          77,
+          78,
+          79
+        ],
+        "remaining_order": [
+          79,
+          77,
+          78
+        ],
+        "upper6": 19
+      },
+      {
+        "maximum_remaining_A275_score": 0.0031119041610936063,
+        "mean_remaining_A275_score": -0.006298186112027774,
+        "proved_top_members": [
+          41
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          40,
+          42,
+          43
+        ],
+        "remaining_order": [
+          42,
+          43,
+          40
+        ],
+        "upper6": 10
+      },
+      {
+        "maximum_remaining_A275_score": 0.0025316947918044845,
+        "mean_remaining_A275_score": -0.012876487524667612,
+        "proved_top_members": [
+          128
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          129,
+          130,
+          131
+        ],
+        "remaining_order": [
+          131,
+          130,
+          129
+        ],
+        "upper6": 32
+      },
+      {
+        "maximum_remaining_A275_score": 0.0020862677966717496,
+        "mean_remaining_A275_score": -0.01232403815449501,
+        "proved_top_members": [
+          117
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          116,
+          118,
+          119
+        ],
+        "remaining_order": [
+          118,
+          119,
+          116
+        ],
+        "upper6": 29
+      },
+      {
+        "maximum_remaining_A275_score": 0.0014668031594588008,
+        "mean_remaining_A275_score": -0.008979122790677604,
+        "proved_top_members": [
+          216
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          217,
+          218,
+          219
+        ],
+        "remaining_order": [
+          219,
+          218,
+          217
+        ],
+        "upper6": 54
+      },
+      {
+        "maximum_remaining_A275_score": 0.0007801610198097443,
+        "mean_remaining_A275_score": -0.008240834910177878,
+        "proved_top_members": [
+          204
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          205,
+          206,
+          207
+        ],
+        "remaining_order": [
+          207,
+          206,
+          205
+        ],
+        "upper6": 51
+      },
+      {
+        "maximum_remaining_A275_score": -0.001285315430630547,
+        "mean_remaining_A275_score": -0.004079826939087621,
+        "proved_top_members": [
+          201
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          200,
+          202,
+          203
+        ],
+        "remaining_order": [
+          202,
+          200,
+          203
+        ],
+        "upper6": 50
+      },
+      {
+        "maximum_remaining_A275_score": -0.0015430456510326027,
+        "mean_remaining_A275_score": -0.0032685012106729167,
+        "proved_top_members": [
+          227
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          224,
+          225,
+          226
+        ],
+        "remaining_order": [
+          225,
+          224,
+          226
+        ],
+        "upper6": 56
+      },
+      {
+        "maximum_remaining_A275_score": -0.0019860225069931194,
+        "mean_remaining_A275_score": -0.020736671542315916,
+        "proved_top_members": [
+          23
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          20,
+          21,
+          22
+        ],
+        "remaining_order": [
+          21,
+          22,
+          20
+        ],
+        "upper6": 5
+      },
+      {
+        "maximum_remaining_A275_score": -0.003021259977424062,
+        "mean_remaining_A275_score": -0.013919126777886039,
+        "proved_top_members": [
+          124
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          125,
+          126,
+          127
+        ],
+        "remaining_order": [
+          125,
+          126,
+          127
+        ],
+        "upper6": 31
+      },
+      {
+        "maximum_remaining_A275_score": -0.006390409687230557,
+        "mean_remaining_A275_score": -0.021481514922626666,
+        "proved_top_members": [
+          240
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          241,
+          242,
+          243
+        ],
+        "remaining_order": [
+          242,
+          241,
+          243
+        ],
+        "upper6": 60
+      },
+      {
+        "maximum_remaining_A275_score": -0.021085222497360064,
+        "mean_remaining_A275_score": -0.02236953465063866,
+        "proved_top_members": [
+          177
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          176,
+          178,
+          179
+        ],
+        "remaining_order": [
+          179,
+          178,
+          176
+        ],
+        "upper6": 44
+      },
+      {
+        "maximum_remaining_A275_score": -0.02138168155284368,
+        "mean_remaining_A275_score": -0.023778998106941812,
+        "proved_top_members": [
+          188
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          189,
+          190,
+          191
+        ],
+        "remaining_order": [
+          189,
+          190,
+          191
+        ],
+        "upper6": 47
+      },
+      {
+        "maximum_remaining_A275_score": -0.022383880769648888,
+        "mean_remaining_A275_score": -0.03535216763034733,
+        "proved_top_members": [
+          54
+        ],
+        "proved_top_occupancy": 1,
+        "remaining_members": [
+          52,
+          53,
+          55
+        ],
+        "remaining_order": [
+          53,
+          55,
+          52
+        ],
+        "upper6": 13
+      },
+      {
+        "maximum_remaining_A275_score": 0.002960727425101842,
+        "mean_remaining_A275_score": -0.027456055806523903,
+        "proved_top_members": [],
+        "proved_top_occupancy": 0,
+        "remaining_members": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "remaining_order": [
+          8,
+          10,
+          9,
+          11
+        ],
+        "upper6": 2
+      },
+      {
+        "maximum_remaining_A275_score": -0.0004448435502644138,
+        "mean_remaining_A275_score": -0.017732973427654005,
+        "proved_top_members": [],
+        "proved_top_occupancy": 0,
+        "remaining_members": [
+          168,
+          169,
+          170,
+          171
+        ],
+        "remaining_order": [
+          170,
+          171,
+          169,
+          168
+        ],
+        "upper6": 42
+      },
+      {
+        "maximum_remaining_A275_score": -0.0034089243098749007,
+        "mean_remaining_A275_score": -0.03152899720425739,
+        "proved_top_members": [],
+        "proved_top_occupancy": 0,
+        "remaining_members": [
+          140,
+          141,
+          142,
+          143
+        ],
+        "remaining_order": [
+          143,
+          142,
+          140,
+          141
+        ],
+        "upper6": 35
+      },
+      {
+        "maximum_remaining_A275_score": -0.003953723118388699,
+        "mean_remaining_A275_score": -0.019626340397510728,
+        "proved_top_members": [],
+        "proved_top_occupancy": 0,
+        "remaining_members": [
+          248,
+          249,
+          250,
+          251
+        ],
+        "remaining_order": [
+          248,
+          251,
+          249,
+          250
+        ],
+        "upper6": 62
+      }
+    ],
+    "source_gap": {
+      "confidence": 1.0,
+      "expected_object_type": "ordered_clause_timing_or_budget_reallocation_after_top128_boundary",
+      "predicate": "next_required_object",
+      "subject": "A276:top128_retained_solver_boundary",
+      "suggested_queries": [
+        "Which top-128 cells showed the strongest retained progress trajectory?",
+        "Can ordered clause timing re-rank the unresolved cells prospectively?"
+      ]
+    },
+    "target_label_used": false,
+    "unresolved_order": [
+      149,
+      83,
+      106,
+      236,
+      196,
+      223,
+      26,
+      166,
+      97,
+      93,
+      39,
+      67,
+      66,
+      158,
+      157,
+      252,
+      253,
+      136,
+      139,
+      50,
+      51,
+      13,
+      15,
+      210,
+      211,
+      5,
+      7,
+      91,
+      90,
+      213,
+      215,
+      195,
+      193,
+      175,
+      174,
+      120,
+      122,
+      61,
+      62,
+      112,
+      114,
+      34,
+      33,
+      74,
+      72,
+      57,
+      59,
+      160,
+      162,
+      2,
+      3,
+      231,
+      228,
+      30,
+      29,
+      234,
+      232,
+      102,
+      103,
+      244,
+      246,
+      183,
+      181,
+      111,
+      108,
+      47,
+      45,
+      69,
+      68,
+      71,
+      79,
+      77,
+      78,
+      42,
+      43,
+      40,
+      131,
+      130,
+      129,
+      118,
+      119,
+      116,
+      219,
+      218,
+      217,
+      207,
+      206,
+      205,
+      202,
+      200,
+      203,
+      225,
+      224,
+      226,
+      21,
+      22,
+      20,
+      125,
+      126,
+      127,
+      242,
+      241,
+      243,
+      179,
+      178,
+      176,
+      189,
+      190,
+      191,
+      53,
+      55,
+      52,
+      8,
+      10,
+      9,
+      11,
+      170,
+      171,
+      169,
+      168,
+      143,
+      142,
+      140,
+      141,
+      248,
+      251,
+      249,
+      250
+    ],
+    "unresolved_order_uint8_sha256": "59d04b9cda571002ac709b38208fc1d9186f713beaf1485fc236783f056a0440",
+    "within_group_order": "descending A275 score then ascending prefix"
+  },
+  "information_boundary": {
+    "A275_scores_are_public_model_free_measurements": true,
+    "A276_exact_UNSAT_mask_is_public_solver_evidence": true,
+    "all_parameters_frozen_before_any_A277_solver_execution": true,
+    "confirmation_permitted_only_after_solver_model": true,
+    "correct_prefix_or_rank_available": false,
+    "new_order_uses_only_target_label_free_A275_scores_A276_exact_UNSAT_mask_and_A276_failed_assumption_core_geometry": true,
+    "target_generation_label_available": false
+  },
+  "protocol_state": "frozen_after_A276_exact_top128_boundary_and_before_any_A277_global_discovery_or_fallback_solve",
+  "research_question": "Can the exact A276 half-domain boundary plus retained global and timed cell solving recover the hidden full-round ChaCha20-R20 model without enumerating the complete remaining half?",
+  "schema": "chacha20-round20-replication-residual-two-pass-protocol-v1",
+  "scientific_design_sha256": "12438bc1fc60fdb973c9cc5984a9d2e1174f726f07d00cba5df51a2eefee4553",
+  "solver_protocol": {
+    "discovery_UNKNOWN_is_not_elimination": true,
+    "discovery_seconds_per_cell": 10.0,
+    "discovery_visits_all_unresolved_cells_until_first_SAT": true,
+    "external_timeout_seconds": 6000.0,
+    "fallback_UNKNOWN_is_not_elimination": true,
+    "fallback_seconds_per_unresolved_cell": 30.0,
+    "fallback_visits_only_discovery_UNKNOWN_cells_until_first_SAT": true,
+    "global_arm_has_no_prefix_assumptions": true,
+    "global_seconds": 300.0,
+    "independent_4096_bit_confirmation_required": true,
+    "phase_order": [
+      "global",
+      "discovery",
+      "fallback"
+    ],
+    "single_retained_CaDiCaL_state": true,
+    "stop_condition": "first_SAT_only"
+  },
+  "target": {
+    "correct_prefix_or_rank_known": false,
+    "generation_label_available": false,
+    "public_challenge_sha256": "45e943b38cebceeafa0da49626df7ba9f69d7f596e0979f7a28efd5c77e76ac3"
+  }
+}

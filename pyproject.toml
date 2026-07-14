@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "arx-carry-leak"
-version = "0.2.0"
+version = "0.3.0"
 description = "F8-Causal reproducible full-round distinguishers, causal Readers, and cryptanalysis"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "BSD-3-Clause"
 license-files = ["LICENSE", "PATENT_NOTICE.md", "THIRD_PARTY_NOTICES.md"]
 authors = [
-  {name = "David Tom Foss", email = "david@foss.com.de"},
+  {name = "David Tom Foss", email = "d.foss@ieee.org"},
 ]
 keywords = ["cryptanalysis", "full-round", "causal reader", "ARX", "F8", "CASI", "Keccak", "reproducibility"]
 classifiers = [
@@ -23,6 +23,9 @@ classifiers = [
 dependencies = [
   "numpy>=1.24,<3",
   "scipy>=1.10,<2",
+  "zstandard>=0.25,<1",
+  "msgpack>=1.0,<2",
+  "xxhash>=3,<4",
 ]
 
 [project.urls]

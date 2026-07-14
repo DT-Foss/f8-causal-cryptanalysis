@@ -1,0 +1,412 @@
+{
+  "anchors": {
+    "attic_path": "/Users/bhkmie/Documents/Forschung/O1/src/attic.py",
+    "attic_sha256": "0c4d284756b7ef380e78dc2f2c479146e2ef369f6157ae56dd9e410ed495a544",
+    "canonical_graph_path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram claude/alte originale/opus-dev/causal-keyanalysis/data/causal/chacha20_100k_canonical.causal",
+    "canonical_graph_sha256": "2790cd8f2af04a505f25d112753333ea08a57d9bc4284d88ea646dd6c71a169f",
+    "dotcausal_inference_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/inference.py",
+    "dotcausal_inference_sha256": "d67bf94a1274b969e0045f872aa7fdbb4ce81275b81b9a966dc003720b2f397c",
+    "dotcausal_io_path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+    "dotcausal_io_sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074",
+    "extractor_path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram claude/alte originale/opus-dev/causal-keyanalysis/phase2_csprng.py",
+    "extractor_sha256": "5bf01eb3ea57225b592cf55622d0f3a1a8b37613ad0c62d3c6c049b52b610f3a",
+    "graph_path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram claude/alte originale/opus-dev/causal-keyanalysis/data/causal/chacha20_100k.causal",
+    "graph_sha256": "5472d3ecf0b6e92b13e8189155223b72269fe0643876b068bbba033ae21d95ba",
+    "historical_findings_path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram claude/alte originale/opus-dev/causal-keyanalysis/FINDINGS.md",
+    "historical_findings_sha256": "082911d22910e8741531776d18d28b43e49948f16300ad71005a5c324aeb2c9f"
+  },
+  "attempt_id": "A235",
+  "authoritative_reader": {
+    "api_id": "cryptv3",
+    "explicit_mechanism_counts": {
+      "3way_bias": 1112,
+      "3way_deficit": 1135,
+      "avoids": 224,
+      "biases_toward": 1637,
+      "bytehw_deficit": 1,
+      "bytehw_excess": 2,
+      "co_occurs_with": 223,
+      "coincidence_deficit": 53,
+      "coincidence_excess": 40,
+      "distance_16_anti": 26,
+      "distance_16_bias": 21,
+      "distance_1_anti": 48,
+      "distance_1_bias": 48,
+      "distance_2_anti": 38,
+      "distance_2_bias": 42,
+      "distance_4_anti": 57,
+      "distance_4_bias": 56,
+      "distance_8_anti": 46,
+      "distance_8_bias": 46,
+      "frequently_precedes": 101,
+      "hd_anti": 2,
+      "hd_deficit": 2,
+      "hd_excess": 2,
+      "hd_predicts": 2,
+      "hw_anti": 29,
+      "hw_correlates": 39,
+      "lag_anti": 412,
+      "lag_correlates": 423,
+      "mi_bias": 8464,
+      "mi_deficit": 8573,
+      "peak_collision": 32,
+      "rank_deficit": 1,
+      "rarely_precedes": 103,
+      "recurrence_anti": 112,
+      "recurrence_bias": 106,
+      "suppresses": 1697,
+      "xd_anti": 214,
+      "xd_correlates": 203,
+      "xor_deficit": 3,
+      "xor_excess": 1
+    },
+    "explicit_source_counts": {
+      "byte_coincidence": 93,
+      "byte_hamming": 3,
+      "collision_peak": 32,
+      "cross_key_lag": 835,
+      "cross_key_offset": 105,
+      "differential": 108,
+      "exact_recurrence": 113,
+      "extraction": 4252,
+      "gf2_rank": 11,
+      "gf2_rank_marginal": 1,
+      "hamming_marginal": 4,
+      "hamming_seq": 4,
+      "mutual_information": 17037,
+      "seq_xor_cross": 417,
+      "seq_xor_hw": 68,
+      "seq_xor_marginal": 4,
+      "three_way": 2247,
+      "xor_distribution": 42
+    },
+    "fuzzy_inferred_triplets": 0,
+    "inference_rule_counts": {
+      "bias_suppression": 10724,
+      "distance_chain": 22,
+      "double_suppression": 2894,
+      "precedes_chain": 42,
+      "semantic_negative_chain": 64,
+      "semantic_neutral_chain": 29986,
+      "transitive_bias": 10284
+    },
+    "inference_source_counts": {
+      "INFERRED": 23966,
+      "INFERRED_SEMANTIC": 30050
+    },
+    "integrity_verified": true,
+    "magic_version": 1,
+    "stats": {
+      "amplification_percent": 212.9,
+      "api_id": "cryptv3",
+      "clusters": 0,
+      "entities": 3403,
+      "explicit_triplets": 25376,
+      "file_size_kb": 5400.6,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram claude/alte originale/opus-dev/causal-keyanalysis/data/causal/chacha20_100k.causal",
+      "gaps": 0,
+      "inferred_triplets": 54016,
+      "rules": 13,
+      "total_triplets": 79392,
+      "version": 1
+    },
+    "top_explicit_outcome_hubs": [
+      {
+        "degree": 354,
+        "entity": "range_HIGH@pos_31"
+      },
+      {
+        "degree": 339,
+        "entity": "range_MIDH@pos_31"
+      },
+      {
+        "degree": 315,
+        "entity": "range_LOW@pos_31"
+      },
+      {
+        "degree": 283,
+        "entity": "range_MIDL@pos_31"
+      },
+      {
+        "degree": 48,
+        "entity": "range_HIGH@pos_07"
+      },
+      {
+        "degree": 47,
+        "entity": "range_MIDH@pos_22"
+      },
+      {
+        "degree": 46,
+        "entity": "range_MIDL@pos_08"
+      },
+      {
+        "degree": 45,
+        "entity": "range_HIGH@pos_22"
+      },
+      {
+        "degree": 45,
+        "entity": "range_HIGH@pos_27"
+      },
+      {
+        "degree": 45,
+        "entity": "range_MIDL@pos_07"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_e@pos_08"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_f@pos_10"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_7@pos_13"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_4@pos_30"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_9@pos_31"
+      },
+      {
+        "degree": 44,
+        "entity": "range_MIDL@pos_21"
+      },
+      {
+        "degree": 44,
+        "entity": "range_MIDH@pos_30"
+      },
+      {
+        "degree": 44,
+        "entity": "range_LOW@pos_25"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_8@pos_10"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_1@pos_12"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_e@pos_25"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_0@pos_26"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_7@pos_27"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_c@pos_28"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_2@pos_31"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_e@pos_31"
+      },
+      {
+        "degree": 43,
+        "entity": "range_MIDL@pos_05"
+      },
+      {
+        "degree": 43,
+        "entity": "range_HIGH@pos_08"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_f@pos_11"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_e@pos_14"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_6@pos_16"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_7@pos_17"
+      }
+    ],
+    "top_explicit_trigger_hubs": [
+      {
+        "degree": 45,
+        "entity": "nib_2@pos_03"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_5@pos_03"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_1@pos_07"
+      },
+      {
+        "degree": 45,
+        "entity": "nib_4@pos_07"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_a@pos_01"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_b@pos_09"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_c@pos_15"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_4@pos_16"
+      },
+      {
+        "degree": 44,
+        "entity": "nib_e@pos_20"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_0@pos_00"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_8@pos_02"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_a@pos_02"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_4@pos_03"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_4@pos_06"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_a@pos_10"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_7@pos_16"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_d@pos_17"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_3@pos_21"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_4@pos_22"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_3@pos_23"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_5@pos_23"
+      },
+      {
+        "degree": 43,
+        "entity": "nib_e@pos_23"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_d@pos_00"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_f@pos_00"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_5@pos_01"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_6@pos_01"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_8@pos_01"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_d@pos_02"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_e@pos_02"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_f@pos_03"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_c@pos_04"
+      },
+      {
+        "degree": 42,
+        "entity": "nib_f@pos_05"
+      }
+    ]
+  },
+  "evidence_stage": "PERSONAL_AUTHENTIC_READER_SEMANTIC_READBACK",
+  "next_hypothesis": {
+    "decision_gate": "consume the completed A220 52-key selected-reader result before freezing a new target run",
+    "hard_edges": [
+      "candidate_prefix_assumption_to_exact_constraint_propagation",
+      "xor_rotation_permutation_addition_carry_backprojection",
+      "contradiction_to_candidate_elimination"
+    ],
+    "name": "typed_candidate_propagation_contradiction_graph",
+    "soft_views": [
+      "forward_reverse_solver_trajectory",
+      "hypercube_residual",
+      "path_gradient",
+      "multihorizon_schedule",
+      "conditional_CASI_MDL_residual"
+    ]
+  },
+  "schema": "chacha20-authentic-causal-semantic-readback-v1",
+  "semantic_readback": {
+    "attic_multihop_drops_mechanism_and_edge_confidence": true,
+    "attic_source_observation": "_kb stores trigger/mechanism/outcome, but complete_inference_pipeline builds trigger->outcome adjacency with confidence 1.0 and no mechanism typing",
+    "clusters_available": 0,
+    "current_run_has_no_fuzzy_inferred_edges": true,
+    "dominant_inference_is_generic_neutral_two_hop": true,
+    "gaps_available": 0,
+    "pos31_hub_is_extractor_design_induced": true,
+    "reason": "three_way extractor explicitly adds boundary triples (0,i,B-1)"
+  },
+  "storage_state": {
+    "canonical_materialized_inferred_triplets": 0,
+    "canonical_stored_triplets": 25376,
+    "current_total_differs_from_historical_because_inference_is_not_materialized": true,
+    "historical_documented_explicit_triplets": 25376,
+    "historical_documented_total_triplets": 86491,
+    "inference_recomputed_on_reader_open": true,
+    "original_materialized_inferred_triplets": 0,
+    "original_stored_triplets": 25376
+  }
+}

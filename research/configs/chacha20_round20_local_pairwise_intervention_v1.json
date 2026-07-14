@@ -1,0 +1,50 @@
+{
+  "anchors": {
+    "A268_causal_path": "research/results/v1/chacha20_round20_prospective_trajectory_shape_validation_v1.causal",
+    "A268_causal_sha256": "2264a20e7ed790e3d8f9e99d204962880be5af17a7024e3e25e9e58ef39216bb",
+    "A268_result_path": "research/results/v1/chacha20_round20_prospective_trajectory_shape_validation_v1.json",
+    "A268_result_sha256": "f49919a23234e4087523e0ba8a4abbdb19feedf0a685e49d61f5bbe603ee1849",
+    "A269_route_path": "research/provenance/chacha20_round20_a269_target_route_preflight_v1.json",
+    "A269_route_sha256": "7dde8989c60c00add4f47e259968bf93b0e18c5e01a4e92a54638397e28b8f50",
+    "operator_source_path": "src/arx_carry_leak/score_hypercube.py",
+    "operator_source_sha256": "45e18296ac12a80caafbc930815c8bb8db6e37d2813e59d64e2396765e6f2265",
+    "operator_test_path": "tests/test_score_hypercube.py",
+    "operator_test_sha256": "f1d258ad4dc918389f2bbdfdd6a076c56eac413048d91d0b5c09d32a759be889",
+    "runner_path": "research/experiments/chacha20_round20_local_pairwise_intervention.py",
+    "runner_sha256": "b1760758ba9bf2699b0c437a2ed9e2419bb64da0f53d24c527052c4d3a7a2681"
+  },
+  "attempt_id": "A270",
+  "controls": {
+    "operator_family_selection": 1,
+    "pairwise_statistic": "mean_directed_raw_logit_margin_over_20x8_true_neighbor_pairs",
+    "rank_statistic": "mean_log2_descending_midrank",
+    "shared_XOR_offsets": 256
+  },
+  "information_boundary": {
+    "A268_raw_rank_boundary_known_at_freeze": true,
+    "A268_result_known_at_freeze": true,
+    "future_target_generated": false,
+    "local_pairwise_rank_margin_or_XOR_control_known_at_freeze": false,
+    "local_pairwise_residual_computed_at_freeze": false,
+    "model_refit_or_coefficient_update_permitted": false,
+    "operator_selected_from_A268_local_outcome": false
+  },
+  "operator": {
+    "candidate_bits": 8,
+    "candidate_labels_used_only_after_all_local_scores_exist": true,
+    "fitted_parameters": 0,
+    "formula": "local_score[c]=raw_score[c]-mean_b(raw_score[c_xor_2^b])",
+    "name": "normalized_8cube_graph_laplacian",
+    "neighbors_per_candidate": 8,
+    "sign_or_scale_selection_permitted": false
+  },
+  "protocol_state": "frozen_after_A268_boundary_before_any_local_pairwise_residual_rank_margin_or_XOR_control",
+  "retention_gate": {
+    "local_bit_gain_must_exceed_raw_A268_bit_gain": true,
+    "maximum_exact_shared_xor_p": 0.05,
+    "minimum_positive_prefix_groups": 3,
+    "next_if_not_passed": "channel_signed_pairwise_ablation_without_model_refit",
+    "next_if_passed": "prospective_disjoint_local_pairwise_validation"
+  },
+  "schema": "chacha20-round20-local-pairwise-intervention-protocol-v1"
+}

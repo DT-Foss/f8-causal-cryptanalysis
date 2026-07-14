@@ -1,0 +1,153 @@
+{
+  "A227_fixed_coherence_rank": 64,
+  "A227_selected_top4_contained_true_prefix": false,
+  "all_fixed_A224_view_ranks": {
+    "coherence_local_residual": {
+      "direction": "descending",
+      "empirical_top_fraction": 0.63671875,
+      "rank": 163,
+      "target_value": -0.004251796329668878,
+      "tied_count": 1
+    },
+    "conflicts": {
+      "direction": "ascending",
+      "empirical_top_fraction": 0.2734375,
+      "rank": 70,
+      "target_value": 274.0,
+      "tied_count": 20
+    },
+    "conflicts_per_decision": {
+      "direction": "ascending",
+      "empirical_top_fraction": 0.234375,
+      "rank": 60,
+      "target_value": 0.9256756756756757,
+      "tied_count": 18
+    },
+    "constraint_coherence": {
+      "direction": "descending",
+      "empirical_top_fraction": 0.25,
+      "rank": 64,
+      "target_value": 6.521492949595691,
+      "tied_count": 1
+    },
+    "decisions": {
+      "direction": "ascending",
+      "empirical_top_fraction": 0.23828125,
+      "rank": 61,
+      "target_value": 296.0,
+      "tied_count": 19
+    },
+    "propagations_per_conflict": {
+      "direction": "descending",
+      "empirical_top_fraction": 0.234375,
+      "rank": 60,
+      "target_value": 202575.52554744526,
+      "tied_count": 1
+    },
+    "propagations_per_decision": {
+      "direction": "descending",
+      "empirical_top_fraction": 0.62109375,
+      "rank": 159,
+      "target_value": 187519.23648648648,
+      "tied_count": 1
+    },
+    "search_propagations": {
+      "direction": "descending",
+      "empirical_top_fraction": 0.6640625,
+      "rank": 170,
+      "target_value": 55505694.0,
+      "tied_count": 1
+    }
+  },
+  "anchors": {
+    "A227_protocol_sha256": "f1865eeb3b7099e9cd03e2387be3819c3dd7779f0f7c6fff8c77d1f9e1668a1b",
+    "A227_result_sha256": "656ae5edcc0ee4cb9a2d07db587d42544240cd55736b4bf160d661ce5c833ed0",
+    "A227_top4_completed_before_A228": true
+  },
+  "attempt_id": "R20-A228-A227-POSTBARRIER-LABEL-V1",
+  "confirmation": {
+    "all_blocks_match": true,
+    "block_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "candidate_block_sha256": [
+      "591ec68d1de4384955a14a88015a1019ca123e52ba4700044651830f373305dd",
+      "913a4a0c629e822e867836ceaa949e3c249f1dd8579bb4d7aeefe6b6d6c5d2ec",
+      "a893878f4b76f87207dee7f034905b1c1e1c46f8c889ea96dfbf5fb6d953cf01",
+      "0bed717e5712c2db26bfa2769270df54e26a888565f59b21baa7508e19f2e549",
+      "00e0e2fc2e6ddeb72cd26938ac6bc8b9137edbbef38a42c8c1cc168cb7397b97",
+      "514a147562057a5f54afe9a8817020fed670ed2893941e78736432af61b05bb4",
+      "8949d67aac270b5762878590fcd835c22671902a46267d819b86f41344148d4c",
+      "7feb52f9c6fe6a44835dbedc678164c902a7f865e428fdd4af5c56f78acffcd9"
+    ],
+    "flipped_control_rejected": true,
+    "key_word0": 2885768816,
+    "key_word0_hex": "0xac015670",
+    "output_bits_checked": 4096,
+    "prefix8": "10101100"
+  },
+  "evidence_stage": "POST_A227_BARRIER_FULL_W32_LABEL_AND_RANK_DIAGNOSIS",
+  "full_domain_execution": {
+    "complete_domain_executed": true,
+    "control_filter_matches": [],
+    "early_stop_used": false,
+    "factual_filter_matches": [
+      2885768816
+    ],
+    "filter_output_bits": 64,
+    "filter_output_words": 2,
+    "logical_candidate_count": 4294967296,
+    "stream_batch_count": 16,
+    "stream_candidate_count": 268435456
+  },
+  "host_identity": {
+    "metal": {
+      "blocks_execution_width": 32,
+      "blocks_max_threads_per_group": 1024,
+      "device": "Apple M4",
+      "filter_execution_width": 32,
+      "filter_max_threads_per_group": 1024,
+      "recommended_max_working_set_bytes": 12713115648,
+      "shader_runtime_compiled": true
+    },
+    "op": "ready",
+    "version": "chacha20-metal-native-v1"
+  },
+  "information_boundary": {
+    "A228_label_could_not_change_A227_selected_regions": true,
+    "A228_started_only_after_A227_top4_result_was_final": true
+  },
+  "native_build": {
+    "compiler_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)",
+    "executable_sha256": "5fc1863f3f5633256ccfb1a6a95945c7255fe4642d057c0c642e04b0579f7079",
+    "host_language": "Swift_6",
+    "selected_flags": [
+      "-O",
+      "-whole-module-optimization",
+      "-warnings-as-errors"
+    ],
+    "shader_language": "Metal_Shading_Language_runtime_compiled",
+    "source_sha256": "ac06b2b6131b9d7edbaf669b4df8fb78298a5920493e10a39cd2d34b1d808816",
+    "warnings_as_errors": true
+  },
+  "schema": "chacha20-round20-a227-postbarrier-label-v1",
+  "true_cell_features": {
+    "cell_index": 200,
+    "coherence_local_residual": -0.004251796329668878,
+    "conflicts": 274.0,
+    "conflicts_per_decision": 0.9256756756756757,
+    "constraint_coherence": 6.521492949595691,
+    "decisions": 296.0,
+    "prefix8": "10101100",
+    "propagations_per_conflict": 202575.52554744526,
+    "propagations_per_decision": 187519.23648648648,
+    "search_propagations": 55505694.0
+  }
+}

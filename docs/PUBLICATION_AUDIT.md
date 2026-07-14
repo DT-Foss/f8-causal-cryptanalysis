@@ -11,7 +11,7 @@ CI, and Git history were created only in the independent
 
 - installable F8, CASI/LiveCASI, CryptoCausal, cipher, and CLI code;
 - tests and frozen experiment configurations;
-- A001--A220P completed experiment sources, frozen protocols, and retained evidence;
+- A001--A277 completed experiment sources, frozen protocols, and retained evidence;
 - retained result JSON, `.causal` graphs, reports, and hash manifests;
 - A207's 11,145,296-byte exact structural-order archive, frozen protocol,
   complete 352-cell result, final Causal graph, progress map, and tests;
@@ -31,6 +31,12 @@ CI, and Git history were created only in the independent
 - final audited, pre-outcome A220B factorial-boundary routing and A222
   all-eight-block Reader ensembling/key-design infrastructure with its focused
   100-test suite; no A220/A222 outcome or A221 target artifact is included;
+- A223--A235 capacity, label, restricted-region, tie-aware null, and authentic
+  Causal readback records;
+- nine independently confirmed full-round complete-domain residual-key records
+  from A237 through A264 plus AES-W41, including Salsa20/20-W42;
+- the fresh Reader progression A242/A249--A272 and the two-target A273--A277
+  selected-channel recovery and exact-boundary chain;
 - the committed twelve-configuration F8 anchor suite exported from source
   commit `2e23b23e46cd7a413edd5b56a748e4d5e6e62f73`;
 - Nanjing/Rome reference datasets and author-owned TeX;
@@ -52,6 +58,7 @@ CI, and Git history were created only in the independent
 | A215 145 MB raw measurement NPZ | exceeds the repository's 50 MiB publication ceiling; exact hash retained in protocol/result/report |
 | A220 fit/select/holdout measurements, selected Reader and final output | not part of this protocol/infrastructure snapshot; no A220 outcome is claimed |
 | A220B/A222 outcomes and all A221 target artifacts | protocols only; no branch, improvement, target, secret, measurement, or recovery outcome is published |
+| A278--A281 and PRESENT-128 in-flight records | outside the completed A223--A277 publication boundary |
 | unrelated workspace/session trees | outside the curated evidence scope |
 
 The PQCrypto exclusion retains one required file,
@@ -77,10 +84,10 @@ so a future `--force` replay does not reintroduce private paths.
 The same byte-local policy is applied to the A211--A219 publication copy:
 absolute laboratory roots become `<repository>` or named `<source-...>` roles.
 A220P is deliberately retained byte-for-byte because the final A220 protocol
-binds its exact whole-file hash; its inert provenance path strings are the one
-explicitly allowlisted exception. Scientific observations and canonical
-measurement digests are unchanged, and the dedicated manifest authenticates
-every public file.
+binds its exact whole-file hash. A223--A277 authentic records are likewise
+retained byte-for-byte; source-machine path strings may occur only in files
+explicitly bound by `A223_A277_SHA256SUMS`. Scientific observations and
+canonical measurement digests are unchanged.
 
 ### PowerPoint metadata
 
@@ -93,8 +100,7 @@ checked in CI.
 
 README, CFF, package metadata, paper sources, presentation metadata, local Git
 author/committer configuration, tag, and release text use **David Tom Foss**.
-The commit e-mail `david@foss.com.de` was taken from the author's existing
-public anchor commit; no address was invented.
+The current release commit and CFF use `d.foss@ieee.org`.
 
 ## Third-party license audit
 
@@ -103,6 +109,7 @@ public anchor commit; no address was invented.
 | `sha2.c` from PQCrypto/PQClean | required file only; public-domain source note retained; upstream Apache-2.0 LICENSE and NOTICE included; commit and hash pinned |
 | `IEEEtran.cls` V1.8b | unmodified; copyright header and LPPL 1.3 declaration retained; hash pinned |
 | Python dependencies | fetched from pinned package-index versions; not vendored |
+| `dotcausal` 0.3.1 Reader | required AI-native Causal Reader source vendored with its MIT license and notice |
 | Root author-owned code and documentation | BSD-3-Clause; no separate express patent license; no patent-filing claim |
 | LiveCASI, LiveCASIv2 source bundle, and F8 anchor suite | earlier MIT work by David Tom Foss; local license texts retained and exact dependency ZIP hash preserved |
 
@@ -112,35 +119,33 @@ Full notices are in `THIRD_PARTY_NOTICES.md`.
 
 `scripts/check_publication.py` fails on:
 
-- home-directory absolute paths outside the exact hash-bound A220P record;
+- home-directory absolute paths outside the exact hash-bound A220P and
+  A223--A277 authentic records;
 - private-key blocks and distinctive GitHub/OpenAI/AWS token forms;
 - non-canonical public author forms;
 - broken relative Markdown links;
 - symlinks or individual files above 50 MiB;
 - missing publication ledgers or manifests;
 - compiled native binaries, private/sealed state, A220 measurement/result
-  files, A220B/A222 outcomes, A221 target artifacts, or the 145 MB A215 raw
-  archive;
+  files, A220B/A222 outcomes, A221 target artifacts, A278--A281/PRESENT-128
+  in-flight records, or the 145 MB A215 raw archive;
 - a corrupt presentation or non-canonical deck creator metadata.
 
-At this A220P plus A220B/A222 protocol-supplement publication candidate, the audit reports zero secret
-matches, zero unallowlisted private absolute paths, zero broken relative links,
-zero symlinks, zero files above 50 MiB, and zero non-canonical author identities.
-The audited tree contains 1,710 files, of which 1,283 are UTF-8 text inputs,
-totaling 142,976,238 bytes before Git object compression. The largest retained
-object is the 22,063,261-byte A220P JSON record, below both the repository's
-50 MiB audit ceiling and GitHub's per-file limit.
+The A223--A277 publication gate reports zero secret matches, zero unallowlisted
+private absolute paths, zero broken relative links, zero symlinks, zero files
+above 50 MiB, and zero non-canonical author identities. Exact file and byte
+counts are emitted by `scripts/check_publication.py` for the checked tree.
 
 ## Scientific integrity gates
 
-- complete quick evidence tier, the focused A210 suite, and the complete
-  A211--A220P retained-evidence/protocol gate;
+- complete quick evidence tier, the focused A210 suite, the complete
+  A211--A220P retained-evidence/protocol gate, and the focused A223--A277 gate;
 - `compileall` over active code and scripts;
 - shell syntax for every reproduction script;
 - primitive vectors;
-- all 360 committed `.causal` artifacts opened by `CryptoCausalReader`;
+- all committed `.causal` artifacts opened by their legacy or AI-native Reader;
 - all retained SHA-256 manifests, including the dedicated A220B/A222
-  infrastructure manifest, verified;
+  infrastructure and A223--A277 release manifests, verified;
 - deterministic SVG regenerated byte-for-byte from retained JSON;
 - all 21 A187--A207 SVGs regenerated byte-for-byte from retained JSON;
 - `git diff --check` and clean committed worktree.

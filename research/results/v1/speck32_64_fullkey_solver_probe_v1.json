@@ -1,0 +1,782 @@
+{
+  "bidirectional_split_instance": {
+    "bitwuzla_cnf": {
+      "bytes": 619713,
+      "header": "p cnf 12125 38791",
+      "path": "/tmp/a238_split.cnf",
+      "sha256": "ecd0f7d1d72fe3586fc0e0ed58a709aa60280f94fb26cee4f2c29a43a4818ff4"
+    },
+    "data_split_round": 11,
+    "key_schedule_state_round": 10,
+    "known_key_gate": {
+      "bitwuzla": "sat exact benchmark key",
+      "z3": "sat exact benchmark key"
+    },
+    "smt2": {
+      "bytes": 23943,
+      "header": "; A238 middle-key-state + bidirectional-data Speck32/64 encoding",
+      "path": "/tmp/a238_speck32_64_22r_fullkey_3pair_midkey_split11.smt2",
+      "sha256": "88a976ab189e7de79ff03e3087bd160eab4de8fd0988a6aab95c6b194c439f6a"
+    }
+  },
+  "created_utc": "2026-07-13T18:34:30.693746+00:00",
+  "deterministic_random_pair_instance": {
+    "benchmark_key_hex_words": [
+      "7792",
+      "cc2c",
+      "f345",
+      "54ee"
+    ],
+    "bitwuzla_cnf": {
+      "bytes": 566465,
+      "header": "p cnf 11068 35648",
+      "path": "/tmp/a238_bitwuzla.cnf",
+      "sha256": "6df9dee9de0aea4353da2083cbae800b48860a578ab4f3c53c8bd40635888498"
+    },
+    "derivation": "SHA-256 domain-separated benchmark key and plaintexts",
+    "pairs_hex_words": [
+      [
+        "4b9e",
+        "283e",
+        "cc12",
+        "5598"
+      ],
+      [
+        "37cf",
+        "9ea1",
+        "47e9",
+        "3820"
+      ],
+      [
+        "ef7f",
+        "0bbb",
+        "e9b5",
+        "681b"
+      ]
+    ],
+    "smt2": {
+      "bytes": 21031,
+      "header": "; Exact full-round Speck32/64 full-key recovery formula",
+      "path": "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2",
+      "sha256": "147649d60975217a4632a8295dc6f692d663ae32b27d86dfaa871149fd4846b3"
+    }
+  },
+  "experiment_id": "A238-mechanical-preflight",
+  "gates": {
+    "core_py_compile": true,
+    "core_ruff": true,
+    "known_key_gate": [
+      "Z3 sat exact key",
+      "Bitwuzla sat exact key",
+      "Boolector sat exact key"
+    ],
+    "timeout_parser_maps_z3_timeout_to_unknown": true,
+    "unit_tests": "5 passed"
+  },
+  "host": {
+    "cpu": "Apple M4",
+    "memory_bytes": 17179869184,
+    "os": "macOS 26.5 (25F71)"
+  },
+  "probes": [
+    {
+      "budget_seconds": 15,
+      "command": [
+        "z3",
+        "-smt2",
+        "-T:15",
+        "-st",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {
+        "max_memory_mb": 59.25,
+        "rlimit_count": 169417867
+      },
+      "name": "z3_default",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.008664958178997
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "z3",
+        "-smt2",
+        "-T:15",
+        "-st",
+        "smt.bv.delay=true",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {
+        "max_memory_mb": 59.05,
+        "rlimit_count": 167189738
+      },
+      "name": "z3_bv_delay",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.009947291109711
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cadical",
+        "--time-limit",
+        "15000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "bitwuzla_bb_cadical",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.01709391688928
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "kissat",
+        "--time-limit",
+        "15000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": "[error] invalid configuration for option --sat-solver, Kissat not compiled in",
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "bitwuzla_bb_kissat",
+      "returncode": 1,
+      "status": "unsupported_backend",
+      "wall_seconds": 0.004847832955420017
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "cms",
+        "--time-limit",
+        "15000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": "[error] invalid configuration for option --sat-solver, CryptoMiniSat not compiled in",
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "bitwuzla_bb_cms",
+      "returncode": 1,
+      "status": "unsupported_backend",
+      "wall_seconds": 0.004106791689991951
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "bitblast",
+        "--sat-solver",
+        "gimsatul",
+        "--time-limit",
+        "15000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": "[error] invalid configuration for option --sat-solver, Gimsatul not compiled in",
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "bitwuzla_bb_gimsatul",
+      "returncode": 1,
+      "status": "unsupported_backend",
+      "wall_seconds": 0.0038751671090722084
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "prop",
+        "--time-limit",
+        "15000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "bitwuzla_prop",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.008999874815345
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "preprop",
+        "--time-limit",
+        "15000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "bitwuzla_preprop",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.010466999839991
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "boolector",
+        "--smt2",
+        "--time=15",
+        "-m",
+        "-x",
+        "-E",
+        "fun",
+        "-SE",
+        "lingeling",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "boolector_fun_lingeling",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.007223040796816
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "boolector",
+        "--smt2",
+        "--time=15",
+        "-m",
+        "-x",
+        "-E",
+        "fun",
+        "-SE",
+        "cadical",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": "[boolector] boolector_set_opt: WARNING: SAT solver CaDiCaL not compiled in, using Lingeling",
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "boolector_fun_cadical",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.012627250049263
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "boolector",
+        "--smt2",
+        "--time=15",
+        "-m",
+        "-x",
+        "-E",
+        "fun",
+        "-SE",
+        "cms",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": "[boolector] boolector_set_opt: WARNING: SAT solver CryptoMiniSat not compiled in, using Lingeling",
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "boolector_fun_cms",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.009865625295788
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "boolector",
+        "--smt2",
+        "--time=15",
+        "-m",
+        "-x",
+        "-E",
+        "prop",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "boolector_prop",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.008455332834274
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "boolector",
+        "--smt2",
+        "--time=15",
+        "-m",
+        "-x",
+        "-E",
+        "sls",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "boolector_sls",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.007810334209353
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "boolector",
+        "--smt2",
+        "--time=15",
+        "-m",
+        "-x",
+        "-E",
+        "aigprop",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_qf_bv",
+      "metrics": {},
+      "name": "boolector_aigprop",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.008770124986768
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "kissat",
+        "--time=15",
+        "--statistics",
+        "/tmp/a238_bitwuzla.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {
+        "conflicts": 41815,
+        "decisions": 118556,
+        "propagations": 7405685
+      },
+      "name": "kissat_default",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.010274374857545
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "kissat",
+        "--time=15",
+        "--sat",
+        "--statistics",
+        "/tmp/a238_bitwuzla.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {
+        "conflicts": 66069,
+        "decisions": 101619,
+        "propagations": 11857227
+      },
+      "name": "kissat_sat",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.008532584179193
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "cadical",
+        "-t",
+        "15",
+        "/tmp/a238_bitwuzla.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {
+        "conflicts": 55692,
+        "decisions": 127174,
+        "propagations": 121969620
+      },
+      "name": "cadical_default",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.015448042191565
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "cadical",
+        "-t",
+        "15",
+        "--sat",
+        "/tmp/a238_bitwuzla.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {
+        "conflicts": 33050,
+        "decisions": 35551,
+        "propagations": 131636282
+      },
+      "name": "cadical_sat",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.008955541998148
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "cryptominisat5",
+        "--maxtime",
+        "15",
+        "--threads",
+        "1",
+        "--verb",
+        "1",
+        "/tmp/a238_bitwuzla.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {},
+      "name": "cryptominisat_1t",
+      "returncode": 15,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 15.278174082748592
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "cryptominisat5",
+        "--maxtime",
+        "15",
+        "--threads",
+        "4",
+        "--verb",
+        "1",
+        "/tmp/a238_bitwuzla.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {},
+      "name": "cryptominisat_4t",
+      "returncode": 15,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 3.9300630409270525
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "minisat",
+        "/tmp/a238_bitwuzla.cnf",
+        "/tmp/a238_minisat.sol"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_bitwuzla_cnf",
+      "metrics": {},
+      "name": "minisat_guard",
+      "returncode": null,
+      "status": "guard_timeout",
+      "wall_seconds": 18.003437916748226
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "z3",
+        "-smt2",
+        "-T:20",
+        "-st",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair_midkey_split11.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "middle_key_bidirectional_split",
+      "metrics": {
+        "max_memory_mb": 55.2,
+        "rlimit_count": 186783557
+      },
+      "name": "z3_split",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.00954637490213
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "prop",
+        "--time-limit",
+        "20000",
+        "/tmp/a238_speck32_64_22r_fullkey_3pair_midkey_split11.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "middle_key_bidirectional_split",
+      "metrics": {},
+      "name": "bitwuzla_prop_split",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.018186083063483
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "kissat",
+        "--time=20",
+        "--sat",
+        "--statistics",
+        "/tmp/a238_split.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "middle_key_bidirectional_split",
+      "metrics": {
+        "conflicts": 105798,
+        "decisions": 180649,
+        "propagations": 14069128
+      },
+      "name": "kissat_sat_split",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.005563125014305
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "cryptominisat5",
+        "--maxtime",
+        "20",
+        "--threads",
+        "4",
+        "--verb",
+        "1",
+        "/tmp/a238_split.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "middle_key_bidirectional_split",
+      "metrics": {},
+      "name": "cryptominisat_4t_split",
+      "returncode": 15,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 5.1468372088856995
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "bitwuzla",
+        "-m",
+        "--bv-output-format",
+        "16",
+        "--bv-solver",
+        "prop",
+        "-t",
+        "20000",
+        "/tmp/a238_structured3.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "structured_plaintexts_direct",
+      "metrics": {},
+      "name": "bitwuzla_prop_struct",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.007072916720062
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "kissat",
+        "--time=20",
+        "--sat",
+        "--statistics",
+        "/tmp/a238_structured3.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "structured_plaintexts_direct",
+      "metrics": {
+        "conflicts": 78316,
+        "decisions": 129043,
+        "propagations": 6618043
+      },
+      "name": "kissat_sat_struct",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.00542154163122
+    },
+    {
+      "budget_seconds": 20,
+      "command": [
+        "cryptominisat5",
+        "--maxtime",
+        "20",
+        "--threads",
+        "4",
+        "--verb",
+        "1",
+        "/tmp/a238_structured3.cnf"
+      ],
+      "diagnostic": null,
+      "encoding": "structured_plaintexts_direct",
+      "metrics": {},
+      "name": "cryptominisat4_struct",
+      "returncode": 15,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 5.112415166571736
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "z3",
+        "-smt2",
+        "-T:22",
+        "-st",
+        "/tmp/a238_direct_qfbv-sls.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_z3_tactics",
+      "metrics": {
+        "max_memory_mb": 23.63,
+        "rlimit_count": 178721
+      },
+      "name": "z3_direct_qfbv-sls",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.100418166723102
+    },
+    {
+      "budget_seconds": 15,
+      "command": [
+        "z3",
+        "-smt2",
+        "-T:22",
+        "-st",
+        "/tmp/a238_direct_sls-smt.smt2"
+      ],
+      "diagnostic": null,
+      "encoding": "direct_z3_tactics",
+      "metrics": {
+        "max_memory_mb": 25.26,
+        "rlimit_count": 12884624
+      },
+      "name": "z3_direct_sls-smt",
+      "returncode": 0,
+      "status": "unknown_budget_exhausted",
+      "wall_seconds": 20.017472499981523
+    }
+  ],
+  "result": {
+    "best_direct_cdcl_probe": {
+      "budget_seconds": 15,
+      "conflicts": 66069,
+      "propagations": 131598869,
+      "solver": "Kissat --sat",
+      "status": "unknown"
+    },
+    "best_split_cdcl_probe": {
+      "budget_seconds": 20,
+      "conflicts": 105798,
+      "propagations": 174266501,
+      "solver": "Kissat --sat",
+      "status": "unknown"
+    },
+    "encoding_comparison": "11+11 bidirectional/middle-key split was valid but 9.4% more CNF variables and 8.8% more clauses than direct; no bounded solve advantage established",
+    "recommended_next_direction": "native XOR-aware Speck bit-blast or deterministic partial-key/round calibration surface before any long full-key run; retain direct Bitwuzla CNF plus Kissat-sat as current mechanical baseline",
+    "recovery_status": "not_recovered_within_short_probe_budgets"
+  },
+  "schema_version": 1,
+  "scope": {
+    "cipher": "Speck32/64",
+    "goal": "bounded local solver/encoding selection; no recovery claim",
+    "known_plaintext_ciphertext_pairs": 3,
+    "rounds": 22,
+    "unknown_master_key_bits": 64
+  },
+  "structured_plaintext_instance": {
+    "bitwuzla_cnf": {
+      "bytes": 564789,
+      "header": "p cnf 11038 35551",
+      "path": "/tmp/a238_structured3.cnf",
+      "sha256": "53b6ea3cbe9dbc92bebc3ba81ab1b1743a5d97054b306330d4cca3ac53e1d329"
+    },
+    "ciphertexts_hex_words": [
+      [
+        "00f3",
+        "2d9a"
+      ],
+      [
+        "6ca0",
+        "0f92"
+      ],
+      [
+        "a954",
+        "cdb0"
+      ]
+    ],
+    "plaintexts_hex_words": [
+      [
+        "0000",
+        "0000"
+      ],
+      [
+        "0000",
+        "0001"
+      ],
+      [
+        "0001",
+        "0000"
+      ]
+    ],
+    "smt2": {
+      "bytes": 21005,
+      "header": "; Exact full-round Speck32/64 full-key recovery formula",
+      "path": "/tmp/a238_structured3.smt2",
+      "sha256": "1fa334548d6f7974c7547ba32542bb6cf571d4e5761010cc256bb13c0c9d79af"
+    }
+  },
+  "versions": {
+    "bitwuzla": "0.9.1",
+    "boolector": "3.2.4",
+    "cadical": "3.0.0",
+    "cryptominisat5": "c CMS SHA1: GIT-notfound",
+    "kissat": "4.0.4",
+    "z3": "Z3 version 4.15.4 - 64 bit"
+  }
+}

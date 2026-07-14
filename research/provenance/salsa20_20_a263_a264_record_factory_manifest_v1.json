@@ -1,0 +1,80 @@
+{
+  "schema": "salsa20-20-record-factory-pre-freeze-manifest-v1",
+  "qualification_attempt_id": "A263",
+  "recovery_attempt_id": "A264",
+  "algorithm": {
+    "name": "Salsa20/20",
+    "rounds": 20,
+    "key_bits": 256,
+    "nonce_bits": 64,
+    "counter_bits": 64,
+    "output_block_bits": 512,
+    "byte_semantics": "Bernstein_little_endian"
+  },
+  "factory_state": {
+    "cpu_specification_kats_passed": true,
+    "current_swift_source_typechecked": true,
+    "current_swift_host_compiled": false,
+    "current_bounded_native_kat_cross_and_boundary_smoke_passed": false,
+    "current_toy_complete_native_domain_factual_and_control_smoke_passed": false,
+    "offline_factory_tests_passed": 26,
+    "synthetic_boolean_only_qualification_rejected": true,
+    "canonical_metal_evidence_ledger_recomputed_by_factory_and_recovery": true,
+    "absolute_host_lifetime_deadline_covers_startup_and_response_waits": true,
+    "deadline_timeout_kills_native_subprocess": true,
+    "width_and_eta_derived_from_minimum_end_to_end_wall_throughput": true,
+    "recovery_artifact_manifest_binds_result_causal_report_and_evidence": true,
+    "throughput_qualification_executed": false,
+    "current_metal_executed": false,
+    "metal_evidence_ledger_materialized": false,
+    "production_secret_selected": false,
+    "production_challenge_frozen": false,
+    "production_domain_executed": false,
+    "preflight_only_not_recovery_evidence": true
+  },
+  "official_sources": {
+    "specification_url": "https://cr.yp.to/snuffle/spec.pdf",
+    "specification_pdf_sha256": "2d1680c468f3b8c8dd05141553170a37f7b35507ba854a879515793395702810",
+    "bernstein_reference_url": "https://cr.yp.to/snuffle/salsa20/ref/salsa20.c",
+    "bernstein_reference_sha256": "1b240d8dc2530e8f5ee688d0347b30f3dbc760345a3794e24895efda3d9a893a"
+  },
+  "files": {
+    "cpu_reference": {
+      "path": "src/arx_carry_leak/salsa20_reference.py",
+      "sha256": "4867a767deb2ba917e7123c8f4fefc6218a858e0750378ceac12028c2871c579"
+    },
+    "native_host": {
+      "path": "research/experiments/salsa20_20_metal_native.swift",
+      "sha256": "0c7baa4bbdd11c6659b2e14c9d776a9c123b01d03d77a969d863ce5c06fab1ed"
+    },
+    "qualification": {
+      "path": "research/experiments/salsa20_20_metal_qualification.py",
+      "sha256": "c793de778bf03618a65f9e129aa5e405c3c3641c317834b01b4aab9623edcdb1"
+    },
+    "protocol_factory": {
+      "path": "research/experiments/salsa20_20_metal_protocol_factory.py",
+      "sha256": "3c8bc3669af64e37ee7f617dd79116039d7c2ef0f1c73038bded7f027347dc77"
+    },
+    "recovery": {
+      "path": "research/experiments/salsa20_20_metal_recovery.py",
+      "sha256": "f60f30d75fb0a5c5a491b9f36b272b010040ed6613775a16d01de037bcaa0538"
+    },
+    "reproduction_entrypoint": {
+      "path": "scripts/reproduce_salsa20_20_metal_factory.sh",
+      "sha256": "a4725a6ab743cf3c2864ff47f6399b9bbe9b147556139a035998cbe5e3441de3"
+    },
+    "tests": {
+      "path": "tests/test_salsa20_20_record_factory.py",
+      "sha256": "2bfefaf3350032137db2d0a25704b7ff4c8c3e57cdc2bd4a05d43f2ec593cd79"
+    }
+  },
+  "root_decisions_before_qualification": {
+    "confirm_attempt_ids_A263_A264": true,
+    "authorize_bounded_throughput_qualification_after_current_gpu_owner_finishes": false
+  },
+  "root_decisions_before_freeze": {
+    "review_retained_qualification": false,
+    "accept_qualification_selected_width_and_stream_batch": false,
+    "explicitly_acknowledge_fresh_challenge_freeze": false
+  }
+}

@@ -44,3 +44,17 @@ Current active hashes after those corrections:
 
 These current hashes are checkpoints, not permanent identifiers; the manifest
 and run records contain the authoritative hash for every executed artifact.
+
+## A223--A277 public release boundary (2026-07-14)
+
+Release `0.3.0` publishes the completed A223--A277 evidence chain. The
+authoritative release manifest is
+`research/results/v1/A223_A277_SHA256SUMS`; its focused test inventory is
+`research/results/v1/A223_A277_TESTS.txt` and its non-production reproduction
+entry point is `scripts/reproduce_a223_a277.sh`.
+
+The release includes corrected, known-answer-test-passing Speck32/64,
+Speck64/128, and SIMON64/128 implementations and their independently confirmed
+complete-domain recovery records. It does not reinterpret the historical Nano
+Speck/SIMON snapshot. A278--A281 and PRESENT-128 are outside this release and no
+result from those in-flight attempts is included.
