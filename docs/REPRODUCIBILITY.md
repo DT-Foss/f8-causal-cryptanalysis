@@ -84,6 +84,21 @@ solver searches or multi-hour `2^38`/`2^41` Metal enumerations.
 
 Expected final line: `A278--A286 and complete-domain record tier: OK`.
 
+### A287--A325 cryptanalysis tier
+
+```bash
+./scripts/reproduce_a287_a325.sh
+```
+
+This portable tier verifies the complete A287--A325 release manifest,
+independently recomputes the 19 strict-subset executions and the complete W43
+record, runs the completed order/engine/audit tests, and opens the retained
+AI-native `.causal` files with the authoritative Reader. It enforces that A322
+and A325 have no result artifact and does not launch the production Metal
+domains or solver portfolios.
+
+Expected final line: `A287--A325 cryptanalysis tier: OK`.
+
 ### Anchors
 
 ```bash
@@ -468,7 +483,10 @@ python scripts/verify_hash_manifest.py \
   research/results/v1/SHAKE_NATIVE_EXTENDED_SHA256SUMS \
   research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS \
   research/results/v1/A211_A220P_SHA256SUMS \
-  research/results/v1/A220B_A222_INFRA_SHA256SUMS
+  research/results/v1/A220B_A222_INFRA_SHA256SUMS \
+  research/results/v1/A223_A277_SHA256SUMS \
+  research/results/v1/A278_A286_RECORDS_SHA256SUMS \
+  research/results/v1/A287_A325_SHA256SUMS
 ```
 
 The manifest parser rejects malformed hashes, duplicate entries, missing

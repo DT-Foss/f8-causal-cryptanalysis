@@ -155,3 +155,22 @@ experiment's representation.
 The A286 root confirmation and authentic Causal graph are the aggregate panel
 anchors. A285's nine-byte API-id failure affects only the first aggregate-file
 write; it does not alter any of the four per-target results.
+
+## A287--A325 full-round ChaCha20 claims
+
+| Record | Direct claim | Exact boundary |
+|---|---|---|
+| CHACHA20KR43 | One complete `2^43` standard ChaCha20-R20 residual search returns the unique factual assignment and no control assignment. | 43 unknown and 213 known key bits; eight public blocks; all 20 rounds plus feed-forward; no early stop. |
+| A294--A297 | Fourteen strict-subset executions recover 13 distinct W24/W28/W32 targets. | A294/A295 deliberately reuse one target under different frozen orders; all matched controls are empty; every recovered block is independently recomputed. |
+| A303/A302-A304/A305/A309 | Four further W32/W43 strict-subset executions recover four distinct targets. | Exact executed-domain counts are retained; each result confirms eight blocks through two implementations and leaves the matched control empty. |
+| A313 | The frozen W44 three-arm order recovers assignment `0x09a302d6134` at rank 2,753 after 11,824,044,965,888 of `2^44` assignments. | Complete `2^32` groups, stop only between groups, empty matched control, dual eight-block confirmation totaling 8,192 checked bits. |
+| A304/A307/A311 | Target-free grouped engines execute complete W43/W44/W45 prefix groups exactly. | Synthetic qualification and cross-implementation mapping gates; not production-target recoveries. |
+| A315/A317/A319 | Three pre-reveal-committed operator families are evaluated exactly on the independently confirmed A313 prefix without duplicate candidate execution. | Rank-only evaluation; zero target-label use and zero post-reveal refits. |
+| A321 | Independent W44 holdout rank selects `raw_nearest_prototype_Linf` at rank 2,159 and deploys its exact paired W45 order. | Selection rule and eight order pairs frozen before A313/A314 outcomes; no W45 labels or manual override. |
+| A324 | One complete W46 prefix group executes exactly across eight `2^31` slabs and passes 147,968 boundary-bit checks. | Target-free synthetic qualification; unique factual assignment and empty matched control; no production challenge. |
+| A323 | Complete target-blind cross-width operator stability is measured over eight exact 4,096-cell W44/W45 order pairs. | Rank geometry and complementarity only; no secret label or candidate execution. |
+
+A322 is a live execution under its frozen protocol; A325 is a frozen W46
+protocol without a production outcome. A314 is a completed model-free order,
+not a recovery. The publication gate rejects any A322/A325 outcome file in
+this release.

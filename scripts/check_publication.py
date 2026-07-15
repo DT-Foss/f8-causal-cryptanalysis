@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP_PARTS = {".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache"}
+SKIP_PARTS = {".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache", "build"}
 TEXT_SUFFIXES = {
     "",
     ".cff",
@@ -44,6 +44,7 @@ EXACT_PATH_BEARING_RECORDS = {
 PATH_BEARING_RELEASE_MANIFESTS = (
     Path("research/results/v1/A223_A277_SHA256SUMS"),
     Path("research/results/v1/A278_A286_RECORDS_SHA256SUMS"),
+    Path("research/results/v1/A287_A325_SHA256SUMS"),
 )
 
 
@@ -143,6 +144,8 @@ def main() -> int:
         "docs/RELEASE_A220B_A222_INFRA.md",
         "docs/RELEASE_A223_A277.md",
         "docs/RELEASE_A278_A286_RECORDS.md",
+        "docs/RELEASE_A287_A325_CRYPTANALYSIS.md",
+        "docs/PUBLISH_GAP_AUDIT_A287_A325.md",
         "research/results/v1/ANCHOR_SHA256SUMS",
         "research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS",
         "research/results/v1/A223_A277_SHA256SUMS",
@@ -150,6 +153,46 @@ def main() -> int:
         "research/results/v1/A278_A286_RECORDS_SHA256SUMS",
         "research/results/v1/A278_A286_RECORDS_TESTS.txt",
         "scripts/reproduce_a278_a286_records.sh",
+        "research/results/v1/A287_A325_SHA256SUMS",
+        "research/results/v1/A287_A325_TESTS.txt",
+        "scripts/reproduce_a287_a325.sh",
+        "tests/test_a287_a325_published_records.py",
+        "research/results/v1/chacha20_round20_w43_metal_record_v1.json",
+        "research/results/v1/chacha20_round20_w43_metal_record_v1.causal",
+        "research/results/v1/chacha20_round20_w24_causal_ordered_metal_a294_v1.json",
+        "research/results/v1/chacha20_round20_w24_causal_ordered_metal_a294_v1.causal",
+        "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.json",
+        "research/results/v1/chacha20_round20_w24_fine_selected_channel_a295_v1.causal",
+        "research/results/v1/chacha20_round20_causal_search_gain_panel_a296_v1.json",
+        "research/results/v1/chacha20_round20_causal_search_gain_panel_a296_v1.causal",
+        "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.json",
+        "research/results/v1/chacha20_round20_w32_causal_search_gain_panel_a297_v1.causal",
+        "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.json",
+        "research/results/v1/chacha20_round20_w32_dominance_pruned_companion_a303_v1.causal",
+        "research/results/v1/chacha20_round20_w43_grouped_engine_a304_v1.json",
+        "research/results/v1/chacha20_round20_w43_grouped_engine_a304_v1.causal",
+        "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json",
+        "research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.causal",
+        "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json",
+        "research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.causal",
+        "research/results/v1/chacha20_round20_cross_width_operator_stability_a323_v1.json",
+        "research/results/v1/chacha20_round20_cross_width_operator_stability_a323_v1.causal",
+        "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json",
+        "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+        "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.causal",
+        "research/results/v1/chacha20_round20_w44_online_multicenter_counterfactual_a315_v1.json",
+        "research/results/v1/chacha20_round20_w44_online_multicenter_counterfactual_a315_v1.causal",
+        "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_v1.json",
+        "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_v1.causal",
+        "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_v1.json",
+        "research/results/v1/chacha20_round20_w44_covariance_whitened_atlas_a319_v1.causal",
+        "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_commitment_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.causal",
+        "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_design_v1.json",
+        "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+        "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+        "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
         "research/results/v1/chacha20_round20_cross_material_composite_recovery_v1.json",
         "research/results/v1/chacha20_round20_cross_material_composite_recovery_canonical_v1.causal",
         "research/results/v1/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json",
@@ -440,11 +483,53 @@ def main() -> int:
         "research/results/v1/chacha20_round20_factorial_boundary_route_v1.json",
         "research/results/v1/chacha20_round20_factorial_eight_block_ensemble_v1.json",
         "research/results/v1/chacha20_round20_factorial_prospective_target_v1_public.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal",
+        "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal",
         ".research_sealed",
     ]
     for item in forbidden_unfinished_or_private_files:
         if (ROOT / item).exists():
             failures.append(f"unfinished or private publication file: {item}")
+
+    a313 = json.loads(
+        (ROOT / "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json").read_bytes()
+    )
+    if not (
+        a313.get("evidence_stage")
+        == "FULLROUND_R20_W44_WIDTH_CONDITIONED_FINE_STRICT_SUBSET_RECOVERY_CONFIRMED"
+        and a313["discovery"].get("executed_prefix_groups") == 2753
+        and a313["discovery"].get("executed_assignments") == 11_824_044_965_888
+        and a313["discovery"].get("complete_domain_assignments") == 2**44
+        and a313["discovery"].get("factual_filter_candidates") == [662_233_243_956]
+        and a313["discovery"].get("control_filter_candidates") == []
+        and a313["confirmation"].get("total_cross_implementation_output_bits_checked") == 8192
+    ):
+        failures.append("A313 retained recovery gates differ")
+
+    a321 = json.loads(
+        (ROOT / "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json").read_bytes()
+    )
+    if not (
+        a321["selection"].get("selected_operator") == "raw_nearest_prototype_Linf"
+        and a321["selection"].get("selected_calibration_rank_one_based") == 2159
+        and a321["information_boundary"].get("target_labels_used_from_A314") == 0
+    ):
+        failures.append("A321 retained holdout selection differs")
+
+    a324 = json.loads(
+        (ROOT / "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json").read_bytes()
+    )
+    if not (
+        a324.get("evidence_stage") == "TARGET_FREE_COMPLETE_W46_GROUP_ENGINE_EXACTLY_QUALIFIED"
+        and a324["complete_group_gate"].get("logical_candidates") == 2**34
+        and a324["complete_group_gate"].get("slabs_executed") == list(range(8))
+        and a324.get("total_boundary_output_bits_checked") == 147_968
+        and a324.get("matched_control_empty") is True
+        and a324.get("production_W46_challenge_used") is False
+    ):
+        failures.append("A324 target-free W46 qualification gates differ")
 
     a220p_result = ROOT / "research/results/v1/chacha20_round20_multihorizon_preflight_v1.json"
     a220_protocol = ROOT / "research/configs/chacha20_round20_factorial_trajectory_transfer_v1.json"
@@ -724,6 +809,96 @@ def main() -> int:
         or aes256["execution"]["control_full_matches"] != []
     ):
         failures.append("AES-256 W41 record identity differs")
+
+    w43_complete = json.loads(
+        (results / "chacha20_round20_w43_metal_record_v1.json").read_bytes()
+    )
+    if not (
+        w43_complete["attempt_id"] == "CHACHA20KR43"
+        and w43_complete["evidence_stage"]
+        == "FULLROUND_CHACHA20_W43_COMPLETE_DOMAIN_RECOVERY_CONFIRMED"
+        and w43_complete["execution"]["executed_assignment_count"] == 2**43
+        and w43_complete["execution"]["complete_domain_executed"] is True
+        and w43_complete["execution"]["early_stop_used"] is False
+        and w43_complete["execution"]["factual_full_matches"] == [2_800_167_095_032]
+        and w43_complete["execution"]["control_full_matches"] == []
+    ):
+        failures.append("ChaCha20-R20 W43 complete-domain record differs")
+
+    a294 = json.loads(
+        (results / "chacha20_round20_w24_causal_ordered_metal_a294_v1.json").read_bytes()
+    )
+    a295 = json.loads(
+        (results / "chacha20_round20_w24_fine_selected_channel_a295_v1.json").read_bytes()
+    )
+    if not (
+        a294["evidence_stage"]
+        == "FULLROUND_R20_W24_CAUSAL_ORDERED_STRICT_SUBSET_RECOVERY_CONFIRMED"
+        and a294["discovery"]["Causal_prefix_rank_one_based"] == 202
+        and a294["discovery"]["strict_subset_of_complete_domain"] is True
+        and a294["discovery"]["matched_control_candidates"] == 0
+        and a295["evidence_stage"]
+        == "FULLROUND_R20_W24_FINE_SELECTED_CHANNEL_ORDERED_RECOVERY_CONFIRMED"
+        and a295["discovery"]["Causal_prefix_rank_one_based"] == 2605
+        and a295["discovery"]["strict_subset_of_complete_domain"] is True
+        and a295["discovery"]["matched_control_candidates"] == 0
+    ):
+        failures.append("A294/A295 strict-subset records differ")
+
+    a296 = json.loads(
+        (results / "chacha20_round20_causal_search_gain_panel_a296_v1.json").read_bytes()
+    )
+    a297 = json.loads(
+        (results / "chacha20_round20_w32_causal_search_gain_panel_a297_v1.json").read_bytes()
+    )
+    if not (
+        a296["aggregate"]["confirmed_recoveries"] == 8
+        and a296["aggregate"]["strict_subset_recoveries"] == 8
+        and a296["aggregate"]["matched_control_candidates"] == 0
+        and a296["aggregate"]["cross_implementation_output_bits_checked"] == 65_536
+        and a297["aggregate"]["confirmed_recoveries"] == 4
+        and a297["aggregate"]["strict_subset_recoveries"] == 4
+        and a297["aggregate"]["matched_control_candidates"] == 0
+        and a297["aggregate"]["cross_implementation_output_bits_checked"] == 32_768
+    ):
+        failures.append("A296/A297 transfer panels differ")
+
+    for name, attempt, rank, checked_bits in (
+        ("chacha20_round20_w32_dominance_pruned_companion_a303_v1.json", "A303", 3801, 8192),
+        ("chacha20_round20_w43_grouped_engine_a304_v1.json", "A304", 2473, 8192),
+        ("chacha20_round20_w43_a299_grouped_replay_a305_v1.json", "A305", 2114, 8192),
+        ("chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json", "A309", 4044, 8192),
+    ):
+        payload = json.loads((results / name).read_bytes())
+        confirmation = payload["confirmation"]
+        actual_checked = confirmation.get(
+            "cross_implementation_output_bits_checked",
+            confirmation.get("total_cross_implementation_output_bits_checked"),
+        )
+        actual_rank = payload["discovery"].get(
+            "Causal_prefix_rank_one_based", payload["discovery"]["executed_prefix_groups"]
+        )
+        if not (
+            payload["attempt_id"] == attempt
+            and actual_rank == rank
+            and payload["discovery"]["strict_subset_of_complete_domain"] is True
+            and payload["discovery"]["matched_control_candidates"] == 0
+            and actual_checked == checked_bits
+        ):
+            failures.append(f"{attempt} strict-subset record differs")
+
+    a323 = json.loads(
+        (results / "chacha20_round20_cross_width_operator_stability_a323_v1.json").read_bytes()
+    )
+    if not (
+        a323["attempt_id"] == "A323"
+        and a323["evidence_stage"]
+        == "TARGET_BLIND_COMPLETE_W44_W45_OPERATOR_STABILITY_AND_COMPLEMENTARITY_RETAINED"
+        and a323["information_boundary"]["target_labels_used"] == 0
+        and a323["analysis"]["candidate_execution"] is False
+        and a323["analysis"]["best_of_eight_W44_oracle_coverage"]["covered_cells"] == 4096
+    ):
+        failures.append("A323 target-blind operator audit differs")
 
     deck = ROOT / "paper/nano2026/presentation/Foss_CASI_Nano-IoT_IEEE_NANO_2026.pptx"
     if deck.is_file():

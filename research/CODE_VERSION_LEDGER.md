@@ -71,3 +71,18 @@ point is `scripts/reproduce_a278_a286_records.sh`.
 The A286 root confirmation supersedes only the failed A285 aggregate-file
 write caused by a nine-byte API id in an eight-byte Causal header field. It
 preserves and independently confirms all four completed target results.
+
+## A287--A325 cryptanalysis release boundary (2026-07-15)
+
+Release `0.5.0` publishes the completed CHACHA20KR43 complete-domain record,
+18 additional strict-subset ChaCha20-R20 executions, completed model-free
+orders and grouped-engine qualifications, and the A323 operator-stability
+audit. The authoritative manifest is
+`research/results/v1/A287_A325_SHA256SUMS`; its focused test inventory is
+`research/results/v1/A287_A325_TESTS.txt`, and its portable entry point is
+`scripts/reproduce_a287_a325.sh`.
+
+A313 and A322 are open production executions. Only their frozen design,
+protocol, order, runner, and test objects are included; no outcome is claimed.
+A314 is included as a completed model-free order only. A306 has no completed
+result and A324 is beyond this release boundary.

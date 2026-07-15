@@ -710,6 +710,35 @@ The release record and exact manifest are
 [docs/RELEASE_A278_A286_RECORDS.md](RELEASE_A278_A286_RECORDS.md) and
 `research/results/v1/A278_A286_RECORDS_SHA256SUMS`.
 
+## Full-round W24--W44 recovery and operator progression: A287--A325
+
+| Record | Executed result | Evidence gate |
+|---|---|---|
+| CHACHA20KR43 | Complete `2^43` ChaCha20-R20 residual domain returns assignment `0x28bf6f70af8`. | All assignments execute with no early stop; one factual model, zero control models; 8,192 cross-implementation output bits. |
+| A294 / A295 | Two frozen W24 orders recover the same target at ranks 202 and 2,605 of 4,096. | Both searches stop only between complete prefix groups, retain strict subsets, reject the matched control, and independently confirm eight blocks. |
+| A296 | Four fresh W24 and four fresh W28 targets all recover in strict subsets. | Unchanged Reader coefficients, zero target labels, zero refits; 65,536 independently checked output bits; eight empty controls. |
+| A297 | Four fresh W32 targets recover at ranks 2,867, 2,032, 926, and 3,932. | Zero-refit transfer; 32,768 independently checked output bits; four empty controls. |
+| A303 | W32 assignment `0xc7cc895a` recovers at rank 3,801. | 3,985,637,376/4,294,967,296 assignment upper bound; empty control; 8,192 checked bits. |
+| A302/A304 | W43 assignment `0x35cd4cbd7cf` recovers at rank 2,473 through the qualified grouped engine. | Exactly 5,310,727,061,504/8,796,093,022,208 assignments; empty control; 8,192 checked bits. |
+| A305 | W43 assignment `0x28bf6f70af8` recovers at rank 2,114 under the frozen A299 order. | Exactly 4,539,780,431,872/8,796,093,022,208 assignments; empty control; 8,192 checked bits. |
+| A309 | W43 assignment `0x66bc9ad247f` recovers at rank 4,044. | Exactly 8,684,423,872,512/8,796,093,022,208 assignments; empty control; 8,192 checked bits. |
+| A313 | W44 assignment `0x09a302d6134` recovers at rank 2,753. | Exactly 11,824,044,965,888/17,592,186,044,416 assignments; complete groups; empty control; 8,192 checked bits. |
+| A315/A317/A319 | Frozen online, raw multiview, and whitened operator families are evaluated on the confirmed A313 prefix. | No duplicate candidate execution, no post-reveal refit, and zero target labels; exact rank panels retained. |
+| A321 | `raw_nearest_prototype_Linf` wins the frozen holdout selection at rank 2,159 and binds the exact W45 deployment order. | Eight precommitted W44/W45 pairs; no A314 label or manual override. |
+| A323 | Eight W44 operators are compared over all 4,096 cells; every operator wins at least one cell and raw Linf is the most stable unchanged W44-to-W45 geometry (`rho=0.3498033`). | Target-blind rank-vector audit; zero target labels, refits, or candidate execution. |
+| A324 | The target-free W46 engine executes one complete `2^34` group across eight slabs. | 147,968 boundary bits checked; unique synthetic factual assignment; empty control; no production target. |
+
+A304/A307/A311 separately qualify complete grouped W43/W44/W45 execution
+without production targets. A287--A293, A298--A301, A308, A310, A312,
+A314 and A316/A318/A320 retain their exact model-free boundaries or frozen
+order objects. A322 remains live and A325 remains protocol-only; no outcome is
+published for either.
+
+The release record, gap audit, and manifest are
+[docs/RELEASE_A287_A325_CRYPTANALYSIS.md](RELEASE_A287_A325_CRYPTANALYSIS.md),
+[docs/PUBLISH_GAP_AUDIT_A287_A325.md](PUBLISH_GAP_AUDIT_A287_A325.md), and
+`research/results/v1/A287_A325_SHA256SUMS`.
+
 ## Direct-output and PQC program
 
 A001--A106 are preserved rather than compressed into a selective success list.
