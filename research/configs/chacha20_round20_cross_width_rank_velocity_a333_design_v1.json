@@ -1,0 +1,66 @@
+{
+  "schema": "chacha20-round20-cross-width-rank-velocity-a333-design-v1",
+  "attempt_id": "A333",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can a coefficient selected by a target-blind W43-to-W44 walk-forward forecast of the complete W45 Linf field produce a prospectively frozen W46 prefix order?",
+  "source_anchors": {
+    "A300_order_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_order_v1.json",
+    "A300_order_sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1",
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A317_runner_path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+    "A317_runner_sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2",
+    "A327_order_path": "research/results/v1/chacha20_round20_hierarchical_linf_operator_a327_order_v1.json",
+    "A327_order_sha256": "7c077a4e8eeb3ab83c4fae931f94882c87369cedb18bd19b2766e04e9b72c90f"
+  },
+  "forecast_contract": {
+    "W43_field": "reconstruct nearest_prototype_Linf from A300 Fine, Coarse and Numeric orders with the unchanged A317 prototypes and metric",
+    "W44_field": "A317 nearest_prototype_Linf exact order",
+    "W45_field": "A327 original_Linf exact order",
+    "cell_identity": "the same 12-bit word0 prefix cell value across all three exact fields",
+    "candidate_sequence_and_coefficients_p_over_q": [
+      ["reverse_velocity_alpha_minus_1", -1, 1],
+      ["midpoint_alpha_minus_1_over_2", -1, 2],
+      ["carry_forward_alpha_0", 0, 1],
+      ["damped_velocity_alpha_1_over_4", 1, 4],
+      ["damped_velocity_alpha_1_over_2", 1, 2],
+      ["linear_velocity_alpha_1", 1, 1],
+      ["aggressive_velocity_alpha_2", 2, 1]
+    ],
+    "score_numerator": "q * current_rank + p * (current_rank - previous_rank)",
+    "tie_break": "current rank, previous rank, cell",
+    "walk_forward_selection": "maximum Spearman between each W43-W44 forecast order and the complete target-blind W45 Linf field, then minimum absolute alpha, then frozen candidate index",
+    "deployment": "apply the selected unchanged p/q coefficient to the W44 and W45 fields to freeze one exact W46 order",
+    "fixed_baseline": "carry_forward_alpha_0",
+    "fixed_direction_control": "reverse_velocity_alpha_minus_1",
+    "A313_role": "none",
+    "A322_progress_or_result_role": "none",
+    "A325_W46_challenge_or_result_role": "none",
+    "new_candidate_execution": false,
+    "target_labels_used_from_A313_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "exact W43, W44 and W45 source-order hashes",
+    "seven exact walk-forward W45 forecast orders with Spearman, mean absolute rank error and top-k overlap",
+    "one selected coefficient under the frozen selection rule",
+    "seven exact counterfactual W46 forecast orders plus one selected W46 deployment order and uint16be hashes",
+    "fixed carry-forward baseline and reverse-velocity direction control",
+    "postconfirmation A325 rank panel without duplicate candidate execution"
+  ],
+  "information_boundary": {
+    "W43_W44_W45_complete_target_blind_operator_fields_available_at_design_freeze": true,
+    "W45_field_used_only_as_complete_walk_forward_structural_target": true,
+    "A313_result_candidate_or_prefix_used": false,
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_candidate_definition_selection_or_order": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_challenge_feature_candidate_prefix_or_result_used": false,
+    "target_labels_used_from_A313_A322_or_A325": 0,
+    "operator_refits_on_A313_A322_or_A325": 0,
+    "duplicate_candidate_execution_required_for_evaluation": false
+  }
+}

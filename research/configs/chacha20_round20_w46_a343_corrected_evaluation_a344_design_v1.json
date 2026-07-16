@@ -1,0 +1,47 @@
+{
+  "attempt_id": "A344",
+  "correction_contract": {
+    "affected_component": "A343 postconfirmation evaluator only",
+    "frozen_A343_order_membership_changed": false,
+    "frozen_A343_order_bytes_changed": false,
+    "new_candidate_execution": false,
+    "original_invalid_expression": "assignment >> 34",
+    "reason": "The A324/A325 W46 codec stores word0 in assignment bits 0..31 and groups by word0 bits 20..31; assignment bits 34..45 belong to word1_low14.",
+    "replacement_expression": "((assignment & 0xffffffff) >> 20)",
+    "secret_dependent_input": "independently confirmed A325 prefix12 only"
+  },
+  "evaluation_contract": {
+    "alias_count": 73,
+    "complete_candidate_domain": 70368744177664,
+    "counterfactual_candidate_execution": false,
+    "duplicate_alias_count": 16,
+    "matched_control_outcome_inferred": false,
+    "rank_rule": "one_based_position_of_confirmed_prefix12_in_each_frozen_exact_order",
+    "unique_order_count": 57
+  },
+  "information_boundary": {
+    "A325_assignment_used_for_order_construction": false,
+    "A325_assignment_used_for_postconfirmation_prefix_reconstruction": true,
+    "A325_result_available_at_A343_panel_freeze": false,
+    "A343_panel_commitment_preserved": true,
+    "orders_refit_after_A325": false,
+    "target_labels_used_to_construct_A343_orders": 0
+  },
+  "source_anchors": {
+    "A325_protocol_path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+    "A325_result_path": "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_result_sha256": "534d2d769f387bca90b9ab1f2c43a98a6030c1e3c1039270c1d2e109a38d7ce2",
+    "A343_design_path": "research/configs/chacha20_round20_w46_pre_result_operator_panel_a343_design_v1.json",
+    "A343_design_sha256": "fc46cee8ff8f627e4458c49e11de7bd2512c29f3c8a240a450aa80ee93d24e84",
+    "A343_panel_path": "research/results/v1/chacha20_round20_w46_pre_result_operator_panel_a343_v1.json",
+    "A343_panel_sha256": "aac9c6ec5a46115ea3c0ddc2a15dd0abe5f7a83d4f23c60c6c2d266de8f63525",
+    "A343_reproducer_path": "scripts/reproduce_chacha20_round20_w46_pre_result_operator_panel_a343.sh",
+    "A343_reproducer_sha256": "61dac7a1e730b19bd6a354440a8cf6d0483b9abd34e526c3c371d0b4af65b24e",
+    "A343_runner_path": "research/experiments/chacha20_round20_w46_pre_result_operator_panel_a343.py",
+    "A343_runner_sha256": "18597834f82a3cd76691f20d7a1c11c0be83857046d574168efbfe4eac42628d",
+    "A343_test_path": "tests/test_chacha20_round20_w46_pre_result_operator_panel_a343.py",
+    "A343_test_sha256": "94cc74d919ec67653ec3ea9e84b9fc9847ff0893e9b731d3b377d5f08ce991c5"
+  },
+  "schema": "chacha20-round20-w46-a343-corrected-evaluation-a344-design-v1"
+}

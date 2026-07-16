@@ -1,0 +1,83 @@
+{
+  "schema": "chacha20-round20-w52-deduplicated-reader-portfolio-a451-design-v1",
+  "attempt_id": "A451",
+  "design_state": "frozen_after_A449_personal_authentic_Causal_readback_before_any_A450_candidate_progress_or_result",
+  "scientific_question": "Can three prospectively frozen, complementary A449 proof-antecedent operators be converted into one complete non-factorized W52 pair permutation with a deterministic at-most-threefold rank regret against the best component and materially new early-cell geometry?",
+  "source_contract": {
+    "attempt": "A449",
+    "result_sha256": "f054125c5c363e379ddca661334a57867a0d367a5c57d0caa2bb0f8814b322a7",
+    "result_commitment_sha256": "4cfd5edf10a9f4e491e5e4b2d289eca78113d67973069eea60ded00a4b64f2cf",
+    "recovery_ready": true,
+    "W52_target_labels_used": 0,
+    "W52_feature_refits": 0,
+    "W52_model_refits": 0,
+    "production_candidate_assignments_executed": 0
+  },
+  "component_selection_contract": {
+    "operators_in_fixed_slot_order": [
+      "proof_borda_top32",
+      "hybrid_proof_top16_equal",
+      "proof_best_single"
+    ],
+    "selection_rules_in_same_order": [
+      "A449 recovery operator selected for maximum prospectively qualified early-cell displacement",
+      "A449 primary operator selected by complete-128 fixed-block calibration",
+      "A449 proof operator with minimum global pair Spearman correlation to A442"
+    ],
+    "component_pair_stream_sha256": [
+      "b54b08eb03164e6f15ddbb9c1709780c435915b0aa65e65154f92b469192c637",
+      "81854f76b94fe4b27e0facbc41550b057ccd4881dd684c687b5a0cb02a73533f",
+      "c06a0a8c77aecbdf71469ef25aa2ef0abc0db24031196e1201220455b585da47"
+    ],
+    "all_components_A448_positive_fixed_blocks": 8,
+    "target_labels_used_for_component_selection": 0,
+    "component_refits": 0
+  },
+  "fusion_contract": {
+    "algorithm": "deduplicated_fixed_slot_round_robin_min_rank",
+    "component_count": 3,
+    "component_rank_zero_based": "square_pair_global_index under the component axis orders",
+    "first_encounter_key": "min_j(3 * component_rank_j + fixed_slot_j)",
+    "fused_order": "ascending unique first_encounter_key",
+    "tie_condition": "impossible because every fixed slot owns a disjoint residue modulo 3 and every component order is a permutation",
+    "complete_pair_cells": 16777216,
+    "packed_pair_encoding": "big-endian uint32 equal to prefix12 shifted left 16 OR off_axis12",
+    "expected_artifact_bytes": 67108864,
+    "hard_rank_guarantee": "for every pair, fused_rank_one_based <= 3 * minimum_component_rank_one_based",
+    "random_access_required_for_recovery": true,
+    "factorized_axis_order_required": false
+  },
+  "evaluation_contract": {
+    "exact_complete_permutation_gate": true,
+    "exact_artifact_sha256": true,
+    "exact_hard_rank_guarantee_over_all_16777216_pairs": true,
+    "pair_spearman_against_each_component": true,
+    "top_k_overlap_against_each_component": [16, 64, 256, 1024, 65536, 1048576],
+    "union_cover_prefix_against_all_components": [16, 64, 256, 1024, 65536, 1048576],
+    "A442_pair_geometry_comparison": true,
+    "candidate_assignments_executed": 0
+  },
+  "information_boundary": {
+    "A449_result_and_authentic_Causal_personally_read_at_design_freeze": true,
+    "A450_candidate_progress_or_result_read": false,
+    "A426_A438_A440_A443_secret_result_stop_or_worker_progress_read": false,
+    "W52_target_labels_used": 0,
+    "feature_refits": 0,
+    "model_refits": 0,
+    "production_candidate_assignments_executed": 0
+  },
+  "source_anchors": {
+    "A449_design_path": "research/configs/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_design_v1.json",
+    "A449_design_sha256": "d5be9782d073626309226063119364cf50444cbf7dea9167d1364d2e921e471c",
+    "A449_implementation_path": "research/configs/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_implementation_v1.json",
+    "A449_implementation_sha256": "a6eb39a38dfea3b23c5622f74b5566599ae586a11d7b99087c78d67b6f75c1f2",
+    "A449_runner_path": "research/experiments/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449.py",
+    "A449_runner_sha256": "cd19406ba8964aceea1dfe16904f505097fb91aed738cb825c934f89c460e875",
+    "A449_result_path": "research/results/v1/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_v1.json",
+    "A449_result_sha256": "f054125c5c363e379ddca661334a57867a0d367a5c57d0caa2bb0f8814b322a7",
+    "A449_causal_path": "research/results/v1/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_v1.causal",
+    "A449_causal_sha256": "b96389556b19d4bbd71248087354eba1134ff483cd7ce87683f4a5eeb09871cf",
+    "A449_personal_readback_path": "research/reports/CAUSAL_CHACHA20_A449_PERSONAL_READER_READBACK_V1.md",
+    "A449_personal_readback_sha256": "af35c46f57dffcfad9fa0c82bc2ef6f7931fbfd5a95dbd01e8a01e9bf12a815c"
+  }
+}

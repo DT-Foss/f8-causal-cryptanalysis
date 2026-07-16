@@ -1,0 +1,93 @@
+{
+  "attempt_id": "A400",
+  "design_state": "frozen_before_materializing_the_complete_W50_Direct12_view_atlas_companion_selection_or_A400_schedule",
+  "direct12_view_contract": {
+    "complete_view_order": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "measurement_reuse": "the exact sixteen complete A388 W50 Direct12 slice artifacts",
+    "new_solver_stages": 0,
+    "reader_refits": 0,
+    "target_labels": 0
+  },
+  "selection_contract": {
+    "locked_primary_view": "A342_selected_pair_slice_z",
+    "locked_primary_reason": "prospective A350 recovery completed at exact rank 445 in the independently frozen A349 order",
+    "companion_candidate_set": "all seven remaining complete Direct12 views",
+    "eligibility_rule": "corrected A354 rank at the actual A348 measured W46 cell must be at most 1024 of 4096",
+    "selection_rule": "among eligible non-primary candidates minimize absolute Spearman rank correlation with the locked primary on the complete unlabeled W50 field; ties minimize corrected A354 W46 rank and then the frozen view name",
+    "selection_after_measurement": true,
+    "selection_after_target_label_or_candidate_execution": false,
+    "eligibility_threshold_rank_one_based": 1024
+  },
+  "source_contract": {
+    "first_six_sources": "byte-identical A396 primitive source orders",
+    "source_orders": 8,
+    "cells_per_order": 4096,
+    "owner_rule": "minimum one-based source rank; ties by frozen source-role order",
+    "owner_lane_rule": "sort each assigned cell by its owning source rank",
+    "zero_duplicate_cells": true
+  },
+  "worker_contract": {
+    "workers": 8,
+    "claim_rule": "each worker consumes its nonempty owner queue; once empty it consumes the longest remaining owner queue; ties by frozen source-role order",
+    "epoch_rule": "exactly one complete W50 prefix group per worker per nonterminal epoch",
+    "group_cost_identity": "every W50 prefix executes exactly 128 disjoint 2^31 slabs before outcome evaluation",
+    "target_makespan_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "preserve_each_owner_queue_order": true,
+    "static_lists_replace_runtime_claim_race": true,
+    "theorem_depth": "D_A400(c) <= D_owner(c) <= min_i R_i(c)",
+    "theorem_work": "W_A400(c) <= 8*min_i R_i(c)"
+  },
+  "comparison_contract": {
+    "primary": "complete pointwise A400 epoch versus A398 and A396 epoch panels",
+    "secondary": [
+      "complete eight-view W50 pairwise diversity atlas",
+      "eligible-companion transfer and diversity table",
+      "selected-companion ownership count",
+      "geometric A388-serial-to-A400 speedup"
+    ],
+    "retain_rule": "retain the exact atlas, frozen-rule selection, and complete schedule regardless of which eligible companion wins"
+  },
+  "information_boundary": {
+    "A385_unknown_assignment_or_true_prefix_consumed": false,
+    "A387_A389_A391_A393_A395_A397_A399_progress_filter_outcomes_or_results_consumed": false,
+    "candidate_assignments_executed": 0,
+    "new_solver_stages": 0,
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "known_pre_design_information": "A350 prospective pair-slice recovery rank 445, corrected A354 W46 view ranks, A388 pair-slice order, and A398 pair-versus-triple-slice geometry",
+    "unknown_at_design_freeze": [
+      "the other six W50 Direct12 view orders",
+      "the complete W50 eight-view diversity atlas",
+      "the frozen-rule companion winner",
+      "A400 owner lanes and worker schedule",
+      "A400 pointwise comparisons"
+    ]
+  },
+  "source_anchors": {
+    "A350_result_path": "research/results/v1/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json",
+    "A350_result_sha256": "a51919d30fc66ee5e581c87d6f2c5dc32cdabe71b51ce79c0a56a12e7325b3f3",
+    "A354_result_path": "research/results/v1/chacha20_round20_w46_direct12_coordinate_codec_audit_a354_v1.json",
+    "A354_result_sha256": "9fc3487266aee3f4e637b9a1afc0b434a5f0c56fa430e9aa14b576cfe8782ac4",
+    "A396_result_path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.json",
+    "A396_result_sha256": "0dd39b595bd111c88b1c94c325c1039a041211e8e11e1e79f71c6470cc8edff8",
+    "A398_result_path": "research/results/v1/chacha20_round20_w50_dual_direct12_eight_reader_a398_v1.json",
+    "A398_result_sha256": "fe37839fe18e71166a5d727cb14be96eca53bb6cce2cc3824f5bc4bd885dfd42",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8",
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  },
+  "schema": "chacha20-round20-w50-direct12-transfer-diversity-schedule-a400-design-v1"
+}

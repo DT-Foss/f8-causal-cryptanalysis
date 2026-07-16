@@ -1,0 +1,690 @@
+{
+  "A313_annotation": {
+    "W44_prototype_index": 0,
+    "W45_same_cell_prototype_index": 0,
+    "predictors": {
+      "W44_margin": {
+        "equal_score_cells": 4,
+        "midrank_percentile": 0.713134765625,
+        "score": 969,
+        "strictly_lower_cells": 2919
+      },
+      "W45_margin": {
+        "equal_score_cells": 1,
+        "midrank_percentile": 0.8743896484375,
+        "score": 1316,
+        "strictly_lower_cells": 3581
+      },
+      "deterministic_cell_hash_null": {
+        "equal_score_cells": 1,
+        "midrank_percentile": 0.8743896484375,
+        "score": 16091857961693422543,
+        "strictly_lower_cells": 3581
+      },
+      "maximum_margin": {
+        "equal_score_cells": 1,
+        "midrank_percentile": 0.7481689453125,
+        "score": 1316,
+        "strictly_lower_cells": 3064
+      },
+      "minimum_margin": {
+        "equal_score_cells": 3,
+        "midrank_percentile": 0.9237060546875,
+        "score": 969,
+        "strictly_lower_cells": 3782
+      },
+      "negative_absolute_margin_delta": {
+        "equal_score_cells": 6,
+        "midrank_percentile": 0.593017578125,
+        "score": -347,
+        "strictly_lower_cells": 2426
+      },
+      "product_margin": {
+        "equal_score_cells": 1,
+        "midrank_percentile": 0.9219970703125,
+        "score": 1275204,
+        "strictly_lower_cells": 3776
+      },
+      "sum_margin": {
+        "equal_score_cells": 3,
+        "midrank_percentile": 0.9085693359375,
+        "score": 2285,
+        "strictly_lower_cells": 3720
+      }
+    },
+    "prefix12": 770,
+    "prefix12_hex": "302",
+    "stable_label": true,
+    "used_for_predictor_selection": false
+  },
+  "anchors": {
+    "A313_result": {
+      "path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+      "sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a"
+    },
+    "A328_result": {
+      "path": "research/results/v1/chacha20_round20_linf_voronoi_transfer_a328_v1.json",
+      "sha256": "93c507e6fa4faeaae30618a35d0a933139246cdf8a57f45fb3760982c796a1b4"
+    },
+    "A328_runner": {
+      "path": "research/experiments/chacha20_round20_linf_voronoi_transfer_a328.py",
+      "sha256": "d7daf79a6e491bbd60b8fc48fcd44eea17ecc6ab4f6b15e22b890b0e8a94ca02"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_linf_margin_stability_a331_design_v1.json",
+      "sha256": "7953e9e376bc34fee4fd7a97e2a61fae5b55ffb60dfa9400b4a9d2d066ef68ee"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_linf_margin_stability_a331.sh",
+      "sha256": "d5bd925c56eef22642bbcb97ef1646082c8657529222078f61ab9960a0cf87cf"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_linf_margin_stability_a331.py",
+      "sha256": "323ab66a164b470b0aff3e6868a8bda18ee2cae54d5934f00af260355e209521"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_linf_margin_stability_a331.py",
+      "sha256": "2535d77967c226c5ca2d37f5f14d6494218ab258eeada31d5bdb2ddb26b876a7"
+    }
+  },
+  "attempt_id": "A331",
+  "candidate_execution": false,
+  "causal": {
+    "api_id": "a331marg",
+    "clusters": 1,
+    "embedded_rules": 3,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_linf_margin_stability_a331_v1.causal",
+    "personal_semantic_readback": {
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "prospectively_frozen_margin_conditioned_operator",
+        "predicate": "next_required_object",
+        "subject": "A331:exact_margin_to_region_stability_boundary",
+        "suggested_queries": [
+          "Does the exact structural AUC cross the predeclared margin-operator threshold, and what unchanged next operator follows from that binary boundary?"
+        ]
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "COMPLETE_TARGET_BLIND_MARGIN_STABILITY_BOUNDARY_RETAINED",
+        "is_inferred": true,
+        "m_idx": 8,
+        "mechanism": "materialized_margin_stability_decision_chain",
+        "o_idx": 4,
+        "outcome": "A331:exact_margin_to_region_stability_boundary",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A331_margin_stability_chain",
+        "trigger": "A328:exact_W44_W45_margin_and_region_fields"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "17498a2b2752e27b715dbcebe83583a8240c57d75e833892936d4e2ec9b9c3fa",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 9,
+      "file_size_bytes": 7698,
+      "file_size_kb": 7.5,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_linf_margin_stability_a331_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 3,
+      "triplets": 4
+    }
+  },
+  "design_sha256": "7953e9e376bc34fee4fd7a97e2a61fae5b55ffb60dfa9400b4a9d2d066ef68ee",
+  "evidence_stage": "COMPLETE_TARGET_BLIND_MARGIN_STABILITY_BOUNDARY_RETAINED",
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "annotation_only_no_predictor_selection",
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A322_execution_running_at_design_freeze": true,
+    "A322_progress_used_for_predictor_definition_or_selection": false,
+    "A322_result_available_at_design_freeze": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "operator_refits_on_A322_or_A325": 0,
+    "target_labels_used_from_A322_or_A325": 0
+  },
+  "measurement_sha256": "652bb79e054a88f748298b40b9bc82cb98a5e0f96b48bf26edd06ec0d9285673",
+  "new_execution_order": false,
+  "predictor_panels": {
+    "W44_margin": {
+      "global": {
+        "auc": 0.5087458917399224,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4111318,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.47971029318805747,
+        "twice_concordant_numerator": 1256722,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.5599119191753086,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 435822,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.426303454515752,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 678479,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.5795741559261598,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 124831,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.5105654243585278,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 17590,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.4912541082600776
+    },
+    "W45_margin": {
+      "global": {
+        "auc": 0.5376916775560308,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4345237,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.5361824325355988,
+        "twice_concordant_numerator": 1404665,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.8289682621252454,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 645249,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.4147995023687749,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 660170,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.40509972885636814,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 87252,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.3481365377917102,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 11994,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.4623083224439693
+    },
+    "deterministic_cell_hash_null": {
+      "global": {
+        "auc": 0.4973165142155698,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4018954,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.4963027034620071,
+        "twice_concordant_numerator": 1300190,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.508283914200849,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 395636,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.49059275921434586,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 780798,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.495867845336701,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 106802,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.492104957622199,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 16954,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.5026834857844302
+    },
+    "maximum_margin": {
+      "global": {
+        "auc": 0.48385726023600223,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 3910186,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.463598081039732,
+        "twice_concordant_numerator": 1214512,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.6129852410660144,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 477133,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.391430312778818,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 622977,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.4702299149426141,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 101280,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.38087774294670845,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 13122,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.5161427397639978
+    },
+    "minimum_margin": {
+      "global": {
+        "auc": 0.5812694276154272,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4697401,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.5650817329273916,
+        "twice_concordant_numerator": 1480374,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.8576921693371841,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 667607,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.432441534614273,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 688248,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.5066439475541359,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 109123,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.4468826192964124,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 15396,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.41873057238457273
+    },
+    "negative_absolute_margin_delta": {
+      "global": {
+        "auc": 0.5920197047992397,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4784277,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.6137550424620346,
+        "twice_concordant_numerator": 1607886,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.5965702950759016,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 464356,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.6353990474634631,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 1011263,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.5212875608216023,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 112277,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.5802275629861837,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 19990,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.4079802952007603
+    },
+    "product_margin": {
+      "global": {
+        "auc": 0.5554898481428685,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4489069,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.5377058591805637,
+        "twice_concordant_numerator": 1408656,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.8299883346865782,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 646043,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.4033891702376315,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 642010,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.4933096237417821,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 106251,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.4165795889933821,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 14352,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.44451015185713155
+    },
+    "sum_margin": {
+      "global": {
+        "auc": 0.5192887760354795,
+        "negative_cells": 2440,
+        "positive_cells": 1656,
+        "twice_concordant_numerator": 4196518,
+        "twice_pair_denominator": 8081280
+      },
+      "pair_weighted_stratified": {
+        "auc": 0.4998786144642699,
+        "twice_concordant_numerator": 1309558,
+        "twice_pair_denominator": 2619752
+      },
+      "per_W44_prototype": [
+        {
+          "W44_prototype_index": 0,
+          "auc": 0.7114749170066909,
+          "negative_cells": 653,
+          "positive_cells": 596,
+          "twice_concordant_numerator": 553795,
+          "twice_pair_denominator": 778376
+        },
+        {
+          "W44_prototype_index": 1,
+          "auc": 0.4012114053055531,
+          "negative_cells": 1054,
+          "positive_cells": 755,
+          "twice_concordant_numerator": 638544,
+          "twice_pair_denominator": 1591540
+        },
+        {
+          "W44_prototype_index": 2,
+          "auc": 0.48197173420495487,
+          "negative_cells": 436,
+          "positive_cells": 247,
+          "twice_concordant_numerator": 103809,
+          "twice_pair_denominator": 215384
+        },
+        {
+          "W44_prototype_index": 3,
+          "auc": 0.3892371995820272,
+          "negative_cells": 297,
+          "positive_cells": 58,
+          "twice_concordant_numerator": 13410,
+          "twice_pair_denominator": 34452
+        }
+      ],
+      "reversed_score_exact_identity": true,
+      "reversed_score_global_auc": 0.4807112239645205
+    }
+  },
+  "predictor_sequence_and_tie_break": [
+    "W44_margin",
+    "W45_margin",
+    "minimum_margin",
+    "maximum_margin",
+    "sum_margin",
+    "product_margin",
+    "negative_absolute_margin_delta",
+    "deterministic_cell_hash_null"
+  ],
+  "predictor_summary": {
+    "W44_margin": {
+      "global_auc": 0.5087458917399224,
+      "global_twice_concordant_numerator": 4111318,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.47971029318805747,
+      "reversed_score_global_auc": 0.4912541082600776
+    },
+    "W45_margin": {
+      "global_auc": 0.5376916775560308,
+      "global_twice_concordant_numerator": 4345237,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.5361824325355988,
+      "reversed_score_global_auc": 0.4623083224439693
+    },
+    "deterministic_cell_hash_null": {
+      "global_auc": 0.4973165142155698,
+      "global_twice_concordant_numerator": 4018954,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.4963027034620071,
+      "reversed_score_global_auc": 0.5026834857844302
+    },
+    "maximum_margin": {
+      "global_auc": 0.48385726023600223,
+      "global_twice_concordant_numerator": 3910186,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.463598081039732,
+      "reversed_score_global_auc": 0.5161427397639978
+    },
+    "minimum_margin": {
+      "global_auc": 0.5812694276154272,
+      "global_twice_concordant_numerator": 4697401,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.5650817329273916,
+      "reversed_score_global_auc": 0.41873057238457273
+    },
+    "negative_absolute_margin_delta": {
+      "global_auc": 0.5920197047992397,
+      "global_twice_concordant_numerator": 4784277,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.6137550424620346,
+      "reversed_score_global_auc": 0.4079802952007603
+    },
+    "product_margin": {
+      "global_auc": 0.5554898481428685,
+      "global_twice_concordant_numerator": 4489069,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.5377058591805637,
+      "reversed_score_global_auc": 0.44451015185713155
+    },
+    "sum_margin": {
+      "global_auc": 0.5192887760354795,
+      "global_twice_concordant_numerator": 4196518,
+      "global_twice_pair_denominator": 8081280,
+      "pair_weighted_stratified_auc": 0.4998786144642699,
+      "reversed_score_global_auc": 0.4807112239645205
+    }
+  },
+  "schema": "chacha20-round20-linf-margin-stability-a331-result-v1",
+  "selected_predictor_score_bins": [
+    {
+      "bin": 1,
+      "cells": 819,
+      "direction": "highest_score_first",
+      "maximum_score": 0,
+      "minimum_score": -140,
+      "stable_cells": 432,
+      "stable_fraction": 0.5274725274725275
+    },
+    {
+      "bin": 2,
+      "cells": 819,
+      "direction": "highest_score_first",
+      "maximum_score": -140,
+      "minimum_score": -338,
+      "stable_cells": 360,
+      "stable_fraction": 0.43956043956043955
+    },
+    {
+      "bin": 3,
+      "cells": 819,
+      "direction": "highest_score_first",
+      "maximum_score": -338,
+      "minimum_score": -594,
+      "stable_cells": 308,
+      "stable_fraction": 0.37606837606837606
+    },
+    {
+      "bin": 4,
+      "cells": 819,
+      "direction": "highest_score_first",
+      "maximum_score": -594,
+      "minimum_score": -956,
+      "stable_cells": 300,
+      "stable_fraction": 0.3663003663003663
+    },
+    {
+      "bin": 5,
+      "cells": 820,
+      "direction": "highest_score_first",
+      "maximum_score": -956,
+      "minimum_score": -2191,
+      "stable_cells": 256,
+      "stable_fraction": 0.3121951219512195
+    }
+  ],
+  "selection": {
+    "A313_used_for_selection": false,
+    "A322_A325_labels_used": 0,
+    "followup_margin_operator_supported": true,
+    "minimum_AUC_for_followup_operator": 0.55,
+    "selected_global_auc": 0.5920197047992397,
+    "selected_structural_predictor": "negative_absolute_margin_delta"
+  },
+  "stable_cells": 1656,
+  "switched_cells": 2440
+}

@@ -1,0 +1,74 @@
+{
+  "A371_qualification_available_at_implementation_freeze": true,
+  "A372_protocol_available_at_implementation_freeze": true,
+  "A373_order_available_at_implementation_freeze": true,
+  "A374_candidate_or_prefix_available_at_implementation_freeze": false,
+  "anchors": {
+    "A371_protocol": {
+      "path": "research/configs/chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371_v1.json",
+      "sha256": "edd943f71990299312c7b7bc154015102af25eede97ea4784140a2b652e971f3"
+    },
+    "A371_qualification": {
+      "path": "research/results/v1/chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371_qualification_v1.json",
+      "sha256": "2094ca66fcd3ba068994ab2cd8b792f991920862a5e94ce24246900c75c2ee2c"
+    },
+    "A372_design": {
+      "path": "research/configs/chacha20_round20_fresh_w48_pretarget_transfer_a372_design_v1.json",
+      "sha256": "baf1bb8f5a4236268d9933ebd1a8dea3897eb608b424f935ce75b8b2597a3a8c"
+    },
+    "A372_implementation": {
+      "path": "research/configs/chacha20_round20_fresh_w48_pretarget_transfer_a372_implementation_v1.json",
+      "sha256": "5676abd7674309aeb7c390c4516380caaccca173dcf1748317e7d4f1b368b50e"
+    },
+    "A372_order": {
+      "path": "research/results/v1/chacha20_round20_fresh_w48_pretarget_transfer_a372_order_v1.json",
+      "sha256": "bbc5e61fb0867125c08b08e31f166c686accf1d41c73f27e0b2774371483e3f5"
+    },
+    "A372_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w48_pretarget_transfer_a372_v1.json",
+      "sha256": "9223d8a9da09112f62e85f8c3d8ae8a737d3793661b9eb563944191411be846f"
+    },
+    "A372_runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w48_pretarget_transfer_a372.py",
+      "sha256": "3651fb4903fed91f73a887fe52650e2ad17af0376c1481d53467bc99435dc7d9"
+    },
+    "A373_design": {
+      "path": "research/configs/chacha20_round20_w48_target_conditioned_factor2_a373_design_v1.json",
+      "sha256": "3af5902d6ec1a8520c73905c64372560f44a0a6781c615789da0840011a0ce67"
+    },
+    "A373_implementation": {
+      "path": "research/configs/chacha20_round20_w48_target_conditioned_factor2_a373_implementation_v1.json",
+      "sha256": "7079aa0ec4e5605a8cd0c73de3a8f022376d7e3a9be35ca01f6bdb80cec05b6a"
+    },
+    "A373_order": {
+      "path": "research/results/v1/chacha20_round20_w48_target_conditioned_factor2_a373_order_v1.json",
+      "sha256": "5631b0f2f05a015a9ad07b938a2f2862862214171d3066397da3524afe8e9264"
+    },
+    "A373_runner": {
+      "path": "research/experiments/chacha20_round20_w48_target_conditioned_factor2_a373.py",
+      "sha256": "0d4a1c5a454f2697562b006963327364bb393d8bc546f9a9a6f5933eec1bc38b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w48_target_conditioned_recovery_a374_design_v1.json",
+      "sha256": "22f02caa3a0bd91e524605da7f970b3ce805d4b152f9dea0bba5de5cb5678cde"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w48_target_conditioned_recovery_a374.sh",
+      "sha256": "0f04821ad16eda1f41cfde7edcf70f6010d21471db4271f313693db3142aad5e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w48_target_conditioned_recovery_a374.py",
+      "sha256": "e4e058b84a0e30bd2395eae2f340195bf010ea25bb6f3d17f2bc2ccf0ce7d8c6"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w48_target_conditioned_recovery_a374.py",
+      "sha256": "af5494d30d1c9f1e576edc8502520b19721ffe76b11d7a2b7f1fffaa1ef9cfe6"
+    }
+  },
+  "attempt_id": "A374",
+  "commitment_state": "frozen_after_A371_qualification_A372_protocol_A373_order_before_A374_candidate_prefix_or_result",
+  "design_sha256": "22f02caa3a0bd91e524605da7f970b3ce805d4b152f9dea0bba5de5cb5678cde",
+  "implementation_commitment_sha256": "2a6622332568ea1f027e4968171128a96261a62c6e5dc41a9d56b71b2c13a6eb",
+  "schema": "chacha20-round20-w48-target-conditioned-recovery-a374-implementation-v1",
+  "selected_operator": "A373_W48_target_conditioned_plus_A372_target_free_factor2_wavefront"
+}

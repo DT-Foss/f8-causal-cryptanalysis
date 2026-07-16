@@ -1,0 +1,78 @@
+{
+  "schema": "chacha20-round20-w52-dual-axis-square-wavefront-recovery-a435-design-v1",
+  "attempt_id": "A435",
+  "design_state": "frozen_after_A434_complete_unlabeled_dual_axis_protocol_and_A426_public_challenge_before_A422_A434_qualification_A426_outcome_or_any_A435_candidate_progress_or_filter_outcome",
+  "scientific_question": "Does the prospectively frozen, complementary A433-prefix by A432-off-axis square wavefront recover the factual W52 assignment after strictly fewer complete 2^28 subcells than exhaustive traversal of the declared 2^52 residual domain?",
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 52,
+    "known_key_bits": 204,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low20",
+    "prefix_axis": "key_word0_bits31_through20",
+    "off_axis": "key_word1_low20_bits19_through8",
+    "residual_inside_each_pair_cell": "key_word0_low20_plus_key_word1_low8",
+    "pair_cells": 16777216,
+    "candidates_per_complete_pair_cell": 268435456,
+    "complete_domain_assignments": 4503599627370496,
+    "workers": 8,
+    "worker_tasks_each": 2097152,
+    "complete_pair_cell_before_success_evaluation": true,
+    "early_stop_inside_pair_cell": false,
+    "shared_stop_only_after_independent_confirmation": true,
+    "matched_one_bit_control_required_empty": true,
+    "independent_confirmation": "byte_reference_and_word_reference_over_all_eight_output_blocks"
+  },
+  "schedule_transfer_contract": {
+    "source_attempt": "A434",
+    "source_schedule": "square_wavefront_prefix_front_shell_order",
+    "source_pair_stream_complete": true,
+    "source_pair_stream_cells": 16777216,
+    "copy_pair_at_and_worker_modulo_mapping_without_refit": true,
+    "worker_assignment": "global_index_mod_8",
+    "worker_step": "global_index_div_8_plus_1",
+    "pair_rank_upper_bound": "max(R_prefix,R_off_axis)^2",
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "target_specific_axis_reversal_or_polarity_choice": false
+  },
+  "challenge_contract": {
+    "source_attempt": "A426",
+    "reuse_existing_public_W52_challenge": true,
+    "reuse_enables_direct_schedule_comparison": true,
+    "secret_assignment_absent_from_protocol": true,
+    "public_material_only": true,
+    "A434_schedule_frozen_before_A435_bound_challenge": true
+  },
+  "qualification_contract": {
+    "requires_A422_complete_group_engine_qualification": true,
+    "requires_A434_target_free_dual_axis_subcell_qualification": true,
+    "qualification_must_precede_production_candidate_execution": true,
+    "production_challenge_forbidden_in_qualification": true
+  },
+  "progress_contract": {
+    "atomic_restart_safe_worker_progress": true,
+    "progress_identity_binds_protocol_worker_and_A434_qualification_hashes": true,
+    "completed_pair_cells_never_reexecuted_after_restart": true,
+    "eight_worker_pair_sets_disjoint_by_construction": true,
+    "aggregate_counts_exact_unique_complete_pair_cells": true
+  },
+  "resource_contract": {
+    "exclusive_eight_slot_production_window": true,
+    "do_not_compete_with_existing_recovery_processes": true,
+    "queue_after_terminal_A431_or_all_prior_recovery_supervisors": true
+  },
+  "information_boundary": {
+    "A434_protocol_available_at_design_freeze": true,
+    "A426_public_challenge_available_at_design_freeze": true,
+    "A422_qualification_available_at_design_freeze": false,
+    "A434_qualification_available_at_design_freeze": false,
+    "A426_candidate_or_progress_available_at_design_freeze": false,
+    "A426_outcome_available_at_design_freeze": false,
+    "A435_candidate_or_progress_available_at_design_freeze": false,
+    "A435_target_labels_used_for_schedule": 0,
+    "A435_reader_refits": 0,
+    "prior_live_recovery_filter_outcomes_consumed": false
+  }
+}

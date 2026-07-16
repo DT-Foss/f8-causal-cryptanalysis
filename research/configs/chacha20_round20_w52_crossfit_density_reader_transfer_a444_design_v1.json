@@ -1,0 +1,147 @@
+{
+  "schema": "chacha20-round20-w52-crossfit-density-reader-transfer-a444-design-v1",
+  "attempt_id": "A444",
+  "design_state": "frozen_after_A442_personal_Causal_read_before_any_A444_crossfit_evaluation_W52_order_or_candidate_execution",
+  "scientific_question": "Can the four positive and diverse A375 Readers be fused as a cross-fitted density-ratio model of the correct-cell rank copula, rather than as another fixed rank average, and does the learned target-blind transfer open a stronger and materially different W52 recovery trajectory than A439 and A442?",
+  "calibration_contract": {
+    "source_attempt": "A375",
+    "targets": 128,
+    "cells_per_target": 256,
+    "fixed_blocks": 8,
+    "targets_per_block": 16,
+    "source_readers": 4,
+    "outer_crossfit": "eight contiguous held-out blocks; every learned score for a target is fit on the other 112 targets",
+    "positive_class_per_training_target": "the one factual high8 cell",
+    "negative_class_per_training_target": "all 255 nonfactual high8 cells",
+    "normalized_rank_coordinate": "(rank-0.5)/cells so a model fit at 256 cells transfers to 4096 cells",
+    "score_quantization_decimals": 12,
+    "fixed_operator_order": [
+      "borda_sum_baseline",
+      "multiscale_vote",
+      "dominance_count",
+      "marginal_hist8_lr",
+      "pairwise_hist4_lr",
+      "joint_hist4_lr",
+      "hierarchical_hist8_4_lr",
+      "gaussian_logrank_shrink25_lr"
+    ],
+    "learned_operator_parameters": {
+      "marginal_hist8_lr": {
+        "bins": 8,
+        "dirichlet_alpha": 1.0,
+        "terms": "four univariate log likelihood ratios"
+      },
+      "pairwise_hist4_lr": {
+        "bins": 4,
+        "dirichlet_alpha": 1.0,
+        "terms": "six pairwise log likelihood ratios"
+      },
+      "joint_hist4_lr": {
+        "bins": 4,
+        "dirichlet_alpha": 1.0,
+        "terms": "one exact four-dimensional 4x4x4x4 log likelihood ratio"
+      },
+      "hierarchical_hist8_4_lr": {
+        "marginal_bins": 8,
+        "pairwise_bins": 4,
+        "dirichlet_alpha": 1.0,
+        "score": "marginal_log_lr + 0.5 * pairwise_log_lr"
+      },
+      "gaussian_logrank_shrink25_lr": {
+        "features": "four log2 normalized ranks",
+        "covariance_shrink_to_diagonal": 0.25,
+        "diagonal_floor": 1e-06,
+        "score": "positive multivariate Gaussian log density minus negative multivariate Gaussian log density"
+      }
+    },
+    "fixed_nonlearned_operators": {
+      "borda_sum_baseline": "ascending sum rank, then maximum, minimum and source ranks",
+      "multiscale_vote": "descending reader votes inside normalized top 1/16, 1/8, 1/4 and 1/2 regions, then rank sum",
+      "dominance_count": "ascending exact number of rank vectors that Pareto-dominate a cell, then rank sum"
+    },
+    "selection_key": [
+      "minimum_fixed_block_bit_gain_descending",
+      "balanced_two_corpus_bit_gain_descending",
+      "all128_bit_gain_descending",
+      "targets_at_or_above_median_rank_descending",
+      "worst_rank_ascending",
+      "fixed_operator_order"
+    ],
+    "all_operator_families_and_hyperparameters_defined_before_evaluation": true,
+    "retain_all_crossfit_results": true
+  },
+  "W52_transfer_contract": {
+    "source_attempt": "A439",
+    "reference_attempts": [
+      "A439",
+      "A442"
+    ],
+    "axis_cells": 4096,
+    "pair_cells": 16777216,
+    "selected_learned_operator_refit_once_on_all_128_calibration_targets": true,
+    "apply_frozen_model_identically_to_prefix_and_off_axis": true,
+    "square_pair_schedule": "A434 exact square wavefront over the selected prefix and off-axis orders",
+    "W52_target_labels_used": 0,
+    "W52_model_refits": 0,
+    "candidate_assignments_executed": 0,
+    "compare_both_axes_and_complete_pair_space_to_A439_and_A442": true
+  },
+  "decision_contract": {
+    "crossfit_baseline": "borda_sum_baseline reproduces A442's calibration Borda geometry exactly",
+    "recovery_ready_requires": [
+      "selected operator is not borda_sum_baseline",
+      "positive gain in all eight held-out crossfit blocks",
+      "minimum held-out block gain is at least the Borda baseline minimum",
+      "complete W52 pair schedule is material relative to A442"
+    ],
+    "material_pair_diversity": "Spearman below 0.98 or at least 10 percent non-overlap in the first 65,536 pair cells",
+    "if_gate_passes": "freeze a qualified recovery executor after the current A443 and A440 queue unless an earlier queued schedule already confirms the model",
+    "if_gate_does_not_pass": "retain the exact learned-representation boundary and move to a non-rank feature family"
+  },
+  "information_boundary": {
+    "A442_authentic_Causal_personally_read": true,
+    "A442_results_available": true,
+    "A426_A438_A440_A443_secret_result_stop_or_worker_progress_read": false,
+    "A444_operator_results_known_before_design_freeze": false,
+    "A444_W52_orders_known_before_design_freeze": false,
+    "A444_target_labels_used": 0,
+    "A444_W52_model_refits": 0,
+    "A444_candidate_assignments_executed": 0
+  },
+  "acceptance_gates": {
+    "reconstructed_A375_model_fields_match_frozen_hashes": true,
+    "crossfit_training_excludes_the_complete_held_block": true,
+    "borda_baseline_reproduces_A442_rank_field_hash": true,
+    "all_eight_fixed_block_gains_reported_for_every_operator": true,
+    "selected_operator_follows_the_frozen_key_exactly": true,
+    "selected_full_calibration_model_is_serialized_and_hashed": true,
+    "two_W52_axis_orders_are_exact": true,
+    "complete_pair_stream_hash_is_exact": true,
+    "target_labels_W52_refits_candidate_executions": [
+      0,
+      0,
+      0
+    ],
+    "authentic_dotcausal_written_reopened_and_personally_read": true
+  },
+  "source_anchors": {
+    "A375_runner_path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+    "A375_runner_sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1",
+    "A375_result_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+    "A375_result_sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1",
+    "A375_causal_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.causal",
+    "A375_causal_sha256": "adc5fc921da7c7429407fabc637ff03c27e15705fde6ea157fc31acae25f9825",
+    "A439_runner_path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+    "A439_runner_sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb",
+    "A439_result_path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+    "A439_result_sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869",
+    "A439_causal_path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+    "A439_causal_sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c",
+    "A442_runner_path": "research/experiments/chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+    "A442_runner_sha256": "436f0e2a35949bb2007e7da95ec1558c134c2c30c4d077e72b4d2da81de27314",
+    "A442_result_path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+    "A442_result_sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d",
+    "A442_causal_path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.causal",
+    "A442_causal_sha256": "89e079477ca230be5d2d6ba0231bf7833b29b5c6793076e5800622bf0b8ffb6b"
+  }
+}

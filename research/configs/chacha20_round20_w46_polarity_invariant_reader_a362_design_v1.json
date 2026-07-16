@@ -1,0 +1,105 @@
+{
+  "schema": "chacha20-round20-w46-polarity-invariant-reader-a362-design-v1",
+  "attempt_id": "A362",
+  "design_state": "frozen_after_A360_boundary_and_A359_all32_calibration_before_any_new_validation_target",
+  "scientific_query": "Does the A360 boundary resolve when target-local trajectory channels are read by polarity-invariant absolute-rank operators, and can a stability-selected operator be frozen for a completely new known-key corpus and the already sealed A361 target?",
+  "mechanism_revision": {
+    "A360_boundary": "the signed linear Reader changes orientation across keys and fails its disjoint holdout gate",
+    "revised_symmetry": "a factual cell may be an extreme of a trajectory channel without having a key-invariant signed direction",
+    "primitive_score": "absolute value of each target-normalized feature coordinate",
+    "ensemble_semantics": {
+      "borda": "ascending sum of component ranks, then component-rank tuple, then cell",
+      "linf_intersection": "ascending maximum component rank, then rank sum, component-rank tuple, then cell",
+      "min_rank_wavefront": "ascending minimum component rank, then rank sum, component-rank tuple, then cell"
+    },
+    "no_fitted_numeric_weights": true,
+    "sign_flip_invariant_by_construction": true
+  },
+  "primitive_feature_indices": [
+    2,
+    3,
+    73,
+    84,
+    85,
+    239,
+    247,
+    289,
+    300,
+    301,
+    355,
+    380,
+    388,
+    452,
+    460,
+    479
+  ],
+  "candidate_family": {
+    "primitive_readers": 16,
+    "ensemble_member_counts": [
+      2,
+      3,
+      4
+    ],
+    "ensemble_aggregators": [
+      "borda",
+      "linf_intersection",
+      "min_rank_wavefront"
+    ],
+    "ensemble_readers": 7500,
+    "candidate_readers": 7516,
+    "candidate_definitions_changed_after_A360_result": true,
+    "role_of_A359_all32": "calibration_and_model_selection_only"
+  },
+  "selection_contract": {
+    "calibration_targets": 32,
+    "stability_halves": [
+      "A359 indices 0..15",
+      "A359 indices 16..31"
+    ],
+    "primary_rule": "maximize the smaller of the two half-specific mean-log2-rank bit gains; tie by all32 gain, worst rank, then reader name",
+    "best_single_rule": "the same stable-min-half rule restricted to the sixteen primitives",
+    "shared_xor_offsets": 256,
+    "familywise_null_statistic": "maximum stable-min-half bit gain over all 7516 candidates for each common high8 XOR offset",
+    "truth_labels_enter_after_complete_target_local_256_cell_cover": true,
+    "candidate_assignments_executed": 0
+  },
+  "future_validation_contract": {
+    "new_knownkey_targets": 32,
+    "low4_balance": "two targets per low4 value, one in each fixed validation half",
+    "selection_or_refit_on_new_targets": false,
+    "primary_gate": {
+      "exact_shared_xor_p_maximum": 0.05,
+      "mean_log2_rank_bit_gain_minimum_exclusive": 0.0,
+      "positive_gain_required_in_each_fixed_half": true,
+      "targets_at_or_above_median_rank_threshold_minimum": 18
+    },
+    "A361_deployment_permitted_only_after_gate": true
+  },
+  "information_boundary": {
+    "A359_all32_measurements_opened_for_calibration": true,
+    "A360_holdout_result_available_at_design_freeze": true,
+    "A361_public_protocol_available_at_design_freeze": true,
+    "A361_secret_or_true_prefix_available_to_A362": false,
+    "A361_measurement_shard_content_opened_by_A362_before_selection_freeze": false,
+    "new_validation_corpus_exists_at_design_freeze": false,
+    "new_validation_assignments_or_labels_available_at_design_freeze": false,
+    "A362_is_claimed_prospective_on_A359": false,
+    "A362_is_frozen_for_the_new_validation_corpus": true
+  },
+  "source_anchors": {
+    "A275_feature_reader_path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+    "A275_feature_reader_sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b",
+    "A359_runner_path": "research/experiments/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+    "A359_runner_sha256": "5bb1d21b9790b98e09d1fb540f5673c10ab484dc5a539c4c0242d11538461b99",
+    "A359_result_path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.json",
+    "A359_result_sha256": "3259526ee94241f5e4858b59cb52cb93a9ef8dbe8dc8bf40deaf4d7757db7a3f",
+    "A360_runner_path": "research/experiments/chacha20_round20_w46_within_slice_reader_selection_a360.py",
+    "A360_runner_sha256": "b8eaaa391b7606b86fb884687b7562f5f4bc212d34baf89496f76f14074ceff4",
+    "A360_result_path": "research/results/v1/chacha20_round20_w46_within_slice_reader_selection_a360_v1.json",
+    "A360_result_sha256": "17af9e3c30bebc0af944bbf988eba4120f0a900073bd0bb5dc1e547235fe3b89",
+    "A361_protocol_path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+    "A361_protocol_sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228",
+    "A361_preflight_path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_preflight_v1.json",
+    "A361_preflight_sha256": "9158edea44ff3884d60308517a7ede1df6b0c0faff2732d520ab61efa88d3d0a"
+  }
+}

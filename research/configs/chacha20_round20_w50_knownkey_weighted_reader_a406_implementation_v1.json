@@ -1,0 +1,59 @@
+{
+  "A401_selection_or_result_available_at_freeze": false,
+  "A406_label_scores_available_at_freeze": false,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A401_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+      "sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c"
+    },
+    "A401_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+      "sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1"
+    },
+    "A401_public_corpus": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+      "sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3"
+    },
+    "A401_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "A404_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_implementation_v1.json",
+      "sha256": "4a60f4704397d4f3978756a91194efd16f3561c636aedb8ed3a078cba4e4def9"
+    },
+    "A404_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_leaveoneout_reader_a404.py",
+      "sha256": "d7743e0bc4996c15189876dafa014fec6a8a13398f90885c0284e9c585192bc7"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_design_v1.json",
+      "sha256": "aaa67ce789ff3623c22e2d2965cbd5c19aa5f4d9aaa2911797eb2d019e0fd2a0"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_knownkey_weighted_reader_a406.sh",
+      "sha256": "a84dc2b190fe9f9f04213473f97e4c93a4b249d0dccb7c6476c9f5936f7a1d80"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_weighted_reader_a406.py",
+      "sha256": "7db8f5234cc2d03c685d2f42babe1274438add56cc0bcde28f66c2e32520e2b9"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_knownkey_weighted_reader_a406.py",
+      "sha256": "d3a3bdc6d72cebc0c99c00525d8c6cf776aef96bef2599b4a7e5126a396cc423"
+    }
+  },
+  "attempt_id": "A406",
+  "candidate_count": 36969,
+  "candidate_family_commitment_sha256": "efe668e3b479a543691d4ba5ee1d3f4e3c30ce264bdf86ebc16f7635c8f18a64",
+  "canonical_weight_vector_count": 12323,
+  "commitment_state": "complete_weighted_reader_code_frozen_before_A401_selection_result_or_A406_label_score",
+  "design_sha256": "aaa67ce789ff3623c22e2d2965cbd5c19aa5f4d9aaa2911797eb2d019e0fd2a0",
+  "implementation_commitment_sha256": "07c06a90d465aba0aefbe305a67d813fc4bfa9583430469beccf5dd0e407ab2f",
+  "schema": "chacha20-round20-w50-knownkey-weighted-reader-a406-implementation-v1",
+  "weight_family_commitment_sha256": "506334f5c47139c4ae14fc0164b5ab8aa304f2da4c71ad9ac8bcf70906dd2cca"
+}

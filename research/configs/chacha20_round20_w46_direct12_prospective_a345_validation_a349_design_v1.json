@@ -1,0 +1,73 @@
+{
+  "attempt_id": "A349",
+  "design_state": "frozen_while_A348_and_A345_run_before_A348_result_A345_result_candidate_or_prefix",
+  "selection_contract": {
+    "fallback_if_A348_contains_terminal_cells": "use_A348_hard_terminal_partition",
+    "primary_rule": "among the eight predeclared A348 multiview readers choose the smallest confirmed A325 direct12 rank; break ties by lexicographic view name",
+    "selection_inputs": [
+      "A348 evidence stage",
+      "A348 rank_panel view names",
+      "A348 rank_panel rank_one_based values"
+    ],
+    "selection_output": "exactly_one_frozen_reader_view",
+    "target_labels_from_A345_used": 0
+  },
+  "prospective_measurement_contract": {
+    "base_formula_target": "A345_public_block0_fullround_R20_plus_feedforward",
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      45,
+      44,
+      43,
+      42,
+      41,
+      40,
+      39,
+      38
+    ],
+    "low4_fixed_unit_coordinates": [
+      37,
+      36,
+      35,
+      34
+    ],
+    "low4_slices": 16,
+    "reader_refits": 0,
+    "target_labels_used_during_measurement_or_ordering": 0,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "evaluation_contract": {
+    "A345_result_gate": "exact_result_hash_after_dual_full_output_confirmation",
+    "primary_metric": "one_based_rank_of_confirmed_A345_word0_bits20_through31_in_the_frozen_direct12_order",
+    "search_bound": "rank_times_2^34_complete_W46_assignments",
+    "selection_and_exact_order_must_precede_A345_candidate_or_prefix_read": true
+  },
+  "information_boundary": {
+    "A345_candidate_or_prefix_available_at_design_freeze": false,
+    "A345_progress_content_read_for_A349_design": false,
+    "A345_public_challenge_available_at_design_freeze": true,
+    "A345_result_available_at_design_freeze": false,
+    "A348_result_available_at_design_freeze": false,
+    "A349_reader_refits_on_A345": 0,
+    "A349_target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w46-direct12-prospective-a345-validation-a349-design-v1",
+  "source_anchors": {
+    "A345_protocol_path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+    "A345_protocol_sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95",
+    "A345_public_challenge_sha256": "622f7b7218d022167e50efef459983e54207165078c49f0bb253c70545e3231f",
+    "A348_design_path": "research/configs/chacha20_round20_w46_direct12_sliced_reader_a348_design_v1.json",
+    "A348_design_sha256": "d31649a3138e823c238bf8ff1318679d614f1b49ae0d53e9ebe4a0889b706b17",
+    "A348_implementation_path": "research/configs/chacha20_round20_w46_direct12_sliced_reader_a348_implementation_v1.json",
+    "A348_implementation_sha256": "372534d194a8d938fe9330248ebdee331cf94075c1764cfffcba93817f8bf30b",
+    "A348_runner_path": "research/experiments/chacha20_round20_w46_direct12_sliced_reader_a348.py",
+    "A348_runner_sha256": "eec2764ed5a8f4875df7afa3ea5a6257a095093b2471450fe63db7c5d35c8e2b"
+  }
+}

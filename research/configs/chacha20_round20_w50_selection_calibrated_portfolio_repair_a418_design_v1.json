@@ -1,0 +1,49 @@
+{
+  "schema": "chacha20-round20-w50-selection-calibrated-portfolio-repair-a418-design-v1",
+  "attempt_id": "A418",
+  "objective": "Close the frozen A417 selection-calibrated portfolio on the untouched A412 holdout while resolving the single A414 model-hash namespace lookup explicitly.",
+  "repair_scope": {
+    "identified_pre_holdout_fault": "A417 external evaluation requests A414.A414_MODEL_SHA256 although the immutable A414 model hash is exported by the importing A416 layer.",
+    "correction": "Load the immutable A414 model with the explicit committed SHA-256 1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b.",
+    "selection_changed": false,
+    "candidate_library_changed": false,
+    "reader_order_changed": false,
+    "metric_changed": false,
+    "holdout_boundary_changed": false
+  },
+  "frozen_inputs": {
+    "A417_runner_path": "research/experiments/chacha20_round20_w50_selection_calibrated_portfolio_a417.py",
+    "A417_runner_sha256": "dcdb1999b9521b104b3a321da4c42c0e2e7678b53e0adec82af1f3c8d1cfde85",
+    "A417_implementation_path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_implementation_v1.json",
+    "A417_implementation_sha256": "2f9279f8e1b0edd03353ecb864f47e4c56db6e98a2ced09baa039a87156175d7",
+    "A417_library_path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_library_v1.json",
+    "A417_library_sha256": "53d142b8351a990e06a0e265581320a0df871f59bcc493e3e5ea0f961c391253",
+    "A417_selection_path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_selection_v1.json",
+    "A417_selection_sha256": "dde2e8a9ec184e52ed353f33b7558f43c767cb8deece715caceffe6910922653",
+    "A414_model_path": "research/configs/chacha20_round20_w50_knownkey_parallel_portfolio_a414_model_v1.json",
+    "A414_model_sha256": "1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b",
+    "A415_model_path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_model_v1.json",
+    "A415_model_sha256": "ed7d9e8b44c9dee4fecdb4d59de6a67911c3ed4fc0a0fdb09d7e17885e78e110",
+    "A416_model_path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_model_v1.json",
+    "A416_model_sha256": "ed927419a04f39f16ffb2679ff51544a43288821744cf2558cd97e45e45a6c58",
+    "A412_protocol_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+    "A412_protocol_sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+  },
+  "information_boundary": {
+    "A412_selection_fields_consumed_by_A417": 16,
+    "A412_selection_labels_consumed_by_A417": 16,
+    "A412_holdout_fields_consumed_by_A417_or_A418_at_design_freeze": 0,
+    "A412_holdout_labels_consumed_by_A417_or_A418_at_design_freeze": 0,
+    "holdout_reader_refits": 0,
+    "holdout_model_choices": 0
+  },
+  "external_test": {
+    "targets": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+    "primary_metric": "geometric mean of the pointwise minimum true-cell rank across the eight frozen A417 readers",
+    "matched_baselines": ["A414", "A415", "A416"],
+    "qualification": "A418 geometric-mean rank is strictly lower than the best matched eight-reader baseline on the untouched holdout",
+    "worker_count": 8,
+    "cell_count": 4096,
+    "optimal_makespan_epochs": 512
+  }
+}

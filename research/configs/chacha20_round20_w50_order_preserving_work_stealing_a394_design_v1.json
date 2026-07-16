@@ -1,0 +1,42 @@
+{
+  "schema": "chacha20-round20-w50-order-preserving-work-stealing-a394-design-v1",
+  "attempt_id": "A394",
+  "design_state": "frozen_after_A392_exact_owner_lanes_before_any_A394_schedule_or_candidate_execution",
+  "scientific_question": "Can deterministic order-preserving work stealing remove A392 lane imbalance while retaining the exact best-reader depth and factor-three total-work bounds for every possible target cell?",
+  "scheduler_contract": {
+    "workers": 3,
+    "cells": 4096,
+    "source_schedule": "A392 three_lane_A385_Direct12_A386",
+    "home_role_order": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12",
+      "A386_calibrated_target_blind_transfer"
+    ],
+    "claim_rule": "each worker claims the next item from its nonempty home queue; after home exhaustion it claims the next item from the longest remaining queue, ties by frozen home-role order",
+    "epoch_rule": "at most one complete W50 prefix group per worker per epoch",
+    "group_cost_identity": "every claimed W50 prefix executes exactly 128 disjoint 2^31 slabs before outcome evaluation",
+    "target_makespan_epochs": 1366,
+    "theoretical_minimum_epochs": 1366,
+    "zero_duplicate_prefixes": true,
+    "complete_cover": true,
+    "preserve_each_owner_queue_order": true,
+    "theorem_depth": "D_steal(c) <= D_owner(c) <= min_i R_i(c)",
+    "theorem_work": "W_steal(c) <= 3*min_i R_i(c)"
+  },
+  "information_boundary": {
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed": 0,
+    "A393_or_other_recovery_progress_filter_outcomes_consumed": false,
+    "A393_or_other_recovery_result_true_prefix_consumed": false,
+    "proof_covers_all_4096_possible_target_cells": true
+  },
+  "source_anchors": {
+    "A392_result_path": "research/results/v1/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_v1.json",
+    "A392_result_sha256": "950d6376cf05a32f2e7a2043b5662c1b33b375b567e695aaf2e4db494c1d725a",
+    "A392_causal_path": "research/results/v1/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_v1.causal",
+    "A392_causal_sha256": "9482fea926e3f32235c668290410b420f27ab301a8c6cc418b192095473ab793",
+    "A393_protocol_path": "research/configs/chacha20_round20_w50_disjoint_parallel_recovery_a393_v1.json",
+    "A393_protocol_sha256": "005482f5409889561ebc96b7c6d78ca3508d66a238e597bdafd26e47f7fefe99"
+  }
+}

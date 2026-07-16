@@ -1,0 +1,69 @@
+{
+  "A392_schedule_commitment_sha256": "735ac49c419624f7e8307bbeff23b9069138724fba2fb08df8f2f967f17f8522",
+  "A393_candidate_or_prefix_available_at_implementation_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A389_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_factor3_recovery_a389.py",
+      "sha256": "23602ef77bba32a019b78f776f1fa6a60d6ab13160c79644e4796b5ffe3e9ca5"
+    },
+    "A392_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_v1.causal",
+      "sha256": "9482fea926e3f32235c668290410b420f27ab301a8c6cc418b192095473ab793"
+    },
+    "A392_result": {
+      "path": "research/results/v1/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_v1.json",
+      "sha256": "950d6376cf05a32f2e7a2043b5662c1b33b375b567e695aaf2e4db494c1d725a"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_disjoint_parallel_recovery_a393_design_v1.json",
+      "sha256": "b37b8e973d95a7f3317cbe565dfd133e3e94c85faf70ef27ced8b3a5c2699512"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_disjoint_parallel_recovery_a393.sh",
+      "sha256": "608264faa0521ab31dbc0981c2432ca16929c2d6b7d2ee9d35ab2ce50f3c45cb"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_disjoint_parallel_recovery_a393.py",
+      "sha256": "31c9eb2da2ab59d7e7fb1eb20a1cf04d9ff036aabd05301f082ab135541dfddc"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_disjoint_parallel_recovery_a393.py",
+      "sha256": "aaffa8b4f32cf8d257e1f2682d7899a2798a26ff2441ef4e69eb85c84e479193"
+    }
+  },
+  "attempt_id": "A393",
+  "commitment_state": "frozen_before_any_A393_lane_candidate_prefix_progress_or_result",
+  "design_sha256": "b37b8e973d95a7f3317cbe565dfd133e3e94c85faf70ef27ced8b3a5c2699512",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "independent_confirmation_bits": 8192,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "shared_stop_check": "before each next complete prefix group",
+    "slabs_per_prefix_group": 128,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18"
+  },
+  "implementation_commitment_sha256": "37bde59b656de3c64400778d0d605dc321802f7d65bc76e65f52d7a8ea3f2f06",
+  "lane_order_uint16be_sha256": {
+    "A385_pretarget_six_view": "936d8c47956114f0e7404906c37a2ef14ca8daf04442ccf6dc4c6343bc35122f",
+    "A386_calibrated_target_blind_transfer": "59e5e8d63681b0b53efd3c931cc0c2acc34ec4654e57b33314ddf454558b779b",
+    "A388_W50_public_output_direct12": "49433997bf0f7b46cf82ba148b6691653597d04e58e027a51b51bd7ef8142705"
+  },
+  "schema": "chacha20-round20-w50-disjoint-parallel-recovery-a393-implementation-v1"
+}

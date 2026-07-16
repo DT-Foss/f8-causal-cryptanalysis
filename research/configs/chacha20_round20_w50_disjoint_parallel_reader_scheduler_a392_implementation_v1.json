@@ -1,0 +1,65 @@
+{
+  "A392_candidate_assignments_available_at_freeze": 0,
+  "anchors": {
+    "A388_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+      "sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a"
+    },
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A388_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    },
+    "A391_protocol": {
+      "path": "research/configs/chacha20_round20_w50_direct12_only_recovery_a391_v1.json",
+      "sha256": "90a1669aafcaaea3f5a2a125587262af1c0f2d850e686536d4db1c7ef2e1c8ed"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_design_v1.json",
+      "sha256": "17c80a59ccd5b8735d6f9c47c6918323c922d122cb65ab7b257cc4826d26aa9b"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392.sh",
+      "sha256": "1f43745fe55e8c0880c2a2dc7f65b0cd34f45470c821b9e4c3efb514dd9b0283"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392.py",
+      "sha256": "bf2fc5a24468dd9162fa6d48f24a9b993866d62a6d622266bfa6a972ff12014b"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392.py",
+      "sha256": "a3936a27d47ab7f7028fcff81a02734e2ef853ebfe007c93d69de4f11f158c78"
+    }
+  },
+  "attempt_id": "A392",
+  "commitment_state": "frozen_before_A392_scheduler_materialization_or_candidate_execution",
+  "design_sha256": "17c80a59ccd5b8735d6f9c47c6918323c922d122cb65ab7b257cc4826d26aa9b",
+  "implementation_commitment_sha256": "397df6f2c6ff3c5163a7f7e47f4167050b56430f293bdc106ae8d2d8b1bf6109",
+  "scheduler_contract": {
+    "cells": 4096,
+    "complete_cover": true,
+    "lane_rule": "within each owner lane sort by that owner's source rank then cell index",
+    "ownership_rule": "assign each cell to the role with minimum one-based source rank; ties follow the frozen role order",
+    "theorem_total_unique_work": "W_parallel(c) <= k*min_i R_i(c) for k disjoint lanes",
+    "theorem_wall_depth": "D_parallel(c) <= min_i R_i(c)",
+    "three_lane_roles": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12",
+      "A386_calibrated_target_blind_transfer"
+    ],
+    "two_lane_roles": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12"
+    ],
+    "zero_duplicate_prefixes": true
+  },
+  "schema": "chacha20-round20-w50-disjoint-parallel-reader-scheduler-a392-implementation-v1",
+  "source_order_uint16be_sha256": {
+    "A385_pretarget_six_view": "bcd1f2920aaa6dce6b8e91fcf6cf2ef48748ecad4cb00af2ac5af175641125d2",
+    "A386_calibrated_target_blind_transfer": "7420e2bf5467390ba236eaea8357e8cdf4c14f1537c38a4c98e6d88dca2c4061",
+    "A388_W50_public_output_direct12": "0094ac40b27b065888b56adce115bf4d54c0f0ba86dc1c7e87dff09f2f745f70"
+  }
+}

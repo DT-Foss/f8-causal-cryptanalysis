@@ -1,0 +1,89 @@
+{
+  "schema": "chacha20-round20-w51-external-reader-shared-stop-recovery-a421-design-v1",
+  "attempt_id": "A421",
+  "design_state": "frozen_after_A390_target_free_protocol_and_A420_executor_before_A390_qualification_A420_protocol_A420_result_or_any_W51_challenge_assignment_candidate_progress_or_filter_outcome",
+  "scientific_question": "Does the externally selected target-blind A420 prefix scheduler transfer without refitting to a fresh standard ChaCha20 W51 residual-key challenge when every visited prefix is executed as an exact 2^39 group?",
+  "execution_contract": {
+    "primitive": "standard ChaCha20 block function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "public_output_blocks": 8,
+    "public_output_bits": 4096,
+    "known_key_bits": 205,
+    "unknown_key_bits": 51,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low19",
+    "prefix_bits": 12,
+    "prefix_layout": "key_word0_bits20_through31",
+    "complete_prefix_groups": 4096,
+    "candidates_per_prefix_group": 549755813888,
+    "complete_domain_assignments": 2251799813685248,
+    "slabs_per_prefix_group": 256,
+    "workers": 8,
+    "worker_tasks_each": 512,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "shared_stop_only_after_independent_confirmation": true,
+    "matched_one_bit_control_must_be_empty": true,
+    "dual_reference_confirmation_blocks": 8,
+    "retain_complete_domain_recovery_if_target_is_in_final_parallel_epoch": true
+  },
+  "schedule_transfer_contract": {
+    "source": "A420 frozen selected external Reader schedule",
+    "source_protocol_available_at_design_freeze": false,
+    "copy_all_eight_worker_orders_and_tasks_byte_identically": true,
+    "W50_and_W51_prefix_geometry_identical": true,
+    "parameter_refit_on_W51_target": false,
+    "W51_target_labels_used": 0,
+    "W51_candidate_assignments_used": 0,
+    "A420_recovery_outcome_used": false
+  },
+  "fresh_challenge_contract": {
+    "materialize_only_after_A420_schedule_is_frozen": true,
+    "secret_assignment_source": "secrets.randbits(51)",
+    "known_material_source": "SHAKE256 of an independent random public label",
+    "secret_assignment_absent_from_protocol": true,
+    "prior_W50_public_assignment_bit_reuse": false,
+    "public_fields": [
+      "205 known key bits",
+      "counter",
+      "nonce",
+      "eight complete output blocks",
+      "one-bit matched control"
+    ]
+  },
+  "engine_gate_contract": {
+    "source": "A390 target-free W51 adapter",
+    "qualification_may_complete_after_A421_protocol_materialization": true,
+    "qualification_required_before_first_A421_candidate": true,
+    "complete_synthetic_2^39_group": true,
+    "scalar_boundary_identity": true,
+    "single_planted_factual_assignment": true,
+    "matched_control_empty": true
+  },
+  "information_boundary": {
+    "A390_target_free_protocol_frozen_before_A421_design": true,
+    "A390_qualification_available_at_A421_design_freeze": false,
+    "A420_design_and_executor_frozen_before_A421_design": true,
+    "A420_protocol_available_at_A421_design_freeze": false,
+    "A420_result_available_at_A421_design_freeze": false,
+    "W51_production_challenge_available_at_A421_design_freeze": false,
+    "W51_target_assignment_available_at_A421_design_freeze": false,
+    "W51_candidate_or_progress_available_at_A421_design_freeze": false,
+    "prior_live_recovery_filter_outcomes_consumed": false,
+    "live_recoveries_must_not_be_interrupted": true
+  },
+  "source_anchors": {
+    "A390_design_path": "research/configs/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390_design_v1.json",
+    "A390_design_sha256": "feffc7944535d9785392489de843247d15dab660f6ba2df9f9cfeec9f2595870",
+    "A390_protocol_path": "research/configs/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390_v1.json",
+    "A390_protocol_sha256": "d13d5c0b34de900bdc2d3abe26706b508091685e6a1c7a640168ab5496e479d0",
+    "A390_runner_path": "research/experiments/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390.py",
+    "A390_runner_sha256": "1864f7ecd5fb448219784b1a9e514cfddfb3f77f16e46f0d6104f8a778338330",
+    "A420_design_path": "research/configs/chacha20_round20_w50_external_reader_shared_stop_recovery_a420_design_v1.json",
+    "A420_design_sha256": "888d518a423f858ce8e7e64e25786229f9671594cd6937f54f4742edb5fc2746",
+    "A420_implementation_path": "research/configs/chacha20_round20_w50_external_reader_shared_stop_recovery_a420_implementation_v1.json",
+    "A420_implementation_sha256": "a34d3cd61683fbb451dfb53022210e87b32d33e1cea7d07feaf0b9777be0394b",
+    "A420_runner_path": "research/experiments/chacha20_round20_w50_external_reader_shared_stop_recovery_a420.py",
+    "A420_runner_sha256": "3a34577a648c8df1b083bd0d0e66a6361a18411879b18d5d296a654f34d73048"
+  }
+}

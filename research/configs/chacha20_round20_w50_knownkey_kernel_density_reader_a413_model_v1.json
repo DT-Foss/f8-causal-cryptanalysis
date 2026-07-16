@@ -1,0 +1,2197 @@
+{
+  "A412_reader_scores_used": 0,
+  "A412_target_labels_used": 0,
+  "anchors": {
+    "A401_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_direct12_learning_a401_v1.json",
+      "sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702"
+    },
+    "A404_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_v1.json",
+      "sha256": "ded81a43fed7318ab8a0d32787d5e41e1c51b70e473dfc415dae30b44f4080e1"
+    },
+    "A410_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_v1.json",
+      "sha256": "d631fcc57f1659455417789c58f277aa6d78118eb361281137bdcb846bae284e"
+    },
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_design_v1.json",
+      "sha256": "3dcf61da354a60c095d68168c2a6837663b39c5f683feb58de9cad3035675f7a"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_implementation_v1.json",
+      "sha256": "715aa6660bff6f3c6b3b3336cc3b755581c528898ca75defb6cbe8fea539e693"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_kernel_density_reader_a413.py",
+      "sha256": "e8f939d84cf53364bbbb4c729c1e9fa7fd5dce2742cd24fcc6e3e6a559c804d4"
+    }
+  },
+  "attempt_id": "A413",
+  "candidate_family_commitment_sha256": "3f6fe8a0d8d6ff3f5bdc5f4ad27448c9e3cad43e357dd77228049e8fe6f39502",
+  "design_sha256": "3dcf61da354a60c095d68168c2a6837663b39c5f683feb58de9cad3035675f7a",
+  "frozen_model": {
+    "candidate": {
+      "candidate_index": 123,
+      "family": "robust_location_shape",
+      "family_index": 1,
+      "feature_dimension": 36,
+      "location": "coordinate_mean",
+      "location_index": 0,
+      "representation": "log_absdiff36",
+      "representation_index": 3,
+      "scale_family": "identity",
+      "scale_index": 0,
+      "shrinkage": null
+    },
+    "parameter_float64le_sha256": "3d2dcbc8cfc97a6d8db0943d351dcb62371c67714cb9f2bcc8359c6f53eb1703",
+    "parameters": {
+      "center": [
+        0.8924343898367771,
+        0.8929332329911979,
+        0.8732022650945919,
+        0.87030716673365,
+        0.8762468040682053,
+        0.8752074908043854,
+        0.8689452847076421,
+        0.8552921357237964,
+        0.008068856215053363,
+        0.1378665482400966,
+        0.14103928191993423,
+        0.1301691432219676,
+        0.1320125823467412,
+        0.14777867853530838,
+        0.1613440000600204,
+        0.13508373667667437,
+        0.138256470356512,
+        0.12832948331742539,
+        0.13022667646650013,
+        0.14554187768904997,
+        0.15910719921376204,
+        0.011448893822324488,
+        0.07488534928244656,
+        0.07686572585376232,
+        0.08380234512078767,
+        0.09635102275219462,
+        0.0700647805700016,
+        0.07176269747541511,
+        0.08439471955946934,
+        0.0969433971908763,
+        0.003597514266509068,
+        0.039657084704418796,
+        0.04795740347425855,
+        0.04153014762543496,
+        0.04550715911112009,
+        0.01422080956597616
+      ],
+      "precision": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "precision_kind": "identity",
+      "variance_floor": 9.181756776606041e-09
+    },
+    "training_prototype_float64le_sha256": "be29bbeb11b984e313d2b9e7ab938f002f9827dfceb815a0ccd149c03293464f"
+  },
+  "fullfit_candidate": {
+    "candidate_index": 123,
+    "family": "robust_location_shape",
+    "family_index": 1,
+    "feature_dimension": 36,
+    "location": "coordinate_mean",
+    "location_index": 0,
+    "representation": "log_absdiff36",
+    "representation_index": 3,
+    "scale_family": "identity",
+    "scale_index": 0,
+    "shrinkage": null
+  },
+  "fullfit_candidate_index": 123,
+  "fullfit_leaveoneout_panel": {
+    "bit_gain_vs_complete_4096_cover": 1.9060102660927516,
+    "geometric_mean_rank": 1092.933368906211,
+    "mean_log2_rank": 10.093989733907248,
+    "median_rank": 2105.0,
+    "ranks": [
+      790,
+      2320,
+      2430,
+      3778,
+      179,
+      3545,
+      935,
+      4057,
+      10,
+      1291,
+      3249,
+      2727,
+      1890,
+      402,
+      322,
+      3657
+    ],
+    "top_quartile_targets": 6,
+    "worst_rank": 4057
+  },
+  "implementation_commitment_sha256": "e7c2c948203d28cbaf38bfe7041c6918340cdb37ec9f34b59dd0fd1f0a061515",
+  "implementation_sha256": "715aa6660bff6f3c6b3b3336cc3b755581c528898ca75defb6cbe8fea539e693",
+  "knownkey_field_commitments": {
+    "0": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "838d787b36692bc2a1be1119172d27be81bcdec0386a7b21ce088eb76ef313ef",
+        "A340_selected8_slice_z": "8ac2b578c816b1602d99136f6679646066d43749d2e896fd9e816f52f0f1be39",
+        "A341_selected_single_global_raw": "0f4b91dd6c3fa9f41c0285e30f7ed8c5adc19e2c585a9afa9fe9d8dbf6057687",
+        "A341_selected_single_slice_z": "72fd2ec0438ddebc2955552e64aae90508f69fc123c730f9ab081658d04940b5",
+        "A342_selected_pair_global_raw": "018736174dc75bcfa3809a1351da0d0dd2b95ba868b6e510ff3c6868d9a46d95",
+        "A342_selected_pair_slice_z": "d79d6df35be3b3a4a17448b102c2f379bf4036edf7f6ab20f1fd1187ac081020",
+        "A342_selected_triple_global_raw": "de6d41a9ab0758434818a4c431d4de534e7f22ce08251b04b876c220be8aba02",
+        "A342_selected_triple_slice_z": "5087ac119c3235da8f27803d707571d4e8fb8bd6e1454baba126aa41141938f0"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "1ce8777e296e10009a458d5160be686d3304d47d25283c655665a0c068b107f2",
+        "A340_selected8_slice_z": "9f88d98b5979edb4d7adec527954161ff951212a27d57a806a9df1d27aaa9dae",
+        "A341_selected_single_global_raw": "9b6f05d31234972bc4302b419ed758dfe05b99cd0fa3ed039e4d7a2f0fea8f31",
+        "A341_selected_single_slice_z": "794459410006db5ddbc937b11c1c63a22a3de6624be6eb6acde347fcdd36ca11",
+        "A342_selected_pair_global_raw": "f1f373abbd9c38870a517191be87b9edcb73a20dc53163af46405848b0cb0e4b",
+        "A342_selected_pair_slice_z": "c4804e237f10644f8996bdb2bebc39e34adc550e89863d359045fdc556354dcb",
+        "A342_selected_triple_global_raw": "b800ed258b0e07b40642f7746e25dacbc4bbd3f05c86f47761b7fb03538db7c8",
+        "A342_selected_triple_slice_z": "8918b0d094cc6946c81deebd5bbfa42ac4492648438dda666131f694e302cf16"
+      }
+    },
+    "1": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "f9e03ed852d3e62231121bd8a1a3161fcd909ed34d70a38b8b225ba1319beb2d",
+        "A340_selected8_slice_z": "bbb48675c765c00e5ead14ef44327ae3f13a869adcc6b46d409ddc25321b6419",
+        "A341_selected_single_global_raw": "f45701e781875492eb0a391f8e16af83bf1eced3a5d5d2196547489744f49a47",
+        "A341_selected_single_slice_z": "777bbce418e63bc9054768d65553a2bc06a2d27ce44d2c9093464f259c86c987",
+        "A342_selected_pair_global_raw": "94a21ba872ec2b3cf0755233f2d17dff9892a19c58c4b08156cc94277a5823a9",
+        "A342_selected_pair_slice_z": "086db0936362127d2bc821f07cf966a4c2981fa5c1dea6311a4a8f474110bf89",
+        "A342_selected_triple_global_raw": "c834868d1950495d4372eb783a05b1cf524ca21ae39341e60afd37592307c2d4",
+        "A342_selected_triple_slice_z": "9b6743374d99d2f9eb0f2dcb1bbfc97def0806bc157d7b0a0fa13e05114c69d1"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "2e99a70c7690cca9742f0a53b913d239d573c3e3d3276ed5a59a612e030358d1",
+        "A340_selected8_slice_z": "f64f68e2f00a81a8f5b48ac4f682be53519a24bb5e8207653e958547e51b2278",
+        "A341_selected_single_global_raw": "413c76a7bbfc1ca82bf5ba53c49492b1cd2c184fda9ec84d23f8498f67021715",
+        "A341_selected_single_slice_z": "2cc3b5441cc6fc6fab1eb01be74501c809828ca377ab43021eb174e92324c9fa",
+        "A342_selected_pair_global_raw": "5e485fe4f693cbc52c2f3ee10ca06a876348725cd02c38189a18ca728cf2e20a",
+        "A342_selected_pair_slice_z": "a5e1574879e384df990d403bae1122a73ad048bc51e87712a6786e248a1af6b4",
+        "A342_selected_triple_global_raw": "62b1ae94da81a3cee96bf3d8c67f27b4a87d4653c7a96f7b66bcee9a21d6487a",
+        "A342_selected_triple_slice_z": "4903c0d85ed8133591729e75553beacf8e84ed42d04d1fb0e140acc74051de44"
+      }
+    },
+    "10": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "11a6a9eb5be1f6e947966c24bd289ae15664622da5fcbc387fbe815e3cc682ab",
+        "A340_selected8_slice_z": "0b600646870b0db145bdde46db768fbe95641e7bfe0287aa2942e43e42f9feec",
+        "A341_selected_single_global_raw": "f770310c58cc7d92c7276d5145a31e1541e9b0ed263389359db1fa963cac8703",
+        "A341_selected_single_slice_z": "7986bac009dbb7565fac5bbfda4ae17cb8618012c3b2afd63b7dcf46a939b869",
+        "A342_selected_pair_global_raw": "b6932654450b50c9963060b4379c134289b132708822bafe59e662b87af6f6ce",
+        "A342_selected_pair_slice_z": "f91c01c3040130f4ea86d374a768865f971f1b40292f2cfc9cfd557044d533c3",
+        "A342_selected_triple_global_raw": "0b8bf4d72d84b6c621060e5767fea0086cad011468ff4bc88fd73387a1db95df",
+        "A342_selected_triple_slice_z": "344b39a373d7914f15ebbc3672e093d1668c7862ed0a2cfe2042393149f107a5"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "51c05837fe74b37fc0eb20c092ba932ef6a59eef568ae5e2aac281c4049b757c",
+        "A340_selected8_slice_z": "1f018afcc44032f52fd9754079b79f4f9878292aa6d4cd9bb43c9cd119d8f874",
+        "A341_selected_single_global_raw": "65230f9a735010b09468ac329867819527e3e9ef013e18c64f47b28cab7f5caa",
+        "A341_selected_single_slice_z": "7c4a54c3fc9839495c91afd673e14e21e3cd3cb218350cc6dffe9ad2a7be26be",
+        "A342_selected_pair_global_raw": "edc6339b12bdd49878a83c0a75cb01cf760a20fdb9dbae7a8a824ea3979b0128",
+        "A342_selected_pair_slice_z": "40cc008e4ae4e388f044c1a0edaafd3a2e0e4bf86843e8a7af35018290a3bbd3",
+        "A342_selected_triple_global_raw": "f9615eeab238b60b6ac7d8474f9a2838e7c0928f5f3d7fafb90b393bbfcdd7c3",
+        "A342_selected_triple_slice_z": "e41a2fc26333820734d6b9f301c0117f2ff3599dcf5e4474a20caef7a34b4887"
+      }
+    },
+    "11": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "6bd46262035533c1bba67258acd37e02e92b41b3eea7ae13a51ac0f07db17b3c",
+        "A340_selected8_slice_z": "9ecdf3305e5c7189d18d7f7d2f1bb00e13c588150d51dc82b3973794ad83f343",
+        "A341_selected_single_global_raw": "cea0bd2e4e8090bf2b7ea3e3a9a8fefeb5d5e8c78fd9bc01f426562715de9162",
+        "A341_selected_single_slice_z": "913180132f1aa874a0df3e2240fec7ebc663ec253378cfc3d1b06357a189200e",
+        "A342_selected_pair_global_raw": "e004070d4273f746173d68e386c7c291f1d39f6eedcadd026dedc2aa1802272e",
+        "A342_selected_pair_slice_z": "2ffbda1a28409c89a6f8fb5f4be95fd65b95e7c0bc0960c2df758ebec6099d03",
+        "A342_selected_triple_global_raw": "1fb2d690bba8321d74ba25ce9752f48dbcbc93ca53a1a47ed42a34dde48c4a1e",
+        "A342_selected_triple_slice_z": "e4b73f7f411ce2216df5023cb973a8d3df27048adad1b25310c72fb54f008d6f"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "d5e7f6407696cd562997f2407d01ca653a19bb9233f1fe1b606e92935ac67588",
+        "A340_selected8_slice_z": "11d2118459be255878ff1b546970ee01a2d2a03a0f2f9a2aac87d6758d838a39",
+        "A341_selected_single_global_raw": "6a1e63145640bc3f663292dde31b2d398b5fc36dc47575a68f2bfcf08a75befb",
+        "A341_selected_single_slice_z": "b16619fc354c80a75874eccd2020f42570b108e1b16271f8a32961d338bf6918",
+        "A342_selected_pair_global_raw": "c37562ae7087c5abc96a923456005e671efe386d5c54c53028d3d59db8540b81",
+        "A342_selected_pair_slice_z": "37bb07fff79a3ca94414eb5da43fda88c0f7a442d0105d5aa4eaa1cbc5b5dbaf",
+        "A342_selected_triple_global_raw": "9a9462f65ca9ca4a6b2f6db8c77be8d1fef1471f052be02ea837eec32a334e14",
+        "A342_selected_triple_slice_z": "f564f373e819004e4f231249f05b6d2b8d7e0a3d051ad30c8c778cab8423889a"
+      }
+    },
+    "12": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "85ac07486d9cb241f052a7f11daf1a5831a644de72c6d942ada927495fa37efd",
+        "A340_selected8_slice_z": "e16526626a7386741196c7fb3065d38b8b34501c94e602b9119d3a77db36f8f8",
+        "A341_selected_single_global_raw": "f054d5f490bdffb0afe86ddb4b2808d5d9983c192a5dadf52c5ab2760df47525",
+        "A341_selected_single_slice_z": "6d728d3e9ea1b30c26b5559a3e762ae3bc8ecb34e11cfab9661b743c5f9c4e66",
+        "A342_selected_pair_global_raw": "1844aa65a2c178c11a5257619cbc1365beb074c3f80c2132c571879a0edc6a49",
+        "A342_selected_pair_slice_z": "ac46c408daf6c530a98bd33eadf7ca3604dc36d18ead51f2b11d13ab4a0c3a17",
+        "A342_selected_triple_global_raw": "f96c00fd60882e5f238c7fa750fa1a944d90666ec575340106b0e86379981d06",
+        "A342_selected_triple_slice_z": "d7fb6e28e56bfda14e5103edb7d89425bd8c86b6f3c6b499588d0493e8c07db7"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "e68f0a5f230f0e7c0d58121c1cfdbf33fc7db03b36e2487984fa0e3297fedbee",
+        "A340_selected8_slice_z": "6fadf73a4e97f68f4170ed9e09f246aa342185be0bca69965357f16f33863544",
+        "A341_selected_single_global_raw": "ff1e8b15b7c1be6c35a6a19340236cbe5d2f128478da56d2b840dad33d7173b8",
+        "A341_selected_single_slice_z": "45757ea5969d16915752143442c2a2d9d5b8115f910f135f7971389b76def211",
+        "A342_selected_pair_global_raw": "fc0c510ad38a18e21161d9b9b36aeacfb022c59d9da7d4de6e23af7c40aa57f6",
+        "A342_selected_pair_slice_z": "79a3ab08070f2d2d1d9415302fa4cd40bcf11b0b76cc9374ed158f854f0901b0",
+        "A342_selected_triple_global_raw": "fdc37a7c05437decb371e39bc49f6d9245971f9deea88cd60d77fe65f89f668b",
+        "A342_selected_triple_slice_z": "80e0b9bb2d2a2282b5c3a9ad3e724bce7e889fbcf10c469469afe61881b435ee"
+      }
+    },
+    "13": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "8f72f844f96ab0a01295df18f9b16b6675ef5b4af64547e8df2b86dace733d0e",
+        "A340_selected8_slice_z": "ea62e1d5b1d365ba739f861710c0874454ce11747a6e21a0fec26c04ff8ddd83",
+        "A341_selected_single_global_raw": "c94b89d7d7539369e9b22cee57a5d56cedcc394235b43b3e8e5416b720e957cf",
+        "A341_selected_single_slice_z": "ae0deddba46572bb1f70de562c8fdce85410bc85cccd69d4be9c258cb5a7e6f9",
+        "A342_selected_pair_global_raw": "bf4af92859b565a6f355de68ff9382c99f94941d13aff3d1074365f640cb43f5",
+        "A342_selected_pair_slice_z": "cc434aa53450d2de01a68f1aee140fd81b5c284433a79fa46bd4e5fc781e3557",
+        "A342_selected_triple_global_raw": "7ab4d5cb8e015cfc6ae1897f111205637a27138f5aecffc27fbcec4665963a30",
+        "A342_selected_triple_slice_z": "f4c7257e1140036be7e049956a62776649a4c5df86d869d821505de3dbbb1755"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "23e5924e1aa23a2f687aca6b05e484955ffc08b5a985fb4c17725b84ef868e35",
+        "A340_selected8_slice_z": "efebbd42f492d622b916f2e62e806adff16533d9376397b75833446a2e82b376",
+        "A341_selected_single_global_raw": "4f24cffeec726842ec8e31cd323df9c7fb378b1e00de32610a0c4d41fb903649",
+        "A341_selected_single_slice_z": "12581d16c8b0885d294f539e4b8a5f85e30a202dbb53a93ead94dbf74a3e627c",
+        "A342_selected_pair_global_raw": "dc4f7f10ce4284894d67e0453ac8bf86f9b3631c006078ef60fef2741eb1aacf",
+        "A342_selected_pair_slice_z": "fe062a3f27555a17c19a8ed2f07eec5dd7e0c133d38f19f8ea7b25d42e37798f",
+        "A342_selected_triple_global_raw": "97630f0428b5930b4ecd309d4819a15984f0f3eeb4ba192174542085a90df89b",
+        "A342_selected_triple_slice_z": "84b572060dc810cd4b4577c46da371ce3a3efa04a0a2e91402aac48c65f137f2"
+      }
+    },
+    "14": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "86257b571a11e48d7b9975f115e736e238d401362dd591c6fa67cb82afda03d2",
+        "A340_selected8_slice_z": "7b230b3aeb1e0add66ea3be771be8c43af7fc82085c95a5085540458250041f8",
+        "A341_selected_single_global_raw": "c845ccff9fa48935b1998b97ab75dea15f823a31bf34b65c03c510dc75d92e7e",
+        "A341_selected_single_slice_z": "2dab4ca2923cfc17a6f7265e94d24012cb2e2c77f1acbe27f8e0551f6c874329",
+        "A342_selected_pair_global_raw": "ad9d908848a81c5f3ee1a8e291e5ad99d48acfa96cf85bb235338fd0fb70fe26",
+        "A342_selected_pair_slice_z": "31ef46f1f1471fc13a619da4a13405d25d2a0b9b958e37a51785675db4138c1f",
+        "A342_selected_triple_global_raw": "1b5a668a54c5a481285369b32854011ea47bd28f054b12943dc59125e7106f72",
+        "A342_selected_triple_slice_z": "1519c1882455a793cbee724e1f27a51182dfd8ffaabde62407aa097c252080d2"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "93293d57d059b25f8103ee33875bf5a4b88584535f729e6990e0f0803da667fd",
+        "A340_selected8_slice_z": "65d0e2ea86714937530c2fa92cfe30e42790a18eae31952f96797feb1552870b",
+        "A341_selected_single_global_raw": "c4731f91a3cd4a49a66a386e2dd549ef4863265d694dc89533985f68096ce072",
+        "A341_selected_single_slice_z": "875575ac3588e8b550dbd7e0ef26ab383c6a788c66654909bf94280b156dac3b",
+        "A342_selected_pair_global_raw": "96a9769034b2873f9e6b8b7ba29ebafaef6df6c4b53f644163daf8a8acc58057",
+        "A342_selected_pair_slice_z": "ddcbe741a0f078abfbdc4583b202310730fa7ebedc11032141c3006ccb0461c3",
+        "A342_selected_triple_global_raw": "836f7e3c34996f540ea80184dae55bec423bf1d1352f475117d5bc83bead5f00",
+        "A342_selected_triple_slice_z": "a68c4c18e7ad68f8e8102f678916e871947d8b55cb81b88d994c16b4213a028e"
+      }
+    },
+    "15": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "421b47164264e939f3d2a322f5e07fed042f7a153e37f89d73d5c7b1fa7f40d0",
+        "A340_selected8_slice_z": "420ca481b90b913929a799b2bc9e546234925df7bbdf767e14b2abedcffef7dd",
+        "A341_selected_single_global_raw": "cce7022addf263f795b5ce4233eee2fc65b648b4038655ff78e934d2baa5fbe2",
+        "A341_selected_single_slice_z": "2e64b84858fa278d87f4190431475bed57135e14d0188ebdac6dcee1b547a434",
+        "A342_selected_pair_global_raw": "ecab915e94411596bdb4ce74f34070caeb2dc4f291f9500919f1b2dd724fbea1",
+        "A342_selected_pair_slice_z": "c3ad214f56b8071378d43f7cf807c43af9312e52c3e4fd5aeaa280b72df71408",
+        "A342_selected_triple_global_raw": "27bfc6eb8ebe3bf1dba3bc5a9be8454be51d2ea78b20a527a21aaa3b5c4026a0",
+        "A342_selected_triple_slice_z": "d4a22106008dc84ca68f40aeba06ea6c1b88374bd46f3dc5c90d7966cbe0413c"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "f941f97922097190b205f1ee0ae0b7ae1b66312da7b55e141fc7930191c8820a",
+        "A340_selected8_slice_z": "34ac079aae6732058c8ad1664adc86e4fc791eb3b4e2216d7a379e5a2078041e",
+        "A341_selected_single_global_raw": "c9c02f7b46f5296fc8b630966ef78eaa9594b5257bd4fb90817948ca10ea5e90",
+        "A341_selected_single_slice_z": "233b3fe90d5f27168a4fef7adf5852d2d7a3081d605eee395359b6915de2c760",
+        "A342_selected_pair_global_raw": "c4a6700f702e8d0c8a08f7badfe1ff55a0995a1a563f2c908bf1817e38e4cdcd",
+        "A342_selected_pair_slice_z": "97617ec5bfa715880f9898117e1d0c7de8ff4b92697842e7994e2c201a4f2417",
+        "A342_selected_triple_global_raw": "b59f685a3bcd78371ceec07df6471c3aa3ab0aa5ff5a26c14cde2661e5933e8a",
+        "A342_selected_triple_slice_z": "d7560fc2c3563509fe53f8e836675602ba4db2663cba51f69791dc38947926fd"
+      }
+    },
+    "2": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "4891e41b8c3ba51181055f40da861d2ff36f7296f0169d5927e423c8b7b0acf3",
+        "A340_selected8_slice_z": "d179fed9d3f15e9715699ad97a59c2660e02e09c2d9c92a36303fc8f6fe6d450",
+        "A341_selected_single_global_raw": "b7a6cfb69584cc47432f4884a6decff18490cf8aad4dec123fccdeac16de8cc2",
+        "A341_selected_single_slice_z": "a94f66f2fd3d3cb97cd8974f91f5750c57e3bd63172df2604c03816bf72a6079",
+        "A342_selected_pair_global_raw": "ee9b660eda8ad7d7b6539344528acc879bf2e033b82e03a1accaf9dcd5f7db0e",
+        "A342_selected_pair_slice_z": "2443acd7bce8e84b5fa83356d6bba28e64b38512c7560ee1e1cb63477d7cdbf0",
+        "A342_selected_triple_global_raw": "2713ce01840bf00b0906e89059fce45da3b8388c485d861ea3041ec1c69a7be6",
+        "A342_selected_triple_slice_z": "d0eb4a639fa4b3a9b8a5a27b3ba9c9b9b80ef9cae4b229b6edc15e2bda34853e"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "0387fcc12ef8f973e84aca9db6126c21c2a58aba6738e603cae6bb2b056b42e6",
+        "A340_selected8_slice_z": "1592fa2b2723b5def0f65802ba243982a337fb8d803cf8dee69fd0ad5ea9bfc5",
+        "A341_selected_single_global_raw": "6d899bfc34b1233ed3cd7792daace460d289c12a800abdebe0ef294bfd824a83",
+        "A341_selected_single_slice_z": "e4fe6648ae7b606885d2b94cd91134e5924892d289c21b07a2c1a8ab0d2309b9",
+        "A342_selected_pair_global_raw": "5dd05818b721c0d84943bf958962e43818c290641878d92ca2662559282b9d75",
+        "A342_selected_pair_slice_z": "2684e44ee4e514edaa06e8bd3fba35e561d5cdacdd7fc39336b0b72b0621887f",
+        "A342_selected_triple_global_raw": "afb5fd067a08374af627161da32337a34794da03dc68f6329cf1366dfecbb2fd",
+        "A342_selected_triple_slice_z": "cfba77dd311225d9a753ce3b0f1074e7dd037491f99b52e539e5e69f02357ead"
+      }
+    },
+    "3": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "4f6b8a5e16d356621e6e8aad611efbc71d5a13c08d9f5a5321b9199f280e5e90",
+        "A340_selected8_slice_z": "d21d4279aa9d0cc969ac81eb1cc30a743fd1ec71bafa0e64de6644f36ff9fc0c",
+        "A341_selected_single_global_raw": "b11c0a707b630c4975a027f0ddddf09885accf38d079216504722e8fc1bd18af",
+        "A341_selected_single_slice_z": "4957ec3184b40d6bf1e98fd8111ab4afa57f3a4f76352f4d36ff436cb3589d7a",
+        "A342_selected_pair_global_raw": "9fbf7a57d66e9ecd41e15820120392932464d32bc52dbfb451ae3a81e28adf96",
+        "A342_selected_pair_slice_z": "22f4b8216c2ed1911ee976251715963dc5a7acd665a3898b28c5acccd3d2238e",
+        "A342_selected_triple_global_raw": "20712b0e6220802aa28a127722a03c18ff799960448a1f8f54971bdd6d573770",
+        "A342_selected_triple_slice_z": "1c41fe9349f749d69f6dba7fff8b23f1ff1cd5c57d8619b6fb95345d3deb6466"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "f54e7627bc8ae83457bf5dc824b4515dda6eb21fb9349990f3818c5d7f8efd96",
+        "A340_selected8_slice_z": "0d8c56c80dd496680d1756ce446f3ae98a5d5ecdf8260481f77619bf26ddc013",
+        "A341_selected_single_global_raw": "0fa8003f2504d916e12996603c15e5bb15d2f36abd06d1606150e778ea104e00",
+        "A341_selected_single_slice_z": "80d82701a33943e64d7e2034d9d80ee2113c6e3a7b39b552fe1b36a6b64d1f33",
+        "A342_selected_pair_global_raw": "fb9475ea3f2bdd4032e2f055f3400a9a7b0c87d796de902bb44bdea7cd98723f",
+        "A342_selected_pair_slice_z": "e19af907e81daa2d5efddee99f670d154a82819004f9c104a58d6483c5d27bbb",
+        "A342_selected_triple_global_raw": "1178d5a886b4812ced542c0bea55de2baa03b2a9a0b82edad0e542bf7acb2a6f",
+        "A342_selected_triple_slice_z": "30775869ce707111dab117cae9b363d35b5a115033e370242cfdad3d01e0125d"
+      }
+    },
+    "4": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "abd4d53eb2f6ac9930287f66740afb1abb71e78309ece24c36dd4fe1591dca76",
+        "A340_selected8_slice_z": "3e9b370f49db2a468616846b2ce681355f6e7044b974a4410557708891889b79",
+        "A341_selected_single_global_raw": "9212808b3917e963b42a0a7291b1faa7e15ab536a8663216cf81064090c8142a",
+        "A341_selected_single_slice_z": "3813eee5d891efe0b28d67067413de6e6d5dc00b1d9c9934f741dcec97938009",
+        "A342_selected_pair_global_raw": "175e333833c81558cd302be579cd3c4df385edc47d72fa15c3506ab10a1d6e05",
+        "A342_selected_pair_slice_z": "41f917bc27f053a2b3ed60e4b25ac08def68fa246e317f150031f03999161f02",
+        "A342_selected_triple_global_raw": "8640c04c713ab2c5f7b77a10efe87e4b34443c5c6026bde348e1167ab0aa3570",
+        "A342_selected_triple_slice_z": "32ea6ea793332f181a3ee299f8c633e929ccd1f547c7faf4f2bd8392c4ef4d44"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "ad95b4f9cf495da9350410d6013f370b4f40e623e962cb3c55ff04532dc26da2",
+        "A340_selected8_slice_z": "189d8c34c94100485bc717e1c1ff9ff61ec53c2812da21b32b201bc487a7c054",
+        "A341_selected_single_global_raw": "e58aac9c24ac1479c1e25faf2400438ce27a82351475569669b20964508a9807",
+        "A341_selected_single_slice_z": "8ec82a22da2dcb3e6eba26e318c4afd4c54983049298711c4155db2b15ababc4",
+        "A342_selected_pair_global_raw": "e278cc9d03e76ea03d8af707f3bbc75944ee305b595abfa652d5bdaf0d640d71",
+        "A342_selected_pair_slice_z": "3e737241b6a7cf57307a0171e1ffb3de27702dc3298a0c36c49ebfee5718a902",
+        "A342_selected_triple_global_raw": "fc657dfd2111ca90bc8a9f2f94e37953d5e3d9f1e11880490df50eefdeb087b7",
+        "A342_selected_triple_slice_z": "4d5fa1a386cb574a779fb31fd83e287c7489efd8dea650235ebec4bcf278f543"
+      }
+    },
+    "5": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "a8355ddcc32ac525c70cf3455027631501ff541c4d090eea70012511c4a75c6b",
+        "A340_selected8_slice_z": "3d02b9b1f74a78e30ba07b4cf33d5b827eb9ae6d40279954653dd7172ac4cd5d",
+        "A341_selected_single_global_raw": "9e8f2b85fa6007cd140fa11ce8e0058168f80c0258a8a794015e98e1cd35ac79",
+        "A341_selected_single_slice_z": "92d29e9d79e552bf33cedd04930262c86a381b1b31d1973d2c1802cb0b1f11a5",
+        "A342_selected_pair_global_raw": "6461b252b69de4e8b95264d25c2fe1f116b6f2df428028945f81cd52656648af",
+        "A342_selected_pair_slice_z": "ddc4717b71ca141ec46535be7a36b96d10e6d7f3180fe8f8b27123c0e9199baa",
+        "A342_selected_triple_global_raw": "813734d7d03eaf6123fe786bd735cc0d719f76068443dd400cedd887581f32d7",
+        "A342_selected_triple_slice_z": "60a4f46e9fe431aef0d0429acaf0bc1ac835fe8a7d4ee078a9fd76acc837245c"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "7f6235cbf342275adbabf663de19b06700b14fb1b6c05bf5ad4bce500905d09c",
+        "A340_selected8_slice_z": "caeb4c3c781b57e976e933810a681d8f802dbc9553695cbe11780ccb34f1a2a4",
+        "A341_selected_single_global_raw": "a7ec69dd48dc1e8d7cea7ec1aece159d8c22d8b829f3bc0fdd1b5c49dc372d9b",
+        "A341_selected_single_slice_z": "80037445e3f304e6e5e3a2269196d2dddaa49922da9f7aaa6c8178392ef3b755",
+        "A342_selected_pair_global_raw": "3dcaad9ae8200d5cdfea80a9afa60fb304dd38687e5e462d70c23cfe57e2650c",
+        "A342_selected_pair_slice_z": "71c3ce00287b9ff213f8caf6bf492663ded86479da0d486c58cd3eca07163728",
+        "A342_selected_triple_global_raw": "06b33e5b1774ea41cc8c45d921720165fe8536887fc04bd6d7935cf306067fef",
+        "A342_selected_triple_slice_z": "e96bcce7e67d4f9f1ebfbc2711d2063e5d8d56ce1f1918fd78a7ddea8bb75531"
+      }
+    },
+    "6": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "4c95999a4faeb425378fce056ec13e49bb9f3d1b7bf6c94ec284bd99d57d3c7a",
+        "A340_selected8_slice_z": "2e3f17250801e21a537e907d0b37dcd18a19cd6d6033fb032943a36d631e0d9b",
+        "A341_selected_single_global_raw": "8191e3171b0039d64c96257e624462ffe0de4a4b6f073afb7bf28b208b64f5b9",
+        "A341_selected_single_slice_z": "26c60c8e448379866dd8f312d0bcd6cf0c518fcf443e5ec6ad3833f51dbcae95",
+        "A342_selected_pair_global_raw": "59c94163ccf4df99aa19f1ad8d31c1227e51d539be13b640cc4db17c4c8b6788",
+        "A342_selected_pair_slice_z": "90012788009e484d1301cb75eea1310694b30f788da6b71775ec3cb7cb3c94c2",
+        "A342_selected_triple_global_raw": "ecf62d1098b490394f20f2dd2cc8ac32eb6e805a10888a08bd785e9b74c52152",
+        "A342_selected_triple_slice_z": "3d94df3ae6aea2654f52ed42f3b85de6d0dc69ab538f5dd85f1562fd536b0533"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "6ed79c525fc73baceb4cc1ae46ccdfdd2351e5d5b3e8c5ca9524411908de23d8",
+        "A340_selected8_slice_z": "c3fdb038350c2626bfb730f45903c174453db4ecb2be32c7fb8c5e3441f9f2e1",
+        "A341_selected_single_global_raw": "015e50ec8352ff1a65c8cb29331a9da5d7cb647325d8ba36003c82bbee6a08c4",
+        "A341_selected_single_slice_z": "3f452c81472f8f0729f421de5dee9b65589b889ce60271b3e3fb62023abd97fb",
+        "A342_selected_pair_global_raw": "e2c2dd1852c0808851fa0e75d3359a6bf809532bbc4464456f867e689a4d97c7",
+        "A342_selected_pair_slice_z": "288d72af0e0b8743d8bc89fb66100fbd185aa05c0095855cb78b1eb41672ada3",
+        "A342_selected_triple_global_raw": "c1c9508c42d1e165a5d3129523309b99bd0f33e9d13474f668673dec0b908b5a",
+        "A342_selected_triple_slice_z": "37e26e6609c1179d34c46cd1a7fe24cac94ae76eae7447bcb496623f7c861c78"
+      }
+    },
+    "7": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "620055f97c8be54180912ad3dd1aa89f653dd43d9dadd4378e2c7a86c910fe81",
+        "A340_selected8_slice_z": "2ebe8d5fb618a170f2805d3802090235284e236455a6d7d244fdf0cb65de5254",
+        "A341_selected_single_global_raw": "82807dc98c33670f73a2115b388ebaa9a563c0d11f3f2de178aad5ee7b2a9204",
+        "A341_selected_single_slice_z": "704da3154a3344fcc2457e9d44993941b4ef6e9507212a93b33240e302e827b9",
+        "A342_selected_pair_global_raw": "253e9e9fbde9ca624d9f36f39f28c9beaa7985cb4daceefcf0b930b9e3b3a996",
+        "A342_selected_pair_slice_z": "758707fa1d8e9a1d96d6c164d6f9d96e0bef7a9dedba6b48dccc9d0a9d2d7725",
+        "A342_selected_triple_global_raw": "396f5418511b0e660dced89ef9425326da7648d0bcdf88ce89f8a2bd3134c5ff",
+        "A342_selected_triple_slice_z": "9234e59ca04be5666b5537a654a9b3a74be9e84c01b4dc4c34532704354e5484"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "fd7a6ce534d6d433a62df9221a2d64e736ce7f8d337ae67ed6acbf5b218369ff",
+        "A340_selected8_slice_z": "ae2584c58377b93942ca20e364c4425d0f2c93338bc2f3e620cf7ccf96d90f21",
+        "A341_selected_single_global_raw": "99f29723b6acd37fca736c509163ebb22b76b58147f6d6e9efd09fef1f097d42",
+        "A341_selected_single_slice_z": "d5401978c4bc5c8f0427e1834bd3a618e460429cd32317cc5ac7893c5e76fe6e",
+        "A342_selected_pair_global_raw": "bb57c120e98700f07456883768752ee8c1c9e40e6f960df5afd02a1339c20479",
+        "A342_selected_pair_slice_z": "9095baed3f9035b215a194834d7fc15bc81f211dac904e6893a1e87438b008d7",
+        "A342_selected_triple_global_raw": "dd168f55476e468707b596ba4d9cdd0dd771f2dc0bafa91048b4baef71d6ec4c",
+        "A342_selected_triple_slice_z": "05c03757de4e9a84c73ae47a6536a770317a1bdfc3634c74ab3137071ae438e0"
+      }
+    },
+    "8": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "1204bff1ea01ad734263f98457afb31b38eac5931ee1cdcdf20b9f8a6192b035",
+        "A340_selected8_slice_z": "2c71847d2cd757ba8495de7539300d7307a98359848a29f27663d61ab306e3b6",
+        "A341_selected_single_global_raw": "fe1598174d9294cade8670de3605ae94ce146fafd217433de5678ecd07c867a5",
+        "A341_selected_single_slice_z": "9dd2ce244113f03c6f7f3dd2b205affd69778e0eedfb214fdca805d03367600b",
+        "A342_selected_pair_global_raw": "417a5a00b810dfa468a5486243ecac6aaf2b8160f7b8d159e2fe111a38c3ffe1",
+        "A342_selected_pair_slice_z": "228264a9906980a37ca28b625415cf802531344e77ce8ba5bb83a127815ce0e0",
+        "A342_selected_triple_global_raw": "5c20dc801135e8f3f66598c5bae9c7355d5fa673c28f02f75feb85be2ccfdd8a",
+        "A342_selected_triple_slice_z": "bb99bd4ce0c52ed455524c6c05f4c8b604e8df5c3a1c232db748cccd52dd00b5"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "819322ad56005d66d064660bea447cc1e68dbac1c61fc56bd39324abb4f6ee4e",
+        "A340_selected8_slice_z": "8238e0f3fe3fa05a7a570b7b54fe200e79fbff8c310d71a63684b697b1391e5e",
+        "A341_selected_single_global_raw": "6820923264947b77943dffe0040a57a11f89f53fd4413754785c7ef416663037",
+        "A341_selected_single_slice_z": "aeced81471cee871e1c20d64bc3a9b1247327029f858327348874a72920bf13d",
+        "A342_selected_pair_global_raw": "4136909066964b4f81a38c82069d80e3f808f7ad0d98f9a4233acce574e11e20",
+        "A342_selected_pair_slice_z": "1cedac3a29d2553abcdbf35ca29824c63f96387a03efecf25f094f6fd0955136",
+        "A342_selected_triple_global_raw": "5db12a25cb162a293113cfbf1cb9255c94628a786569fef06506a0c79b546475",
+        "A342_selected_triple_slice_z": "6edaafafa62e421fed633819626025b59e7a07befb37a80bbce76f53d4f10987"
+      }
+    },
+    "9": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "3c127fab37662f3c84a7dedcd623575e2039f1d3058a8f8a167b2cfad1193c88",
+        "A340_selected8_slice_z": "b6569ea6fc6aec24b3418e4876f84350f15625521ef46647162523586c33d893",
+        "A341_selected_single_global_raw": "61405bc8c4ce17e64c1a7321e21985c8854da144dee717efcfc22669c590f875",
+        "A341_selected_single_slice_z": "997e9ca82b68ad4415b9503c9125a6790fdebdf2a99d1dbd610b2515f0d8afed",
+        "A342_selected_pair_global_raw": "6e5a2a44a4bd64a9670efe1a38768e9040ad12d265ee69c1bb3e2790e1fef307",
+        "A342_selected_pair_slice_z": "8f283c24458b29da1af3daa6f4957afc315618c5ee7d6b1d1364e7517b8015b0",
+        "A342_selected_triple_global_raw": "d3550a0165e0602150e1d331ccbe84e6c926976f9a52f5ffb80883c7e42ea321",
+        "A342_selected_triple_slice_z": "d87aebeb15415afcd54596dafe9edd77d4008c504c2db891a3e0b3f3816e93aa"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "e8d088c6960f53ead6fa095284f82a3ea7da413bf43787293b19f86a9a2222e6",
+        "A340_selected8_slice_z": "9a92b62473b35a55094b143c275c33906c82192849c4a102479d84486115c22e",
+        "A341_selected_single_global_raw": "34c0478ec5cb113e164957b49c5e4e8e6ee93a4997e78b5aff68d75d19fceffe",
+        "A341_selected_single_slice_z": "c370266e299797ba29d36b32f538ab1452035a3f361127fccce0c521a2945154",
+        "A342_selected_pair_global_raw": "f1e4725d6afd3c2d754658496b2931661d95cdcec75ae3a90349677344d8a1aa",
+        "A342_selected_pair_slice_z": "8f90f9c3cb5fe15a9bfac8cd6e73ac78d9f73265e5c9d54c76d7a8ef78c21a97",
+        "A342_selected_triple_global_raw": "dbb0ef6db86ef9c4ba1221d5b0a0df49549116f67789d22db67b14d04cc7fc3c",
+        "A342_selected_triple_slice_z": "32b99d14fb67c142acc331e04a907aeccde10cba1550b003a7bcf7d4fcebcc04"
+      }
+    }
+  },
+  "knownkey_prototype_commitments": {
+    "log8": "30ad79545e9986fd9b6f7c14d0a8623ad30656e668c9be311b55b61ac4ab0ab9",
+    "log_absdiff36": "be29bbeb11b984e313d2b9e7ab938f002f9827dfceb815a0ccd149c03293464f",
+    "log_reciprocal16": "ca70d1b9face05b23a43866e0b7583fd8c2b20ea58cab9201610e9330bb14d37",
+    "log_reciprocal_absdiff44": "41c5d2b8a4acb649b6a45eb752b52e7a6b14d7e917dcd520a2f1d971e18d5962",
+    "reciprocal_sqrt8": "28402daf9ee4d5611ba1397647bfbb935fcb56506a6575f0dbde126f0d637fe0"
+  },
+  "live_recovery_progress_filter_outcomes_or_results_consumed": false,
+  "model_commitment_sha256": "1180e185e27549bfafa4de0f4a10e2fd2da7bc79683d74305d9294f1a263c3a9",
+  "model_state": "fixed_from_A401_before_any_A412_label_or_reader_score",
+  "nested_diagnostic": {
+    "comparison_to_A410": {
+      "A410_nested_panel": {
+        "bit_gain_vs_complete_4096_cover": 1.423239004782662,
+        "geometric_mean_rank": 1527.292842653536,
+        "mean_log2_rank": 10.576760995217338,
+        "median_rank": 2216.0,
+        "ranks": [
+          784,
+          2320,
+          2430,
+          3778,
+          179,
+          3545,
+          935,
+          4057,
+          2112,
+          1314,
+          3254,
+          2727,
+          1890,
+          398,
+          322,
+          3656
+        ],
+        "top_quartile_targets": 5,
+        "worst_rank": 4057
+      },
+      "A413_better_folds": 2,
+      "A413_equal_folds": 14,
+      "A413_nested_panel": {
+        "bit_gain_vs_complete_4096_cover": 1.4537027781632474,
+        "geometric_mean_rank": 1495.380823259183,
+        "mean_log2_rank": 10.546297221836753,
+        "median_rank": 2105.0,
+        "ranks": [
+          784,
+          2320,
+          2430,
+          3778,
+          179,
+          3545,
+          935,
+          3961,
+          1543,
+          1314,
+          3254,
+          2727,
+          1890,
+          398,
+          322,
+          3656
+        ],
+        "top_quartile_targets": 5,
+        "worst_rank": 3961
+      },
+      "A413_worse_folds": 0,
+      "additional_bit_gain": 0.03046377338058548,
+      "geometric_rank_improvement_factor": 1.0213403963044014
+    },
+    "folds": [
+      {
+        "inner_validation_targets": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 784,
+        "outer_heldout_target": 0,
+        "selected_candidate": {
+          "candidate_index": 139,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 44,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_reciprocal_absdiff44",
+          "representation_index": 4,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 139
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 2320,
+        "outer_heldout_target": 1,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 2430,
+        "outer_heldout_target": 2,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 3778,
+        "outer_heldout_target": 3,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 179,
+        "outer_heldout_target": 4,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 3545,
+        "outer_heldout_target": 5,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 935,
+        "outer_heldout_target": 6,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 3961,
+        "outer_heldout_target": 7,
+        "selected_candidate": {
+          "candidate_index": 124,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "diagonal_variance",
+          "scale_index": 1,
+          "shrinkage": 0.0
+        },
+        "selected_candidate_index": 124
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 1543,
+        "outer_heldout_target": 8,
+        "selected_candidate": {
+          "candidate_index": 87,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 8,
+          "location": "coordinate_median",
+          "location_index": 1,
+          "representation": "log8",
+          "representation_index": 0,
+          "scale_family": "diagonal_variance",
+          "scale_index": 4,
+          "shrinkage": 0.75
+        },
+        "selected_candidate_index": 87
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 1314,
+        "outer_heldout_target": 9,
+        "selected_candidate": {
+          "candidate_index": 139,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 44,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_reciprocal_absdiff44",
+          "representation_index": 4,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 139
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 3254,
+        "outer_heldout_target": 10,
+        "selected_candidate": {
+          "candidate_index": 139,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 44,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_reciprocal_absdiff44",
+          "representation_index": 4,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 139
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 2727,
+        "outer_heldout_target": 11,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 1890,
+        "outer_heldout_target": 12,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15
+        ],
+        "outer_heldout_rank": 398,
+        "outer_heldout_target": 13,
+        "selected_candidate": {
+          "candidate_index": 139,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 44,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_reciprocal_absdiff44",
+          "representation_index": 4,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 139
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15
+        ],
+        "outer_heldout_rank": 322,
+        "outer_heldout_target": 14,
+        "selected_candidate": {
+          "candidate_index": 123,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 36,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_absdiff36",
+          "representation_index": 3,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 123
+      },
+      {
+        "inner_validation_targets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "outer_heldout_rank": 3656,
+        "outer_heldout_target": 15,
+        "selected_candidate": {
+          "candidate_index": 139,
+          "family": "robust_location_shape",
+          "family_index": 1,
+          "feature_dimension": 44,
+          "location": "coordinate_mean",
+          "location_index": 0,
+          "representation": "log_reciprocal_absdiff44",
+          "representation_index": 4,
+          "scale_family": "identity",
+          "scale_index": 0,
+          "shrinkage": null
+        },
+        "selected_candidate_index": 139
+      }
+    ],
+    "nested_winner_frequency": {
+      "123": 9,
+      "124": 1,
+      "139": 5,
+      "87": 1
+    }
+  },
+  "prospective_candidate_rank_table_int32le_sha256": "2a893193680354fb78215da8ef361e480cd5fb550d539379d5ba86e9e0c9224d",
+  "schema": "chacha20-round20-w50-knownkey-kernel-density-reader-a413-model-v1",
+  "training_rank_cache_anchors": {
+    "loo_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_00_v1.json",
+      "sha256": "9bb86d6b21c3313810c9e72ebd168519195310798de8009bfa44f4fbc7ff1407"
+    },
+    "loo_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_01_v1.json",
+      "sha256": "78761d60616a094afb7dbd61d46474ea580b0c6aee6baf0d5279f42b394c13a3"
+    },
+    "loo_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_02_v1.json",
+      "sha256": "67ffea4c6c3a4146574f6475a55874bdc4747a2828086a990a0e6053d4e58e2a"
+    },
+    "loo_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_03_v1.json",
+      "sha256": "80c4b6e169225464de93f0a7b4567f3921a8a2d166f90c9d272fe674a3941f28"
+    },
+    "loo_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_04_v1.json",
+      "sha256": "538e0f5abf02c15a2f4cc3f3b3170e43736c8ef43b5f5fd066e9b9ee616bdaeb"
+    },
+    "loo_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_05_v1.json",
+      "sha256": "9c664f284b4b842c570ea63800d96d7b7f5da7cb7f7ad7d98b493a3d42181828"
+    },
+    "loo_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_06_v1.json",
+      "sha256": "84d57faa66a06193becba71a613fa7048e96d73ed7b40ad4e42e2e0cfe64f512"
+    },
+    "loo_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_07_v1.json",
+      "sha256": "2db868fe3e27e8cf122a3c365c4002756a77931996ab93fb7fbe2664dbe56480"
+    },
+    "loo_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_08_v1.json",
+      "sha256": "9ff08df6dc4a6b21802a5337b38d60aa37ba34a0852d33a718101664b3f26f47"
+    },
+    "loo_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_09_v1.json",
+      "sha256": "503107bc8cc8d2c0c5f24d2340e803db2b0c2e791891fb772f8253e17446152f"
+    },
+    "loo_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_10_v1.json",
+      "sha256": "64183b7c1d74d33835cea62ae9604571697c7916f35365f145cce21a18571859"
+    },
+    "loo_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_11_v1.json",
+      "sha256": "f86f3c55b0af80c74af7ee41852f2e4d5afbd57c099c203b2dfc48660dff267d"
+    },
+    "loo_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_12_v1.json",
+      "sha256": "b286b16652834307a412b4e1c474a7ee4dbab01c423e0aaac4f3a1a231b4321d"
+    },
+    "loo_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_13_v1.json",
+      "sha256": "d3200ffac664486ae97ce35de322201deba9cbd92c5ffa937bfaa94e3f303e90"
+    },
+    "loo_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_14_v1.json",
+      "sha256": "1645f1a4a0f49abb279c23d8e82337afc36f38d5e18ddd2f184b939ae74f0614"
+    },
+    "loo_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/loo_validation_15_v1.json",
+      "sha256": "bf4a39ed4385f276126f59e257741a80af3a94d16e8068d09e0f5816940f5433"
+    },
+    "nested_00_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_01_v1.json",
+      "sha256": "f69b832ef2079f01debf2449842c727381b03f8f53dd9cc87997fc19a7b90b92"
+    },
+    "nested_00_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_02_v1.json",
+      "sha256": "dd83fc21585bd55cca0bce0aefc202ff86af3f251eb1048483d76555a40f114c"
+    },
+    "nested_00_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_03_v1.json",
+      "sha256": "ed508e755b5f104a9bdfcd94bebfaf91a42fb76b2f7d2d06601c13cca120e151"
+    },
+    "nested_00_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_04_v1.json",
+      "sha256": "43056432a2e114a0ea13d6d281e04564a8ee625f3cb86e81b2732746436d3673"
+    },
+    "nested_00_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_05_v1.json",
+      "sha256": "2bbcbe62e8f6f858e055141d3d2e7775f93ac1bc1fae6d016246092f79fe4f42"
+    },
+    "nested_00_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_06_v1.json",
+      "sha256": "5d8e49c3a08d1248c767ea0951b2d9c81537c703e658fa55357b7d5799371569"
+    },
+    "nested_00_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_07_v1.json",
+      "sha256": "bd168ee76028b7680e80db9af9609e34e0de2905f5554e8e7dd12170f847c5ae"
+    },
+    "nested_00_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_08_v1.json",
+      "sha256": "a70c56ae1c7f7a8dc7c01e80a683663e35834f0eaf9fdf26e2b5966400a063ca"
+    },
+    "nested_00_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_09_v1.json",
+      "sha256": "d1276057784573f3f169cc14095d94d3f466ed43bdc8af4b58bf7962d17aef31"
+    },
+    "nested_00_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_10_v1.json",
+      "sha256": "208edb05a85b2f50722bf43338946af75bb975f310e621dd6991a406c523e3da"
+    },
+    "nested_00_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_11_v1.json",
+      "sha256": "c32c271f46c58de421bedec79d9a5ce0e4fcd49b90da821e289ad40997924c53"
+    },
+    "nested_00_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_12_v1.json",
+      "sha256": "358d85a6c7bf85ab08e37afb061ff327cc915e076019ab1445505f67bc377a2b"
+    },
+    "nested_00_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_13_v1.json",
+      "sha256": "2c4c908308b01fa5e376120ba5f44924c3a0913a001a97e5aa5638bef42eb006"
+    },
+    "nested_00_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_14_v1.json",
+      "sha256": "b793ffcbbab18ce886d06e9d2938b606e32a892b64f4ade4bb9ab7b9dd578379"
+    },
+    "nested_00_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_00_validation_15_v1.json",
+      "sha256": "178544b2e8ebe59ee83ec5ca091a1c4955674d049e1908b50504b3a569e3876a"
+    },
+    "nested_01_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_00_v1.json",
+      "sha256": "f854c482da260f40b30d5efbfbb309e99712cfad3063a1acdb13bf719078c2d0"
+    },
+    "nested_01_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_02_v1.json",
+      "sha256": "1e900334040a32f0744ebf2ea5ef78f8677c9c12b5d758c237b7a7f17654f630"
+    },
+    "nested_01_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_03_v1.json",
+      "sha256": "f27758b85d114154dd593415150b63ca3589fa3e4ab0a0af7e0c39a3cd41614a"
+    },
+    "nested_01_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_04_v1.json",
+      "sha256": "5a158d77587dea7c1c267d9d6639d3a4afa52a0fe153da34417a4d0e14c6ec37"
+    },
+    "nested_01_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_05_v1.json",
+      "sha256": "317cafabff44bc7d8240c8bde4afb9c34c3e9e1911654ea12a02ef3e574e354f"
+    },
+    "nested_01_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_06_v1.json",
+      "sha256": "7dc64a6f2feb2376cbbc8a0eabf03ce0d7f975e3e0e3b87b05106b64d703ce20"
+    },
+    "nested_01_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_07_v1.json",
+      "sha256": "2e239012128a94d9c94dc5734acd335b8b8efaed6af19a799e5df2c704945efb"
+    },
+    "nested_01_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_08_v1.json",
+      "sha256": "f8562a36bb88cb9aa2c9467db7a5c5af13591c08366954fa80200dbe86fa855b"
+    },
+    "nested_01_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_09_v1.json",
+      "sha256": "6c98778e9e9c6b4c799f8f2c5de1b90f742a8747108411853101fe5b8a5129c0"
+    },
+    "nested_01_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_10_v1.json",
+      "sha256": "08ef4e7f8243a9b15614967c9e8adecdc889033910e2dec9b66238a9f396f8fd"
+    },
+    "nested_01_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_11_v1.json",
+      "sha256": "bacde5ef53379dbc9cccb4df9f26917cbf9d9a3470c868ad2c726b2dea77cd8b"
+    },
+    "nested_01_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_12_v1.json",
+      "sha256": "40082d29f1c2258bb915961dd2cf1a05743426b8a0023dbdf6f772245593dc36"
+    },
+    "nested_01_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_13_v1.json",
+      "sha256": "ef106785e960e36199a2dbac80ee2feba7dcd1f8591e8214e026f8ed54e49e8a"
+    },
+    "nested_01_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_14_v1.json",
+      "sha256": "4bcd84991867891ee16f1f9a813030febc0c05f59a93f689ae5e55df934a41b3"
+    },
+    "nested_01_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_01_validation_15_v1.json",
+      "sha256": "5f2cdc56485bdac4c504801ed3e8f19f5382f88dcc09d85bf6ec3ea3d349d04f"
+    },
+    "nested_02_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_00_v1.json",
+      "sha256": "b11f1aa02134cdc5211d9ca897dee52cbe99d17db98e091c08d15159a84cbde2"
+    },
+    "nested_02_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_01_v1.json",
+      "sha256": "8b3db7723e190945fefd8932434519d18dc09ce33d0e9ebc938904af678c52a6"
+    },
+    "nested_02_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_03_v1.json",
+      "sha256": "ee55986c4f6fb6b0496097124a601c689f1d12c805780eb541b3cc29d3d70fcb"
+    },
+    "nested_02_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_04_v1.json",
+      "sha256": "10f461e28e8539add54c35ed59590a3af598c76a74df53042245c8e38a05bd5b"
+    },
+    "nested_02_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_05_v1.json",
+      "sha256": "5811bbb89816c9d84a304149a340fa88c9901b16a5cd75853a09c1b9f99a2b5b"
+    },
+    "nested_02_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_06_v1.json",
+      "sha256": "57dea593ff2ed0e91f296d4719f5465ae9539ebb48f4f0e85612b4e4355b7c43"
+    },
+    "nested_02_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_07_v1.json",
+      "sha256": "ac0a36a218d4a2b2477209dda9ad48c27ac329db770dba860f3a48c4217bc8d7"
+    },
+    "nested_02_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_08_v1.json",
+      "sha256": "8bf4b47380c0ed3cfa5a5c5bcc982d67d1c52802fe2d5b3b268eb63b5ceb6a51"
+    },
+    "nested_02_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_09_v1.json",
+      "sha256": "b2b71e99f54b792279cf4051aab57ff21bf0673dd5ed83b28309d300422090ba"
+    },
+    "nested_02_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_10_v1.json",
+      "sha256": "2d124f0d9ef2abe103a67f5e49323edaaabc988815d457dfb5d99ae52521cb5e"
+    },
+    "nested_02_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_11_v1.json",
+      "sha256": "b2af65731249e3933e50584d355ddee4abe02abf047529dd84f9a5719fdab299"
+    },
+    "nested_02_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_12_v1.json",
+      "sha256": "070c8d957fd676115523f0450e6778aa0bc8ce759c0cf1e2b3ffc799f89e355c"
+    },
+    "nested_02_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_13_v1.json",
+      "sha256": "a98dc2a600ad70667cd457c76018a1f662b9443efdc40e5d613748d87e1f16af"
+    },
+    "nested_02_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_14_v1.json",
+      "sha256": "406879353b153da6f3b71580c11d4409efad947c87f9e7ae6a14a4a51f40bcb1"
+    },
+    "nested_02_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_02_validation_15_v1.json",
+      "sha256": "d338ee795cf5f620ba1986d69fcf945a9107f75364bc4bb6ba68925a1cffc0a4"
+    },
+    "nested_03_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_00_v1.json",
+      "sha256": "8da0cbafb02bda28c16b00f7d5f60713ddc10ba663d9b49861a2e069a37637aa"
+    },
+    "nested_03_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_01_v1.json",
+      "sha256": "c04263f0c5ad62270156c6c70e49695ead0c013a4cf6c70650d1e8fab6467036"
+    },
+    "nested_03_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_02_v1.json",
+      "sha256": "9728b562d7ca9511df8f5b4b09caa5b5f0d5c38e2a170f89bea8f2b6f8282264"
+    },
+    "nested_03_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_04_v1.json",
+      "sha256": "220500276d5bc1e39f8c678582c24a6e5fe3037cdb3e06b13595b77b134b235a"
+    },
+    "nested_03_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_05_v1.json",
+      "sha256": "79a057857a9ed3dcb15c5bc9057324d6e1434a55749b22df7a92fcbbef3da77d"
+    },
+    "nested_03_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_06_v1.json",
+      "sha256": "39ce2b1c11f7388cdb73193ebe4a04787087a80da093740ccfb4f9beaac7a87f"
+    },
+    "nested_03_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_07_v1.json",
+      "sha256": "a8f5d7b03d5fbd011953f26d35ec157cd277fe0e64da5d38fd1247135cf75b09"
+    },
+    "nested_03_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_08_v1.json",
+      "sha256": "80043ac3519bbcad32aad324901782770ad038f697c2a0c8fd2ace262e6cd03f"
+    },
+    "nested_03_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_09_v1.json",
+      "sha256": "617c3f2173c6f89caabf2ae5fe4b0783e29dd7fb9607eb78b894ca35119c95b7"
+    },
+    "nested_03_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_10_v1.json",
+      "sha256": "7814221ff27ce4bdc5c7152aec3be4e1d6a4ebe44f6f60ff74380f5a4dcbef42"
+    },
+    "nested_03_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_11_v1.json",
+      "sha256": "b7eed5f9d22ecb346191c3e20aeb79f0d141a9fcda5986fb462e85166184b08a"
+    },
+    "nested_03_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_12_v1.json",
+      "sha256": "a75f38f5549def3b70d18089fd16600a199b7e172ba2794b5b7011676d8382d9"
+    },
+    "nested_03_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_13_v1.json",
+      "sha256": "1044af954bf9c356ba0094297411aa34dba346a1a3a28d3ef48c2d9c4bbba2ac"
+    },
+    "nested_03_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_14_v1.json",
+      "sha256": "2bf749f524339bc062a327bd0b7ea4021eb8dfa82a7cdca048a91a79090c9b85"
+    },
+    "nested_03_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_03_validation_15_v1.json",
+      "sha256": "0edecf161aae009c5dc711839c084b52ef55baced8b24f4fe7ff34577b2e903a"
+    },
+    "nested_04_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_00_v1.json",
+      "sha256": "d34774286d4e406e6cb7bf34538d104e1f3401a00366c3008288d1801199dc4f"
+    },
+    "nested_04_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_01_v1.json",
+      "sha256": "4d223a7a2facd5619213f5079fc04e03dc4446795a36f89673f560b0d6634a7b"
+    },
+    "nested_04_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_02_v1.json",
+      "sha256": "1f09d7c3945161fb82245599d1eba4814faff0d209407a73840107f7292bed90"
+    },
+    "nested_04_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_03_v1.json",
+      "sha256": "f3540b62973b67ea53b65229936954f04cd67ee223a4fc921134ea42d15b3cbf"
+    },
+    "nested_04_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_05_v1.json",
+      "sha256": "2c82983bb632afe6cd718e5fa5c052a09cbec47061758dad80852d2e26f67ba0"
+    },
+    "nested_04_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_06_v1.json",
+      "sha256": "a5f40ad5dce83140a8a83424e6193e0489d4376e88b3050342cf5708cd0e9715"
+    },
+    "nested_04_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_07_v1.json",
+      "sha256": "88fdbafbf8d22894eb809bc6afa8b2e5716f1c2ba83f7cbfa516f9309abb4570"
+    },
+    "nested_04_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_08_v1.json",
+      "sha256": "22320cf6fd84cc22aaa7349fe8b79c86819867b1fa1e17a7eba2a285e594adbb"
+    },
+    "nested_04_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_09_v1.json",
+      "sha256": "795e90c68721280b4bd72a1a1e4ff692d278b4cc326c7404de319b5fef78e202"
+    },
+    "nested_04_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_10_v1.json",
+      "sha256": "747ff266c51936f0ee502dcddfb3d92432a9215f0626728a66f860757a49bd09"
+    },
+    "nested_04_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_11_v1.json",
+      "sha256": "b6aab2cc5c8fadb713bb1a894dc080180553a888ba7e3a3b2ffc51c46e99594a"
+    },
+    "nested_04_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_12_v1.json",
+      "sha256": "b0337b63641554d1ab28256616630cf3ccdffdd38def968e0bd43a7654cfc9aa"
+    },
+    "nested_04_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_13_v1.json",
+      "sha256": "6687be9a1e2892683fc659a91267f5ad413917fa85dc1de9e2300307854aa8d0"
+    },
+    "nested_04_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_14_v1.json",
+      "sha256": "186f12bec87528e32c22de04de30bf48c878d77cef4c501dcebcec0a92cc5a02"
+    },
+    "nested_04_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_04_validation_15_v1.json",
+      "sha256": "60aa4a00d7f5bb60cda655877f21bcbcbb33b6791e32e70684a4a32d0d9846c0"
+    },
+    "nested_05_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_00_v1.json",
+      "sha256": "01034f3a5cb35a52e5dbd9101a699f178e5ca408647de18bb86e8f88fc35e62c"
+    },
+    "nested_05_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_01_v1.json",
+      "sha256": "097dfc03f5ff2c150c5274cf336b6ec4a425d088bdb94297ef12bcb57ff4d09c"
+    },
+    "nested_05_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_02_v1.json",
+      "sha256": "3e4a0d99cbced104f908afbe74473af6ea8c97fc6d8cb8c7a5d162a3ea617676"
+    },
+    "nested_05_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_03_v1.json",
+      "sha256": "9dc49c6be7cc107aab62f950f7e598713cd850194c29b194e1001c3f93b2c4a8"
+    },
+    "nested_05_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_04_v1.json",
+      "sha256": "2ff082bd4f8a67aed0060be7a853982b78cd7f1530f8606bc0a37b12c595fe8d"
+    },
+    "nested_05_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_06_v1.json",
+      "sha256": "fc3396e4fa04d9d32f809a2ff56e203c2d5137bd59e11227792e88e16ab805f0"
+    },
+    "nested_05_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_07_v1.json",
+      "sha256": "4ba6732f007256908f106499bba0bb359d48df1db5c3ed7be4febb29b4a99c33"
+    },
+    "nested_05_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_08_v1.json",
+      "sha256": "815937e470581a394242d7003bb2eba52dc106ac3fa50e98babdc8526d86989f"
+    },
+    "nested_05_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_09_v1.json",
+      "sha256": "ca6fc65cb7179f0292880cc5c931e8ad89e4a7c2f9be02b8d570fda7269abfe5"
+    },
+    "nested_05_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_10_v1.json",
+      "sha256": "d02457335efe75eb484580724f08851644b2ab947b53ac464e935cf2e0ae5c1e"
+    },
+    "nested_05_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_11_v1.json",
+      "sha256": "5de1c634471281d221affeccb68ed72d186214dcaa8dfb8be656102e6619056c"
+    },
+    "nested_05_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_12_v1.json",
+      "sha256": "69f5e9638cd3aa054a5541f853ce6685c5367cfa72d569112fb8f8ff22e8f438"
+    },
+    "nested_05_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_13_v1.json",
+      "sha256": "43e066f7f90d86f4d00bd4a5e14909dbe8e2f4ec6cfcd6d0c2a53d544a3c6e42"
+    },
+    "nested_05_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_14_v1.json",
+      "sha256": "21032c77082db1219091a8808cbfdff9a9dc4830239d72a7e3b8fd8acd2a9b53"
+    },
+    "nested_05_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_05_validation_15_v1.json",
+      "sha256": "6883c69c427b6ea9baf06087c23ed7ad9f648af7add5fcdc068f2140fa81fd34"
+    },
+    "nested_06_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_00_v1.json",
+      "sha256": "6da3938a31225e0dfb49d6da3a4ee3f8a0621ba3eeaf68a780860364d0445ddf"
+    },
+    "nested_06_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_01_v1.json",
+      "sha256": "c5072f2e07e244d18a9e648bb357f9fc8f55d870bc59bacb356448bb2fdd5b2c"
+    },
+    "nested_06_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_02_v1.json",
+      "sha256": "b7f722d0fe25e6312da58e4611d451f8913c01c6daf2378927d2dfec7daf4d1e"
+    },
+    "nested_06_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_03_v1.json",
+      "sha256": "f850a95049ca0cfb98fed04f0b0dc645bb9fd9a917c23968392753fa0c902b26"
+    },
+    "nested_06_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_04_v1.json",
+      "sha256": "b6d6299487b32653368b279d840826539e852793aa92e5d6d696995b60586118"
+    },
+    "nested_06_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_05_v1.json",
+      "sha256": "0294b1207264a0c18572bda3fca57fa4d1e8c4e20ddfe5849c0510809a48f656"
+    },
+    "nested_06_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_07_v1.json",
+      "sha256": "47b347a1296f163f53a2b242453ad83013c55edd7dc08bbd5815dd079a7615d8"
+    },
+    "nested_06_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_08_v1.json",
+      "sha256": "1ae6e33d17e2c8ac314214626a6c83222d3843ec10a63df2ddbc5be2654f82ac"
+    },
+    "nested_06_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_09_v1.json",
+      "sha256": "f0f5f9e0eb7edcbcf55af2a7ed4515819b9a7b90ef2596d971a7a1c24444777d"
+    },
+    "nested_06_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_10_v1.json",
+      "sha256": "c8c35a385171c02e1a02422c46852eb9e3f77e2e2e07c032695b05b5480e158a"
+    },
+    "nested_06_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_11_v1.json",
+      "sha256": "16b942a27a28ecdba1f4fc33767cdabbcbe4b32188dae2fd8868ea707bb53405"
+    },
+    "nested_06_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_12_v1.json",
+      "sha256": "04917b92ad15e29817d6059d719a31b02bce59f2c789aafff1759fd720e0a961"
+    },
+    "nested_06_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_13_v1.json",
+      "sha256": "485a1d0eb96e14c2a8d89406da973e727943c9892f4cd314d5b1690369472953"
+    },
+    "nested_06_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_14_v1.json",
+      "sha256": "07f1a9555d730409ca57d0ab573bdc87cdc5d4f5c59f2718d74a4fe4a9772da9"
+    },
+    "nested_06_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_06_validation_15_v1.json",
+      "sha256": "e30da161324d46430d079f038c75fad3fdf7a577d558c78a79c8382f68f1e76c"
+    },
+    "nested_07_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_00_v1.json",
+      "sha256": "a9c1b7a436c63745d2776efb6e53d70d70cdd5e2465ea55c6d3a012301745d18"
+    },
+    "nested_07_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_01_v1.json",
+      "sha256": "b745b53082839ea13c2cfa8021e4190cec2a638877cf0ba8f46f44eafb10741d"
+    },
+    "nested_07_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_02_v1.json",
+      "sha256": "a37704794a09b0d573e2c757ceb95c5d5248a26e34275863e53d4c43f6920a96"
+    },
+    "nested_07_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_03_v1.json",
+      "sha256": "6c01bf57c65b51c9346b53ac803231f102ca404feef8afc76c3c33642a1ec1b2"
+    },
+    "nested_07_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_04_v1.json",
+      "sha256": "871a1af2daf9e1fc9bf00c12058669752dcd45b430716f557950151bdbf476ec"
+    },
+    "nested_07_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_05_v1.json",
+      "sha256": "892b14ac7c92d13f13397384b1d8ee824deefe007f602b88b4e521e364cb7948"
+    },
+    "nested_07_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_06_v1.json",
+      "sha256": "a203e6dbaa2113c1e314ede7c4ea5f29e175b3498426926902572a0069faa943"
+    },
+    "nested_07_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_08_v1.json",
+      "sha256": "31706738730d988e6fcbcfbbfbc407fff4e9d6c714cf144b1c6533eca132c53d"
+    },
+    "nested_07_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_09_v1.json",
+      "sha256": "82189c0bb18b0b20810943a5fb0a4226878955b06872e598576f8cebd49b3f71"
+    },
+    "nested_07_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_10_v1.json",
+      "sha256": "b8d465f083b22c9c854b239665c96acd1e6f24ca569a3d99aef6265e6be9a62a"
+    },
+    "nested_07_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_11_v1.json",
+      "sha256": "83fc2d2407ecb3ece98667dfd47bf2449ecdf3d5fb6589081c857512d69e08d5"
+    },
+    "nested_07_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_12_v1.json",
+      "sha256": "1e42f22b0e0a545af0bb03486b97bc1b6d875e1c7b8709a96055b778e8203ef7"
+    },
+    "nested_07_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_13_v1.json",
+      "sha256": "fec1d06a45c1f5179282df89fd91102f4586759e9ad54a467bbd5b2e5bbfcddc"
+    },
+    "nested_07_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_14_v1.json",
+      "sha256": "809bf8311c564b39fd2055b73eb1a07395144de79bc46148f6ba3d54dcfbedb3"
+    },
+    "nested_07_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_07_validation_15_v1.json",
+      "sha256": "eb9291b2076e87427a0518fe82fc05ca9a4c3a58882b1b20aabc20e2740460a2"
+    },
+    "nested_08_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_00_v1.json",
+      "sha256": "8c3cac9085e167a09c31b3359fa7223befb4d21b8f719688e3e16ce71196f5b0"
+    },
+    "nested_08_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_01_v1.json",
+      "sha256": "9cd16a37e1cddd9fb5c8686c2b758c3894dcc541ecb6624382ff8ea00a9e806f"
+    },
+    "nested_08_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_02_v1.json",
+      "sha256": "7dcb5a3b9a4ceaaa6f9d272bd92cea1462dfede6e238bca6c3bcbcea91e55e16"
+    },
+    "nested_08_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_03_v1.json",
+      "sha256": "3dffad3925da672c57e97765c622286e9f3c5c6bfbeee6ea3ecd267655429151"
+    },
+    "nested_08_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_04_v1.json",
+      "sha256": "cc770df8254888c826310037823e285e19626ec9f049ee088b75e707313b5b37"
+    },
+    "nested_08_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_05_v1.json",
+      "sha256": "40a3c8737c3ef5be95955b84e21a6dff59f6d6751a74139c87ab18a786c56c53"
+    },
+    "nested_08_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_06_v1.json",
+      "sha256": "a6d2d7d2094f6ab8ca8e6829962e3457701a36475c27fa163173d642c2465160"
+    },
+    "nested_08_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_07_v1.json",
+      "sha256": "11a893acdfcce5b919f85476913f6aaf02b914100cd4158b97a518f6e2b3d060"
+    },
+    "nested_08_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_09_v1.json",
+      "sha256": "d7349b2bcea89246d7f4f1f96eb5ee6afe82bc484db99b3aca095e0c935e8515"
+    },
+    "nested_08_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_10_v1.json",
+      "sha256": "d4659db8a6eab3ee9c5613eef170edc4ffe62ed2779b618ed30817e8accad1ca"
+    },
+    "nested_08_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_11_v1.json",
+      "sha256": "5199bd349ca67f64197be4011efedf5430ac3658c30236b14653471c5c8c7af6"
+    },
+    "nested_08_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_12_v1.json",
+      "sha256": "7b61ccdea26f710557665c6cdbe137d4d76936ca405ae8c187fb7bdd242af1cd"
+    },
+    "nested_08_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_13_v1.json",
+      "sha256": "b7f83ebbca8d9fd38c1e3f18ea976f1afc5492148d5860ffdc1d5b36a96b228c"
+    },
+    "nested_08_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_14_v1.json",
+      "sha256": "5a0110c6f5fea8581f913ebc9388ef20d7ba6ee3563669b6c22bc133c3e39998"
+    },
+    "nested_08_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_08_validation_15_v1.json",
+      "sha256": "563132aa1f5ed5b6e8c72c5d14b3d14a098e3a126ef69122d8814e1700864032"
+    },
+    "nested_09_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_00_v1.json",
+      "sha256": "dea5e1579b29dc51a40325a1019e25191711bbcdc7a4fe7dab8c9d4f20272f94"
+    },
+    "nested_09_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_01_v1.json",
+      "sha256": "984067c4f1029550f505e59ad672c1a2d74efe9a50512d115403b297690c07a2"
+    },
+    "nested_09_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_02_v1.json",
+      "sha256": "ff4090536dbe579de2d2a6eab67a45b1d8928a30d4e6f6223f44e19ad12283fd"
+    },
+    "nested_09_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_03_v1.json",
+      "sha256": "994e672bd14952116db99d10a5a5dd6b7e6c04e209c4cba1846d76701f65522d"
+    },
+    "nested_09_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_04_v1.json",
+      "sha256": "f935086754ac2f887600e801f62f9eae6533bf0eaea472872a33218a1a67612f"
+    },
+    "nested_09_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_05_v1.json",
+      "sha256": "6036c47c29a2f1cded8b9d4733ebba2e2f8e8ea101c2d3187d76a114fa2de4bf"
+    },
+    "nested_09_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_06_v1.json",
+      "sha256": "48c897ac02457cc553eb394f7c0229f85805eb434643dd08c6976d76f1aec102"
+    },
+    "nested_09_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_07_v1.json",
+      "sha256": "dbdf2f8ddaa023d4eb2e6c640a5302a3143ee435a798ff70225fe4b16cf2096a"
+    },
+    "nested_09_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_08_v1.json",
+      "sha256": "cf4469b9a59216aacb9b2a3d30a99dc8b54a92323831300e226954afe71508c4"
+    },
+    "nested_09_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_10_v1.json",
+      "sha256": "c4a544e557d44f4dc1971b4591e8929becf1c37e22a530dab838deea2a1099c1"
+    },
+    "nested_09_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_11_v1.json",
+      "sha256": "f023849f2a10d66e17f44607d099c1772b45f57a7432469841a468ba8b2cbc0c"
+    },
+    "nested_09_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_12_v1.json",
+      "sha256": "7f0da4339d24fbcb6b782c0051b3c49897f6f99dc034fdb4f692e9fba7213fae"
+    },
+    "nested_09_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_13_v1.json",
+      "sha256": "0d644caceca260e18bcff428579bed7beba3a08453972b61b116149a0c90df18"
+    },
+    "nested_09_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_14_v1.json",
+      "sha256": "46cb9fe2ca701cdf0a0887a71b268dfdf1b619f9eb8be630dd62c9661e33b9f6"
+    },
+    "nested_09_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_09_validation_15_v1.json",
+      "sha256": "19af44d7b794e345f67d5f70d48de71dea2181100cfb802e2c051515c8a77e97"
+    },
+    "nested_10_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_00_v1.json",
+      "sha256": "c054b4b485a269ab90e1729200ab12be9add3ad09c6b8a52f280403d64696217"
+    },
+    "nested_10_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_01_v1.json",
+      "sha256": "c6dbf04af121177c9fd0f0321fc5f5cf1bab98b878dc381637e7d221c6dc6480"
+    },
+    "nested_10_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_02_v1.json",
+      "sha256": "fdbc86b375380559704175be9e9d25e3b374fee3957b859bac39755a864e49ae"
+    },
+    "nested_10_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_03_v1.json",
+      "sha256": "47a0dd1170ddee0cad64c89956624a658fd1280eb7f4804c4ca64e7027cc61fd"
+    },
+    "nested_10_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_04_v1.json",
+      "sha256": "3f44a29d18cac6bf3b29a396f20ab30f37283e6f12d0c44bf2fccc2c6402451d"
+    },
+    "nested_10_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_05_v1.json",
+      "sha256": "42c25480f271c1ec2cd6c4feaf1c4cd76766dc93739553a1d1eaa429141c567f"
+    },
+    "nested_10_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_06_v1.json",
+      "sha256": "6bfd7d97bf744fd7ab49ed456aafff03acc3c8a70545a453a7a9c661eb119ec8"
+    },
+    "nested_10_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_07_v1.json",
+      "sha256": "7a5f1e57e05268d7443ec97588e454f07737192b3be9fe2a90970f74d94dc895"
+    },
+    "nested_10_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_08_v1.json",
+      "sha256": "040ff1f0ec502be96b1c82db7cbda52f95536e9d0676467e48533b7cce9127da"
+    },
+    "nested_10_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_09_v1.json",
+      "sha256": "6bd87b71c36ce764006e59707c511bf23ea86a0724fa822c38fe8236aac3c724"
+    },
+    "nested_10_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_11_v1.json",
+      "sha256": "3493741a8f92b9ed3fd917c81f7987793ba1c4d83afdfaccf59edb2b9064709b"
+    },
+    "nested_10_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_12_v1.json",
+      "sha256": "7b1f9b0e38232bb12ed8f0cd8f50411d828eb692a7a15c09693490d1a840dac3"
+    },
+    "nested_10_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_13_v1.json",
+      "sha256": "85099f0b06804371a130b444c397aa054ebb7c959e6af01129255132315f49d6"
+    },
+    "nested_10_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_14_v1.json",
+      "sha256": "04c7373649c6179999de65d9dd0694cb9fd0a9716ab3ed57a5dfa4582ad1d4d0"
+    },
+    "nested_10_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_10_validation_15_v1.json",
+      "sha256": "c4565c3921e94a0ff9113a51ab18220e0ea3d622c861df074bbbc940e4d71da2"
+    },
+    "nested_11_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_00_v1.json",
+      "sha256": "d0848cc3876b84c6506b14f77d66b61e113e78a8e6edd65ab3dbce92f03dac6f"
+    },
+    "nested_11_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_01_v1.json",
+      "sha256": "6440dd925d694a4c0ed675d6af091f7fa02fdd31645a15f6130ad47923d0c5e0"
+    },
+    "nested_11_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_02_v1.json",
+      "sha256": "ae4ed084f051f3fba4d5902881ae209a2d9cf78e094262b47c1bf5f81f05b1d8"
+    },
+    "nested_11_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_03_v1.json",
+      "sha256": "6942f59ae77bf5effa3383de44a782be1f4c6aa3c178e96d3d277affbf7a91c8"
+    },
+    "nested_11_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_04_v1.json",
+      "sha256": "93fed33f87b099a48a4e1f56c81139bca4583a30d5092de5ced119daabdfd2a0"
+    },
+    "nested_11_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_05_v1.json",
+      "sha256": "e603edeafabd02a820547061c33a52df7aa821cb85a6a8486f613197cf9f2d3e"
+    },
+    "nested_11_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_06_v1.json",
+      "sha256": "9ddb9c5f7c4c33da6ffdbf0155f481a9616378d3a6b680a2f55e7f8490ed52d6"
+    },
+    "nested_11_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_07_v1.json",
+      "sha256": "c8455dce90bff06c5c229caea68b2aed3d6db1f5b0c2f95841c872052cfcabed"
+    },
+    "nested_11_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_08_v1.json",
+      "sha256": "64702a82ad7f40a58342e53f985e4a80b959c487cb6cbd01c4d8f603dc57c5b3"
+    },
+    "nested_11_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_09_v1.json",
+      "sha256": "282691e6651685fb7a6e0c2e1c386c14ac6c4e62c306be34ee72a3baa43ff1a3"
+    },
+    "nested_11_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_10_v1.json",
+      "sha256": "e0830ee7c92238be1f543ca676a54569eb3f0a9423fc1a86492ccf904e0a4895"
+    },
+    "nested_11_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_12_v1.json",
+      "sha256": "6f9df965f3092dced343b22f224f6b4b15d3bcf55ac14b3e46880fae4fa78df0"
+    },
+    "nested_11_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_13_v1.json",
+      "sha256": "204abe6045fe45d72475f49f6d4875048f2c98cba96232112404021c7ca37685"
+    },
+    "nested_11_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_14_v1.json",
+      "sha256": "905c0f7175be93206e3fa2b4562a48af5cc7d124e9cc5f3334fdbf9d107b58e0"
+    },
+    "nested_11_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_11_validation_15_v1.json",
+      "sha256": "f33fe36d4e3f1c17ff021be5c8e58490bf39f729929f58d8c728f0e31461691d"
+    },
+    "nested_12_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_00_v1.json",
+      "sha256": "dc2b317da7eb2f96f58e0658bde14b18cdaa577555fb5f6ece246bd2b593aa7b"
+    },
+    "nested_12_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_01_v1.json",
+      "sha256": "7dd8db6ea3df856b2eef1efcb9a80832759c988ed4318303d2d9da9af0adb974"
+    },
+    "nested_12_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_02_v1.json",
+      "sha256": "2cd48c11e281dcab4985939d71052e69bfb3b283c6b582854f567747596b2031"
+    },
+    "nested_12_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_03_v1.json",
+      "sha256": "f9a68d3e4659e3d1857c012d5a5007325aff3232e2183540a87bbc9f7fec6c70"
+    },
+    "nested_12_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_04_v1.json",
+      "sha256": "e51388c557883b81ff98169081cdf91ee42d4c50dcf9cc3d0d08560ae8be2eec"
+    },
+    "nested_12_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_05_v1.json",
+      "sha256": "681509278cbfa9580e6cf3081ab7d4541ee071390b18c3e1d11a61c19c5c67e9"
+    },
+    "nested_12_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_06_v1.json",
+      "sha256": "d96b24038c02472205890efdefc49b8ce20f9b0158454be399da6a8e91ec4a2d"
+    },
+    "nested_12_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_07_v1.json",
+      "sha256": "f2646c39e12ed28db90d1fa1ed484006bb74abea990bc640e4d1ef0da7b54f84"
+    },
+    "nested_12_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_08_v1.json",
+      "sha256": "4d5bcddc7ec0b1195c58ce88b78be68e85292f2ebb6ffbac2b1afdd01a94ae3c"
+    },
+    "nested_12_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_09_v1.json",
+      "sha256": "3f597601f5271652758c6f8236401e0252b3d04f545b14a3eba8bfb16f160b9f"
+    },
+    "nested_12_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_10_v1.json",
+      "sha256": "fd00453157b1ca23e66a312c62a1e38a0415d851124315887e5ec16eeff294f2"
+    },
+    "nested_12_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_11_v1.json",
+      "sha256": "625467b43738ef75db28c05320c228d21897f013afb5db86652ea2e18b4d6565"
+    },
+    "nested_12_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_13_v1.json",
+      "sha256": "addd4117b051fcc4849ef2f45b5e84864753b5953d18e3677f5319e89cd7da9b"
+    },
+    "nested_12_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_14_v1.json",
+      "sha256": "78989220e1765ef7a434c0b2893addd6fb6cd029daf32763aa87cc250301d80c"
+    },
+    "nested_12_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_12_validation_15_v1.json",
+      "sha256": "ca3e7d5c4ce7ecd473749220e72b33dbbb11fcc2f7622ead0e6c187c9f52238b"
+    },
+    "nested_13_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_00_v1.json",
+      "sha256": "7344b4864e2c27657ac1a5a835c97c3c7ed0edad3543b43851e8143b5cea34cb"
+    },
+    "nested_13_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_01_v1.json",
+      "sha256": "69c13ba42909f322ee03970cce052f573659e3ad13ab0ac56136dd06e734a824"
+    },
+    "nested_13_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_02_v1.json",
+      "sha256": "35a22b07181f6adc4b6556de2edcc630c352f6a8afc11d863956dea8bfc52421"
+    },
+    "nested_13_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_03_v1.json",
+      "sha256": "4d8442320af8c5f1cfc46616bc271fb824af6a53c6b834328c90b8ca34b95cff"
+    },
+    "nested_13_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_04_v1.json",
+      "sha256": "2ff3f6e0baf09bafb5a82b20158629fedb5ce2223de584a46390033ad6cb67f0"
+    },
+    "nested_13_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_05_v1.json",
+      "sha256": "4ce812f2f44a021306096a8db83a01053afc07b6a1b9a367b94c3b203b711928"
+    },
+    "nested_13_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_06_v1.json",
+      "sha256": "1172c260c64396521c37e0e47ae8776597947b77f6e4677bc334baca249d6ea5"
+    },
+    "nested_13_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_07_v1.json",
+      "sha256": "71e3b41695e2130ccd8dadcecd3b6bc8ee11782a381a244839218dc29b8b4ce7"
+    },
+    "nested_13_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_08_v1.json",
+      "sha256": "88ec5fe58b09a5f99cf833b692deb7633c2c0543d6669a48994b7cb946c5d2f8"
+    },
+    "nested_13_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_09_v1.json",
+      "sha256": "c71dda85e097ddf56130329f66f235c9622a7bbe40048aac5f186dac50588381"
+    },
+    "nested_13_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_10_v1.json",
+      "sha256": "d248dfc338e131fdc3e1b4eb4c236aa471a42ce1c784582f29b08b4636c4a048"
+    },
+    "nested_13_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_11_v1.json",
+      "sha256": "d7ca2bc2296d9df2df087ff0a304528c820b6b092bddc45fc7d1456146301f59"
+    },
+    "nested_13_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_12_v1.json",
+      "sha256": "460570ec71020ea95ebc48770d33a568f91d7dc17daaa83ee24bb101a3077118"
+    },
+    "nested_13_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_14_v1.json",
+      "sha256": "43565886490b4224c303e1a764b01b3ba190114caa1fb8c4c409d111ff3b150b"
+    },
+    "nested_13_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_13_validation_15_v1.json",
+      "sha256": "60d388fa60d564b5df306acb837dec1b3092aa1a37cc733e3880e4df70ce9231"
+    },
+    "nested_14_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_00_v1.json",
+      "sha256": "8ea65524ecb69ace8d1b19302d14cc8aa2f768fa8b2eb6b9faf63f5a25419bbe"
+    },
+    "nested_14_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_01_v1.json",
+      "sha256": "f6c32e884e24fc44cdeed5ced0dc7d522bcc642d5e910fb02b2b5a46d81037f9"
+    },
+    "nested_14_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_02_v1.json",
+      "sha256": "8d7172eb0734808f3409d9b5ed5cfad65802080acf46d472fd17bac5e00fbfd8"
+    },
+    "nested_14_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_03_v1.json",
+      "sha256": "9280c065bd47b1c74e64fccd4fec067b5cc52bd7e6da03d4b299ecd2cfc322fb"
+    },
+    "nested_14_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_04_v1.json",
+      "sha256": "bcc4189bf56366865d124c956d46abbc8492a232519d86d4b8e63708e258a64a"
+    },
+    "nested_14_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_05_v1.json",
+      "sha256": "d48d77eaa5e9cc816b11fd0848232963256f9ba4699e4fe99faae86f4d09c176"
+    },
+    "nested_14_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_06_v1.json",
+      "sha256": "c448085cd147b67f92d7bffc91f4be224a6293797e83a15e3cfe390e6d7388d7"
+    },
+    "nested_14_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_07_v1.json",
+      "sha256": "10ca4e487dc33a894bbaaf9f42d42bc405383986ef493b82f2753e717abf5b34"
+    },
+    "nested_14_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_08_v1.json",
+      "sha256": "77bacdf2f503221fb4d4a29fb53a5e6c34443ae92be9bdbf14d1a444fecd833b"
+    },
+    "nested_14_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_09_v1.json",
+      "sha256": "d2fd570870be1c1e0da9fcbd09d80732c5af1db0c7e91ff9a7b8ae13f4fdeef7"
+    },
+    "nested_14_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_10_v1.json",
+      "sha256": "ada1a37d3d3f4f95093d1c287f94a48f86b94a994f3fbc6898cab05528beecc6"
+    },
+    "nested_14_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_11_v1.json",
+      "sha256": "5e999febe2d749289177b231382075d1f3e32c36a5e60b2ce8785b16a1fadd6e"
+    },
+    "nested_14_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_12_v1.json",
+      "sha256": "f24755e663c52e29c3291e202c3b41112301ed140a046af008fec3e8cb543c9a"
+    },
+    "nested_14_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_13_v1.json",
+      "sha256": "03ff235a9469e691a14e3993508a71f4efc1fa4b7a0ee58dcd112bfec5ba0c43"
+    },
+    "nested_14_15": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_14_validation_15_v1.json",
+      "sha256": "adf0eac4cca0676d180e2e4e835c02a04c34af4ff1773c288440586f1dce2424"
+    },
+    "nested_15_00": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_00_v1.json",
+      "sha256": "f89071cb7e4478a95a8e7d517a7822be4d58d31ab0339e153cbffac015a21b5f"
+    },
+    "nested_15_01": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_01_v1.json",
+      "sha256": "44f9ec855ebd323f7c492a244235260a9627c4ccd815b4664add3c625d17e628"
+    },
+    "nested_15_02": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_02_v1.json",
+      "sha256": "c20382c2d2ec99d0647195320f938ef680c21c3cbb5e6664e47b5283268f84c1"
+    },
+    "nested_15_03": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_03_v1.json",
+      "sha256": "06fe1917fe5611aa7553980db2f093ef4874a180751a9a0594c23b2011a6a1e4"
+    },
+    "nested_15_04": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_04_v1.json",
+      "sha256": "ddf27ea7d8c2c9a7976992e3184d1d8651dbfb06779e8fe1d23aeabb356ddd17"
+    },
+    "nested_15_05": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_05_v1.json",
+      "sha256": "df691c3b6515ef32fc963d81a580bd1f689568225e71fd8b2a557d7ae3744682"
+    },
+    "nested_15_06": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_06_v1.json",
+      "sha256": "70cd2faa578ae5e9d9964ca0b26790ce0aea490b90eb085f4328ad9952af46cd"
+    },
+    "nested_15_07": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_07_v1.json",
+      "sha256": "90a67764b2bad5168d809017037fbcddf8a15b580beb8fb9c01a328851588ceb"
+    },
+    "nested_15_08": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_08_v1.json",
+      "sha256": "d2ec5a6f4ac4ac86d66078479926cfb649ba7f9245c630127d47663b207a77ea"
+    },
+    "nested_15_09": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_09_v1.json",
+      "sha256": "d45dbfedea82cfb51f8c8bd07b50fc5f0867324e300ad150d7b7ade96e984b5b"
+    },
+    "nested_15_10": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_10_v1.json",
+      "sha256": "0b966d4f30674c83a69ed0aeb0a8e4f02e18c4af817c4a04938bea919ceedcf0"
+    },
+    "nested_15_11": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_11_v1.json",
+      "sha256": "342bcce703f084ff5a96a7970085dd7644241afdb0488522bbd710ab1da0a064"
+    },
+    "nested_15_12": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_12_v1.json",
+      "sha256": "90d3f05750061be5b9b185bbf1957a73db67997d7a26d497509f770d4ae7a13d"
+    },
+    "nested_15_13": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_13_v1.json",
+      "sha256": "f66d59dfb4eade37c21f81935e9261d0412052547b702ffa41dd6416f6bbade1"
+    },
+    "nested_15_14": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_kernel_density_reader_a413_training_v1/nested_outer_15_validation_14_v1.json",
+      "sha256": "10c2bf70af639cda5f71f3df0698bb00c59d6ddbe650aa7e054cf11fb325125c"
+    }
+  }
+}

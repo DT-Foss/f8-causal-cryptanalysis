@@ -1,0 +1,87 @@
+{
+  "schema": "chacha20-round20-w46-cross-corpus-invariant-validation-a367-design-v1",
+  "attempt_id": "A367",
+  "design_state": "frozen_after_A366_portfolio_before_any_A367_formula_export_measurement_or_label_readback",
+  "corpus_contract": {
+    "generation_seed": "A367|new-disjoint-cross-corpus-invariant-validation|v1|2026-07-15",
+    "row_manifest_canonical_sha256": "2402d6980c90793797583a5bbae4cfc6fcb928b8a2b67c3a5943e7ec27c26419",
+    "assignment_vector_canonical_sha256": "171f7fdae11c5da8763052cf6cdded23163e0e7e4cc250aa94851b6efadcf51a",
+    "high8_vector_canonical_sha256": "a2cdceb46a5bed1109786face785ee67b292968e13b73ba524de54bcd95f1957",
+    "targets": 64,
+    "fixed_blocks": 4,
+    "targets_per_block": 16,
+    "low4_balance": "each_value_0_through_15_exactly_once_per_fixed_block",
+    "high8_schedule": "(37 + 157*index) mod 256",
+    "unique_high8_values": 64,
+    "overlap_with_A359_assignments": 0,
+    "overlap_with_A363_assignments": 0
+  },
+  "measurement_contract": {
+    "unknown_key_bits": 46,
+    "rounds": 20,
+    "feed_forward": true,
+    "blocks_per_target": 8,
+    "cells_per_target": 256,
+    "total_cells": 16384,
+    "conflict_horizons": [1, 2, 4, 8],
+    "maximum_solver_stages": 65536,
+    "watchdog_seconds_per_cell": 2.0,
+    "concurrent_export_workers": 2,
+    "concurrent_measurement_workers": 4,
+    "mapping_exports_per_target": 7,
+    "fixed_low4_coordinates_high_to_low": [23, 22, 21, 20],
+    "candidate_high8_coordinates_high_to_low": [31, 30, 29, 28, 27, 26, 25, 24],
+    "synthetic_reader_mapping_source_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 25, 26, 27, 28, 29, 30, 31],
+    "candidate_order_during_measurement": "numeric_0_through_255",
+    "early_stop": false
+  },
+  "reader_validation_contract": {
+    "A366_result_file_sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8",
+    "A366_result_sha256": "9dc6b3bd482dbe589769943126f28c4325dffb85d990acade59885e7c5b6bf47",
+    "A366_selection_commitment_sha256": "b5fc9d9147cf5dc2c07f7534d57584046d58be53e98115c210c2512a2cba9faa",
+    "model_roles": [
+      "primary",
+      "diverse_companion",
+      "coverage_companion",
+      "best_single"
+    ],
+    "model_names": {
+      "primary": "ensemble::linf_intersection::003-085-313-479",
+      "diverse_companion": "ensemble::borda::223-239-329-479",
+      "coverage_companion": "ensemble::borda::085-223-329-513",
+      "best_single": "abs_primitive::246::learned_clause_accepted_stage__second_difference_1_2_4__xor_gradient_l2"
+    },
+    "reader_refits": 0,
+    "familywise_null": "shared_XOR_offset_0_through_255_applied_to_every_target_label_and_all_four_frozen_models",
+    "test_statistic": "minimum_fixed_block_mean_log2_rank_gain",
+    "retention_gate": {
+      "familywise_shared_xor_p_maximum": 0.05,
+      "minimum_four_block_log2_rank_gain_exclusive": 0.0,
+      "all64_log2_rank_gain_exclusive": 0.0,
+      "targets_at_or_above_median_minimum": 36
+    },
+    "deployment_rule": "retain_every_frozen_model_passing_the_familywise_gate; if_multiple_pass_build_exact_factor_k_min_rank_wavefront; if_one_passes_deploy_it_unchanged; otherwise_do_not_open_A361_measurement_shards"
+  },
+  "preparation_gates": {
+    "coordinate_mapping_decoded_independently_for_every_target": true,
+    "coordinate_mapping_must_be_bijective_for_every_target": true,
+    "true_known_assignment_must_be_SAT_for_every_target": true,
+    "one_bit_flip_of_known_assignment_must_be_UNSAT_for_every_target": true
+  },
+  "information_boundary": {
+    "A366_portfolio_frozen_before_A367_design": true,
+    "A367_target_artifacts_available_at_design_freeze": 0,
+    "A367_solver_measurements_available_at_design_freeze": 0,
+    "reader_definition_changed_after_A366_freeze": false,
+    "true_high8_label_used_to_add_CNF_units_or_change_candidate_order": false,
+    "true_high8_used_for_score_or_rank_before_complete_256_cell_cover": false,
+    "A361_measurement_shards_used_to_select_or_validate_A366_readers": false,
+    "candidate_assignments_executed": 0
+  },
+  "source_anchors": {
+    "A366_result_path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_reader_a366_v1.json",
+    "A366_result_sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8",
+    "A363_runner_path": "research/experiments/chacha20_round20_w46_polarity_invariant_validation_a363.py",
+    "A363_runner_sha256": "8ee599e444715170b7f2b55645812e5129d990856408bf81129b0bb9da87b538"
+  }
+}

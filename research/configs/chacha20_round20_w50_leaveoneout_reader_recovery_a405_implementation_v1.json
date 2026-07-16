@@ -1,0 +1,52 @@
+{
+  "A401_A402_A404_results_available_at_freeze": false,
+  "A405_candidate_or_prefix_available_at_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A391_runner": {
+      "path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+      "sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df"
+    },
+    "A404_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_design_v1.json",
+      "sha256": "ecd0eb3d7f7b155dc4e87d56335890889eaa3dde57c6d3749e72cf321e71d1a1"
+    },
+    "A404_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_implementation_v1.json",
+      "sha256": "4a60f4704397d4f3978756a91194efd16f3561c636aedb8ed3a078cba4e4def9"
+    },
+    "A404_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_leaveoneout_reader_a404.py",
+      "sha256": "d7743e0bc4996c15189876dafa014fec6a8a13398f90885c0284e9c585192bc7"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_leaveoneout_reader_recovery_a405_design_v1.json",
+      "sha256": "b39ae3b7dcc592ca17e39c7a3b8478a1f6decf994bd91c97aeb1d86af3e038dc"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_leaveoneout_reader_recovery_a405.sh",
+      "sha256": "6e6392b290bb4f8026a5cd7b203337192e4536c2e3a2267ecc6a537f75df0604"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_leaveoneout_reader_recovery_a405.py",
+      "sha256": "09fa3dce7790f4795cd0fa10c2cbebcb82f05c083494358775dd146ec67bf6e2"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_leaveoneout_reader_recovery_a405.py",
+      "sha256": "30d188363014369a70fecc0fae216fd03d0937694224f1814e5ad093cca8bf02"
+    }
+  },
+  "attempt_id": "A405",
+  "commitment_state": "complete_executor_and_dedup_gate_frozen_before_A401_A402_A404_results_or_A405_candidate",
+  "design_sha256": "b39ae3b7dcc592ca17e39c7a3b8478a1f6decf994bd91c97aeb1d86af3e038dc",
+  "implementation_commitment_sha256": "1b48091452c7854decbce797ae3509cc9f329fecce97108abe9c393ca1c693a5",
+  "schema": "chacha20-round20-w50-leaveoneout-reader-recovery-a405-implementation-v1",
+  "selected_operator": "A404_sixteen_fold_outoffold_qualified_fullfit_production_reader"
+}

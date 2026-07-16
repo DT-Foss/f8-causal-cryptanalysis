@@ -1,0 +1,212 @@
+{
+  "A447_selected32_measurement_started_at_freeze": false,
+  "A447_truth_rank_or_operator_result_available_at_freeze": false,
+  "W52_model_refits": 0,
+  "W52_new_solver_stages": 0,
+  "W52_target_labels_used": 0,
+  "anchors": {
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A446_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446_v1.causal",
+      "sha256": "5ce958b43165d374a52b973ac48ba47edab07c5e8cbc5948e9d6dd132ab89636"
+    },
+    "A446_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A446_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "f68deeface14b7bab2d1e04ba7423e9d27d75b2afd10d32c7ef539f352d9a672"
+    },
+    "A446_result": {
+      "path": "research/results/v1/chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446_v1.json",
+      "sha256": "f8a1d9e787c472c0e8d497c74f94ea69b923cfab3b2aa89d41219602f31f94fe"
+    },
+    "A447_premeasurement_import_incident": {
+      "path": "research/reports/A447_PREMEASUREMENT_IMPORT_RACE_INCIDENT_V1.md",
+      "sha256": "3f0e62f548d847ed1b5bd9fc82b32ee8b7bec8e5d27d0de96ab42547f060cec5"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_proof_antecedent_calibration_a447_design_v1.json",
+      "sha256": "16563220720977e05857e7ae663d6c86d35b18cb47ba69eab1d3fdf7aa5a88bd"
+    },
+    "feature_source": {
+      "path": "src/arx_carry_leak/proof_antecedent_features.py",
+      "sha256": "52700bb0a2442caf24ef123c745915fd7b2e2a27ca2f797886b141a640fc4c05"
+    },
+    "feature_test": {
+      "path": "tests/test_proof_antecedent_features.py",
+      "sha256": "ab506794c5168b0fce6e41928dec1e4ff4a05efabd47451b3c94ffadfeb87a85"
+    },
+    "identity_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_identity.py",
+      "sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6"
+    },
+    "multihorizon_wrapper": {
+      "path": "research/experiments/chacha20_fresh_multihorizon.py",
+      "sha256": "55e1722d8478bf0aea95a544e5942fa6f6a3b17e8c9c54906e2ba34ddc2be386"
+    },
+    "native_source": {
+      "path": "research/native/cadical_fresh_clause_antecedents.cpp",
+      "sha256": "db08a1cd1479eeaa2c48015cd1f1a82ad3adb25dd987da67dc7a93557557bb9d"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_proof_antecedent_calibration_a447.sh",
+      "sha256": "f2f6a8ad269fd4a769820908f4e1746ee917ff69283fd017da6b23e9f8bd8597"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_proof_antecedent_calibration_a447.py",
+      "sha256": "732579d73de55d8f544f5acd99104b581bedcf51956d773b3652b3e4ae786ca4"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_proof_antecedent_calibration_a447.py",
+      "sha256": "230eb54e0484cb2cb278baa382165fc04c162131e69462a1835186cbaef04bc2"
+    },
+    "tracer_header": {
+      "path": "research/native/cadical_tracer_v3.hpp",
+      "sha256": "4a3c6e37760e1ec7cdfbbc6ed6da7e3579d8f399223bc3d7deae3ad57f49c1c5"
+    },
+    "wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_antecedents.py",
+      "sha256": "bf2798e72e1c2ff7872ea262335d4500cf82e1e46cbdf110f9628f713d4af61b"
+    },
+    "wrapper_test": {
+      "path": "tests/test_chacha20_fresh_clause_antecedents.py",
+      "sha256": "3b77638fd5d75a50b6d63e81f7872e136faf0b072287397648bf9ecfaf0fee11"
+    }
+  },
+  "attempt_id": "A447",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_native_measurement_feature_crossfit_and_authentic_Causal_code_frozen_before_selected32_measurement",
+  "design_contract": {
+    "all_horizon_composition": [
+      "sum over the four incremental horizons for each primary signal",
+      "h8 minus h1 signed change for each primary signal",
+      "maximum over the four horizons for each primary signal"
+    ],
+    "all_horizon_primary_signals": [
+      "event counts for all redundant and irredundant partitions",
+      "redundant direct-touch ancestry-touch agreement opposition parent-ancestry and recurrence counts",
+      "redundant clause-size antecedent-fanin and proof-depth means and maxima",
+      "all and redundant parent-reuse normalized entropy reused-reference fraction and maximum use"
+    ],
+    "derived_ratio_features": [
+      "redundant event fraction",
+      "direct and transitive assumption-touch fractions",
+      "opposition fraction among direct assumption literals",
+      "original-parent and derived-parent fractions",
+      "parent-ancestry edge fraction",
+      "clause recurrence fraction",
+      "reused-parent reference fraction"
+    ],
+    "exact_parent_cover": "every positive antecedent ID is classified as original or previously derived; any missing parent rejects the measurement",
+    "explicitly_not_repeating": [
+      "A251 learned-clause identity",
+      "A259 clause-output topology",
+      "A260-A262 formula and operation-flow projections",
+      "A266 clause frequency",
+      "A445 raw trajectory magnitude models",
+      "A446 candidate-relative assumption-cut clause-output hypergraph"
+    ],
+    "fixed_per_horizon_feature_families": [
+      "derived-event and redundant-versus-irredundant counts",
+      "clause-size antecedent-fanin and proof-depth moments",
+      "original-parent versus derived-parent composition",
+      "parent clause-size and parent-depth moments",
+      "candidate-relative direct assumption agreement and opposition",
+      "transitive assumption-ancestry masks and edge counts",
+      "clause recurrence across retained horizons",
+      "parent reuse concentration entropy and maximum fanout",
+      "solver proof lifecycle events including deletion demotion weakening strengthening and finalization"
+    ],
+    "freshness": "one freshly copied solver per candidate cell with the tracer connected before the irredundant formula copy",
+    "horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "rank_directions": [
+      "ascending target-local exact rank",
+      "descending target-local exact rank",
+      "descending absolute median-MAD-normalized exact rank"
+    ],
+    "source": "CaDiCaL 3.0 public LRAT proof-tracer interface with antecedents enabled",
+    "streaming_reduction": "exact event-by-event DAG traversal is reduced online; raw multi-gigabyte event text is never the scientific object",
+    "ties": "Borda baseline rank then cell index",
+    "typed_partitions": [
+      "all proof events",
+      "redundant derived clauses",
+      "irredundant derived clauses"
+    ],
+    "unit_of_observation": "every solver-derived clause and its exact original-or-derived parent clause IDs"
+  },
+  "design_sha256": "16563220720977e05857e7ae663d6c86d35b18cb47ba69eab1d3fdf7aa5a88bd",
+  "helper_build": {
+    "binary_path": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/build/cadical_fresh_clause_antecedents-a445c0839699f9cd43b4dadd344ca888ecf5df0e3f171c8440af35ec342c22bb-9d0d5cbd6e523e248023fb080c206fa14d8bbb2c89d3cd8f1273eaaa1a99de67",
+    "binary_sha256": "9d0d5cbd6e523e248023fb080c206fa14d8bbb2c89d3cd8f1273eaaa1a99de67",
+    "cadical_header_sha256": "b7111690c61935b9c096d3701be59b3c3d26c555eab8e070f19eb2a97dc5d38c",
+    "cadical_library_sha256": "44cae3728485b4fd5736ce7cb986021236652daeda9cca227a2c4ac17d3a8a7f",
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I/opt/homebrew/include",
+      "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/cadical_fresh_clause_antecedents.cpp",
+      "/opt/homebrew/lib/libcadical.a",
+      "-lpthread",
+      "-o",
+      "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/native/build/.cadical_fresh_clause_antecedents.deterministic-link"
+    ],
+    "compiler_sha256": "179301dcb41ea78accc3fa0048a7e6f6710d891945a751a34addd622020c1818",
+    "content_addressed_binary": true,
+    "elapsed_seconds": 0.9487459999509156,
+    "environment": {
+      "LANG": "C",
+      "LC_ALL": "C",
+      "TMPDIR": "/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/",
+      "TZ": "UTC"
+    },
+    "returncode": 0,
+    "source_bundle_sha256_finished": "a445c0839699f9cd43b4dadd344ca888ecf5df0e3f171c8440af35ec342c22bb",
+    "source_bundle_sha256_started": "a445c0839699f9cd43b4dadd344ca888ecf5df0e3f171c8440af35ec342c22bb",
+    "source_hashes_finished": {
+      "cadical_fresh_clause_antecedents.cpp": "db08a1cd1479eeaa2c48015cd1f1a82ad3adb25dd987da67dc7a93557557bb9d",
+      "cadical_fresh_clause_identity.cpp": "bb79a3de830f8f1912731e302b6bc1d4ac8dadb1c57b03668211f16b6894d98f",
+      "cadical_fresh_multihorizon.cpp": "b9c679b1566665e823534734919289b8acc0a1ba0965a96da604088889cc2210",
+      "cadical_tracer_v3.hpp": "4a3c6e37760e1ec7cdfbbc6ed6da7e3579d8f399223bc3d7deae3ad57f49c1c5"
+    },
+    "source_hashes_started": {
+      "cadical_fresh_clause_antecedents.cpp": "db08a1cd1479eeaa2c48015cd1f1a82ad3adb25dd987da67dc7a93557557bb9d",
+      "cadical_fresh_clause_identity.cpp": "bb79a3de830f8f1912731e302b6bc1d4ac8dadb1c57b03668211f16b6894d98f",
+      "cadical_fresh_multihorizon.cpp": "b9c679b1566665e823534734919289b8acc0a1ba0965a96da604088889cc2210",
+      "cadical_tracer_v3.hpp": "4a3c6e37760e1ec7cdfbbc6ed6da7e3579d8f399223bc3d7deae3ad57f49c1c5"
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temporary_binary_sha256": "9d0d5cbd6e523e248023fb080c206fa14d8bbb2c89d3cd8f1273eaaa1a99de67"
+  },
+  "implementation_commitment_sha256": "96e8ad5886704a52e7d078902b15cc700ffc1dd21bed273093fc3c3b595dfc71",
+  "manifest_sha256": "997f91301f8783eb44255afc328ab85646ef2faf78da38e0f5f323ea7e5b19d4",
+  "measurement_workers": 4,
+  "operators": [
+    "borda_sum_baseline",
+    "proof_best_single",
+    "proof_borda_top4",
+    "proof_borda_top8",
+    "proof_borda_top16",
+    "proof_borda_top32",
+    "proof_reciprocal_top8",
+    "proof_vote_top16",
+    "hybrid_proof_top4_base2",
+    "hybrid_proof_top4_equal",
+    "hybrid_proof_top8_base2",
+    "hybrid_proof_top8_equal",
+    "hybrid_proof_top8_proof2",
+    "hybrid_proof_top16_equal",
+    "hybrid_reciprocal_top8_equal"
+  ],
+  "schema": "chacha20-round20-w46-proof-antecedent-calibration-a447-implementation-v1"
+}

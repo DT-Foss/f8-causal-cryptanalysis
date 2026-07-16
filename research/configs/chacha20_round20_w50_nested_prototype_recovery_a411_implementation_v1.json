@@ -1,0 +1,62 @@
+{
+  "A410_result_or_production_order_available_at_freeze": false,
+  "A411_candidate_or_prefix_available_at_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A409_runner": {
+      "path": "research/experiments/chacha20_round20_w50_nested_fisher_recovery_a409.py",
+      "sha256": "cdd19532d8d4c9df37a066eb3f5187c696fed8f45a6f20ac57ac63be7444727a"
+    },
+    "A410_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_design_v1.json",
+      "sha256": "7569d8cb6a0b0ac8cba2298752085d568f84937623b1677dbad7506d31f3e273"
+    },
+    "A410_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_implementation_v1.json",
+      "sha256": "20e0dae438201a1a34716c3a24082468e4c57ae1b4dce92dd63eb8ecf131cba2"
+    },
+    "A410_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_nested_prototype_reader_a410.py",
+      "sha256": "2105111abf94365334d7c48509a76ff7abe84906edfae9455144978037066787"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_nested_prototype_recovery_a411_design_v1.json",
+      "sha256": "309a47ea40e20dbd111c59dfb7f28724ff0b0857b941b575d6023d7f6cd59773"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_nested_prototype_recovery_a411.sh",
+      "sha256": "38f5f262b346d8749beb8b71041ae6bf5547d8e00cdb4c1821b87f0dc246696b"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_nested_prototype_recovery_a411.py",
+      "sha256": "d6680dc9d4d442dac43f08b731c26f4b335a90ca46445099fb13501e0d45e001"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_nested_prototype_recovery_a411.py",
+      "sha256": "b5cb797d8fa442547a92d0cd465e2e1a54f7abef6973efc01d2b9f9661afd478"
+    }
+  },
+  "attempt_id": "A411",
+  "commitment_state": "complete_nested_prototype_executor_and_prior_order_dedup_gate_frozen_before_A410_result_order_or_any_A411_candidate",
+  "design_sha256": "309a47ea40e20dbd111c59dfb7f28724ff0b0857b941b575d6023d7f6cd59773",
+  "implementation_commitment_sha256": "b8a938ab236c02a6a622234a65eb607126841d9c3295834510ce0f008c9786a5",
+  "schema": "chacha20-round20-w50-nested-prototype-recovery-a411-implementation-v1",
+  "selected_operator": "A410_nested_prototype_outoffold_qualified_fullfit_production_reader",
+  "source_artifact_existence_at_freeze": {
+    "A401_result": true,
+    "A401_selection": true,
+    "A402_result": true,
+    "A404_result": true,
+    "A406_result": true,
+    "A408_result": false,
+    "A410_result": false
+  },
+  "source_result_payloads_consumed_at_freeze": 0
+}

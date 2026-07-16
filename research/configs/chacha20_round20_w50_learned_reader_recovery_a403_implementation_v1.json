@@ -1,0 +1,53 @@
+{
+  "A401_selection_or_result_available_at_freeze": false,
+  "A402_result_or_order_available_at_freeze": false,
+  "A403_candidate_or_prefix_available_at_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A391_runner": {
+      "path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+      "sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df"
+    },
+    "A402_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_design_v1.json",
+      "sha256": "15111ce7c820cfc7bebebeff5feaacbc7d8cde68bc4b09ffcd0d216c668134d8"
+    },
+    "A402_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_implementation_v1.json",
+      "sha256": "c90231169d9e94ee8cb398e2a16fa5904e4fd574ce06f3bf1250b85a4f60428e"
+    },
+    "A402_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_fullfit_production_reader_a402.py",
+      "sha256": "ecd409f1894fc5a9ca5781fc70f040c6b8eae02878b69f936c5fe399f42d0473"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_learned_reader_recovery_a403_design_v1.json",
+      "sha256": "d3d2ade7fafdde71f5ac78204bab6c76542764b7ed39e73c0ef8a6e2cc2e22f3"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_learned_reader_recovery_a403.sh",
+      "sha256": "c3a334d80d133f127ffcb1792baed2d42ca0f6843257b4163154c6c73825e24d"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_learned_reader_recovery_a403.py",
+      "sha256": "06d9ff79bf5af75aa81ea1e69eadd0ebef7d1e800a42ebf677c5ca79f2b614c8"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_learned_reader_recovery_a403.py",
+      "sha256": "391349f748231a10398aaa296afbc71b1a41175bafdc6f8c65f9c46441e0376d"
+    }
+  },
+  "attempt_id": "A403",
+  "commitment_state": "complete_executor_frozen_before_A401_selection_A402_result_order_or_A403_candidate",
+  "design_sha256": "d3d2ade7fafdde71f5ac78204bab6c76542764b7ed39e73c0ef8a6e2cc2e22f3",
+  "implementation_commitment_sha256": "cc96510bcdd518a5a5d670c57c3ddf72600f9cc1c187a18bbeede9d0f114d399",
+  "schema": "chacha20-round20-w50-learned-reader-recovery-a403-implementation-v1",
+  "selected_operator": "A402_heldout_qualified_sixteen_target_fullfit_production_reader"
+}

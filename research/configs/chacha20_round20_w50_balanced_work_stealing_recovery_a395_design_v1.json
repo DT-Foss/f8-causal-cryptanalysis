@@ -1,0 +1,72 @@
+{
+  "schema": "chacha20-round20-w50-balanced-work-stealing-recovery-a395-design-v1",
+  "attempt_id": "A395",
+  "design_state": "frozen_after_A394_exact_static_schedule_before_any_A395_candidate_progress_or_result",
+  "scientific_question": "Can A394's exact balanced static worker schedules execute the fresh A385 full-round W50 challenge with complete-group semantics, zero duplicate prefixes, a shared confirmed-success stop, matched control and independent eight-block confirmation?",
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "public_output_blocks": 8,
+    "prefix_groups": 4096,
+    "workers": 3,
+    "static_schedule_epochs": 1366,
+    "theoretical_minimum_epochs": 1366,
+    "worker_task_counts": {
+      "A385_pretarget_six_view": 1366,
+      "A388_W50_public_output_direct12": 1365,
+      "A386_calibrated_target_blind_transfer": 1365
+    },
+    "slabs_per_prefix_group": 128,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "shared_stop_check": "before each next complete prefix group",
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "independent_confirmation_bits": 8192
+  },
+  "schedule_contract": {
+    "source": "A394 exact order-preserving work-stealing result",
+    "worker_role_order": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12",
+      "A386_calibrated_target_blind_transfer"
+    ],
+    "complete_cover_cells": 4096,
+    "duplicate_cells": 0,
+    "uncovered_cells": 0,
+    "owner_queue_order_preservation_violations": 0,
+    "depth_bound_violations": 0,
+    "total_work_bound_violations": 0,
+    "makespan_optimal": true,
+    "depth_theorem": "D_A395(c) = D_A394(c) <= D_A392_owner(c) <= min_i R_i(c)",
+    "total_work_theorem": "W_A395(c) <= 3*min_i R_i(c)",
+    "static_lists_replace_runtime_claim_race": true
+  },
+  "information_boundary": {
+    "target_labels_used_for_schedule_construction": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed_for_schedule_construction": 0,
+    "A387_A389_A391_A393_progress_or_filter_outcomes_consumed": false,
+    "A387_A389_A391_A393_result_or_true_prefix_consumed": false,
+    "A385_assignment_absent_from_protocol": true,
+    "rank_owner_and_schedule_readback_only_after_independent_confirmation": true
+  },
+  "source_anchors": {
+    "A394_result_path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.json",
+    "A394_result_sha256": "9f29fecdf60a9b1b128487609b009b3def8f2b4bf7d45329e95bd5dae8ccef6d",
+    "A394_causal_path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.causal",
+    "A394_causal_sha256": "63b95b39f91957337ec3dcd9bed55fa50642afc538ab3cd355e57dedf22c2890",
+    "A393_runner_path": "research/experiments/chacha20_round20_w50_disjoint_parallel_recovery_a393.py",
+    "A393_runner_sha256": "31c9eb2da2ab59d7e7fb1eb20a1cf04d9ff036aabd05301f082ab135541dfddc",
+    "A393_protocol_path": "research/configs/chacha20_round20_w50_disjoint_parallel_recovery_a393_v1.json",
+    "A393_protocol_sha256": "005482f5409889561ebc96b7c6d78ca3508d66a238e597bdafd26e47f7fefe99",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  }
+}

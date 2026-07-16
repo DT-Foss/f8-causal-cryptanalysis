@@ -1,0 +1,92 @@
+{
+  "schema": "chacha20-round20-walk-forward-structural-ensemble-a334-design-v1",
+  "attempt_id": "A334",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can A333 temporal smoothing and the A329-A332 stability-margin mechanisms be recapitulated one width earlier, selected by a clean W43-W44 to W45 walk-forward test, and deployed unchanged as a W46 order?",
+  "source_anchors": {
+    "A300_order_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_order_v1.json",
+    "A300_order_sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1",
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A317_runner_path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+    "A317_runner_sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2",
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A329_order_path": "research/results/v1/chacha20_round20_linf_stability_merge_a329_order_v1.json",
+    "A329_order_sha256": "05d1049a1304a3160ca6e50a667a56ac4ff194fe913d3e570df2e813023b3512",
+    "A332_order_path": "research/results/v1/chacha20_round20_margin_consistency_wavefront_a332_order_v1.json",
+    "A332_order_sha256": "b6e0a5ca2a819194cde74dacda51ce0ac7b8e7d051e5dc854ad3599b545353ad",
+    "A333_order_path": "research/results/v1/chacha20_round20_cross_width_rank_velocity_a333_order_v1.json",
+    "A333_order_sha256": "4cd1c0ce67e50df687548d0cf6a5f921ff91767c077d25f39b158a4263de4b5c"
+  },
+  "pair_operator_contract": {
+    "inputs": "previous and current exact Fine-Coarse-Numeric fields with unchanged A317 prototypes",
+    "raw_order": "nearest_prototype_Linf on the current field",
+    "temporal_order": "exact rank midpoint of previous and current raw Linf orders, selected by A333",
+    "stability_order": "A329 stable-to-switched 2:1 merge of the current raw order using same-prototype membership across the input pair",
+    "switched_control_order": "A329 switched-to-stable 2:1 direction control",
+    "margin_score": "negative absolute difference of previous and current exact nearest-prototype margins",
+    "margin_consistency_order": "descending margin score then stability-order rank then cell",
+    "margin_inconsistency_control_order": "ascending margin score then stability-order rank then cell",
+    "consistency_borda_order": "A332 rank-sum Borda of the stability and margin-consistency orders",
+    "outer_borda_order": "rank-sum Borda of the temporal order and the named structural order"
+  },
+  "forecast_contract": {
+    "candidate_sequence": [
+      "temporal_midpoint_only",
+      "current_stability_2_to_1_only",
+      "current_consistency_borda_only",
+      "temporal_plus_stability_borda",
+      "temporal_plus_margin_consistency_borda",
+      "temporal_plus_consistency_borda",
+      "temporal_plus_switched_control_borda",
+      "temporal_plus_margin_inconsistency_control_borda"
+    ],
+    "selection_eligible_sequence": [
+      "temporal_midpoint_only",
+      "current_stability_2_to_1_only",
+      "current_consistency_borda_only",
+      "temporal_plus_stability_borda",
+      "temporal_plus_margin_consistency_borda",
+      "temporal_plus_consistency_borda"
+    ],
+    "fixed_direction_controls": [
+      "temporal_plus_switched_control_borda",
+      "temporal_plus_margin_inconsistency_control_borda"
+    ],
+    "walk_forward_training_pair": "W43 previous plus W44 current, constructed without W45 fields, then compared with complete target-blind W45 raw Linf order",
+    "walk_forward_selection": "maximum Spearman, then minimum mean absolute rank error, then frozen eligible index",
+    "deployment_pair": "W44 previous plus W45 current, applying the selected unchanged candidate construction to freeze W46",
+    "A313_role": "none",
+    "A322_progress_or_result_role": "none",
+    "A325_W46_challenge_or_result_role": "none",
+    "new_candidate_execution": false,
+    "target_labels_used_from_A313_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "exact pair-local W43-W44 and W44-W45 prototype assignments, margins and structural source hashes",
+    "identity gates reproducing A329, A332 and A333 deployment-order hashes",
+    "eight exact walk-forward W45 forecast orders with complete-field metrics",
+    "one selected construction under the frozen eligible-only rule",
+    "eight exact W46 forecast orders and one selected W46 order hash",
+    "two fixed ineligible direction-control forecasts",
+    "postconfirmation A325 rank panel without duplicate candidate execution"
+  ],
+  "information_boundary": {
+    "training_pair_W43_W44_uses_any_W45_field": false,
+    "complete_W45_raw_field_used_only_after_training_candidates_are_constructed": true,
+    "deployment_pair_W44_W45_uses_any_W46_challenge_feature": false,
+    "A313_result_candidate_or_prefix_used": false,
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_candidate_definition_selection_or_order": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_challenge_feature_candidate_prefix_or_result_used": false,
+    "target_labels_used_from_A313_A322_or_A325": 0,
+    "operator_refits_on_A313_A322_or_A325": 0,
+    "duplicate_candidate_execution_required_for_evaluation": false
+  }
+}

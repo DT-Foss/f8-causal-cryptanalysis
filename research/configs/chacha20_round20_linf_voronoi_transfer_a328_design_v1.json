@@ -1,0 +1,58 @@
+{
+  "schema": "chacha20-round20-linf-voronoi-transfer-a328-design-v1",
+  "attempt_id": "A328",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "What part of raw Linf's W44-to-W45 transfer is stable prototype-region membership, and what part is rank motion within or across Voronoi regions?",
+  "source_anchors": {
+    "A313_result_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A317_runner_path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+    "A317_runner_sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2",
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A327_order_path": "research/results/v1/chacha20_round20_hierarchical_linf_operator_a327_order_v1.json",
+    "A327_order_sha256": "7c077a4e8eeb3ab83c4fae931f94882c87369cedb18bd19b2766e04e9b72c90f"
+  },
+  "analysis_contract": {
+    "distance": "Linf over exact one-based Fine, Coarse and Numeric ranks",
+    "prototype_assignment_tie_break": "lowest frozen A317 prototype index",
+    "margin": "second-smallest prototype Linf distance minus smallest distance",
+    "predeclared_outputs": [
+      "W44 and W45 prototype occupancies",
+      "complete 4x4 W44-to-W45 prototype transition matrix",
+      "stable and switched cell counts and fractions",
+      "raw-Linf cross-width Spearman separately on stable and switched subsets",
+      "per-source-region stable fractions",
+      "nearest-prototype margin panels for stable and switched subsets",
+      "A313 calibration cell prototype identity, margin and W44-to-W45 region transition"
+    ],
+    "margin_quantiles": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      1.0
+    ],
+    "operator_refit": false,
+    "new_execution_order": false,
+    "candidate_execution": false,
+    "target_labels_used_from_A322_or_A325": 0
+  },
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "independent calibration annotation only",
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_any_analysis_definition": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A322_or_A325": 0,
+    "operator_refits_on_A322_or_A325": 0
+  }
+}

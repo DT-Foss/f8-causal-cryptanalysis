@@ -1,0 +1,94 @@
+{
+  "attempt_id": "A402",
+  "design_state": "frozen_while_A401_target_0_measurement_was_running_before_any_A401_complete_target_selection_holdout_score_or_result",
+  "scientific_question": "After an independently held-out A401 qualification, can the same frozen rank-fusion family be fit on all sixteen known-key W50 fields and transferred without refit or labels to the already complete assignment-free A388 production field?",
+  "qualification_contract": {
+    "required_A401_result_state": "COMPLETE_W50_KNOWNKEY_DIRECT12_TRAIN_ONLY_SELECTION_AND_EIGHT_TARGET_HOLDOUT_RETAINED",
+    "selected_candidate_geometric_improvement_over_best_frozen_holdout_baseline_must_exceed": 1.0,
+    "selected_candidate_additional_holdout_bit_gain_must_exceed": 0.0,
+    "qualification_failure_action": "materialize_the_boundary_report_but_do_not_queue_a_production_recovery",
+    "qualification_success_action": "fit_the_frozen_family_on_all_sixteen_knownkey_targets_then_apply_once_to_A388"
+  },
+  "fullfit_contract": {
+    "target_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "complete_view_order": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "candidate_subsets": "all 255 nonempty subsets of the eight frozen Direct12 views",
+    "aggregator_order": [
+      "borda_sum",
+      "reciprocal_rank_sum",
+      "minimum_rank_then_sum"
+    ],
+    "candidate_count": 765,
+    "objective": "minimum mean log2 true-cell rank on targets 0 through 15; ties by minimum worst true-cell rank, smaller subset, aggregator order, then lexicographic view-index tuple",
+    "refits_after_fullfit_selection": 0,
+    "new_hyperparameters_after_A401_result": 0
+  },
+  "production_application_contract": {
+    "target_field": "the_complete_4096_cell_16384_stage_A388_W50_public_output_Direct12_field",
+    "target_assignment_or_true_prefix_available": false,
+    "candidate_assignments_executed": 0,
+    "live_recovery_progress_filter_outcomes_or_results_consumed": false,
+    "application": "reconstruct_the_same_eight_view_rank_matrix_then_materialize_the_fullfit_subset_and_aggregator_byte_for_byte",
+    "output": "one_exact_4096_cell_production_order_plus_diversity_and_pointwise_rank_comparisons_to_existing_orders",
+    "new_solver_stages": 0,
+    "production_reader_refits": 0
+  },
+  "execution_priority_contract": {
+    "interrupt_live_recoveries": false,
+    "A397_Direct12_first_free_slot_obligation_preserved": true,
+    "qualified_A402_order_priority": "first_subsequent_free_Metal_slot_after_A397_Direct12",
+    "matched_control_and_dual_eight_block_confirmation_required": true
+  },
+  "information_boundary": {
+    "A401_selection_or_holdout_labels_opened_by_A402_at_design_freeze": false,
+    "A401_selection_or_holdout_scores_available_at_design_freeze": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "A387_A389_A391_A397_A399_progress_filter_outcomes_or_results_consumed": false,
+    "post_result_family_expansion_allowed": false,
+    "post_result_aggregator_change_allowed": false,
+    "post_result_qualification_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A401_design_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+    "A401_design_sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c",
+    "A401_runner_path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+    "A401_runner_sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee",
+    "A401_implementation_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+    "A401_implementation_sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1",
+    "A401_public_corpus_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+    "A401_public_corpus_sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3",
+    "A388_runner_path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+    "A388_runner_sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9",
+    "A388_preflight_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_preflight_v1.json",
+    "A388_preflight_sha256": "6919b9071b5c9de85f050a7921d4a82fa0e55db6e02ca531590afdfdc57cc115",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  },
+  "schema": "chacha20-round20-w50-knownkey-fullfit-production-reader-a402-design-v1"
+}

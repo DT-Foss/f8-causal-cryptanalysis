@@ -1,0 +1,78 @@
+{
+  "attempt_id": "A411",
+  "design_state": "frozen_during_A401_target15_measurement_after_A410_implementation_freeze_before_A401_A402_A404_A406_A408_A410_results_or_any_A411_candidate_prefix",
+  "scientific_question": "If A410 beats A408 under genuine nested validation, does its exact zero-refit prototype-manifold production order recover the fresh standard ChaCha20 W50 target without duplicating any prior learned order?",
+  "source_order_contract": {
+    "required_A410_evidence_stage": "NESTED_PROTOTYPE_OUTOFFOLD_BEATS_A408_AND_APPLIES_ZERO_REFIT_TO_A388",
+    "required_A410_qualification": true,
+    "required_order_cells": 4096,
+    "order_source": "A410_production_order",
+    "target_labels_used_for_order": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed_for_order": 0,
+    "new_solver_stages_for_order": 0,
+    "qualification_failure_action": "do_not_freeze_an_executable_A411_protocol_or_start_recovery"
+  },
+  "duplicate_execution_contract": {
+    "comparison_results_required_before_A411_protocol_decision": [
+      "A402",
+      "A404",
+      "A406",
+      "A408"
+    ],
+    "comparison": "exact_uint16be_order_sha256",
+    "match_to_any_qualified_prior_order_action": "freeze_equivalence_only_protocol_and_do_not_repeat_recovery",
+    "distinct_from_all_qualified_prior_orders_action": "freeze_executable_A411_protocol"
+  },
+  "execution_contract": {
+    "primitive": "RFC8439 ChaCha20 block function",
+    "rounds": 20,
+    "feedforward": true,
+    "public_output_blocks": 8,
+    "unknown_key_bits": 50,
+    "prefix_bits": 12,
+    "complete_prefix_groups": 4096,
+    "slabs_per_prefix_group": 128,
+    "candidates_per_slab": 2147483648,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "outcome_evaluation_only_after_complete_128_slab_group": true,
+    "matched_one_bit_control_required": true,
+    "dual_independent_eight_block_confirmation_required": true,
+    "resume_granularity": "complete_prefix_group"
+  },
+  "priority_contract": {
+    "interrupt_live_recoveries": false,
+    "A397_Direct12_first_free_slot_obligation_preserved": true,
+    "all_prior_qualified_A403_A405_A407_A409_obligations_preserved": true,
+    "A411_start": "first_subsequent_free_Metal_slot_after_all_prior_qualified_obligations_if_and_only_if_A410_qualified_and_distinct",
+    "A390_W51_qualification_remains_queued": true
+  },
+  "information_boundary": {
+    "A401_completed_targets_visible_at_design_freeze": 15,
+    "A401_selection_or_result_available_at_design_freeze": false,
+    "A402_A404_A406_A408_A410_result_or_production_order_available_at_design_freeze": false,
+    "A411_candidate_or_prefix_available_at_design_freeze": false,
+    "A385_assignment_absent_from_protocol": true,
+    "live_recovery_progress_filter_outcomes_or_results_consumed_for_order": false,
+    "post_A410_order_mutation_allowed": false,
+    "post_A410_qualification_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A391_runner_path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+    "A391_runner_sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df",
+    "A409_runner_path": "research/experiments/chacha20_round20_w50_nested_fisher_recovery_a409.py",
+    "A409_runner_sha256": "cdd19532d8d4c9df37a066eb3f5187c696fed8f45a6f20ac57ac63be7444727a",
+    "A410_design_path": "research/configs/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_design_v1.json",
+    "A410_design_sha256": "7569d8cb6a0b0ac8cba2298752085d568f84937623b1677dbad7506d31f3e273",
+    "A410_runner_path": "research/experiments/chacha20_round20_w50_knownkey_nested_prototype_reader_a410.py",
+    "A410_runner_sha256": "2105111abf94365334d7c48509a76ff7abe84906edfae9455144978037066787",
+    "A410_implementation_path": "research/configs/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_implementation_v1.json",
+    "A410_implementation_sha256": "20e0dae438201a1a34716c3a24082468e4c57ae1b4dce92dd63eb8ecf131cba2",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  },
+  "schema": "chacha20-round20-w50-nested-prototype-recovery-a411-design-v1"
+}

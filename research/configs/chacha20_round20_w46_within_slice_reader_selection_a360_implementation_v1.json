@@ -1,0 +1,50 @@
+{
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_within_slice_reader_selection_a360_design_v1.json",
+      "sha256": "8e705b98cab70e6dbeeb8f114bc83d493b783c4cb612a842d365a12bcfb00205"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_within_slice_reader_selection_a360.sh",
+      "sha256": "5435d83494ed8c466e34a0fe1191c521b01c3cd8ab29cabe12bd2c289b28f2c3"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_within_slice_reader_selection_a360.py",
+      "sha256": "b8eaaa391b7606b86fb884687b7562f5f4bc212d34baf89496f76f14074ceff4"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_within_slice_reader_selection_a360.py",
+      "sha256": "7953097854a5c512a92ab59028001e419cf46ff535a4a9faba969c4877955486"
+    }
+  },
+  "attempt_id": "A360",
+  "candidate_readers": 785,
+  "commitment_state": "frozen_after_A359_measurement_started_before_any_A359_shard_content_read_or_reader_selection",
+  "definition_ledger_sha256": "d6cf79c517975b441d5ce3df69b78c3510a5f997b3160772b5b1a3ced141745c",
+  "design_sha256": "8e705b98cab70e6dbeeb8f114bc83d493b783c4cb612a842d365a12bcfb00205",
+  "implementation_commitment_sha256": "5d55dda8b9c74f569fd1fd4edb756eee240d594d1012cf53513055b075ae92b0",
+  "measurement_shard_content_read_before_implementation_freeze": false,
+  "measurement_shard_indices_available_at_implementation_freeze": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18
+  ],
+  "measurement_shards_available_at_implementation_freeze": 18,
+  "reader_selection_executed_before_implementation_freeze": false,
+  "schema": "chacha20-round20-w46-within-slice-reader-selection-a360-implementation-v1"
+}

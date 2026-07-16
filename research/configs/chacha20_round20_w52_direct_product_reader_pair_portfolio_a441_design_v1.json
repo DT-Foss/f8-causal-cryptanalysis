@@ -1,0 +1,82 @@
+{
+  "schema": "chacha20-round20-w52-direct-product-reader-pair-portfolio-a441-design-v1",
+  "attempt_id": "A441",
+  "design_state": "frozen_after_A439_complete_before_any_A441_pair_rank_order_artifact_or_candidate_execution",
+  "scientific_question": "Does preserving all sixteen cross-axis products of the four frozen A375 Readers produce an exact target-blind W52 pair order that is materially distinct from A439's factorized axis-first schedule while retaining a pointwise factor-sixteen guarantee to the best product Reader?",
+  "source_contract": {
+    "source_attempt": "A439",
+    "prefix_source_orders": 4,
+    "off_axis_source_orders": 4,
+    "direct_product_pair_orders": 16,
+    "model_role_order": [
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection"
+    ],
+    "all_source_models_frozen_on_disjoint_W46_known_key_calibration": true,
+    "W52_reader_refits": 0,
+    "target_labels_used": 0,
+    "candidate_assignments_executed": 0
+  },
+  "pair_order_contract": {
+    "axis_cells": 4096,
+    "pair_cells": 16777216,
+    "source_pair_order": "A434 exact square wavefront for each prefix-Reader/off-axis-Reader product",
+    "portfolio_key": [
+      "minimum one-based rank across sixteen source pair orders",
+      "sum of the sixteen one-based source pair ranks",
+      "the sixteen source ranks in frozen role-pair order",
+      "prefix cell",
+      "off-axis cell"
+    ],
+    "proof_target": "R_A441(x,y) <= 16 * min_{i,j} R_square(prefix_reader_i,off_reader_j)(x,y)",
+    "generator": "ascending minimum-rank buckets with exact within-bucket lexicographic tie ordering and a 2^24-bit seen set",
+    "artifact_encoding": "exact order as consecutive uint16be prefix,uint16be off-axis pairs",
+    "artifact_bytes": 67108864,
+    "duplicate_free_complete_cover_required": true,
+    "direct_inverse_sentinels_required": true
+  },
+  "comparison_contract": {
+    "reference_attempt": "A439",
+    "reference_pair_stream_sha256": "e71f783d1a6176d9f3c75443bb8d41ed5812a6f331a57c07a473ba9f2c91bc15",
+    "exact_all_pair_rank_comparison": true,
+    "report_direct_earlier_equal_later_counts": true,
+    "report_rank_ratio_quantiles": true,
+    "report_spearman_and_top_k_overlap": true,
+    "comparison_must_not_consume_A426_secret_result_stop_or_worker_progress": true
+  },
+  "information_boundary": {
+    "A439_result_and_Causal_read_before_design": true,
+    "A426_public_challenge_not_needed": true,
+    "A426_secret_true_pair_result_stop_or_worker_progress_read": false,
+    "A438_result_stop_or_worker_progress_read": false,
+    "A440_result_stop_or_worker_progress_read": false,
+    "A441_pair_order_computed_before_design_freeze": false,
+    "A441_candidate_assignments_executed": 0,
+    "target_labels_used": 0,
+    "reader_refits": 0
+  },
+  "acceptance_gates": {
+    "sixteen_source_pair_orders_exact": true,
+    "output_pair_order_exact": true,
+    "pointwise_factor16_violations": 0,
+    "all_16777216_pairs_checked": true,
+    "artifact_reopens_and_hashes_exactly": true,
+    "authentic_dotcausal_written_reopened_and_personally_read": true
+  },
+  "source_anchors": {
+    "A439_design_path": "research/configs/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_design_v1.json",
+    "A439_design_sha256": "b8a57f3ae46d394ef70c66bd6d75bc8fbd284500a9e8d4447c0a89723c8daecf",
+    "A439_implementation_path": "research/configs/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_implementation_v1.json",
+    "A439_implementation_sha256": "6c0e6114620b2a3c129779c5e2624b3499f4827d31bab8eff4417b95b6595530",
+    "A439_runner_path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+    "A439_runner_sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb",
+    "A439_result_path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+    "A439_result_sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869",
+    "A439_causal_path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+    "A439_causal_sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c",
+    "A434_runner_path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+    "A434_runner_sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "A426_A438_A440_A443_target_outcome_or_progress_read": false,
+  "A446_W52_orders_available_at_freeze": false,
+  "A446_feature_or_operator_evaluation_available_at_freeze": false,
+  "W52_model_refits": 0,
+  "anchors": {
+    "A359_result": {
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.json",
+      "sha256": "3259526ee94241f5e4858b59cb52cb93a9ef8dbe8dc8bf40deaf4d7757db7a3f"
+    },
+    "A363_result": {
+      "path": "research/results/v1/chacha20_round20_w46_polarity_invariant_validation_a363_v1.json",
+      "sha256": "d2601ca3190a18fe2ce13bf436d14fafd4d9a2493df13dc68d353e500d7cb09b"
+    },
+    "A367_result": {
+      "path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_validation_a367_v1.json",
+      "sha256": "bb60cb96295b7ba06d46f20ff1537287b1059e990162d3ee3dedfd8909aee568"
+    },
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A445_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445_v1.causal",
+      "sha256": "93b3509521998978da0d348f2cc1fc99bfdd0639df6cbf0246d53d0aa79d4323"
+    },
+    "A445_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A445_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "fc410f8479a8d325287b436877da0c81058c12b40be9962429fd2977d2f7b725"
+    },
+    "A445_result": {
+      "path": "research/results/v1/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445_v1.json",
+      "sha256": "0c6baab83ec5a96b9efb993ecaeef9ee2b7fc6996bf89884627e4c84a3429a5f"
+    },
+    "A445_runner": {
+      "path": "research/experiments/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445.py",
+      "sha256": "b4a9bd42262e8d038ba3e1faf83f5af603dea9c7c48a7ec86e68b2de7846f074"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446_design_v1.json",
+      "sha256": "57e41c29599a8e025f472fd2861220a28b250554bb748b5c88bfbd448c899da6"
+    },
+    "provenance_source": {
+      "path": "src/arx_carry_leak/assumption_cut_provenance.py",
+      "sha256": "5a9e1366c9dd1cf6e2c07e23e7928b733a8e23a1d47d5cf44ee70f44079b8acb"
+    },
+    "provenance_test": {
+      "path": "tests/test_assumption_cut_provenance.py",
+      "sha256": "42512b9362d256f98a71d75c353cd4416be71ec04f9f6ec11653f03a2d02c07b"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446.sh",
+      "sha256": "72a79b950aad0481b8e2f3bab95a0c13a790d0cdd85a85ffad160d2c23bc64bc"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446.py",
+      "sha256": "2a19a6609ee7ab084e808d288eb287340717be9f4741a4b7ad468bf26efdc112"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446.py",
+      "sha256": "d56e1073ab346a0ae85a61b3d3adbb1c260ab1c61684fe7b62169364193fda90"
+    }
+  },
+  "attempt_id": "A446",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_assumption_cut_feature_extraction_crossfit_selection_W52_transfer_and_authentic_Causal_code_frozen_before_any_A446_feature_or_operator_evaluation",
+  "design_sha256": "57e41c29599a8e025f472fd2861220a28b250554bb748b5c88bfbd448c899da6",
+  "implementation_commitment_sha256": "e0d8e7bff33d8c58cb731f52e1dfd26539bc812973f84be50f1a974439ff0991",
+  "new_solver_stages": 0,
+  "operators": [
+    "borda_sum_baseline",
+    "provenance_best_single",
+    "provenance_borda_top4",
+    "provenance_borda_top8",
+    "provenance_borda_top16",
+    "provenance_borda_top32",
+    "provenance_reciprocal_top8",
+    "provenance_vote_top16",
+    "hybrid_borda_top8_base2",
+    "hybrid_borda_top8_equal",
+    "hybrid_borda_top8_prov2",
+    "hybrid_borda_top16_equal",
+    "hybrid_reciprocal_top8_equal"
+  ],
+  "schema": "chacha20-round20-w52-assumption-cut-clause-provenance-reader-a446-implementation-v1",
+  "selection_key": [
+    "minimum_fixed_block_bit_gain_descending",
+    "balanced_two_corpus_bit_gain_descending",
+    "all128_bit_gain_descending",
+    "targets_at_or_above_median_rank_descending",
+    "worst_rank_ascending",
+    "fixed_operator_order"
+  ],
+  "source_A442_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+  "source_A445_result_commitment_sha256": "d86378d8d6e12ba04e11aa99c4e6d66f2a30001fe0a17b906aa85464d496a457",
+  "target_labels_used_for_W52": 0
+}

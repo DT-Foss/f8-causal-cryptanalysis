@@ -1,0 +1,72 @@
+{
+  "schema": "chacha20-round20-w50-expanded-seven-reader-eight-worker-a396-design-v1",
+  "attempt_id": "A396",
+  "design_state": "frozen_after_target_blind_source_geometry_exploration_before_any_A396_materialized_artifact_or_candidate_execution",
+  "scientific_question": "Can the six primitive A382 Reader orders plus the independent W50 Direct12 order be expanded into seven exact owner queues and an optimal eight-worker static schedule that pointwise dominates A394 without target labels, refits, candidates or recovery feedback?",
+  "source_contract": {
+    "source_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12"
+    ],
+    "source_orders": 7,
+    "cells_per_order": 4096,
+    "owner_rule": "minimum one-based source rank; ties by frozen source-role order",
+    "owner_lane_rule": "sort each assigned cell by its owning source rank",
+    "complete_cover": true,
+    "zero_duplicate_cells": true
+  },
+  "worker_contract": {
+    "worker_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12",
+      "A396_spare_longest_remaining"
+    ],
+    "workers": 8,
+    "home_workers": 7,
+    "spare_workers": 1,
+    "claim_rule": "home workers consume their nonempty owner queue; workers with no remaining home work consume the longest remaining owner queue; ties by frozen source-role order",
+    "epoch_rule": "at most one complete W50 prefix group per worker per epoch",
+    "group_cost_identity": "every W50 prefix executes exactly 128 disjoint 2^31 slabs before outcome evaluation",
+    "target_makespan_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "preserve_each_owner_queue_order": true,
+    "static_lists_replace_runtime_claim_race": true,
+    "theorem_depth": "D_A396(c) <= D_owner(c) <= min_i R_i(c)",
+    "theorem_work": "W_A396(c) <= 8*min_i R_i(c)",
+    "pointwise_comparison": "D_A396(c) <= D_A394(c) for every cell"
+  },
+  "information_boundary": {
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed": 0,
+    "A387_A389_A391_A393_A395_progress_or_filter_outcomes_consumed": false,
+    "A387_A389_A391_A393_A395_result_or_true_prefix_consumed": false,
+    "proof_covers_all_4096_possible_target_cells": true,
+    "exploratory_source_geometry_was_seen_before_design_freeze": true,
+    "target_assignment_or_target_rank_was_seen_before_design_freeze": false
+  },
+  "source_anchors": {
+    "A382_order_path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.json",
+    "A382_order_sha256": "f705549d15be9f4ed98e8548b837524dae8603bff384ab30648c5917dfb82c0c",
+    "A382_causal_path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.causal",
+    "A382_causal_sha256": "a079ddb6c492761f110090a019d7442bd093aa94f104859d2ea8b63b3b76472b",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8",
+    "A388_causal_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+    "A388_causal_sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a",
+    "A394_result_path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.json",
+    "A394_result_sha256": "9f29fecdf60a9b1b128487609b009b3def8f2b4bf7d45329e95bd5dae8ccef6d",
+    "A394_causal_path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.causal",
+    "A394_causal_sha256": "63b95b39f91957337ec3dcd9bed55fa50642afc538ab3cd355e57dedf22c2890"
+  }
+}

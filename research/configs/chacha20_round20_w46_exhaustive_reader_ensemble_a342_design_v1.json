@@ -1,0 +1,83 @@
+{
+  "attempt_id": "A342",
+  "design_state": "exhaustive_known_key_pair_and_triple_selection_frozen_before_any_A325_execution_prefix_or_result",
+  "information_boundary": {
+    "A272_known_key_corpus_used_as_selection_set": true,
+    "A325_hidden_assignment_available": false,
+    "A325_progress_available": false,
+    "A325_result_available": false,
+    "A325_public_output_used_only_through_A340_unlabeled_measurement": true,
+    "A325_target_label_used": false,
+    "A325_candidate_execution_by_A342": false,
+    "A325_protocol_modified": false,
+    "A340_measurement_reused_without_new_solver_stages": true,
+    "model_refits_or_coefficient_updates": 0
+  },
+  "selection_contract": {
+    "base_views": 64,
+    "combination_operator": "equal_Borda_of_exact_candidate_midranks",
+    "pair_count": 2016,
+    "triple_count": 41664,
+    "selection_rule": "minimum_observed_mean_log2_rank_then_lexicographic_view_tuple",
+    "null_control": "exact_shared_XOR_max_statistic_over_every_combination_in_each_complete_family",
+    "selected_pair": [
+      "learned_clause_rejected_large_stage::coefficient_negative::normalized_8cube_graph_laplacian",
+      "learned_literal_count_stage::coefficient_negative::normalized_8cube_graph_laplacian"
+    ],
+    "selected_pair_expected_bit_gain": 2.716330035057446,
+    "selected_pair_expected_familywise_p": 0.01171875,
+    "selected_pair_expected_positive_prefix_groups": 5,
+    "selected_triple": [
+      "learned_clause_length_max::coefficient_negative::normalized_8cube_graph_laplacian",
+      "learned_clause_length_std::coefficient_positive::normalized_8cube_graph_laplacian",
+      "learned_clause_rejected_large_stage::coefficient_negative::normalized_8cube_graph_laplacian"
+    ],
+    "selected_triple_expected_bit_gain": 2.917473260136479,
+    "selected_triple_expected_familywise_p": 0.015625,
+    "selected_triple_expected_positive_prefix_groups": 5
+  },
+  "target_contract": {
+    "coarse_candidates": 256,
+    "fine_candidates": 4096,
+    "fine_extension": "fixed_reflected_Gray4_over_next_four_W46_coordinates",
+    "new_solver_stages": 0,
+    "target_labels_used": 0
+  },
+  "portfolio_contract": {
+    "candidate_sequence": [
+      "A325_raw_linf_baseline",
+      "A340_target_conditioned_selected_channel_fine",
+      "A341_familywise_selected_literal_local_fine",
+      "A342_exhaustive_pair_borda_fine",
+      "A342_exhaustive_triple_borda_fine",
+      "raw_A342_pair_min_rank_wavefront_factor2",
+      "raw_A342_triple_min_rank_wavefront_factor2",
+      "raw_A340_A341_pair_triple_min_rank_wavefront_factor5",
+      "A342_pair_triple_equal_borda",
+      "A325_public_hash_control"
+    ],
+    "primary_operator": "A342_exhaustive_triple_borda_fine",
+    "protected_operator": "raw_A342_triple_min_rank_wavefront_factor2"
+  },
+  "source_anchors": {
+    "A271_protocol_path": "research/configs/chacha20_round20_signed_channel_ablation_v1.json",
+    "A271_protocol_sha256": "da026bcb21805add8a32365a7d9e68dbb00ff6a3226fd89f7f45c3cc8f99c920",
+    "A272_protocol_path": "research/configs/chacha20_round20_selected_channel_prospective_validation_v1.json",
+    "A272_protocol_sha256": "67c568baf4ac5a4d7191cca2ac7bbe4e07e62a81475b51ba838be3f011d6220f",
+    "A272_result_path": "research/results/v1/chacha20_round20_selected_channel_prospective_validation_v1.json",
+    "A272_result_sha256": "41460e75bed006f5df23057151d22d594d30e88b55f6320f28462e24945f18da",
+    "A325_protocol_path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+    "A340_measurement_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_measurement_v1.json.zst",
+    "A340_measurement_sha256": "36d0a8f5fc058b3447f77e38ef140ad17981e06923b46312397fca63c08e109e",
+    "A340_result_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_order_v1.json",
+    "A340_result_sha256": "ecc69f2b8b536381d5c56c35a64328aae2c4e516cab10c3ce9c46ea84d1916a8",
+    "A341_design_path": "research/configs/chacha20_round20_w46_familywise_channel_portfolio_a341_design_v1.json",
+    "A341_design_sha256": "590a1c65be9796879015fed53aa30c0cb7d5d6c5e9bf89c41bd66d686273b690",
+    "A341_result_path": "research/results/v1/chacha20_round20_w46_familywise_channel_portfolio_a341_v1.json",
+    "A341_result_sha256": "4ebc8041d469a57e064a31eb3099a46cb8a8dd998090b9fef70a3e9233fef7d6",
+    "A341_runner_path": "research/experiments/chacha20_round20_w46_familywise_channel_portfolio_a341.py",
+    "A341_runner_sha256": "d8d2ecfcf2ce24b0fec117dbcda735ec32d75f4a629945b17286b42566d6d6cb"
+  },
+  "schema": "chacha20-round20-w46-exhaustive-reader-ensemble-a342-design-v1"
+}

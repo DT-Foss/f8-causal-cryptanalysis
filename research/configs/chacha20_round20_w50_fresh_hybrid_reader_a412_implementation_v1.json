@@ -1,0 +1,331 @@
+{
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A401_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_direct12_learning_a401_v1.json",
+      "sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702"
+    },
+    "A401_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "A404_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_v1.json",
+      "sha256": "ded81a43fed7318ab8a0d32787d5e41e1c51b70e473dfc415dae30b44f4080e1"
+    },
+    "A410_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_v1.json",
+      "sha256": "d631fcc57f1659455417789c58f277aa6d78118eb361281137bdcb846bae284e"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_design_v1.json",
+      "sha256": "709f6b7f2e0eae4cfaad7599d31fd30c160e7444a3f9b9f43006c9536e6764cf"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_fresh_hybrid_reader_a412.sh",
+      "sha256": "0dbbb60a47b0558481c6c54ff20474c586185d395cd95a4dddf0e136abb2e791"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_fresh_hybrid_reader_a412.py",
+      "sha256": "cc8813f29f29aed8f28b682c959d7655437faa7c5e9c713cbe9e2183e8641b96"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_fresh_hybrid_reader_a412.py",
+      "sha256": "b8f4a696cf91d8245c114b2f25af48f3a98e9ebbdcf19d2e8a74fee2060f7ad4"
+    }
+  },
+  "attempt_id": "A412",
+  "candidate_family": [
+    {
+      "A404_weight": 0,
+      "A410_weight": 16,
+      "candidate_index": 0,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": true
+    },
+    {
+      "A404_weight": 1,
+      "A410_weight": 15,
+      "candidate_index": 1,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 2,
+      "A410_weight": 14,
+      "candidate_index": 2,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 3,
+      "A410_weight": 13,
+      "candidate_index": 3,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 4,
+      "A410_weight": 12,
+      "candidate_index": 4,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 5,
+      "A410_weight": 11,
+      "candidate_index": 5,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 6,
+      "A410_weight": 10,
+      "candidate_index": 6,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 7,
+      "A410_weight": 9,
+      "candidate_index": 7,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 8,
+      "A410_weight": 8,
+      "candidate_index": 8,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 9,
+      "A410_weight": 7,
+      "candidate_index": 9,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 10,
+      "A410_weight": 6,
+      "candidate_index": 10,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 11,
+      "A410_weight": 5,
+      "candidate_index": 11,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 12,
+      "A410_weight": 4,
+      "candidate_index": 12,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 13,
+      "A410_weight": 3,
+      "candidate_index": 13,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 14,
+      "A410_weight": 2,
+      "candidate_index": 14,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 15,
+      "A410_weight": 1,
+      "candidate_index": 15,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": false
+    },
+    {
+      "A404_weight": 16,
+      "A410_weight": 0,
+      "candidate_index": 16,
+      "family": "weighted_borda",
+      "family_index": 0,
+      "singleton": true
+    },
+    {
+      "A404_weight": 1,
+      "A410_weight": 15,
+      "candidate_index": 17,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 2,
+      "A410_weight": 14,
+      "candidate_index": 18,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 3,
+      "A410_weight": 13,
+      "candidate_index": 19,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 4,
+      "A410_weight": 12,
+      "candidate_index": 20,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 5,
+      "A410_weight": 11,
+      "candidate_index": 21,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 6,
+      "A410_weight": 10,
+      "candidate_index": 22,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 7,
+      "A410_weight": 9,
+      "candidate_index": 23,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 8,
+      "A410_weight": 8,
+      "candidate_index": 24,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 9,
+      "A410_weight": 7,
+      "candidate_index": 25,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 10,
+      "A410_weight": 6,
+      "candidate_index": 26,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 11,
+      "A410_weight": 5,
+      "candidate_index": 27,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 12,
+      "A410_weight": 4,
+      "candidate_index": 28,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 13,
+      "A410_weight": 3,
+      "candidate_index": 29,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 14,
+      "A410_weight": 2,
+      "candidate_index": 30,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 15,
+      "A410_weight": 1,
+      "candidate_index": 31,
+      "family": "weighted_reciprocal",
+      "family_index": 1,
+      "singleton": false
+    },
+    {
+      "A404_weight": 8,
+      "A410_weight": 8,
+      "candidate_index": 32,
+      "family": "geometric_product",
+      "family_index": 2,
+      "singleton": false
+    },
+    {
+      "A404_weight": 8,
+      "A410_weight": 8,
+      "candidate_index": 33,
+      "family": "minimum_rank_wavefront",
+      "family_index": 3,
+      "singleton": false
+    },
+    {
+      "A404_weight": 8,
+      "A410_weight": 8,
+      "candidate_index": 34,
+      "family": "maximum_rank_intersection",
+      "family_index": 4,
+      "singleton": false
+    }
+  ],
+  "candidate_family_commitment_sha256": "f51dc3849d42585eacfce068ef88e5f870a93df84a3db2c5aea54d1fec84d7d1",
+  "commitment_state": "frozen_before_A412_corpus_measurement_selection_or_holdout_evaluation",
+  "design_sha256": "709f6b7f2e0eae4cfaad7599d31fd30c160e7444a3f9b9f43006c9536e6764cf",
+  "holdout_label_commitment_sha256": "f2127fff91be5f6c90cc9ccb9e8114be302bb76fbaca9f3cae9c921c7760b193",
+  "implementation_commitment_sha256": "8c38f7752a68c251302e64ebc69767ee0e7d9f86e3fdad075056270c8328e961",
+  "public_corpus_commitment_sha256": "4db386c04e83013219d571530eb8aad74fbea99de2a3ef94491f34afa63d2f51",
+  "schema": "chacha20-round20-w50-fresh-hybrid-reader-a412-implementation-v1",
+  "selection_label_commitment_sha256": "ba7241c481356eb50674aabb8e5945e6738d0bc00d379c6622623b435c6c37f4"
+}

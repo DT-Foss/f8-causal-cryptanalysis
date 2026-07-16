@@ -1,0 +1,54 @@
+{
+  "schema": "chacha20-round20-w46-coarse-carry-forward-a339-design-v1",
+  "attempt_id": "A339",
+  "created_at_utc": "2026-07-15T07:29:00Z",
+  "design_state": "frozen_after_A338_before_any_A325_execution_candidate_prefix_or_result",
+  "hypothesis": "A338 localized the independently confirmed W45 prefix at rank 12 in the already-frozen W44 coarse carry-forward order. The same carry-forward rule should be frozen prospectively from the exact W45 coarse order to W46, with raw Linf protected by a factor-two min-rank wavefront.",
+  "order_contract": {
+    "candidate_sequence": [
+      "A325_raw_linf_baseline",
+      "W45_coarse_carry_forward_primary",
+      "raw_coarse_min_rank_wavefront_protected",
+      "raw_coarse_equal_borda",
+      "W45_fine_carry_forward_view_control"
+    ],
+    "primary_operator": "W45_coarse_carry_forward_primary",
+    "protected_operator": "raw_coarse_min_rank_wavefront_protected",
+    "established_baseline": "A325_raw_linf_baseline",
+    "matched_view_control": "W45_fine_carry_forward_view_control",
+    "wavefront_rule": "ascending minimum one-based source rank, then rank sum, raw-Linf rank, coarse rank, cell index",
+    "wavefront_guarantee": "for every cell R_wavefront <= 2*min(R_raw_linf,R_coarse)",
+    "borda_rule": "ascending raw-Linf plus coarse rank, then minimum rank, maximum rank, raw-Linf rank, coarse rank, cell index",
+    "A325_existing_execution_order_rewritten": false,
+    "new_candidate_execution": false
+  },
+  "information_boundary": {
+    "A322_result_role": "training_breadcrumb_only_through_hash_frozen_A338_rank12_result",
+    "A338_global_winner_was_prospectively_selected_for_A322": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_public_challenge_feature_used": false,
+    "A325_candidate_or_prefix_available_at_design_freeze": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_result_available_at_design_freeze": false,
+    "A325_protocol_or_order_modified": false,
+    "target_labels_used_from_A325": 0,
+    "orders_refit_after_A325": false
+  },
+  "source_anchors": {
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A325_protocol_path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+    "A338_result_path": "research/results/v1/chacha20_round20_extended_pre_result_rank_panel_a338_v1.json",
+    "A338_result_sha256": "361d670f64c909c227ad26f1dfa6d5469ec12cb549f3005c69c87877558dd02e",
+    "A325_raw_linf_order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+    "W45_coarse_order_uint16be_sha256": "79cb4208849e1a7926fded8ed507e3c5c7c7bf7b9724177ffcfe4aa0f837c56a",
+    "W45_fine_order_uint16be_sha256": "d21b993bdafb78016ae5d801a6c072c1e188c733c3db20e02ef825a5e7e1f555"
+  },
+  "future_evaluation_contract": {
+    "A325": "after the single independently confirmed A325 execution, locate its prefix in all five frozen A339 orders without duplicate candidate execution",
+    "primary_question": "does coarse carry-forward or its protected wavefront localize the unseen W46 prefix earlier than raw Linf and the fine-view control",
+    "matched_control_outcomes_inferred": false,
+    "A325_existing_protocol_rewritten": false
+  }
+}

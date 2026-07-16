@@ -1,0 +1,150 @@
+{
+  "A426_A438_A440_A443_A450_secret_result_stop_or_worker_progress_read": false,
+  "A434_qualification_content_read_at_freeze": false,
+  "A452_candidate_progress_or_result_read": false,
+  "A455_candidate_or_progress_available_at_freeze": false,
+  "anchors": {
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A426_runner": {
+      "path": "research/experiments/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426.py",
+      "sha256": "d849065a0bc33f1d3eff3f5b7638948c86b683f8020bfd8a0f5ed0e9ca449637"
+    },
+    "A435_implementation": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_implementation_v1.json",
+      "sha256": "fd37e58b9786cafbe605fb1738204e815de610d20982b459b1007492615ee126"
+    },
+    "A435_protocol": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_v1.json",
+      "sha256": "a6616f0ce3ef8c92a67381e8d3c6acde649f0842d85ea7be9cc488e2182044cd"
+    },
+    "A435_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435.py",
+      "sha256": "c9d355f1afda18b6a5f3367f56ba3d9d7658a2b3c3e79ce80d1e8618578fb3b6"
+    },
+    "A454_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_v1.causal",
+      "sha256": "3c14b8a31484bd6bda279d5010056ee7700af89dd81707244f7fafcdf255063f"
+    },
+    "A454_design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_design_v1.json",
+      "sha256": "7a55c5201141734ff10bc55434a4bcf8265a72c9d3a3585b4b964d3bb28308ed"
+    },
+    "A454_implementation": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_implementation_v2.json",
+      "sha256": "368855583aa58c520069974631726fbe467f05917a8bee36fc7875897e215334"
+    },
+    "A454_pair_stream": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_pair_stream_uint16be_uint16be_v1.bin",
+      "sha256": "a82fbe129f6eccaf2ddd560064df1efb471668a116cd52a97490bc66b720b749"
+    },
+    "A454_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A454_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "bb7c6c9d1c1d630f6a12d4a21f0cedbb38fdc81d19012190dba70c081794676f"
+    },
+    "A454_result": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_v1.json",
+      "sha256": "afa2faa05c83e97b9cd8aeee03063ce4493d9c3ea5388fdb9dc39bf3f2093856"
+    },
+    "A454_runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454.py",
+      "sha256": "ef327b61026dea463384c0fe3b1793289e51fe9246953ae982ee89275c810eb1"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455_design_v1.json",
+      "sha256": "1f0bb67882401ba302a9fc2ffeb23f179524bf0bd9a07323479c6accd73c9658"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455.sh",
+      "sha256": "bfc1948d963c029657f444a1bfffcbceb921120d0cc5fa41798cdfe473d7a305"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455.py",
+      "sha256": "fe880b3388de9779982b9baa6cabbeebd41d18c48c6b02a263a0273758a8e1e4"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455.py",
+      "sha256": "d505c0a5c621c3abd027e9b7380fb6425da1003605bc1bc32fecfe93835bc645"
+    }
+  },
+  "attempt_id": "A455",
+  "commitment_state": "complete_restart_safe_eight_worker_A454_BOOHH_weighted_reader_portfolio_executor_frozen_without_reading_any_prior_secret_result_stop_or_worker_progress",
+  "design_sha256": "1f0bb67882401ba302a9fc2ffeb23f179524bf0bd9a07323479c6accd73c9658",
+  "engine_reuse_contract": {
+    "A454_nonfactorized_pair_stream_used": true,
+    "factorized_square_pair_order_reused": false,
+    "prior_candidate_progress_or_outcome_consumed": false,
+    "reuse_only": [
+      "qualified A434 2^28-subcell filter",
+      "eight-worker modulo partition",
+      "restart-safe progress",
+      "matched control",
+      "shared confirmed stop",
+      "dual-reference eight-block confirmation"
+    ],
+    "source_attempt": "A435/A438/A440/A443/A450/A452"
+  },
+  "execution_contract": {
+    "candidates_per_complete_pair_cell": 268435456,
+    "complete_domain_assignments": 4503599627370496,
+    "complete_pair_cell_before_success_evaluation": true,
+    "dual_reference_confirmation_blocks": 8,
+    "dual_reference_confirmation_output_bits": 8192,
+    "early_stop_inside_pair_cell": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 204,
+    "matched_one_bit_control_must_be_empty": true,
+    "pair_cells": 16777216,
+    "primitive": "standard RFC8439 ChaCha20 block function",
+    "public_output_blocks": 8,
+    "restart_safe_progress_per_worker": true,
+    "shared_stop_only_after_independent_confirmation": true,
+    "unknown_key_bits": 52,
+    "worker_partition": "global_pair_index_mod_8",
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "f495a2fe92d75e87e23777cf39bcbf44a9c805766c2a2b5a0f5859fd46105550",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_feature_refits": 0,
+  "production_model_refits": 0,
+  "production_target_labels_used": 0,
+  "schedule_transfer_contract": {
+    "W52_true_pair_rank_known_at_freeze": false,
+    "copy_worker_modulo_mapping_without_refit": true,
+    "feature_refits": 0,
+    "model_refits": 0,
+    "production_candidate_assignments_executed": 0,
+    "random_access_pair_at_global_index": true,
+    "read_only_memory_map": true,
+    "source_attempt": "A454",
+    "source_calibration_sha256": "233ee76ee261f79771bddc05774d666e882ccc69c5465aead4658432f9e4fb13",
+    "source_complete_permutation": true,
+    "source_fusion_algorithm": "deduplicated_periodic_weighted_first_encounter",
+    "source_guarantee_sha256": "5ee8c540427a841e9739f4fd76360c06eaebd844f4df63236e7cff7b4ba1c676",
+    "source_hard_rank_guarantee": "fused_rank <= min(2^24, component_proposal_key + 1) for H, B, and O",
+    "source_hard_rank_violations": 0,
+    "source_maximum_observed_best_component_rank_ratio": 3.2686567164179103,
+    "source_maximum_observed_hybrid_rank_ratio": 2.0,
+    "source_pair_stream_bytes": 67108864,
+    "source_pair_stream_cells": 16777216,
+    "source_pair_stream_sha256": "a82fbe129f6eccaf2ddd560064df1efb471668a116cd52a97490bc66b720b749",
+    "source_result_commitment_sha256": "508cec4cbb82bc3ba4852cf29a4ee14ac62b049ec3d3003d1fede26c274c311e",
+    "source_result_sha256": "afa2faa05c83e97b9cd8aeee03063ce4493d9c3ea5388fdb9dc39bf3f2093856",
+    "source_selected_pattern": "BOOHH",
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w52-no-refit-weighted-reader-portfolio-recovery-a455-implementation-v1",
+  "source_A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "source_A426_public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "source_A454_calibration_sha256": "233ee76ee261f79771bddc05774d666e882ccc69c5465aead4658432f9e4fb13",
+  "source_A454_guarantee_sha256": "5ee8c540427a841e9739f4fd76360c06eaebd844f4df63236e7cff7b4ba1c676",
+  "source_A454_pair_stream_bytes": 67108864,
+  "source_A454_pair_stream_sha256": "a82fbe129f6eccaf2ddd560064df1efb471668a116cd52a97490bc66b720b749",
+  "source_A454_result_commitment_sha256": "508cec4cbb82bc3ba4852cf29a4ee14ac62b049ec3d3003d1fede26c274c311e",
+  "source_A454_result_sha256": "afa2faa05c83e97b9cd8aeee03063ce4493d9c3ea5388fdb9dc39bf3f2093856",
+  "source_pair_cells": 16777216
+}

@@ -1,0 +1,80 @@
+{
+  "A412_holdout_fields_used": 0,
+  "A412_holdout_labels_used": 0,
+  "anchors": {
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A414_model": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_parallel_portfolio_a414_model_v1.json",
+      "sha256": "1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b"
+    },
+    "A415_model": {
+      "path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_model_v1.json",
+      "sha256": "ed7d9e8b44c9dee4fecdb4d59de6a67911c3ed4fc0a0fdb09d7e17885e78e110"
+    },
+    "A416_model": {
+      "path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_model_v1.json",
+      "sha256": "ed927419a04f39f16ffb2679ff51544a43288821744cf2558cd97e45e45a6c58"
+    },
+    "A417_implementation": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_implementation_v1.json",
+      "sha256": "2f9279f8e1b0edd03353ecb864f47e4c56db6e98a2ced09baa039a87156175d7"
+    },
+    "A417_library": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_library_v1.json",
+      "sha256": "53d142b8351a990e06a0e265581320a0df871f59bcc493e3e5ea0f961c391253"
+    },
+    "A417_runner": {
+      "path": "research/experiments/chacha20_round20_w50_selection_calibrated_portfolio_a417.py",
+      "sha256": "dcdb1999b9521b104b3a321da4c42c0e2e7678b53e0adec82af1f3c8d1cfde85"
+    },
+    "A417_selection": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_selection_v1.json",
+      "sha256": "dde2e8a9ec184e52ed353f33b7558f43c767cb8deece715caceffe6910922653"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_repair_a418_design_v1.json",
+      "sha256": "61c9eab12666229c19aaac936b2ac00710101e831088264968ef47933cae7053"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_selection_calibrated_portfolio_repair_a418.sh",
+      "sha256": "364ca984da5cc924e3969eab376fb0bd522a32ef549b06acaaf3b943e7becea7"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_selection_calibrated_portfolio_repair_a418.py",
+      "sha256": "e478a8c24b685a6bdb387ac519ec07bb654ac5a90958a0c7ac1c752cf25b6f8a"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_selection_calibrated_portfolio_repair_a418.py",
+      "sha256": "8ef5315a55fa3bacbdd2facd3098b6ff2658c2a7bffac2c5851a031230ece30f"
+    }
+  },
+  "attempt_id": "A418",
+  "commitment_state": "frozen_before_any_A418_A412_holdout_field_label_or_score",
+  "design_sha256": "61c9eab12666229c19aaac936b2ac00710101e831088264968ef47933cae7053",
+  "holdout_model_choices": 0,
+  "holdout_reader_refits": 0,
+  "implementation_commitment_sha256": "a6018ed16d936e3b5051c57eb3a8b51fb1f91de9232431a3b9db04579aded49d",
+  "repair_scope": {
+    "candidate_library_changed": false,
+    "correction": "Load the immutable A414 model with the explicit committed SHA-256 1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b.",
+    "holdout_boundary_changed": false,
+    "identified_pre_holdout_fault": "A417 external evaluation requests A414.A414_MODEL_SHA256 although the immutable A414 model hash is exported by the importing A416 layer.",
+    "metric_changed": false,
+    "reader_order_changed": false,
+    "selection_changed": false
+  },
+  "schema": "chacha20-round20-w50-selection-calibrated-portfolio-repair-a418-implementation-v1",
+  "selected_canonical_indices": [
+    388,
+    13,
+    2522,
+    303,
+    58,
+    2460,
+    2707,
+    2295
+  ]
+}

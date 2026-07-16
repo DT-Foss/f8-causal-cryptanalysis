@@ -1,0 +1,70 @@
+{
+  "A412_measurement_fields_used": 0,
+  "A412_reader_scores_used": 0,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A413_model": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_model_v1.json",
+      "sha256": "71141bdac6a3f4bea95980e21777eb00a774ecde88a29028c441453dc62b7cf8"
+    },
+    "A414_model": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_parallel_portfolio_a414_model_v1.json",
+      "sha256": "1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b"
+    },
+    "A414_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_parallel_portfolio_a414.py",
+      "sha256": "3c0eac31a79141b3c9c39c4c249d7c0a681576bfe652940d9a5151b45b7e9f23"
+    },
+    "A415_implementation": {
+      "path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_implementation_v1.json",
+      "sha256": "c955e764c1e6f3c869b13cb3762821b7dc165761f0ef6c0e36d06f5effe47876"
+    },
+    "A415_model": {
+      "path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_model_v1.json",
+      "sha256": "ed7d9e8b44c9dee4fecdb4d59de6a67911c3ed4fc0a0fdb09d7e17885e78e110"
+    },
+    "A415_runner": {
+      "path": "research/experiments/chacha20_round20_w50_xor_landscape_portfolio_a415.py",
+      "sha256": "11ed184209e0540b9d8d0ee07e9793cc3c1f434767d8100b92706cbaa2c5760f"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_design_v1.json",
+      "sha256": "c73166ba4a4f1103555fa6d18cf44e427127fa0ebcaefdbd2a26629d1c64ab5f"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_folded_xor_portfolio_a416.sh",
+      "sha256": "f18d0873c8bdb22d6cac2b4641b424cd8c200c299dca7762ef25731013ec5521"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_folded_xor_portfolio_a416.py",
+      "sha256": "6d4f3e144d4d2c7a689b1b4808537379e96091ca5d106ac4cbc00d20d378ce76"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_folded_xor_portfolio_a416.py",
+      "sha256": "c5f0dba1d43f20c1cea5937e0423277236ddbefac160c56ae7a9d96050dc8758"
+    }
+  },
+  "attempt_id": "A416",
+  "commitment_state": "frozen_before_any_A412_measurement_field_or_reader_score",
+  "design_sha256": "c73166ba4a4f1103555fa6d18cf44e427127fa0ebcaefdbd2a26629d1c64ab5f",
+  "implementation_commitment_sha256": "f32a7b9acce4a34cff0ac20776408005bb23b109141ac9eab79d56d39e9c81c7",
+  "portfolio_commitment_sha256": "624ca8a33c15bc69755c51bdd25a1e805c733d04fcd2d4a4113212e388b9685c",
+  "schema": "chacha20-round20-w50-folded-xor-portfolio-a416-implementation-v1",
+  "selected_canonical_indices": [
+    155,
+    123,
+    35,
+    100,
+    153,
+    91,
+    49,
+    144
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "chacha20-round20-w46-polarity-invariant-validation-a363-design-v1",
+  "attempt_id": "A363",
+  "design_state": "frozen_after_A362_selection_before_any_A363_formula_export_solver_measurement_or_reader_validation",
+  "scientific_query": "Does A362's polarity-invariant Reader retain positive, exact-XOR-significant within-slice localization without refit on thirty-two newly generated balanced full-round ChaCha20 W46 known-key targets?",
+  "corpus_contract": {
+    "generation_seed": "A363|new-disjoint-polarity-invariant-validation|v1|2026-07-15",
+    "assignment_derivation": "little-endian SHAKE256(label || '|assignment', 8 bytes) masked to 46 bits, then replace bits 20..31 by the fixed validation high8/low4 label",
+    "label_format": "generation_seed || '|target-' || two_digit_index",
+    "targets": 32,
+    "validation_a_targets": 16,
+    "validation_b_targets": 16,
+    "split_rule": "indices 0..15 validation_a; indices 16..31 validation_b",
+    "low4_balancing": "target_index mod 16; each low4 value occurs exactly once in each fixed half",
+    "high8_affine_label": "(61 + 149 * target_index) mod 256",
+    "high8_unique_across_all_targets": true,
+    "row_manifest_canonical_sha256": "40773e7cfe275d5afa256d6c607220945722626591dead0b42e84c72446b3cc2",
+    "assignment_vector_canonical_sha256": "fb19407af7294d09a3a1412dcaf956d12b1b6198255f867c21b43b5ff0918897",
+    "true_prefix12_codec": "((assignment & 0xffffffff) >> 20) & 0xfff"
+  },
+  "measurement_contract": {
+    "base_formula_target": "one diagnostic output block of standard ChaCha20 R20 plus feedforward for each new known-key target",
+    "complete_candidate_cover_required": true,
+    "cells_per_target": 256,
+    "total_cells": 8192,
+    "solver_stages": 32768,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "watchdog_seconds_per_stage": 2.0,
+    "concurrent_export_workers": 2,
+    "concurrent_measurement_workers": 4,
+    "mapping_exports_per_target": 7,
+    "mapping_exports_total": 224,
+    "fixed_low4_coordinates_high_to_low": [
+      23,
+      22,
+      21,
+      20
+    ],
+    "candidate_high8_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24
+    ],
+    "synthetic_reader_mapping_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "candidate_order": "numeric_0_through_255",
+    "early_stop_permitted": false
+  },
+  "reader_validation_contract": {
+    "A362_result_sha256": "6c7ffb32effc2c0141e9f7ce02776a75e4e4772f18126a87bc84c61c6d45705e",
+    "A362_selection_commitment_sha256": "4791833558d170ec540c7045b273e10e78a9f954c91c5a1d6f14bbc891a24032",
+    "primary_definition": "ensemble::linf_intersection::073-355-380-479",
+    "primary_member_feature_indices": [
+      73,
+      355,
+      380,
+      479
+    ],
+    "reader_refits": 0,
+    "primary_gate": {
+      "exact_shared_xor_p_maximum": 0.05,
+      "mean_log2_rank_bit_gain_minimum_exclusive": 0.0,
+      "positive_gain_required_in_each_fixed_half": true,
+      "targets_at_or_above_median_rank_threshold_minimum": 18
+    },
+    "predeclared_views": [
+      "A362_primary_linf_intersection",
+      "same_members_borda",
+      "A362_best_single_abs_feature_085",
+      "numeric_control"
+    ]
+  },
+  "preparation_gates": {
+    "coordinate_mapping_decoded_independently_for_every_target": true,
+    "coordinate_mapping_literal_ids_may_be_target_specific": true,
+    "coordinate_mapping_must_be_bijective_for_every_target": true,
+    "coordinate_semantics_must_match_A354_source_indices": true,
+    "true_known_assignment_must_be_SAT_for_every_target": true,
+    "one_bit_flip_of_known_assignment_must_be_UNSAT_for_every_target": true
+  },
+  "information_boundary": {
+    "A362_selection_frozen_before_A363_design": true,
+    "A363_target_artifacts_available_at_design_freeze": 0,
+    "A363_solver_measurements_available_at_design_freeze": 0,
+    "reader_definition_changed_after_A362_freeze": false,
+    "reader_refits_during_or_after_A363_measurement": 0,
+    "true_high8_value_used_for_knownkey_output_generation": true,
+    "true_high8_label_used_to_add_CNF_units_or_change_candidate_order": false,
+    "true_high8_used_for_score_or_rank_before_complete_256_cell_cover": false,
+    "low4_label_used_only_to_construct_the_declared_slice": true,
+    "candidate_assignments_executed": 0,
+    "A361_measurements_used_to_select_or_validate_A362_reader": false
+  },
+  "source_anchors": {
+    "A223_config_path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+    "A223_config_sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f",
+    "A275_feature_reader_path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+    "A275_feature_reader_sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b",
+    "A354_result_path": "research/results/v1/chacha20_round20_w46_direct12_coordinate_codec_audit_a354_v1.json",
+    "A354_result_sha256": "9fc3487266aee3f4e637b9a1afc0b434a5f0c56fa430e9aa14b576cfe8782ac4",
+    "A359_runner_path": "research/experiments/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+    "A359_runner_sha256": "5bb1d21b9790b98e09d1fb540f5673c10ab484dc5a539c4c0242d11538461b99",
+    "A362_runner_path": "research/experiments/chacha20_round20_w46_polarity_invariant_reader_a362.py",
+    "A362_runner_sha256": "171e44f83c35d53217fd52c0bee11a2df5e8c22080ac8e00a8bd9c1dd5a25b92",
+    "A362_result_path": "research/results/v1/chacha20_round20_w46_polarity_invariant_reader_a362_v1.json",
+    "A362_result_sha256": "6c7ffb32effc2c0141e9f7ce02776a75e4e4772f18126a87bc84c61c6d45705e"
+  }
+}

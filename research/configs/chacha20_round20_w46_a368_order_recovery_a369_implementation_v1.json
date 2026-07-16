@@ -1,0 +1,46 @@
+{
+  "A361_secret_or_true_prefix_available_at_implementation_freeze": false,
+  "A367_result_available_at_implementation_freeze": false,
+  "A368_order_available_at_implementation_freeze": false,
+  "anchors": {
+    "A324_qualification": {
+      "path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+      "sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a"
+    },
+    "A361_protocol": {
+      "path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+      "sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228"
+    },
+    "A368_design": {
+      "path": "research/configs/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368_design_v1.json",
+      "sha256": "8b537866befe488e532245b8e3c0593b22cf8814b13a3515701a88dec0f376f0"
+    },
+    "A368_implementation": {
+      "path": "research/configs/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368_implementation_v1.json",
+      "sha256": "d1ea5da2d37b4219d57a053c3754ceee5750aea73bf28cf828cb45dec98fbeda"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_a368_order_recovery_a369_design_v1.json",
+      "sha256": "078fa958f34897f2ad50bd1505b557ad562851c16acc337992f2098e6c116794"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_a368_order_recovery_a369.sh",
+      "sha256": "49b4716f719987606ecc5cb726a82e97d9fb73ddbda38ca8e2eb17787eb2604a"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_a368_order_recovery_a369.py",
+      "sha256": "6af37e553c3fc3cf5cfeed66ab5559fbd0bef6698f676a3765033e44c15aea34"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_a368_order_recovery_a369.py",
+      "sha256": "c7ba11f58e7d9422e7941a5169582c2c7a03f4df008135aa5c3bbd9419cf4b81"
+    }
+  },
+  "attempt_id": "A369",
+  "candidate_assignments_executed_at_implementation_freeze": 0,
+  "candidate_or_prefix_available_at_implementation_freeze": false,
+  "commitment_state": "frozen_before_A367_result_A368_order_candidate_prefix_or_execution",
+  "design_sha256": "078fa958f34897f2ad50bd1505b557ad562851c16acc337992f2098e6c116794",
+  "implementation_commitment_sha256": "c8c0c25474e96427371959b0c40879e90eb6d73c5e89972bcccc0ba85072033f",
+  "schema": "chacha20-round20-w46-a368-order-recovery-a369-implementation-v1"
+}

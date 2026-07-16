@@ -1,0 +1,780 @@
+{
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_design_v1.json",
+      "sha256": "8bbfc9853a9bcd2f42001411d1a46f722d7d8c0bf8038e95994ea3e414b7f7f9"
+    },
+    "prepared": {
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_prepared_v1.json",
+      "sha256": "3e508df1af059116eba9d288cd55d3c34800ff8c9d9f6dc17f7989229df5372e"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.sh",
+      "sha256": "54e97f3cc5e254dff26b74d47077be7180925b166072bc8cdca39de68ffa0aab"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+      "sha256": "5bb1d21b9790b98e09d1fb540f5673c10ab484dc5a539c4c0242d11538461b99"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+      "sha256": "553c94a8d751d3f15f1f6a3e2fd0737525445861f5af67f750e22441b9c963b7"
+    }
+  },
+  "attempt_id": "A359",
+  "causal": {
+    "api_id": "a359corp",
+    "clusters": 1,
+    "embedded_rules": 3,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.causal",
+    "personal_semantic_readback": {
+      "first_relation": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "ChaCha20 R20 W46 corrected-coordinate known-key corpus",
+        "evidence": "32 semantic SAT gates and 32 one-bit-flip UNSAT controls",
+        "is_inferred": false,
+        "m_idx": 1,
+        "mechanism": "deterministic_fullround_challenge_generation_plus_exact_per_target_coordinate_decode",
+        "o_idx": 2,
+        "outcome": "A359:prepared_corrected_coordinate_targets",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"corrected_coordinate_interval\": [20, 31], \"mapping_decoded_target_count\": 32, \"mapping_exports_total\": 224, \"per_target_mapping_used_for_slice_and_reader\": true, \"semantic_one_bit_flip_UNSAT\": 32, \"semantic_true_assignment_SAT\": 32, \"targets\": 32, \"unique_source_mapping_hashes\": 28}",
+        "s_idx": 0,
+        "source": "3e508df1af059116eba9d288cd55d3c34800ff8c9d9f6dc17f7989229df5372e",
+        "trigger": "A359:deterministic_balanced_knownkey_manifest"
+      },
+      "materialized_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "CORRECTED_COORDINATE_KNOWNKEY_SELECTION_HOLDOUT_CORPUS_RETAINED",
+        "is_inferred": true,
+        "m_idx": 7,
+        "mechanism": "materialized_balanced_manifest_measurement_validation_chain",
+        "o_idx": 6,
+        "outcome": "A359:selection_holdout_reader_corpus_ready",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A359_corrected_knownkey_corpus_chain",
+        "trigger": "A359:deterministic_balanced_knownkey_manifest"
+      },
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "frozen_selection_trained_holdout_validated_within_slice_reader",
+        "predicate": "next_required_object",
+        "subject": "A359:selection_holdout_reader_corpus_ready",
+        "suggested_queries": [
+          "Train diverse high8 Readers on the sixteen selection targets and evaluate without refit on the sixteen holdout targets."
+        ]
+      },
+      "terminal_relation": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "Prospective Reader learning substrate",
+        "evidence": "CORRECTED_COORDINATE_KNOWNKEY_SELECTION_HOLDOUT_CORPUS_RETAINED",
+        "is_inferred": false,
+        "m_idx": 5,
+        "mechanism": "disjoint_selection_holdout_partition_with_postclosure_labels",
+        "o_idx": 6,
+        "outcome": "A359:selection_holdout_reader_corpus_ready",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"holdout_low4_cover\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], \"labels_revealed_only_after_target_local_complete_cover\": true, \"selection_low4_cover\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], \"unique_high8_labels\": 32}",
+        "s_idx": 4,
+        "source": "52b74a88a49328275bda958f4aea0f091949dcb4c22a1ad3fd474b5c528bf059",
+        "trigger": "A359:complete_within_slice_measurement_corpus"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "a7fd97dd545549a92a800ba457fd3109c59e5fe1d5fb5c5e98ea3cdf767e0403",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 8,
+      "file_size_bytes": 4530,
+      "file_size_kb": 4.4,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 3,
+      "triplets": 4
+    }
+  },
+  "design_sha256": "8bbfc9853a9bcd2f42001411d1a46f722d7d8c0bf8038e95994ea3e414b7f7f9",
+  "evidence_stage": "CORRECTED_COORDINATE_KNOWNKEY_SELECTION_HOLDOUT_CORPUS_RETAINED",
+  "information_boundary": {
+    "candidate_assignments_executed": 0,
+    "known_assignments_retained_for_postclosure_labels_and_semantic_gates": true,
+    "low4_label_used_only_to_construct_the_declared_slice": true,
+    "reader_refits_during_measurement": 0,
+    "selection_and_holdout_disjoint": true,
+    "target_order_changed_from_measurement_outcomes": false,
+    "true_high8_label_used_to_add_CNF_units_or_change_candidate_order": false,
+    "true_high8_used_for_score_or_rank_before_complete_256_cell_cover": false,
+    "true_high8_value_used_for_knownkey_output_generation": true
+  },
+  "measurement_ledger": [
+    {
+      "compressed_bytes": 74086,
+      "compressed_sha256": "1bd3c628e6789fb29a67df25a4897fb53de1ba6dc6e52a9be693146fdce0074c",
+      "index": 0,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_00.json.zst",
+      "raw_bytes": 1501016,
+      "raw_sha256": "62145b9593711e53e731c38501044a20f41304f88c59ed16e49a8c0384187baf",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 85217,
+      "compressed_sha256": "78355960d5ed1f5714d86df2f01a20864f2c2cf7812724e2ae179357784df2b6",
+      "index": 1,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_01.json.zst",
+      "raw_bytes": 1557744,
+      "raw_sha256": "2c2b0329ee5bd1c6e7643c1ba4393629a6761df4a6223b13e130fc0e9a954056",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 81540,
+      "compressed_sha256": "a5a419e7a0d2c091df239b086ac9581c88a0e8af1a73923116312cae70aff354",
+      "index": 2,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_02.json.zst",
+      "raw_bytes": 1525997,
+      "raw_sha256": "ef11ad6669824ac8e7b4e613c04404128e587c61baa942b51821e33990c9102a",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 68534,
+      "compressed_sha256": "28812980d3754d335c9ae760b2fec6791c8fcc1410040992a54681567c40cdd7",
+      "index": 3,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_03.json.zst",
+      "raw_bytes": 1514394,
+      "raw_sha256": "f578ce41aefa1312e876efba89dbd2bba386949d75f16b12e826674373dc7a1c",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 75847,
+      "compressed_sha256": "6a636533d493f5370430b87afde6b0e6b622311f16392d19848fbe68036ddda7",
+      "index": 4,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_04.json.zst",
+      "raw_bytes": 1524845,
+      "raw_sha256": "232b94fdbdb60e74f22ffc90772905541bbff507fe7b1b9cc836af18413b6946",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 71691,
+      "compressed_sha256": "3038f64324cb486e2f6d183e55069bece79007118be7efa4eede3332a7808973",
+      "index": 5,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_05.json.zst",
+      "raw_bytes": 1522322,
+      "raw_sha256": "5716f854987a231819630f47d0fbfaf37b8cf36ad4548763714719f833fe1926",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 74236,
+      "compressed_sha256": "3fbcb7570ed80a534e23e4519dfd89d85f53d2274f566b4c7c059a40be478ca8",
+      "index": 6,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_06.json.zst",
+      "raw_bytes": 1526414,
+      "raw_sha256": "d8390fc7cfc7f977d543dc74240bca358a2edbb4dce6b4908298d5e1506a65c2",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 76579,
+      "compressed_sha256": "826feb9a38d0f24acbdb50f1f2260bea2a6c2a15a0ea04d74702a4687bc38ef7",
+      "index": 7,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_07.json.zst",
+      "raw_bytes": 1518064,
+      "raw_sha256": "dbccbacb62275f5dacb7ce0615c740da5dbe738d563042a01ee5cc2ceb316335",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 79428,
+      "compressed_sha256": "ad282000e6a9afb120b4037bdfcdd09630198ae82d0ddfa681c3d77ce8b3f499",
+      "index": 8,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_08.json.zst",
+      "raw_bytes": 1526404,
+      "raw_sha256": "e89a9121c4ecf3d1d1e512bac106d4f3a778bab398d99e11871f93c4132f842a",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 78642,
+      "compressed_sha256": "05480633002437ecf7f0336bed42612ae494398aa649ac9b815a4482d9be6811",
+      "index": 9,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_09.json.zst",
+      "raw_bytes": 1519814,
+      "raw_sha256": "22a3911943c1f888cb99b512494aab70aed9cda2881b1359544e1a8368a7690c",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 74931,
+      "compressed_sha256": "007b0fae65e684799b70a335e12c0071b9b8244fb2b36e07143b6d005620539e",
+      "index": 10,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_10.json.zst",
+      "raw_bytes": 1509779,
+      "raw_sha256": "64de83db09f48de6551d8c1d8f55b16fea17dbfddaed0ede8e4db7ce3501da0b",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 88275,
+      "compressed_sha256": "d3619d1f5d8001034c7a1c724a2afbaef4d255d693b743c2ea8685d92ac44cf6",
+      "index": 11,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_11.json.zst",
+      "raw_bytes": 1579085,
+      "raw_sha256": "d29a440629f7d22e8b60195e3a944352162e84aa3ac81dcb8e506b8cca8f4055",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 78993,
+      "compressed_sha256": "f130bfabd4c236d3f78ca403ce1ebebbede2b1dcb8979bc9587c36f4929c5d74",
+      "index": 12,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_12.json.zst",
+      "raw_bytes": 1525400,
+      "raw_sha256": "4bf358824c05d202a05d36312459f764a5fcf6acddd22e383c96f0a0e8376125",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 78186,
+      "compressed_sha256": "8dcad841f0c713a9028591c245109b7c765eebdf98fd761448586167ce69bd1e",
+      "index": 13,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_13.json.zst",
+      "raw_bytes": 1534891,
+      "raw_sha256": "71e64b3c5a3f3bb2c5e69c9c4fafd687b0c62243dc94db66d1e61625f5d7dc0f",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 74849,
+      "compressed_sha256": "2647b0dc22f7c23f906baf384b5e12f67519e33a1246b7f2437f3cf06f065d21",
+      "index": 14,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_14.json.zst",
+      "raw_bytes": 1529554,
+      "raw_sha256": "8334a0e85b0b24bb81ecc0a3bcfe53c292968add2ef2cbb5e257566b7d443527",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 85010,
+      "compressed_sha256": "930708f8d424564cbd04249e6617e2094d79ac0ccb791f6d80906567d7da1e11",
+      "index": 15,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_15.json.zst",
+      "raw_bytes": 1583473,
+      "raw_sha256": "2364b7c856b65426ed89795c1d234e59247f5c470ddce99ccda26f527c1332ff",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 82579,
+      "compressed_sha256": "8f7f969843f7ebe2ea5035664d06befc51eda32a514c8845ecab6729ed8ee5f2",
+      "index": 16,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_16.json.zst",
+      "raw_bytes": 1551130,
+      "raw_sha256": "ed3df953ae0d91d72ebcba918e632683e0807f12f0d2c60ebe29e0717dc19c4d",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 75347,
+      "compressed_sha256": "3ace3ff3d009fed5f40208f7ea64ebb3c84fd4e90eca1a92b93763227b36d19e",
+      "index": 17,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_17.json.zst",
+      "raw_bytes": 1530569,
+      "raw_sha256": "bd4a1561afab698caaa0c53434726ea13d1a1df6e17662004f5ba7a35d5d3b3d",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 79933,
+      "compressed_sha256": "674174cdc0dbe6250f5c002b33dd023b55f354f67911e220f3503f448ef5b64f",
+      "index": 18,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_18.json.zst",
+      "raw_bytes": 1558192,
+      "raw_sha256": "4b466e28da5c3ff8a6d8747e82a8f7325f2a98edcff2a78cdb9cda408916b510",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 77704,
+      "compressed_sha256": "dc67c8df5d7badf257fd2538ce132addb4f85f517eaecd9dbc5d8425cc62b8d6",
+      "index": 19,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_19.json.zst",
+      "raw_bytes": 1546461,
+      "raw_sha256": "821705a7ad18768ada71db1cd4c972229748ca74697fe44d8f66eb141eef298c",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 78473,
+      "compressed_sha256": "010f5dd700e74eb98c2307dd57a64efa466610eef722b6953e20a400c56a8ba2",
+      "index": 20,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_20.json.zst",
+      "raw_bytes": 1534697,
+      "raw_sha256": "ebd93bd58fd92968aeb20a7c9c4bc68165e5c8bbc3922ea43988365d1c6e6a1c",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 79989,
+      "compressed_sha256": "9050fb03276ed20e4b2d6461f0bb25c92a77a02439592afe270f72668cfd335a",
+      "index": 21,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_21.json.zst",
+      "raw_bytes": 1526340,
+      "raw_sha256": "9ca579b5b7993335fe0b74d2fef509fd75a7dce0626e61987e6e58e97236a609",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 73308,
+      "compressed_sha256": "43c4c718f780c4ba827491234db7bb1ded3a4a573309c8a6e4e04ae1fd24547d",
+      "index": 22,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_22.json.zst",
+      "raw_bytes": 1510783,
+      "raw_sha256": "9cc3078882e349d6dab77f51c30d3bbe5544b9e9392c2e33d8af2206d1bf05c6",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 83767,
+      "compressed_sha256": "550c4cdb2b932e2da494f96675ffcc09c9a2b40ed72aa7c05b4aac6d12a54096",
+      "index": 23,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_23.json.zst",
+      "raw_bytes": 1560846,
+      "raw_sha256": "1cd89075c8417c3d72b136b8cb912747d5925d2d51d8ff995b7b9bb86e8e6004",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 63901,
+      "compressed_sha256": "afabbab28ab51278e4b399841c026f3a02d4b93313fd777a24a6cd37a2ce4abd",
+      "index": 24,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_24.json.zst",
+      "raw_bytes": 1498197,
+      "raw_sha256": "9b8180d17578832761a94327e87822ac08f433d73816248055523469b1d1e045",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 65806,
+      "compressed_sha256": "0e80fc5bae7d3cab0a279c6a4ced524b8f93a953224eb101efef95123c018e45",
+      "index": 25,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_25.json.zst",
+      "raw_bytes": 1491016,
+      "raw_sha256": "0e796d5a2d5d129ae5ab6e8ec4d28a3a114a69b7adb49fc4a4c70c731abe8d61",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 62658,
+      "compressed_sha256": "a190175f30237454a64c2b665a16de4f6ca5bc916c97ec1fba9f103d1f22ab51",
+      "index": 26,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_26.json.zst",
+      "raw_bytes": 1496915,
+      "raw_sha256": "d70d8dc645831a1faee11b1c361b7ea85b363d28cff1e34ceb8ef87baed86f4a",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 84132,
+      "compressed_sha256": "13aa074a7eba6225ebca57f2d54eb24fa27344699c3fa2b1ba0e57918fe8f59f",
+      "index": 27,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_27.json.zst",
+      "raw_bytes": 1554250,
+      "raw_sha256": "3904bd49728187c6f6355da00f1c0e487060f515904ece37c798da2d5180abb5",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 68960,
+      "compressed_sha256": "a082abc700470eb8e24fd896ebc645731ce896ad70dd6c44c287512a95649194",
+      "index": 28,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_28.json.zst",
+      "raw_bytes": 1510517,
+      "raw_sha256": "d3deade63f4c250d16b04e0f1331302ee29b30870ac86bfd2b5ebcfce5889593",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 84886,
+      "compressed_sha256": "698d6df7761ac936b70e0e8c26b9e8d2b1756f42722a5f1347e7a28323bb2107",
+      "index": 29,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_29.json.zst",
+      "raw_bytes": 1554868,
+      "raw_sha256": "03d5b53d8a01cd1465e21f3b2e4ba58b0c8b2ac7495ad443b0459b9fb89857a0",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 72489,
+      "compressed_sha256": "62efc092eb8c9e36623a1e0e2ca4bd0a9c6c043d226b0625a076227497e1ae04",
+      "index": 30,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_30.json.zst",
+      "raw_bytes": 1515702,
+      "raw_sha256": "4cecfd13d7177d0efe5ce26fda0d19171bd35e6e6c21f8964998826a58135ca1",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 80509,
+      "compressed_sha256": "2d1aebdb993db5827d7ad7544ae1f01ef74bd3c7cdd28c769fc869adf578950b",
+      "index": 31,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1/target_31.json.zst",
+      "raw_bytes": 1528626,
+      "raw_sha256": "23c36f404b5806a55fabd25eadd52f3dddce1d27f492fe7e06dc904b665f07a0",
+      "resumed": false
+    }
+  ],
+  "measurement_sha256": "760a4a7ac68ef0242f83568661ced64a18f9efcb652631255d212b4233a91a55",
+  "measurement_summary": {
+    "candidate_assignments_executed": 0,
+    "cells_per_target": 256,
+    "concurrent_workers": 4,
+    "holdout_targets": 16,
+    "reader_refits": 0,
+    "selection_targets": 16,
+    "solver_stages": 32768,
+    "status_counts": {
+      "sat": 0,
+      "unknown": 8192,
+      "unsat": 0
+    },
+    "targets": 32,
+    "total_cells": 8192,
+    "true_high8_labels_used_during_measurement": 0
+  },
+  "postclosure_label_summary": {
+    "holdout_low4_cover": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "labels_revealed_only_after_target_local_complete_cover": true,
+    "selection_low4_cover": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "unique_high8_labels": 32
+  },
+  "postclosure_labels": [
+    {
+      "index": 0,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 19,
+      "true_low4": 0,
+      "true_prefix12": 304
+    },
+    {
+      "index": 1,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 92,
+      "true_low4": 1,
+      "true_prefix12": 1473
+    },
+    {
+      "index": 2,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 165,
+      "true_low4": 2,
+      "true_prefix12": 2642
+    },
+    {
+      "index": 3,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 238,
+      "true_low4": 3,
+      "true_prefix12": 3811
+    },
+    {
+      "index": 4,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 55,
+      "true_low4": 4,
+      "true_prefix12": 884
+    },
+    {
+      "index": 5,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 128,
+      "true_low4": 5,
+      "true_prefix12": 2053
+    },
+    {
+      "index": 6,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 201,
+      "true_low4": 6,
+      "true_prefix12": 3222
+    },
+    {
+      "index": 7,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 18,
+      "true_low4": 7,
+      "true_prefix12": 295
+    },
+    {
+      "index": 8,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 91,
+      "true_low4": 8,
+      "true_prefix12": 1464
+    },
+    {
+      "index": 9,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 164,
+      "true_low4": 9,
+      "true_prefix12": 2633
+    },
+    {
+      "index": 10,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 237,
+      "true_low4": 10,
+      "true_prefix12": 3802
+    },
+    {
+      "index": 11,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 54,
+      "true_low4": 11,
+      "true_prefix12": 875
+    },
+    {
+      "index": 12,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 127,
+      "true_low4": 12,
+      "true_prefix12": 2044
+    },
+    {
+      "index": 13,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 200,
+      "true_low4": 13,
+      "true_prefix12": 3213
+    },
+    {
+      "index": 14,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 17,
+      "true_low4": 14,
+      "true_prefix12": 286
+    },
+    {
+      "index": 15,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "selection",
+      "true_cell_final_status": "unknown",
+      "true_high8": 90,
+      "true_low4": 15,
+      "true_prefix12": 1455
+    },
+    {
+      "index": 16,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 163,
+      "true_low4": 0,
+      "true_prefix12": 2608
+    },
+    {
+      "index": 17,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 236,
+      "true_low4": 1,
+      "true_prefix12": 3777
+    },
+    {
+      "index": 18,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 53,
+      "true_low4": 2,
+      "true_prefix12": 850
+    },
+    {
+      "index": 19,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 126,
+      "true_low4": 3,
+      "true_prefix12": 2019
+    },
+    {
+      "index": 20,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 199,
+      "true_low4": 4,
+      "true_prefix12": 3188
+    },
+    {
+      "index": 21,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 16,
+      "true_low4": 5,
+      "true_prefix12": 261
+    },
+    {
+      "index": 22,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 89,
+      "true_low4": 6,
+      "true_prefix12": 1430
+    },
+    {
+      "index": 23,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 162,
+      "true_low4": 7,
+      "true_prefix12": 2599
+    },
+    {
+      "index": 24,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 235,
+      "true_low4": 8,
+      "true_prefix12": 3768
+    },
+    {
+      "index": 25,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 52,
+      "true_low4": 9,
+      "true_prefix12": 841
+    },
+    {
+      "index": 26,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 125,
+      "true_low4": 10,
+      "true_prefix12": 2010
+    },
+    {
+      "index": 27,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 198,
+      "true_low4": 11,
+      "true_prefix12": 3179
+    },
+    {
+      "index": 28,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 15,
+      "true_low4": 12,
+      "true_prefix12": 252
+    },
+    {
+      "index": 29,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 88,
+      "true_low4": 13,
+      "true_prefix12": 1421
+    },
+    {
+      "index": 30,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 161,
+      "true_low4": 14,
+      "true_prefix12": 2590
+    },
+    {
+      "index": 31,
+      "label_revealed_after_complete_target_cover": true,
+      "split": "holdout",
+      "true_cell_final_status": "unknown",
+      "true_high8": 234,
+      "true_low4": 15,
+      "true_prefix12": 3759
+    }
+  ],
+  "preparation_summary": {
+    "corrected_coordinate_interval": [
+      20,
+      31
+    ],
+    "mapping_decoded_target_count": 32,
+    "mapping_exports_total": 224,
+    "per_target_mapping_used_for_slice_and_reader": true,
+    "semantic_one_bit_flip_UNSAT": 32,
+    "semantic_true_assignment_SAT": 32,
+    "targets": 32,
+    "unique_source_mapping_hashes": 28
+  },
+  "prepared_sha256": "3e508df1af059116eba9d288cd55d3c34800ff8c9d9f6dc17f7989229df5372e",
+  "result_sha256": "52b74a88a49328275bda958f4aea0f091949dcb4c22a1ad3fd474b5c528bf059",
+  "schema": "chacha20-round20-w46-corrected-knownkey-slice-corpus-a359-v1",
+  "volatile_wall_seconds": 1128.8199463333003
+}

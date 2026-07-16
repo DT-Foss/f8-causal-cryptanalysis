@@ -1,0 +1,48 @@
+{
+  "attempt_id": "A357",
+  "design_state": "frozen_before_A345_or_A350_candidate_prefix_or_result",
+  "evaluation_contract": {
+    "candidate_assignments_executed_by_A357": 0,
+    "confirmed_prefix_source": "first independently confirmed A345-target recovery result from A345, A350, or A358",
+    "metrics": [
+      "rank_in_target_free_A345_order",
+      "rank_in_corrected_public_output_A356_order",
+      "rank_in_frozen_dual_order_factor2_wavefront",
+      "gain_bits_vs_complete_4096_prefix_cover",
+      "overhead_vs_better_source_order"
+    ],
+    "result_must_postdate_A357_order": true
+  },
+  "information_boundary": {
+    "A345_candidate_or_prefix_available_at_design_freeze": false,
+    "A345_result_available_at_design_freeze": false,
+    "A350_candidate_or_prefix_available_at_design_freeze": false,
+    "A350_result_available_at_design_freeze": false,
+    "A356_order_frozen_before_design": true,
+    "public_A345_challenge_available": true,
+    "source_orders_are_complete_and_label_free": true,
+    "target_labels_used_for_portfolio_construction": 0
+  },
+  "portfolio_contract": {
+    "cells": 4096,
+    "pointwise_bound": "R_portfolio(c) <= 2 * min(R_A345(c), R_A356(c)) for every cell c",
+    "source_operator_A": "A345 target-free raw-Linf/current-consistency factor2 wavefront",
+    "source_operator_B": "A356 corrected-coordinate complete-direct12 zero-refit global-raw Reader",
+    "stable_tie_break": [
+      "minimum_source_rank",
+      "sum_source_ranks",
+      "A345_rank",
+      "A356_rank",
+      "cell"
+    ]
+  },
+  "schema": "chacha20-round20-w46-corrected-dual-order-factor2-portfolio-a357-design-v1",
+  "source_anchors": {
+    "A345_order_path": "research/results/v1/chacha20_round20_fresh_w46_factor2_replication_a345_order_v1.json",
+    "A345_order_sha256": "9f0a7a1773894b4a265a6e456bd3489c10fd5f44e7ef9d40dc4706699fa0107d",
+    "A345_protocol_path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+    "A345_protocol_sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95",
+    "A356_order_path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_order_v1.json",
+    "A356_order_sha256": "2069c706d070ac1add659232a08c80a6b46d213cc9c6abb5ad9eebf99afc481a"
+  }
+}

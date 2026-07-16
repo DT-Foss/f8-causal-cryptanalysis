@@ -1,0 +1,88 @@
+{
+  "attempt_id": "A348",
+  "design_state": "post_A325_mechanism_development_frozen_before_direct12_measurement_or_true_prefix_scoring",
+  "measurement_contract": {
+    "base_formula_target": "A325_public_block0_fullround_R20_plus_feedforward",
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "concurrent_slice_workers": 8,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      45,
+      44,
+      43,
+      42,
+      41,
+      40,
+      39,
+      38
+    ],
+    "low4_fixed_unit_coordinates": [
+      37,
+      36,
+      35,
+      34
+    ],
+    "low4_slices": 16,
+    "reader_refits": 0,
+    "target_labels_used_during_measurement": 0,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "scoring_contract": {
+    "A325_true_prefix_revealed_only_after_all_4096_cells_are_measured": true,
+    "candidate_views": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "global_raw_order": "descending_frozen_reader_score_then_cell_id",
+    "slice_z_order": "descending_within_slice_zscore_then_raw_score_then_cell_id",
+    "status": "mechanism_calibration_not_prospective_target_claim",
+    "true_prefix_codec": "word0_bits20_through31_equals_assignment_word0_right_shift20"
+  },
+  "information_boundary": {
+    "A325_candidate_and_prefix_available_for_post_measurement_scoring": true,
+    "A325_candidate_or_prefix_used_to_construct_slice_CNF": false,
+    "A325_candidate_or_prefix_used_to_select_reader_views": false,
+    "A325_public_output_used_to_construct_base_CNF": true,
+    "measurement_completed_before_true_prefix_scoring": true,
+    "new_candidate_assignments_executed": 0,
+    "production_recovery_order_changed": false
+  },
+  "next_gate": {
+    "prospective_transfer_requires_frozen_view_before_fresh_challenge": true,
+    "selection_requires_direct12_rank_and_slice_geometry_readback": true,
+    "target": "fresh_public_output_conditioned_W46_or_W47_recovery_order"
+  },
+  "schema": "chacha20-round20-w46-direct12-sliced-reader-a348-design-v1",
+  "source_anchors": {
+    "A251_wrapper_path": "research/experiments/chacha20_fresh_clause_identity.py",
+    "A251_wrapper_sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6",
+    "A275_reader_path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+    "A275_reader_sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b",
+    "A325_result_path": "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_result_sha256": "534d2d769f387bca90b9ab1f2c43a98a6030c1e3c1039270c1d2e109a38d7ce2",
+    "A340_base_cnf_path": "research/artifacts/a340_chacha20_r20_w46_target_conditioned_causal/a340_chacha20_r20_w46_b1_base.cnf",
+    "A340_base_cnf_sha256": "64e28ee08090257a98567e573724d9a35824c3870172bea74611c69db25e8121",
+    "A340_measurement_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_measurement_v1.json.zst",
+    "A340_measurement_sha256": "36d0a8f5fc058b3447f77e38ef140ad17981e06923b46312397fca63c08e109e",
+    "A340_preflight_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_preflight_v1.json",
+    "A340_preflight_sha256": "129f4f7cec98322cdf7b60a0e25e7286fd1f6712339181f30bf9b4b05f77f5f6",
+    "A340_runner_path": "research/experiments/chacha20_round20_w46_target_conditioned_causal_order_a340.py",
+    "A340_runner_sha256": "7c5812f7c8ab53312de45ec425e9bfbbae66c149b1944b489aeaa711087e95ff",
+    "A341_result_path": "research/results/v1/chacha20_round20_w46_familywise_channel_portfolio_a341_v1.json",
+    "A341_result_sha256": "4ebc8041d469a57e064a31eb3099a46cb8a8dd998090b9fef70a3e9233fef7d6",
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+  }
+}

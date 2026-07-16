@@ -1,0 +1,86 @@
+{
+  "A394_schedule_commitment_sha256": "135e6316584f81a9e3736f1b9b131f7a98e4b90de66a611ecb736447158e42db",
+  "A395_candidate_or_progress_available_at_implementation_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A393_protocol": {
+      "path": "research/configs/chacha20_round20_w50_disjoint_parallel_recovery_a393_v1.json",
+      "sha256": "005482f5409889561ebc96b7c6d78ca3508d66a238e597bdafd26e47f7fefe99"
+    },
+    "A393_runner": {
+      "path": "research/experiments/chacha20_round20_w50_disjoint_parallel_recovery_a393.py",
+      "sha256": "31c9eb2da2ab59d7e7fb1eb20a1cf04d9ff036aabd05301f082ab135541dfddc"
+    },
+    "A394_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.causal",
+      "sha256": "63b95b39f91957337ec3dcd9bed55fa50642afc538ab3cd355e57dedf22c2890"
+    },
+    "A394_result": {
+      "path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.json",
+      "sha256": "9f29fecdf60a9b1b128487609b009b3def8f2b4bf7d45329e95bd5dae8ccef6d"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_balanced_work_stealing_recovery_a395_design_v1.json",
+      "sha256": "9e1b111746dbc8487ca4b2a1affee19e17e72fadfe6170d9d5f6f9cfc46e229a"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_balanced_work_stealing_recovery_a395.sh",
+      "sha256": "82d5ea4a169ab5e7a45bc5dfd95fa5aabef6bb77ab7958cc6d2bbc9471ec6c78"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_balanced_work_stealing_recovery_a395.py",
+      "sha256": "43f65d648649de9920bacc99494d8a7ea7daad68afad9a68b87a67ab6f97c727"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_balanced_work_stealing_recovery_a395.py",
+      "sha256": "7db15a2640609c1fdeeb8954f1f93a69b642b1f1af44f13003991bbb2a0f2a1d"
+    }
+  },
+  "attempt_id": "A395",
+  "commitment_state": "frozen_before_any_A395_candidate_progress_or_result",
+  "design_sha256": "9e1b111746dbc8487ca4b2a1affee19e17e72fadfe6170d9d5f6f9cfc46e229a",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "independent_confirmation_bits": 8192,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "shared_stop_check": "before each next complete prefix group",
+    "slabs_per_prefix_group": 128,
+    "static_schedule_epochs": 1366,
+    "theoretical_minimum_epochs": 1366,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "worker_task_counts": {
+      "A385_pretarget_six_view": 1366,
+      "A386_calibrated_target_blind_transfer": 1365,
+      "A388_W50_public_output_direct12": 1365
+    },
+    "workers": 3
+  },
+  "implementation_commitment_sha256": "77622446a1c2b35007eb9089a18212a1d3999d8f60526380ad321e884a0f74e9",
+  "schema": "chacha20-round20-w50-balanced-work-stealing-recovery-a395-implementation-v1",
+  "worker_order_uint16be_sha256": {
+    "A385_pretarget_six_view": "d10c95020134f6115572c407559aa0bc22dc099519e427151e4c36a1b35a53b9",
+    "A386_calibrated_target_blind_transfer": "d166880aa675f932c7e43d13b6278a1d461ded402fb70aa0cc01ec7f2c38dd93",
+    "A388_W50_public_output_direct12": "7ef1910b7f75b873336022249dc8854086edf19a565e7ecf2919c2d9d86e25ae"
+  },
+  "worker_task_list_sha256": {
+    "A385_pretarget_six_view": "5a8d2a514caad6820181f98df2e90e68f1a7537a9e9a15a6b246d6ff1fa97beb",
+    "A386_calibrated_target_blind_transfer": "3a50b01124066934f01d6d9f38f9bef29add15af5c7f890219ae599492642195",
+    "A388_W50_public_output_direct12": "fa8910c1aa6fc1fec1ebfd17563c046ec26d41c79b0abd8a91a2517246a35604"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "A401_A402_A404_A406_results_available_at_freeze": false,
+  "A407_candidate_or_prefix_available_at_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A405_runner": {
+      "path": "research/experiments/chacha20_round20_w50_leaveoneout_reader_recovery_a405.py",
+      "sha256": "09fa3dce7790f4795cd0fa10c2cbebcb82f05c083494358775dd146ec67bf6e2"
+    },
+    "A406_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_design_v1.json",
+      "sha256": "aaa67ce789ff3623c22e2d2965cbd5c19aa5f4d9aaa2911797eb2d019e0fd2a0"
+    },
+    "A406_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_implementation_v1.json",
+      "sha256": "f6a6e539ee84e03899817e072d09d2b55756419580113990f629f358e93b9236"
+    },
+    "A406_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_weighted_reader_a406.py",
+      "sha256": "7db8f5234cc2d03c685d2f42babe1274438add56cc0bcde28f66c2e32520e2b9"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_weighted_reader_recovery_a407_design_v1.json",
+      "sha256": "076a93c87104414d48c631e1cc864a40bf5411e1314997cbc289bb26556f4e23"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_weighted_reader_recovery_a407.sh",
+      "sha256": "04f7237cfc6fcc48c2fad9cd0dc8c70455827b2c0ae427c09bf5ac019c473d16"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_weighted_reader_recovery_a407.py",
+      "sha256": "d3a95f9f68b701460f13c7748606cc47c43a6c498854d2f62d565f8d7d91bbfb"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_weighted_reader_recovery_a407.py",
+      "sha256": "16687a653b68e1bd314eab54a71caf4b2848daf6a39e045c5460c2b7fd613d99"
+    }
+  },
+  "attempt_id": "A407",
+  "commitment_state": "complete_weighted_executor_and_prior_order_dedup_gate_frozen_before_A401_A402_A404_A406_results_or_A407_candidate",
+  "design_sha256": "076a93c87104414d48c631e1cc864a40bf5411e1314997cbc289bb26556f4e23",
+  "implementation_commitment_sha256": "90a96b5e7b5b40d61f9a625d0e0670c6c5670d7140c1ab8aec0f8317941776ae",
+  "schema": "chacha20-round20-w50-weighted-reader-recovery-a407-implementation-v1",
+  "selected_operator": "A406_weighted_outoffold_qualified_fullfit_production_reader"
+}

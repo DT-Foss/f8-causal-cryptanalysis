@@ -1,0 +1,49 @@
+{
+  "A349_order_commitment_sha256": "9b11478cd8ac38459ad2f8e1692fecdc5d2f31849408aaeaf42ebc80aa1d57af",
+  "anchors": {
+    "A324_qualification": {
+      "path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+      "sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a"
+    },
+    "A345_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+      "sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95"
+    },
+    "A349_order": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_prospective_a345_validation_a349_order_v1.json",
+      "sha256": "d2cbc5cbfe4765d7fd3681f92c4881a962d6b856d86a88bf9c9af716867dc96e"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_a349_order_prospective_recovery_a350_design_v1.json",
+      "sha256": "55e08eeea9648a685b9b68950b958744018095e62beeedb291f2433f12d7f63d"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_a349_order_prospective_recovery_a350.sh",
+      "sha256": "00622187dafe777597419eedf347791760572e16d7174865fe45cae5dea7738d"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_a349_order_prospective_recovery_a350.py",
+      "sha256": "5ff469bca0a7d07b556a9a35141c815e8794e6f344bf95e8145266e7812c1c62"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_a349_order_prospective_recovery_a350.py",
+      "sha256": "c8a04dcfa71155969b8ce7e9451f3fd0dccff82b2f2ee899bc36c3070eacaa74"
+    }
+  },
+  "attempt_id": "A350",
+  "commitment_state": "frozen_before_A345_or_A350_candidate_prefix_or_result",
+  "design_sha256": "55e08eeea9648a685b9b68950b958744018095e62beeedb291f2433f12d7f63d",
+  "implementation_commitment_sha256": "8a2154f3c5b04a8b4ad261f399345ab841f1b67be0303fc9ae0bf272809255a9",
+  "schema": "chacha20-round20-w46-a349-order-prospective-recovery-a350-implementation-v1",
+  "selected_operator": "A342_selected_pair_slice_z_on_complete_A345_direct12_grid",
+  "selected_order_uint16be_sha256": "441c6af3d9a2a32e1a61f0d50804a1ecbf2363517a7b570c408a09a15fd1bbaa",
+  "source_boundary_snapshot": {
+    "A345_candidate_or_prefix_available": false,
+    "A345_executed_prefix_groups_at_snapshot": 318,
+    "A345_progress_available": true,
+    "A345_progress_mtime_ns": 1784109770037651024,
+    "A345_progress_sha256": "29ca45b64a5cc6e6a5baf714b78d2a4729bc60712a9080f64b902ed75ea1ee93",
+    "A345_progress_status": "running",
+    "A345_result_available": false
+  }
+}

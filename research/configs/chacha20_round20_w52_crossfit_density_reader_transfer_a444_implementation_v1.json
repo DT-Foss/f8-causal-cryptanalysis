@@ -1,0 +1,101 @@
+{
+  "A426_A438_A440_A443_target_outcome_or_progress_read": false,
+  "A444_W52_orders_available_at_freeze": false,
+  "A444_evaluation_available_at_freeze": false,
+  "W52_model_refits": 0,
+  "anchors": {
+    "A375_causal": {
+      "path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.causal",
+      "sha256": "adc5fc921da7c7429407fabc637ff03c27e15705fde6ea157fc31acae25f9825"
+    },
+    "A375_result": {
+      "path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+      "sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1"
+    },
+    "A375_runner": {
+      "path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+      "sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1"
+    },
+    "A439_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+      "sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c"
+    },
+    "A439_result": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+      "sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869"
+    },
+    "A439_runner": {
+      "path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+      "sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb"
+    },
+    "A442_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.causal",
+      "sha256": "89e079477ca230be5d2d6ba0231bf7833b29b5c6793076e5800622bf0b8ffb6b"
+    },
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A442_runner": {
+      "path": "research/experiments/chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+      "sha256": "436f0e2a35949bb2007e7da95ec1558c134c2c30c4d077e72b4d2da81de27314"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_crossfit_density_reader_transfer_a444_design_v1.json",
+      "sha256": "b6f842b04ba69ae50c8d93092816797a1e371d314e862107b2efd7555dd997f2"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_crossfit_density_reader_transfer_a444.sh",
+      "sha256": "d180ac272f06d35bbd04759a26d4c29df15bf5d6a9accd29c3ad2d4ab5e55cbe"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_crossfit_density_reader_transfer_a444.py",
+      "sha256": "21a81fe1a6d7a6362f153c81b8d99af7f2753c8473f0d64eae9ee0bc731af8c9"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_crossfit_density_reader_transfer_a444.py",
+      "sha256": "cfc0f03fa8f74f4a4baf82e54355def26d00d583fe3324c40d21345820b5f904"
+    }
+  },
+  "attempt_id": "A444",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_crossfit_density_model_selection_transfer_and_authentic_Causal_code_frozen_before_any_A444_evaluation_W52_order_or_candidate_execution",
+  "design_sha256": "b6f842b04ba69ae50c8d93092816797a1e371d314e862107b2efd7555dd997f2",
+  "implementation_commitment_sha256": "90256e979c7dcf10b94b63010d68a0efead96c120712e9d9d3b72a05c11e0411",
+  "learned_operators": [
+    "gaussian_logrank_shrink25_lr",
+    "hierarchical_hist8_4_lr",
+    "joint_hist4_lr",
+    "marginal_hist8_lr",
+    "pairwise_hist4_lr"
+  ],
+  "model_role_order": [
+    "wide_vote",
+    "sparse_reciprocal",
+    "broad_quantile",
+    "broad_intersection"
+  ],
+  "operators": [
+    "borda_sum_baseline",
+    "multiscale_vote",
+    "dominance_count",
+    "marginal_hist8_lr",
+    "pairwise_hist4_lr",
+    "joint_hist4_lr",
+    "hierarchical_hist8_4_lr",
+    "gaussian_logrank_shrink25_lr"
+  ],
+  "schema": "chacha20-round20-w52-crossfit-density-reader-transfer-a444-implementation-v1",
+  "selection_key": [
+    "minimum_fixed_block_bit_gain_descending",
+    "balanced_two_corpus_bit_gain_descending",
+    "all128_bit_gain_descending",
+    "targets_at_or_above_median_rank_descending",
+    "worst_rank_ascending",
+    "fixed_operator_order"
+  ],
+  "source_A375_selection_commitment_sha256": "327be9ae57fce433bb64b467a504fb9d74c10cc7a36b2dd5767fad3814429eab",
+  "source_A439_result_commitment_sha256": "391ed0597f413d31eed60d235e6bebc90b8d7cabda486c6979631a4e753c9f0f",
+  "source_A442_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+  "target_labels_used_for_W52": 0
+}

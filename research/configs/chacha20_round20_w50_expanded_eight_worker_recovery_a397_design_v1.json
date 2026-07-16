@@ -1,0 +1,87 @@
+{
+  "schema": "chacha20-round20-w50-expanded-eight-worker-recovery-a397-design-v1",
+  "attempt_id": "A397",
+  "design_state": "frozen_after_A396_exact_scheduler_before_any_A397_candidate_progress_or_result",
+  "scientific_question": "Can A396's eight exact static worker lists execute the fresh A385 full-round W50 challenge with complete-group semantics, zero duplicate prefixes, one shared confirmed-success stop, matched control and independent eight-block confirmation?",
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "public_output_blocks": 8,
+    "prefix_groups": 4096,
+    "workers": 8,
+    "static_schedule_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "worker_task_counts": {
+      "A379_target_free": 512,
+      "A380_target_conditioned": 512,
+      "wide_vote": 512,
+      "sparse_reciprocal": 512,
+      "broad_quantile": 512,
+      "broad_intersection": 512,
+      "A388_W50_public_output_direct12": 512,
+      "A396_spare_longest_remaining": 512
+    },
+    "slabs_per_prefix_group": 128,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "shared_stop_check": "before each next complete prefix group",
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "independent_confirmation_bits": 8192
+  },
+  "schedule_contract": {
+    "source": "A396 exact expanded seven-Reader/eight-worker result",
+    "worker_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12",
+      "A396_spare_longest_remaining"
+    ],
+    "complete_cover_cells": 4096,
+    "duplicate_cells": 0,
+    "uncovered_cells": 0,
+    "owner_queue_order_preservation_violations": 0,
+    "depth_bound_violations": 0,
+    "total_work_bound_violations": 0,
+    "makespan_optimal": true,
+    "pointwise_A394_regressions": 0,
+    "static_lists_replace_runtime_claim_race": true
+  },
+  "launch_contract": {
+    "first_available_slot_worker": "A388_W50_public_output_direct12",
+    "remaining_workers": "start independently as Metal slots become available",
+    "live_recoveries_must_not_be_interrupted": true
+  },
+  "information_boundary": {
+    "target_labels_used_for_schedule_construction": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed_for_schedule_construction": 0,
+    "A345_A353_A358_A374_A377_A381_A383_A387_progress_or_filter_outcomes_consumed": false,
+    "A389_A391_A393_A395_progress_or_filter_outcomes_consumed": false,
+    "any_live_or_queued_recovery_result_or_true_prefix_consumed": false,
+    "A385_assignment_absent_from_protocol": true,
+    "rank_owner_and_schedule_readback_only_after_independent_confirmation": true
+  },
+  "source_anchors": {
+    "A396_result_path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.json",
+    "A396_result_sha256": "0dd39b595bd111c88b1c94c325c1039a041211e8e11e1e79f71c6470cc8edff8",
+    "A396_causal_path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.causal",
+    "A396_causal_sha256": "f8187d11c2a8bce9e8e7f8d43a160b1a205b73fa5508190091b46407ed6f0939",
+    "A395_runner_path": "research/experiments/chacha20_round20_w50_balanced_work_stealing_recovery_a395.py",
+    "A395_runner_sha256": "43f65d648649de9920bacc99494d8a7ea7daad68afad9a68b87a67ab6f97c727",
+    "A395_protocol_path": "research/configs/chacha20_round20_w50_balanced_work_stealing_recovery_a395_v1.json",
+    "A395_protocol_sha256": "bdf504b8fccf4f75dc0cab8fd9fb7bcf98e666b0b322fb211ae7f1be24c2eecd",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  }
+}

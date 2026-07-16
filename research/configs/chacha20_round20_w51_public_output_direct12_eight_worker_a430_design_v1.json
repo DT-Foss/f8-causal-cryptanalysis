@@ -1,0 +1,79 @@
+{
+  "schema": "chacha20-round20-w51-public-output-direct12-eight-worker-a430-design-v1",
+  "attempt_id": "A430",
+  "design_state": "frozen_after_A425_public_challenge_and_A428_qualification_before_any_A430_measurement_schedule_candidate_or_A425_recovery_outcome",
+  "scientific_question": "Can the already frozen Direct12 Reader consume the fresh A425 W51 public output without refit and produce an exact eight-worker full-round recovery schedule before any W51 candidate outcome exists?",
+  "measurement_contract": {
+    "primitive": "RFC8439 ChaCha20 block function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "public_output_blocks": 8,
+    "public_output_bits": 4096,
+    "known_key_bits": 205,
+    "unknown_key_bits": 51,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low19",
+    "direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "high8_assumption_coordinates": [50, 49, 48, 47, 46, 45, 44, 43],
+    "low4_fixed_unit_coordinates": [42, 41, 40, 39],
+    "conflict_horizons": [1, 2, 4, 8],
+    "complete_solver_stages": 16384,
+    "target_labels_available_to_measurement": false,
+    "candidate_assignments_executed": 0
+  },
+  "reader_contract": {
+    "source": "A342 familywise-selected pair-slice-z Direct12 Reader",
+    "selected_view": "A342_selected_pair_slice_z",
+    "model_or_weight_refits_on_A425": 0,
+    "target_labels_used": 0,
+    "all_4096_cells_measured_before_order_construction": true,
+    "W51_specific_change": "only the exact public CNF and decoded source-literal map; the Reader mathematics and selected view remain frozen"
+  },
+  "schedule_contract": {
+    "source_order": "complete A430 W51 public-output Direct12 order",
+    "workers": 8,
+    "worker_tasks_each": 512,
+    "assignment_rule": "global_order_position_mod_8",
+    "complete_cover_cells": 4096,
+    "duplicate_cells": 0,
+    "uncovered_cells": 0,
+    "exact_depth_identity": "D_A430(c) = ceil(R_Direct12(c)/8)",
+    "complete_group_candidates_after_A390_qualification": 549755813888,
+    "production_execution_in_A430": false,
+    "next_executor": "A431"
+  },
+  "comparison_contract": {
+    "A425_byte_frozen_schedule_is_retained_as_independent_baseline": true,
+    "A428_W50_global_wavefront_is_retained_as_independent_cross_target_baseline": true,
+    "comparison_population": "all 4096 cells without target labels",
+    "no_schedule_selection_from_A425_secret_or_outcome": true
+  },
+  "information_boundary": {
+    "A425_public_challenge_available_at_design_freeze": true,
+    "A425_assignment_or_true_prefix_available_at_design_freeze": false,
+    "A425_recovery_result_available_at_design_freeze": false,
+    "A425_progress_or_filter_outcomes_consumed": false,
+    "A430_measurement_available_at_design_freeze": false,
+    "A430_schedule_available_at_design_freeze": false,
+    "A430_target_labels_used": 0,
+    "A430_reader_refits": 0,
+    "A430_candidate_assignments_executed": 0,
+    "live_recoveries_must_not_be_interrupted": true
+  },
+  "source_anchors": {
+    "A425_protocol_path": "research/configs/chacha20_round20_w51_a416_fresh_shared_stop_recovery_a425_v1.json",
+    "A425_protocol_sha256": "a36b7352e8553c7e9989190877958976957a8c96022abff406f65aecf6417d0e",
+    "A388_runner_path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+    "A388_runner_sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9",
+    "A349_selection_path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+    "A349_selection_sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422",
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A428_result_path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.json",
+    "A428_result_sha256": "dbf8fd33558bfde4e8e6833e6d69df1b57fcf8732fec28d35828b39e3cce0584",
+    "A428_causal_path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.causal",
+    "A428_causal_sha256": "52a61beb8605fe54b9db66a5ba156b683dfc7dc0270e2a8a202a6f7a70ab0762"
+  }
+}

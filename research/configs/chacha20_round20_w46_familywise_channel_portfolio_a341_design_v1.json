@@ -1,0 +1,78 @@
+{
+  "attempt_id": "A341",
+  "design_state": "known_key_selection_complete_and_frozen_before_any_A325_execution_prefix_or_result",
+  "information_boundary": {
+    "A271_and_A272_known_key_results_available_for_operator_selection": true,
+    "A325_hidden_assignment_available": false,
+    "A325_progress_available": false,
+    "A325_public_output_allowed_as_unlabeled_measurement_input": true,
+    "A325_result_available": false,
+    "A325_target_label_used_for_selection_scoring_or_ordering": false,
+    "A325_candidate_execution_by_A341": false,
+    "A325_protocol_or_existing_raw_order_modified": false,
+    "A340_complete_model_free_measurement_reused_without_solver_rerun": true,
+    "model_refits_or_coefficient_updates": 0
+  },
+  "known_key_selection_contract": {
+    "candidate_family": "all_64_A271_frozen_signed_semantic_views",
+    "control": "one_exact_shared_XOR_max_statistic_over_all_64_views",
+    "selection_corpus": "all_20_disjoint_A272_known_key_complete_256_cell_covers",
+    "selection_rule": "maximum_mean_log2_rank_bit_gain_then_lexicographic_view_name",
+    "selected_group": "learned_literal_count_stage::coefficient_negative",
+    "selected_mode": "normalized_8cube_graph_laplacian",
+    "selected_view": "learned_literal_count_stage::coefficient_negative::normalized_8cube_graph_laplacian",
+    "expected_familywise_exact_shared_xor_p": 0.01171875,
+    "expected_selected_exact_shared_xor_p": 0.00390625,
+    "expected_selected_mean_log2_rank_bit_gain": 2.1257682954034403,
+    "expected_selected_positive_prefix_groups": 5,
+    "view_count": 64
+  },
+  "target_application_contract": {
+    "coarse_candidates": 256,
+    "fine_candidates": 4096,
+    "fine_extension": "fixed_reflected_Gray4_over_next_four_W46_coordinates",
+    "input": "A340_complete_public_output_conditioned_model_free_measurement",
+    "score": "sum_frozen_standardized_additive_contributions_for_selected_group_then_normalized_8cube_graph_laplacian",
+    "target_labels_used": 0
+  },
+  "portfolio_contract": {
+    "candidate_sequence": [
+      "A325_raw_linf_baseline",
+      "A340_target_conditioned_selected_channel_fine",
+      "A341_familywise_selected_literal_local_fine",
+      "raw_A341_min_rank_wavefront_factor2",
+      "raw_A340_A341_min_rank_wavefront_factor3",
+      "raw_A340_A341_equal_borda",
+      "A325_public_hash_control"
+    ],
+    "primary_operator": "A341_familywise_selected_literal_local_fine",
+    "protected_operator": "raw_A340_A341_min_rank_wavefront_factor3",
+    "factor_two_statement": "R_raw_A341_wavefront(cell) <= 2 * min(R_raw(cell), R_A341(cell))",
+    "factor_three_statement": "R_three_way_wavefront(cell) <= 3 * min(R_raw(cell), R_A340(cell), R_A341(cell))"
+  },
+  "source_anchors": {
+    "A271_protocol_path": "research/configs/chacha20_round20_signed_channel_ablation_v1.json",
+    "A271_protocol_sha256": "da026bcb21805add8a32365a7d9e68dbb00ff6a3226fd89f7f45c3cc8f99c920",
+    "A271_result_path": "research/results/v1/chacha20_round20_signed_channel_ablation_v1.json",
+    "A271_result_sha256": "2872e2d32b208558fc433b596134fca3f437165c5d604c319b5da07f212d2fa5",
+    "A271_runner_path": "research/experiments/chacha20_round20_signed_channel_ablation.py",
+    "A271_runner_sha256": "e6a150cd0ba20da099b7462915c7b6d963aab4d9ef49f1efd97e1a3acd7d0329",
+    "A272_protocol_path": "research/configs/chacha20_round20_selected_channel_prospective_validation_v1.json",
+    "A272_protocol_sha256": "67c568baf4ac5a4d7191cca2ac7bbe4e07e62a81475b51ba838be3f011d6220f",
+    "A272_result_path": "research/results/v1/chacha20_round20_selected_channel_prospective_validation_v1.json",
+    "A272_result_sha256": "41460e75bed006f5df23057151d22d594d30e88b55f6320f28462e24945f18da",
+    "A272_runner_path": "research/experiments/chacha20_round20_selected_channel_prospective_validation.py",
+    "A272_runner_sha256": "a973d10d6f4a8835ff58d0254ae3c220170a018e75ec5494639dbcad1e0a70c1",
+    "A325_protocol_path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+    "A340_measurement_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_measurement_v1.json.zst",
+    "A340_measurement_sha256": "36d0a8f5fc058b3447f77e38ef140ad17981e06923b46312397fca63c08e109e",
+    "A340_result_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_order_v1.json",
+    "A340_result_sha256": "ecc69f2b8b536381d5c56c35a64328aae2c4e516cab10c3ce9c46ea84d1916a8",
+    "A340_runner_path": "research/experiments/chacha20_round20_w46_target_conditioned_causal_order_a340.py",
+    "A340_runner_sha256": "7c5812f7c8ab53312de45ec425e9bfbbae66c149b1944b489aeaa711087e95ff",
+    "A271_group_ledger_sha256": "1f529f983bf3e7f6a92b9f31de7d0b4205a34ff7216999b9f424b026b106e1fb",
+    "frozen_model_sha256": "b096c08616a81712da881862b65f0c95388e4db3cf6b8e462bf7c2a072cb0da4"
+  },
+  "schema": "chacha20-round20-w46-familywise-channel-portfolio-a341-design-v1"
+}

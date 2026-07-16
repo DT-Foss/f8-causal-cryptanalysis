@@ -1,0 +1,34 @@
+{
+  "A360_holdout_result_available_at_implementation_freeze": false,
+  "A360_primary_definition": "single_signed::212::redundant_clauses_delta__second_difference_2_4_8__raw_z",
+  "A360_primary_weights_sha256": "1e26d6b62694cfefad50bed902eaf4c71e762583230125497267f0de9e7031fa",
+  "A360_selection_commitment_sha256": "0a15af1b05720e3dd1140565b004915cd7c1ea6a133ac780940deda217bf69d0",
+  "A360_selection_sha256": "e6425afbf257cfdcbe3099ee16e77a90cc3cd1d48db3649ac7af7cdb975c849b",
+  "anchors": {
+    "A360_selection": {
+      "path": "research/results/v1/chacha20_round20_w46_within_slice_reader_selection_a360_frozen_v1.json",
+      "sha256": "e6425afbf257cfdcbe3099ee16e77a90cc3cd1d48db3649ac7af7cdb975c849b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_design_v1.json",
+      "sha256": "2397beb94273e3a4f25a6c1257662ae273beff7f4c1213259969bbde0c8a99f0"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_fresh_a360_reader_deployment_a361.sh",
+      "sha256": "67bd19a0cb40f47c3223cee490e744a3e627ee421ce30e22b174757804d812f9"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_fresh_a360_reader_deployment_a361.py",
+      "sha256": "0c287c1f4e037e1fdb3d87455a43471023600556d14f6cc5bfe0ef36022f38f7"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_fresh_a360_reader_deployment_a361.py",
+      "sha256": "7dae85fb87bf512b2b2cdb84e436670e8b4716f3cb7676f111773789f49e89db"
+    }
+  },
+  "attempt_id": "A361",
+  "commitment_state": "frozen_before_A361_fresh_challenge_preflight_measurement_order_candidate_or_prefix",
+  "design_sha256": "2397beb94273e3a4f25a6c1257662ae273beff7f4c1213259969bbde0c8a99f0",
+  "implementation_commitment_sha256": "4a5df51c5bac9b5f07fffb4e309e108a0d57729ca0548ceaa7dbdffea596f90c",
+  "schema": "chacha20-round20-w46-fresh-a360-reader-deployment-a361-implementation-v1"
+}

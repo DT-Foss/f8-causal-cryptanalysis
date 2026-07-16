@@ -1,0 +1,79 @@
+{
+  "attempt_id": "A352",
+  "design_state": "frozen_before_A346_qualification_A347_protocol_challenge_candidate_prefix_or_result",
+  "information_boundary": {
+    "A346_qualification_available_at_design_freeze": false,
+    "A347_candidate_or_prefix_available_at_design_freeze": false,
+    "A347_fresh_challenge_available_at_design_freeze": false,
+    "A347_protocol_available_at_design_freeze": false,
+    "A347_result_available_at_design_freeze": false,
+    "reader_refits_at_W47": 0,
+    "target_labels_used_for_order_construction": 0
+  },
+  "measurement_contract": {
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "concurrent_slice_workers": 8,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      46,
+      45,
+      44,
+      43,
+      42,
+      41,
+      40,
+      39
+    ],
+    "low4_fixed_unit_coordinates": [
+      38,
+      37,
+      36,
+      35
+    ],
+    "low4_slices": 16,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "portfolio_contract": {
+    "pointwise_bound": "R_A352(c) <= 2 * min(R_A347(c), R_W47_target_conditioned(c)) for every cell c",
+    "source_operator": "unchanged target-free A347 W47 order",
+    "target_operator": "A342 selected-pair slice-z reader applied without refit to the complete fresh W47 direct12 grid",
+    "tie_break": [
+      "minimum_source_rank",
+      "sum_source_ranks",
+      "A347_rank",
+      "target_conditioned_rank",
+      "cell"
+    ]
+  },
+  "reader_contract": {
+    "known_key_selection_attempt": "A342",
+    "reader_refits": 0,
+    "selected_view": "A342_selected_pair_slice_z",
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w47-target-conditioned-factor2-a352-design-v1",
+  "source_anchors": {
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A347_design_path": "research/configs/chacha20_round20_fresh_w47_factor2_transfer_a347_design_v1.json",
+    "A347_design_sha256": "78e3406ca48af0c81f002c0f5329c1b7267481eca579ac9544b5188ee3cbe102",
+    "A347_implementation_path": "research/configs/chacha20_round20_fresh_w47_factor2_transfer_a347_implementation_v1.json",
+    "A347_implementation_sha256": "2d951320541a4b5e3606fb289541369c635c9ecc96d92961a57df228494af3c7",
+    "A347_order_path": "research/results/v1/chacha20_round20_fresh_w47_factor2_transfer_a347_order_v1.json",
+    "A347_order_sha256": "5a287c0985ed249e15d3d1a9b351d30e70503b15ccd6199e33944a633144a2a6",
+    "A347_runner_path": "research/experiments/chacha20_round20_fresh_w47_factor2_transfer_a347.py",
+    "A347_runner_sha256": "66054128dac2d1512a6f81f007341c4e8603a6a832b997417a21911f2f6eea1f",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A349_selection_path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+    "A349_selection_sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422",
+    "A351_order_path": "research/results/v1/chacha20_round20_w46_dual_order_factor2_portfolio_a351_order_v1.json",
+    "A351_order_sha256": "f1087d76e7b98e918e6d7ecca2ae1ac53761dde3f33452a8f3dc37feb68eb61c"
+  }
+}

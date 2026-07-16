@@ -1,0 +1,109 @@
+{
+  "attempt_id": "A355",
+  "design_state": "post_A354_corrected_group_coordinate_contract_frozen_before_measurement",
+  "information_boundary": {
+    "A325_candidate_and_prefix_available_for_post_measurement_scoring": true,
+    "A325_candidate_or_prefix_used_to_construct_slice_CNF": false,
+    "A325_candidate_or_prefix_used_to_construct_score_fields": false,
+    "A325_public_output_used_to_construct_base_CNF": true,
+    "all_4096_cells_must_close_before_confirmed_prefix_lookup": true,
+    "candidate_assignments_executed": 0,
+    "production_recovery_order_changed": false,
+    "reader_refits": 0,
+    "target_labels_used_during_measurement": 0
+  },
+  "measurement_contract": {
+    "base_formula_target": "A325_public_block0_fullround_R20_plus_feedforward",
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "concurrent_slice_workers": 8,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24
+    ],
+    "low4_fixed_unit_coordinates": [
+      23,
+      22,
+      21,
+      20
+    ],
+    "low4_slices": 16,
+    "synthetic_reader_mapping_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "next_gate": {
+    "freeze_one_corrected_view_before_A345_result": true,
+    "target": "A356 corrected public-output-conditioned A345 word0-prefix order"
+  },
+  "schema": "chacha20-round20-w46-corrected-group-direct12-reader-a355-design-v1",
+  "scoring_contract": {
+    "candidate_views": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "confirmed_prefix_codec": "word0_bits20_through31_equals_assignment_word0_right_shift20",
+    "fallback_if_terminal_cells_exist": "exact_sat_then_public_hash_unknown_then_unsat_partition",
+    "primary_selection": "smallest one-based rank at confirmed A325 group cell after complete measurement",
+    "selection_tie_break": "lexicographic_view_name",
+    "status": "corrected_coordinate_mechanism_calibration"
+  },
+  "source_anchors": {
+    "A251_wrapper_path": "research/experiments/chacha20_fresh_clause_identity.py",
+    "A251_wrapper_sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6",
+    "A275_reader_path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+    "A275_reader_sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b",
+    "A325_result_path": "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_result_sha256": "534d2d769f387bca90b9ab1f2c43a98a6030c1e3c1039270c1d2e109a38d7ce2",
+    "A340_base_cnf_path": "research/artifacts/a340_chacha20_r20_w46_target_conditioned_causal/a340_chacha20_r20_w46_b1_base.cnf",
+    "A340_base_cnf_sha256": "64e28ee08090257a98567e573724d9a35824c3870172bea74611c69db25e8121",
+    "A340_preflight_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_preflight_v1.json",
+    "A340_preflight_sha256": "129f4f7cec98322cdf7b60a0e25e7286fd1f6712339181f30bf9b4b05f77f5f6",
+    "A341_result_path": "research/results/v1/chacha20_round20_w46_familywise_channel_portfolio_a341_v1.json",
+    "A341_result_sha256": "4ebc8041d469a57e064a31eb3099a46cb8a8dd998090b9fef70a3e9233fef7d6",
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A348_runner_path": "research/experiments/chacha20_round20_w46_direct12_sliced_reader_a348.py",
+    "A348_runner_sha256": "eec2764ed5a8f4875df7afa3ea5a6257a095093b2471450fe63db7c5d35c8e2b",
+    "A354_result_path": "research/results/v1/chacha20_round20_w46_direct12_coordinate_codec_audit_a354_v1.json",
+    "A354_result_sha256": "9fc3487266aee3f4e637b9a1afc0b434a5f0c56fa430e9aa14b576cfe8782ac4"
+  }
+}

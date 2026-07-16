@@ -1,0 +1,79 @@
+{
+  "A389_candidate_or_prefix_available_at_implementation_freeze": false,
+  "anchors": {
+    "A384_protocol": {
+      "path": "research/configs/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_v1.json",
+      "sha256": "1bd9a1e572906ff98aab30b52b547f48f4b1d61785ccc0ca8082ae4c6bd13fcb"
+    },
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A384_runner": {
+      "path": "research/experiments/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384.py",
+      "sha256": "60352d5f0d09fad8272e87f5a202d6f62274911d7bdd154738a47bac04b6264f"
+    },
+    "A385_implementation": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_implementation_v1.json",
+      "sha256": "05b6b0403a852abf686bdb2b45f13f5a1997c9970ce2e328cc779aaeee818263"
+    },
+    "A385_order": {
+      "path": "research/results/v1/chacha20_round20_fresh_w50_pretarget_transfer_a385_order_v1.json",
+      "sha256": "3d694c17590c063bc14edc925f75adbc2f05e4a941195956a89d18287805af38"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A385_runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+      "sha256": "b6827f779a8a7997bbee6c04a6a28f9f3c5ec5718ac942b0171c8b4174a928f3"
+    },
+    "A388_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+      "sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a"
+    },
+    "A388_design": {
+      "path": "research/configs/chacha20_round20_w50_public_output_direct12_factor3_a388_design_v1.json",
+      "sha256": "c59c68725caf161fd653a7728472da3f6ac7857c30f26c1a6625827822cb4782"
+    },
+    "A388_implementation": {
+      "path": "research/configs/chacha20_round20_w50_public_output_direct12_factor3_a388_implementation_v1.json",
+      "sha256": "5a3eb08ad5087bd7ebd744548eec7f65f26a70af1679340aede196ea50e4a8b6"
+    },
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A388_preflight": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_preflight_v1.json",
+      "sha256": "6919b9071b5c9de85f050a7921d4a82fa0e55db6e02ca531590afdfdc57cc115"
+    },
+    "A388_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_public_output_factor3_recovery_a389_design_v1.json",
+      "sha256": "72b3ad885623737147cafd716d485ac64806ecba5c44ec50dc20b3847cdf3812"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_public_output_factor3_recovery_a389.sh",
+      "sha256": "fc96670b7e281cf03e2e601c8cbea640900a5dd3fd97d9a1f0b894c0cd8a71ce"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_factor3_recovery_a389.py",
+      "sha256": "23602ef77bba32a019b78f776f1fa6a60d6ab13160c79644e4796b5ffe3e9ca5"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_public_output_factor3_recovery_a389.py",
+      "sha256": "f146988ed55dfa1fd2bf45cb0f67ff46cc6e1af235e546f441f887c9e753368a"
+    }
+  },
+  "attempt_id": "A389",
+  "commitment_state": "frozen_after_A388_complete_factor3_order_before_A389_candidate_prefix_or_result",
+  "design_sha256": "72b3ad885623737147cafd716d485ac64806ecba5c44ec50dc20b3847cdf3812",
+  "implementation_commitment_sha256": "d91e4c6e073834794f577549170a4c5bd2586b53505ecc1f1847acb8c9865171",
+  "schema": "chacha20-round20-w50-public-output-factor3-recovery-a389-implementation-v1",
+  "selected_operator": "A388_public_output_Direct12_three_view_factor3_W50_wavefront"
+}

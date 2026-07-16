@@ -1,0 +1,177 @@
+{
+  "A397_Direct12_first_free_slot_obligation_preserved": true,
+  "A401_result_sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702",
+  "A401_selected_candidate": {
+    "aggregator": "minimum_rank_then_sum",
+    "aggregator_index": 2,
+    "selection_bit_gain_vs_complete_4096_cover": 2.0455169883562316,
+    "selection_mean_log2_rank": 9.954483011643768,
+    "selection_true_ranks": [
+      1141,
+      2138,
+      2774,
+      277,
+      1962,
+      3940,
+      3241,
+      20
+    ],
+    "selection_worst_rank": 3940,
+    "view_indices": [
+      3,
+      7
+    ],
+    "view_names": [
+      "A341_selected_single_slice_z",
+      "A342_selected_triple_slice_z"
+    ]
+  },
+  "A401_selection_sha256": "7b088665468eb961ab4b93c796ec0284c9b39c251596bfe6beab814ac477194f",
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A401_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_direct12_learning_a401_v1.json",
+      "sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702"
+    },
+    "A401_selection": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_selection_v1.json",
+      "sha256": "7b088665468eb961ab4b93c796ec0284c9b39c251596bfe6beab814ac477194f"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_design_v1.json",
+      "sha256": "15111ce7c820cfc7bebebeff5feaacbc7d8cde68bc4b09ffcd0d216c668134d8"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_implementation_v1.json",
+      "sha256": "c90231169d9e94ee8cb398e2a16fa5904e4fd574ce06f3bf1250b85a4f60428e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_fullfit_production_reader_a402.py",
+      "sha256": "ecd409f1894fc5a9ca5781fc70f040c6b8eae02878b69f936c5fe399f42d0473"
+    }
+  },
+  "attempt_id": "A402",
+  "causal": {
+    "api_id": "a402w50",
+    "clusters": 1,
+    "embedded_rules": 3,
+    "explicit_triplets": 2,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_v1.causal",
+    "personal_semantic_readback": {
+      "deployment": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native learned Reader deployment",
+        "evidence": "zero production labels, refits, candidates, or live recovery outcomes",
+        "is_inferred": false,
+        "m_idx": 3,
+        "mechanism": "frozen_fullfit_then_zero_refit_production_application",
+        "o_idx": 4,
+        "outcome": "A402:A402_knownkey_learning_boundary_retained",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "null",
+        "s_idx": 2,
+        "source": "1375fbc0fd8f179cee278d33dffd2efa53b3a88e7d78389e38f9e807cdcfae8e",
+        "trigger": "A402:qualification_boundary"
+      },
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "new_predeclared_reader_family_with_independent_holdout",
+        "predicate": "next_required_object",
+        "subject": "A402:A402_knownkey_learning_boundary_retained",
+        "suggested_queries": [
+          "Use the retained boundary to design a different algebraic Reader family."
+        ]
+      },
+      "qualification": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "known-key W50 Reader qualification",
+        "evidence": "A402 design and code froze before A401 selection or result",
+        "is_inferred": false,
+        "m_idx": 1,
+        "mechanism": "predeclared_strict_A402_qualification_gate",
+        "o_idx": 2,
+        "outcome": "A402:qualification_boundary",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"qualified\": false, \"selected_additional_bit_gain\": -0.16166095413472092, \"selected_geometric_rank_improvement_factor\": 0.8939952343164007, \"selected_holdout_geometric_mean_rank\": 1527.5217928396544, \"selected_holdout_ranks\": [1592, 2209, 2317, 3517, 2240, 1224, 1503, 251]}",
+        "s_idx": 0,
+        "source": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702",
+        "trigger": "A401:train_only_reader_plus_eight_target_holdout"
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "pre-result A402 design and implementation commitments",
+        "is_inferred": true,
+        "m_idx": 6,
+        "mechanism": "materialized_A402_deployment_chain",
+        "o_idx": 4,
+        "outcome": "A402:A402_knownkey_learning_boundary_retained",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 5,
+        "source": "materialized:A401_to_A402_chain",
+        "trigger": "A401:heldout_knownkey_learning"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "2ffa1b57c317e3ba4b9abdfa9e59999a86ad7ffcf9d1c947782c82f6b236cff1",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 9,
+      "file_size_bytes": 3227,
+      "file_size_kb": 3.2,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w50_knownkey_fullfit_production_reader_a402_v1.causal.tmp",
+      "gaps": 1,
+      "rules": 3,
+      "triplets": 3
+    }
+  },
+  "deployment_commitment_sha256": "1375fbc0fd8f179cee278d33dffd2efa53b3a88e7d78389e38f9e807cdcfae8e",
+  "design_sha256": "15111ce7c820cfc7bebebeff5feaacbc7d8cde68bc4b09ffcd0d216c668134d8",
+  "evidence_stage": "A401_HELDOUT_QUALIFICATION_BOUNDARY_RETAINED_NO_PRODUCTION_RECOVERY_QUEUED",
+  "fullfit_candidate": null,
+  "fullfit_metadata": null,
+  "implementation_commitment_sha256": "ca219369bf983d953c9adce7ecd9eaf402d34afe0844c29f5c34a5410addaa57",
+  "implementation_sha256": "c90231169d9e94ee8cb398e2a16fa5904e4fd574ce06f3bf1250b85a4f60428e",
+  "live_recovery_progress_filter_outcomes_or_results_consumed": false,
+  "new_solver_stages": 0,
+  "production_candidate_assignments_executed": 0,
+  "production_operator_diversity": null,
+  "production_order": null,
+  "production_order_uint16be_sha256": null,
+  "production_reader_refits": 0,
+  "production_target_labels_used": 0,
+  "production_view_metadata": null,
+  "qualification": {
+    "qualified": false,
+    "selected_additional_bit_gain": -0.16166095413472092,
+    "selected_geometric_rank_improvement_factor": 0.8939952343164007,
+    "selected_holdout_geometric_mean_rank": 1527.5217928396544,
+    "selected_holdout_ranks": [
+      1592,
+      2209,
+      2317,
+      3517,
+      2240,
+      1224,
+      1503,
+      251
+    ]
+  },
+  "schema": "chacha20-round20-w50-knownkey-fullfit-production-reader-a402-result-v1"
+}

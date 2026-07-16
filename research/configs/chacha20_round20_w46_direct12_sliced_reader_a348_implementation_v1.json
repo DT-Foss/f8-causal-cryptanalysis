@@ -1,0 +1,25 @@
+{
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_direct12_sliced_reader_a348_design_v1.json",
+      "sha256": "d31649a3138e823c238bf8ff1318679d614f1b49ae0d53e9ebe4a0889b706b17"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_direct12_sliced_reader_a348.sh",
+      "sha256": "78d9b7926f7648147029bae676959cddfde599c6acd36a96c7b4ba5ec9dbd97a"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_direct12_sliced_reader_a348.py",
+      "sha256": "eec2764ed5a8f4875df7afa3ea5a6257a095093b2471450fe63db7c5d35c8e2b"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_direct12_sliced_reader_a348.py",
+      "sha256": "07ad8677a292d189a652f80838054071c1c5e5ae6aa44c315b16efdd234a75e5"
+    }
+  },
+  "attempt_id": "A348",
+  "commitment_state": "frozen_before_direct12_measurement_or_true_prefix_scoring",
+  "design_sha256": "d31649a3138e823c238bf8ff1318679d614f1b49ae0d53e9ebe4a0889b706b17",
+  "implementation_commitment_sha256": "c2e4a3c79dbeb2eca5fae344deaee1fc512fd1698dfdad3ea398512f150a8898",
+  "schema": "chacha20-round20-w46-direct12-sliced-reader-a348-implementation-v1"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "chacha20-round20-w50-majority-3to1-complete-portfolio-a427-design-v1",
+  "attempt_id": "A427",
+  "objective": "Convert A419's selection-only polarity vote into a complete, bounded-loss Reader by accelerating the predicted XOR tail without discarding the counter-tail, then test equal-worker transfer against A416.",
+  "mechanism": {
+    "orientation_source": "A419 frozen three-voter majority polarity",
+    "preferred_tail_cells_per_cycle": 3,
+    "counter_tail_cells_per_cycle": 1,
+    "deduplication": "first occurrence wins",
+    "coverage": "all 4096 cells exactly once",
+    "replaced_A416_role": "folded_xor_negative_first",
+    "replacement_role": "majority_polarity_3to1_complete",
+    "retained_A416_reader_count": 7,
+    "total_worker_count": 8
+  },
+  "selection_contract": {
+    "source_targets": "A412 selection indices 0..15 only",
+    "source_orientation_accuracy": "15/16 in the frozen A419 model",
+    "fixed_ratio_rationale": "3:1 converts a correct polarity vote into approximately 1.5x earlier tail coverage while retaining exact counter-tail coverage and bounding a wrong vote to approximately 2x the A416 balanced-fold depth.",
+    "expected_A416_selection_ranks": [
+      1912, 703, 2326, 783, 210, 226, 876, 893,
+      203, 28, 302, 1542, 35, 537, 1509, 418
+    ],
+    "expected_A427_selection_ranks": [
+      1274, 469, 2326, 783, 210, 226, 876, 893,
+      135, 18, 302, 1027, 35, 358, 1006, 418
+    ],
+    "expected_selection_geometric_rank_improvement_factor": 1.1970583603289995,
+    "expected_selection_additional_bit_gain": 0.25949348987939835
+  },
+  "external_test_contract": {
+    "panel": "A412 indices 16..31",
+    "primary_baseline": "A416 exact eight-worker portfolio",
+    "worker_count": 8,
+    "reader_refits": 0,
+    "model_choices_after_freeze": 0,
+    "qualification": "holdout geometric mean rank strictly below A416 and additional bit gain strictly positive"
+  },
+  "information_boundary": {
+    "A412_selection_fields_used_at_design_freeze": 16,
+    "A412_selection_labels_used_at_design_freeze": 16,
+    "A412_holdout_fields_consumed_by_A427_at_design_freeze": 0,
+    "A412_holdout_labels_consumed_by_A427_at_design_freeze": 0,
+    "A419_result_used_as_model_source": false,
+    "target_specific_polarity_labels_used_at_execution": false
+  },
+  "source_anchors": {
+    "A416_runner_path": "research/experiments/chacha20_round20_w50_folded_xor_portfolio_a416.py",
+    "A416_runner_sha256": "6d4f3e144d4d2c7a689b1b4808537379e96091ca5d106ac4cbc00d20d378ce76",
+    "A416_model_path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_model_v1.json",
+    "A416_model_sha256": "ed927419a04f39f16ffb2679ff51544a43288821744cf2558cd97e45e45a6c58",
+    "A419_runner_path": "research/experiments/chacha20_round20_w50_majority_polarity_portfolio_a419.py",
+    "A419_runner_sha256": "2553725477539400e19d895384768ea6e6cd4818b232bad3868c01619d0d87c0",
+    "A419_model_path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_model_v1.json",
+    "A419_model_sha256": "aa68b6c0f9098b445a63822b2e5e7b0a26263eb7073073549c04158911f303c7",
+    "A412_protocol_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+    "A412_protocol_sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "A412_measurement_fields_used": 0,
+  "A412_reader_scores_used": 0,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A412_implementation": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_implementation_v1.json",
+      "sha256": "f08665ec5f0b79bf96f33617d10966e59895e6adfb284c5b6c70e5fc47527067"
+    },
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A412_runner": {
+      "path": "research/experiments/chacha20_round20_w50_fresh_hybrid_reader_a412.py",
+      "sha256": "cc8813f29f29aed8f28b682c959d7655437faa7c5e9c713cbe9e2183e8641b96"
+    },
+    "A413_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_implementation_v1.json",
+      "sha256": "715aa6660bff6f3c6b3b3336cc3b755581c528898ca75defb6cbe8fea539e693"
+    },
+    "A413_model": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_model_v1.json",
+      "sha256": "71141bdac6a3f4bea95980e21777eb00a774ecde88a29028c441453dc62b7cf8"
+    },
+    "A413_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_kernel_density_reader_a413.py",
+      "sha256": "e8f939d84cf53364bbbb4c729c1e9fa7fd5dce2742cd24fcc6e3e6a559c804d4"
+    },
+    "A414_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_parallel_portfolio_a414_implementation_v1.json",
+      "sha256": "a6f30f5f025de34e05b52f61966d2363dc386ec0402a6dd6cf9d6fe58506ddd1"
+    },
+    "A414_model": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_parallel_portfolio_a414_model_v1.json",
+      "sha256": "1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b"
+    },
+    "A414_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_parallel_portfolio_a414.py",
+      "sha256": "3c0eac31a79141b3c9c39c4c249d7c0a681576bfe652940d9a5151b45b7e9f23"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_design_v1.json",
+      "sha256": "5b04e9eeac29efad0bff2596cc870f7382003be64b7cdddc281ce1b88247a09b"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_xor_landscape_portfolio_a415.sh",
+      "sha256": "a9a091763e449c36abd502266a3652487778246f02b16ab32fc5bfec66d53fb6"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_xor_landscape_portfolio_a415.py",
+      "sha256": "11ed184209e0540b9d8d0ee07e9793cc3c1f434767d8100b92706cbaa2c5760f"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_xor_landscape_portfolio_a415.py",
+      "sha256": "d9b0da27f38e7cc88cd42851ce4ac99ad95c69561c3e8bc8a2d06001742605d6"
+    },
+    "training": {
+      "path": "research/results/v1/chacha20_round20_w50_xor_landscape_portfolio_a415_training_v1.json",
+      "sha256": "06051258776799b37f17344ebfbc4d5c1c19250bc4c6b7d50b7ac7b30cde142c"
+    }
+  },
+  "attempt_id": "A415",
+  "commitment_state": "frozen_after_A401_training_before_any_A412_field_or_reader_score",
+  "design_sha256": "5b04e9eeac29efad0bff2596cc870f7382003be64b7cdddc281ce1b88247a09b",
+  "implementation_commitment_sha256": "eccb6634cdf554eaaddd96c7396d304d8817261677769740620eb5453c2d206b",
+  "schema": "chacha20-round20-w50-xor-landscape-portfolio-a415-implementation-v1",
+  "selected_canonical_indices": [
+    156,
+    123,
+    20,
+    155,
+    153,
+    100,
+    49,
+    5
+  ],
+  "training_commitment_sha256": "6f0b6aa277c5d9a38307ecd0e594b0417b95f5f278dc4c3610907d7407869be0",
+  "training_sha256": "06051258776799b37f17344ebfbc4d5c1c19250bc4c6b7d50b7ac7b30cde142c"
+}

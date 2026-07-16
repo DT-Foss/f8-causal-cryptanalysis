@@ -1,0 +1,77 @@
+{
+  "A412_holdout_fields_used": 0,
+  "A412_holdout_labels_used": 0,
+  "A412_selection_fields_used": 16,
+  "A412_selection_labels_used": 16,
+  "anchors": {
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A416_model": {
+      "path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_model_v1.json",
+      "sha256": "ed927419a04f39f16ffb2679ff51544a43288821744cf2558cd97e45e45a6c58"
+    },
+    "A416_runner": {
+      "path": "research/experiments/chacha20_round20_w50_folded_xor_portfolio_a416.py",
+      "sha256": "6d4f3e144d4d2c7a689b1b4808537379e96091ca5d106ac4cbc00d20d378ce76"
+    },
+    "A419_model": {
+      "path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_model_v1.json",
+      "sha256": "aa68b6c0f9098b445a63822b2e5e7b0a26263eb7073073549c04158911f303c7"
+    },
+    "A419_runner": {
+      "path": "research/experiments/chacha20_round20_w50_majority_polarity_portfolio_a419.py",
+      "sha256": "2553725477539400e19d895384768ea6e6cd4818b232bad3868c01619d0d87c0"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_design_v1.json",
+      "sha256": "66742ec3b2ff5705826e8344e9fad7befbccfc360c3370b79bf24c643c4ddb39"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_majority_3to1_complete_portfolio_a427.sh",
+      "sha256": "896a011d8fade07fafaab4c8f75a8769d6e6f09452372fc3ec67009bd68bb807"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_majority_3to1_complete_portfolio_a427.py",
+      "sha256": "cb8d8c9a12799a7fe1ccd37f0ec0af72234104ffbf8b6081b2c0ec13d4271cb8"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_majority_3to1_complete_portfolio_a427.py",
+      "sha256": "c6f550867679cf8feabd29625d013743cb75a92cefc7ff0420bc5995ba360702"
+    }
+  },
+  "attempt_id": "A427",
+  "commitment_state": "frozen_after_selection_only_derivation_before_any_A427_holdout_field_label_or_score",
+  "counter_per_cycle": 1,
+  "design_sha256": "66742ec3b2ff5705826e8344e9fad7befbccfc360c3370b79bf24c643c4ddb39",
+  "implementation_commitment_sha256": "4513450f8729ccd93931b40c7d1822bc1578c13532b18c4e1cda53b3b0f1ea19",
+  "packaging_amendment": {
+    "causal_artifact_changed": false,
+    "causal_sha256": "c05aa4fc5158c20000a4c6903e29e2f82753638f221a086dd54f105605b7da64",
+    "corrected_test_sha256": "c6f550867679cf8feabd29625d013743cb75a92cefc7ff0420bc5995ba360702",
+    "external_measurement_changed": false,
+    "external_measurement_sha256": "7a07cfcb9a79da52c1a0bca697c5dcf7198ff242e453582e74253df43227c284",
+    "prior_implementation_sha256": "474a212ec1e697692e741905ed5aeffcc0a474e53b77e0934eb1963211f3b6de",
+    "prior_test_sha256": "b0e57406804ebf0f41ff95fe31a3ce9b21efa6a0c9b36e0d5069bb8b5be55f01",
+    "reader_or_schedule_changed": false,
+    "reason": "correct test-only scheduler proof keys: complete_cover_cells, duplicate_cells, uncovered_cells",
+    "schedule_commitment_sha256": "00f579ee4d9376322b5adeadc6d0c2ecd6ff3dc217375675b9fe317fcf9aaee1",
+    "schema": "chacha20-round20-w50-a427-packaging-amendment-v1",
+    "scientific_design_changed": false,
+    "selection_evidence_changed": false,
+    "selection_evidence_sha256": "e9c8c04e32e1d9021b0c0a4b3af1bf0028ae75e479592a25aeab4b45ebd72285"
+  },
+  "preferred_per_cycle": 3,
+  "schema": "chacha20-round20-w50-majority-3to1-complete-portfolio-a427-implementation-v1",
+  "source_roles": [
+    "majority_polarity_3to1_complete",
+    "A413_candidate_123",
+    "A413_candidate_035",
+    "A413_candidate_100",
+    "A413_candidate_153",
+    "A413_candidate_091",
+    "A413_candidate_049",
+    "A413_candidate_144"
+  ]
+}

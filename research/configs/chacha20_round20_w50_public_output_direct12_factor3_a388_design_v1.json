@@ -1,0 +1,94 @@
+{
+  "attempt_id": "A388",
+  "design_state": "frozen_after_A385_public_challenge_and_A387_protocol_before_A388_measurement_order_or_any_A387_result_or_true_prefix",
+  "information_boundary": {
+    "A385_assignment_absent_from_protocol": true,
+    "A385_public_challenge_available_at_design_freeze": true,
+    "A387_recovery_execution_started_at_design_freeze": true,
+    "A387_result_or_true_prefix_available_at_design_freeze": false,
+    "A387_progress_or_filter_outcomes_consumed": false,
+    "A388_candidate_assignments_executed_for_order": 0,
+    "A388_measurement_available_at_design_freeze": false,
+    "A388_order_available_at_design_freeze": false,
+    "A388_reader_refits": 0,
+    "A388_target_labels_used_for_order_construction": 0,
+    "source_A385_order_frozen_before_W50_challenge": true,
+    "source_A386_order_frozen_before_W50_challenge": true
+  },
+  "measurement_contract": {
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "concurrent_slice_workers": 8,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      49,
+      48,
+      47,
+      46,
+      45,
+      44,
+      43,
+      42
+    ],
+    "low4_fixed_unit_coordinates": [
+      41,
+      40,
+      39,
+      38
+    ],
+    "low4_slices": 16,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "portfolio_contract": {
+    "pointwise_bound": "R_A388(c) <= 3 * min(R_A385(c), R_W50_direct12(c), R_A386(c)) for every cell c",
+    "source_roles": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12",
+      "A386_calibrated_target_blind_transfer"
+    ],
+    "tie_break": [
+      "minimum_source_rank",
+      "sum_source_ranks",
+      "A385_rank",
+      "A388_direct12_rank",
+      "A386_rank",
+      "cell"
+    ]
+  },
+  "reader_contract": {
+    "known_key_selection_attempt": "A342",
+    "reader_refits": 0,
+    "selected_view": "A342_selected_pair_slice_z",
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w50-public-output-direct12-factor3-a388-design-v1",
+  "source_anchors": {
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A349_selection_path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+    "A349_selection_sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422",
+    "A351_order_path": "research/results/v1/chacha20_round20_w46_dual_order_factor2_portfolio_a351_order_v1.json",
+    "A351_order_sha256": "f1087d76e7b98e918e6d7ecca2ae1ac53761dde3f33452a8f3dc37feb68eb61c",
+    "A385_design_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_design_v1.json",
+    "A385_design_sha256": "0e4c1d7b5f2a89245728fcc3f5d6d66ebb20c3cefccb127f03d9b58a57125687",
+    "A385_implementation_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_implementation_v1.json",
+    "A385_implementation_sha256": "05b6b0403a852abf686bdb2b45f13f5a1997c9970ce2e328cc779aaeee818263",
+    "A385_order_path": "research/results/v1/chacha20_round20_fresh_w50_pretarget_transfer_a385_order_v1.json",
+    "A385_order_sha256": "3d694c17590c063bc14edc925f75adbc2f05e4a941195956a89d18287805af38",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b",
+    "A385_runner_path": "research/experiments/chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+    "A385_runner_sha256": "b6827f779a8a7997bbee6c04a6a28f9f3c5ec5718ac942b0171c8b4174a928f3",
+    "A386_order_path": "research/results/v1/chacha20_round20_w49_calibrated_ticketed_hierarchical_factor3_a386_order_v1.json",
+    "A386_order_sha256": "eda2ec6b995d2ad7ecb8198ff33616c9129fceb04b28a51b0f2123303ba6a5c4",
+    "A386_runner_path": "research/experiments/chacha20_round20_w49_calibrated_ticketed_hierarchical_factor3_a386.py",
+    "A386_runner_sha256": "56e7ebea65efd3436d52b7ff43ec1b327f4068fc3066ee280217f411b2738900"
+  }
+}

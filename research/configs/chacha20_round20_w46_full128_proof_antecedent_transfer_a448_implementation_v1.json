@@ -1,0 +1,133 @@
+{
+  "A447_complete_feature_order_sha256": "5e2751e454509486b17abf6ab01c4e9cdb6ca63ab23eed8aefc8548461cf26f4",
+  "A447_selected_full_model_sha256": "0d058bd1dc145b85f80d8ec7d11eaa071dfad8f689ad67bd38f3749a57ab4c38",
+  "A448_remaining96_measurement_started_at_freeze": false,
+  "A448_transfer_result_available_at_freeze": false,
+  "W52_model_refits": 0,
+  "W52_new_solver_stages": 0,
+  "W52_target_labels_used": 0,
+  "anchors": {
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A447_causal": {
+      "path": "research/results/v1/chacha20_round20_w46_proof_antecedent_calibration_a447_v1.causal",
+      "sha256": "78cbbe380c50b5394e7262014853214ea39d265be94ea2e64daac2f004902da6"
+    },
+    "A447_design": {
+      "path": "research/configs/chacha20_round20_w46_proof_antecedent_calibration_a447_design_v1.json",
+      "sha256": "16563220720977e05857e7ae663d6c86d35b18cb47ba69eab1d3fdf7aa5a88bd"
+    },
+    "A447_implementation": {
+      "path": "research/configs/chacha20_round20_w46_proof_antecedent_calibration_a447_implementation_v1.json",
+      "sha256": "ba7a7c840dd2f5b842dceb9485c466d54976d4c48baaaf4be3a0eceaa40a9332"
+    },
+    "A447_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A447_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "d944b58ffdbf9f30965ca13e66f8b2ec5c5b89c2b943249e9cc617e8039dc8e1"
+    },
+    "A447_result": {
+      "path": "research/results/v1/chacha20_round20_w46_proof_antecedent_calibration_a447_v1.json",
+      "sha256": "09836abe6618d42d544a327f009d7840e00bb9bfbf2e99eea296a7ed70cc6051"
+    },
+    "A447_runner": {
+      "path": "research/experiments/chacha20_round20_w46_proof_antecedent_calibration_a447.py",
+      "sha256": "732579d73de55d8f544f5acd99104b581bedcf51956d773b3652b3e4ae786ca4"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_full128_proof_antecedent_transfer_a448_design_v1.json",
+      "sha256": "482033be6c5d6e123f4efbe0c527933f832f73e4382bdb4b51172417f339f555"
+    },
+    "feature_source": {
+      "path": "src/arx_carry_leak/proof_antecedent_features.py",
+      "sha256": "52700bb0a2442caf24ef123c745915fd7b2e2a27ca2f797886b141a640fc4c05"
+    },
+    "identity_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_identity.py",
+      "sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6"
+    },
+    "multihorizon_wrapper": {
+      "path": "research/experiments/chacha20_fresh_multihorizon.py",
+      "sha256": "55e1722d8478bf0aea95a544e5942fa6f6a3b17e8c9c54906e2ba34ddc2be386"
+    },
+    "native_source": {
+      "path": "research/native/cadical_fresh_clause_antecedents.cpp",
+      "sha256": "db08a1cd1479eeaa2c48015cd1f1a82ad3adb25dd987da67dc7a93557557bb9d"
+    },
+    "proof_wrapper": {
+      "path": "research/experiments/chacha20_fresh_clause_antecedents.py",
+      "sha256": "bf2798e72e1c2ff7872ea262335d4500cf82e1e46cbdf110f9628f713d4af61b"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_full128_proof_antecedent_transfer_a448.sh",
+      "sha256": "ff4190a7fa294e7fad7286cff0f4a5076ee91f7118ca91b1dd1247e624aa9143"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_full128_proof_antecedent_transfer_a448.py",
+      "sha256": "33cf14799282e52a6e23857d15dba096ba61e003fdef8b53a2b6a93a5dcd9d60"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_full128_proof_antecedent_transfer_a448.py",
+      "sha256": "95f21a37a22497454adc480ae020853740907d5a6ca5c78bf30727388376c7ec"
+    },
+    "tracer_header": {
+      "path": "research/native/cadical_tracer_v3.hpp",
+      "sha256": "4a3c6e37760e1ec7cdfbbc6ed6da7e3579d8f399223bc3d7deae3ad57f49c1c5"
+    }
+  },
+  "attempt_id": "A448",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_remaining96_measurement_no_refit_transfer_full128_crossfit_and_Causal_code_frozen_before_A448_measurement",
+  "design_contract": {
+    "diagnostic_panel_changes_no_primary_decision": true,
+    "evaluation_targets": "the disjoint 96 A448 targets only",
+    "feature_order": "A447 selected_full_model.complete_feature_order",
+    "fixed_diagnostic_operator_order": [
+      "borda_sum_baseline",
+      "proof_best_single",
+      "proof_borda_top4",
+      "proof_borda_top8",
+      "proof_borda_top16",
+      "proof_borda_top32",
+      "proof_reciprocal_top8",
+      "proof_vote_top16",
+      "hybrid_proof_top4_base2",
+      "hybrid_proof_top4_equal",
+      "hybrid_proof_top8_base2",
+      "hybrid_proof_top8_equal",
+      "hybrid_proof_top8_proof2",
+      "hybrid_proof_top16_equal",
+      "hybrid_reciprocal_top8_equal"
+    ],
+    "primary_claim_scope": "the fixed A447 primary operator on the disjoint remaining96 evaluation",
+    "primary_operator": "hybrid_proof_top4_equal",
+    "ties": "A442 Borda rank then numeric cell index",
+    "training_targets": "the 32 A447 targets only"
+  },
+  "design_sha256": "482033be6c5d6e123f4efbe0c527933f832f73e4382bdb4b51172417f339f555",
+  "helper_path": "research/native/build/cadical_fresh_clause_antecedents-a445c0839699f9cd43b4dadd344ca888ecf5df0e3f171c8440af35ec342c22bb-9d0d5cbd6e523e248023fb080c206fa14d8bbb2c89d3cd8f1273eaaa1a99de67",
+  "helper_sha256": "9d0d5cbd6e523e248023fb080c206fa14d8bbb2c89d3cd8f1273eaaa1a99de67",
+  "implementation_commitment_sha256": "17a062e61f4266051d980ff687230f120041bc66c0e70b9a9108e78f4e8c3f31",
+  "manifest_sha256": "85df4ac5ecfdd4a7afe6d2751266e89f0d65937b6da866c6066515e45da694cb",
+  "measurement_workers": 4,
+  "operators": [
+    "borda_sum_baseline",
+    "proof_best_single",
+    "proof_borda_top4",
+    "proof_borda_top8",
+    "proof_borda_top16",
+    "proof_borda_top32",
+    "proof_reciprocal_top8",
+    "proof_vote_top16",
+    "hybrid_proof_top4_base2",
+    "hybrid_proof_top4_equal",
+    "hybrid_proof_top8_base2",
+    "hybrid_proof_top8_equal",
+    "hybrid_proof_top8_proof2",
+    "hybrid_proof_top16_equal",
+    "hybrid_reciprocal_top8_equal"
+  ],
+  "primary_operator": "hybrid_proof_top4_equal",
+  "schema": "chacha20-round20-w46-full128-proof-antecedent-transfer-a448-implementation-v1"
+}

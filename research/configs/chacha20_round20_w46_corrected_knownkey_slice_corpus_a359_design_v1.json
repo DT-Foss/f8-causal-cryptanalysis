@@ -1,0 +1,116 @@
+{
+  "attempt_id": "A359",
+  "corpus_contract": {
+    "assignment_derivation": "little-endian SHAKE256(label || '|assignment', 8 bytes) masked to 46 bits, then replace assignment bits 20..31 with the balanced affine group label",
+    "generation_seed": "A359|corrected-W46-known-key-slice-corpus|v1|2026-07-15",
+    "high8_affine_label": "(19 + 73 * target_index) mod 256",
+    "high8_unique_across_all_targets": true,
+    "holdout_targets": 16,
+    "label_format": "generation_seed || '|target-' || two_digit_index",
+    "low4_balancing": "target_index mod 16; every low4 value occurs exactly once in each split",
+    "row_manifest_canonical_sha256": "680fa9510ec8dc433bce2383ca3544da7dec56de57a75223830b6884e60fe8b1",
+    "selection_targets": 16,
+    "split_rule": "indices 0..15 selection; indices 16..31 holdout",
+    "targets": 32,
+    "true_prefix12_codec": "((assignment & 0xffffffff) >> 20) & 0xfff"
+  },
+  "design_state": "frozen_before_any_A359_target_formula_export_or_solver_measurement",
+  "information_boundary": {
+    "candidate_assignments_executed": 0,
+    "known_assignments_retained_for_postclosure_labels_and_semantic_gates": true,
+    "low4_label_used_only_to_construct_the_declared_slice": true,
+    "reader_refits_during_measurement": 0,
+    "selection_and_holdout_disjoint": true,
+    "target_order_changed_from_measurement_outcomes": false,
+    "true_high8_label_used_to_add_CNF_units_or_change_candidate_order": false,
+    "true_high8_value_used_for_knownkey_output_generation": true,
+    "true_high8_used_for_score_or_rank_before_complete_256_cell_cover": false
+  },
+  "measurement_contract": {
+    "base_formula_target": "one diagnostic output block of standard ChaCha20 R20 plus feedforward for each known W46 target",
+    "candidate_high8_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24
+    ],
+    "cells_per_target": 256,
+    "complete_candidate_cover_required": true,
+    "concurrent_export_workers": 2,
+    "concurrent_measurement_workers": 4,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "early_stop_permitted": false,
+    "fixed_low4_coordinates_high_to_low": [
+      23,
+      22,
+      21,
+      20
+    ],
+    "mapping_exports_per_target": 7,
+    "mapping_exports_total": 224,
+    "solver_stages": 32768,
+    "synthetic_reader_mapping_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "total_cells": 8192,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "next_gate": {
+    "attempt": "A360",
+    "objective": "learn on selection targets, freeze one or more diverse within-slice high8 Readers, then evaluate without refit on all sixteen holdout targets"
+  },
+  "preparation_gates": {
+    "base_CNF_header_and_shape_checked_for_every_target": true,
+    "coordinate_mapping_decoded_independently_for_every_target": true,
+    "coordinate_mapping_literal_ids_may_be_target_specific": true,
+    "coordinate_mapping_must_be_bijective_for_every_target": true,
+    "coordinate_semantics_must_match_A354_source_indices": true,
+    "one_bit_flip_of_known_assignment_must_be_UNSAT_for_every_target": true,
+    "true_known_assignment_must_be_SAT_for_every_target": true
+  },
+  "schema": "chacha20-round20-w46-corrected-knownkey-slice-corpus-a359-design-v1",
+  "source_anchors": {
+    "A223_config_path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+    "A223_config_sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f",
+    "A223_runner_path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+    "A223_runner_sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0",
+    "A251_wrapper_path": "research/experiments/chacha20_fresh_clause_identity.py",
+    "A251_wrapper_sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6",
+    "A325_runner_path": "research/experiments/chacha20_round20_holdout_selected_w46_recovery_a325.py",
+    "A325_runner_sha256": "27aee43b3a4bcbacef869af30f9017bac8ae643c4027945d01f97f030217f156",
+    "A340_runner_path": "research/experiments/chacha20_round20_w46_target_conditioned_causal_order_a340.py",
+    "A340_runner_sha256": "7c5812f7c8ab53312de45ec425e9bfbbae66c149b1944b489aeaa711087e95ff",
+    "A354_result_path": "research/results/v1/chacha20_round20_w46_direct12_coordinate_codec_audit_a354_v1.json",
+    "A354_result_sha256": "9fc3487266aee3f4e637b9a1afc0b434a5f0c56fa430e9aa14b576cfe8782ac4",
+    "A355_runner_path": "research/experiments/chacha20_round20_w46_corrected_group_direct12_reader_a355.py",
+    "A355_runner_sha256": "82aa4b694e212f2d2e4938e95ee1b6ae0f81aa1c14077d46fead8b259ba11199"
+  }
+}

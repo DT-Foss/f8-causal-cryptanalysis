@@ -1,0 +1,179 @@
+{
+  "schema": "chacha20-round20-w46-proof-antecedent-calibration-a447-design-v1",
+  "attempt_id": "A447",
+  "design_state": "frozen_after_A446_personal_authentic_Causal_read_and_one_label_unscored_engineering_cover_probe_before_any_A447_truth_rank_feature_or_operator_evaluation",
+  "scientific_question": "Does the exact solver-native derivation DAG that produces each shallow R20 learned clause contain cross-corpus candidate information that is absent from clause identity, clause-output topology and raw trajectory magnitudes?",
+  "new_observation_boundary": {
+    "source": "CaDiCaL 3.0 public LRAT proof-tracer interface with antecedents enabled",
+    "unit_of_observation": "every solver-derived clause and its exact original-or-derived parent clause IDs",
+    "freshness": "one freshly copied solver per candidate cell with the tracer connected before the irredundant formula copy",
+    "horizons": [1, 2, 4, 8],
+    "exact_parent_cover": "every positive antecedent ID is classified as original or previously derived; any missing parent rejects the measurement",
+    "streaming_reduction": "exact event-by-event DAG traversal is reduced online; raw multi-gigabyte event text is never the scientific object",
+    "typed_partitions": [
+      "all proof events",
+      "redundant derived clauses",
+      "irredundant derived clauses"
+    ],
+    "fixed_per_horizon_feature_families": [
+      "derived-event and redundant-versus-irredundant counts",
+      "clause-size antecedent-fanin and proof-depth moments",
+      "original-parent versus derived-parent composition",
+      "parent clause-size and parent-depth moments",
+      "candidate-relative direct assumption agreement and opposition",
+      "transitive assumption-ancestry masks and edge counts",
+      "clause recurrence across retained horizons",
+      "parent reuse concentration entropy and maximum fanout",
+      "solver proof lifecycle events including deletion demotion weakening strengthening and finalization"
+    ],
+    "derived_ratio_features": [
+      "redundant event fraction",
+      "direct and transitive assumption-touch fractions",
+      "opposition fraction among direct assumption literals",
+      "original-parent and derived-parent fractions",
+      "parent-ancestry edge fraction",
+      "clause recurrence fraction",
+      "reused-parent reference fraction"
+    ],
+    "all_horizon_primary_signals": [
+      "event counts for all redundant and irredundant partitions",
+      "redundant direct-touch ancestry-touch agreement opposition parent-ancestry and recurrence counts",
+      "redundant clause-size antecedent-fanin and proof-depth means and maxima",
+      "all and redundant parent-reuse normalized entropy reused-reference fraction and maximum use"
+    ],
+    "all_horizon_composition": [
+      "sum over the four incremental horizons for each primary signal",
+      "h8 minus h1 signed change for each primary signal",
+      "maximum over the four horizons for each primary signal"
+    ],
+    "rank_directions": [
+      "ascending target-local exact rank",
+      "descending target-local exact rank",
+      "descending absolute median-MAD-normalized exact rank"
+    ],
+    "ties": "Borda baseline rank then cell index",
+    "explicitly_not_repeating": [
+      "A251 learned-clause identity",
+      "A259 clause-output topology",
+      "A260-A262 formula and operation-flow projections",
+      "A266 clause frequency",
+      "A445 raw trajectory magnitude models",
+      "A446 candidate-relative assumption-cut clause-output hypergraph"
+    ]
+  },
+  "engineering_probe_disclosure": {
+    "target": "A359 target 00",
+    "purpose": "verify API completeness throughput and streaming representation size only",
+    "truth_rank_or_operator_association_computed": false,
+    "observed_cover": {
+      "cells": 256,
+      "derived_proof_nodes": 29288927,
+      "antecedent_edges": 90635375,
+      "missing_antecedents": 0,
+      "maximum_proof_depth": 31,
+      "raw_stdout_bytes": 5934872538,
+      "streaming_stdout_bytes": 5380788,
+      "raw_elapsed_seconds": 406.510691375006,
+      "streaming_elapsed_seconds": 115.431245500222
+    }
+  },
+  "calibration_contract": {
+    "source_targets": {
+      "A359": [0, 4, 8, 12, 16, 20, 24, 28],
+      "A363": [0, 4, 8, 12, 16, 20, 24, 28],
+      "A367": [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60]
+    },
+    "targets": 32,
+    "cells_per_target": 256,
+    "fixed_blocks": 8,
+    "targets_per_block": 4,
+    "block_mapping": "A359 blocks 0-1, A363 blocks 2-3, A367 blocks 4-7; source index floor-divided by 16",
+    "outer_crossfit": "hold out one complete four-target block; feature selection and aggregation use the other 28 targets only",
+    "fixed_operator_order": [
+      "borda_sum_baseline",
+      "proof_best_single",
+      "proof_borda_top4",
+      "proof_borda_top8",
+      "proof_borda_top16",
+      "proof_borda_top32",
+      "proof_reciprocal_top8",
+      "proof_vote_top16",
+      "hybrid_proof_top4_base2",
+      "hybrid_proof_top4_equal",
+      "hybrid_proof_top8_base2",
+      "hybrid_proof_top8_equal",
+      "hybrid_proof_top8_proof2",
+      "hybrid_proof_top16_equal",
+      "hybrid_reciprocal_top8_equal"
+    ],
+    "feature_selection_order": [
+      "positive_training_blocks_descending",
+      "minimum_training_block_bit_gain_descending",
+      "all_training_targets_bit_gain_descending",
+      "feature_index_ascending"
+    ],
+    "vote_threshold_rank": 64,
+    "operator_selection_key": [
+      "minimum_fixed_block_bit_gain_descending",
+      "balanced_eight_block_bit_gain_descending",
+      "all32_bit_gain_descending",
+      "targets_at_or_above_median_rank_descending",
+      "worst_rank_ascending",
+      "fixed_operator_order"
+    ],
+    "all_features_operators_directions_hyperparameters_and_ties_frozen_before_measurement": true
+  },
+  "scale_decision": {
+    "direct_frontier_gate": [
+      "selected operator is proof-derived rather than borda_sum_baseline",
+      "selected operator is positive in all eight held blocks",
+      "selected minimum held-block gain is at least the selected-subset Borda minimum"
+    ],
+    "mechanism_scale_gate": [
+      "at least one proof-derived operator is positive in all eight held blocks",
+      "its minimum held-block gain is positive",
+      "its balanced eight-block gain is at least 0.25 bits"
+    ],
+    "if_either_gate_passes": "instrument the complete 128-target calibration corpus and only then open target-blind W52 proof tracing",
+    "if_both_gates_fail": "retain the exact solver-native antecedent boundary and follow the strongest typed subgraph or conflict-horizon interaction rather than reweighting clause outputs"
+  },
+  "information_boundary": {
+    "A446_authentic_Causal_personally_read": true,
+    "A447_target00_engineering_surface_seen": true,
+    "A447_target00_truth_rank_association_seen": false,
+    "A447_selected32_feature_values_or_truth_ranks_seen_before_design": false,
+    "A447_operator_results_seen_before_design": false,
+    "A426_A438_A440_A443_secret_result_stop_or_worker_progress_read": false,
+    "W52_target_labels_used": 0,
+    "W52_model_refits": 0,
+    "W52_new_solver_stages": 0,
+    "candidate_assignments_executed": 0
+  },
+  "acceptance_gates": {
+    "content_addressed_native_helper": true,
+    "all_32_measurements_reopened_against_raw_and_compressed_hashes": true,
+    "all_8192_candidate_cells_have_complete_four_horizon_proof_statistics": true,
+    "missing_antecedent_total": 0,
+    "held_block_excluded_from_feature_selection": true,
+    "selected_subset_A442_Borda_baseline_reconstructed": true,
+    "authentic_dotcausal_written_reopened_and_personally_read": true
+  },
+  "source_anchors": {
+    "A359_prepared_path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_prepared_v1.json",
+    "A363_prepared_path": "research/results/v1/chacha20_round20_w46_polarity_invariant_validation_a363_prepared_v1.json",
+    "A367_prepared_path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_validation_a367_prepared_v1.json",
+    "A359_result_path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.json",
+    "A359_result_sha256": "3259526ee94241f5e4858b59cb52cb93a9ef8dbe8dc8bf40deaf4d7757db7a3f",
+    "A363_result_path": "research/results/v1/chacha20_round20_w46_polarity_invariant_validation_a363_v1.json",
+    "A363_result_sha256": "d2601ca3190a18fe2ce13bf436d14fafd4d9a2493df13dc68d353e500d7cb09b",
+    "A367_result_path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_validation_a367_v1.json",
+    "A367_result_sha256": "bb60cb96295b7ba06d46f20ff1537287b1059e990162d3ee3dedfd8909aee568",
+    "A442_result_path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+    "A442_result_sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d",
+    "A446_result_path": "research/results/v1/chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446_v1.json",
+    "A446_result_sha256": "f8a1d9e787c472c0e8d497c74f94ea69b923cfab3b2aa89d41219602f31f94fe",
+    "A446_causal_path": "research/results/v1/chacha20_round20_w52_assumption_cut_clause_provenance_reader_a446_v1.causal",
+    "A446_causal_sha256": "5ce958b43165d374a52b973ac48ba47edab07c5e8cbc5948e9d6dd132ab89636",
+    "A446_personal_readback_path": "research/reports/CAUSAL_CHACHA20_A446_PERSONAL_READER_READBACK_V1.md"
+  }
+}

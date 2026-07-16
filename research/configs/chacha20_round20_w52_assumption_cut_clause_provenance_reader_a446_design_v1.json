@@ -1,0 +1,167 @@
+{
+  "schema": "chacha20-round20-w52-assumption-cut-clause-provenance-reader-a446-design-v1",
+  "attempt_id": "A446",
+  "design_state": "frozen_after_A445_personal_authentic_Causal_read_and_A251_A266_representation_inventory_before_any_A446_provenance_feature_rank_operator_W52_score_or_candidate_evaluation",
+  "scientific_question": "Does candidate-relative provenance at the eight-literal assumption cut retain transferable information that was destroyed when A251-A266 projected assumption literals away and A445 collapsed each cell to channel magnitudes?",
+  "new_representation": {
+    "object": "candidate-relative assumption-cut learned-clause provenance hypergraph",
+    "nodes": [
+      "learned clauses tagged by conflict horizon",
+      "the eight candidate-assumption positions with actual bit values removed",
+      "non-assumption signed literals and variables"
+    ],
+    "typed_edges": [
+      "clause touches assumption position",
+      "assumption literal agrees with or opposes the active candidate assumption",
+      "clause shares a signed literal",
+      "clause shares a variable",
+      "clauses contain complementary literals",
+      "single-complement resolution opportunity",
+      "clause subsumption",
+      "same-horizon or cross-horizon recurrence"
+    ],
+    "candidate_value_blinding": "assumption-variable identities are replaced by their fixed bit positions and every literal sign is encoded only as agree_or_oppose relative to that candidate's active assumption; the candidate's raw eight-bit value is never a feature",
+    "fixed_feature_families": [
+      "per-horizon and all-horizon clause-size and assumption-cut incidence",
+      "assumption-position degree entropy concentration and co-incidence",
+      "payload-variable degree polarity and boundary-coupling topology",
+      "clause overlap complement resolution and subsumption graph",
+      "connected-component edge-density and degree geometry",
+      "cross-horizon variable footprint and clause-provenance recurrence"
+    ],
+    "target_local_normalization": "per target and feature over the complete 256-cell cover",
+    "feature_readout": "exact descending absolute normalized rank with cell-index tie",
+    "explicitly_not_repeating": [
+      "A251 exact clause identity tokens",
+      "A259 coarse public CNF topology",
+      "A260 nearest-operation topology",
+      "A261 directed operation-flow tokens",
+      "A262 continuous operation-flow residuals",
+      "A266 exact clause frequency",
+      "A445 raw 532-channel magnitude reweighting"
+    ]
+  },
+  "calibration_contract": {
+    "source_measurement_corpora": [
+      "A359 32 complete Known-key targets",
+      "A363 32 complete Known-key targets",
+      "A367 64 complete Known-key targets"
+    ],
+    "targets": 128,
+    "cells_per_target": 256,
+    "conflict_horizons": [1, 2, 4, 8],
+    "fixed_blocks": 8,
+    "targets_per_block": 16,
+    "outer_crossfit": "hold out one entire fixed block; all feature selection and aggregation parameters use the other 112 targets only",
+    "fixed_operator_order": [
+      "borda_sum_baseline",
+      "provenance_best_single",
+      "provenance_borda_top4",
+      "provenance_borda_top8",
+      "provenance_borda_top16",
+      "provenance_borda_top32",
+      "provenance_reciprocal_top8",
+      "provenance_vote_top16",
+      "hybrid_borda_top8_base2",
+      "hybrid_borda_top8_equal",
+      "hybrid_borda_top8_prov2",
+      "hybrid_borda_top16_equal",
+      "hybrid_reciprocal_top8_equal"
+    ],
+    "feature_selection_order": [
+      "positive_training_blocks_descending",
+      "minimum_training_block_bit_gain_descending",
+      "all_training_targets_bit_gain_descending",
+      "feature_index_ascending"
+    ],
+    "operator_ties": "aggregate score then Borda baseline rank then cell index",
+    "vote_threshold_rank": 64,
+    "selection_key": [
+      "minimum_fixed_block_bit_gain_descending",
+      "balanced_two_corpus_bit_gain_descending",
+      "all128_bit_gain_descending",
+      "targets_at_or_above_median_rank_descending",
+      "worst_rank_ascending",
+      "fixed_operator_order"
+    ],
+    "all_feature_families_operators_hyperparameters_and_ties_defined_before_evaluation": true
+  },
+  "W52_transfer_contract": {
+    "prefix_source": "A433 V2 sixteen complete 256-cell clause-identity measurements",
+    "off_axis_source": "A432 sixteen complete 256-cell clause-identity measurements under the corrected A436 interpretation",
+    "slices_per_axis": 16,
+    "axis_cells": 4096,
+    "pair_cells": 16777216,
+    "selected_feature_order_fit_once_on_all_128_calibration_targets": true,
+    "within_slice_order": "the frozen selected provenance operator with the A442 Borda rank as its only tie field",
+    "axis_composition": "unchanged sixteen-slice round-robin",
+    "pair_composition": "A434 exact square wavefront",
+    "W52_target_labels_used": 0,
+    "W52_model_refits": 0,
+    "new_solver_stages": 0,
+    "candidate_assignments_executed": 0
+  },
+  "decision_contract": {
+    "matched_baseline": "A442 Borda calibration field and pair schedule",
+    "recovery_ready_requires": [
+      "selected operator is not borda_sum_baseline",
+      "selected operator is positive in all eight held blocks",
+      "selected minimum held-block gain is at least the Borda minimum",
+      "complete W52 pair schedule is material relative to A442"
+    ],
+    "material_pair_diversity": "Spearman below 0.98 or at least 10 percent non-overlap in the first 65536 pair cells",
+    "if_gate_passes": "freeze one recovery executor behind the existing A438_A443_A440 queue",
+    "if_gate_does_not_pass": "retain the exact assumption-cut topology boundary and move to proof-producing conflict analysis or solver-native clause antecedent instrumentation"
+  },
+  "information_boundary": {
+    "A445_authentic_Causal_personally_read": true,
+    "A251_A266_existing_representation_boundaries_inventoried": true,
+    "A446_feature_values_or_label_associations_known_before_design_freeze": false,
+    "A446_operator_results_known_before_design_freeze": false,
+    "A446_W52_orders_known_before_design_freeze": false,
+    "A426_A438_A440_A443_secret_result_stop_or_worker_progress_read": false,
+    "A446_W52_target_labels_used": 0,
+    "A446_W52_model_refits": 0,
+    "A446_new_solver_stages": 0,
+    "A446_candidate_assignments_executed": 0
+  },
+  "acceptance_gates": {
+    "all_128_measurements_reopened_against_compressed_and_raw_hashes": true,
+    "all_32768_cells_have_complete_four_horizon_clause_identity": true,
+    "candidate_raw_bit_value_absent_from_feature_ledger": true,
+    "held_block_excluded_from_feature_selection": true,
+    "A442_borda_baseline_hash_reproduced": true,
+    "all_32_W52_measurements_reopened_and_feature_extracted": true,
+    "complete_axes_and_pair_stream_exact": true,
+    "target_labels_W52_refits_new_stages_candidates": [0, 0, 0, 0],
+    "authentic_dotcausal_written_reopened_and_personally_read": true
+  },
+  "source_anchors": {
+    "A359_result_path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.json",
+    "A359_result_sha256": "3259526ee94241f5e4858b59cb52cb93a9ef8dbe8dc8bf40deaf4d7757db7a3f",
+    "A363_result_path": "research/results/v1/chacha20_round20_w46_polarity_invariant_validation_a363_v1.json",
+    "A363_result_sha256": "d2601ca3190a18fe2ce13bf436d14fafd4d9a2493df13dc68d353e500d7cb09b",
+    "A367_result_path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_validation_a367_v1.json",
+    "A367_result_sha256": "bb60cb96295b7ba06d46f20ff1537287b1059e990162d3ee3dedfd8909aee568",
+    "A442_result_path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+    "A442_result_sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d",
+    "A445_result_path": "research/results/v1/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445_v1.json",
+    "A445_result_sha256": "0c6baab83ec5a96b9efb993ecaeef9ee2b7fc6996bf89884627e4c84a3429a5f",
+    "A445_causal_path": "research/results/v1/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445_v1.causal",
+    "A445_causal_sha256": "93b3509521998978da0d348f2cc1fc99bfdd0639df6cbf0246d53d0aa79d4323",
+    "A445_personal_readback_path": "research/reports/CAUSAL_CHACHA20_A445_PERSONAL_READER_READBACK_V1.md",
+    "A445_personal_readback_sha256": "fc410f8479a8d325287b436877da0c81058c12b40be9962429fd2977d2f7b725",
+    "A251_result_path": "research/results/v1/chacha20_round20_fresh_clause_identity_reader_v1.json",
+    "A251_result_sha256": "7ae6488abd98a62021da64f1e2fd4960fe534fb1236c52ea098db90037da5732",
+    "A259_result_path": "research/results/v1/chacha20_round20_fresh_clause_topology_reader_v1.json",
+    "A259_result_sha256": "8870521faf4d0a0b0721c18818129a783367815a328f56765c3dff3289bcbc52",
+    "A260_result_path": "research/results/v1/chacha20_round20_fresh_clause_operation_reader_v1.json",
+    "A260_result_sha256": "822a8e6f4208ef02b53438f5681c5e2784fc029aff16e86f6fb245ffbfaf9b91",
+    "A261_result_path": "research/results/v1/chacha20_round20_fresh_clause_operation_flow_reader_v1.json",
+    "A261_result_sha256": "7c901942f91850da29dd498f0345fc657ea6c87d49c59269643874df4b199237",
+    "A262_result_path": "research/results/v1/chacha20_round20_fresh_clause_continuous_flow_reader_v1.json",
+    "A262_result_sha256": "0890430b42f42e2e18a5937610275efd388dff7c46d251105a62d9aa613620c1",
+    "A266_result_path": "research/results/v1/chacha20_round20_fresh_clause_frequency_reader_v1.json",
+    "A266_result_sha256": "8a8c46ff56b18842e4910e290c99276defd8456ec840d8eadea6d50d12308def"
+  }
+}

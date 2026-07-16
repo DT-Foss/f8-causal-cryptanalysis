@@ -1,0 +1,96 @@
+{
+  "A426_A438_A440_target_outcome_or_progress_available_at_freeze": false,
+  "A442_W52_orders_available_at_freeze": false,
+  "A442_evaluation_available_at_freeze": false,
+  "anchors": {
+    "A375_causal": {
+      "path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.causal",
+      "sha256": "adc5fc921da7c7429407fabc637ff03c27e15705fde6ea157fc31acae25f9825"
+    },
+    "A375_result": {
+      "path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+      "sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1"
+    },
+    "A375_runner": {
+      "path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+      "sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1"
+    },
+    "A434_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+      "sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b"
+    },
+    "A439_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+      "sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c"
+    },
+    "A439_result": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+      "sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869"
+    },
+    "A439_runner": {
+      "path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+      "sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb"
+    },
+    "A441_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_v1.causal",
+      "sha256": "2b2f62b2761d48a2249de44e9f1d62b45440f904e425dc8128560197d1fbbe7b"
+    },
+    "A441_result": {
+      "path": "research/results/v1/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_v1.json",
+      "sha256": "884fef4dbe25cb1bbb6cb61f7fb3697d4609a084ff8c1f75d97066538e31dafb"
+    },
+    "A441_runner": {
+      "path": "research/experiments/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.py",
+      "sha256": "7d3107eb060298d18f01e0d8278d9d2eaaa0a8baab757291cd5eede0cde1c83c"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_design_v1.json",
+      "sha256": "75715e8f0f6f9ecd89c4e2fcafe45f859945b58c5ce1ca162a6fc69c93cd5786"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_knownkey_meta_reader_transfer_a442.sh",
+      "sha256": "4746a6a04fb1f8d6999bdc2747c6e68d657188c6304db3be562850e89c82efde"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+      "sha256": "436f0e2a35949bb2007e7da95ec1558c134c2c30c4d077e72b4d2da81de27314"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+      "sha256": "d65d7dbc8897c51ac1023bce6506de19f92f75cf89de59553a1bf55ceb7d6ab5"
+    }
+  },
+  "attempt_id": "A442",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_seven_operator_calibration_selection_transfer_and_Causal_code_frozen_before_any_A442_evaluation_W52_order_or_target_progress",
+  "design_sha256": "75715e8f0f6f9ecd89c4e2fcafe45f859945b58c5ce1ca162a6fc69c93cd5786",
+  "implementation_commitment_sha256": "bb7cbe2f245a01eda89f497bc3a9f0ebfd9e3879ed63b6a7d5dabe42d3c16824",
+  "model_role_order": [
+    "wide_vote",
+    "sparse_reciprocal",
+    "broad_quantile",
+    "broad_intersection"
+  ],
+  "operators": [
+    "union_min",
+    "borda_sum",
+    "intersection_max",
+    "upper_median",
+    "geometric_mean",
+    "reciprocal_sum",
+    "top64_consensus"
+  ],
+  "reader_refits_on_W52": 0,
+  "schema": "chacha20-round20-w52-knownkey-meta-reader-transfer-a442-implementation-v1",
+  "selection_key": [
+    "minimum_fixed_block_bit_gain_descending",
+    "balanced_two_corpus_bit_gain_descending",
+    "all128_bit_gain_descending",
+    "targets_at_or_above_median_rank_descending",
+    "worst_rank_ascending",
+    "fixed_operator_order"
+  ],
+  "source_A375_selection_commitment_sha256": "327be9ae57fce433bb64b467a504fb9d74c10cc7a36b2dd5767fad3814429eab",
+  "source_A439_result_commitment_sha256": "391ed0597f413d31eed60d235e6bebc90b8d7cabda486c6979631a4e753c9f0f",
+  "target_labels_used_for_W52": 0
+}

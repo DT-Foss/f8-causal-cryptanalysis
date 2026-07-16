@@ -1,0 +1,118 @@
+{
+  "A429_candidate_or_progress_available_at_freeze": false,
+  "A429_target_assignment_or_true_prefix_available_at_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A397_protocol": {
+      "path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_v1.json",
+      "sha256": "447baf5e4784d0210f51e194f1a241b7fbfbf1ab239fe16582effdb4b435fb32"
+    },
+    "A397_runner": {
+      "path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+      "sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5"
+    },
+    "A428_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.causal",
+      "sha256": "52a61beb8605fe54b9db66a5ba156b683dfc7dc0270e2a8a202a6f7a70ab0762"
+    },
+    "A428_implementation": {
+      "path": "research/configs/chacha20_round20_w50_global_best_rank_wavefront_a428_implementation_v1.json",
+      "sha256": "d74f72befa1b13f2be211aa1db161ea6ce51d580c290d68efdecb8250a5e7283"
+    },
+    "A428_result": {
+      "path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.json",
+      "sha256": "dbf8fd33558bfde4e8e6833e6d69df1b57fcf8732fec28d35828b39e3cce0584"
+    },
+    "A428_runner": {
+      "path": "research/experiments/chacha20_round20_w50_global_best_rank_wavefront_a428.py",
+      "sha256": "f7f60c7e4fdf68fbde9de7563ba4a3b2498054ecddb0e9be17a43489c591c705"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_a428_global_wavefront_recovery_a429_design_v1.json",
+      "sha256": "30afe397bd6eb4cf52954accf47f1c6445f951ec4294631d3d6b8c0358cf36c9"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_a428_global_wavefront_recovery_a429.sh",
+      "sha256": "a87639152f70b7c42c253069419d179dae041ea366f59958a5c37cf8abb9d2a2"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_a428_global_wavefront_recovery_a429.py",
+      "sha256": "69f26246c6b88c98f9b7be0ece528836e43cb97c4d8eb9911698e66c9e3f3a7a"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_a428_global_wavefront_recovery_a429.py",
+      "sha256": "942a0ef434f6efbaaef276e04dd9e3ab5a61b8c66e5a0a00adbfc11e4aa04baf"
+    }
+  },
+  "attempt_id": "A429",
+  "commitment_state": "complete_A428_schedule_executor_frozen_before_any_A429_candidate_progress_or_filter_outcome",
+  "design_sha256": "30afe397bd6eb4cf52954accf47f1c6445f951ec4294631d3d6b8c0358cf36c9",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "complete_prefix_groups": 4096,
+    "dual_reference_confirmation_blocks": 8,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 206,
+    "matched_one_bit_control_must_be_empty": true,
+    "prefix_bits": 12,
+    "primitive": "RFC8439 ChaCha20 block function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "shared_stop_only_after_independent_confirmation": true,
+    "slabs_per_prefix_group": 128,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "worker_tasks_each": 512,
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "588827fda2031bbd8054ef3d0e58e79e9d322cf920990936c2be5a216f2cf282",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "schedule_contract": {
+    "A429_candidate_assignments_used": 0,
+    "A429_target_labels_used": 0,
+    "complete_cover_cells": 4096,
+    "copy_all_eight_worker_orders_and_tasks_byte_identically": true,
+    "depth_bound": "D_A428(c) <= min_i R_i(c)",
+    "duplicate_cells": 0,
+    "makespan_epochs": 512,
+    "parameter_refit_on_A429_target": false,
+    "schedule_commitment_sha256": "0b0e684b95d16c1f17c994be1fe0443af5fe55bc359f3d416f787f0540e2500c",
+    "source": "A428 qualified production global wavefront",
+    "total_work_bound": "W_A428(c) <= 8*min_i R_i(c)",
+    "uncovered_cells": 0
+  },
+  "schema": "chacha20-round20-w50-a428-global-wavefront-recovery-a429-implementation-v1",
+  "source_A428_result_sha256": "dbf8fd33558bfde4e8e6833e6d69df1b57fcf8732fec28d35828b39e3cce0584",
+  "source_A428_schedule_commitment_sha256": "0b0e684b95d16c1f17c994be1fe0443af5fe55bc359f3d416f787f0540e2500c",
+  "source_worker_order_uint16be_sha256": {
+    "A413_candidate_035": "2abb934b75d3b00f4b83bc2f46b7691bbfc4c2134ce79100949a35d73b4645cf",
+    "A413_candidate_049": "33690ef50f9ea21bb5ffc8960cb8063f203fdeccbbe155c5020d95f7f4732aaf",
+    "A413_candidate_091": "b773909d91932a2ddf4c6db1f1d9f414b70d7f61306f24f3a9e1c2cd429e6d5a",
+    "A413_candidate_100": "59badd065559f250d0db86e7baec2e5af77e5cad13ae2490140e030b45cb39b4",
+    "A413_candidate_123": "f4c4824a22b22b619f36d233824767117e886d7ee1aec45e03647f66da8d6d04",
+    "A413_candidate_144": "22609936f24d3302eac577ced8d065335f9f36de5b8190f713abbfb4e73c71ef",
+    "A413_candidate_153": "55137cf8729b0caef819c4c657752ee7bdba03c1e83a243e588deff41928df37",
+    "majority_polarity_3to1_complete": "4061fe889ca8de0dc1342e53659bb8eb8542da9ed019abac40c40e04a664c512"
+  },
+  "source_worker_task_list_sha256": {
+    "A413_candidate_035": "06dab0ecdba4154254d62561a5df72b8d479c04649254b128edce73eabd6f0c1",
+    "A413_candidate_049": "390b66c9b34f8605cb4d6e96b2b2aca83e9ae02d87214df417314ea02276bea9",
+    "A413_candidate_091": "dd367cb0d218a81d4d4118bf625e56e87048d4d37106ed828e94339a77fd2396",
+    "A413_candidate_100": "d572ce98d006f5a9cb836b5795320f4172c986e6660f77ec69b2b51e68336c44",
+    "A413_candidate_123": "def38fba0ea8c5dfe66c114b68f9d3a3bd8a16c53bcfe93dab63024b3d5edf62",
+    "A413_candidate_144": "b29f3b0db3a00df9143ca5cfce8db99f13a02e95583774e49e310fb65a3f9369",
+    "A413_candidate_153": "184b84581f2f343f542a8c42e073fe320cf33d9b03f015ba7c1f3ecf2a79d23d",
+    "majority_polarity_3to1_complete": "84bc4f9e899c4da432af37649efec35dc1cf4a66149019fc6b5704b2bf21a2a8"
+  }
+}

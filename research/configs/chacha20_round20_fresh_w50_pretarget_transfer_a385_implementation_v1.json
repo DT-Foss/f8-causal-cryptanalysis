@@ -1,0 +1,75 @@
+{
+  "A384_qualification_file_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+  "A384_qualification_sha256": "d107e3aa8bc183e0789d5bdf71eb315e2491aa58b8c701c54267e431623ed5b6",
+  "anchors": {
+    "A382_runner": {
+      "path": "research/experiments/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382.py",
+      "sha256": "46601c0e4fc5e20ee2ab85c4140b1fadd33b149f189e8335a0a6ef815bcbdc9f"
+    },
+    "A382_source_order": {
+      "path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.json",
+      "sha256": "f705549d15be9f4ed98e8548b837524dae8603bff384ab30648c5917dfb82c0c"
+    },
+    "A384_design": {
+      "path": "research/configs/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_design_v1.json",
+      "sha256": "9ca2dacdff315b4f117113bea1046a1c11764213f66464fc8f65f07223e8cd2c"
+    },
+    "A384_protocol": {
+      "path": "research/configs/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_v1.json",
+      "sha256": "1bd9a1e572906ff98aab30b52b547f48f4b1d61785ccc0ca8082ae4c6bd13fcb"
+    },
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A384_runner": {
+      "path": "research/experiments/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384.py",
+      "sha256": "60352d5f0d09fad8272e87f5a202d6f62274911d7bdd154738a47bac04b6264f"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_design_v1.json",
+      "sha256": "0e4c1d7b5f2a89245728fcc3f5d6d66ebb20c3cefccb127f03d9b58a57125687"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_fresh_w50_pretarget_transfer_a385.sh",
+      "sha256": "fd3770c5934eb81d99a9a4bbd56b85ef11cc344ae9f0c6935515d6210b63e808"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+      "sha256": "b6827f779a8a7997bbee6c04a6a28f9f3c5ec5718ac942b0171c8b4174a928f3"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+      "sha256": "e802fa85a1966ae2ad38683ec3621cb898e4cab01ca1da9f47215d39e37cb1f7"
+    }
+  },
+  "attempt_id": "A385",
+  "commitment_state": "complete_code_and_dependencies_frozen_after_W50_engine_qualification_before_W50_production_challenge",
+  "design_sha256": "0e4c1d7b5f2a89245728fcc3f5d6d66ebb20c3cefccb127f03d9b58a57125687",
+  "implementation_commitment_sha256": "5ac37f873077d547253e199088720d29d88f37d92aa03d8aeb7b91b3117840c8",
+  "information_boundary": {
+    "A382_candidate_assignments_executed_for_order": 0,
+    "A382_complete_before_A385_design": true,
+    "A382_reader_refits": 0,
+    "A382_source_order_verified_at_implementation_freeze": true,
+    "A382_target_labels_used_for_order": 0,
+    "A383_W49_recovery_running_at_A385_design": true,
+    "A383_result_used_for_A385_order": false,
+    "A384_protocol_frozen_before_A385_design": true,
+    "A384_qualification_outcome_available_at_A385_design": false,
+    "A384_qualification_verified_at_implementation_freeze": true,
+    "A384_target_free_qualification_running_at_A385_design": true,
+    "W50_candidate_or_prefix_available_at_design_freeze": false,
+    "W50_candidate_or_prefix_available_at_implementation_freeze": false,
+    "W50_filter_outcome_available_at_design_freeze": false,
+    "W50_production_challenge_available_at_design_freeze": false,
+    "W50_production_challenge_available_at_implementation_freeze": false,
+    "W50_target_assignment_available_at_design_freeze": false,
+    "W50_target_assignment_available_at_implementation_freeze": false,
+    "fresh_W50_challenge_generated_only_after_A385_implementation_order_commitments_and_A384_qualification": true,
+    "orders_refit_on_A385_target": false
+  },
+  "schema": "chacha20-round20-fresh-w50-pretarget-transfer-a385-implementation-v1",
+  "source_order_commitment_sha256": "f829d1c3390ff3d685aa1bcf7d1cf2b42bd07063f0e59f2f872d74d470095bcb",
+  "source_order_uint16be_sha256": "bcd1f2920aaa6dce6b8e91fcf6cf2ef48748ecad4cb00af2ac5af175641125d2"
+}

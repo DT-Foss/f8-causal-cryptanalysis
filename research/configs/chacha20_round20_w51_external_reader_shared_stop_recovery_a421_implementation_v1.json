@@ -1,0 +1,105 @@
+{
+  "A390_qualification_available_at_freeze": false,
+  "A420_protocol_available_at_freeze": false,
+  "A420_result_available_at_freeze": false,
+  "W51_candidate_or_progress_available_at_freeze": false,
+  "W51_challenge_or_assignment_available_at_freeze": false,
+  "anchors": {
+    "A390_design": {
+      "path": "research/configs/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390_design_v1.json",
+      "sha256": "feffc7944535d9785392489de843247d15dab660f6ba2df9f9cfeec9f2595870"
+    },
+    "A390_protocol": {
+      "path": "research/configs/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390_v1.json",
+      "sha256": "d13d5c0b34de900bdc2d3abe26706b508091685e6a1c7a640168ab5496e479d0"
+    },
+    "A390_runner": {
+      "path": "research/experiments/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390.py",
+      "sha256": "1864f7ecd5fb448219784b1a9e514cfddfb3f77f16e46f0d6104f8a778338330"
+    },
+    "A420_design": {
+      "path": "research/configs/chacha20_round20_w50_external_reader_shared_stop_recovery_a420_design_v1.json",
+      "sha256": "888d518a423f858ce8e7e64e25786229f9671594cd6937f54f4742edb5fc2746"
+    },
+    "A420_implementation": {
+      "path": "research/configs/chacha20_round20_w50_external_reader_shared_stop_recovery_a420_implementation_v1.json",
+      "sha256": "a34d3cd61683fbb451dfb53022210e87b32d33e1cea7d07feaf0b9777be0394b"
+    },
+    "A420_runner": {
+      "path": "research/experiments/chacha20_round20_w50_external_reader_shared_stop_recovery_a420.py",
+      "sha256": "3a34577a648c8df1b083bd0d0e66a6361a18411879b18d5d296a654f34d73048"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w51_external_reader_shared_stop_recovery_a421_design_v1.json",
+      "sha256": "67665bb0c99ed4a28895f8ab8a9ebe2154b1fa067199c273f3b7941765fe5b52"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w51_external_reader_shared_stop_recovery_a421.sh",
+      "sha256": "5a6989fd5018c1ea2ac0be9e65739c09ab5a5ae5bcb547aae3716cc025d695d9"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w51_external_reader_shared_stop_recovery_a421.py",
+      "sha256": "7e6d811c8b058021c1f330e67621868bdd5c4d825affa1687b9c97070029fcbb"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w51_external_reader_shared_stop_recovery_a421.py",
+      "sha256": "4398bc00f2fb07cddfb66b37abf0efca37492611d0f9d168f82b7157d6f0ff35"
+    }
+  },
+  "attempt_id": "A421",
+  "commitment_state": "complete_W51_executor_and_fresh_challenge_factory_frozen_before_A390_qualification_A420_protocol_A420_result_or_any_W51_target",
+  "design_sha256": "67665bb0c99ed4a28895f8ab8a9ebe2154b1fa067199c273f3b7941765fe5b52",
+  "execution_contract": {
+    "candidates_per_prefix_group": 549755813888,
+    "complete_domain_assignments": 2251799813685248,
+    "complete_group_before_success_evaluation": true,
+    "complete_prefix_groups": 4096,
+    "dual_reference_confirmation_blocks": 8,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 205,
+    "matched_one_bit_control_must_be_empty": true,
+    "prefix_bits": 12,
+    "prefix_layout": "key_word0_bits20_through31",
+    "primitive": "standard ChaCha20 block function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "retain_complete_domain_recovery_if_target_is_in_final_parallel_epoch": true,
+    "shared_stop_only_after_independent_confirmation": true,
+    "slabs_per_prefix_group": 256,
+    "unknown_key_bits": 51,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low19",
+    "worker_tasks_each": 512,
+    "workers": 8
+  },
+  "fresh_challenge_contract": {
+    "known_material_source": "SHAKE256 of an independent random public label",
+    "materialize_only_after_A420_schedule_is_frozen": true,
+    "prior_W50_public_assignment_bit_reuse": false,
+    "public_fields": [
+      "205 known key bits",
+      "counter",
+      "nonce",
+      "eight complete output blocks",
+      "one-bit matched control"
+    ],
+    "secret_assignment_absent_from_protocol": true,
+    "secret_assignment_source": "secrets.randbits(51)"
+  },
+  "implementation_commitment_sha256": "606d65c88697aaec6e82d1d6f097770ec11d7c2c3a8a74fcb1c26c38fb08330c",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_reader_refits": 0,
+  "production_target_labels_used": 0,
+  "schedule_transfer_contract": {
+    "A420_recovery_outcome_used": false,
+    "W50_and_W51_prefix_geometry_identical": true,
+    "W51_candidate_assignments_used": 0,
+    "W51_target_labels_used": 0,
+    "copy_all_eight_worker_orders_and_tasks_byte_identically": true,
+    "parameter_refit_on_W51_target": false,
+    "source": "A420 frozen selected external Reader schedule",
+    "source_protocol_available_at_design_freeze": false
+  },
+  "schema": "chacha20-round20-w51-external-reader-shared-stop-recovery-a421-implementation-v1"
+}

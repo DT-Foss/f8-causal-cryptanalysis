@@ -1,0 +1,153 @@
+{
+  "A448_remaining96_fixed_no_refit_fusion_result_known_at_freeze": false,
+  "A450_candidate_progress_or_result_read": false,
+  "A452_candidate_progress_or_result_read": false,
+  "W52_candidate_assignments_executed": 0,
+  "W52_feature_refits": 0,
+  "W52_materialization_contract": {
+    "all_16777216_cells_exactly_once": true,
+    "all_16777216_deadlines_checked": true,
+    "candidate_execution": false,
+    "compare_to_A442_baseline": true,
+    "compare_to_A451_stream": true,
+    "expected_artifact_bytes": 67108864,
+    "input_pair_ranks_from_frozen_A449_schedules": true,
+    "pair_cells": 16777216,
+    "recovery_ready_only_after_artifact_reopen": true
+  },
+  "W52_model_refits": 0,
+  "W52_target_labels_used": 0,
+  "amendment_scope": "replace_overlength_Causal_api_id_with_a453dl; no mathematical_schedule_calibration_artifact_or_boundary_change",
+  "anchors": {
+    "A448_causal": {
+      "path": "research/results/v1/chacha20_round20_w46_full128_proof_antecedent_transfer_a448_v1.causal",
+      "sha256": "3a3092311c7ba15ad4be27f53e6e7db2137edd045c8b6a818d9876310b0c564f"
+    },
+    "A448_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A448_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "1f3914f78874754a74a71cc335581e310a0391e9326f310ae0c5f5126e4500b0"
+    },
+    "A448_result": {
+      "path": "research/results/v1/chacha20_round20_w46_full128_proof_antecedent_transfer_a448_v1.json",
+      "sha256": "4f3bfbc7be7932917a40a3ad9ff3db76c1bf1ca8799d7a887025f3e98e5464db"
+    },
+    "A448_runner": {
+      "path": "research/experiments/chacha20_round20_w46_full128_proof_antecedent_transfer_a448.py",
+      "sha256": "33cf14799282e52a6e23857d15dba096ba61e003fdef8b53a2b6a93a5dcd9d60"
+    },
+    "A449_result": {
+      "path": "research/results/v1/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_v1.json",
+      "sha256": "f054125c5c363e379ddca661334a57867a0d367a5c57d0caa2bb0f8814b322a7"
+    },
+    "A449_runner": {
+      "path": "research/experiments/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449.py",
+      "sha256": "cd19406ba8964aceea1dfe16904f505097fb91aed738cb825c934f89c460e875"
+    },
+    "A451_pair_stream": {
+      "path": "research/results/v1/chacha20_round20_w52_deduplicated_reader_portfolio_a451_pair_stream_uint16be_uint16be_v1.bin",
+      "sha256": "826d10e8cfb8ba2cb51e2d1cee35d29f29b9a313928dbdabbf6b92ad2a546cf9"
+    },
+    "A451_result": {
+      "path": "research/results/v1/chacha20_round20_w52_deduplicated_reader_portfolio_a451_v1.json",
+      "sha256": "f2501e5e85f6d37305473738bb0840c12651720e6f7e3fbab2fc4a253b40bdf6"
+    },
+    "A451_runner": {
+      "path": "research/experiments/chacha20_round20_w52_deduplicated_reader_portfolio_a451.py",
+      "sha256": "e03ca42e450fc3de76e7368d0d92e86803fb5808c6206ab301a79f926510791a"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_deadline_compiled_proof_portfolio_a453_design_v1.json",
+      "sha256": "160df2738635fe0a749af4a4563c81de64c80d3df70218382dda445e00339332"
+    },
+    "implementation_v1": {
+      "path": "research/configs/chacha20_round20_w52_deadline_compiled_proof_portfolio_a453_implementation_v1.json",
+      "sha256": "7bebc52bb4f958f9cae68a698b5679c721300539ab7e5df4369c67d512058364"
+    },
+    "native_executable": {
+      "path": "research/bin/a453_deadline_compiler",
+      "sha256": "37450450cdb14239127734e26ffd1a25c6cae1d9b3f4685f4b064a0f1631b0a6"
+    },
+    "native_source": {
+      "path": "research/native/a453_deadline_compiler.cpp",
+      "sha256": "c113869ead3ff58d5c98585ec4ed1dfbe678a2fa88c45073303823049acbd329"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_deadline_compiled_proof_portfolio_a453.sh",
+      "sha256": "dae0765300fdd10039632aab7f7ed40ee100a45dd6e61f7b4b1d03cac5c210f2"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_deadline_compiled_proof_portfolio_a453.py",
+      "sha256": "aedd92f1c367a32e7bbc24cad17c989e93e838d23ec3490dfa1479a39053ff90"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_deadline_compiled_proof_portfolio_a453.py",
+      "sha256": "1fd4178bac512e364fb5665c581c804ab5c9577de851fbdf6243b381188fcb65"
+    }
+  },
+  "attempt_id": "A453",
+  "calibration_contract": {
+    "A447_fixed_model_remaining96_no_refit_reconstruction_required": true,
+    "complete128_crossfit_reconstruction_required": true,
+    "controls": [
+      "A451_fixed_slot_first_encounter",
+      "deadline_product",
+      "deadline_sum",
+      "deadline_reciprocal_rank_k0",
+      "deadline_reciprocal_rank_k16",
+      "unconstrained_product"
+    ],
+    "formal_reproduction_must_match_preliminary_values": true,
+    "preliminary_complete128_A451_control": {
+      "aggregate_bit_gain": 0.5837578334120925,
+      "minimum_fixed_block_bit_gain": 0.31801910804066313,
+      "positive_fixed_block_count": 8,
+      "targets_at_or_above_median_rank": 84
+    },
+    "preliminary_complete128_primary": {
+      "aggregate_bit_gain": 0.5850467137752302,
+      "minimum_fixed_block_bit_gain": 0.33016270008415294,
+      "positive_fixed_block_count": 8,
+      "targets_at_or_above_median_rank": 84
+    },
+    "primary_compiler": "deadline_median",
+    "remaining96_result_known_at_design_freeze": false
+  },
+  "candidates": [
+    "A451_fixed_slot_first_encounter",
+    "deadline_product",
+    "deadline_sum",
+    "deadline_median",
+    "deadline_reciprocal_rank_k0",
+    "deadline_reciprocal_rank_k16",
+    "unconstrained_product"
+  ],
+  "commitment_state": "causal_api_identifier_only_amendment_to_pre_result_frozen_v1_with_identical_calibration_and_native_W52_compiler",
+  "compiler_contract": {
+    "complete_permutation_required": true,
+    "component_count": 3,
+    "construction": "process cells from worst to best priority and assign each to the latest unoccupied one-based slot at or before its deadline using a predecessor disjoint-set",
+    "deadline_formula": "deadline(cell)=min(N,3*minimum_component_rank(cell))",
+    "deterministic_ties": true,
+    "exact_guarantee": "compiled_rank_one_based <= 3 * minimum_component_rank_one_based",
+    "factorized_output": false,
+    "name": "latest_free_deadline_majority_consensus",
+    "priority_formula": "ascending(median_component_rank,maximum_component_rank,minimum_component_rank,canonical_cell_id)",
+    "random_access_pair_artifact": true,
+    "selected_priority": "median_component_rank",
+    "selection_basis": "A448 complete128 calibration: eight positive blocks and improved minimum block gain over A451 fixed-slot fusion"
+  },
+  "components": [
+    "proof_borda_top32",
+    "hybrid_proof_top16_equal",
+    "proof_best_single"
+  ],
+  "design_sha256": "160df2738635fe0a749af4a4563c81de64c80d3df70218382dda445e00339332",
+  "implementation_commitment_sha256": "5d49ea8ee56f2683d783b0619ea9a1839c935d6ef9b8726fd037e95d16be6e7b",
+  "implementation_v1_commitment_sha256": "eea0113e79e6e68840328d516d41023f00551fe3362a5f39750831dfe7e528d3",
+  "implementation_v1_sha256": "7bebc52bb4f958f9cae68a698b5679c721300539ab7e5df4369c67d512058364",
+  "primary": "deadline_median",
+  "schema": "chacha20-round20-w52-deadline-compiled-proof-portfolio-a453-implementation-v2",
+  "source_A448_result_commitment_sha256": "8b437a85395cab19316453eb8908b8dac20ca0455f54eea2443daf8d99622408",
+  "source_A449_result_commitment_sha256": "4cfd5edf10a9f4e491e5e4b2d289eca78113d67973069eea60ded00a4b64f2cf",
+  "source_A451_result_commitment_sha256": "d699e1150e902fd66dd530a60cc4b71d69be379eb46e355c08121e8526ca2b9f"
+}

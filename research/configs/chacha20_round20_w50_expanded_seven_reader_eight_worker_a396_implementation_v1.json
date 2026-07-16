@@ -1,0 +1,105 @@
+{
+  "A396_candidate_assignments_available_at_freeze": 0,
+  "anchors": {
+    "A382_causal": {
+      "path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.causal",
+      "sha256": "a079ddb6c492761f110090a019d7442bd093aa94f104859d2ea8b63b3b76472b"
+    },
+    "A382_order": {
+      "path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.json",
+      "sha256": "f705549d15be9f4ed98e8548b837524dae8603bff384ab30648c5917dfb82c0c"
+    },
+    "A388_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+      "sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a"
+    },
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A394_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.causal",
+      "sha256": "63b95b39f91957337ec3dcd9bed55fa50642afc538ab3cd355e57dedf22c2890"
+    },
+    "A394_result": {
+      "path": "research/results/v1/chacha20_round20_w50_order_preserving_work_stealing_a394_v1.json",
+      "sha256": "9f29fecdf60a9b1b128487609b009b3def8f2b4bf7d45329e95bd5dae8ccef6d"
+    },
+    "A394_runner": {
+      "path": "research/experiments/chacha20_round20_w50_order_preserving_work_stealing_a394.py",
+      "sha256": "6905a2d37b7731f63ce23b39dd3f637505a6143ffd762fae9e8aa19a9cec3d47"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_design_v1.json",
+      "sha256": "40a644024d56e21d489cb1d9b14e89390f2018f2dfb28115c1f2a95f427b976f"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_expanded_seven_reader_eight_worker_a396.sh",
+      "sha256": "11143dee8a824473914ac8b14faff7d6afbb35e277583463ddb06805d503d1e1"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396.py",
+      "sha256": "1de7350d841de615b74c6732e4767fda64f7ac07356de4ecba48953657419734"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_expanded_seven_reader_eight_worker_a396.py",
+      "sha256": "86584ad09d78702ba99e0f21fa17eb6522e0b4bf8ab37fbac82fddf2941b328d"
+    }
+  },
+  "attempt_id": "A396",
+  "commitment_state": "frozen_before_A396_materialization_or_candidate_execution",
+  "design_sha256": "40a644024d56e21d489cb1d9b14e89390f2018f2dfb28115c1f2a95f427b976f",
+  "implementation_commitment_sha256": "7180da42b7dde5c6dec10bcc9065daaee465bad937849b83315a77f61be2e1a8",
+  "schema": "chacha20-round20-w50-expanded-seven-reader-eight-worker-a396-implementation-v1",
+  "source_contract": {
+    "cells_per_order": 4096,
+    "complete_cover": true,
+    "owner_lane_rule": "sort each assigned cell by its owning source rank",
+    "owner_rule": "minimum one-based source rank; ties by frozen source-role order",
+    "source_orders": 7,
+    "source_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12"
+    ],
+    "zero_duplicate_cells": true
+  },
+  "source_order_uint16be_sha256": {
+    "A379_target_free": "05e306514ae8796aec995f4a1863d9c3ea038b3cb3f76809813caaf53fd9a837",
+    "A380_target_conditioned": "660257af63acf6ce52c71795864002fa51df6b31dfd9776f85fad8b50e4919c0",
+    "A388_W50_public_output_direct12": "0094ac40b27b065888b56adce115bf4d54c0f0ba86dc1c7e87dff09f2f745f70",
+    "broad_intersection": "db43b484f4058dff7c0b5bda1ecee6f1f718a86a26bf6c7a22d56fb90669ce20",
+    "broad_quantile": "7451a251cd89a1f3aa982fb6698773c2bad16b9dab529c617b52aee005c111f6",
+    "sparse_reciprocal": "d98026f2211103253ae9e241e91f8766866faea0be3d864b0a4c88e8754ea16b",
+    "wide_vote": "9d8c25ebbc6b695285b870933e8344ff8df14c066d44dd7b705cf099d8c82b01"
+  },
+  "worker_contract": {
+    "claim_rule": "home workers consume their nonempty owner queue; workers with no remaining home work consume the longest remaining owner queue; ties by frozen source-role order",
+    "epoch_rule": "at most one complete W50 prefix group per worker per epoch",
+    "group_cost_identity": "every W50 prefix executes exactly 128 disjoint 2^31 slabs before outcome evaluation",
+    "home_workers": 7,
+    "pointwise_comparison": "D_A396(c) <= D_A394(c) for every cell",
+    "preserve_each_owner_queue_order": true,
+    "spare_workers": 1,
+    "static_lists_replace_runtime_claim_race": true,
+    "target_makespan_epochs": 512,
+    "theorem_depth": "D_A396(c) <= D_owner(c) <= min_i R_i(c)",
+    "theorem_work": "W_A396(c) <= 8*min_i R_i(c)",
+    "theoretical_minimum_epochs": 512,
+    "worker_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12",
+      "A396_spare_longest_remaining"
+    ],
+    "workers": 8
+  }
+}

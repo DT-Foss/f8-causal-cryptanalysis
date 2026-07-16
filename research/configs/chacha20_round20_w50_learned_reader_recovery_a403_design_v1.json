@@ -1,0 +1,63 @@
+{
+  "attempt_id": "A403",
+  "design_state": "frozen_while_A401_measurement_was_running_before_A401_selection_result_A402_result_or_any_A403_candidate_prefix",
+  "scientific_question": "Does the pre-result-frozen known-key learning chain produce a heldout-qualified production order that recovers the fresh standard ChaCha20 W50 target through complete qualified groups?",
+  "source_order_contract": {
+    "required_A402_evidence_stage": "HELDOUT_QUALIFIED_FULLFIT_W50_READER_APPLIED_ZERO_REFIT_TO_A388_PRODUCTION",
+    "required_A402_qualification": true,
+    "required_order_cells": 4096,
+    "order_source": "A402_production_order",
+    "target_labels_used_for_order": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed_for_order": 0,
+    "new_solver_stages_for_order": 0,
+    "qualification_failure_action": "do_not_freeze_an_A403_protocol_or_start_recovery"
+  },
+  "execution_contract": {
+    "primitive": "RFC8439 ChaCha20 block function",
+    "rounds": 20,
+    "feedforward": true,
+    "public_output_blocks": 8,
+    "unknown_key_bits": 50,
+    "prefix_bits": 12,
+    "complete_prefix_groups": 4096,
+    "slabs_per_prefix_group": 128,
+    "candidates_per_slab": 2147483648,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "outcome_evaluation_only_after_complete_128_slab_group": true,
+    "matched_one_bit_control_required": true,
+    "dual_independent_eight_block_confirmation_required": true,
+    "resume_granularity": "complete_prefix_group"
+  },
+  "priority_contract": {
+    "interrupt_live_recoveries": false,
+    "A397_Direct12_first_free_slot_obligation_preserved": true,
+    "A403_start": "first_subsequent_free_Metal_slot_after_A397_Direct12_if_and_only_if_A402_qualified",
+    "A390_W51_qualification_remains_queued": true
+  },
+  "information_boundary": {
+    "A401_selection_or_result_available_at_design_freeze": false,
+    "A402_result_or_production_order_available_at_design_freeze": false,
+    "A403_candidate_or_prefix_available_at_design_freeze": false,
+    "A385_assignment_absent_from_protocol": true,
+    "A387_A389_A391_A397_A399_progress_filter_outcomes_or_results_consumed_for_order": false,
+    "post_A402_order_mutation_allowed": false,
+    "post_A402_qualification_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A391_runner_path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+    "A391_runner_sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df",
+    "A402_design_path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_design_v1.json",
+    "A402_design_sha256": "15111ce7c820cfc7bebebeff5feaacbc7d8cde68bc4b09ffcd0d216c668134d8",
+    "A402_runner_path": "research/experiments/chacha20_round20_w50_knownkey_fullfit_production_reader_a402.py",
+    "A402_runner_sha256": "ecd409f1894fc5a9ca5781fc70f040c6b8eae02878b69f936c5fe399f42d0473",
+    "A402_implementation_path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_implementation_v1.json",
+    "A402_implementation_sha256": "c90231169d9e94ee8cb398e2a16fa5904e4fd574ce06f3bf1250b85a4f60428e",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  },
+  "schema": "chacha20-round20-w50-learned-reader-recovery-a403-design-v1"
+}

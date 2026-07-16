@@ -1,0 +1,78 @@
+{
+  "A378_qualification_available_at_implementation_freeze": true,
+  "A379_protocol_available_at_implementation_freeze": true,
+  "A382_order_available_at_implementation_freeze": true,
+  "A383_candidate_or_prefix_available_at_implementation_freeze": false,
+  "anchors": {
+    "A378_protocol": {
+      "path": "research/configs/chacha20_round20_w49_sixtyfour_slab_grouped_engine_a378_v1.json",
+      "sha256": "c926f6474c7cb54909e0204182941d7d1c63889fd892e92f0fbc4c5c48305af3"
+    },
+    "A378_qualification": {
+      "path": "research/results/v1/chacha20_round20_w49_sixtyfour_slab_grouped_engine_a378_qualification_v1.json",
+      "sha256": "1e020ac18d86279e327cd5584d43fdafc4b6245d8df522c4b179951d820872e9"
+    },
+    "A379_design": {
+      "path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_design_v1.json",
+      "sha256": "881496c77ebf9fb909d8683b551ca7e83b29d1cf8c73fdf8cd9b102626629ed6"
+    },
+    "A379_implementation": {
+      "path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_implementation_v1.json",
+      "sha256": "bf2945db89fb13ef2975398ab7819d05b9582f3753a689a256bc0e2226d255cf"
+    },
+    "A379_order": {
+      "path": "research/results/v1/chacha20_round20_fresh_w49_pretarget_transfer_a379_order_v1.json",
+      "sha256": "90e06848c9f608ae484b9cdf95d0ebcc64a0776b976470df436e82392caf02a5"
+    },
+    "A379_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_v1.json",
+      "sha256": "673b44d81f1e25490fd778b48d1ef0c6423ddda6716354c03f5212f68888903a"
+    },
+    "A379_runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w49_pretarget_transfer_a379.py",
+      "sha256": "a8bfce2e53c96db40c5b48fc79876928266cf2d0ecc59187f59da47aaa7153e9"
+    },
+    "A382_causal": {
+      "path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.causal",
+      "sha256": "a079ddb6c492761f110090a019d7442bd093aa94f104859d2ea8b63b3b76472b"
+    },
+    "A382_design": {
+      "path": "research/configs/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_design_v1.json",
+      "sha256": "c332e7c4fc8953384a208657a440324d7fa0f98ed6c85efb8d91b6705b8bd3d1"
+    },
+    "A382_implementation": {
+      "path": "research/configs/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_implementation_v1.json",
+      "sha256": "12be1bf8aec21cd5866708e82792d90f7b6ae111c2e962e9d58ecb3a6c87924c"
+    },
+    "A382_order": {
+      "path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.json",
+      "sha256": "f705549d15be9f4ed98e8548b837524dae8603bff384ab30648c5917dfb82c0c"
+    },
+    "A382_runner": {
+      "path": "research/experiments/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382.py",
+      "sha256": "46601c0e4fc5e20ee2ab85c4140b1fadd33b149f189e8335a0a6ef815bcbdc9f"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w49_factor6_recovery_a383_design_v1.json",
+      "sha256": "a4b5446f54609c42bcade5b525d813a2b24ea2cbc7430c5f0d170d5d1ece2c9b"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w49_factor6_recovery_a383.sh",
+      "sha256": "8f938f3743f32f1e7d4f4f9a0ec460f66932030cd8cc0cc0d9c9f04fc7355b69"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w49_factor6_recovery_a383.py",
+      "sha256": "b0a1345cfb93532e0587dfb5971b9eb6c7a1efdb69b0e2fc1439665b9ff5569d"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w49_factor6_recovery_a383.py",
+      "sha256": "32fbe0ba78163e512c9d51cb98b47106ed074e42a98cef5d104cd546e6a1d305"
+    }
+  },
+  "attempt_id": "A383",
+  "commitment_state": "frozen_after_A378_qualification_A379_protocol_A382_order_before_A383_candidate_prefix_or_result",
+  "design_sha256": "a4b5446f54609c42bcade5b525d813a2b24ea2cbc7430c5f0d170d5d1ece2c9b",
+  "implementation_commitment_sha256": "828307dd53dd26332db9042b7c07e448a36dabc7208f536d2857461b6e1728b5",
+  "schema": "chacha20-round20-w49-factor6-recovery-a383-implementation-v1",
+  "selected_operator": "A382_W49_crosswidth_wide_consensus_six_view_factor6_wavefront"
+}

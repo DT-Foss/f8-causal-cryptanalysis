@@ -1,0 +1,199 @@
+{
+  "A426_progress_or_filter_outcomes_consumed": false,
+  "V1_protocol_sha256": "30652dc6a24838568b22ebe01bca367264c9b65f2cf20d3b3281994936b89685",
+  "anchors": {
+    "V1_implementation": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_implementation_v1.json",
+      "sha256": "d92adf76cee3360d35a15dba243590ccc32dbcdbb8b7e11e25bea4d19f0e143c"
+    },
+    "V1_protocol": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v1.json",
+      "sha256": "30652dc6a24838568b22ebe01bca367264c9b65f2cf20d3b3281994936b89685"
+    },
+    "V1_runner": {
+      "path": "research/experiments/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437.py",
+      "sha256": "57a2889bb3dcdd2592e19b20fbb626fac706982ddf6bcc99e6a58fb8e83bdad7"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_design_v1.json",
+      "sha256": "6d4f7eaa72d06b5b02345dafdf038fa20e1abca66e051471b3973ae491e8c607"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_implementation_v2.json",
+      "sha256": "19dac4b0c379864a5db594ec1e4a8c8540ad8527bd82d1972dce4af5bcc3745a"
+    },
+    "protocol": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.json",
+      "sha256": "ce224ed6093ac5c225bf636008f573204e2455c69cb4e71548f511b88d1bb001"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.sh",
+      "sha256": "dadf0bad529dd517aa32afe088518b79d6f1005c70e94003068946ecc25253b1"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.py",
+      "sha256": "e6bb01ee2ba114d69c157d72dd381ab9daf3226bf41d797e9964d6f46ba09538"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.py",
+      "sha256": "910d642a894ef2bc149a723ccddbdb9455cdc7a82fb012720276e028a1568074"
+    }
+  },
+  "attempt_id": "A437",
+  "calibration_comparison": {
+    "A426_progress_or_filter_outcomes_consumed": false,
+    "W52_same_cell_positions_used_as_target_information": false,
+    "W52_same_off_axis_cell_position_one_based": 1443,
+    "W52_same_prefix_cell_position_one_based": 3042,
+    "W52_true_pair_rank_known": false,
+    "additional_gain_bits_vs_neutral_square": 0.42384674732885325,
+    "anisotropic_pair_rank_one_based": 234498,
+    "anisotropic_pair_rank_product_identity": 234498,
+    "candidate_assignments_before_calibration_pair": 62947577561088,
+    "candidate_assignments_executed": 0,
+    "cells_removed_before_calibration_pair_vs_neutral": 80081,
+    "factor_vs_neutral_square": 1.3414997142832774,
+    "gain_bits_vs_complete_uniform_pair_cover": 6.160783907310324,
+    "neutral_square_pair_rank_one_based": 314579,
+    "off_axis_calibration_cell": 1916,
+    "off_axis_calibration_rank_one_based": 561,
+    "prefix_calibration_cell": 2990,
+    "prefix_calibration_rank_one_based": 418,
+    "reader_refits": 0,
+    "scope": "known-key W46 calibration geometry only; transferred as a frozen growth ratio, never as an A426 target cell",
+    "target_labels_used": 0
+  },
+  "candidate_assignments_executed": 0,
+  "causal": {
+    "api_id": "a437an2",
+    "clusters": 1,
+    "embedded_rules": 3,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.causal",
+    "personal_semantic_readback": {
+      "next_executor": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "next production object",
+        "evidence": "zero target labels, refits, candidates, or A426 outcomes",
+        "is_inferred": false,
+        "m_idx": 5,
+        "mechanism": "reuse_A435_qualified_filter_progress_and_confirmation",
+        "o_idx": 6,
+        "outcome": "A438:restart_safe_anisotropic_executor",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"algorithm\": \"calibration_balanced_anisotropic_rectangle_growth\", \"assignments_per_cell\": 268435456, \"cells\": 16777216, \"complete_domain_assignments\": 4503599627370496, \"growth_events\": 8191, \"worker_tasks_each\": 2097152, \"workers\": 8}",
+        "s_idx": 4,
+        "source": "dd8634237031d45b399ba23d03320512ac855a2e3cf9a7e7717feac2fd75df2d",
+        "trigger": "A437:exact_2pow24_cover_rank_234498"
+      },
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "restart_safe_A438_production_executor",
+        "predicate": "next_required_object",
+        "subject": "A437:exact_2pow24_cover_rank_234498",
+        "suggested_queries": [
+          "Reuse A435's qualified Metal subcell execution and confirmation path with A437 V1's immutable anisotropic pair codec and V2's result contract."
+        ]
+      },
+      "repair": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "artifact serialization without schedule mutation",
+        "evidence": "79b3e2c0fe0a7aecc4f18e505ab6454cba96923033df319df7ca3ff8ed5ff401",
+        "is_inferred": false,
+        "m_idx": 1,
+        "mechanism": "immutable_packaging_only_repair",
+        "o_idx": 2,
+        "outcome": "A437:V2_serializable_result_contract",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"axis_orders_changed\": false, \"calibration_changed\": false, \"candidate_assignments_executed\": 0, \"defect\": \"V1 Causal builder requested payload.schedule although the assembled result exposes the frozen stream hash at payload.pair_stream_uint16be_uint16be_sha256\", \"schedule_changed\": false, \"schedule_recomputed\": false}",
+        "s_idx": 0,
+        "source": "7a5d0c3f13c3d414e82ca9e954e9cc5f5185a526e87b2b0b91edf4d214b35057",
+        "trigger": "A437:V1_schedule_commitment"
+      },
+      "schedule": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "prospective W52 schedule",
+        "evidence": "6fec353dd64c98d3956c5308995e4cea1ee50cbd5a96436c67bbd426091d12aa",
+        "is_inferred": false,
+        "m_idx": 3,
+        "mechanism": "retained_418_to_561_rectangle_growth",
+        "o_idx": 4,
+        "outcome": "A437:exact_2pow24_cover_rank_234498",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"A426_progress_or_filter_outcomes_consumed\": false, \"W52_same_cell_positions_used_as_target_information\": false, \"W52_same_off_axis_cell_position_one_based\": 1443, \"W52_same_prefix_cell_position_one_based\": 3042, \"W52_true_pair_rank_known\": false, \"additional_gain_bits_vs_neutral_square\": 0.42384674732885325, \"anisotropic_pair_rank_one_based\": 234498, \"anisotropic_pair_rank_product_identity\": 234498, \"candidate_assignments_before_calibration_pair\": 62947577561088, \"candidate_assignments_executed\": 0, \"cells_removed_before_calibration_pair_vs_neutral\": 80081, \"factor_vs_neutral_square\": 1.3414997142832774, \"gain_bits_vs_complete_uniform_pair_cover\": 6.160783907310324, \"neutral_square_pair_rank_one_based\": 314579, \"off_axis_calibration_cell\": 1916, \"off_axis_calibration_rank_one_based\": 561, \"prefix_calibration_cell\": 2990, \"prefix_calibration_rank_one_based\": 418, \"reader_refits\": 0, \"scope\": \"known-key W46 calibration geometry only; transferred as a frozen growth ratio, never as an A426 target cell\", \"target_labels_used\": 0}",
+        "s_idx": 2,
+        "source": "79b3e2c0fe0a7aecc4f18e505ab6454cba96923033df319df7ca3ff8ed5ff401",
+        "trigger": "A437:V2_serializable_result_contract"
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "A437_V2_CAUSAL_PACKAGING_REPAIRED_WITHOUT_SCHEDULE_CHANGE",
+        "is_inferred": true,
+        "m_idx": 7,
+        "mechanism": "materialized_packaging_schedule_executor_chain",
+        "o_idx": 6,
+        "outcome": "A438:restart_safe_anisotropic_executor",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A437_V2_chain",
+        "trigger": "A437:V1_schedule_commitment"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "42a05c65a3951ad730a49be665a40c58400b62ae0ea36bd9c67a3cb296e3a6dc",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 8,
+      "file_size_bytes": 4905,
+      "file_size_kb": 4.8,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.causal.144.tmp",
+      "gaps": 1,
+      "rules": 3,
+      "triplets": 4
+    }
+  },
+  "evidence_stage": "CALIBRATION_BALANCED_COMPLETE_TARGET_BLIND_W52_WAVEFRONT_PACKAGED",
+  "next_executor": "A438",
+  "pair_stream_uint16be_uint16be_sha256": "6fec353dd64c98d3956c5308995e4cea1ee50cbd5a96436c67bbd426091d12aa",
+  "production_execution_enabled": false,
+  "protocol_commitment_sha256": "7a5d0c3f13c3d414e82ca9e954e9cc5f5185a526e87b2b0b91edf4d214b35057",
+  "protocol_sha256": "ce224ed6093ac5c225bf636008f573204e2455c69cb4e71548f511b88d1bb001",
+  "reader_refits": 0,
+  "repair_scope": {
+    "axis_orders_changed": false,
+    "calibration_changed": false,
+    "candidate_assignments_executed": 0,
+    "defect": "V1 Causal builder requested payload.schedule although the assembled result exposes the frozen stream hash at payload.pair_stream_uint16be_uint16be_sha256",
+    "schedule_changed": false,
+    "schedule_recomputed": false
+  },
+  "result_sha256": "cf526ec7bb3d9e7bb2bd554dbb73d7ef100aa90930641f565e9dd36060c53ea1",
+  "schedule_commitment_sha256": "79b3e2c0fe0a7aecc4f18e505ab6454cba96923033df319df7ca3ff8ed5ff401",
+  "schedule_summary": {
+    "algorithm": "calibration_balanced_anisotropic_rectangle_growth",
+    "assignments_per_cell": 268435456,
+    "cells": 16777216,
+    "complete_domain_assignments": 4503599627370496,
+    "growth_events": 8191,
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "schema": "chacha20-round20-w52-calibration-balanced-dual-axis-wavefront-a437-result-v2",
+  "target_labels_used": 0
+}

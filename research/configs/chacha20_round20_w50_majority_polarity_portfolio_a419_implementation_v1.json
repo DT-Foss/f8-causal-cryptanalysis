@@ -1,0 +1,78 @@
+{
+  "A412_holdout_fields_used": 0,
+  "A412_holdout_labels_used": 0,
+  "A417_selected_canonical_indices": [
+    388,
+    13,
+    2522,
+    303,
+    58,
+    2460,
+    2707,
+    2295
+  ],
+  "anchors": {
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A417_implementation": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_implementation_v1.json",
+      "sha256": "2f9279f8e1b0edd03353ecb864f47e4c56db6e98a2ced09baa039a87156175d7"
+    },
+    "A417_library": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_library_v1.json",
+      "sha256": "53d142b8351a990e06a0e265581320a0df871f59bcc493e3e5ea0f961c391253"
+    },
+    "A417_runner": {
+      "path": "research/experiments/chacha20_round20_w50_selection_calibrated_portfolio_a417.py",
+      "sha256": "dcdb1999b9521b104b3a321da4c42c0e2e7678b53e0adec82af1f3c8d1cfde85"
+    },
+    "A417_selection": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_a417_selection_v1.json",
+      "sha256": "dde2e8a9ec184e52ed353f33b7558f43c767cb8deece715caceffe6910922653"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_design_v1.json",
+      "sha256": "d57e1b16eb917bcb0e755075a4a0405ab67fadbf2205ece5b87dc8b5c52344b4"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_majority_polarity_portfolio_a419.sh",
+      "sha256": "8db8b78305de1dfc0e50cf2bc52000e4398c4238707dd459b24258ee5102fbec"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_majority_polarity_portfolio_a419.py",
+      "sha256": "2553725477539400e19d895384768ea6e6cd4818b232bad3868c01619d0d87c0"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_majority_polarity_portfolio_a419.py",
+      "sha256": "a850c0d7879381f95105d83b5aa134306cecefc59f56d3e7af119832e912dfe6"
+    }
+  },
+  "attempt_id": "A419",
+  "commitment_state": "frozen_before_any_A419_A412_holdout_field_label_or_score",
+  "design_sha256": "d57e1b16eb917bcb0e755075a4a0405ab67fadbf2205ece5b87dc8b5c52344b4",
+  "holdout_model_choices": 0,
+  "holdout_reader_refits": 0,
+  "implementation_commitment_sha256": "4c6adfea0eb1e9e02038eaaaad12d73ec29fd9fddd425a4577ff9173c9f0a2f8",
+  "replaced_role": "A417_candidate_0388",
+  "replacement_role": "A419_majority_polarity_11_19_63",
+  "schema": "chacha20-round20-w50-majority-polarity-portfolio-a419-implementation-v1",
+  "voters": [
+    [
+      11,
+      32,
+      "uniform"
+    ],
+    [
+      19,
+      32,
+      "uniform"
+    ],
+    [
+      63,
+      128,
+      "uniform"
+    ]
+  ]
+}

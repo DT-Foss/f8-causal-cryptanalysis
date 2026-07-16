@@ -1,0 +1,41 @@
+{
+  "attempt_id": "A358",
+  "design_state": "frozen_before_A345_or_A350_candidate_prefix_or_result",
+  "execution_contract": {
+    "candidate_evaluation": "all eight complete 2^31 slabs per selected 12-bit Metal group before outcome evaluation",
+    "candidates_per_prefix_group": 17179869184,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "matched_control": "same complete search against the one-bit-flipped public relation",
+    "prefix_groups": 4096,
+    "resume_unit": "last fully completed prefix group",
+    "unknown_key_bits": 46
+  },
+  "information_boundary": {
+    "A345_candidate_or_prefix_available_at_design_freeze": false,
+    "A345_result_available_at_design_freeze": false,
+    "A350_candidate_or_prefix_available_at_design_freeze": false,
+    "A350_result_available_at_design_freeze": false,
+    "A356_order_frozen_before_design": true,
+    "A358_executes_A356_from_rank_one_without_postfreeze_reordering": true,
+    "public_A345_challenge_available": true,
+    "target_labels_used_before_A356_order_freeze": 0
+  },
+  "reader_contract": {
+    "complete_corrected_coordinate_cells": 4096,
+    "measured_assignment_bit_interval": [20, 31],
+    "reader_refits": 0,
+    "selected_operator": "A340_selected8_global_raw transferred through A355 to A356",
+    "solver_stages": 16384,
+    "target_labels_used_before_order_freeze": 0
+  },
+  "schema": "chacha20-round20-w46-corrected-order-prospective-recovery-a358-design-v1",
+  "source_anchors": {
+    "A324_qualification_path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+    "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a",
+    "A345_protocol_path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+    "A345_protocol_sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95",
+    "A356_order_path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_order_v1.json",
+    "A356_order_sha256": "2069c706d070ac1add659232a08c80a6b46d213cc9c6abb5ad9eebf99afc481a"
+  }
+}

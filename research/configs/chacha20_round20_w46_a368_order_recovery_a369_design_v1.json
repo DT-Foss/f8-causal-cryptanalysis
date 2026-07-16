@@ -1,0 +1,78 @@
+{
+  "schema": "chacha20-round20-w46-a368-order-recovery-a369-design-v1",
+  "attempt_id": "A369",
+  "design_state": "frozen_before_A367_result_A368_order_candidate_prefix_or_recovery_execution",
+  "scientific_query": "If A367 prospectively retains one or more frozen cross-corpus Readers and A368 emits their exact factor-k sealed-target portfolio order, at what complete-group rank does that order recover the factual A361 W46 assignment under the qualified A324 engine and matched one-bit control?",
+  "conditional_chain": {
+    "A367_retention_gate_required": true,
+    "A368_order_required": true,
+    "A368_order_commitment_required": true,
+    "A367_result_available_at_design_freeze": false,
+    "A368_order_available_at_design_freeze": false,
+    "failure_action": "do_not_open_A361_or_execute_any_candidate_assignment"
+  },
+  "execution_contract": {
+    "primitive": "standard ChaCha20",
+    "rounds": 20,
+    "feed_forward": true,
+    "public_output_blocks": 8,
+    "unknown_key_bits": 46,
+    "complete_group_suffix_bits": 34,
+    "group_count": 4096,
+    "group_coordinate_interval": [20, 31],
+    "group_order": "the exact immutable A368 selected_order factor-k portfolio permutation",
+    "group_execution": "all 2^34 suffix assignments in each visited group",
+    "within_group_early_stop": false,
+    "matched_control": "one-bit-flipped output relation executed with the identical group engine",
+    "progress_resume": true,
+    "maximum_complete_domain_assignments": 70368744177664
+  },
+  "rank_contract": {
+    "selected_portfolio_rank": "selected_order.index(confirmed_prefix12)+1",
+    "source_reader_ranks": "source_order[role].index(confirmed_prefix12)+1 for every retained role",
+    "best_source_rank": "minimum source-reader rank",
+    "pointwise_factor_k_check": "selected_portfolio_rank <= retained_reader_count * best_source_rank",
+    "round_robin_rank_formula_assumed": false,
+    "rank_readback_only_after_independent_confirmation": true
+  },
+  "confirmation_contract": {
+    "canonical_reference": "repository ChaCha20 implementation",
+    "independent_reference": "independent RFC8439 transcription retained by A325",
+    "all_eight_output_blocks_required": true,
+    "total_cross_implementation_output_bits_required": 8192,
+    "matched_control_candidates_required": 0
+  },
+  "evidence_contract": {
+    "strict_subset_if_group_rank_below_4096": true,
+    "domain_reduction_factor": "4096 / selected_portfolio_rank",
+    "search_gain_bits": "log2(4096 / selected_portfolio_rank)",
+    "source_oracle_comparison": "selected portfolio rank, every source rank, best source rank, and exact factor-k bound",
+    "full_domain_completion_is_still_a_valid_recovery_record": true
+  },
+  "information_boundary": {
+    "A361_secret_or_true_prefix_available_at_design_freeze": false,
+    "A361_compressed_measurement_shard_content_opened_by_A369_at_design_freeze": false,
+    "A367_result_available_at_design_freeze": false,
+    "A368_order_available_at_design_freeze": false,
+    "candidate_or_prefix_available_at_design_freeze": false,
+    "candidate_assignments_executed_at_design_freeze": 0,
+    "reader_refits": 0,
+    "target_labels_used": 0
+  },
+  "source_anchors": {
+    "A324_runner_path": "research/experiments/chacha20_round20_w46_eight_slab_grouped_engine_a324.py",
+    "A324_runner_sha256": "d286102bfcdf5ec4902c7e7240aa6b4ba6c9edd486933b58cbc895355b0c0f4b",
+    "A324_qualification_path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+    "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a",
+    "A361_runner_path": "research/experiments/chacha20_round20_w46_fresh_a360_reader_deployment_a361.py",
+    "A361_runner_sha256": "0c287c1f4e037e1fdb3d87455a43471023600556d14f6cc5bfe0ef36022f38f7",
+    "A361_protocol_path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+    "A361_protocol_sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228",
+    "A368_design_path": "research/configs/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368_design_v1.json",
+    "A368_design_sha256": "8b537866befe488e532245b8e3c0593b22cf8814b13a3515701a88dec0f376f0",
+    "A368_runner_path": "research/experiments/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368.py",
+    "A368_runner_sha256": "bb9a99b3e6542e04d221cea2d0e6b1913b7704e14dde19079da080b71a414b99",
+    "A368_implementation_path": "research/configs/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368_implementation_v1.json",
+    "A368_implementation_sha256": "d1ea5da2d37b4219d57a053c3754ceee5750aea73bf28cf828cb45dec98fbeda"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "chacha20-round20-w50-a428-global-wavefront-recovery-a429-design-v1",
+  "attempt_id": "A429",
+  "design_state": "frozen_after_A428_qualification_before_any_A429_candidate_progress_or_filter_outcome",
+  "scientific_question": "At what exact global-wavefront epoch does A428 recover the existing sealed A385 standard ChaCha20 W50 target through the qualified complete-group engine?",
+  "execution_contract": {
+    "primitive": "RFC8439 ChaCha20 block function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "public_output_blocks": 8,
+    "public_output_bits": 4096,
+    "known_key_bits": 206,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "prefix_bits": 12,
+    "complete_prefix_groups": 4096,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "slabs_per_prefix_group": 128,
+    "workers": 8,
+    "worker_tasks_each": 512,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "shared_stop_only_after_independent_confirmation": true,
+    "matched_one_bit_control_must_be_empty": true,
+    "dual_reference_confirmation_blocks": 8
+  },
+  "schedule_contract": {
+    "source": "A428 qualified production global wavefront",
+    "schedule_commitment_sha256": "0b0e684b95d16c1f17c994be1fe0443af5fe55bc359f3d416f787f0540e2500c",
+    "copy_all_eight_worker_orders_and_tasks_byte_identically": true,
+    "complete_cover_cells": 4096,
+    "duplicate_cells": 0,
+    "uncovered_cells": 0,
+    "makespan_epochs": 512,
+    "depth_bound": "D_A428(c) <= min_i R_i(c)",
+    "total_work_bound": "W_A428(c) <= 8*min_i R_i(c)",
+    "parameter_refit_on_A429_target": false,
+    "A429_target_labels_used": 0,
+    "A429_candidate_assignments_used": 0
+  },
+  "challenge_contract": {
+    "source": "existing A385 sealed public W50 challenge",
+    "public_output_was_available_to_A428": true,
+    "secret_assignment_absent_from_every_public_protocol": true,
+    "true_prefix_absent_from_every_public_protocol": true,
+    "A428_schedule_used_public_equations_and_output_but_no_target_label": true,
+    "reuse_identical_matched_one_bit_control": true
+  },
+  "engine_gate_contract": {
+    "source": "A384 target-free exact W50 adapter",
+    "qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "complete_synthetic_2^38_group": true,
+    "scalar_boundary_identity": true,
+    "single_planted_factual_assignment": true,
+    "matched_control_empty": true
+  },
+  "information_boundary": {
+    "A428_result_available_at_design_freeze": true,
+    "A428_native_causal_personally_read": true,
+    "A429_candidate_or_progress_available_at_design_freeze": false,
+    "A429_target_assignment_or_true_prefix_available_at_design_freeze": false,
+    "A429_target_labels_used_for_schedule": 0,
+    "A429_reader_refits": 0,
+    "A397_existing_progress_observed_but_not_consumed_by_A428_or_A429_schedule": true,
+    "prior_live_recovery_filter_outcomes_consumed": false,
+    "live_recoveries_must_not_be_interrupted": true
+  },
+  "launch_contract": {
+    "freeze_complete_protocol_before_launch": true,
+    "launch_only_on_free_recovery_slots": true,
+    "do_not_interrupt_existing_recoveries": true,
+    "resume_each_worker_only_from_hash_bound_complete_groups": true
+  },
+  "source_anchors": {
+    "A428_result_path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.json",
+    "A428_result_sha256": "dbf8fd33558bfde4e8e6833e6d69df1b57fcf8732fec28d35828b39e3cce0584",
+    "A428_causal_path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.causal",
+    "A428_causal_sha256": "52a61beb8605fe54b9db66a5ba156b683dfc7dc0270e2a8a202a6f7a70ab0762",
+    "A428_implementation_path": "research/configs/chacha20_round20_w50_global_best_rank_wavefront_a428_implementation_v1.json",
+    "A428_implementation_sha256": "d74f72befa1b13f2be211aa1db161ea6ce51d580c290d68efdecb8250a5e7283",
+    "A428_runner_path": "research/experiments/chacha20_round20_w50_global_best_rank_wavefront_a428.py",
+    "A428_runner_sha256": "f7f60c7e4fdf68fbde9de7563ba4a3b2498054ecddb0e9be17a43489c591c705",
+    "A397_runner_path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+    "A397_runner_sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5",
+    "A397_protocol_path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_v1.json",
+    "A397_protocol_sha256": "447baf5e4784d0210f51e194f1a241b7fbfbf1ab239fe16582effdb4b435fb32",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+  }
+}

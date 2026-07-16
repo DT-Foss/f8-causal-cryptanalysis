@@ -1,0 +1,35 @@
+{
+  "A361_measurement_shard_content_opened_by_A366": false,
+  "A367_artifacts_available_at_freeze": [],
+  "anchors": {
+    "A359_result": {
+      "path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.json",
+      "sha256": "3259526ee94241f5e4858b59cb52cb93a9ef8dbe8dc8bf40deaf4d7757db7a3f"
+    },
+    "A363_result": {
+      "path": "research/results/v1/chacha20_round20_w46_polarity_invariant_validation_a363_v1.json",
+      "sha256": "d2601ca3190a18fe2ce13bf436d14fafd4d9a2493df13dc68d353e500d7cb09b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_cross_corpus_invariant_reader_a366_design_v1.json",
+      "sha256": "f21e2488dcad6062d32dc7cc23116bc94dbcbed067406459195078ed951df989"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_cross_corpus_invariant_reader_a366.sh",
+      "sha256": "72ed32cc362eaf9176d7dd81a2f945acbdf1369a699b2f75b74de0b91cf12683"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_cross_corpus_invariant_reader_a366.py",
+      "sha256": "c3ea91a0e5dd651a7196e6c576c889cdbdc0b420410d2fff4aaa5f6823ef310d"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_cross_corpus_invariant_reader_a366.py",
+      "sha256": "c6aea7def53b8d12f5340b7918d36f5186a2070c860339a41bb4906c59568be3"
+    }
+  },
+  "attempt_id": "A366",
+  "commitment_state": "frozen_before_formal_A366_selection_and_every_A367_artifact",
+  "design_sha256": "f21e2488dcad6062d32dc7cc23116bc94dbcbed067406459195078ed951df989",
+  "implementation_commitment_sha256": "be080ba04608fd4d8bc4d8dd6d543743b33c241b6b70216d0a9fe2e64de2d00d",
+  "schema": "chacha20-round20-w46-cross-corpus-invariant-reader-a366-implementation-v1"
+}

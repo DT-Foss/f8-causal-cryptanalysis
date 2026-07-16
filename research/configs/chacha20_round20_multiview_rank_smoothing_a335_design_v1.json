@@ -1,0 +1,73 @@
+{
+  "schema": "chacha20-round20-multiview-rank-smoothing-a335-design-v1",
+  "attempt_id": "A335",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Does A333's negative rank velocity generalize across all six exact Fine-Coarse-Numeric and prototype-distance views, and which frozen coefficient maximizes macro walk-forward transfer?",
+  "source_anchors": {
+    "A300_order_path": "research/results/v1/chacha20_round20_w43_three_operator_portfolio_a300_order_v1.json",
+    "A300_order_sha256": "76af63fd14613520bda54316e242c16e4530af22ddb2ec9e5a7a6e6df5afefd1",
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A317_runner_path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+    "A317_runner_sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2",
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A333_order_path": "research/results/v1/chacha20_round20_cross_width_rank_velocity_a333_order_v1.json",
+    "A333_order_sha256": "4cd1c0ce67e50df687548d0cf6a5f921ff91767c077d25f39b158a4263de4b5c"
+  },
+  "forecast_contract": {
+    "view_sequence": [
+      "fine",
+      "coarse",
+      "numeric",
+      "nearest_prototype_L1",
+      "nearest_prototype_Linf",
+      "nearest_prototype_squared_L2"
+    ],
+    "candidate_sequence_and_coefficients_p_over_q": [
+      ["reverse_velocity_alpha_minus_1", -1, 1],
+      ["midpoint_alpha_minus_1_over_2", -1, 2],
+      ["carry_forward_alpha_0", 0, 1],
+      ["damped_velocity_alpha_1_over_4", 1, 4],
+      ["damped_velocity_alpha_1_over_2", 1, 2],
+      ["linear_velocity_alpha_1", 1, 1],
+      ["aggressive_velocity_alpha_2", 2, 1]
+    ],
+    "score_numerator": "q * current_rank + p * (current_rank - previous_rank)",
+    "tie_break": "current rank, previous rank, cell",
+    "per_view_walk_forward": "construct W45 forecast from W43 and W44 within the same view, then compare with the complete W45 field of that view",
+    "selection": "maximum macro mean Spearman across six views, then maximum minimum-view Spearman, then minimum absolute alpha, then frozen index",
+    "deployment": "apply selected unchanged coefficient to W44-W45 for all six views; nearest_prototype_Linf remains the primary W46 order because A321 selected that view independently",
+    "fixed_baseline": "carry_forward_alpha_0",
+    "fixed_direction_control": "reverse_velocity_alpha_minus_1",
+    "A313_role": "none",
+    "A322_progress_or_result_role": "none",
+    "A325_W46_challenge_or_result_role": "none",
+    "new_candidate_execution": false,
+    "target_labels_used_from_A313_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "exact W43-W44-W45 source hashes for six views",
+    "42 exact walk-forward orders and per-view Spearman and rank-error metrics",
+    "macro mean, minimum and maximum Spearman for every coefficient",
+    "one coefficient selected under the frozen multiview rule",
+    "six exact W46 view forecasts under the selected coefficient",
+    "primary Linf W46 order and identity comparison with A333",
+    "postconfirmation A325 rank panel without duplicate candidate execution"
+  ],
+  "information_boundary": {
+    "all_six_W43_W44_W45_complete_target_blind_fields_available_at_design_freeze": true,
+    "A313_result_candidate_or_prefix_used": false,
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_candidate_definition_selection_or_order": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_challenge_feature_candidate_prefix_or_result_used": false,
+    "target_labels_used_from_A313_A322_or_A325": 0,
+    "operator_refits_on_A313_A322_or_A325": 0,
+    "duplicate_candidate_execution_required_for_evaluation": false
+  }
+}

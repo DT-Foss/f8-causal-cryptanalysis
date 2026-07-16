@@ -1,0 +1,48 @@
+{
+  "A426_outcome_available_at_freeze": false,
+  "A436_candidate_or_progress_available_at_freeze": false,
+  "anchors": {
+    "A354_result": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_coordinate_codec_audit_a354_v1.json",
+      "sha256": "9fc3487266aee3f4e637b9a1afc0b434a5f0c56fa430e9aa14b576cfe8782ac4"
+    },
+    "A355_result": {
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_direct12_reader_a355_v1.json",
+      "sha256": "b197ba0145e85119fabfc32d14116836a905e260f70fc4bb7dc779924077b686"
+    },
+    "A432_result": {
+      "path": "research/results/v1/chacha20_round20_w52_public_output_direct12_eight_worker_a432_v1.json",
+      "sha256": "3d0ed27a25288db589ddb6608407314d1fa32f4cb678806e142eb819159a7e6d"
+    },
+    "A432_runner": {
+      "path": "research/experiments/chacha20_round20_w52_public_output_direct12_eight_worker_a432.py",
+      "sha256": "22b00e57cf06fd6c6e5e5e5be1766101ce1500d4e47dbe035a257ec271a0270e"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_corrected_off_axis_reader_a436_design_v1.json",
+      "sha256": "741f1684d5108a793ef689b84338996554cc749ba0c868c5f9c580c0876c11a8"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_corrected_off_axis_reader_a436.sh",
+      "sha256": "bc50344d526dc38879c93fdcd255752a9c43505254b13dba29644211b94e4a71"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_corrected_off_axis_reader_a436.py",
+      "sha256": "ea2d0d85dd59947d074babd60779ffe679c635c25f19ef0ee1bcc404b365fef0"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_corrected_off_axis_reader_a436.py",
+      "sha256": "eb763e8b7e79a8fb7b85f36e0e52309940c9a9701c43d2730d609d7398060d9b"
+    }
+  },
+  "attempt_id": "A436",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_zero_reexecution_A432_reassembly_and_authentic_causal_writer_frozen_before_any_A426_or_A436_candidate_progress_filter_outcome_or_result",
+  "design_sha256": "741f1684d5108a793ef689b84338996554cc749ba0c868c5f9c580c0876c11a8",
+  "implementation_commitment_sha256": "2768bc658266fa58c5f57306312fb7d69ef7db42cbbd4dd404dd18d289ae3361",
+  "reader_refits": 0,
+  "schema": "chacha20-round20-w52-corrected-off-axis-reader-a436-implementation-v1",
+  "selected_view": "A342_selected_pair_global_raw",
+  "selection_commitment_sha256": "55d981fa5bc949823a533cc40ba8ae3df9b85bc4c4cffbf3011399cb20eba5dc",
+  "target_labels_used": 0
+}

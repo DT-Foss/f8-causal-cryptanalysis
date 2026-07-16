@@ -1,0 +1,28 @@
+{
+  "A345_candidate_or_prefix_available_at_commitment": false,
+  "A345_fresh_challenge_available_at_commitment": false,
+  "A345_order_available_at_commitment": false,
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_design_v1.json",
+      "sha256": "03e4b2bc1cc98601d10a504a7d5e4730150e8b907a09a33df77134acda9c4f8f"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_fresh_w46_factor2_replication_a345.sh",
+      "sha256": "c7fbfd317a2199cfd6e48c16fc35ed2ba800f87a43a8e170bab68f11f7956adf"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w46_factor2_replication_a345.py",
+      "sha256": "7459127337fb0072e0fe4e47a2c7f05ea3fa78c7149484c90e47c246bde57fc3"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_fresh_w46_factor2_replication_a345.py",
+      "sha256": "37e0528ed32c6f35045be76841291a5937b46050b72dbd6539c8a8f8c76cecd1"
+    }
+  },
+  "attempt_id": "A345",
+  "commitment_state": "frozen_before_A345_order_fresh_challenge_candidate_or_prefix",
+  "design_sha256": "03e4b2bc1cc98601d10a504a7d5e4730150e8b907a09a33df77134acda9c4f8f",
+  "implementation_commitment_sha256": "546aee541f5c5ab4091a03f8f5c6c2fbe387a1a918ebdb4f4593373392ef3c56",
+  "schema": "chacha20-round20-fresh-w46-factor2-replication-a345-implementation-v1"
+}

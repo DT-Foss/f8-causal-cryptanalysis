@@ -1,0 +1,64 @@
+{
+  "schema": "chacha20-round20-hierarchical-linf-operator-a327-design-v1",
+  "attempt_id": "A327",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can the retained raw Linf bottleneck be strengthened by replacing coordinate-order tie breaks with exact secondary norms while preserving Linf as the primary distance?",
+  "source_anchors": {
+    "A313_result_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A317_runner_path": "research/experiments/chacha20_round20_w44_multiview_operator_atlas_a317.py",
+    "A317_runner_sha256": "07aaf434153249ccc12826098bb3de1e8734a37c8649108045e00fb9e7614fa2",
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A321_order_path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+    "A321_order_sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2"
+  },
+  "operator_contract": {
+    "coordinate_views": [
+      "fine_rank",
+      "coarse_rank",
+      "numeric_rank"
+    ],
+    "prototype_source": "the four A317 confirmed W32/W43 prototype coordinates, copied unchanged",
+    "candidate_sequence_and_tie_break": [
+      "original_linf",
+      "linf_then_l1_then_l2",
+      "linf_then_l2_then_l1",
+      "lexicographic_deviation_profile"
+    ],
+    "original_linf_key": "minimum Linf, first prototype attaining minimum, fine rank, coarse rank, numeric rank, cell",
+    "linf_then_l1_then_l2_key": "minimum over prototypes of (Linf,L1,L2,prototype index), then exact tuple, coordinates, cell",
+    "linf_then_l2_then_l1_key": "minimum over prototypes of (Linf,L2,L1,prototype index), then exact tuple, coordinates, cell",
+    "lexicographic_deviation_profile_key": "minimum over prototypes of (largest deviation,middle deviation,smallest deviation,prototype index), then exact tuple, coordinates, cell",
+    "primary_distance_changed": false,
+    "prototype_refit": false,
+    "coordinate_refit": false,
+    "candidate_execution": false,
+    "target_labels_used_to_construct_orders": 0
+  },
+  "selection_contract": {
+    "calibration_object": "A313 independently confirmed W44 prefix",
+    "selection_rule": "minimum_A313_rank_then_frozen_candidate_index",
+    "deployment_object": "exact paired W45 hierarchical-Linf order, reusable unchanged for a later untouched execution",
+    "manual_override": false,
+    "A322_progress_or_result_used": false,
+    "A325_public_challenge_features_used": false,
+    "A325_target_label_prefix_filter_or_result_used": false
+  },
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "independent calibration label only",
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_any_order_or_selection": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A322_or_A325": 0,
+    "operator_refits_on_A322_or_A325": 0
+  }
+}

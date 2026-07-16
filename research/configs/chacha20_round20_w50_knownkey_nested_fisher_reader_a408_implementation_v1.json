@@ -1,0 +1,58 @@
+{
+  "A401_A406_results_available_at_freeze": false,
+  "A408_label_scores_available_at_freeze": false,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A401_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+      "sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c"
+    },
+    "A401_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+      "sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1"
+    },
+    "A401_public_corpus": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+      "sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3"
+    },
+    "A401_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "A406_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_implementation_v1.json",
+      "sha256": "f6a6e539ee84e03899817e072d09d2b55756419580113990f629f358e93b9236"
+    },
+    "A406_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_weighted_reader_a406.py",
+      "sha256": "7db8f5234cc2d03c685d2f42babe1274438add56cc0bcde28f66c2e32520e2b9"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_design_v1.json",
+      "sha256": "92e95a7a45025f5fdbb88d755f0a10b034e4f96bc2a07fe97cd6b53b38edb037"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_knownkey_nested_fisher_reader_a408.sh",
+      "sha256": "a41766f275e636dd5dbe0277f9a8bb2cf7487d887a76b6c213b97a675fc28054"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_nested_fisher_reader_a408.py",
+      "sha256": "a398bc6b1b8f669bc2b3b0b8666c5f03c12c4f46fb79c1d5eaf8de13f392b5ab"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_knownkey_nested_fisher_reader_a408.py",
+      "sha256": "18a7c8e641e817d87ab00c1dda41b202f4f3668bc9f5dc7d99aecd67a65587a9"
+    }
+  },
+  "attempt_id": "A408",
+  "candidate_count": 28,
+  "candidate_family_commitment_sha256": "9f0590adfad8d2a55a9620a9b36f0418a87e0041efeeeca5d1e0d6166e5cd5c1",
+  "commitment_state": "complete_nested_fisher_code_frozen_before_A401_A406_results_or_A408_label_score",
+  "design_sha256": "92e95a7a45025f5fdbb88d755f0a10b034e4f96bc2a07fe97cd6b53b38edb037",
+  "feature_dimension": 80,
+  "implementation_commitment_sha256": "943a6cb2e9880c887285c88ddf852dcbe6a673407b6b13226d0be723a686f92d",
+  "schema": "chacha20-round20-w50-knownkey-nested-fisher-reader-a408-implementation-v1"
+}

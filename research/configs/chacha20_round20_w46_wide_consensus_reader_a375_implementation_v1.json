@@ -1,0 +1,74 @@
+{
+  "A361_compressed_measurement_shard_content_opened_at_implementation_freeze": false,
+  "A361_secret_or_true_prefix_available_at_implementation_freeze": false,
+  "anchors": {
+    "A361_measurement_metadata": {
+      "path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_measurement_v1.json",
+      "sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc"
+    },
+    "A366_result": {
+      "path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_reader_a366_v1.json",
+      "sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8"
+    },
+    "A366_runner": {
+      "path": "research/experiments/chacha20_round20_w46_cross_corpus_invariant_reader_a366.py",
+      "sha256": "c3ea91a0e5dd651a7196e6c576c889cdbdc0b420410d2fff4aaa5f6823ef310d"
+    },
+    "A367_prepared": {
+      "path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_validation_a367_prepared_v1.json",
+      "sha256": "26c5870671f5ca2aedddb50b4f924531b06e37a9083e1588d2cbd0128f1abf6a"
+    },
+    "A367_result": {
+      "path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_validation_a367_v1.json",
+      "sha256": "bb60cb96295b7ba06d46f20ff1537287b1059e990162d3ee3dedfd8909aee568"
+    },
+    "A367_runner": {
+      "path": "research/experiments/chacha20_round20_w46_cross_corpus_invariant_validation_a367.py",
+      "sha256": "23537586ed7563396e346e5428b9f96f1970d28ed1a9f102e0ec5a22ee8d5087"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_wide_consensus_reader_a375_design_v1.json",
+      "sha256": "9781f36182718556fb1e7ef5045eb3ce5db58dd9d079fc9bc5811ae92d73318a"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_wide_consensus_reader_a375.sh",
+      "sha256": "58fd4823e3f0dcfefef00a8cfbd9e6bf0713ed619787635f7d0bdb5f685c8b2e"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+      "sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_wide_consensus_reader_a375.py",
+      "sha256": "6241c9dd2dfd269ea880a1e8876323b5d7ee08c4736b6ccde4d95d91fd8f91aa"
+    }
+  },
+  "attempt_id": "A375",
+  "candidate_assignments_executed_at_implementation_freeze": 0,
+  "commitment_state": "frozen_before_formal_A375_selection_A361_shard_read_order_candidate_or_prefix",
+  "design_sha256": "9781f36182718556fb1e7ef5045eb3ce5db58dd9d079fc9bc5811ae92d73318a",
+  "implementation_commitment_sha256": "63db4c87588cfa1acc5787a013f5aace20dd5294af9f40be7b0f58ec9246c607",
+  "model_specs": {
+    "broad_intersection": {
+      "aggregator": "maximum_member_rank",
+      "pool": "positive_block_count",
+      "pool_size": 128
+    },
+    "broad_quantile": {
+      "aggregator": "member_rank_quantile_0.75",
+      "pool": "all128_gain",
+      "pool_size": 128
+    },
+    "sparse_reciprocal": {
+      "aggregator": "reciprocal_rank_sum",
+      "pool": "positive_block_count",
+      "pool_size": 8
+    },
+    "wide_vote": {
+      "aggregator": "top64_vote_then_mean_rank",
+      "pool": "balanced_corpus_gain",
+      "pool_size": 64
+    }
+  },
+  "schema": "chacha20-round20-w46-wide-consensus-reader-a375-implementation-v1"
+}

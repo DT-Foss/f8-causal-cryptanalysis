@@ -1,0 +1,96 @@
+{
+  "schema": "chacha20-round20-w45-frozen-operator-panel-a330-design-v1",
+  "attempt_id": "A330",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "What exact full-round W45 search rank does the independently confirmed A322 prefix occupy in every operator order frozen before that prefix is known?",
+  "source_anchors": {
+    "A321_order_path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+    "A321_order_sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2",
+    "A322_protocol_path": "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+    "A322_protocol_sha256": "5fdd681b97ba452acf713b845423752c9413c07bcd5baf3dfa3c3c78eaa741a4",
+    "A322_runner_path": "research/experiments/chacha20_round20_holdout_selected_w45_recovery_a322.py",
+    "A322_runner_sha256": "37e72eb3f5c043b26a1308ea38337970ab48357b4c9b3aea9be2a5d1b99048e8",
+    "A326_order_path": "research/results/v1/chacha20_round20_diversity_fused_operator_a326_order_v1.json",
+    "A326_order_sha256": "b45610e6439157002d4a3878e8ed9fec25a967f4efbc2e154738f76ff2875865",
+    "A327_order_path": "research/results/v1/chacha20_round20_hierarchical_linf_operator_a327_order_v1.json",
+    "A327_order_sha256": "7c077a4e8eeb3ab83c4fae931f94882c87369cedb18bd19b2766e04e9b72c90f",
+    "A329_order_path": "research/results/v1/chacha20_round20_linf_stability_merge_a329_order_v1.json",
+    "A329_order_sha256": "05d1049a1304a3160ca6e50a667a56ac4ff194fe913d3e570df2e813023b3512"
+  },
+  "source_alias_order": {
+    "A321_A314": [
+      "online_four_center_band",
+      "online_weighted_dovetail_2_to_1",
+      "raw_nearest_prototype_L1",
+      "raw_nearest_prototype_Linf",
+      "raw_nearest_prototype_squared_L2",
+      "whitened_shrinkage_mahalanobis",
+      "whitened_diagonal_variance_L2",
+      "whitened_pairwise_median_scaled_L1",
+      "A314_three_arm_portfolio"
+    ],
+    "A326": [
+      "min_rank_wavefront",
+      "top2_rank_sum",
+      "borda_rank_sum",
+      "fixed_point_rrf_k60",
+      "stability_weighted_borda",
+      "stability_weighted_fixed_point_rrf_k60"
+    ],
+    "A327": [
+      "original_linf",
+      "linf_then_l1_then_l2",
+      "linf_then_l2_then_l1",
+      "lexicographic_deviation_profile"
+    ],
+    "A329": [
+      "original_raw_linf",
+      "stable_first",
+      "stable_switched_1_to_1",
+      "stable_switched_2_to_1",
+      "switched_stable_2_to_1_control"
+    ]
+  },
+  "deduplication_contract": {
+    "identity": "uint16be SHA-256 of the complete 4096-cell order",
+    "canonical_alias": "first alias in source family order A321_A314, A326, A327, A329",
+    "all_aliases_retained": true,
+    "duplicate_candidate_execution": false
+  },
+  "designated_comparisons": {
+    "executed_A322_order": "A321_A314/raw_nearest_prototype_Linf",
+    "A314_baseline": "A321_A314/A314_three_arm_portfolio",
+    "A329_primary": "A329/stable_switched_2_to_1",
+    "A329_matched_direction_control": "A329/switched_stable_2_to_1_control",
+    "A329_aggressive_arm": "A329/stable_first"
+  },
+  "post_confirmation_metrics": [
+    "one-based prefix rank for every retained alias and every unique order",
+    "exact counterfactual complete-group candidate evaluations equal to rank times 2^33",
+    "gain bits log2(4096/rank) against the complete 2^45 residual domain",
+    "speed factor against the executed raw-Linf order and A314 baseline",
+    "predeclared A329 primary versus raw Linf versus matched direction control",
+    "family winner by rank with frozen alias-order tie-break",
+    "global oracle winner labeled descriptive rather than prospectively selected"
+  ],
+  "evaluation_gate": {
+    "A322_result_required": true,
+    "A322_result_sha256_required_as_argument": true,
+    "independent_confirmation_required": true,
+    "confirmed_prefix_only_secret_derived_input": true,
+    "orders_refit_after_A322": false,
+    "new_candidate_execution": false,
+    "matched_control_counterfactual_not_inferred": true
+  },
+  "information_boundary": {
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_panel_membership_order_or_metrics": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_to_construct_orders": 0,
+    "duplicate_candidate_execution_required": false
+  }
+}

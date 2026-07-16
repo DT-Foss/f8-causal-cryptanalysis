@@ -1,0 +1,124 @@
+{
+  "anchors": {
+    "A342_result": {
+      "path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+      "sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+    },
+    "A350_result": {
+      "path": "research/results/v1/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json",
+      "sha256": "a51919d30fc66ee5e581c87d6f2c5dc32cdabe71b51ce79c0a56a12e7325b3f3"
+    },
+    "A354_result": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_coordinate_codec_audit_a354_v1.json",
+      "sha256": "9fc3487266aee3f4e637b9a1afc0b434a5f0c56fa430e9aa14b576cfe8782ac4"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A396_result": {
+      "path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.json",
+      "sha256": "0dd39b595bd111c88b1c94c325c1039a041211e8e11e1e79f71c6470cc8edff8"
+    },
+    "A398_result": {
+      "path": "research/results/v1/chacha20_round20_w50_dual_direct12_eight_reader_a398_v1.json",
+      "sha256": "fe37839fe18e71166a5d727cb14be96eca53bb6cce2cc3824f5bc4bd885dfd42"
+    },
+    "A398_runner": {
+      "path": "research/experiments/chacha20_round20_w50_dual_direct12_eight_reader_a398.py",
+      "sha256": "a93b2dbff677d06ccb15e3766a9c60c5b647672089e6763fc59b5e397dd1feee"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_direct12_transfer_diversity_schedule_a400_design_v1.json",
+      "sha256": "1ad673a38b18d0e4f27e45b789dc7c1c0b3d558ff9a182c0c886c0fcde461bdf"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_direct12_transfer_diversity_schedule_a400.sh",
+      "sha256": "61cfa452d78d3b0e52055fd21f37e1247602b8fc6f5eba0cd83046527f4ca0fa"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_direct12_transfer_diversity_schedule_a400.py",
+      "sha256": "0d125ab9ca1a857bf6397a200669fdf483158a99a572cbcbd4a188f437bb484e"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_direct12_transfer_diversity_schedule_a400.py",
+      "sha256": "303e2e60081e45af98b5895f5e3ceeb713f11b62c44f137c89bb185d28ba7274"
+    }
+  },
+  "atlas_commitment_sha256": "6c7663b36657050dcb885fecc145be7fc7b1c4c06e46da91ac64efd8bf373340",
+  "attempt_id": "A400",
+  "candidate_assignments_available_at_freeze": 0,
+  "commitment_state": "frozen_after_complete_unlabeled_W50_atlas_and_rule_selection_before_A400_schedule_or_candidate_execution",
+  "design_sha256": "1ad673a38b18d0e4f27e45b789dc7c1c0b3d558ff9a182c0c886c0fcde461bdf",
+  "implementation_commitment_sha256": "f89112bd2a7f88900f599794f8a70b1dbb3dc017db631feb63acbbcc23d32e8f",
+  "schema": "chacha20-round20-w50-direct12-transfer-diversity-schedule-a400-implementation-v1",
+  "selected_companion": {
+    "W50_diversity_to_primary": {
+      "spearman_rank_correlation": 0.7998454008508527,
+      "top_k_overlap": {
+        "1024": {
+          "fraction_of_each_top_k": 0.6962890625,
+          "intersection": 713
+        },
+        "128": {
+          "fraction_of_each_top_k": 0.6328125,
+          "intersection": 81
+        },
+        "256": {
+          "fraction_of_each_top_k": 0.62109375,
+          "intersection": 159
+        },
+        "32": {
+          "fraction_of_each_top_k": 0.53125,
+          "intersection": 17
+        },
+        "512": {
+          "fraction_of_each_top_k": 0.654296875,
+          "intersection": 335
+        },
+        "64": {
+          "fraction_of_each_top_k": 0.609375,
+          "intersection": 39
+        }
+      }
+    },
+    "absolute_W50_spearman_to_primary": 0.7998454008508527,
+    "corrected_W46_rank_one_based": 808,
+    "eligible": true,
+    "view": "A342_selected_triple_slice_z"
+  },
+  "selection_contract": {
+    "companion_candidate_set": "all seven remaining complete Direct12 views",
+    "eligibility_rule": "corrected A354 rank at the actual A348 measured W46 cell must be at most 1024 of 4096",
+    "eligibility_threshold_rank_one_based": 1024,
+    "locked_primary_reason": "prospective A350 recovery completed at exact rank 445 in the independently frozen A349 order",
+    "locked_primary_view": "A342_selected_pair_slice_z",
+    "selection_after_measurement": true,
+    "selection_after_target_label_or_candidate_execution": false,
+    "selection_rule": "among eligible non-primary candidates minimize absolute Spearman rank correlation with the locked primary on the complete unlabeled W50 field; ties minimize corrected A354 W46 rank and then the frozen view name"
+  },
+  "source_order_uint16be_sha256": {
+    "A379_target_free": "05e306514ae8796aec995f4a1863d9c3ea038b3cb3f76809813caaf53fd9a837",
+    "A380_target_conditioned": "660257af63acf6ce52c71795864002fa51df6b31dfd9776f85fad8b50e4919c0",
+    "A388_W50_public_output_direct12_pair": "0094ac40b27b065888b56adce115bf4d54c0f0ba86dc1c7e87dff09f2f745f70",
+    "A400_W50_public_output_direct12_companion": "ef148c91585092423904683ed5aa99aaedefee4253f80868272ed968b4ad32b9",
+    "broad_intersection": "db43b484f4058dff7c0b5bda1ecee6f1f718a86a26bf6c7a22d56fb90669ce20",
+    "broad_quantile": "7451a251cd89a1f3aa982fb6698773c2bad16b9dab529c617b52aee005c111f6",
+    "sparse_reciprocal": "d98026f2211103253ae9e241e91f8766866faea0be3d864b0a4c88e8754ea16b",
+    "wide_vote": "9d8c25ebbc6b695285b870933e8344ff8df14c066d44dd7b705cf099d8c82b01"
+  },
+  "view_order_uint16be_sha256": {
+    "A340_selected8_global_raw": "90c009d88a9005913741ac408af4c0fa6d17a374818d4aa5aa2ef0f1a89d5e4d",
+    "A340_selected8_slice_z": "dc6d61abec9fc35f40e6ff85a8aa2c80a52c60973539e42fc990a8711cba3094",
+    "A341_selected_single_global_raw": "b01d5ce1ae725156c0d874605b798f38ed63c6ee954e6bc74a272dbae4a3595e",
+    "A341_selected_single_slice_z": "6b5b15d93dfd0511f2cf283a0b6934a3afdb19b515074df7d56769064577a6b9",
+    "A342_selected_pair_global_raw": "a25527e137e1aa5d1aa39ce5d38a9ee5249ba423662667951cd4f1d6228aedc0",
+    "A342_selected_pair_slice_z": "0094ac40b27b065888b56adce115bf4d54c0f0ba86dc1c7e87dff09f2f745f70",
+    "A342_selected_triple_global_raw": "2b4946bb10831d66beae529dae674dbe00aa7fbb972c1edd1d0a6528c321809f",
+    "A342_selected_triple_slice_z": "ef148c91585092423904683ed5aa99aaedefee4253f80868272ed968b4ad32b9"
+  }
+}

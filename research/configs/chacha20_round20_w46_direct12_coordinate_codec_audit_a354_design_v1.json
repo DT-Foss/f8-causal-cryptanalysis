@@ -1,0 +1,65 @@
+{
+  "attempt_id": "A354",
+  "audit_contract": {
+    "A325_assignment_codec": "metal_group_prefix12_equals_word0_bits20_through31",
+    "A348_measured_cell_codec": "direct12_cell_equals_assignment_bits34_through45",
+    "A348_rank_panel_recomputed_at_actual_measured_cell": true,
+    "A348_result_bytes_modified": false,
+    "A349_order_bytes_modified": false,
+    "A350_live_recovery_interrupted": false,
+    "A351_factor2_permutation_bound_preserved": true,
+    "candidate_execution_performed": false
+  },
+  "correction_scope": {
+    "A345_and_A325_metal_recoveries": "unaffected",
+    "A348": "complete measurement retained; coordinate interpretation and scored label corrected",
+    "A349": "complete target-label-free public-output order retained; same-coordinate Metal-prefix interpretation withdrawn",
+    "A350": "prospectively frozen public-output-derived permutation execution remains valid",
+    "A351": "exact permutation theorem remains valid; second-source mechanism label corrected",
+    "A352_and_A353": "frozen representation branch retained but not execution-ready"
+  },
+  "design_state": "frozen_after_coordinate_discovery_before_corrected_successor_measurement",
+  "next_gate": {
+    "correct_high8_assumption_coordinates": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24
+    ],
+    "correct_low4_fixed_unit_coordinates": [
+      23,
+      22,
+      21,
+      20
+    ],
+    "correct_synthetic_reader_mapping": "source_mapping[0:12] concatenated with source_mapping[24:32]",
+    "required_successor": "complete corrected direct12 measurement over Metal group word0 bits20 through31"
+  },
+  "schema": "chacha20-round20-w46-direct12-coordinate-codec-audit-a354-design-v1",
+  "source_anchors": {
+    "A296_runner_path": "research/experiments/chacha20_round20_causal_search_gain_panel_a296.py",
+    "A296_runner_sha256": "7b2a4423e71c87751389fcccea05839ad5ca2b8524d6c821d9f23cb7b30dd936",
+    "A223_runner_path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+    "A223_runner_sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0",
+    "A325_result_path": "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_result_sha256": "534d2d769f387bca90b9ab1f2c43a98a6030c1e3c1039270c1d2e109a38d7ce2",
+    "A344_result_path": "research/results/v1/chacha20_round20_w46_a343_corrected_evaluation_a344_v1.json",
+    "A344_result_sha256": "8a4176cf2e04ff7d21144778cb28dd6264a05a6ee1360e17a7f4e87e57738fa0",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A348_runner_path": "research/experiments/chacha20_round20_w46_direct12_sliced_reader_a348.py",
+    "A348_runner_sha256": "eec2764ed5a8f4875df7afa3ea5a6257a095093b2471450fe63db7c5d35c8e2b",
+    "A349_order_path": "research/results/v1/chacha20_round20_w46_direct12_prospective_a345_validation_a349_order_v1.json",
+    "A349_order_sha256": "d2cbc5cbfe4765d7fd3681f92c4881a962d6b856d86a88bf9c9af716867dc96e",
+    "A349_runner_path": "research/experiments/chacha20_round20_w46_direct12_prospective_a345_validation_a349.py",
+    "A349_runner_sha256": "393ce0d583e7f3e00ad9522938460ae0313dcdd45f1ad36023feadb6881f2aa0",
+    "A340_preflight_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_preflight_v1.json",
+    "A340_preflight_sha256": "129f4f7cec98322cdf7b60a0e25e7286fd1f6712339181f30bf9b4b05f77f5f6",
+    "A351_order_path": "research/results/v1/chacha20_round20_w46_dual_order_factor2_portfolio_a351_order_v1.json",
+    "A351_order_sha256": "f1087d76e7b98e918e6d7ecca2ae1ac53761dde3f33452a8f3dc37feb68eb61c"
+  }
+}

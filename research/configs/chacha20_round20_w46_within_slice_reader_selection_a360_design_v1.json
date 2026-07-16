@@ -1,0 +1,135 @@
+{
+  "attempt_id": "A360",
+  "deployment_contract": {
+    "global_group_order": "round-robin the frozen within-slice order across low4 slices 0 through 15 at every within-slice rank",
+    "global_group_rank_exact_formula": "16 * (within_slice_rank - 1) + true_low4 + 1",
+    "global_group_rank_upper_bound": "16 * within_slice_rank",
+    "prefix_group_domain": 4096,
+    "target": "A361 fresh or still-unresolved public W46 relation after A360 holdout closure"
+  },
+  "design_state": "frozen_after_A359_preparation_before_any_A359_solver_measurement_or_selection_shard",
+  "feature_contract": {
+    "base_features": 133,
+    "candidate_cells_per_target": 256,
+    "channels": 13,
+    "effect_vector": "targetwise_normalized_feature_at_true_high8 minus mean_over_255_wrong_high8_cells",
+    "feature_extractor": "A275 _target_feature_matrix over complete horizons 1,2,4,8",
+    "feature_names": 532,
+    "orbit_transforms": [
+      "raw_z",
+      "xor_laplacian",
+      "xor_gradient_l2",
+      "xor_gradient_maxabs"
+    ],
+    "targetwise_normalization": "center and unit-standard-deviation each of 532 columns across the complete 256-cell target; constants become zero"
+  },
+  "holdout_contract": {
+    "familywise_shared_xor_offsets": 256,
+    "holdout_targets": 16,
+    "labels_enter_only_after_each_target_complete_cover": true,
+    "predeclared_views": [
+      "primary_reader",
+      "diverse_secondary_reader",
+      "equal_borda_primary_secondary",
+      "exact_factor2_min_rank_wavefront",
+      "numeric_control"
+    ],
+    "primary_retention_gate": {
+      "exact_shared_xor_p_maximum": 0.05,
+      "mean_log2_rank_bit_gain_minimum_exclusive": 0.0,
+      "targets_at_or_above_median_rank_threshold_minimum": 9
+    },
+    "selection_model_or_weights_changed_after_holdout_open": false,
+    "within_slice_median_rank_threshold": 128
+  },
+  "information_boundary": {
+    "A359_prepared_manifest_available_at_design_freeze": true,
+    "A359_selection_measurement_shards_available_at_design_freeze": 0,
+    "A359_solver_measurement_started_at_design_freeze": false,
+    "family_definitions_changed_from_selection_or_holdout_outcomes": false,
+    "holdout_measurement_files_opened_during_selection": 0,
+    "holdout_results_available_at_primary_or_secondary_freeze": false,
+    "selection_and_holdout_low4_balanced_and_disjoint": true,
+    "selection_model_frozen_and_hashed_before_holdout_readback": true
+  },
+  "learner_factory": {
+    "candidate_reader_count": 785,
+    "consensus_readers": [
+      "median_effect",
+      "sign_vote",
+      "stability_weighted_mean"
+    ],
+    "covariance_lowrank_alphas": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "covariance_lowrank_readers": 6,
+    "full_studentized_topk": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      532
+    ],
+    "full_studentized_readers": 48,
+    "mean_mask_readers": 90,
+    "mean_masks": "one full mask, four transform masks, seventeen semantic-source masks, sixty-eight source-by-transform masks",
+    "single_feature_signed_readers": 532,
+    "source_studentized_alphas": [
+      0.1,
+      1.0
+    ],
+    "source_studentized_readers": 34,
+    "studentized_alpha_grid": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "transform_studentized_readers": 72,
+    "transform_studentized_topk": [
+      8,
+      32,
+      "all"
+    ],
+    "weight_normalization": "unit L2; a zero vector remains zero"
+  },
+  "schema": "chacha20-round20-w46-within-slice-reader-selection-a360-design-v1",
+  "selection_contract": {
+    "diverse_secondary_pool": 32,
+    "diverse_secondary_rule": "among the 32 best leave-one-target-out readers excluding primary, minimize absolute Spearman correlation to the primary over all 16x256 selection rank fields; tie by mean log2 rank then name",
+    "familywise_null": "for every shared XOR offset 0 through 255, repeat the frozen leave-one-target-out family competition and retain the best mean log2 rank across all 785 readers",
+    "final_fit": "refit only the already selected primary and secondary definitions on all sixteen selection effect vectors",
+    "leave_one_target_out_folds": 16,
+    "primary_rule": "minimum leave-one-target-out mean log2 true-high8 rank; tie by smallest worst rank then lexicographic reader name",
+    "selection_targets": 16,
+    "selection_truth_usage": "true high8 enters only after each complete 256-cell shard is measured"
+  },
+  "source_anchors": {
+    "A275_feature_reader_path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+    "A275_feature_reader_sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b",
+    "A359_design_path": "research/configs/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_design_v1.json",
+    "A359_design_sha256": "8bbfc9853a9bcd2f42001411d1a46f722d7d8c0bf8038e95994ea3e414b7f7f9",
+    "A359_implementation_path": "research/configs/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_implementation_v1.json",
+    "A359_implementation_sha256": "0f179fac4b1e444367f7cc8131ecee94e8750ddadea7710044368f62c988d8f6",
+    "A359_prepared_path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_prepared_v1.json",
+    "A359_prepared_sha256": "3e508df1af059116eba9d288cd55d3c34800ff8c9d9f6dc17f7989229df5372e",
+    "A359_runner_path": "research/experiments/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+    "A359_runner_sha256": "5bb1d21b9790b98e09d1fb540f5673c10ab484dc5a539c4c0242d11538461b99",
+    "score_hypercube_path": "src/arx_carry_leak/score_hypercube.py",
+    "score_hypercube_sha256": "45e18296ac12a80caafbc930815c8bb8db6e37d2813e59d64e2396765e6f2265",
+    "solver_trajectory_shape_path": "src/arx_carry_leak/solver_trajectory_shape.py",
+    "solver_trajectory_shape_sha256": "44056b27937c1b4f1ab9af2dfaf904ad3b5f239deda05519c2e9a16f9f1e8160",
+    "trajectory_contribution_path": "src/arx_carry_leak/trajectory_contribution.py",
+    "trajectory_contribution_sha256": "edcee636acf826a7c7cc737bd72193731b2272986857156543762baa6054aba3"
+  }
+}

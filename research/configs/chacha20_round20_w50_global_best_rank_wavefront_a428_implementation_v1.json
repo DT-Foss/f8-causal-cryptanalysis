@@ -1,0 +1,94 @@
+{
+  "A428_candidate_schedule_measurements_available_at_freeze": 0,
+  "A428_production_candidate_assignments_available_at_freeze": 0,
+  "anchors": {
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A416_result": {
+      "path": "research/results/v1/chacha20_round20_w50_folded_xor_portfolio_a416_v1.json",
+      "sha256": "7623bd8d1a11d00c771e8aa24e2e3847dafe92ebbfffa34e761434a09a24b686"
+    },
+    "A427_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_v1.causal",
+      "sha256": "c05aa4fc5158c20000a4c6903e29e2f82753638f221a086dd54f105605b7da64"
+    },
+    "A427_model": {
+      "path": "research/configs/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_model_v1.json",
+      "sha256": "e9080666d97dd714c1ba6ee40070c1d1a1ad6789597f0fd0b48f831f18b3eb08"
+    },
+    "A427_result": {
+      "path": "research/results/v1/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_v1.json",
+      "sha256": "8255e600234731179a1431a1f1e36e4ab1cdab6082bea52191b8a4eb79f1c248"
+    },
+    "A427_runner": {
+      "path": "research/experiments/chacha20_round20_w50_majority_3to1_complete_portfolio_a427.py",
+      "sha256": "cb8d8c9a12799a7fe1ccd37f0ec0af72234104ffbf8b6081b2c0ec13d4271cb8"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_global_best_rank_wavefront_a428_design_v1.json",
+      "sha256": "f9c1ab5b129b874572fb17c8799309a41beee9a8d246c30003739103f97735f0"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_global_best_rank_wavefront_a428.sh",
+      "sha256": "896f1d36654fd6bee6e229d247695ccc21fa8b74c64eb1c60afb42fc621d2d84"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_global_best_rank_wavefront_a428.py",
+      "sha256": "f7f60c7e4fdf68fbde9de7563ba4a3b2498054ecddb0e9be17a43489c591c705"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_global_best_rank_wavefront_a428.py",
+      "sha256": "04a7a5ba4c8ff49bdc481f86663cb7e78bb45ac7800b86096df7013002f6ab6b"
+    }
+  },
+  "attempt_id": "A428",
+  "commitment_state": "complete_global_wavefront_frozen_before_any_A428_candidate_schedule_measurement_or_production_execution",
+  "design_sha256": "f9c1ab5b129b874572fb17c8799309a41beee9a8d246c30003739103f97735f0",
+  "evaluation_contract": {
+    "diagnostic_external_targets": "A412 targets 16 through 31",
+    "primary_comparator": "A427 minimum-rank owner-lane scheduler reconstructed on the identical field",
+    "primary_metric": "geometric mean exact static worker epoch at the true Direct12 cell",
+    "production_execution_in_this_attempt": false,
+    "production_rule": "materialize the same fixed wavefront on the existing A388 public-output field only if the complete scheduler proof passes",
+    "secondary_comparator": "A416 owner-lane scheduler reconstructed on the identical field",
+    "selection_targets": "A412 targets 0 through 15",
+    "supporting_metrics": [
+      "pointwise better equal worse target counts",
+      "worst exact worker epoch",
+      "maximum backlog removed in epochs",
+      "complete 4096-cell schedule proof"
+    ]
+  },
+  "implementation_commitment_sha256": "d6cfff8b0d6bf6c4aebc7e3bd36f379d16591bd321311ce78670f647754929d2",
+  "mechanism": {
+    "cell_primary_score": "minimum one-based rank across the eight frozen source Readers",
+    "cell_tie_break_1": "lexicographically sorted complete eight-rank vector",
+    "cell_tie_break_2": "index of the first source attaining the minimum rank in frozen source-role order",
+    "cell_tie_break_3": "cell integer",
+    "cells": 4096,
+    "complete_cover_required": true,
+    "complete_epochs": 512,
+    "duplicate_cells_allowed": false,
+    "global_order": "ascending lexicographic order of the complete score tuple",
+    "new_solver_stages": 0,
+    "reader_refits": 0,
+    "source": "the eight complete A427 Reader permutations",
+    "worker_assignment": "successive groups of eight globally ordered cells form one epoch; within each epoch cells map to workers in frozen source-role order",
+    "workers": 8
+  },
+  "packaging_amendment": {
+    "amended_runner_sha256": "f7f60c7e4fdf68fbde9de7563ba4a3b2498054ecddb0e9be17a43489c591c705",
+    "candidate_schedule_measurement_available_before_fix": false,
+    "prior_implementation_sha256": "14ffd78e72c87322051d1a3ff5c9e1419e07c28542166a1e684fbbbade3b8941",
+    "prior_runner_sha256": "cc865810f5a724c266b5ff8a88627e756d46f3f49ee7ff7d4ab5c284b03fea1c",
+    "production_candidate_assignments_executed_before_fix": 0,
+    "production_schedule_available_before_fix": false,
+    "reason": "use the authentic dotcausal v1 save and verified CausalReader API",
+    "schema": "chacha20-round20-w50-a428-causal-packaging-amendment-v1",
+    "scientific_design_changed": false,
+    "wavefront_algorithm_changed": false
+  },
+  "schema": "chacha20-round20-w50-global-best-rank-wavefront-a428-implementation-v1"
+}

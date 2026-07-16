@@ -1,0 +1,60 @@
+{
+  "schema": "chacha20-round20-w46-a367-reader-portfolio-sealed-a361-order-a368-design-v1",
+  "attempt_id": "A368",
+  "design_state": "frozen_after_A366_and_A361_measurement_before_A367_result_or_A361_shard_content_read",
+  "gate_contract": {
+    "required_attempt": "A367",
+    "retention_gate_passed_required": true,
+    "minimum_retained_model_count": 1,
+    "A367_result_available_at_A368_design_freeze": false
+  },
+  "reader_contract": {
+    "A366_result_file_sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8",
+    "A366_selection_commitment_sha256": "b5fc9d9147cf5dc2c07f7534d57584046d58be53e98115c210c2512a2cba9faa",
+    "eligible_model_roles": [
+      "primary",
+      "diverse_companion",
+      "coverage_companion",
+      "best_single"
+    ],
+    "reader_refits": 0
+  },
+  "sealed_measurement_contract": {
+    "A361_measurement_sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc",
+    "A361_measurement_commitment_sha256": "9fc46a4e78b849f3e0d64b5dc591431e531682563907f78d0b80caa12e500b55",
+    "complete_low4_slices": 16,
+    "complete_direct12_cells": 4096,
+    "compressed_shard_semantics_read_before_A367_gate": false
+  },
+  "order_contract": {
+    "within_slice_order": "exact_rank_then_numeric_cell",
+    "per_reader_global_order": "rank_major_low4_round_robin",
+    "retained_reader_composition": "stable_min_source_rank_then_sum_source_ranks_then_role_ordered_source_ranks_then_cell",
+    "pointwise_bound": "R_portfolio(cell) <= k * min_retained_reader_rank(cell)",
+    "pointwise_bound_checked_cells": 4096,
+    "group_count": 4096,
+    "candidate_or_prefix_available_at_order_freeze": false,
+    "candidate_assignments_executed": 0
+  },
+  "information_boundary": {
+    "A361_secret_or_true_prefix_available": false,
+    "A361_compressed_measurement_shard_content_opened_before_A367_gate": false,
+    "A367_result_available_at_design_freeze": false,
+    "order_available_at_design_freeze": false,
+    "reader_roles_selected_from_A367_only_by_predeclared_pass_gate": true
+  },
+  "source_anchors": {
+    "A361_protocol_path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+    "A361_protocol_sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228",
+    "A361_preflight_path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_preflight_v1.json",
+    "A361_preflight_sha256": "9158edea44ff3884d60308517a7ede1df6b0c0faff2732d520ab61efa88d3d0a",
+    "A361_measurement_path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_measurement_v1.json",
+    "A361_measurement_sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc",
+    "A366_result_path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_reader_a366_v1.json",
+    "A366_result_sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8",
+    "A367_design_path": "research/configs/chacha20_round20_w46_cross_corpus_invariant_validation_a367_design_v1.json",
+    "A367_design_sha256": "d6b45f81ff3fce2ac187578388d218983b9725397b1d2385749ea57572616259",
+    "A367_implementation_path": "research/configs/chacha20_round20_w46_cross_corpus_invariant_validation_a367_implementation_v1.json",
+    "A367_implementation_sha256": "3891fad69134719110a6645a43315260b2d8d83e7c039f8b456a17bfe6e648fb"
+  }
+}

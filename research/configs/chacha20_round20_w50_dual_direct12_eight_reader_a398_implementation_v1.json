@@ -1,0 +1,153 @@
+{
+  "A388_measurement_sha256": "a557110a81e1c6168132b957decc068684bd460e0c5fedbdf476102e53f79ba8",
+  "A398_candidate_assignments_available_at_freeze": 0,
+  "anchors": {
+    "A342_result": {
+      "path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+      "sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A388_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    },
+    "A396_result": {
+      "path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.json",
+      "sha256": "0dd39b595bd111c88b1c94c325c1039a041211e8e11e1e79f71c6470cc8edff8"
+    },
+    "A396_runner": {
+      "path": "research/experiments/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396.py",
+      "sha256": "1de7350d841de615b74c6732e4767fda64f7ac07356de4ecba48953657419734"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_dual_direct12_eight_reader_a398_design_v1.json",
+      "sha256": "817defc870a84276d51a094e12e477c09394b88c0ffc34c532275e768d3c70bd"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_dual_direct12_eight_reader_a398.sh",
+      "sha256": "5a5471d6dda44f03b74182a5293af2b910f724d282b8b38bafa5037821a5e3da"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_dual_direct12_eight_reader_a398.py",
+      "sha256": "a93b2dbff677d06ccb15e3766a9c60c5b647672089e6763fc59b5e397dd1feee"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_dual_direct12_eight_reader_a398.py",
+      "sha256": "5665a9237366ba86c0b7748f3c4913e5097cb471a8cf733d97975d4b455f302b"
+    }
+  },
+  "attempt_id": "A398",
+  "commitment_state": "frozen_before_A398_owner_partition_schedule_or_candidate_execution",
+  "design_sha256": "817defc870a84276d51a094e12e477c09394b88c0ffc34c532275e768d3c70bd",
+  "implementation_commitment_sha256": "62df9838475a4ea6916c7b333cf065e2722df5241a0ec1447f06a89950a80202",
+  "pair_triple_diversity": {
+    "A388_W50_public_output_direct12_pair__vs__A398_W50_public_output_direct12_triple": {
+      "spearman_rank_correlation": 0.7998454008508527,
+      "top_k_overlap": {
+        "1024": {
+          "fraction_of_each_top_k": 0.6962890625,
+          "intersection": 713
+        },
+        "128": {
+          "fraction_of_each_top_k": 0.6328125,
+          "intersection": 81
+        },
+        "256": {
+          "fraction_of_each_top_k": 0.62109375,
+          "intersection": 159
+        },
+        "32": {
+          "fraction_of_each_top_k": 0.53125,
+          "intersection": 17
+        },
+        "512": {
+          "fraction_of_each_top_k": 0.654296875,
+          "intersection": 335
+        },
+        "64": {
+          "fraction_of_each_top_k": 0.609375,
+          "intersection": 39
+        }
+      }
+    }
+  },
+  "schema": "chacha20-round20-w50-dual-direct12-eight-reader-a398-implementation-v1",
+  "source_contract": {
+    "cells_per_order": 4096,
+    "complete_cover": true,
+    "first_six_sources": "byte-identical primitive source orders already bound by A396 from A382",
+    "owner_lane_rule": "sort each assigned cell by its owning source rank",
+    "owner_rule": "minimum one-based source rank; ties by frozen source-role order",
+    "pair_source": "byte-identical A388 W50 A342-selected-pair slice-z order",
+    "source_orders": 8,
+    "source_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12_pair",
+      "A398_W50_public_output_direct12_triple"
+    ],
+    "triple_source": {
+      "measurement_reuse": "the exact 16 A388 W50 Direct12 slice artifacts; no new solver stages",
+      "reader_refits": 0,
+      "score_rule": "negative sum of the three within-slice descending midranks followed by the unchanged A348 slice-z transform",
+      "selected_indices": [
+        17,
+        27,
+        33
+      ],
+      "selected_views": [
+        "learned_clause_length_max::coefficient_negative::normalized_8cube_graph_laplacian",
+        "learned_clause_length_std::coefficient_positive::normalized_8cube_graph_laplacian",
+        "learned_clause_rejected_large_stage::coefficient_negative::normalized_8cube_graph_laplacian"
+      ],
+      "selection_anchor": "A342 exhaustive familywise triple selected only on the earlier known-key corpus",
+      "target_labels": 0
+    },
+    "zero_duplicate_cells": true
+  },
+  "source_order_uint16be_sha256": {
+    "A379_target_free": "05e306514ae8796aec995f4a1863d9c3ea038b3cb3f76809813caaf53fd9a837",
+    "A380_target_conditioned": "660257af63acf6ce52c71795864002fa51df6b31dfd9776f85fad8b50e4919c0",
+    "A388_W50_public_output_direct12_pair": "0094ac40b27b065888b56adce115bf4d54c0f0ba86dc1c7e87dff09f2f745f70",
+    "A398_W50_public_output_direct12_triple": "ef148c91585092423904683ed5aa99aaedefee4253f80868272ed968b4ad32b9",
+    "broad_intersection": "db43b484f4058dff7c0b5bda1ecee6f1f718a86a26bf6c7a22d56fb90669ce20",
+    "broad_quantile": "7451a251cd89a1f3aa982fb6698773c2bad16b9dab529c617b52aee005c111f6",
+    "sparse_reciprocal": "d98026f2211103253ae9e241e91f8766866faea0be3d864b0a4c88e8754ea16b",
+    "wide_vote": "9d8c25ebbc6b695285b870933e8344ff8df14c066d44dd7b705cf099d8c82b01"
+  },
+  "triple_score_field_sha256": "dd12419a6af00ae8523270dffbb814bd2d85df143c15940fbb586959beee4b73",
+  "worker_contract": {
+    "claim_rule": "each worker consumes its nonempty owner queue; once empty it consumes the longest remaining owner queue; ties by frozen source-role order",
+    "epoch_rule": "exactly one complete W50 prefix group per worker per nonterminal epoch",
+    "group_cost_identity": "every W50 prefix executes exactly 128 disjoint 2^31 slabs before outcome evaluation",
+    "home_workers": 8,
+    "preserve_each_owner_queue_order": true,
+    "static_lists_replace_runtime_claim_race": true,
+    "target_makespan_epochs": 512,
+    "theorem_depth": "D_A398(c) <= D_owner(c) <= min_i R_i(c)",
+    "theorem_work": "W_A398(c) <= 8*min_i R_i(c)",
+    "theoretical_minimum_epochs": 512,
+    "worker_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12_pair",
+      "A398_W50_public_output_direct12_triple"
+    ],
+    "workers": 8
+  }
+}

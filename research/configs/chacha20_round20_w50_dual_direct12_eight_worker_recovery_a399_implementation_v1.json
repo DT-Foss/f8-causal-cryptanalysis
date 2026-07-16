@@ -1,0 +1,107 @@
+{
+  "A398_schedule_commitment_sha256": "1c18e293b7e6a7c25b37303a9cf30e5d0f85dd5b5f8aca4b2fd9d34ce757ca9a",
+  "A399_candidate_or_progress_available_at_implementation_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A397_protocol": {
+      "path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_v1.json",
+      "sha256": "447baf5e4784d0210f51e194f1a241b7fbfbf1ab239fe16582effdb4b435fb32"
+    },
+    "A397_runner": {
+      "path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+      "sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5"
+    },
+    "A398_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_dual_direct12_eight_reader_a398_v1.causal",
+      "sha256": "50d7f00989a4aa7288ef41e4a720b7f500d5d3ce4d966a65d445642d69b5d071"
+    },
+    "A398_result": {
+      "path": "research/results/v1/chacha20_round20_w50_dual_direct12_eight_reader_a398_v1.json",
+      "sha256": "fe37839fe18e71166a5d727cb14be96eca53bb6cce2cc3824f5bc4bd885dfd42"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_dual_direct12_eight_worker_recovery_a399_design_v1.json",
+      "sha256": "34c16528dd0abe1c289259295a8b8bff9596d829ef68e6135d703565a232960a"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_dual_direct12_eight_worker_recovery_a399.sh",
+      "sha256": "781ea6d194cbb1d111378abba0f11e121ec019b490ef7a64aac72ba2124be4e7"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_dual_direct12_eight_worker_recovery_a399.py",
+      "sha256": "6963d5e32d2a4fc5ea13d33d53a904fcccd0fe6c70b88bfa6d713b85aec21983"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_dual_direct12_eight_worker_recovery_a399.py",
+      "sha256": "ad8866df372e0d30ca3c542ce6daf77345df0ddc04b02d84a40c04b10e4d0544"
+    }
+  },
+  "attempt_id": "A399",
+  "commitment_state": "frozen_before_any_A399_candidate_progress_or_result",
+  "design_sha256": "34c16528dd0abe1c289259295a8b8bff9596d829ef68e6135d703565a232960a",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "independent_confirmation_bits": 8192,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "shared_stop_check": "before each next complete prefix group",
+    "slabs_per_prefix_group": 128,
+    "static_schedule_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "worker_task_counts": {
+      "A379_target_free": 512,
+      "A380_target_conditioned": 512,
+      "A388_W50_public_output_direct12_pair": 512,
+      "A398_W50_public_output_direct12_triple": 512,
+      "broad_intersection": 512,
+      "broad_quantile": 512,
+      "sparse_reciprocal": 512,
+      "wide_vote": 512
+    },
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "3f15cbd769a4f433a35169f6c549f4549f5bb530b486e1765afd707c75710e6a",
+  "launch_contract": {
+    "A397_first_available_slot_contract_remains_prior": true,
+    "first_A399_available_slot_worker": "A398_W50_public_output_direct12_triple",
+    "live_recoveries_must_not_be_interrupted": true,
+    "remaining_workers": "start independently as Metal slots become available after higher-priority frozen queue entries"
+  },
+  "schema": "chacha20-round20-w50-dual-direct12-eight-worker-recovery-a399-implementation-v1",
+  "worker_order_uint16be_sha256": {
+    "A379_target_free": "148717dfe6a23d722db3a2cd79012a3d0367b13898cf5acbe1e519d7737772a8",
+    "A380_target_conditioned": "a0dc5cce60b2fa39124eb93011ec80ae5976c42ea606ed3fc8f0e1de397605e1",
+    "A388_W50_public_output_direct12_pair": "6158239e08aabed5189d74d9bb3e7f5ac4ac8b4608e543f3938c6dd7c17895a8",
+    "A398_W50_public_output_direct12_triple": "369e7623b0a0b84961f3ec5732e42f94a76fae05bd3bc6d20b5b799b338918db",
+    "broad_intersection": "474d83d50ac25a832e64075c48a67545f380cc11287b447bc0f13f331464c0f6",
+    "broad_quantile": "a1f196599184c2ac6ae34e07bbc51c3d2274012ce60e95ab1359c2dec675beb9",
+    "sparse_reciprocal": "326bb0ff1cabc9769f68c296488a7253cc238713c559bf97ea2dd222414f98df",
+    "wide_vote": "5d5219a9b1903ba6e8fa13f139b4e8a2e7b952aa72f8c6c7eee5ac07b3a69e23"
+  },
+  "worker_task_list_sha256": {
+    "A379_target_free": "02202647f8f0ad74dbcf236504706c77dc07464c5c289c80b398e90dcd3c5dad",
+    "A380_target_conditioned": "1ae5b6cf535f4e87d38533d6857652f23387a88ee24b35178a6b7394ba07edcd",
+    "A388_W50_public_output_direct12_pair": "00cd6d9f49c52b6070955575b4efe0d8c1f984ba63a17767598f1a3c3d49c23c",
+    "A398_W50_public_output_direct12_triple": "95634320529e54e815d1aeb9ed5b586585e3c4f839786091a8dc18030e8e2dfc",
+    "broad_intersection": "e5b938f833f090474cab54a4a7c0ab00107ccc852963279cd46a7af7ae34f8cd",
+    "broad_quantile": "7b4d4b2d9446e78499b2639ca22b568b5c332dccaef65aae6838432948a848d6",
+    "sparse_reciprocal": "46c2a050f128ecd7d39884cbbb838087951cff2ae11f71ae302c8ad107492285",
+    "wide_vote": "05f9a53071230742f7c8e8cac8d6bf607943c45b453a8274d5f0cda3791cc3bd"
+  }
+}

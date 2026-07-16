@@ -1,0 +1,62 @@
+{
+  "attempt_id": "A382",
+  "design_state": "frozen_after_A375_selection_and_A380_complete_public_measurement_before_A382_W49_reader_scoring_order_candidate_prefix_or_recovery",
+  "information_boundary": {
+    "A375_models_frozen_on_disjoint_W46_knownkey_corpora": true,
+    "A380_complete_public_measurement_available_at_design_freeze": true,
+    "A380_measurement_target_labels_used": 0,
+    "A381_result_available_at_design_freeze": false,
+    "A382_candidate_assignments_executed_at_design_freeze": 0,
+    "A382_reader_scores_available_at_design_freeze": false,
+    "A382_true_prefix_or_assignment_available_at_design_freeze": false,
+    "reader_refits_on_W49": 0
+  },
+  "order_contract": {
+    "candidate_assignments_executed": 0,
+    "cells": 4096,
+    "exact_factor_bound": "R_A382(c) <= 6 * min_source R_source(c)",
+    "pointwise_bound_checked_cells": 4096,
+    "selected_operator": "direct_six_source_min_rank_wavefront",
+    "source_roles": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection"
+    ]
+  },
+  "reader_contract": {
+    "feature_count": 532,
+    "fixed_model_roles": [
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection"
+    ],
+    "model_count": 4,
+    "reader_refits_on_W49": 0,
+    "source_selection_attempt": "A375",
+    "target_labels_used": 0,
+    "transfer": "unchanged A375 definitions from W46 calibration to fresh W49 A380 measurements"
+  },
+  "schema": "chacha20-round20-w49-crosswidth-wide-consensus-factor6-a382-design-v1",
+  "source_anchors": {
+    "A375_result_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+    "A375_result_sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1",
+    "A375_runner_path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+    "A375_runner_sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1",
+    "A376_runner_path": "research/experiments/chacha20_round20_w46_a375_reader_sealed_a361_order_a376.py",
+    "A376_runner_sha256": "8a74a7cd015e77806809bacb2417ced7ea1deb0f4df7c8c51a06fa4b3daf8a31",
+    "A379_order_path": "research/results/v1/chacha20_round20_fresh_w49_pretarget_transfer_a379_order_v1.json",
+    "A379_order_sha256": "90e06848c9f608ae484b9cdf95d0ebcc64a0776b976470df436e82392caf02a5",
+    "A379_protocol_path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_v1.json",
+    "A379_protocol_sha256": "673b44d81f1e25490fd778b48d1ef0c6423ddda6716354c03f5212f68888903a",
+    "A380_causal_path": "research/results/v1/chacha20_round20_w49_target_conditioned_factor2_a380_order_v1.causal",
+    "A380_causal_sha256": "dc72f6663fa4389fc667fe3d70b423da9471a8ee829680b4f61820f18a652f39",
+    "A380_order_path": "research/results/v1/chacha20_round20_w49_target_conditioned_factor2_a380_order_v1.json",
+    "A380_order_sha256": "a5cc83121e8c0f58b91046e5d9d6f6b2476008984efae19675ee652e5c656ed8",
+    "A380_runner_path": "research/experiments/chacha20_round20_w49_target_conditioned_factor2_a380.py",
+    "A380_runner_sha256": "15ea505092459036f92f56d8628aecee7bfe48790e8f14b9aebc9befc0f3a20b"
+  }
+}

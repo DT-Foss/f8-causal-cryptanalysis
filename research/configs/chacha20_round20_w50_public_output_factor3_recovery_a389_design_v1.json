@@ -1,0 +1,62 @@
+{
+  "attempt_id": "A389",
+  "design_state": "frozen_while_A388_complete_measurement_runs_after_A388_implementation_and_preflight_before_A388_order_or_any_A389_candidate_prefix_or_result",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "filter_bits": 64,
+    "full_rounds": 20,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "public_output_blocks": 8,
+    "slabs_per_prefix_group": 128,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18"
+  },
+  "information_boundary": {
+    "A384_qualification_available_at_design_freeze": true,
+    "A385_assignment_absent_from_protocol": true,
+    "A385_protocol_available_at_design_freeze": true,
+    "A387_recovery_running_at_design_freeze": true,
+    "A387_result_or_true_prefix_available_at_design_freeze": false,
+    "A387_progress_or_filter_outcomes_consumed": false,
+    "A388_implementation_and_preflight_available_at_design_freeze": true,
+    "A388_measurement_running_at_design_freeze": true,
+    "A388_order_available_at_design_freeze": false,
+    "A389_candidate_or_prefix_available_at_design_freeze": false,
+    "A389_result_available_at_design_freeze": false
+  },
+  "order_contract": {
+    "executed_order": "future exact A388 three-view wavefront over A385 pretarget, W50 public-output Direct12 and A386 W50-target-blind transfer orders",
+    "parameter_refits_at_W50": 0,
+    "pointwise_bound": "R_A388(c) <= 3*min(R_A385(c),R_Direct12(c),R_A386(c)) for all 4096 cells",
+    "source_count": 3,
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w50-public-output-factor3-recovery-a389-design-v1",
+  "source_anchors": {
+    "A384_protocol_path": "research/configs/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_v1.json",
+    "A384_protocol_sha256": "1bd9a1e572906ff98aab30b52b547f48f4b1d61785ccc0ca8082ae4c6bd13fcb",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A384_runner_path": "research/experiments/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384.py",
+    "A384_runner_sha256": "60352d5f0d09fad8272e87f5a202d6f62274911d7bdd154738a47bac04b6264f",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b",
+    "A385_runner_path": "research/experiments/chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+    "A385_runner_sha256": "b6827f779a8a7997bbee6c04a6a28f9f3c5ec5718ac942b0171c8b4174a928f3",
+    "A386_order_path": "research/results/v1/chacha20_round20_w49_calibrated_ticketed_hierarchical_factor3_a386_order_v1.json",
+    "A386_order_sha256": "eda2ec6b995d2ad7ecb8198ff33616c9129fceb04b28a51b0f2123303ba6a5c4",
+    "A388_design_path": "research/configs/chacha20_round20_w50_public_output_direct12_factor3_a388_design_v1.json",
+    "A388_design_sha256": "c59c68725caf161fd653a7728472da3f6ac7857c30f26c1a6625827822cb4782",
+    "A388_implementation_path": "research/configs/chacha20_round20_w50_public_output_direct12_factor3_a388_implementation_v1.json",
+    "A388_implementation_sha256": "5a3eb08ad5087bd7ebd744548eec7f65f26a70af1679340aede196ea50e4a8b6",
+    "A388_preflight_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_preflight_v1.json",
+    "A388_preflight_sha256": "6919b9071b5c9de85f050a7921d4a82fa0e55db6e02ca531590afdfdc57cc115",
+    "A388_runner_path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+    "A388_runner_sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+  }
+}

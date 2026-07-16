@@ -1,0 +1,91 @@
+{
+  "schema": "chacha20-round20-w50-knownkey-parallel-portfolio-a414-design-v1",
+  "attempt_id": "A414",
+  "design_state": "frozen_after_A413_A401_only_model_with_four_A412_fields_complete_but_before_any_A412_label_or_reader_score_consumption",
+  "scientific_question": "Can eight complementary A413 Readers selected only from A401 leave-one-out ranks form a target-independent parallel W50 portfolio that transfers across thirty-two fresh A412 keys and beats the complete eight-view Direct12 portfolio at equal worker count?",
+  "algebraic_bridge": {
+    "A410_all_prototype_mean_squared_L2": "mean_p mean_d (x_d-p_d)^2",
+    "A413_candidate_123": "mean_d (x_d-mean_p(p_d))^2",
+    "identity": "the two scores differ only by the prototype variance, a cell-independent constant",
+    "consequence": "candidate 123 is order-equivalent to the fixed A410 fullfit Reader; every added portfolio member must contribute a distinct order"
+  },
+  "training_selection_contract": {
+    "source": "the sixteen A413 leave-one-out rank panels, each Reader trained on the other fifteen A401 keys",
+    "candidate_count": 155,
+    "portfolio_size": 8,
+    "start_rule": "candidate with minimum sixteen-key geometric mean true rank, then worst rank, then candidate index",
+    "greedy_add_rule": "add the unused candidate minimizing the geometric mean of the pointwise minimum true rank across the enlarged portfolio; ties by worst pointwise minimum rank then candidate index",
+    "selected_candidate_indices_in_order": [123, 20, 152, 100, 91, 144, 49, 35],
+    "selected_pointwise_minimum_ranks": [397, 66, 471, 3597, 122, 1325, 935, 4012, 10, 1291, 2440, 1932, 3, 402, 131, 3055],
+    "selected_geometric_mean_parallel_rank": 415.5514623998885,
+    "candidate_123_geometric_mean_serial_rank": 1092.933368906211,
+    "training_parallel_improvement_factor": 2.630079467400532,
+    "training_additional_bit_gain": 1.3951063909596382,
+    "post_freeze_member_replacement_or_reordering_allowed": false
+  },
+  "fixed_model_contract": {
+    "fit_source": "all sixteen A401 known-key positive cells",
+    "model_per_member": "the exact A413 representation, distance or location-shape parameters for that frozen candidate",
+    "model_count": 8,
+    "A412_labels_used_for_fit_or_selection": 0,
+    "A412_reader_scores_used_for_fit_or_selection": 0
+  },
+  "external_transfer_contract": {
+    "targets": "all thirty-two complete A412 W50 fields",
+    "learned_portfolio_depth": "minimum true-cell rank across the eight fixed learned Readers",
+    "matched_baseline_depth": "minimum true-cell rank across the eight complete frozen Direct12 view Readers",
+    "equal_parallel_worker_count": 8,
+    "primary_metric": "geometric mean parallel discovery rank across all thirty-two keys",
+    "secondary_panels": ["targets_0_15", "targets_16_31"],
+    "qualification": "learned portfolio geometric mean parallel rank is strictly lower than the matched eight-view baseline with positive additional bit gain",
+    "A412_model_choices": 0,
+    "A412_model_refits": 0,
+    "new_solver_stages": 0
+  },
+  "production_schedule_contract": {
+    "target": "complete assignment-free A388 W50 field",
+    "reader_orders": 8,
+    "ownership": "each of 4096 cells belongs to its minimum-rank learned Reader, ties by portfolio position",
+    "owner_queue_order": "the owning Reader's exact cell order",
+    "work_stealing": "deterministic order-preserving longest-remaining owner queue",
+    "worker_count": 8,
+    "target_makespan_epochs": 512,
+    "required_proofs": [
+      "complete 4096-cell cover",
+      "zero duplicate cells",
+      "owner-queue order preservation",
+      "parallel discovery depth no later than the minimum of the eight source ranks",
+      "total work at most eight times the minimum source rank"
+    ],
+    "production_target_labels_used": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed": 0
+  },
+  "information_boundary": {
+    "freeze_utc": "2026-07-15T23:37:40Z",
+    "A413_model_available_at_design_freeze": true,
+    "A412_complete_fields_present_at_design_freeze": 4,
+    "A412_partial_slice_files_present_at_design_freeze": 72,
+    "A412_complete_or_partial_measurements_consumed": false,
+    "A412_selection_or_holdout_label_ledger_opened": false,
+    "A412_reader_score_or_true_rank_consumed": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "live_recovery_progress_filter_outcome_or_result_consumed": false
+  },
+  "source_anchors": {
+    "A413_runner_path": "research/experiments/chacha20_round20_w50_knownkey_kernel_density_reader_a413.py",
+    "A413_runner_sha256": "e8f939d84cf53364bbbb4c729c1e9fa7fd5dce2742cd24fcc6e3e6a559c804d4",
+    "A413_implementation_path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_implementation_v1.json",
+    "A413_implementation_sha256": "715aa6660bff6f3c6b3b3336cc3b755581c528898ca75defb6cbe8fea539e693",
+    "A413_model_path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_model_v1.json",
+    "A413_model_sha256": "71141bdac6a3f4bea95980e21777eb00a774ecde88a29028c441453dc62b7cf8",
+    "A412_runner_path": "research/experiments/chacha20_round20_w50_fresh_hybrid_reader_a412.py",
+    "A412_runner_sha256": "cc8813f29f29aed8f28b682c959d7655437faa7c5e9c713cbe9e2183e8641b96",
+    "A412_implementation_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_implementation_v1.json",
+    "A412_implementation_sha256": "f08665ec5f0b79bf96f33617d10966e59895e6adfb284c5b6c70e5fc47527067",
+    "A412_public_corpus_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+    "A412_public_corpus_sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  }
+}

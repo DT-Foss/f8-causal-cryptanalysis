@@ -1,0 +1,90 @@
+{
+  "A426_progress_or_filter_outcomes_consumed": false,
+  "V1_protocol_sha256": "30652dc6a24838568b22ebe01bca367264c9b65f2cf20d3b3281994936b89685",
+  "anchors": {
+    "V1_implementation": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_implementation_v1.json",
+      "sha256": "d92adf76cee3360d35a15dba243590ccc32dbcdbb8b7e11e25bea4d19f0e143c"
+    },
+    "V1_protocol": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v1.json",
+      "sha256": "30652dc6a24838568b22ebe01bca367264c9b65f2cf20d3b3281994936b89685"
+    },
+    "V1_runner": {
+      "path": "research/experiments/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437.py",
+      "sha256": "57a2889bb3dcdd2592e19b20fbb626fac706982ddf6bcc99e6a58fb8e83bdad7"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_design_v1.json",
+      "sha256": "6d4f7eaa72d06b5b02345dafdf038fa20e1abca66e051471b3973ae491e8c607"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_implementation_v2.json",
+      "sha256": "19dac4b0c379864a5db594ec1e4a8c8540ad8527bd82d1972dce4af5bcc3745a"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.sh",
+      "sha256": "dadf0bad529dd517aa32afe088518b79d6f1005c70e94003068946ecc25253b1"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.py",
+      "sha256": "e6bb01ee2ba114d69c157d72dd381ab9daf3226bf41d797e9964d6f46ba09538"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.py",
+      "sha256": "910d642a894ef2bc149a723ccddbdb9455cdc7a82fb012720276e028a1568074"
+    }
+  },
+  "attempt_id": "A437",
+  "calibration_comparison": {
+    "A426_progress_or_filter_outcomes_consumed": false,
+    "W52_same_cell_positions_used_as_target_information": false,
+    "W52_same_off_axis_cell_position_one_based": 1443,
+    "W52_same_prefix_cell_position_one_based": 3042,
+    "W52_true_pair_rank_known": false,
+    "additional_gain_bits_vs_neutral_square": 0.42384674732885325,
+    "anisotropic_pair_rank_one_based": 234498,
+    "anisotropic_pair_rank_product_identity": 234498,
+    "candidate_assignments_before_calibration_pair": 62947577561088,
+    "candidate_assignments_executed": 0,
+    "cells_removed_before_calibration_pair_vs_neutral": 80081,
+    "factor_vs_neutral_square": 1.3414997142832774,
+    "gain_bits_vs_complete_uniform_pair_cover": 6.160783907310324,
+    "neutral_square_pair_rank_one_based": 314579,
+    "off_axis_calibration_cell": 1916,
+    "off_axis_calibration_rank_one_based": 561,
+    "prefix_calibration_cell": 2990,
+    "prefix_calibration_rank_one_based": 418,
+    "reader_refits": 0,
+    "scope": "known-key W46 calibration geometry only; transferred as a frozen growth ratio, never as an A426 target cell",
+    "target_labels_used": 0
+  },
+  "candidate_assignments_executed": 0,
+  "implementation_commitment_sha256": "014d3b153960c3402da508852c694ec7c24caa1a10666f6b8d9b210c803026d6",
+  "implementation_sha256": "19dac4b0c379864a5db594ec1e4a8c8540ad8527bd82d1972dce4af5bcc3745a",
+  "pair_stream_uint16be_uint16be_sha256": "6fec353dd64c98d3956c5308995e4cea1ee50cbd5a96436c67bbd426091d12aa",
+  "production_execution_enabled": false,
+  "protocol_commitment_sha256": "7a5d0c3f13c3d414e82ca9e954e9cc5f5185a526e87b2b0b91edf4d214b35057",
+  "protocol_state": "packaging_repair_bound_to_unchanged_V1_schedule_before_A426_outcome_or_any_candidate",
+  "reader_refits": 0,
+  "repair_scope": {
+    "axis_orders_changed": false,
+    "calibration_changed": false,
+    "candidate_assignments_executed": 0,
+    "defect": "V1 Causal builder requested payload.schedule although the assembled result exposes the frozen stream hash at payload.pair_stream_uint16be_uint16be_sha256",
+    "schedule_changed": false,
+    "schedule_recomputed": false
+  },
+  "schedule_commitment_sha256": "79b3e2c0fe0a7aecc4f18e505ab6454cba96923033df319df7ca3ff8ed5ff401",
+  "schedule_summary": {
+    "algorithm": "calibration_balanced_anisotropic_rectangle_growth",
+    "assignments_per_cell": 268435456,
+    "cells": 16777216,
+    "complete_domain_assignments": 4503599627370496,
+    "growth_events": 8191,
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "schema": "chacha20-round20-w52-calibration-balanced-dual-axis-wavefront-a437-protocol-v2",
+  "target_labels_used": 0
+}

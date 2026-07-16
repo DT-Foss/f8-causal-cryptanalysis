@@ -1,0 +1,62 @@
+{
+  "schema": "chacha20-round20-w50-disjoint-parallel-recovery-a393-design-v1",
+  "attempt_id": "A393",
+  "design_state": "frozen_after_A392_exact_scheduler_before_any_A393_lane_candidate_prefix_progress_or_result",
+  "scientific_question": "Can the exact A392 three-lane partition execute the fresh A385 full-round W50 challenge with complete-group semantics, zero duplicate prefixes, a shared confirmed-success stop, matched control and independent eight-block confirmation?",
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "public_output_blocks": 8,
+    "prefix_groups": 4096,
+    "slabs_per_prefix_group": 128,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "shared_stop_check": "before each next complete prefix group",
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "independent_confirmation_bits": 8192
+  },
+  "lane_contract": {
+    "schedule_name": "three_lane_A385_Direct12_A386",
+    "roles": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12",
+      "A386_calibrated_target_blind_transfer"
+    ],
+    "partition_sizes": {
+      "A385_pretarget_six_view": 1050,
+      "A388_W50_public_output_direct12": 1821,
+      "A386_calibrated_target_blind_transfer": 1225
+    },
+    "complete_cover_cells": 4096,
+    "duplicate_cells": 0,
+    "uncovered_cells": 0,
+    "wall_depth_theorem": "D_parallel(c) <= min_i R_i(c)",
+    "total_work_theorem": "W_parallel(c) <= 3*min_i R_i(c) under synchronized lane depth"
+  },
+  "information_boundary": {
+    "target_labels_used_for_lane_construction": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed_for_lane_construction": 0,
+    "A387_A389_A391_progress_or_filter_outcomes_consumed": false,
+    "A387_A389_A391_result_or_true_prefix_consumed": false,
+    "A385_assignment_absent_from_protocol": true,
+    "rank_and_owner_readback_only_after_independent_confirmation": true
+  },
+  "source_anchors": {
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b",
+    "A389_runner_path": "research/experiments/chacha20_round20_w50_public_output_factor3_recovery_a389.py",
+    "A389_runner_sha256": "23602ef77bba32a019b78f776f1fa6a60d6ab13160c79644e4796b5ffe3e9ca5",
+    "A392_result_path": "research/results/v1/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_v1.json",
+    "A392_result_sha256": "950d6376cf05a32f2e7a2043b5662c1b33b375b567e695aaf2e4db494c1d725a",
+    "A392_causal_path": "research/results/v1/chacha20_round20_w50_disjoint_parallel_reader_scheduler_a392_v1.causal",
+    "A392_causal_sha256": "9482fea926e3f32235c668290410b420f27ab301a8c6cc418b192095473ab793"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "A384_engine_qualification_sha256": "d107e3aa8bc183e0789d5bdf71eb315e2491aa58b8c701c54267e431623ed5b6",
+  "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+  "A424_candidate_or_progress_available_at_freeze": false,
+  "A424_challenge_or_assignment_available_at_freeze": false,
+  "anchors": {
+    "A384_protocol": {
+      "path": "research/configs/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_v1.json",
+      "sha256": "1bd9a1e572906ff98aab30b52b547f48f4b1d61785ccc0ca8082ae4c6bd13fcb"
+    },
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A384_runner": {
+      "path": "research/experiments/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384.py",
+      "sha256": "60352d5f0d09fad8272e87f5a202d6f62274911d7bdd154738a47bac04b6264f"
+    },
+    "A416_design": {
+      "path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_design_v1.json",
+      "sha256": "c73166ba4a4f1103555fa6d18cf44e427127fa0ebcaefdbd2a26629d1c64ab5f"
+    },
+    "A416_implementation": {
+      "path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_implementation_v1.json",
+      "sha256": "b99b3626efa18655dda2aafb3f0cb78cb8f744e93c131f1a471ec7fc9ce83dd2"
+    },
+    "A416_model": {
+      "path": "research/configs/chacha20_round20_w50_folded_xor_portfolio_a416_model_v1.json",
+      "sha256": "ed927419a04f39f16ffb2679ff51544a43288821744cf2558cd97e45e45a6c58"
+    },
+    "A416_result": {
+      "path": "research/results/v1/chacha20_round20_w50_folded_xor_portfolio_a416_v1.json",
+      "sha256": "7623bd8d1a11d00c771e8aa24e2e3847dafe92ebbfffa34e761434a09a24b686"
+    },
+    "A416_runner": {
+      "path": "research/experiments/chacha20_round20_w50_folded_xor_portfolio_a416.py",
+      "sha256": "6d4f3e144d4d2c7a689b1b4808537379e96091ca5d106ac4cbc00d20d378ce76"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_a416_fresh_shared_stop_recovery_a424_design_v1.json",
+      "sha256": "658c9dc021b6629f99872302f744d4b24cf640ca0bb5617cd64713b8725744d4"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_a416_fresh_shared_stop_recovery_a424.sh",
+      "sha256": "a64f95cae532e0c42dcf38eec8a5fdcc193813279986073a754e70a3f4f38927"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_a416_fresh_shared_stop_recovery_a424.py",
+      "sha256": "77683004c06c651ce7511381fd880b8eed6b654e1e6ae307ee6b4b3e567883ae"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_a416_fresh_shared_stop_recovery_a424.py",
+      "sha256": "83527ad3090e9b50c1f893dab7f4dfd9061e22dc811a78f6a7d77db5f2c2cce5"
+    }
+  },
+  "attempt_id": "A424",
+  "commitment_state": "complete_A416_schedule_executor_and_fresh_W50_challenge_factory_frozen_before_any_A424_challenge_assignment_candidate_or_progress",
+  "design_sha256": "658c9dc021b6629f99872302f744d4b24cf640ca0bb5617cd64713b8725744d4",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "complete_prefix_groups": 4096,
+    "dual_reference_confirmation_blocks": 8,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 206,
+    "matched_one_bit_control_must_be_empty": true,
+    "prefix_bits": 12,
+    "prefix_layout": "key_word0_bits20_through31",
+    "primitive": "standard ChaCha20 block function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "retain_complete_domain_recovery_if_target_is_in_final_parallel_epoch": true,
+    "shared_stop_only_after_independent_confirmation": true,
+    "slabs_per_prefix_group": 128,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "worker_tasks_each": 512,
+    "workers": 8
+  },
+  "fresh_challenge_contract": {
+    "known_material_source": "SHAKE256 of an independent random public label",
+    "materialize_only_after_complete_A424_implementation_freeze": true,
+    "prior_public_assignment_reuse": false,
+    "public_fields": [
+      "206 known key bits",
+      "counter",
+      "nonce",
+      "eight complete output blocks",
+      "one-bit matched control"
+    ],
+    "secret_assignment_absent_from_protocol": true,
+    "secret_assignment_source": "secrets.randbits(50)"
+  },
+  "implementation_commitment_sha256": "8b80d157cd747b4fdceba681ba4f7e248ca9cdb0f6d042b339c33c54ee062f01",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_reader_refits": 0,
+  "production_target_labels_used": 0,
+  "schedule_transfer_contract": {
+    "A424_candidate_assignments_used": 0,
+    "A424_target_labels_used": 0,
+    "copy_all_eight_worker_orders_and_tasks_byte_identically": true,
+    "parameter_refit_on_A424_target": false,
+    "prior_recovery_outcomes_used": false,
+    "source": "A416 externally qualified folded-XOR eight-reader scheduler",
+    "source_external_holdout_qualified": true,
+    "source_result_available_at_design_freeze": true
+  },
+  "schema": "chacha20-round20-w50-a416-fresh-shared-stop-recovery-a424-implementation-v1",
+  "source_A416_result_sha256": "7623bd8d1a11d00c771e8aa24e2e3847dafe92ebbfffa34e761434a09a24b686",
+  "source_A416_schedule_sha256": "e3120736f8a86ea07be86c3e9bbeb4af957ee336d0f360268e0843e8fdec7300",
+  "source_A416_worker_roles": [
+    "folded_xor_negative_first",
+    "A413_candidate_123",
+    "A413_candidate_035",
+    "A413_candidate_100",
+    "A413_candidate_153",
+    "A413_candidate_091",
+    "A413_candidate_049",
+    "A413_candidate_144"
+  ]
+}

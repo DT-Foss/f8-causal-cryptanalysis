@@ -1,0 +1,126 @@
+{
+  "attempt_id": "A361",
+  "design_state": "frozen_after_A360_selection_before_A360_holdout_result_or_A361_fresh_challenge",
+  "execution_contract": {
+    "complete_domain_assignments": 70368744177664,
+    "complete_prefix_groups": 4096,
+    "confirmation": "two independent repository implementations across all eight 512-bit output blocks",
+    "group_engine": "A324 exact eight-slab W46 grouped Metal engine",
+    "matched_control": "one-bit-flipped first public output word",
+    "rounds": 20,
+    "stop_rule": "only after a complete factual prefix group yields a candidate; every entered group executes all eight 2^31 slabs",
+    "unknown_key_bits": 46
+  },
+  "fresh_target_contract": {
+    "assignment_included_in_protocol": false,
+    "challenge_generated_after_implementation_freeze": true,
+    "entropy_source": "python secrets module backed by the operating-system CSPRNG",
+    "feedforward": true,
+    "known_key_bits": 210,
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low14"
+  },
+  "information_boundary": {
+    "A360_holdout_result_available_at_design_freeze": false,
+    "A360_primary_selected_from_selection_targets_only": true,
+    "A361_candidate_or_prefix_available_at_design_freeze": false,
+    "A361_fresh_challenge_available_at_design_freeze": false,
+    "A361_reader_scores_or_order_available_at_design_freeze": false,
+    "holdout_outcome_can_change_reader_identity_or_weights": false,
+    "reader_refits_on_A361_target": 0,
+    "target_labels_used_for_A361_order": 0
+  },
+  "measurement_contract": {
+    "candidate_cells_per_slice": 256,
+    "complete_direct12_cells": 4096,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "corrected_reader_mapping_source_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "high8_assumption_coordinates_high_to_low": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24
+    ],
+    "low4_fixed_coordinates_high_to_low": [
+      23,
+      22,
+      21,
+      20
+    ],
+    "low4_slices": 16,
+    "reader_unavailable_during_measurement": true,
+    "target_label_available_during_measurement": false,
+    "watchdog_seconds_per_stage": 2
+  },
+  "order_contract": {
+    "global_group_order": "for within-slice rank 1 through 256, visit low4 slices 0 through 15 and emit prefix12=(high8<<4)|low4",
+    "global_group_rank_exact_formula": "16 * (within_slice_rank - 1) + true_low4 + 1",
+    "high8_tie_break": "ascending numeric high8",
+    "holdout_gate_required_before_scoring": true,
+    "primary_weights_changed_after_A360_selection": false,
+    "score_kernel": "numpy einsum cf,f->c optimize=false followed by finite-value gate",
+    "targetwise_normalization": "A360 center and unit-standard-deviation each feature across all 256 cells; constants become zero",
+    "within_slice_order": "descending frozen-primary score"
+  },
+  "reader_contract": {
+    "A360_candidate_reader_count": 785,
+    "A360_primary_definition": "single_signed::212::redundant_clauses_delta__second_difference_2_4_8__raw_z",
+    "A360_primary_weights_sha256": "1e26d6b62694cfefad50bed902eaf4c71e762583230125497267f0de9e7031fa",
+    "A360_selection_sha256": "e6425afbf257cfdcbe3099ee16e77a90cc3cd1d48db3649ac7af7cdb975c849b",
+    "deployment_if_and_only_if": "A360 disjoint holdout primary retention gate passes without refit",
+    "feature_count": 532,
+    "reader_refits": 0
+  },
+  "schema": "chacha20-round20-w46-fresh-a360-reader-deployment-a361-design-v1",
+  "source_anchors": {
+    "A324_qualification_path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+    "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a",
+    "A325_runner_path": "research/experiments/chacha20_round20_holdout_selected_w46_recovery_a325.py",
+    "A325_runner_sha256": "27aee43b3a4bcbacef869af30f9017bac8ae643c4027945d01f97f030217f156",
+    "A340_runner_path": "research/experiments/chacha20_round20_w46_target_conditioned_causal_order_a340.py",
+    "A340_runner_sha256": "7c5812f7c8ab53312de45ec425e9bfbbae66c149b1944b489aeaa711087e95ff",
+    "A345_runner_path": "research/experiments/chacha20_round20_fresh_w46_factor2_replication_a345.py",
+    "A345_runner_sha256": "7459127337fb0072e0fe4e47a2c7f05ea3fa78c7149484c90e47c246bde57fc3",
+    "A349_runner_path": "research/experiments/chacha20_round20_w46_direct12_prospective_a345_validation_a349.py",
+    "A349_runner_sha256": "393ce0d583e7f3e00ad9522938460ae0313dcdd45f1ad36023feadb6881f2aa0",
+    "A355_runner_path": "research/experiments/chacha20_round20_w46_corrected_group_direct12_reader_a355.py",
+    "A355_runner_sha256": "82aa4b694e212f2d2e4938e95ee1b6ae0f81aa1c14077d46fead8b259ba11199",
+    "A360_implementation_path": "research/configs/chacha20_round20_w46_within_slice_reader_selection_a360_implementation_v1.json",
+    "A360_implementation_sha256": "d56358d596fb2d28f3fd535c5fecd34d5da0025145935512cf682df2ca5f483e",
+    "A360_runner_path": "research/experiments/chacha20_round20_w46_within_slice_reader_selection_a360.py",
+    "A360_runner_sha256": "b8eaaa391b7606b86fb884687b7562f5f4bc212d34baf89496f76f14074ceff4",
+    "A360_selection_path": "research/results/v1/chacha20_round20_w46_within_slice_reader_selection_a360_frozen_v1.json",
+    "A360_selection_sha256": "e6425afbf257cfdcbe3099ee16e77a90cc3cd1d48db3649ac7af7cdb975c849b"
+  }
+}

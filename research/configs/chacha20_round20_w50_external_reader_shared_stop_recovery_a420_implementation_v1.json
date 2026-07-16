@@ -1,0 +1,71 @@
+{
+  "A418_result_available_at_freeze": false,
+  "A419_result_available_at_freeze": false,
+  "A420_candidate_or_progress_available_at_freeze": false,
+  "anchors": {
+    "A397_protocol": {
+      "path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_v1.json",
+      "sha256": "447baf5e4784d0210f51e194f1a241b7fbfbf1ab239fe16582effdb4b435fb32"
+    },
+    "A397_runner": {
+      "path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+      "sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5"
+    },
+    "A418_design": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_repair_a418_design_v1.json",
+      "sha256": "61c9eab12666229c19aaac936b2ac00710101e831088264968ef47933cae7053"
+    },
+    "A418_implementation": {
+      "path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_repair_a418_implementation_v1.json",
+      "sha256": "e527d38d457ddc2ec6940963d0a1899d977511a2653d21852298a2a5958e579d"
+    },
+    "A419_design": {
+      "path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_design_v1.json",
+      "sha256": "d57e1b16eb917bcb0e755075a4a0405ab67fadbf2205ece5b87dc8b5c52344b4"
+    },
+    "A419_implementation": {
+      "path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_implementation_v1.json",
+      "sha256": "ddcdb9262c1711913dca304cbfeb79162a3b4cfee3d6e2fabb7d2f732670a148"
+    },
+    "A419_model": {
+      "path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_model_v1.json",
+      "sha256": "aa68b6c0f9098b445a63822b2e5e7b0a26263eb7073073549c04158911f303c7"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_external_reader_shared_stop_recovery_a420_design_v1.json",
+      "sha256": "888d518a423f858ce8e7e64e25786229f9671594cd6937f54f4742edb5fc2746"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_external_reader_shared_stop_recovery_a420.sh",
+      "sha256": "30715eb51a84ca904f4c097c201119a3d6901d8a04ab16ea2f4082eb85e77778"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_external_reader_shared_stop_recovery_a420.py",
+      "sha256": "3a34577a648c8df1b083bd0d0e66a6361a18411879b18d5d296a654f34d73048"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_external_reader_shared_stop_recovery_a420.py",
+      "sha256": "b420db59de8e726e04d0d3bef78e91a4896052f8a32977cd6920e58475e1ad59"
+    }
+  },
+  "attempt_id": "A420",
+  "commitment_state": "complete_executor_frozen_before_A418_A419_results_or_any_A420_candidate",
+  "design_sha256": "888d518a423f858ce8e7e64e25786229f9671594cd6937f54f4742edb5fc2746",
+  "implementation_commitment_sha256": "8d9df4fe8b73421c49f61583371e0e53b2e4380acb3b063591b55bdce45aca1c",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_reader_refits": 0,
+  "production_target_labels_used": 0,
+  "schema": "chacha20-round20-w50-external-reader-shared-stop-recovery-a420-implementation-v1",
+  "source_selection_rule": {
+    "eligibility": "external_transfer.qualified is true and the complete 4,096-cell eight-worker schedule proof has zero violations and exact 512-epoch makespan",
+    "eligible_sources": [
+      "A418",
+      "A419"
+    ],
+    "final_tie_break": "attempt_id descending so A419 replaces A418 only on exact metric equality",
+    "primary_key": "external holdout mean_log2_rank, ascending",
+    "production_target_used_for_selection": false,
+    "secondary_key": "external holdout worst_rank, ascending",
+    "selection_happens_after_holdout": true
+  }
+}

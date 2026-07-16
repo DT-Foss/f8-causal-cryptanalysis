@@ -1,0 +1,75 @@
+{
+  "A378_qualification_file_sha256": "1e020ac18d86279e327cd5584d43fdafc4b6245d8df522c4b179951d820872e9",
+  "A378_qualification_sha256": "3576205b00017c5cc3ef9c7486484c7d2311967b9b4760e7dc79e822373203b7",
+  "anchors": {
+    "A373_runner": {
+      "path": "research/experiments/chacha20_round20_w48_target_conditioned_factor2_a373.py",
+      "sha256": "0d4a1c5a454f2697562b006963327364bb393d8bc546f9a9a6f5933eec1bc38b"
+    },
+    "A373_source_order": {
+      "path": "research/results/v1/chacha20_round20_w48_target_conditioned_factor2_a373_order_v1.json",
+      "sha256": "5631b0f2f05a015a9ad07b938a2f2862862214171d3066397da3524afe8e9264"
+    },
+    "A378_design": {
+      "path": "research/configs/chacha20_round20_w49_sixtyfour_slab_grouped_engine_a378_design_v1.json",
+      "sha256": "bcd9045320c615bab830d9db9a8591607653b89352d181f07f44b2c068137913"
+    },
+    "A378_protocol": {
+      "path": "research/configs/chacha20_round20_w49_sixtyfour_slab_grouped_engine_a378_v1.json",
+      "sha256": "c926f6474c7cb54909e0204182941d7d1c63889fd892e92f0fbc4c5c48305af3"
+    },
+    "A378_qualification": {
+      "path": "research/results/v1/chacha20_round20_w49_sixtyfour_slab_grouped_engine_a378_qualification_v1.json",
+      "sha256": "1e020ac18d86279e327cd5584d43fdafc4b6245d8df522c4b179951d820872e9"
+    },
+    "A378_runner": {
+      "path": "research/experiments/chacha20_round20_w49_sixtyfour_slab_grouped_engine_a378.py",
+      "sha256": "16e2832e49925a4c8d73580f2656788b22da3cb9e5a6e33281ffc5dbe4194c27"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_design_v1.json",
+      "sha256": "881496c77ebf9fb909d8683b551ca7e83b29d1cf8c73fdf8cd9b102626629ed6"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_fresh_w49_pretarget_transfer_a379.sh",
+      "sha256": "d9a471635ab69111f23e54940d16622631f900ffa95246839916e22635aeb370"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w49_pretarget_transfer_a379.py",
+      "sha256": "a8bfce2e53c96db40c5b48fc79876928266cf2d0ecc59187f59da47aaa7153e9"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_fresh_w49_pretarget_transfer_a379.py",
+      "sha256": "84bb48dc439eb0686f8db1fad2130ba4643073064c0dc3b0f070836cc1165ec5"
+    }
+  },
+  "attempt_id": "A379",
+  "commitment_state": "complete_code_and_dependencies_frozen_after_W49_engine_qualification_before_W49_production_challenge",
+  "design_sha256": "881496c77ebf9fb909d8683b551ca7e83b29d1cf8c73fdf8cd9b102626629ed6",
+  "implementation_commitment_sha256": "3a2dc09289b2dea37c28b43408b06e805b5a3295c8103ca6059800f2e450f3bc",
+  "information_boundary": {
+    "A373_candidate_assignments_executed_for_order": 0,
+    "A373_complete_before_A379_design": true,
+    "A373_reader_refits": 0,
+    "A373_source_order_verified_at_implementation_freeze": true,
+    "A373_target_labels_used_for_order": 0,
+    "A374_W48_recovery_running_at_A379_design": true,
+    "A374_result_used_for_A379_order": false,
+    "A378_protocol_frozen_before_A379_design": true,
+    "A378_qualification_outcome_available_at_A379_design": false,
+    "A378_qualification_verified_at_implementation_freeze": true,
+    "A378_target_free_qualification_running_at_A379_design": true,
+    "W49_candidate_or_prefix_available_at_design_freeze": false,
+    "W49_candidate_or_prefix_available_at_implementation_freeze": false,
+    "W49_filter_outcome_available_at_design_freeze": false,
+    "W49_production_challenge_available_at_design_freeze": false,
+    "W49_production_challenge_available_at_implementation_freeze": false,
+    "W49_target_assignment_available_at_design_freeze": false,
+    "W49_target_assignment_available_at_implementation_freeze": false,
+    "fresh_W49_challenge_generated_only_after_A379_implementation_order_commitments_and_A378_qualification": true,
+    "orders_refit_on_A379_target": false
+  },
+  "schema": "chacha20-round20-fresh-w49-pretarget-transfer-a379-implementation-v1",
+  "source_order_commitment_sha256": "7c169a7d580af9a25b6ac2a943fc5d1269161b5811fa203a82c983baee4af690",
+  "source_order_uint16be_sha256": "05e306514ae8796aec995f4a1863d9c3ea038b3cb3f76809813caaf53fd9a837"
+}

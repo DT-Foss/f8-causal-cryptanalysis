@@ -1,0 +1,40 @@
+{
+  "schema": "chacha20-round20-w50-disjoint-parallel-reader-scheduler-a392-design-v1",
+  "attempt_id": "A392",
+  "design_state": "frozen_after_A388_source_orders_before_any_A392_scheduler_artifact_or_candidate_execution",
+  "scientific_question": "Can complementary complete prefix orders be converted into disjoint parallel lanes that preserve best-reader wall depth, eliminate duplicate group work, and retain an exact total-work bound for every possible target cell?",
+  "scheduler_contract": {
+    "cells": 4096,
+    "ownership_rule": "assign each cell to the role with minimum one-based source rank; ties follow the frozen role order",
+    "lane_rule": "within each owner lane sort by that owner's source rank then cell index",
+    "zero_duplicate_prefixes": true,
+    "complete_cover": true,
+    "two_lane_roles": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12"
+    ],
+    "three_lane_roles": [
+      "A385_pretarget_six_view",
+      "A388_W50_public_output_direct12",
+      "A386_calibrated_target_blind_transfer"
+    ],
+    "theorem_wall_depth": "D_parallel(c) <= min_i R_i(c)",
+    "theorem_total_unique_work": "W_parallel(c) <= k*min_i R_i(c) for k disjoint lanes"
+  },
+  "information_boundary": {
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed": 0,
+    "A387_A389_A391_progress_or_filter_outcomes_consumed_by_scheduler": false,
+    "A387_A389_A391_result_or_true_prefix_consumed_by_scheduler": false,
+    "scheduler_is_complete_for_all_4096_possible_target_cells": true
+  },
+  "source_anchors": {
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8",
+    "A388_causal_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+    "A388_causal_sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a",
+    "A391_protocol_path": "research/configs/chacha20_round20_w50_direct12_only_recovery_a391_v1.json",
+    "A391_protocol_sha256": "90a1669aafcaaea3f5a2a125587262af1c0f2d850e686536d4db1c7ef2e1c8ed"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "chacha20-round20-linf-stability-merge-a329-design-v1",
+  "attempt_id": "A329",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can A328's target-blind stable-region transfer mechanism be converted into exact bounded-regret execution orders before the A322 W45 assignment is known?",
+  "source_anchors": {
+    "A313_result_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+    "A321_order_path": "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.json",
+    "A321_order_sha256": "8ace2e5af5ce1a132e78926f317dadaf63ada13a10c0338a56ddf62713a9d9d2",
+    "A327_order_path": "research/results/v1/chacha20_round20_hierarchical_linf_operator_a327_order_v1.json",
+    "A327_order_sha256": "7c077a4e8eeb3ab83c4fae931f94882c87369cedb18bd19b2766e04e9b72c90f",
+    "A328_result_path": "research/results/v1/chacha20_round20_linf_voronoi_transfer_a328_v1.json",
+    "A328_result_sha256": "93c507e6fa4faeaae30618a35d0a933139246cdf8a57f45fb3760982c796a1b4",
+    "A328_runner_path": "research/experiments/chacha20_round20_linf_voronoi_transfer_a328.py",
+    "A328_runner_sha256": "d7daf79a6e491bbd60b8fc48fcd44eea17ecc6ab4f6b15e22b890b0e8a94ca02"
+  },
+  "operator_contract": {
+    "partition": "stable iff the exact A328 W44 and W45 nearest-prototype indices are equal; switched otherwise",
+    "base_order_pair": "original raw nearest-prototype Linf W44 and W45 orders retained by A327",
+    "within_partition_order": "preserve the corresponding raw-Linf source order exactly",
+    "candidate_sequence_and_tie_break": [
+      "original_raw_linf",
+      "stable_first",
+      "stable_switched_1_to_1",
+      "stable_switched_2_to_1",
+      "switched_stable_2_to_1_control"
+    ],
+    "candidate_definitions": {
+      "original_raw_linf": "unchanged source order",
+      "stable_first": "all stable-stream cells followed by all switched-stream cells",
+      "stable_switched_1_to_1": "one stable then one switched cell repeatedly; append the nonempty tail",
+      "stable_switched_2_to_1": "two stable then one switched cell repeatedly; append the nonempty tail",
+      "switched_stable_2_to_1_control": "two switched then one stable cell repeatedly; append the nonempty tail"
+    },
+    "primary_operator": "stable_switched_2_to_1",
+    "primary_operator_reason": "A328 measured stable-subset rho 0.4715964844916638 versus switched-subset rho 0.2627842419973867; their ratio 1.7946 is represented by the smallest integer stability-favoring schedule 2:1",
+    "matched_direction_control": "switched_stable_2_to_1_control",
+    "regret_contract": {
+      "stable_switched_1_to_1": "each cell rank is at most 2 times its raw-Linf rank",
+      "stable_switched_2_to_1": "stable-cell rank is at most ceil(3r/2); switched-cell rank is at most 3r, hence global factor at most 3",
+      "switched_stable_2_to_1_control": "symmetric factor-at-most-3 control"
+    },
+    "A313_role": "annotation_only_no_candidate_selection",
+    "new_candidate_execution": false,
+    "operator_refit": false,
+    "target_labels_used_from_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "five exact 4096-cell W44 and W45 order pairs and uint16be hashes",
+    "complete duplicate-free covers",
+    "exact per-class and global regret panels against raw Linf",
+    "A313 annotation ranks without selection",
+    "one frozen primary W45 order and one symmetric direction-control order",
+    "post-A322 counterfactual rank panel from the single complete A322 execution",
+    "post-A325 counterfactual rank panel from the single complete A325 execution"
+  ],
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "annotation_only_no_candidate_selection",
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_any_operator_or_order": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A322_or_A325": 0,
+    "operator_refits_on_A322_or_A325": 0,
+    "duplicate_candidate_execution_required_for_evaluation": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "A426_outcome_available_at_freeze": false,
+  "A434_qualification_available_at_freeze": false,
+  "A435_candidate_or_progress_available_at_freeze": false,
+  "anchors": {
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A426_runner": {
+      "path": "research/experiments/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426.py",
+      "sha256": "d849065a0bc33f1d3eff3f5b7638948c86b683f8020bfd8a0f5ed0e9ca449637"
+    },
+    "A434_protocol": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_a434_v1.json",
+      "sha256": "fca88cf01efdf2dde2ca56b87ae2d3b2bb0b320318c1201faa3f54b6af50acba"
+    },
+    "A434_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+      "sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_design_v1.json",
+      "sha256": "4f34b5d674d49cfda7b04a56da1078debc89df6f09f738020bd6a95924d3dd44"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435.sh",
+      "sha256": "c5674053e379b961b322fdf5ca876f17b123354357660a5ffb2ac663b9ab4c18"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435.py",
+      "sha256": "c9d355f1afda18b6a5f3367f56ba3d9d7658a2b3c3e79ce80d1e8618578fb3b6"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435.py",
+      "sha256": "ed4f008f5d1a8b144cd0d387be9e6365edcd9cf869e8edf19f7f0b20188981aa"
+    }
+  },
+  "attempt_id": "A435",
+  "challenge_contract": {
+    "A434_schedule_frozen_before_A435_bound_challenge": true,
+    "public_material_only": true,
+    "reuse_enables_direct_schedule_comparison": true,
+    "reuse_existing_public_W52_challenge": true,
+    "secret_assignment_absent_from_protocol": true,
+    "source_attempt": "A426"
+  },
+  "commitment_state": "complete_restart_safe_eight_worker_A434_executor_frozen_before_A434_qualification_A426_outcome_or_any_A435_candidate_progress_or_filter_outcome",
+  "design_sha256": "4f34b5d674d49cfda7b04a56da1078debc89df6f09f738020bd6a95924d3dd44",
+  "execution_contract": {
+    "candidates_per_complete_pair_cell": 268435456,
+    "complete_domain_assignments": 4503599627370496,
+    "complete_pair_cell_before_success_evaluation": true,
+    "early_stop_inside_pair_cell": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "independent_confirmation": "byte_reference_and_word_reference_over_all_eight_output_blocks",
+    "known_key_bits": 204,
+    "matched_one_bit_control_required_empty": true,
+    "off_axis": "key_word1_low20_bits19_through8",
+    "pair_cells": 16777216,
+    "prefix_axis": "key_word0_bits31_through20",
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "residual_inside_each_pair_cell": "key_word0_low20_plus_key_word1_low8",
+    "shared_stop_only_after_independent_confirmation": true,
+    "unknown_key_bits": 52,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low20",
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "2ee03cae1c038da7cbb29e5715b798a45bdecf467d5eb1f24d16a0d56e14456b",
+  "off_axis_order_uint16be_sha256": "e888570d1f5611680af9cd496b529c7290ed20e1ed09f4af093377011c6deffb",
+  "prefix_order_uint16be_sha256": "195c4f021b1330adaaff15d05d5daf81699c09878427fd6d9f2d0139d76fd6ba",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_reader_refits": 0,
+  "production_target_labels_used": 0,
+  "schedule_transfer_contract": {
+    "copy_pair_at_and_worker_modulo_mapping_without_refit": true,
+    "pair_rank_upper_bound": "max(R_prefix,R_off_axis)^2",
+    "reader_refits": 0,
+    "source_attempt": "A434",
+    "source_pair_stream_cells": 16777216,
+    "source_pair_stream_complete": true,
+    "source_schedule": "square_wavefront_prefix_front_shell_order",
+    "target_labels_used": 0,
+    "target_specific_axis_reversal_or_polarity_choice": false,
+    "worker_assignment": "global_index_mod_8",
+    "worker_step": "global_index_div_8_plus_1"
+  },
+  "schema": "chacha20-round20-w52-dual-axis-square-wavefront-recovery-a435-implementation-v1",
+  "source_A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "source_A426_public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "source_A434_pair_stream_sha256": "7af6513c3a9eca0a7bae89ef4c46041f713e5e884ce0456f25baf15d1d9aa467",
+  "source_A434_protocol_sha256": "fca88cf01efdf2dde2ca56b87ae2d3b2bb0b320318c1201faa3f54b6af50acba",
+  "source_A434_schedule_commitment_sha256": "8c55b0320bfcc47090d27dcfcdf57ae4c55dc6f6a94813f1ca3b1bcba0009186",
+  "source_pair_cells": 16777216
+}

@@ -1,0 +1,145 @@
+{
+  "A390_qualification_available_at_freeze": false,
+  "A425_result_or_progress_available_at_freeze": false,
+  "A430_candidate_assignments_executed": 0,
+  "A430_reader_refits": 0,
+  "A430_result_available_at_freeze": true,
+  "A430_target_labels_used": 0,
+  "A431_candidate_or_progress_available_at_freeze": false,
+  "A431_reader_refits": 0,
+  "A431_target_labels_used": 0,
+  "anchors": {
+    "A390_protocol": {
+      "path": "research/configs/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390_v1.json",
+      "sha256": "d13d5c0b34de900bdc2d3abe26706b508091685e6a1c7a640168ab5496e479d0"
+    },
+    "A390_runner": {
+      "path": "research/experiments/chacha20_round20_w51_twohundredfiftysix_slab_grouped_engine_a390.py",
+      "sha256": "1864f7ecd5fb448219784b1a9e514cfddfb3f77f16e46f0d6104f8a778338330"
+    },
+    "A425_implementation": {
+      "path": "research/configs/chacha20_round20_w51_a416_fresh_shared_stop_recovery_a425_implementation_v1.json",
+      "sha256": "5a15e774b0e3606d2b33c9ba014efd63d9350b8da9846def54cd5fe603178a1a"
+    },
+    "A425_protocol": {
+      "path": "research/configs/chacha20_round20_w51_a416_fresh_shared_stop_recovery_a425_v1.json",
+      "sha256": "a36b7352e8553c7e9989190877958976957a8c96022abff406f65aecf6417d0e"
+    },
+    "A425_runner": {
+      "path": "research/experiments/chacha20_round20_w51_a416_fresh_shared_stop_recovery_a425.py",
+      "sha256": "5d8956a56f8f2f1634e73dad90596de9b0ee369c1d716b45d0d8714588a8f78b"
+    },
+    "A430_causal": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_v1.causal",
+      "sha256": "3e55b2bc31bc005d0857f1135bfc9565d49cb069cb887f8decd382626c2db987"
+    },
+    "A430_design": {
+      "path": "research/configs/chacha20_round20_w51_public_output_direct12_eight_worker_a430_design_v1.json",
+      "sha256": "4c776b7fae5a90087f13847f182ea6eadf493f4e949779751ba1fd88a84b1372"
+    },
+    "A430_implementation": {
+      "path": "research/configs/chacha20_round20_w51_public_output_direct12_eight_worker_a430_implementation_v1.json",
+      "sha256": "9ea7306c15e95806b04e6e64aa008e6d9995a1b8e26dca3af5ba3dbe66db414c"
+    },
+    "A430_preflight": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_preflight_v1.json",
+      "sha256": "ca4f6ad583e99f1793de680ce633f25a25cdbc2713b175ef4c7b9262e213f0ae"
+    },
+    "A430_result": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_v1.json",
+      "sha256": "12c3f60fbc7dde8bbaa32ff7d13272a422b094d999a3c99ae16f1efd4c21f89a"
+    },
+    "A430_runner": {
+      "path": "research/experiments/chacha20_round20_w51_public_output_direct12_eight_worker_a430.py",
+      "sha256": "9170de08db7beab18eb83527778d74506b49f3d65238b598577b592a8101b54b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w51_a430_direct12_recovery_a431_design_v1.json",
+      "sha256": "776e4af0e1e3cfcf1dade8bed568e810dde3578eca08f42bfa80f98cc1a42c0e"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w51_a430_direct12_recovery_a431.sh",
+      "sha256": "fc683cc2d72d09d9d43f39aeab06700774b84af83835a357435776f1dd8dd365"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w51_a430_direct12_recovery_a431.py",
+      "sha256": "6d6b4b88c3179ea3a869a2019c9c17846f2934f3781baf11ab4e3a9f3cbec2a7"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w51_a430_direct12_recovery_a431.py",
+      "sha256": "fbaab6327dc0549aff7038b92046d841b61bdac37228b267970c32488cc0a5bc"
+    }
+  },
+  "attempt_id": "A431",
+  "commitment_state": "complete_A430_schedule_executor_frozen_after_public_schedule_before_any_A425_or_A431_candidate_progress_or_filter_outcome",
+  "design_sha256": "776e4af0e1e3cfcf1dade8bed568e810dde3578eca08f42bfa80f98cc1a42c0e",
+  "execution_contract": {
+    "candidates_per_prefix_group": 549755813888,
+    "complete_domain_assignments": 2251799813685248,
+    "complete_group_before_success_evaluation": true,
+    "complete_prefix_groups": 4096,
+    "dual_reference_confirmation_blocks": 8,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 205,
+    "matched_one_bit_control_must_be_empty": true,
+    "prefix_bits": 12,
+    "primitive": "RFC8439 ChaCha20 block function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "shared_stop_only_after_independent_confirmation": true,
+    "slabs_per_prefix_group": 256,
+    "unknown_key_bits": 51,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low19",
+    "worker_tasks_each": 512,
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "e960967581cd498983e6e7754c0b55c0b99445cf802040666592957bcf0e2385",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "schedule_contract": {
+    "A431_candidate_assignments_used_at_design_freeze": 0,
+    "A431_target_labels_used": 0,
+    "assignment_rule": "global_Direct12_position_mod_8",
+    "complete_cover_cells": 4096,
+    "copy_all_eight_worker_orders_and_tasks_byte_identically_after_A430_completion": true,
+    "depth_identity": "D_A431(c) = ceil(R_A430_Direct12(c)/8)",
+    "duplicate_cells": 0,
+    "makespan_epochs": 512,
+    "parameter_refit_on_A431_target": false,
+    "source": "A430 complete zero-refit W51 public-output Direct12 field",
+    "source_candidate_assignments_executed": 0,
+    "source_causal_sha256": "3e55b2bc31bc005d0857f1135bfc9565d49cb069cb887f8decd382626c2db987",
+    "source_reader": "A342 familywise-selected pair-slice-z Direct12 Reader",
+    "source_reader_refits_on_A425": 0,
+    "source_result_available_at_design_freeze": true,
+    "source_result_sha256": "12c3f60fbc7dde8bbaa32ff7d13272a422b094d999a3c99ae16f1efd4c21f89a",
+    "source_schedule_commitment_sha256": "f09ba710b03e70dc772ec3436be30cd90b64efae4bc0af5a5b055ff996cf052c",
+    "source_target_labels_used": 0,
+    "uncovered_cells": 0
+  },
+  "schema": "chacha20-round20-w51-a430-direct12-recovery-a431-implementation-v1",
+  "source_A430_causal_sha256": "3e55b2bc31bc005d0857f1135bfc9565d49cb069cb887f8decd382626c2db987",
+  "source_A430_result_sha256": "12c3f60fbc7dde8bbaa32ff7d13272a422b094d999a3c99ae16f1efd4c21f89a",
+  "source_A430_schedule_commitment_sha256": "f09ba710b03e70dc772ec3436be30cd90b64efae4bc0af5a5b055ff996cf052c",
+  "source_worker_order_uint16be_sha256": {
+    "direct_wave_0": "a749fde9ca0e05ad639d6ce24ef57b1ef231b8ac1c10fbabd40264f58e02ba73",
+    "direct_wave_1": "4a0bc7eb2c50fe939f3942855092b65b914ca1cebda4201b79d0fbf7ebf9bf08",
+    "direct_wave_2": "6e599c5c26bfa44bdca355ab100021fd0942fa3429d64d7014df46a8ee4e7201",
+    "direct_wave_3": "75a2f304310c4c9c82c805ab7b48e458f5e0ca859a892812968c48d931ed4ee2",
+    "direct_wave_4": "4ad9d34a304b5ddf181835b5cea7208cc0f49a4a13662abcdb7c72f72100a044",
+    "direct_wave_5": "df36bd8006c3366b20bc9fea11d267562b2b53d82bb6ab011204e27f1044b2ac",
+    "direct_wave_6": "f8d21cf250384ef72f38fe4f5e947f609c2d3a2fa14cd1be6c068312787fbe00",
+    "direct_wave_7": "010ec419cdd68cb7371434b0a32bea9f578646790eb0bf4d29f8ace600958a7f"
+  },
+  "source_worker_task_list_sha256": {
+    "direct_wave_0": "ef98c40a432b5f9e238ac6527a7b79c5bfadc7ab0258edc5e25424c10567029f",
+    "direct_wave_1": "7dc67551efcfb729f166956fc970e2bd0980baebc121681f0857386df716ac00",
+    "direct_wave_2": "de52952fb2ae472c7b3a8d492a32bfadf31bcfb6cc9c43ac4499446566a255e3",
+    "direct_wave_3": "cf8c81cca2142f5da1338a36b05ffa74f4a9571603282de5373b8da03423ab6a",
+    "direct_wave_4": "f8d1f19e5f06df1df5edc4ef1e2fc8ec5706b10f90e4c8cbc10ed77818703cb4",
+    "direct_wave_5": "94fa15e6838cd96ed76b511ca7bbfaa93e9b272665dc42e6c79923e4380d2da4",
+    "direct_wave_6": "7828f352da9381652e44cfdb573e119ab8e3697150785be34a92353b828bda85",
+    "direct_wave_7": "88434f5010a50c93933ef909857d5d34577b533e1290b53b8b42df47f0472cc1"
+  }
+}

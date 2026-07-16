@@ -1,0 +1,103 @@
+{
+  "A426_A438_A440_A443_target_outcome_or_progress_read": false,
+  "A445_W52_orders_available_at_freeze": false,
+  "A445_evaluation_available_at_freeze": false,
+  "W52_model_refits": 0,
+  "anchors": {
+    "A375_causal": {
+      "path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.causal",
+      "sha256": "adc5fc921da7c7429407fabc637ff03c27e15705fde6ea157fc31acae25f9825"
+    },
+    "A375_result": {
+      "path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+      "sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1"
+    },
+    "A375_runner": {
+      "path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+      "sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1"
+    },
+    "A439_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+      "sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c"
+    },
+    "A439_result": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+      "sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869"
+    },
+    "A439_runner": {
+      "path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+      "sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb"
+    },
+    "A442_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.causal",
+      "sha256": "89e079477ca230be5d2d6ba0231bf7833b29b5c6793076e5800622bf0b8ffb6b"
+    },
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A442_runner": {
+      "path": "research/experiments/chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+      "sha256": "436f0e2a35949bb2007e7da95ec1558c134c2c30c4d077e72b4d2da81de27314"
+    },
+    "A444_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_crossfit_density_reader_transfer_a444_v1.causal",
+      "sha256": "432967376e2e0012b9e939fe176d21e4e9b173d2bc452bee9d4c98e979045e13"
+    },
+    "A444_result": {
+      "path": "research/results/v1/chacha20_round20_w52_crossfit_density_reader_transfer_a444_v1.json",
+      "sha256": "8003c403af34cc7e32a2308840cc924513a220e90f04d6bbef38a3e6d694cb43"
+    },
+    "A444_runner": {
+      "path": "research/experiments/chacha20_round20_w52_crossfit_density_reader_transfer_a444.py",
+      "sha256": "21a81fe1a6d7a6362f153c81b8d99af7f2753c8473f0d64eae9ee0bc731af8c9"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445_design_v1.json",
+      "sha256": "0a08ba9ddfd8c51cab2128ac9272c14371ac621f7644ec54de012d48ec527b00"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445.sh",
+      "sha256": "45558d868238b32dffcb5ef9c4f8976703518e71b6de0b5892c9b43db0e16e48"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445.py",
+      "sha256": "b4a9bd42262e8d038ba3e1faf83f5af603dea9c7c48a7ec86e68b2de7846f074"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_crossfit_raw_shape_reader_transfer_a445.py",
+      "sha256": "e7f3e95573a012b764dd8435ad34dedd0a007b4e4919c18a35a4224b4bcfa0df"
+    }
+  },
+  "attempt_id": "A445",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_raw_shape_crossfit_selection_W52_transfer_and_authentic_Causal_code_frozen_before_any_A445_model_evaluation_W52_order_or_candidate_execution",
+  "design_sha256": "0a08ba9ddfd8c51cab2128ac9272c14371ac621f7644ec54de012d48ec527b00",
+  "implementation_commitment_sha256": "c1cfdf20d2dedff8d2cdffe5da242f93fdb7dc76c44e52454666b9820c8b4c63",
+  "new_solver_stages": 0,
+  "operators": [
+    "borda_sum_baseline",
+    "abs_fisher_top8",
+    "abs_fisher_top32",
+    "abs_fisher_top128",
+    "abs_fisher_all532",
+    "signed_fisher_top32",
+    "square_fisher_top32",
+    "abs_gaussian_top32",
+    "abs_centroid_top32"
+  ],
+  "schema": "chacha20-round20-w52-crossfit-raw-shape-reader-transfer-a445-implementation-v1",
+  "selection_key": [
+    "minimum_fixed_block_bit_gain_descending",
+    "balanced_two_corpus_bit_gain_descending",
+    "all128_bit_gain_descending",
+    "targets_at_or_above_median_rank_descending",
+    "worst_rank_ascending",
+    "fixed_operator_order"
+  ],
+  "source_A375_selection_commitment_sha256": "327be9ae57fce433bb64b467a504fb9d74c10cc7a36b2dd5767fad3814429eab",
+  "source_A439_result_commitment_sha256": "391ed0597f413d31eed60d235e6bebc90b8d7cabda486c6979631a4e753c9f0f",
+  "source_A442_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+  "source_A444_result_commitment_sha256": "cf42204a22bd7b7f7e4f3bec03e8b0e4f46d714da24000bc3579b960bb2a65e3",
+  "target_labels_used_for_W52": 0
+}

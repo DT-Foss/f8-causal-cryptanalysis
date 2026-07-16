@@ -1,0 +1,25 @@
+{
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_corrected_group_direct12_reader_a355_design_v1.json",
+      "sha256": "0bcf7533fa8a9f2ef33546d9aec8d190bf1e1435b9dd9eb5dbec4a0399cc5aae"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_corrected_group_direct12_reader_a355.sh",
+      "sha256": "3b8f82238de3b24c32863e871a44c89731fb19abb9a242b0f8943cb674717ecd"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_corrected_group_direct12_reader_a355.py",
+      "sha256": "82aa4b694e212f2d2e4938e95ee1b6ae0f81aa1c14077d46fead8b259ba11199"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_corrected_group_direct12_reader_a355.py",
+      "sha256": "00c22906063cffa8b5b935e173fcfd3fe33c7f8b4b94d79de8cb940f6bc9b816"
+    }
+  },
+  "attempt_id": "A355",
+  "commitment_state": "frozen_before_any_corrected_group_direct12_measurement",
+  "design_sha256": "0bcf7533fa8a9f2ef33546d9aec8d190bf1e1435b9dd9eb5dbec4a0399cc5aae",
+  "implementation_commitment_sha256": "2c151316f6446be77a9e7fbc780de5f404963a5087831e14f0fb1fee9958ae97",
+  "schema": "chacha20-round20-w46-corrected-group-direct12-reader-a355-implementation-v1"
+}

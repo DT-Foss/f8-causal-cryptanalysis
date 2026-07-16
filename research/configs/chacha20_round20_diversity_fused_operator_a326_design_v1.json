@@ -1,0 +1,76 @@
+{
+  "schema": "chacha20-round20-diversity-fused-operator-a326-design-v1",
+  "attempt_id": "A326",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can the complete A323 best-of-eight complementarity map be converted into one exact executable prefix order, selected only on the independently confirmed A313 W44 calibration target and copied unchanged for a future unseen execution?",
+  "source_anchors": {
+    "A313_result_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+    "A321_design_path": "research/configs/chacha20_round20_holdout_selected_w45_operator_a321_design_v1.json",
+    "A321_design_sha256": "3db5966ca254f8a5342399445d992db672fd0e9e5d40bc8ad401b0ae8cbd1e92",
+    "A321_runner_path": "research/experiments/chacha20_round20_holdout_selected_w45_operator_a321.py",
+    "A321_runner_sha256": "61fd8e3c9635eab8cb166d8c9008df08b0cc067764f9c64da5042fa18726ef52",
+    "A323_design_path": "research/configs/chacha20_round20_cross_width_operator_stability_a323_design_v1.json",
+    "A323_design_sha256": "459826534bdc106796df6cb56e8ef8d6421c347bf2b944d7fd59ef9ae1f3890f",
+    "A323_result_path": "research/results/v1/chacha20_round20_cross_width_operator_stability_a323_v1.json",
+    "A323_result_sha256": "a4cb0e040eccbe0f4c586b3ae28f5ab2b07be70f4942f608a99617e2160b603f"
+  },
+  "fusion_contract": {
+    "source_operator_sequence": [
+      "online_four_center_band",
+      "online_weighted_dovetail_2_to_1",
+      "raw_nearest_prototype_L1",
+      "raw_nearest_prototype_Linf",
+      "raw_nearest_prototype_squared_L2",
+      "whitened_shrinkage_mahalanobis",
+      "whitened_diagonal_variance_L2",
+      "whitened_pairwise_median_scaled_L1"
+    ],
+    "candidate_sequence_and_tie_break": [
+      "min_rank_wavefront",
+      "top2_rank_sum",
+      "borda_rank_sum",
+      "fixed_point_rrf_k60",
+      "stability_weighted_borda",
+      "stability_weighted_fixed_point_rrf_k60"
+    ],
+    "rank_origin": 1,
+    "rrf_k": 60,
+    "rrf_fixed_point_numerator": 281474976710656,
+    "rrf_term": "floor(2^48 / (60 + one_based_rank))",
+    "stability_weight_rule": "max(1, round_half_up(1000000 * positive_cross_width_spearman))",
+    "min_rank_wavefront_sort": "ascending(sorted_eight_ranks, rank_sum, cell_id)",
+    "top2_rank_sum_sort": "ascending(sum(two_smallest_ranks), smallest_rank, rank_sum, cell_id)",
+    "borda_rank_sum_sort": "ascending(rank_sum, smallest_rank, cell_id)",
+    "fixed_point_rrf_sort": "descending(unweighted_fixed_point_rrf, then ascending rank_sum and cell_id)",
+    "stability_weighted_borda_sort": "ascending(weighted_rank_sum, unweighted_rank_sum, cell_id)",
+    "stability_weighted_fixed_point_rrf_sort": "descending(weighted_fixed_point_rrf, then ascending unweighted rank_sum and cell_id)",
+    "duplicate_cells": 0,
+    "target_labels_used_to_construct_fusions": 0,
+    "candidate_execution": false
+  },
+  "selection_contract": {
+    "calibration_object": "A313 independently confirmed W44 prefix",
+    "selection_rule": "minimum_A313_rank_then_frozen_fusion_index",
+    "deployment_object": "exact paired W45 fusion order, reusable unchanged as a 4096-cell prefix order for the untouched A325 W46 execution",
+    "manual_override": false,
+    "A322_progress_or_result_used": false,
+    "A325_public_challenge_features_used": false,
+    "A325_target_label_prefix_filter_or_result_used": false
+  },
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "independent calibration label only",
+    "A323_target_blind_stability_map_available_at_design_freeze": true,
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_any_fusion_or_selection": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A322_or_A325": 0,
+    "operator_refits_on_A322_or_A325": 0
+  }
+}

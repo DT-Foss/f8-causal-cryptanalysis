@@ -1,0 +1,61 @@
+{
+  "schema": "chacha20-round20-margin-consistency-wavefront-a332-design-v1",
+  "attempt_id": "A332",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can A331's independently selected margin-consistency signal be fused with A329's stability-aware order under an exact factor-two oracle-regret guarantee?",
+  "source_anchors": {
+    "A313_result_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+    "A329_order_path": "research/results/v1/chacha20_round20_linf_stability_merge_a329_order_v1.json",
+    "A329_order_sha256": "05d1049a1304a3160ca6e50a667a56ac4ff194fe913d3e570df2e813023b3512",
+    "A331_result_path": "research/results/v1/chacha20_round20_linf_margin_stability_a331_v1.json",
+    "A331_result_sha256": "9eb7f835660b937db0efa654152f8c1e5793dd8c2a877b071056eb32b1a68fcc",
+    "A331_runner_path": "research/experiments/chacha20_round20_linf_margin_stability_a331.py",
+    "A331_runner_sha256": "323ab66a164b470b0aff3e6868a8bda18ee2cae54d5934f00af260355e209521"
+  },
+  "operator_contract": {
+    "A329_base": "stable_switched_2_to_1 W44/W45 order pair",
+    "margin_score": "negative absolute difference between exact W44 and W45 nearest-prototype margins, selected by A331 without A313/A322/A325 labels",
+    "margin_order": "descending selected margin score, then corresponding A329 base rank, then cell",
+    "inconsistency_control_order": "ascending selected margin score, then corresponding A329 base rank, then cell",
+    "wavefront_order": "ascending min(source ranks), then max(source ranks), rank sum, then cell",
+    "wavefront_guarantee": "R_wavefront(cell) <= 2 * min(R_source1(cell), R_source2(cell))",
+    "borda_order": "ascending source-rank sum, then minimum source rank, maximum source rank, then cell",
+    "candidate_sequence_and_tie_break": [
+      "A329_primary_baseline",
+      "margin_consistency_only",
+      "margin_inconsistency_only_control",
+      "consistency_min_rank_wavefront",
+      "inconsistency_min_rank_wavefront_control",
+      "consistency_borda_rank_sum",
+      "inconsistency_borda_rank_sum_control"
+    ],
+    "primary_operator": "consistency_min_rank_wavefront",
+    "matched_direction_control": "inconsistency_min_rank_wavefront_control",
+    "A313_role": "annotation_only_no_operator_selection",
+    "new_candidate_execution": false,
+    "target_labels_used_from_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "seven exact 4096-cell W44 and W45 order pairs and uint16be hashes",
+    "zero-violation factor-two wavefront checks for consistency and inconsistency directions",
+    "cross-width Spearman for every exact pair",
+    "A313 rank annotation without operator selection",
+    "frozen consistency primary and matched inconsistency direction control",
+    "postconfirmation A322 and A325 ranks without duplicate candidate execution"
+  ],
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "annotation_only_no_operator_selection",
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_operator_definition_or_selection": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A322_or_A325": 0,
+    "operator_refits_on_A322_or_A325": 0,
+    "duplicate_candidate_execution_required_for_evaluation": false
+  }
+}

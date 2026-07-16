@@ -1,0 +1,60 @@
+{
+  "attempt_id": "A399",
+  "design_state": "frozen_after_A398_exact_scheduler_before_any_A399_candidate_progress_or_result",
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "public_output_blocks": 8,
+    "prefix_groups": 4096,
+    "workers": 8,
+    "static_schedule_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "worker_task_counts": {
+      "A379_target_free": 512,
+      "A380_target_conditioned": 512,
+      "wide_vote": 512,
+      "sparse_reciprocal": 512,
+      "broad_quantile": 512,
+      "broad_intersection": 512,
+      "A388_W50_public_output_direct12_pair": 512,
+      "A398_W50_public_output_direct12_triple": 512
+    },
+    "slabs_per_prefix_group": 128,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "shared_stop_check": "before each next complete prefix group",
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "independent_confirmation_bits": 8192
+  },
+  "launch_contract": {
+    "first_A399_available_slot_worker": "A398_W50_public_output_direct12_triple",
+    "A397_first_available_slot_contract_remains_prior": true,
+    "remaining_workers": "start independently as Metal slots become available after higher-priority frozen queue entries",
+    "live_recoveries_must_not_be_interrupted": true
+  },
+  "information_boundary": {
+    "A399_candidate_or_progress_available_at_design_freeze": false,
+    "A385_assignment_absent_from_protocol": true,
+    "A397_progress_filter_result_or_true_prefix_consumed": false,
+    "all_live_or_queued_recovery_progress_filter_results_or_true_prefixes_consumed": false,
+    "candidate_assignments_executed_for_schedule_construction": 0,
+    "reader_refits": 0,
+    "target_labels_used_for_schedule_construction": 0
+  },
+  "source_anchors": {
+    "A397_runner_path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+    "A397_runner_sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5",
+    "A397_protocol_path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_v1.json",
+    "A397_protocol_sha256": "447baf5e4784d0210f51e194f1a241b7fbfbf1ab239fe16582effdb4b435fb32",
+    "A398_result_path": "research/results/v1/chacha20_round20_w50_dual_direct12_eight_reader_a398_v1.json",
+    "A398_result_sha256": "fe37839fe18e71166a5d727cb14be96eca53bb6cce2cc3824f5bc4bd885dfd42",
+    "A398_causal_path": "research/results/v1/chacha20_round20_w50_dual_direct12_eight_reader_a398_v1.causal",
+    "A398_causal_sha256": "50d7f00989a4aa7288ef41e4a720b7f500d5d3ce4d966a65d445642d69b5d071"
+  },
+  "schema": "chacha20-round20-w50-dual-direct12-eight-worker-recovery-a399-design-v1"
+}

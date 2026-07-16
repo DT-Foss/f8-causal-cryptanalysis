@@ -1,0 +1,59 @@
+{
+  "A356_order_commitment_sha256": "a41394ef15ba83d6ff9f1cefafc361ae8747ba4eeca2b5c0f13460e7d43b5ce5",
+  "anchors": {
+    "A324_qualification": {
+      "path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+      "sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a"
+    },
+    "A345_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+      "sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95"
+    },
+    "A356_order": {
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_order_v1.json",
+      "sha256": "2069c706d070ac1add659232a08c80a6b46d213cc9c6abb5ad9eebf99afc481a"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_corrected_order_prospective_recovery_a358_design_v1.json",
+      "sha256": "fad363fc3021e07229e02f1f953c4aa295c5f82bb2c316b3d29eebcf62ddb640"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_corrected_order_prospective_recovery_a358.sh",
+      "sha256": "b6ee0fffcd6b5612412aa30ecc51cbeb7538275ad04780728ab79c8297cbfe15"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_corrected_order_prospective_recovery_a358.py",
+      "sha256": "f4a86bcc23be8a9a0988fba709e146422a47afd2ca8792899c74fc70babeebfd"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_corrected_order_prospective_recovery_a358.py",
+      "sha256": "3ffa0cbc5bb27b31c43c68a325d869b797e65894912729eb3a8a44ebee03e3fc"
+    }
+  },
+  "attempt_id": "A358",
+  "commitment_state": "frozen_before_A345_A350_or_A358_candidate_prefix_or_result",
+  "design_sha256": "fad363fc3021e07229e02f1f953c4aa295c5f82bb2c316b3d29eebcf62ddb640",
+  "implementation_commitment_sha256": "642a93c660500502aa13c769b04e5c945eeacebf5938dd025edb495487af56c9",
+  "schema": "chacha20-round20-w46-corrected-order-prospective-recovery-a358-implementation-v1",
+  "selected_operator": "A356_corrected_coordinate_zero_refit_global_raw_reader",
+  "selected_order_uint16be_sha256": "436082dcc2a3b3f1be1ff5459c11b40de84aa57ef0bc160cc8fa57af17ae692f",
+  "source_boundary_snapshot": {
+    "A345": {
+      "available": true,
+      "executed_prefix_groups": 540,
+      "mtime_ns": 1784115188331750819,
+      "sha256": "7fbd852bda5ead4f9fe09c5adde490008672e5ed373990a945caee9697bf0126",
+      "status": "running"
+    },
+    "A345_result_available": false,
+    "A350": {
+      "available": true,
+      "executed_prefix_groups": 229,
+      "mtime_ns": 1784115186309610394,
+      "sha256": "faebda2611431cbc35e981d741751231a3292b5a43c4b5e90d3187301fcfc0e1",
+      "status": "running"
+    },
+    "A350_result_available": false,
+    "A358_result_available": false
+  }
+}

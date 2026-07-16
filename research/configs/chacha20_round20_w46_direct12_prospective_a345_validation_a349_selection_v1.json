@@ -1,0 +1,40 @@
+{
+  "attempt_id": "A349",
+  "selection_state": "deterministically_selected_after_complete_A348_before_A345_result_candidate_or_prefix",
+  "design_sha256": "f4c8a512def4c115b0a6be0e8a86754764c3a6f835ccc8cfcfcf562cc80f164a",
+  "selection_rule": "minimum A348 rank_one_based across the eight predeclared multiview readers, lexicographic view-name tie break",
+  "selected_view": "A342_selected_pair_slice_z",
+  "selected_view_A325_calibration": {
+    "domain_reduction_factor_at_rank": 13.74496644295302,
+    "gain_bits_vs_uniform_complete_4096_cover": 3.7808314795378384,
+    "order_uint16be_sha256": "922810f3695208a5b5ddeb612a588050cef59596450c5cd63aef48d2687db563",
+    "rank_one_based": 298
+  },
+  "selected_view_algorithm": {
+    "cross_slice_readout": "zscore each low4 slice over its complete 256-cell pair-score field, then rank all 4096 direct12 cells by descending zscore and cell-id tie break",
+    "pair_combination": "negative sum of descending midranks from the two selected view score fields",
+    "reader_refits": 0,
+    "selected_known_key_views": [
+      "learned_clause_rejected_large_stage::coefficient_negative::normalized_8cube_graph_laplacian",
+      "learned_literal_count_stage::coefficient_negative::normalized_8cube_graph_laplacian"
+    ],
+    "slice_measurement": "fix word0 bits37_through34 by four exact CNF units and enumerate word0 bits45_through38 as all 256 assumption cells at conflict horizons 1,2,4,8"
+  },
+  "information_boundary": {
+    "A345_candidate_or_prefix_available_at_selection_freeze": false,
+    "A345_progress_content_read_for_selection": false,
+    "A345_result_available_at_selection_freeze": false,
+    "A345_target_labels_used": 0,
+    "A348_complete_measurement_and_rank_panel_available": true,
+    "reader_refits_on_A345": 0
+  },
+  "schema": "chacha20-round20-w46-direct12-prospective-a345-validation-a349-selection-v1",
+  "source_anchors": {
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A349_design_path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_design_v1.json",
+    "A349_design_sha256": "f4c8a512def4c115b0a6be0e8a86754764c3a6f835ccc8cfcfcf562cc80f164a"
+  }
+}

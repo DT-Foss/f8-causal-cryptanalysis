@@ -1,0 +1,173 @@
+{
+  "schema": "chacha20-round20-w46-pre-result-operator-panel-a343-design-v1",
+  "attempt_id": "A343",
+  "design_state": "frozen_while_A325_is_running_before_any_A325_result_candidate_or_prefix",
+  "scientific_question": "What exact full-round W46 search rank will the independently confirmed A325 prefix occupy in every complete W46 order frozen before that prefix is known?",
+  "source_anchors": {
+    "A325_protocol_path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+    "A333_order_path": "research/results/v1/chacha20_round20_cross_width_rank_velocity_a333_order_v1.json",
+    "A333_order_sha256": "4cd1c0ce67e50df687548d0cf6a5f921ff91767c077d25f39b158a4263de4b5c",
+    "A334_order_path": "research/results/v1/chacha20_round20_walk_forward_structural_ensemble_a334_order_v1.json",
+    "A334_order_sha256": "2cf5c72675f31be60a5e8a896735953dba12fb3a5864f3e9c6e700093bfc024e",
+    "A335_order_path": "research/results/v1/chacha20_round20_multiview_rank_smoothing_a335_order_v1.json",
+    "A335_order_sha256": "80e63e65ca8139e2b893670c093ddfbd7451e6cf1e024b64aff18950b6344f75",
+    "A336_order_path": "research/results/v1/chacha20_round20_multiview_forecast_fusion_a336_order_v1.json",
+    "A336_order_sha256": "c8ab47d6de41740fb216861cf2d135568d4aadd1bbcf9bdf5e4fa20ea5344d4c",
+    "A337_order_path": "research/results/v1/chacha20_round20_linf_l2_weight_simplex_a337_order_v1.json",
+    "A337_order_sha256": "16b580081dd1dcea74ba0ca7357e2dfb14b5c50b66bc9f300bbc7d5577f8ceea",
+    "A339_order_path": "research/results/v1/chacha20_round20_w46_coarse_carry_forward_a339_order_v1.json",
+    "A339_order_sha256": "7bdf6ee303f61b489cb491df91c30aa400928cf361eaef862945a25d58ac9b9b",
+    "A340_order_path": "research/results/v1/chacha20_round20_w46_target_conditioned_causal_order_a340_order_v1.json",
+    "A340_order_sha256": "ecc69f2b8b536381d5c56c35a64328aae2c4e516cab10c3ce9c46ea84d1916a8",
+    "A341_order_path": "research/results/v1/chacha20_round20_w46_familywise_channel_portfolio_a341_v1.json",
+    "A341_order_sha256": "4ebc8041d469a57e064a31eb3099a46cb8a8dd998090b9fef70a3e9233fef7d6",
+    "A342_order_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_order_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+  },
+  "source_alias_order": {
+    "A333": [
+      "aggressive_velocity_alpha_2",
+      "carry_forward_alpha_0",
+      "damped_velocity_alpha_1_over_2",
+      "damped_velocity_alpha_1_over_4",
+      "linear_velocity_alpha_1",
+      "midpoint_alpha_minus_1_over_2",
+      "reverse_velocity_alpha_minus_1"
+    ],
+    "A334": [
+      "current_consistency_borda_only",
+      "current_stability_2_to_1_only",
+      "temporal_midpoint_only",
+      "temporal_plus_consistency_borda",
+      "temporal_plus_margin_consistency_borda",
+      "temporal_plus_margin_inconsistency_control_borda",
+      "temporal_plus_stability_borda",
+      "temporal_plus_switched_control_borda"
+    ],
+    "A335": [
+      "coarse",
+      "fine",
+      "nearest_prototype_L1",
+      "nearest_prototype_Linf",
+      "nearest_prototype_squared_L2",
+      "numeric"
+    ],
+    "A336": [
+      "W44_raw_linf_carry_forward_control",
+      "all_six_equal_borda",
+      "fine_coarse_equal_borda_control",
+      "l1_linf_equal_borda",
+      "l1_linf_l2_equal_borda",
+      "l1_linf_l2_rank_median",
+      "linf_l2_equal_borda",
+      "linf_midpoint_baseline"
+    ],
+    "A337": [
+      "linf00_l2_16",
+      "linf01_l2_15",
+      "linf02_l2_14",
+      "linf03_l2_13",
+      "linf04_l2_12",
+      "linf05_l2_11",
+      "linf06_l2_10",
+      "linf07_l2_09",
+      "linf08_l2_08",
+      "linf09_l2_07",
+      "linf10_l2_06",
+      "linf11_l2_05",
+      "linf12_l2_04",
+      "linf13_l2_03",
+      "linf14_l2_02",
+      "linf15_l2_01",
+      "linf16_l2_00"
+    ],
+    "A339": [
+      "A325_raw_linf_baseline",
+      "W45_coarse_carry_forward_primary",
+      "W45_fine_carry_forward_view_control",
+      "raw_coarse_equal_borda",
+      "raw_coarse_min_rank_wavefront_protected"
+    ],
+    "A340": [
+      "A325_public_hash_control",
+      "A325_raw_linf_baseline",
+      "A340_target_conditioned_causal_fine",
+      "raw_causal_equal_borda",
+      "raw_causal_min_rank_wavefront_protected"
+    ],
+    "A341": [
+      "A325_public_hash_control",
+      "A325_raw_linf_baseline",
+      "A340_target_conditioned_selected_channel_fine",
+      "A341_familywise_selected_literal_local_fine",
+      "raw_A340_A341_equal_borda",
+      "raw_A340_A341_min_rank_wavefront_factor3",
+      "raw_A341_min_rank_wavefront_factor2"
+    ],
+    "A342": [
+      "A325_public_hash_control",
+      "A325_raw_linf_baseline",
+      "A340_target_conditioned_selected_channel_fine",
+      "A341_familywise_selected_literal_local_fine",
+      "A342_exhaustive_pair_borda_fine",
+      "A342_exhaustive_triple_borda_fine",
+      "A342_pair_triple_equal_borda",
+      "raw_A340_A341_pair_triple_min_rank_wavefront_factor5",
+      "raw_A342_pair_min_rank_wavefront_factor2",
+      "raw_A342_triple_min_rank_wavefront_factor2"
+    ]
+  },
+  "deduplication_contract": {
+    "expected_alias_count": 73,
+    "expected_unique_order_count": 57,
+    "identity": "uint16be SHA-256 of the complete 4096-cell order",
+    "canonical_alias": "first alias in fixed family order A333,A334,A335,A336,A337,A339,A340,A341,A342",
+    "all_aliases_retained": true,
+    "duplicate_candidate_execution": false
+  },
+  "designated_comparisons": {
+    "executed_A325_raw_Linf": "A339/A325_raw_linf_baseline",
+    "A333_temporal_midpoint": "A333/midpoint_alpha_minus_1_over_2",
+    "A336_equal_Linf_L2": "A336/linf_l2_equal_borda",
+    "A337_selected_9_to_7": "A337/linf09_l2_07",
+    "A339_coarse_primary": "A339/W45_coarse_carry_forward_primary",
+    "A339_factor2_protected": "A339/raw_coarse_min_rank_wavefront_protected",
+    "A340_target_Causal": "A340/A340_target_conditioned_causal_fine",
+    "A340_factor2_protected": "A340/raw_causal_min_rank_wavefront_protected",
+    "A341_familywise_single": "A341/A341_familywise_selected_literal_local_fine",
+    "A341_factor3_protected": "A341/raw_A340_A341_min_rank_wavefront_factor3",
+    "A342_pair": "A342/A342_exhaustive_pair_borda_fine",
+    "A342_triple": "A342/A342_exhaustive_triple_borda_fine",
+    "A342_triple_factor2_protected": "A342/raw_A342_triple_min_rank_wavefront_factor2",
+    "A342_all_factor5_protected": "A342/raw_A340_A341_pair_triple_min_rank_wavefront_factor5",
+    "public_hash_control": "A340/A325_public_hash_control"
+  },
+  "post_confirmation_metrics": [
+    "one-based prefix rank for every retained alias and unique order",
+    "exact counterfactual complete-group evaluations equal to rank times 2^34",
+    "gain bits log2(4096/rank) against the complete 2^46 residual domain",
+    "domain-reduction and speed factors against executed raw Linf",
+    "family winners and the descriptive global oracle winner with frozen tie-breaks",
+    "exact designated comparison panel across temporal, Causal, ensemble and protected orders"
+  ],
+  "evaluation_gate": {
+    "A325_result_required": true,
+    "A325_result_sha256_required_as_argument": true,
+    "independent_confirmation_required": true,
+    "confirmed_prefix_only_secret_derived_input": true,
+    "orders_refit_after_A325": false,
+    "new_candidate_execution": false,
+    "matched_control_counterfactual_not_inferred": true
+  },
+  "information_boundary": {
+    "A325_execution_running_at_design_freeze": true,
+    "A325_progress_exists_at_design_freeze": true,
+    "A325_progress_used_for_panel_membership_order_or_metrics": false,
+    "A325_result_available_at_design_freeze": false,
+    "A325_candidate_or_prefix_available_at_design_freeze": false,
+    "all_source_orders_frozen_before_A325_candidate_zero": true,
+    "target_labels_used_to_construct_orders": 0,
+    "duplicate_candidate_execution_required": false
+  }
+}

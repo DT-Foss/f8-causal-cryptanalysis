@@ -1,0 +1,366 @@
+{
+  "A426_A438_A440_secret_result_stop_or_worker_progress_read": false,
+  "A439_result_commitment_sha256": "391ed0597f413d31eed60d235e6bebc90b8d7cabda486c6979631a4e753c9f0f",
+  "A439_result_sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869",
+  "anchors": {
+    "A434_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+      "sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b"
+    },
+    "A439_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+      "sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c"
+    },
+    "A439_result": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+      "sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869"
+    },
+    "A439_runner": {
+      "path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+      "sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_design_v1.json",
+      "sha256": "2ff84e9e2995d293bf3cd681e0af150291a121d0cf80cb1e9fa0f6084d9eb431"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_implementation_v1.json",
+      "sha256": "c6cc550c4b87a18758b448c4a3f4e00f0d564948756f484f4be26bea44b5d38f"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.sh",
+      "sha256": "dc9b9d9fa5d0bb705c52b093ea3282c432dbfa4a30a92fb855cd52a6bb9334bd"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.py",
+      "sha256": "7d3107eb060298d18f01e0d8278d9d2eaaa0a8baab757291cd5eede0cde1c83c"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.py",
+      "sha256": "3bf94443c538b75ba9e370d73c5324a316e0bcecb5857ecdddcad3230e3ed507"
+    }
+  },
+  "artifact": {
+    "bytes": 67108864,
+    "direct_inverse_sentinels": [
+      {
+        "global_index": 0,
+        "off_axis": 672,
+        "prefix": 2160
+      },
+      {
+        "global_index": 1,
+        "off_axis": 672,
+        "prefix": 3120
+      },
+      {
+        "global_index": 2,
+        "off_axis": 576,
+        "prefix": 2160
+      },
+      {
+        "global_index": 15,
+        "off_axis": 576,
+        "prefix": 1169
+      },
+      {
+        "global_index": 16,
+        "off_axis": 768,
+        "prefix": 545
+      },
+      {
+        "global_index": 12345,
+        "off_axis": 2145,
+        "prefix": 640
+      },
+      {
+        "global_index": 8388608,
+        "off_axis": 2320,
+        "prefix": 2581
+      },
+      {
+        "global_index": 16777214,
+        "off_axis": 2829,
+        "prefix": 1402
+      },
+      {
+        "global_index": 16777215,
+        "off_axis": 1545,
+        "prefix": 1402
+      }
+    ],
+    "encoding": "uint16be_prefix_then_uint16be_off_axis",
+    "memory_mappable": true,
+    "pair_cells": 16777216,
+    "path": "research/artifacts/a441_chacha20_r20_w52_direct_product_reader_pair_portfolio_v1/direct_product_factor16_order_u16be_u16be_v1.bin",
+    "reproducible_from_committed_source_orders": true,
+    "sha256": "c6262b4d68dbe93554712acdee39745229fff7fa62bd73f359efcba4369c5b36"
+  },
+  "attempt_id": "A441",
+  "candidate_assignments_executed": 0,
+  "causal": {
+    "api_id": "a441pair",
+    "clusters": 1,
+    "embedded_rules": 4,
+    "explicit_triplets": 4,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 1,
+    "path": "research/results/v1/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_v1.causal",
+    "personal_semantic_readback": {
+      "factor16_order": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "exact complete 2^24 pair schedule",
+        "evidence": "{\"bytes\": 67108864, \"direct_inverse_sentinels\": [{\"global_index\": 0, \"off_axis\": 672, \"prefix\": 2160}, {\"global_index\": 1, \"off_axis\": 672, \"prefix\": 3120}, {\"global_index\": 2, \"off_axis\": 576, \"prefix\": 2160}, {\"global_index\": 15, \"off_axis\": 576, \"prefix\": 1169}, {\"global_index\": 16, \"off_axis\": 768, \"prefix\": 545}, {\"global_index\": 12345, \"off_axis\": 2145, \"prefix\": 640}, {\"global_index\": 8388608, \"off_axis\": 2320, \"prefix\": 2581}, {\"global_index\": 16777214, \"off_axis\": 2829, \"prefix\": 1402},",
+        "is_inferred": false,
+        "m_idx": 3,
+        "mechanism": "stable_minimum_rank_bucket_merge_with_exact_tie_key",
+        "o_idx": 4,
+        "outcome": "A441:exact_factor16_pair_portfolio",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"bound\": \"R_A441(x,y) <= 16*min_product_reader_pair_rank(x,y)\", \"maximum_envelope_slack_cells\": 240567776, \"maximum_ratio\": 14.0, \"mean_ratio\": 4.46154643194001, \"pair_cells_checked\": 16777216, \"reader_count\": 16, \"violations\": 0}",
+        "s_idx": 2,
+        "source": "ba99d9e0f68992cf31643702c8e98b97fec2098133e504e7d0771effee07769b",
+        "trigger": "A441:sixteen_direct_product_pair_orders"
+      },
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "factor2_union_with_A439_or_direct_recovery_execution",
+        "predicate": "next_required_object",
+        "subject": "A441:W52_recovery_ready",
+        "suggested_queries": [
+          "If neither exact order dominates globally, construct a target-blind factor-two merger of A439 and A441 before allocating another W52 recovery run."
+        ]
+      },
+      "recovery_ready": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "qualified A434 2^28-subcell execution",
+        "evidence": "c6262b4d68dbe93554712acdee39745229fff7fa62bd73f359efcba4369c5b36",
+        "is_inferred": false,
+        "m_idx": 7,
+        "mechanism": "memory_mappable_exact_pair_at_codec",
+        "o_idx": 8,
+        "outcome": "A441:W52_recovery_ready",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "16,777,216 duplicate-free cells; uint16be prefix + uint16be off-axis",
+        "s_idx": 4,
+        "source": "ba99d9e0f68992cf31643702c8e98b97fec2098133e504e7d0771effee07769b",
+        "trigger": "A441:exact_factor16_pair_portfolio"
+      },
+      "representation_diversity": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "operator diversity in W52 pair space",
+        "evidence": "all 16,777,216 pair cells",
+        "is_inferred": false,
+        "m_idx": 5,
+        "mechanism": "exact_all_pair_rank_comparison_against_axis_first_A439",
+        "o_idx": 6,
+        "outcome": "A441:measured_pair_representation_diversity",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"direct_earlier\": 8267108, \"direct_earlier_fraction\": 0.49275803565979004, \"direct_later\": 8378344, \"direct_later_fraction\": 0.4993882179260254, \"direct_over_A439_rank_ratio_quantiles\": {\"max\": 1.9583333730697632, \"min\": 0.5, \"p01\": 0.9857032895088196, \"p10\": 0.9926142692565918, \"p25\": 0.996821939945221, \"p50\": 1.0, \"p75\": 1.0032079219818115, \"p90\": 1.0074244737625122, \"p99\": 1.0144917964935303}, \"equal\": 131764, \"maximum_direct_gain_bits\": 1.0, \"maximum_direct_loss_bits\": 0.9696263802301236, \"pair_cells\": 16777216, \"spearman_rank_correlation\": 0.9999790521770737, \"top_k_overlap\": {\"1048576\": {\"intersection\": 1045504, \"union\": 1051648}, \"256\": {\"intersection\": 232, \"union\": 280}, \"4096\": {\"intersection\": 4032, \"union\": 4160}, \"65536\": {\"intersection\": 65280, \"union\": 65792}}}",
+        "s_idx": 4,
+        "source": "2527a07a4c3596a2bbbac541b97bf3c2852e2de10de936a8d1ae89dee5c96a22",
+        "trigger": "A441:exact_factor16_pair_portfolio"
+      },
+      "source_products": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "target-blind full-round ChaCha20 W52 ordering",
+        "evidence": "1f3ad5cb89b7783be845fb6615bca845afd1991c772e375387f34cef3d5fa74e",
+        "is_inferred": false,
+        "m_idx": 1,
+        "mechanism": "four_by_four_cross_axis_product_before_factorization",
+        "o_idx": 2,
+        "outcome": "A441:sixteen_direct_product_pair_orders",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "4 prefix Readers x 4 off-axis Readers = 16 exact pair permutations",
+        "s_idx": 0,
+        "source": "22d2c9dd47ff335eb04df8241b06b355136a3be67cc2a042919ae3194cff5051",
+        "trigger": "A439:eight_refit_free_axis_orders"
+      },
+      "terminal_chain": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "AI-native retained inference",
+        "evidence": "TARGET_BLIND_DIRECT_16_PRODUCT_READER_EXACT_FACTOR16_W52_PAIR_PORTFOLIO_RECOVERY_READY",
+        "is_inferred": true,
+        "m_idx": 9,
+        "mechanism": "materialized_direct_product_factor16_closure",
+        "o_idx": 8,
+        "outcome": "A441:W52_recovery_ready",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "exact retained closure",
+        "s_idx": 0,
+        "source": "materialized:A441_direct_product_recovery_ready_chain",
+        "trigger": "A439:eight_refit_free_axis_orders"
+      }
+    },
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "sha256": "2b2f62b2761d48a2249de44e9f1d62b45440f904e425dc8128560197d1fbbe7b",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 10,
+      "file_size_bytes": 5920,
+      "file_size_kb": 5.8,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_v1.causal.87683.tmp",
+      "gaps": 1,
+      "rules": 4,
+      "triplets": 5
+    }
+  },
+  "comparison_sha256": "2527a07a4c3596a2bbbac541b97bf3c2852e2de10de936a8d1ae89dee5c96a22",
+  "comparison_to_A439": {
+    "direct_earlier": 8267108,
+    "direct_earlier_fraction": 0.49275803565979004,
+    "direct_later": 8378344,
+    "direct_later_fraction": 0.4993882179260254,
+    "direct_over_A439_rank_ratio_quantiles": {
+      "max": 1.9583333730697632,
+      "min": 0.5,
+      "p01": 0.9857032895088196,
+      "p10": 0.9926142692565918,
+      "p25": 0.996821939945221,
+      "p50": 1.0,
+      "p75": 1.0032079219818115,
+      "p90": 1.0074244737625122,
+      "p99": 1.0144917964935303
+    },
+    "equal": 131764,
+    "maximum_direct_gain_bits": 1.0,
+    "maximum_direct_loss_bits": 0.9696263802301236,
+    "pair_cells": 16777216,
+    "spearman_rank_correlation": 0.9999790521770737,
+    "top_k_overlap": {
+      "1048576": {
+        "intersection": 1045504,
+        "union": 1051648
+      },
+      "256": {
+        "intersection": 232,
+        "union": 280
+      },
+      "4096": {
+        "intersection": 4032,
+        "union": 4160
+      },
+      "65536": {
+        "intersection": 65280,
+        "union": 65792
+      }
+    }
+  },
+  "design_sha256": "2ff84e9e2995d293bf3cd681e0af150291a121d0cf80cb1e9fa0f6084d9eb431",
+  "evidence_stage": "TARGET_BLIND_DIRECT_16_PRODUCT_READER_EXACT_FACTOR16_W52_PAIR_PORTFOLIO_RECOVERY_READY",
+  "generation": {
+    "artifact_bytes": 67108864,
+    "artifact_sha256": "c6262b4d68dbe93554712acdee39745229fff7fa62bd73f359efcba4369c5b36",
+    "axis_cells": 4096,
+    "chunk_ranks": 32768,
+    "chunks": 512,
+    "duplicate_free_complete_cover": true,
+    "maximum_new_pairs_in_one_chunk": 313648,
+    "pair_cells": 16777216,
+    "pairs_written": 16777216,
+    "product_readers": 16
+  },
+  "implementation_commitment_sha256": "45db7786b11df8dda8095d8852ae60f844df04c89594f3f589feb240018899e9",
+  "implementation_sha256": "c6cc550c4b87a18758b448c4a3f4e00f0d564948756f484f4be26bea44b5d38f",
+  "model_role_order": [
+    "wide_vote",
+    "sparse_reciprocal",
+    "broad_quantile",
+    "broad_intersection"
+  ],
+  "pair_order_sha256": "ba99d9e0f68992cf31643702c8e98b97fec2098133e504e7d0771effee07769b",
+  "pointwise_factor16_proof": {
+    "bound": "R_A441(x,y) <= 16*min_product_reader_pair_rank(x,y)",
+    "maximum_envelope_slack_cells": 240567776,
+    "maximum_ratio": 14.0,
+    "mean_ratio": 4.46154643194001,
+    "pair_cells_checked": 16777216,
+    "reader_count": 16,
+    "violations": 0
+  },
+  "product_role_order": [
+    [
+      "wide_vote",
+      "wide_vote"
+    ],
+    [
+      "wide_vote",
+      "sparse_reciprocal"
+    ],
+    [
+      "wide_vote",
+      "broad_quantile"
+    ],
+    [
+      "wide_vote",
+      "broad_intersection"
+    ],
+    [
+      "sparse_reciprocal",
+      "wide_vote"
+    ],
+    [
+      "sparse_reciprocal",
+      "sparse_reciprocal"
+    ],
+    [
+      "sparse_reciprocal",
+      "broad_quantile"
+    ],
+    [
+      "sparse_reciprocal",
+      "broad_intersection"
+    ],
+    [
+      "broad_quantile",
+      "wide_vote"
+    ],
+    [
+      "broad_quantile",
+      "sparse_reciprocal"
+    ],
+    [
+      "broad_quantile",
+      "broad_quantile"
+    ],
+    [
+      "broad_quantile",
+      "broad_intersection"
+    ],
+    [
+      "broad_intersection",
+      "wide_vote"
+    ],
+    [
+      "broad_intersection",
+      "sparse_reciprocal"
+    ],
+    [
+      "broad_intersection",
+      "broad_quantile"
+    ],
+    [
+      "broad_intersection",
+      "broad_intersection"
+    ]
+  ],
+  "reader_refits": 0,
+  "result_commitment_sha256": "22d2c9dd47ff335eb04df8241b06b355136a3be67cc2a042919ae3194cff5051",
+  "schema": "chacha20-round20-w52-direct-product-reader-pair-portfolio-a441-v1",
+  "source_product_contract_sha256": "1f3ad5cb89b7783be845fb6615bca845afd1991c772e375387f34cef3d5fa74e",
+  "target_labels_used": 0
+}

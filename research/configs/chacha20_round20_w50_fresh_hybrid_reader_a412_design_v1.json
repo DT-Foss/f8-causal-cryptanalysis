@@ -1,0 +1,76 @@
+{
+  "schema": "chacha20-round20-w50-fresh-hybrid-reader-a412-design-v1",
+  "attempt_id": "A412",
+  "design_state": "frozen_after_A404_A410_source_results_before_any_A412_challenge_measurement_label_score_or_candidate",
+  "question": "Does a reader family frozen from the complementary A404 rank-fusion and A410 nonlinear-prototype mechanisms generalize to an entirely fresh 16-key holdout after selection on 16 other fresh keys?",
+  "source_contract": {
+    "A401_runner_path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+    "A401_runner_sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee",
+    "A401_result_path": "research/results/v1/chacha20_round20_w50_knownkey_direct12_learning_a401_v1.json",
+    "A401_result_sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702",
+    "A404_result_path": "research/results/v1/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_v1.json",
+    "A404_result_sha256": "ded81a43fed7318ab8a0d32787d5e41e1c51b70e473dfc415dae30b44f4080e1",
+    "A410_result_path": "research/results/v1/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_v1.json",
+    "A410_result_sha256": "d631fcc57f1659455417789c58f277aa6d78118eb361281137bdcb846bae284e",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  },
+  "corpus_contract": {
+    "target_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+    "selection_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "holdout_indices": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+    "assignment_derivation": "SHAKE256(A412|W50-fresh-hybrid-assignment|v1|target-N)",
+    "public_material_derivation": "A412|W50-fresh-hybrid-public-material|v1|target-N",
+    "primitive": "RFC8439 ChaCha20 block function",
+    "rounds": 20,
+    "feedforward": true,
+    "unknown_key_bits": 50,
+    "public_output_blocks": 8,
+    "fresh_assignments_distinct_from_A401": true
+  },
+  "measurement_contract": {
+    "engine": "byte-anchored A401 Direct12 measurement engine with A412-private artifact roots",
+    "complete_direct12_cells_per_target": 4096,
+    "low4_slices_per_target": 16,
+    "solver_stages_per_target": 16384,
+    "target_count": 32,
+    "total_solver_stages": 524288,
+    "measurement_must_not_read_either_label_ledger": true,
+    "candidate_assignments_executed": 0,
+    "reader_refits_during_measurement": 0
+  },
+  "reader_contract": {
+    "A404_reader": {
+      "aggregator": "minimum_rank_then_sum",
+      "view_indices": [0, 3, 7],
+      "view_names": ["A340_selected8_global_raw", "A341_selected_single_slice_z", "A342_selected_triple_slice_z"]
+    },
+    "A410_reader": {
+      "representation": "log_absdiff36",
+      "metric": "mean_squared_L2",
+      "neighbours": "all_training_prototypes",
+      "prototype_source": "all sixteen A401 known-key true cells only"
+    },
+    "candidate_families": [
+      {"family": "weighted_borda", "A404_integer_weights": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], "A410_weight_rule": "16-minus-A404-weight", "count": 17},
+      {"family": "weighted_reciprocal", "A404_integer_weights": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "A410_weight_rule": "16-minus-A404-weight", "count": 15},
+      {"family": "geometric_product", "count": 1},
+      {"family": "minimum_rank_wavefront", "count": 1},
+      {"family": "maximum_rank_intersection", "count": 1}
+    ],
+    "candidate_count": 35,
+    "selection_rule": "minimum mean log2 true rank on fresh targets 0 through 15, then worst rank, family index, A404 weight",
+    "holdout_gate": "selected candidate must be a non-singleton hybrid and strictly beat the better of the two frozen singleton Readers in geometric mean rank and bit gain on fresh targets 16 through 31",
+    "production_rule": "on qualification only, apply the selected candidate without refit or labels to the already complete assignment-free A388 field"
+  },
+  "information_boundary": {
+    "A412_public_challenge_or_label_available_at_design_freeze": false,
+    "A412_measurement_or_score_available_at_design_freeze": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "live_recovery_progress_filter_outcome_or_result_consumed": false,
+    "selection_reads_holdout_labels": false,
+    "production_target_labels_used": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed": 0
+  }
+}

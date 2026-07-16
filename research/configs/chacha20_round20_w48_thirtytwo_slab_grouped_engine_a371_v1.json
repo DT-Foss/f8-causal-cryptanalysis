@@ -1,0 +1,94 @@
+{
+  "anchors": {
+    "A346_design": {
+      "path": "research/configs/chacha20_round20_w47_sixteen_slab_grouped_engine_a346_design_v1.json",
+      "sha256": "d9da59b50820a033973b54c845d10e568aeeb65e2f3d0c1254e5306371fea0ba"
+    },
+    "A346_protocol": {
+      "path": "research/configs/chacha20_round20_w47_sixteen_slab_grouped_engine_a346_v1.json",
+      "sha256": "4cb6c1c7e0a9719cf4ac04e870d9f5190772664b786d541a0fc4c7c7ea86e3ca"
+    },
+    "A346_qualification": {
+      "path": "research/results/v1/chacha20_round20_w47_sixteen_slab_grouped_engine_a346_qualification_v1.json",
+      "sha256": "58b0fbb2d5ca1f63a990b23fc46608f9f06f7e5bf479bc2b3affd75c3284d502"
+    },
+    "A346_runner": {
+      "path": "research/experiments/chacha20_round20_w47_sixteen_slab_grouped_engine_a346.py",
+      "sha256": "b022a3c19de0e5c0ab09cee68fa738e2fb3586823f5155d087441361588156d2"
+    },
+    "A371_reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371.sh",
+      "sha256": "7127ddbca0fcfa7714db43b7d39082401e37584adbb45e33f1f73a7646c699c1"
+    },
+    "A371_runner": {
+      "path": "research/experiments/chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371.py",
+      "sha256": "198b5bfb54ebdbd6eece00ce8e79168b9e4f9404c119f59d4b54d7d1433b6344"
+    },
+    "A371_test": {
+      "path": "tests/test_chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371.py",
+      "sha256": "5e5fa34188f04992e8665a7ffeff4e05f728be2c16a485462f00ac3b600a2f13"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w48_thirtytwo_slab_grouped_engine_a371_design_v1.json",
+      "sha256": "3069c3106b02899bfc77c0c1252f47dda2db192f0bccfdf7dadd45ec944ff368"
+    },
+    "grouped_executable": {
+      "path": "research/build/chacha20_round20_w43_grouped_engine_a304/chacha20_w43_grouped_cfd657be7826ccd2",
+      "sha256": "d1c41a049db90997ada5eba880d1ba2d0787b1d74be499f0a254183f1b577acf"
+    }
+  },
+  "attempt_id": "A371",
+  "design_sha256": "3069c3106b02899bfc77c0c1252f47dda2db192f0bccfdf7dadd45ec944ff368",
+  "engine_contract": {
+    "candidate_group_size": 68719476736,
+    "candidates_per_slab": 2147483648,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "filter_dispatches_per_W48_prefix_group": 32,
+    "full_domain_assignments": 281474976710656,
+    "full_rounds": 20,
+    "host_refresh_interval_W48_prefix_groups": 16,
+    "prefix_bits": 12,
+    "prefix_layout": "key_word0_bits20_through31",
+    "primitive": "standard ChaCha20",
+    "slab_bits": 5,
+    "slabs": 32,
+    "unknown_key_bits": 48,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low16",
+    "word0_suffix_bits": 20,
+    "word1_outer_low_bits_per_slab": 11
+  },
+  "information_boundary": {
+    "A346_qualification_complete_before_A371_design": true,
+    "A371_changes_grouped_executable_candidate_membership_inside_each_slab": false,
+    "A371_qualification_uses_only_synthetic_targets": true,
+    "W48_candidate_available_at_freeze": false,
+    "W48_filter_outcome_available_at_freeze": false,
+    "W48_prefix_order_available_at_freeze": false,
+    "W48_production_challenge_available_at_freeze": false,
+    "W48_target_assignment_available_at_freeze": false
+  },
+  "production_W48_candidate_available": false,
+  "production_W48_challenge_available": false,
+  "production_W48_execution_started": false,
+  "protocol_state": "target_free_adapter_frozen_before_any_W48_production_challenge",
+  "qualification_contract": {
+    "complete_W48_group_candidates": 68719476736,
+    "complete_W48_group_gate": true,
+    "matched_one_bit_control_empty": true,
+    "scalar_boundary_count": 65,
+    "scalar_boundary_rule": "sorted_unique_{0,1}_union_each_slab_first_and_last_outer16",
+    "scalar_word0_count_per_boundary": 17,
+    "single_planted_factual_assignment": true,
+    "target_free": true
+  },
+  "schema": "chacha20-round20-w48-thirtytwo-slab-grouped-engine-a371-protocol-v1",
+  "source_engine": {
+    "attempt_id": "A346",
+    "executable_sha256": "d1c41a049db90997ada5eba880d1ba2d0787b1d74be499f0a254183f1b577acf",
+    "protocol_sha256": "4cb6c1c7e0a9719cf4ac04e870d9f5190772664b786d541a0fc4c7c7ea86e3ca",
+    "qualification_artifact_sha256": "58b0fbb2d5ca1f63a990b23fc46608f9f06f7e5bf479bc2b3affd75c3284d502",
+    "qualification_sha256": "2e1083775269eb99757de4fea3735938ff025a2f21b8b39dd42d1d4c08b10a7c"
+  }
+}

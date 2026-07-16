@@ -1,0 +1,106 @@
+{
+  "A396_schedule_commitment_sha256": "6f524f8bde22c0cea515a5c30986d6b5a5917cba7d92246817dbb5b8d3ad4b68",
+  "A397_candidate_or_progress_available_at_implementation_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A395_protocol": {
+      "path": "research/configs/chacha20_round20_w50_balanced_work_stealing_recovery_a395_v1.json",
+      "sha256": "bdf504b8fccf4f75dc0cab8fd9fb7bcf98e666b0b322fb211ae7f1be24c2eecd"
+    },
+    "A395_runner": {
+      "path": "research/experiments/chacha20_round20_w50_balanced_work_stealing_recovery_a395.py",
+      "sha256": "43f65d648649de9920bacc99494d8a7ea7daad68afad9a68b87a67ab6f97c727"
+    },
+    "A396_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.causal",
+      "sha256": "f8187d11c2a8bce9e8e7f8d43a160b1a205b73fa5508190091b46407ed6f0939"
+    },
+    "A396_result": {
+      "path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.json",
+      "sha256": "0dd39b595bd111c88b1c94c325c1039a041211e8e11e1e79f71c6470cc8edff8"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_design_v1.json",
+      "sha256": "5381a8bccf4498367a331054c314f1a7f681a1f1107a4e6c74eee15260c6520f"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_expanded_eight_worker_recovery_a397.sh",
+      "sha256": "42352cb4b7e76b78f1df61ce341013c5ee338b16aa8b784a3e15d9642be1f5d5"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+      "sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+      "sha256": "c04c021fa7748bd5919a5f11a7c17e7d2a0654591c449ab2c6c30aff77b0a1f8"
+    }
+  },
+  "attempt_id": "A397",
+  "commitment_state": "frozen_before_any_A397_candidate_progress_or_result",
+  "design_sha256": "5381a8bccf4498367a331054c314f1a7f681a1f1107a4e6c74eee15260c6520f",
+  "execution_contract": {
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "independent_confirmation_bits": 8192,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_blocks": 8,
+    "shared_stop_check": "before each next complete prefix group",
+    "slabs_per_prefix_group": 128,
+    "static_schedule_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "worker_task_counts": {
+      "A379_target_free": 512,
+      "A380_target_conditioned": 512,
+      "A388_W50_public_output_direct12": 512,
+      "A396_spare_longest_remaining": 512,
+      "broad_intersection": 512,
+      "broad_quantile": 512,
+      "sparse_reciprocal": 512,
+      "wide_vote": 512
+    },
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "1a883f422f3fa9abae0d268692828914482769622c6478a6cee5a1d462054e79",
+  "launch_contract": {
+    "first_available_slot_worker": "A388_W50_public_output_direct12",
+    "live_recoveries_must_not_be_interrupted": true,
+    "remaining_workers": "start independently as Metal slots become available"
+  },
+  "schema": "chacha20-round20-w50-expanded-eight-worker-recovery-a397-implementation-v1",
+  "worker_order_uint16be_sha256": {
+    "A379_target_free": "5ac9e85176981b741642597a72fd75dad81f3f4706284381de5155edeec4a4d8",
+    "A380_target_conditioned": "d986ebe775f71a7c30aed405396d112067c809795262b96293b5cf28888f1c67",
+    "A388_W50_public_output_direct12": "1e71ca9b608a53ef23d0d312bd516dee35ec7de5cf9ebed6e9be4b3cad0156f0",
+    "A396_spare_longest_remaining": "44be720fc333d3dbb11a05fe9a6c26215352fec8c9540e4fa52e033a2854b420",
+    "broad_intersection": "3cda8aaea47579ced96a02cbc69af861ad2c05af70c89955a9c9b1e8fabf1419",
+    "broad_quantile": "e562f14a93600bd1292b3fc94a509476b5cb2f822729561f21f766647b35bbf3",
+    "sparse_reciprocal": "875fdbfae243a61275ef05aa1fe091cb43d4c857b39bee950e542866497b7015",
+    "wide_vote": "c7efb7b50515f121c62a479f0afc5459a79eda281febfa947931b343e4a327a8"
+  },
+  "worker_task_list_sha256": {
+    "A379_target_free": "5f0a83da15570eade4cd35fc9e011b41dcfc1045f5c44f0a976f47c2f62f6ce5",
+    "A380_target_conditioned": "aaae4ad38a3097b0fd43a58084141ea0563027392c8568747289c091636b895f",
+    "A388_W50_public_output_direct12": "37861e8f74bcf2fbea4a9243484d1afd362731b165f4cab2a3c5fde16d061fff",
+    "A396_spare_longest_remaining": "7a6d6c9beaeae2311a7f0dad19cc645f63754ced3a5077f0d0de30093e4f499f",
+    "broad_intersection": "733a5c7959a2a27356a9b8c2016ce7d24ff5ee9fb4f16d05d151d5f1c931ae18",
+    "broad_quantile": "f0aa0cf05f9b3a8a578003c078e52f52abc55a1a0f1e726731a8147a837eb7a4",
+    "sparse_reciprocal": "822b3a566a2779037af81570ded2e27749c61e4f66ba6f10601ffd0ca8f4d313",
+    "wide_vote": "597d15c7f9e8bd83e1f3c6f07961a0299ed8b1b80b925009f32dc44018986d3e"
+  }
+}

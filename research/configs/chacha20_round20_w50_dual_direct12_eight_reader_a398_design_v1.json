@@ -1,0 +1,100 @@
+{
+  "attempt_id": "A398",
+  "design_state": "frozen_before_W50_triple_order_A398_owner_partition_schedule_or_recovery_outcome",
+  "source_contract": {
+    "cells_per_order": 4096,
+    "complete_cover": true,
+    "source_orders": 8,
+    "source_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12_pair",
+      "A398_W50_public_output_direct12_triple"
+    ],
+    "first_six_sources": "byte-identical primitive source orders already bound by A396 from A382",
+    "pair_source": "byte-identical A388 W50 A342-selected-pair slice-z order",
+    "triple_source": {
+      "measurement_reuse": "the exact 16 A388 W50 Direct12 slice artifacts; no new solver stages",
+      "selection_anchor": "A342 exhaustive familywise triple selected only on the earlier known-key corpus",
+      "selected_indices": [17, 27, 33],
+      "selected_views": [
+        "learned_clause_length_max::coefficient_negative::normalized_8cube_graph_laplacian",
+        "learned_clause_length_std::coefficient_positive::normalized_8cube_graph_laplacian",
+        "learned_clause_rejected_large_stage::coefficient_negative::normalized_8cube_graph_laplacian"
+      ],
+      "score_rule": "negative sum of the three within-slice descending midranks followed by the unchanged A348 slice-z transform",
+      "reader_refits": 0,
+      "target_labels": 0
+    },
+    "owner_rule": "minimum one-based source rank; ties by frozen source-role order",
+    "owner_lane_rule": "sort each assigned cell by its owning source rank",
+    "zero_duplicate_cells": true
+  },
+  "worker_contract": {
+    "workers": 8,
+    "home_workers": 8,
+    "worker_role_order": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection",
+      "A388_W50_public_output_direct12_pair",
+      "A398_W50_public_output_direct12_triple"
+    ],
+    "claim_rule": "each worker consumes its nonempty owner queue; once empty it consumes the longest remaining owner queue; ties by frozen source-role order",
+    "epoch_rule": "exactly one complete W50 prefix group per worker per nonterminal epoch",
+    "group_cost_identity": "every W50 prefix executes exactly 128 disjoint 2^31 slabs before outcome evaluation",
+    "target_makespan_epochs": 512,
+    "theoretical_minimum_epochs": 512,
+    "preserve_each_owner_queue_order": true,
+    "static_lists_replace_runtime_claim_race": true,
+    "theorem_depth": "D_A398(c) <= D_owner(c) <= min_i R_i(c)",
+    "theorem_work": "W_A398(c) <= 8*min_i R_i(c)"
+  },
+  "comparison_contract": {
+    "primary": "complete pointwise A398 epoch versus A396 epoch panel",
+    "secondary": [
+      "pair-versus-triple Spearman and top-k overlap",
+      "triple-only ownership count",
+      "geometric A396-to-A398 epoch ratio",
+      "geometric A388-serial-to-A398 speedup"
+    ],
+    "selection_after_measurement": false,
+    "retain_rule": "retain the complete A398 schedule and report the exact tradeoff without target-conditioned switching"
+  },
+  "information_boundary": {
+    "A387_A389_A391_A393_A395_A397_progress_filter_outcomes_or_results_consumed": false,
+    "A385_unknown_assignment_or_true_prefix_consumed": false,
+    "candidate_assignments_executed": 0,
+    "new_solver_stages": 0,
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "known_pre_design_information": "A396 seven-source geometry and A342 pair/triple selection definitions",
+    "unknown_at_design_freeze": [
+      "W50 triple score field",
+      "W50 triple order",
+      "A398 owner lane sizes",
+      "A398 worker schedules",
+      "A398 versus A396 pointwise comparison"
+    ]
+  },
+  "source_anchors": {
+    "A396_result_path": "research/results/v1/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396_v1.json",
+    "A396_result_sha256": "0dd39b595bd111c88b1c94c325c1039a041211e8e11e1e79f71c6470cc8edff8",
+    "A396_runner_path": "research/experiments/chacha20_round20_w50_expanded_seven_reader_eight_worker_a396.py",
+    "A396_runner_sha256": "1de7350d841de615b74c6732e4767fda64f7ac07356de4ecba48953657419734",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8",
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  },
+  "schema": "chacha20-round20-w50-dual-direct12-eight-reader-a398-design-v1"
+}

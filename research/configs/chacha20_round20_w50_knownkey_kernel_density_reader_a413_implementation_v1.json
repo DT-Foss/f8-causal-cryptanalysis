@@ -1,0 +1,68 @@
+{
+  "A412_labels_or_reader_scores_consumed": false,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A401_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_direct12_learning_a401_v1.json",
+      "sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702"
+    },
+    "A401_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "A404_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_v1.json",
+      "sha256": "ded81a43fed7318ab8a0d32787d5e41e1c51b70e473dfc415dae30b44f4080e1"
+    },
+    "A404_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_leaveoneout_reader_a404.py",
+      "sha256": "d7743e0bc4996c15189876dafa014fec6a8a13398f90885c0284e9c585192bc7"
+    },
+    "A410_result": {
+      "path": "research/results/v1/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_v1.json",
+      "sha256": "d631fcc57f1659455417789c58f277aa6d78118eb361281137bdcb846bae284e"
+    },
+    "A410_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_nested_prototype_reader_a410.py",
+      "sha256": "2105111abf94365334d7c48509a76ff7abe84906edfae9455144978037066787"
+    },
+    "A412_implementation": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_implementation_v1.json",
+      "sha256": "f08665ec5f0b79bf96f33617d10966e59895e6adfb284c5b6c70e5fc47527067"
+    },
+    "A412_protocol": {
+      "path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+      "sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+    },
+    "A412_runner": {
+      "path": "research/experiments/chacha20_round20_w50_fresh_hybrid_reader_a412.py",
+      "sha256": "cc8813f29f29aed8f28b682c959d7655437faa7c5e9c713cbe9e2183e8641b96"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_design_v1.json",
+      "sha256": "3dcf61da354a60c095d68168c2a6837663b39c5f683feb58de9cad3035675f7a"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_knownkey_kernel_density_reader_a413.sh",
+      "sha256": "35a0b6ee3da9bcc0a41d3fc639b9d772e8c6dcc47a77205dc2903c418c4a3c34"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_kernel_density_reader_a413.py",
+      "sha256": "e8f939d84cf53364bbbb4c729c1e9fa7fd5dce2742cd24fcc6e3e6a559c804d4"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_knownkey_kernel_density_reader_a413.py",
+      "sha256": "5c809a2aad4bce7aa2326fdc2872bdabda5a41b8c0628a875a2ed116d3b10407"
+    }
+  },
+  "attempt_id": "A413",
+  "candidate_count": 155,
+  "candidate_family_commitment_sha256": "3f6fe8a0d8d6ff3f5bdc5f4ad27448c9e3cad43e357dd77228049e8fe6f39502",
+  "commitment_state": "frozen_before_any_A413_training_rank_model_or_A412_label_score",
+  "design_sha256": "3dcf61da354a60c095d68168c2a6837663b39c5f683feb58de9cad3035675f7a",
+  "implementation_commitment_sha256": "e7c2c948203d28cbaf38bfe7041c6918340cdb37ec9f34b59dd0fd1f0a061515",
+  "schema": "chacha20-round20-w50-knownkey-kernel-density-reader-a413-implementation-v1"
+}

@@ -1,0 +1,153 @@
+{
+  "A426_A438_A440_target_outcome_or_progress_available_at_freeze": false,
+  "A441_pair_order_available_at_freeze": false,
+  "anchors": {
+    "A434_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+      "sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b"
+    },
+    "A439_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+      "sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c"
+    },
+    "A439_design": {
+      "path": "research/configs/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_design_v1.json",
+      "sha256": "b8a57f3ae46d394ef70c66bd6d75bc8fbd284500a9e8d4447c0a89723c8daecf"
+    },
+    "A439_implementation": {
+      "path": "research/configs/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_implementation_v1.json",
+      "sha256": "6c0e6114620b2a3c129779c5e2624b3499f4827d31bab8eff4417b95b6595530"
+    },
+    "A439_result": {
+      "path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+      "sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869"
+    },
+    "A439_runner": {
+      "path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+      "sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_design_v1.json",
+      "sha256": "2ff84e9e2995d293bf3cd681e0af150291a121d0cf80cb1e9fa0f6084d9eb431"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.sh",
+      "sha256": "dc9b9d9fa5d0bb705c52b093ea3282c432dbfa4a30a92fb855cd52a6bb9334bd"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.py",
+      "sha256": "7d3107eb060298d18f01e0d8278d9d2eaaa0a8baab757291cd5eede0cde1c83c"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.py",
+      "sha256": "3bf94443c538b75ba9e370d73c5324a316e0bcecb5857ecdddcad3230e3ed507"
+    }
+  },
+  "artifact_bytes": 67108864,
+  "artifact_encoding": "uint16be_prefix_then_uint16be_off_axis",
+  "attempt_id": "A441",
+  "axis_cells": 4096,
+  "candidate_assignments_executed": 0,
+  "commitment_state": "complete_direct_product_factor16_generator_frozen_before_any_A441_order_artifact_A426_A438_A440_target_outcome_or_progress",
+  "default_chunk_ranks": 32768,
+  "design_contract": {
+    "artifact_bytes": 67108864,
+    "artifact_encoding": "exact order as consecutive uint16be prefix,uint16be off-axis pairs",
+    "axis_cells": 4096,
+    "direct_inverse_sentinels_required": true,
+    "duplicate_free_complete_cover_required": true,
+    "generator": "ascending minimum-rank buckets with exact within-bucket lexicographic tie ordering and a 2^24-bit seen set",
+    "pair_cells": 16777216,
+    "portfolio_key": [
+      "minimum one-based rank across sixteen source pair orders",
+      "sum of the sixteen one-based source pair ranks",
+      "the sixteen source ranks in frozen role-pair order",
+      "prefix cell",
+      "off-axis cell"
+    ],
+    "proof_target": "R_A441(x,y) <= 16 * min_{i,j} R_square(prefix_reader_i,off_reader_j)(x,y)",
+    "source_pair_order": "A434 exact square wavefront for each prefix-Reader/off-axis-Reader product"
+  },
+  "design_sha256": "2ff84e9e2995d293bf3cd681e0af150291a121d0cf80cb1e9fa0f6084d9eb431",
+  "implementation_commitment_sha256": "45db7786b11df8dda8095d8852ae60f844df04c89594f3f589feb240018899e9",
+  "model_role_order": [
+    "wide_vote",
+    "sparse_reciprocal",
+    "broad_quantile",
+    "broad_intersection"
+  ],
+  "pair_cells": 16777216,
+  "product_role_order": [
+    [
+      "wide_vote",
+      "wide_vote"
+    ],
+    [
+      "wide_vote",
+      "sparse_reciprocal"
+    ],
+    [
+      "wide_vote",
+      "broad_quantile"
+    ],
+    [
+      "wide_vote",
+      "broad_intersection"
+    ],
+    [
+      "sparse_reciprocal",
+      "wide_vote"
+    ],
+    [
+      "sparse_reciprocal",
+      "sparse_reciprocal"
+    ],
+    [
+      "sparse_reciprocal",
+      "broad_quantile"
+    ],
+    [
+      "sparse_reciprocal",
+      "broad_intersection"
+    ],
+    [
+      "broad_quantile",
+      "wide_vote"
+    ],
+    [
+      "broad_quantile",
+      "sparse_reciprocal"
+    ],
+    [
+      "broad_quantile",
+      "broad_quantile"
+    ],
+    [
+      "broad_quantile",
+      "broad_intersection"
+    ],
+    [
+      "broad_intersection",
+      "wide_vote"
+    ],
+    [
+      "broad_intersection",
+      "sparse_reciprocal"
+    ],
+    [
+      "broad_intersection",
+      "broad_quantile"
+    ],
+    [
+      "broad_intersection",
+      "broad_intersection"
+    ]
+  ],
+  "reader_refits": 0,
+  "schema": "chacha20-round20-w52-direct-product-reader-pair-portfolio-a441-implementation-v1",
+  "source_A439_result_commitment_sha256": "391ed0597f413d31eed60d235e6bebc90b8d7cabda486c6979631a4e753c9f0f",
+  "source_A439_result_sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869",
+  "source_off_axis_orders_sha256": "47306f823f7d32ae9e69fdfe3a5a5608597c1e5a66a42c7a194a6378b1a1e3ac",
+  "source_prefix_orders_sha256": "b47dddeb6b44696974fe3164490b208d078ac06e15bb42fa0445a9e4e5bf7978",
+  "target_labels_used": 0
+}

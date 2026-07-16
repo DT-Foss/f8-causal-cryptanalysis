@@ -1,0 +1,102 @@
+{
+  "schema": "chacha20-round20-w50-knownkey-kernel-density-reader-a413-design-v1",
+  "attempt_id": "A413",
+  "design_state": "frozen_after_A410_result_and_A412_public_corpus_with_zero_A412_complete_fields_before_any_A412_measurement_score_or_label_consumption",
+  "scientific_question": "Can a fixed positive-density and robust-location Reader learn W50 Direct12 geometry from the sixteen A401 known-key fields and transfer unchanged across all thirty-two independently generated A412 full-round ChaCha20 fields?",
+  "training_contract": {
+    "source": "the identical sixteen complete A401 known-key W50 Direct12 fields",
+    "target_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "outer_folds": 16,
+    "inner_folds_per_outer_fold": 15,
+    "nested_diagnostic": "select only inside each outer training fold and score the omitted A401 key once",
+    "fullfit_selection": "select one fixed candidate on the complete sixteen-key prospective rank table, then freeze its identity and all sixteen positive prototypes before opening any A412 label",
+    "A401_target_labels_used": 16,
+    "A412_target_labels_used_during_training_or_selection": 0
+  },
+  "representation_contract": {
+    "source": "A410 analytically scaled representation family",
+    "representation_order": [
+      "log8",
+      "reciprocal_sqrt8",
+      "log_reciprocal16",
+      "log_absdiff36",
+      "log_reciprocal_absdiff44"
+    ],
+    "representation_dimensions": [8, 8, 16, 36, 44],
+    "feature_scaling": "fixed analytic scaling only; no A412-derived standardization"
+  },
+  "kernel_density_contract": {
+    "distance_order": ["mean_absolute_L1", "mean_squared_L2", "maximum_absolute_Linf"],
+    "bandwidth_multiplier_order": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "base_bandwidth": "median strictly positive off-diagonal distance among training positive prototypes under the same representation and metric",
+    "bandwidth_floor": "2^-40",
+    "score": "stable negative log mean exp(-distance / bandwidth); lower score is earlier",
+    "candidate_count": 75
+  },
+  "robust_location_shape_contract": {
+    "location_order": ["coordinate_mean", "coordinate_median"],
+    "scale_order": [
+      {"family": "identity", "shrinkage": null},
+      {"family": "diagonal_variance", "shrinkage": 0.0},
+      {"family": "diagonal_variance", "shrinkage": 0.25},
+      {"family": "diagonal_variance", "shrinkage": 0.5},
+      {"family": "diagonal_variance", "shrinkage": 0.75},
+      {"family": "full_covariance_isotropic", "shrinkage": 0.25},
+      {"family": "full_covariance_isotropic", "shrinkage": 0.5},
+      {"family": "full_covariance_isotropic", "shrinkage": 0.75}
+    ],
+    "variance_floor": "max(mean coordinate variance times 2^-20, 2^-40)",
+    "score": "mean squared whitened distance to the frozen positive location; lower score is earlier",
+    "candidate_count": 80
+  },
+  "candidate_contract": {
+    "candidate_count": 155,
+    "cell_tie_break": "lower cell index",
+    "candidate_tie_break": "mean log2 rank, worst rank, representation order, model-family order, then within-family parameter order",
+    "post_freeze_candidate_or_threshold_change_allowed": false
+  },
+  "external_transfer_contract": {
+    "source_measurements": "all thirty-two complete A412 fields, reused byte-for-byte without new solver stages",
+    "model_selection_on_A412": 0,
+    "model_refits_on_A412": 0,
+    "A412_labels_open_only_after_fixed_A413_model_freeze": true,
+    "primary_panel": "all thirty-two A412 targets",
+    "secondary_panels": ["targets_0_15", "targets_16_31"],
+    "matched_baselines": ["frozen_A404_rank_fusion", "frozen_A410_prototype_manifold"],
+    "qualification": "A413 geometric mean rank is strictly lower than the better frozen singleton baseline across all thirty-two fresh targets with positive additional bit gain",
+    "production": "on qualification only, apply the unchanged selected A413 Reader with all sixteen A401 prototypes to the already complete assignment-free A388 field"
+  },
+  "information_boundary": {
+    "freeze_utc": "2026-07-15T23:05:16Z",
+    "A410_result_available_at_design_freeze": true,
+    "A412_public_corpus_available_at_design_freeze": true,
+    "A412_complete_fields_available_at_design_freeze": 0,
+    "A412_partial_slice_files_present_but_consumed": false,
+    "A412_selection_or_holdout_label_ledger_opened": false,
+    "A412_reader_score_or_true_rank_available_at_design_freeze": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "live_recovery_progress_filter_outcome_or_result_consumed": false
+  },
+  "source_anchors": {
+    "A401_runner_path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+    "A401_runner_sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee",
+    "A401_result_path": "research/results/v1/chacha20_round20_w50_knownkey_direct12_learning_a401_v1.json",
+    "A401_result_sha256": "347b3756833df4c6dd3e7d8af41f1d48ea6813822de38900e8e42969f4bfe702",
+    "A404_runner_path": "research/experiments/chacha20_round20_w50_knownkey_leaveoneout_reader_a404.py",
+    "A404_runner_sha256": "d7743e0bc4996c15189876dafa014fec6a8a13398f90885c0284e9c585192bc7",
+    "A404_result_path": "research/results/v1/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_v1.json",
+    "A404_result_sha256": "ded81a43fed7318ab8a0d32787d5e41e1c51b70e473dfc415dae30b44f4080e1",
+    "A410_runner_path": "research/experiments/chacha20_round20_w50_knownkey_nested_prototype_reader_a410.py",
+    "A410_runner_sha256": "2105111abf94365334d7c48509a76ff7abe84906edfae9455144978037066787",
+    "A410_result_path": "research/results/v1/chacha20_round20_w50_knownkey_nested_prototype_reader_a410_v1.json",
+    "A410_result_sha256": "d631fcc57f1659455417789c58f277aa6d78118eb361281137bdcb846bae284e",
+    "A412_runner_path": "research/experiments/chacha20_round20_w50_fresh_hybrid_reader_a412.py",
+    "A412_runner_sha256": "cc8813f29f29aed8f28b682c959d7655437faa7c5e9c713cbe9e2183e8641b96",
+    "A412_implementation_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_implementation_v1.json",
+    "A412_implementation_sha256": "f08665ec5f0b79bf96f33617d10966e59895e6adfb284c5b6c70e5fc47527067",
+    "A412_public_corpus_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+    "A412_public_corpus_sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "chacha20-round20-w50-direct12-only-recovery-a391-design-v1",
+  "attempt_id": "A391",
+  "design_state": "frozen_after_A388_complete_direct12_order_before_A387_A389_or_A391_result_and_before_any_A391_candidate_or_prefix",
+  "scientific_question": "At what exact complete-group rank does the zero-refit W50 public-output Direct12 order recover the fresh A385 target when executed alone rather than diluted by a protective wavefront?",
+  "selection_rationale": {
+    "operator": "A342_selected_pair_slice_z_on_complete_A385_W50_direct12_grid",
+    "prior_disjoint_prospective_target": "A350",
+    "prior_direct12_rank_one_based": 445,
+    "prior_target_free_rank_one_based": 2409,
+    "prior_direct12_speedup_over_target_free": 5.413483146067416,
+    "selection_rule": "execute the prospectively validated Direct12 operator alone while retaining A389 as the independent exact-factor-three guard lane"
+  },
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 50,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low18",
+    "public_output_blocks": 8,
+    "prefix_bits": 12,
+    "prefix_groups": 4096,
+    "slabs_per_prefix_group": 128,
+    "candidates_per_slab": 2147483648,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "independent_confirmation_bits": 8192
+  },
+  "information_boundary": {
+    "A388_target_labels_used": 0,
+    "A388_reader_refits": 0,
+    "A388_candidate_assignments_executed_for_order": 0,
+    "A387_progress_or_filter_outcomes_consumed": false,
+    "A387_result_or_true_prefix_available_at_design_freeze": false,
+    "A389_candidate_or_prefix_available_at_design_freeze": false,
+    "A391_candidate_or_prefix_available_at_design_freeze": false,
+    "A385_assignment_absent_from_public_protocol": true,
+    "rank_readback_only_after_independent_confirmation": true
+  },
+  "order_contract": {
+    "source_role": "A388_W50_public_output_direct12",
+    "complete_cells": 4096,
+    "selected_order_uint16be_sha256": "0094ac40b27b065888b56adce115bf4d54c0f0ba86dc1c7e87dff09f2f745f70",
+    "parameter_refits_at_W50": 0,
+    "target_labels_used": 0
+  },
+  "source_anchors": {
+    "A350_result_path": "research/results/v1/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json",
+    "A350_result_sha256": "a51919d30fc66ee5e581c87d6f2c5dc32cdabe71b51ce79c0a56a12e7325b3f3",
+    "A370_result_path": "research/results/v1/chacha20_round20_w46_a350_pre_result_order_rank_panel_a370_v1.json",
+    "A370_result_sha256": "13f6480a0b82440c5a77b13a80d46601abd355569007055d241fc863e6dcb593",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8",
+    "A388_causal_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+    "A388_causal_sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a",
+    "A389_runner_path": "research/experiments/chacha20_round20_w50_public_output_factor3_recovery_a389.py",
+    "A389_runner_sha256": "23602ef77bba32a019b78f776f1fa6a60d6ab13160c79644e4796b5ffe3e9ca5"
+  }
+}

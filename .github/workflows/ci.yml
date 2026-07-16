@@ -54,6 +54,7 @@ jobs:
             research/results/v1/A220B_A222_INFRA_SHA256SUMS \
             research/results/v1/A223_A277_SHA256SUMS \
             research/results/v1/A278_A286_RECORDS_SHA256SUMS
+          python scripts/verify_a326_a456_frontier.py
       - name: Verify deterministic figures
         run: python scripts/generate_publication_figures.py --check
       - name: Publication audit

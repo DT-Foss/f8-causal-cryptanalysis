@@ -1,0 +1,94 @@
+{
+  "schema": "chacha20-round20-w46-cross-corpus-invariant-reader-a366-design-v1",
+  "attempt_id": "A366",
+  "design_state": "frozen_after_A363_complete_calibration_before_any_A367_validation_artifact",
+  "scientific_role": "descriptive_cross_corpus_calibration_followed_by_new_prospective_validation",
+  "calibration_contract": {
+    "targets": 64,
+    "fixed_blocks": 4,
+    "targets_per_block": 16,
+    "block_order": [
+      "A359_selection",
+      "A359_holdout",
+      "A363_validation_a",
+      "A363_validation_b"
+    ],
+    "cells_per_target": 256,
+    "feature_universe": 532,
+    "primitive_transform": "absolute_target_local_normalized_feature_then_exact_descending_rank",
+    "primitive_admission": "strictly_positive_mean_log2_rank_gain_in_each_of_four_fixed_blocks",
+    "primitive_deduplication": "byte_identical_64_by_256_rank_fields_keep_lowest_feature_index",
+    "ensemble_member_counts": [2, 3, 4],
+    "ensemble_aggregators": [
+      "borda",
+      "linf_intersection",
+      "min_rank_wavefront"
+    ],
+    "primary_selection": [
+      "maximum_minimum_four_block_log2_rank_gain",
+      "maximum_all64_log2_rank_gain",
+      "maximum_targets_at_or_above_median",
+      "minimum_worst_rank",
+      "lexicographic_name"
+    ],
+    "best_single_selection": "same_primary_selection_key_restricted_to_primitives",
+    "diverse_companion_selection": {
+      "maximum_absolute_rank_field_correlation_to_primary": 0.35,
+      "selection_key": "primary_selection"
+    },
+    "coverage_companion_selection": {
+      "maximum_absolute_rank_field_correlation_to_primary": 0.35,
+      "selection_key": [
+        "maximum_targets_at_or_above_median",
+        "maximum_minimum_four_block_log2_rank_gain",
+        "maximum_all64_log2_rank_gain",
+        "minimum_worst_rank",
+        "lexicographic_name"
+      ]
+    },
+    "shared_xor_offsets": 256,
+    "calibration_familywise_statistic": "maximum_candidate_minimum_four_block_log2_rank_gain"
+  },
+  "prospective_A367_contract": {
+    "new_targets": 64,
+    "fixed_validation_blocks": 4,
+    "targets_per_block": 16,
+    "low4_balance": "each_value_0_through_15_exactly_once_per_fixed_block",
+    "complete_cells_per_target": 256,
+    "candidate_models": [
+      "primary",
+      "diverse_companion",
+      "coverage_companion",
+      "best_single"
+    ],
+    "reader_refits": 0,
+    "candidate_assignments_executed_during_measurement": 0,
+    "retention_gate": {
+      "familywise_shared_xor_p_maximum": 0.05,
+      "minimum_four_block_log2_rank_gain_exclusive": 0.0,
+      "all64_log2_rank_gain_exclusive": 0.0,
+      "targets_at_or_above_median_minimum": 36
+    },
+    "deployment_rule": "retain_every_frozen_model_passing_the_familywise_gate; if_multiple_pass_build_exact_factor_k_min_rank_wavefront; if_one_passes_deploy_it_unchanged; otherwise_do_not_open_A361_measurement_shards"
+  },
+  "information_boundary": {
+    "A359_measurement_shards_opened_for_A366_calibration": true,
+    "A363_measurement_shards_opened_for_A366_calibration": true,
+    "A366_is_claimed_prospective_on_A359_or_A363": false,
+    "A367_target_artifacts_available_at_design_freeze": 0,
+    "A367_solver_measurements_available_at_design_freeze": 0,
+    "A367_assignments_or_labels_available_at_design_freeze": false,
+    "A361_measurement_shard_content_opened_by_A366": false,
+    "A361_secret_or_true_prefix_available_to_A366": false
+  },
+  "source_anchors": {
+    "A359_result_path": "research/results/v1/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_v1.json",
+    "A359_result_sha256": "3259526ee94241f5e4858b59cb52cb93a9ef8dbe8dc8bf40deaf4d7757db7a3f",
+    "A363_result_path": "research/results/v1/chacha20_round20_w46_polarity_invariant_validation_a363_v1.json",
+    "A363_result_sha256": "d2601ca3190a18fe2ce13bf436d14fafd4d9a2493df13dc68d353e500d7cb09b",
+    "A362_runner_path": "research/experiments/chacha20_round20_w46_polarity_invariant_reader_a362.py",
+    "A362_runner_sha256": "171e44f83c35d53217fd52c0bee11a2df5e8c22080ac8e00a8bd9c1dd5a25b92",
+    "A363_runner_path": "research/experiments/chacha20_round20_w46_polarity_invariant_validation_a363.py",
+    "A363_runner_sha256": "8ee599e444715170b7f2b55645812e5129d990856408bf81129b0bb9da87b538"
+  }
+}

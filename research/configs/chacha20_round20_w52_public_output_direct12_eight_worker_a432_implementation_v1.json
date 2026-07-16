@@ -1,0 +1,69 @@
+{
+  "A426_result_available_at_implementation_freeze": false,
+  "A432_candidate_assignments_available_at_implementation_freeze": 0,
+  "A432_measurements_available_at_implementation_freeze": 0,
+  "anchors": {
+    "A342_result": {
+      "path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+      "sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+    },
+    "A348_result": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+      "sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812"
+    },
+    "A349_selection": {
+      "path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+      "sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422"
+    },
+    "A388_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    },
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A426_runner": {
+      "path": "research/experiments/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426.py",
+      "sha256": "d849065a0bc33f1d3eff3f5b7638948c86b683f8020bfd8a0f5ed0e9ca449637"
+    },
+    "A428_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.causal",
+      "sha256": "52a61beb8605fe54b9db66a5ba156b683dfc7dc0270e2a8a202a6f7a70ab0762"
+    },
+    "A428_result": {
+      "path": "research/results/v1/chacha20_round20_w50_global_best_rank_wavefront_a428_v1.json",
+      "sha256": "dbf8fd33558bfde4e8e6833e6d69df1b57fcf8732fec28d35828b39e3cce0584"
+    },
+    "A430_causal": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_v1.causal",
+      "sha256": "3e55b2bc31bc005d0857f1135bfc9565d49cb069cb887f8decd382626c2db987"
+    },
+    "A430_result": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_v1.json",
+      "sha256": "12c3f60fbc7dde8bbaa32ff7d13272a422b094d999a3c99ae16f1efd4c21f89a"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_public_output_direct12_eight_worker_a432_design_v1.json",
+      "sha256": "96276bae59562911398585bff6d8be5fc9f5c23008a0b50168a411468c5b388e"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_public_output_direct12_eight_worker_a432.sh",
+      "sha256": "0b18a2dc323edfd143b94ab28aa66b58c7913adf6d0042307ae0daa854b2095f"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_public_output_direct12_eight_worker_a432.py",
+      "sha256": "22b00e57cf06fd6c6e5e5e5be1766101ce1500d4e47dbe035a257ec271a0270e"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_public_output_direct12_eight_worker_a432.py",
+      "sha256": "145980f63cb8b35184a01a8f528ec19f44b2f72ba291200ab75ee655e5e7ad58"
+    }
+  },
+  "attempt_id": "A432",
+  "commitment_state": "complete_W52_measurement_and_eight_worker_schedule_code_frozen_before_any_A432_measurement_candidate_or_A426_result",
+  "design_sha256": "96276bae59562911398585bff6d8be5fc9f5c23008a0b50168a411468c5b388e",
+  "implementation_commitment_sha256": "01b73863dd61e23f1123f86dd4eb485c5624a202cde93d60932fd2e3b223c8fc",
+  "schema": "chacha20-round20-w52-public-output-direct12-eight-worker-a432-implementation-v1",
+  "selected_view": "A342_selected_pair_slice_z"
+}

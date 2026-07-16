@@ -1,0 +1,118 @@
+{
+  "attempt_id": "A401",
+  "design_state": "frozen_before_any_A401_public_challenge_label_measurement_reader_selection_or_holdout_score",
+  "corpus_contract": {
+    "assignment_derivation": "little-endian integer from SHAKE256('A401|W50-knownkey-assignment|v1|target-{index:02d}', 8 bytes), masked to 50 bits",
+    "known_material_label": "A401|W50-knownkey-public-material|v1|target-{index:02d}",
+    "target_count": 16,
+    "target_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "selection_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "holdout_indices": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "primitive": "RFC8439 ChaCha20 block function",
+    "rounds": 20,
+    "feedforward": true,
+    "public_output_blocks_per_target": 8,
+    "unknown_key_bits": 50,
+    "true_direct12_cell": "bits 49 down through 38 of the deterministic 50-bit assignment"
+  },
+  "measurement_contract": {
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells_per_target": 4096,
+    "low4_slices_per_target": 16,
+    "high8_cells_per_slice": 256,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "solver_stages_per_target": 16384,
+    "watchdog_seconds_per_stage": 2.0,
+    "slice_workers": 8,
+    "measurement_must_not_read_label_ledger": true,
+    "all_sixteen_fields_complete_before_label_open": true
+  },
+  "reader_contract": {
+    "complete_view_order": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "candidate_subsets": "all 255 nonempty subsets of the eight frozen Direct12 views",
+    "aggregator_order": [
+      "borda_sum",
+      "reciprocal_rank_sum",
+      "minimum_rank_then_sum"
+    ],
+    "candidate_count": 765,
+    "selection_objective": "minimum mean log2 true-cell rank on targets 0..7; ties by minimum worst true-cell rank, smaller subset, aggregator order, then lexicographic view-index tuple",
+    "holdout_rule": "the selected candidate is byte-frozen before targets 8..15 are scored and is never refit on holdout labels",
+    "baselines": [
+      "each of the eight individual views",
+      "pair-slice plus triple-slice Borda",
+      "pair-slice plus triple-slice reciprocal rank",
+      "pair-slice plus triple-slice minimum-rank-then-sum"
+    ]
+  },
+  "information_boundary": {
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "A387_A397_A399_progress_filter_outcomes_or_results_consumed": false,
+    "A401_measurement_target_labels_used": 0,
+    "A401_reader_refits_during_measurement": 0,
+    "A401_candidate_assignments_executed": 0,
+    "selection_labels_available_only_after_complete_measurement_cover": true,
+    "holdout_labels_available_only_after_selection_commitment": true,
+    "known_pre_design_information": "A400 complete eight-view identity and A350/A354 transfer ranks only; no A401 field or label score"
+  },
+  "source_anchors": {
+    "A388_runner_path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+    "A388_runner_sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9",
+    "A388_preflight_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_preflight_v1.json",
+    "A388_preflight_sha256": "6919b9071b5c9de85f050a7921d4a82fa0e55db6e02ca531590afdfdc57cc115",
+    "A385_runner_path": "research/experiments/chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+    "A385_runner_sha256": "b6827f779a8a7997bbee6c04a6a28f9f3c5ec5718ac942b0171c8b4174a928f3",
+    "A400_result_path": "research/results/v1/chacha20_round20_w50_direct12_transfer_diversity_schedule_a400_v1.json",
+    "A400_result_sha256": "1d4ca3f053ce566fad4808751767c1549aa6d6625dced16bd65d13d6d97c2215"
+  },
+  "schema": "chacha20-round20-w50-knownkey-direct12-learning-a401-design-v1"
+}

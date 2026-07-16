@@ -1,0 +1,65 @@
+{
+  "schema": "chacha20-round20-w50-global-best-rank-wavefront-a428-design-v1",
+  "attempt_id": "A428",
+  "design_state": "frozen_after_A427_and_scheduler_depth_diagnostic_before_any_A428_candidate_schedule_measurement_or_production_execution",
+  "scientific_question": "Can a global best-source-rank wavefront convert A427's externally retained Reader-rank gain into earlier exact eight-worker epochs by removing owner-lane backlog?",
+  "mechanism": {
+    "source": "the eight complete A427 Reader permutations",
+    "cell_primary_score": "minimum one-based rank across the eight frozen source Readers",
+    "cell_tie_break_1": "lexicographically sorted complete eight-rank vector",
+    "cell_tie_break_2": "index of the first source attaining the minimum rank in frozen source-role order",
+    "cell_tie_break_3": "cell integer",
+    "global_order": "ascending lexicographic order of the complete score tuple",
+    "worker_assignment": "successive groups of eight globally ordered cells form one epoch; within each epoch cells map to workers in frozen source-role order",
+    "cells": 4096,
+    "workers": 8,
+    "complete_epochs": 512,
+    "complete_cover_required": true,
+    "duplicate_cells_allowed": false,
+    "reader_refits": 0,
+    "new_solver_stages": 0
+  },
+  "evaluation_contract": {
+    "selection_targets": "A412 targets 0 through 15",
+    "diagnostic_external_targets": "A412 targets 16 through 31",
+    "primary_comparator": "A427 minimum-rank owner-lane scheduler reconstructed on the identical field",
+    "secondary_comparator": "A416 owner-lane scheduler reconstructed on the identical field",
+    "primary_metric": "geometric mean exact static worker epoch at the true Direct12 cell",
+    "supporting_metrics": [
+      "pointwise better equal worse target counts",
+      "worst exact worker epoch",
+      "maximum backlog removed in epochs",
+      "complete 4096-cell schedule proof"
+    ],
+    "production_rule": "materialize the same fixed wavefront on the existing A388 public-output field only if the complete scheduler proof passes",
+    "production_execution_in_this_attempt": false
+  },
+  "information_boundary": {
+    "A427_result_available_at_design_freeze": true,
+    "A427_native_causal_personally_read": true,
+    "A427_reader_rank_external_panel_available_at_design_freeze": true,
+    "A416_A427_exact_epoch_diagnostic_available_at_design_freeze": true,
+    "diagnostic_disclosed_A427_holdout_epoch_factor_vs_A416": 0.9681293467760348,
+    "diagnostic_disclosed_A427_holdout_gain_bits_vs_A416": -0.046728283455755505,
+    "A428_global_wavefront_target_epochs_available_at_design_freeze": false,
+    "A428_candidate_schedule_available_at_design_freeze": false,
+    "A428_production_target_label_used": 0,
+    "A428_production_candidate_assignments_executed": 0,
+    "live_recovery_progress_or_filter_outcomes_used_for_schedule": false,
+    "live_recovery_processes_must_not_be_interrupted": true
+  },
+  "source_anchors": {
+    "A427_result_path": "research/results/v1/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_v1.json",
+    "A427_result_sha256": "8255e600234731179a1431a1f1e36e4ab1cdab6082bea52191b8a4eb79f1c248",
+    "A427_causal_path": "research/results/v1/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_v1.causal",
+    "A427_causal_sha256": "c05aa4fc5158c20000a4c6903e29e2f82753638f221a086dd54f105605b7da64",
+    "A427_runner_path": "research/experiments/chacha20_round20_w50_majority_3to1_complete_portfolio_a427.py",
+    "A427_runner_sha256": "cb8d8c9a12799a7fe1ccd37f0ec0af72234104ffbf8b6081b2c0ec13d4271cb8",
+    "A427_model_path": "research/configs/chacha20_round20_w50_majority_3to1_complete_portfolio_a427_model_v1.json",
+    "A427_model_sha256": "e9080666d97dd714c1ba6ee40070c1d1a1ad6789597f0fd0b48f831f18b3eb08",
+    "A416_result_path": "research/results/v1/chacha20_round20_w50_folded_xor_portfolio_a416_v1.json",
+    "A416_result_sha256": "7623bd8d1a11d00c771e8aa24e2e3847dafe92ebbfffa34e761434a09a24b686",
+    "A412_protocol_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+    "A412_protocol_sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2"
+  }
+}

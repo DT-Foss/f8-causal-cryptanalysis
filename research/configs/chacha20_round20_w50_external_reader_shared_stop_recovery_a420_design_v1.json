@@ -1,0 +1,69 @@
+{
+  "schema": "chacha20-round20-w50-external-reader-shared-stop-recovery-a420-design-v1",
+  "attempt_id": "A420",
+  "design_state": "frozen_before_A418_A419_external_results_or_any_A420_candidate_progress_or_result",
+  "objective": "Convert the best prospectively qualified eight-reader A418/A419 schedule into an actually executed full-round ChaCha20 W50 shared-stop recovery and measure the strict subset of the residual domain visited before independent confirmation.",
+  "source_selection_rule": {
+    "eligible_sources": ["A418", "A419"],
+    "eligibility": "external_transfer.qualified is true and the complete 4,096-cell eight-worker schedule proof has zero violations and exact 512-epoch makespan",
+    "primary_key": "external holdout mean_log2_rank, ascending",
+    "secondary_key": "external holdout worst_rank, ascending",
+    "final_tie_break": "attempt_id descending so A419 replaces A418 only on exact metric equality",
+    "selection_happens_after_holdout": true,
+    "production_target_used_for_selection": false
+  },
+  "execution_contract": {
+    "primitive": "standard ChaCha20 block function",
+    "rounds": 20,
+    "feed_forward": true,
+    "unknown_key_bits": 50,
+    "known_key_bits": 206,
+    "output_blocks": 8,
+    "prefix_cells": 4096,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "workers": 8,
+    "worker_tasks_each": 512,
+    "static_schedule_epochs": 512,
+    "complete_group_before_stop": true,
+    "matched_control_required_empty": true,
+    "independent_confirmation_blocks": 8,
+    "shared_stop_only_after_confirmation": true,
+    "host_refresh_groups": 8
+  },
+  "success_contract": {
+    "factual_candidates": 1,
+    "matched_control_candidates": 0,
+    "all_4096_output_bits_match": true,
+    "strict_search_advantage": "aggregate unique prefix groups evaluated is less than 4096",
+    "domain_reduction_factor": "4096 / aggregate unique prefix groups evaluated",
+    "search_gain_bits": "log2(4096 / aggregate unique prefix groups evaluated)"
+  },
+  "information_boundary": {
+    "A418_result_available_at_design_freeze": false,
+    "A419_result_available_at_design_freeze": false,
+    "A420_protocol_available_at_design_freeze": false,
+    "A420_candidate_or_progress_available_at_design_freeze": false,
+    "production_target_labels_used_for_schedule_selection": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed_for_schedule_selection": 0,
+    "prior_live_recovery_filter_outcomes_consumed": false,
+    "live_recoveries_must_not_be_interrupted": true
+  },
+  "source_anchors": {
+    "A397_runner_path": "research/experiments/chacha20_round20_w50_expanded_eight_worker_recovery_a397.py",
+    "A397_runner_sha256": "099bc92d9b91228ff1563c251ba47a6d4101da48a3dc193cf57a4e4be2f2e8c5",
+    "A397_protocol_path": "research/configs/chacha20_round20_w50_expanded_eight_worker_recovery_a397_v1.json",
+    "A397_protocol_sha256": "447baf5e4784d0210f51e194f1a241b7fbfbf1ab239fe16582effdb4b435fb32",
+    "A418_design_path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_repair_a418_design_v1.json",
+    "A418_design_sha256": "61c9eab12666229c19aaac936b2ac00710101e831088264968ef47933cae7053",
+    "A418_implementation_path": "research/configs/chacha20_round20_w50_selection_calibrated_portfolio_repair_a418_implementation_v1.json",
+    "A418_implementation_sha256": "e527d38d457ddc2ec6940963d0a1899d977511a2653d21852298a2a5958e579d",
+    "A419_design_path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_design_v1.json",
+    "A419_design_sha256": "d57e1b16eb917bcb0e755075a4a0405ab67fadbf2205ece5b87dc8b5c52344b4",
+    "A419_implementation_path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_implementation_v1.json",
+    "A419_implementation_sha256": "ddcdb9262c1711913dca304cbfeb79162a3b4cfee3d6e2fabb7d2f732670a148",
+    "A419_model_path": "research/configs/chacha20_round20_w50_majority_polarity_portfolio_a419_model_v1.json",
+    "A419_model_sha256": "aa68b6c0f9098b445a63822b2e5e7b0a26263eb7073073549c04158911f303c7"
+  }
+}

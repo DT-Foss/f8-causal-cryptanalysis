@@ -1,0 +1,57 @@
+{
+  "A385_production_assignment_or_true_prefix_consumed": false,
+  "A401_result_available_at_freeze": false,
+  "A401_selection_available_at_freeze": false,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A388_preflight": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_preflight_v1.json",
+      "sha256": "6919b9071b5c9de85f050a7921d4a82fa0e55db6e02ca531590afdfdc57cc115"
+    },
+    "A388_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    },
+    "A401_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+      "sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c"
+    },
+    "A401_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+      "sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1"
+    },
+    "A401_public_corpus": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+      "sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3"
+    },
+    "A401_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_fullfit_production_reader_a402_design_v1.json",
+      "sha256": "15111ce7c820cfc7bebebeff5feaacbc7d8cde68bc4b09ffcd0d216c668134d8"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_knownkey_fullfit_production_reader_a402.sh",
+      "sha256": "e7675b4f4f6636b1c18854a44f00674b58fbb80703095f5f09926d7bcc27b551"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_fullfit_production_reader_a402.py",
+      "sha256": "ecd409f1894fc5a9ca5781fc70f040c6b8eae02878b69f936c5fe399f42d0473"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_knownkey_fullfit_production_reader_a402.py",
+      "sha256": "bbe0ccea847f2c480242412c1d1af5968a74cbff195207662c9babaf1b72ed97"
+    }
+  },
+  "attempt_id": "A402",
+  "candidate_count": 765,
+  "commitment_state": "complete_code_frozen_before_A401_selection_holdout_result_or_A402_production_order",
+  "design_sha256": "15111ce7c820cfc7bebebeff5feaacbc7d8cde68bc4b09ffcd0d216c668134d8",
+  "implementation_commitment_sha256": "ca219369bf983d953c9adce7ecd9eaf402d34afe0844c29f5c34a5410addaa57",
+  "schema": "chacha20-round20-w50-knownkey-fullfit-production-reader-a402-implementation-v1"
+}

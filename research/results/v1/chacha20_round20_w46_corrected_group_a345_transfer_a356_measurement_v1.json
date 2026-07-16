@@ -1,0 +1,203 @@
+{
+  "A345_public_challenge_sha256": "622f7b7218d022167e50efef459983e54207165078c49f0bb253c70545e3231f",
+  "anchors": {
+    "A345_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+      "sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95"
+    },
+    "A349_base_CNF": {
+      "path": "research/artifacts/a349_chacha20_r20_w46_direct12_a345/a349_a345_public_output_w46_b1.cnf",
+      "sha256": "bbd87ae30a430e5cb802e24134f42f9593f47cddf235228963150b3ac36ed07b"
+    },
+    "A349_preflight": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_prospective_a345_validation_a349_preflight_v1.json",
+      "sha256": "43a54b43f257d75d89bb6a260318d5203754033de5bea8cf192e773267e8abb1"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_corrected_group_a345_transfer_a356_design_v1.json",
+      "sha256": "776e0a33fe1f88c7e3c785b2e422630802eb672f35321034ee6b4d2c43ad1f05"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w46_corrected_group_a345_transfer_a356_implementation_v1.json",
+      "sha256": "f9014c1d0a30b7c20a96e3b213570c2c0afc10cfe4f65656160fc55fdd5a103a"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_corrected_group_a345_transfer_a356.py",
+      "sha256": "118633987cf449aa5ad88554e79690614c0c5bda4966791f4209b34c0e56f227"
+    }
+  },
+  "attempt_id": "A356",
+  "design_sha256": "776e0a33fe1f88c7e3c785b2e422630802eb672f35321034ee6b4d2c43ad1f05",
+  "evidence_stage": "PRE_A345_RESULT_COMPLETE_UNLABELED_CORRECTED_GROUP_MEASUREMENT",
+  "implementation_commitment_sha256": "ec133f0bc7665fe1f9a5e1c68baf54f10094ccbe0dd747e179504dfe572dc560",
+  "implementation_sha256": "f9014c1d0a30b7c20a96e3b213570c2c0afc10cfe4f65656160fc55fdd5a103a",
+  "measurement_commitment_sha256": "95ea76d80b65c121d8f92b62cde4aa49ede73a7c284dccc2cd9f1de7c4c4d535",
+  "measurement_ledger": [
+    {
+      "compressed_bytes": 80848,
+      "compressed_sha256": "30233bddab82b95f28eeb4c569db65200cd781e4bafa60d64f2315585b22d73d",
+      "low4": 0,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_00.json.zst",
+      "raw_bytes": 1525185,
+      "raw_sha256": "17753d7ab8b66ed3c5191d79c9cf4187c0f9a400157f3ac57f2b8f094c3d1830",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 78080,
+      "compressed_sha256": "d7eb4a81119505d4fe3a52e60a053bbcc40aa9e44bec0a29d032344edd71316a",
+      "low4": 1,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_01.json.zst",
+      "raw_bytes": 1528796,
+      "raw_sha256": "83feff02e5c75027fc5ade83c7d40190226de04e6d029aad5ef40ef3fc93bf22",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 72227,
+      "compressed_sha256": "8aaa18f86f0a733a68a124cb91cc6cc4a39f468170f7445280db7495f7f224fa",
+      "low4": 2,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_02.json.zst",
+      "raw_bytes": 1520158,
+      "raw_sha256": "cce5387efb512791624fc34209f0a7a12caefdb5e8ea846985708de5a25a2572",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 75572,
+      "compressed_sha256": "47d0333662172ede69a855f3ff63a5d47a9f3d3b1a2da099850bd10adcdf0622",
+      "low4": 3,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_03.json.zst",
+      "raw_bytes": 1527591,
+      "raw_sha256": "f32c13fbd8533a2eb5beb321bb9117a1e809dc2636da7ae43d5c560936875380",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 76371,
+      "compressed_sha256": "ba9be7b1a25b5282c460448dfd40bb26da8cc8e3c2097fbfab07c7003bba11a0",
+      "low4": 4,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_04.json.zst",
+      "raw_bytes": 1541511,
+      "raw_sha256": "2a46be6835ac48ae4cbeadb0d98e96a06663747caeb61ff7e9c3a0a9ba4f6aff",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 77620,
+      "compressed_sha256": "d84a4afbc797d0ec136842bd7b7a893903092f5bbf0a60b7791d8e5d1b069d0c",
+      "low4": 5,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_05.json.zst",
+      "raw_bytes": 1523270,
+      "raw_sha256": "a719921e4a40938e3026d220ca61bb661aec3e502608626aab60c49a19e30250",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 68880,
+      "compressed_sha256": "651b5a249a5cd400fad1761ae61da928cf9913d90e4a2065c1e1ea6afc4b9997",
+      "low4": 6,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_06.json.zst",
+      "raw_bytes": 1504260,
+      "raw_sha256": "f178a4dfe7181346c8de0ab38358f7017f5e11f30d06b7c1f6f9e17212413742",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 69069,
+      "compressed_sha256": "52c4b3d4e3e48e22c0d94e94ba14ec697d643fa4d993dad2472c8b3f0f4dcd88",
+      "low4": 7,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_07.json.zst",
+      "raw_bytes": 1506104,
+      "raw_sha256": "e4ce1103e91ccfa73f53203933bf5d693480e40f64e60e81954e2803d67c716c",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 81802,
+      "compressed_sha256": "6895a468b12da8d32078a67ae77520d6d399845d04377e056a2e27ad7352f228",
+      "low4": 8,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_08.json.zst",
+      "raw_bytes": 1526329,
+      "raw_sha256": "b8e12a029001be6025b2478bc86889f92cc87e7fec5c3100ed08b27ccecec972",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 72732,
+      "compressed_sha256": "68fd52fcca1a655fe94d41558c41ed034c91533a6dda02b71c3c1b12b503a0dc",
+      "low4": 9,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_09.json.zst",
+      "raw_bytes": 1512778,
+      "raw_sha256": "92677d81e8e7ddd480f2c541b80b2dc299a4b54b3f4803a0806897a78b99e529",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 77283,
+      "compressed_sha256": "474ec9adca282f963cb66494a4e16eea2cbe9398af4f6570d1f9d5fa64f6e6cc",
+      "low4": 10,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_0a.json.zst",
+      "raw_bytes": 1519114,
+      "raw_sha256": "c2f1a34e696f42f1bac261334c5cc970561a4540c1c44ee5763bb4b4499901ab",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 72757,
+      "compressed_sha256": "15febbbb6028b58d1e1a47f3f55fff41c50b18013306754e4e8ad5e190e443bf",
+      "low4": 11,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_0b.json.zst",
+      "raw_bytes": 1511120,
+      "raw_sha256": "ca426bf8a0f25fd4fceacb60e889e166931495ec26c1349f9f3b3e0412747643",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 76548,
+      "compressed_sha256": "46a09f9670f3bc477135601fcaa7e10e8d52410381d8e6c770dbc757919e26d8",
+      "low4": 12,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_0c.json.zst",
+      "raw_bytes": 1529994,
+      "raw_sha256": "404a1f09f4165f9bc71e65e581427fec0df63b73321d768b2d0f771335a75937",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 80779,
+      "compressed_sha256": "5ddca2d959309d775ecaced4424872848d04e5379717e8be4da04f8a03168e45",
+      "low4": 13,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_0d.json.zst",
+      "raw_bytes": 1538059,
+      "raw_sha256": "081455945d6c695cefa0154254e4e79e58bdc1a46c6c3b178350ba814021014c",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 69929,
+      "compressed_sha256": "b5637fe69b2feac0cb26345b96f49211cfe80fe131ef2997500af9cb5c36b50e",
+      "low4": 14,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_0e.json.zst",
+      "raw_bytes": 1508934,
+      "raw_sha256": "9a31656b470ce40471848034f07da77a7159a0b977d506f6d90299ee9e906095",
+      "resumed": false
+    },
+    {
+      "compressed_bytes": 73784,
+      "compressed_sha256": "a5cebfecec273d1173816374a5032be1de495fecb575aba88006d24074d776c5",
+      "low4": 15,
+      "path": "research/results/v1/chacha20_round20_w46_corrected_group_a345_transfer_a356_v1/slice_0f.json.zst",
+      "raw_bytes": 1520998,
+      "raw_sha256": "acc6daaa323e8f6d714b06ca9848de3616bb1593325252e57d18c8cc7e14f80b",
+      "resumed": false
+    }
+  ],
+  "measurement_summary": {
+    "A355_selected_view_read": false,
+    "candidate_assignments_executed": 0,
+    "complete_direct12_cells": 4096,
+    "high8_cells_per_slice": 256,
+    "low4_slices": 16,
+    "measured_assignment_bit_interval": [
+      20,
+      31
+    ],
+    "reader_refits": 0,
+    "solver_stages": 16384,
+    "status_counts": {
+      "sat": 0,
+      "unknown": 4096,
+      "unsat": 0
+    },
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w46-corrected-group-a345-transfer-a356-measurement-v1",
+  "synthetic_reader_mapping_sha256": "b94c8f3ba1bbc5779cef0e7312625b23ddf8e57b7364211c39fd0856fe2c2f13",
+  "volatile_wall_seconds": 388.474997041747
+}

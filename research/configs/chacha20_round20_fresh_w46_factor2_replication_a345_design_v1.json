@@ -1,0 +1,59 @@
+{
+  "attempt_id": "A345",
+  "design_state": "frozen_after_A325_A344_before_A345_implementation_order_fresh_challenge_or_candidate",
+  "execution_contract": {
+    "candidates_per_prefix_group": 17179869184,
+    "complete_domain_assignments": 70368744177664,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "filter_bits": 64,
+    "full_rounds": 20,
+    "host_refresh_interval_prefix_groups": 64,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "public_output_blocks": 8,
+    "slabs_per_prefix_group": 8,
+    "unknown_key_bits": 46,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low14"
+  },
+  "information_boundary": {
+    "A325_result_available_at_design_freeze": true,
+    "A343_orders_frozen_before_A325_result": true,
+    "A344_descriptive_rank_used_to_select_next_operator": true,
+    "A345_candidate_or_prefix_available_at_design_freeze": false,
+    "A345_fresh_challenge_available_at_design_freeze": false,
+    "A345_order_available_at_design_freeze": false,
+    "A345_target_labels_used_for_order_construction": 0,
+    "fresh_challenge_generated_only_after_implementation_and_order_commitments": true,
+    "orders_refit_on_A345_target": false
+  },
+  "order_contract": {
+    "A325_confirmed_prefix_consistency_rank_one_based": 32,
+    "A325_confirmed_prefix_raw_rank_one_based": 77,
+    "A325_confirmed_prefix_wavefront_rank_one_based": 62,
+    "consistency_alias": "A334/current_consistency_borda_only",
+    "consistency_order_uint16be_sha256": "5a95ee94b89471fe4812f3df4a117ebf4488173a9c48ca2b563bb19224b38b51",
+    "factor_bound": 2,
+    "factor_bound_violations_expected": 0,
+    "raw_alias": "A339/A325_raw_linf_baseline",
+    "raw_order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a",
+    "selection_rule": "post-A325 prospective replication operator; sort every cell by min(raw_rank,consistency_rank), rank_sum, raw_rank, consistency_rank, cell_id",
+    "wavefront_order_uint16be_sha256": "649375a3990b84ec9e6de7d186ca96e70a22461753e3528088d3b1047851b6ae"
+  },
+  "source_anchors": {
+    "A324_qualification_path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+    "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a",
+    "A324_runner_path": "research/experiments/chacha20_round20_w46_eight_slab_grouped_engine_a324.py",
+    "A324_runner_sha256": "d286102bfcdf5ec4902c7e7240aa6b4ba6c9edd486933b58cbc895355b0c0f4b",
+    "A325_result_path": "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_result_sha256": "534d2d769f387bca90b9ab1f2c43a98a6030c1e3c1039270c1d2e109a38d7ce2",
+    "A325_runner_path": "research/experiments/chacha20_round20_holdout_selected_w46_recovery_a325.py",
+    "A325_runner_sha256": "27aee43b3a4bcbacef869af30f9017bac8ae643c4027945d01f97f030217f156",
+    "A343_panel_path": "research/results/v1/chacha20_round20_w46_pre_result_operator_panel_a343_v1.json",
+    "A343_panel_sha256": "aac9c6ec5a46115ea3c0ddc2a15dd0abe5f7a83d4f23c60c6c2d266de8f63525",
+    "A344_result_path": "research/results/v1/chacha20_round20_w46_a343_corrected_evaluation_a344_v1.json",
+    "A344_result_sha256": "8a4176cf2e04ff7d21144778cb28dd6264a05a6ee1360e17a7f4e87e57738fa0"
+  },
+  "schema": "chacha20-round20-fresh-w46-factor2-replication-a345-design-v1"
+}

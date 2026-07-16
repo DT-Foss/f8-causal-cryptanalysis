@@ -1,0 +1,128 @@
+{
+  "schema": "chacha20-round20-w52-wide-consensus-dual-axis-wavefront-a439-design-v1",
+  "attempt_id": "A439",
+  "design_state": "frozen_after_geometry_only_compatibility_probe_before_A375_scoring_A439_source_orders_pair_schedule_or_candidate_execution",
+  "scientific_question": "Do the four A375 Readers, trained on a complete 128-known-key W46 rank panel and frozen before every W52 field, transfer without refit to both independent complete W52 Direct12 axes and yield a robust exact dual-axis recovery schedule?",
+  "hypothesis": "Applying all four frozen A375 models to each complete W52 axis produces eight target-blind source orders. Stable minimum-rank merging gives one exact factor-four order per axis, and a neutral square wavefront over those two orders gives an exact 2^24-cell schedule with a pointwise factor-sixteen shell envelope relative to the independently best frozen Reader on each axis.",
+  "reader_contract": {
+    "source": "A375 frozen wide-consensus four-Reader portfolio",
+    "model_roles": [
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection"
+    ],
+    "model_count_per_axis": 4,
+    "axes": 2,
+    "total_refit_free_source_orders": 8,
+    "features_per_cell": 532,
+    "within_slice_cells": 256,
+    "slices_per_axis": 16,
+    "cells_per_axis": 4096,
+    "normalization": "A360 target_normalize applied independently within each complete 256-cell slice",
+    "feature_rank": "one-based descending absolute feature magnitude with cell-index tie break",
+    "model_aggregators": [
+      "top64_vote_then_mean_rank",
+      "reciprocal_rank_sum",
+      "member_rank_quantile_0.75",
+      "maximum_member_rank"
+    ],
+    "reader_refits": 0,
+    "target_labels_used": 0
+  },
+  "axis_contract": {
+    "prefix_axis": {
+      "measurement": "A433 V2 complete W52 prefix-aligned Direct12 field",
+      "semantic_bits": "word0 bits 31 through 20",
+      "groups": 4096
+    },
+    "off_axis": {
+      "measurement": "A432 complete W52 public-output Direct12 field under the A436 corrected coordinate interpretation",
+      "semantic_bits": "synthetic W52 coordinates 51 through 40",
+      "groups": 4096
+    },
+    "each_axis_merge": "A376 stable minimum-source-rank wavefront with sum, role-rank and cell tie breaks",
+    "each_axis_pointwise_bound": "R_axis_portfolio(c) <= 4 * min_reader R_reader(c)"
+  },
+  "pair_schedule_contract": {
+    "algorithm": "A434 exact neutral square wavefront over the two A439 factor-four axis orders",
+    "pair_cells": 16777216,
+    "residual_assignments_per_pair_cell": 268435456,
+    "complete_domain_assignments": 4503599627370496,
+    "workers": 8,
+    "worker_partition": "global pair-stream index modulo 8",
+    "worker_tasks_each": 2097152,
+    "streaming_generation": true,
+    "duplicate_free_complete_cover": true,
+    "factor_sixteen_shell_envelope": "R_A439_pair(x,y) <= 16 * max(min_i R_prefix_i(x), min_j R_off_j(y))^2",
+    "candidate_assignments_executed": 0
+  },
+  "diversity_readout_contract": {
+    "within_axis_pairwise_metrics": [
+      "Spearman rank correlation",
+      "top16 overlap",
+      "top64 overlap",
+      "top256 overlap"
+    ],
+    "cross_axis_same-role_metrics": [
+      "Spearman rank correlation",
+      "top16 overlap",
+      "top64 overlap",
+      "top256 overlap"
+    ],
+    "existing_single-view_comparison": [
+      "A433 prefix selected order",
+      "A436 corrected off-axis selected order"
+    ],
+    "target_labels_used": 0
+  },
+  "information_boundary": {
+    "A375_models_frozen_before_A432_or_A433_measurement": true,
+    "A375_models_changed_or_refit_for_A439": false,
+    "A432_and_A433_compressed_fields_opened_before_design_freeze": true,
+    "pre_design_open_scope": "geometry-only compatibility probe: all sixteen slices per axis were normalized only to verify shape 256x532 and finite values; no A375 model score, feature rank field, source order, axis portfolio order or pair schedule was computed",
+    "A426_secret_true_pair_result_stop_or_worker_progress_read_for_A439_design": false,
+    "A439_target_labels_used": 0,
+    "A439_reader_refits": 0,
+    "A439_candidate_assignments_executed": 0
+  },
+  "acceptance_gates": [
+    "All 32 stored W52 slices pass their original hash, canonicalization and measurement gates.",
+    "Every normalized slice is finite and exactly 256 by 532.",
+    "All eight source orders are exact permutations of 0 through 4095.",
+    "Each axis portfolio is exact and satisfies the pointwise factor-four proof on all 4096 cells.",
+    "The pair wavefront has an exact direct/inverse identity, covers all 2^24 pair cells once and satisfies the factor-sixteen shell envelope.",
+    "No target label, A426 outcome, stop, recovery result or worker progress participates in any score or order.",
+    "The authentic AI-native Causal artifact reopens with dotcausal.io.CausalReader and is read semantically by the main agent."
+  ],
+  "source_anchors": {
+    "A375_runner_path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+    "A375_runner_sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1",
+    "A375_result_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+    "A375_result_sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1",
+    "A375_causal_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.causal",
+    "A375_causal_sha256": "adc5fc921da7c7429407fabc637ff03c27e15705fde6ea157fc31acae25f9825",
+    "A376_runner_path": "research/experiments/chacha20_round20_w46_a375_reader_sealed_a361_order_a376.py",
+    "A376_runner_sha256": "8a74a7cd015e77806809bacb2417ced7ea1deb0f4df7c8c51a06fa4b3daf8a31",
+    "A432_runner_path": "research/experiments/chacha20_round20_w52_public_output_direct12_eight_worker_a432.py",
+    "A432_runner_sha256": "22b00e57cf06fd6c6e5e5e5be1766101ce1500d4e47dbe035a257ec271a0270e",
+    "A432_result_path": "research/results/v1/chacha20_round20_w52_public_output_direct12_eight_worker_a432_v1.json",
+    "A432_result_sha256": "3d0ed27a25288db589ddb6608407314d1fa32f4cb678806e142eb819159a7e6d",
+    "A432_causal_path": "research/results/v1/chacha20_round20_w52_public_output_direct12_eight_worker_a432_v1.causal",
+    "A432_causal_sha256": "e08948ffcb85766c0c4dcf74ce4c965c77003358ab3e5e6a0755fbbbaee2ea72",
+    "A433_runner_path": "research/experiments/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_v2.py",
+    "A433_runner_sha256": "17a466cbb7be143e4ed77c48d975ac54c1cc860aee5964dfd5c7ca4f020b7442",
+    "A433_result_path": "research/results/v1/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_v2.json",
+    "A433_result_sha256": "3ffa28081437ed12276bac868ca1de780fe2d419ea986c68fba52098c0649e07",
+    "A433_causal_path": "research/results/v1/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_v2.causal",
+    "A433_causal_sha256": "3c9ac990753e6763c8d61fbfa773f75e023edf5f60613eca36f5ebc1ea07f818",
+    "A434_runner_path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+    "A434_runner_sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b",
+    "A436_runner_path": "research/experiments/chacha20_round20_w52_corrected_off_axis_reader_a436.py",
+    "A436_runner_sha256": "ea2d0d85dd59947d074babd60779ffe679c635c25f19ef0ee1bcc404b365fef0",
+    "A436_result_path": "research/results/v1/chacha20_round20_w52_corrected_off_axis_reader_a436_v1.json",
+    "A436_result_sha256": "28e35b1bc2cefbf90c7358ca09f61f8028e9ebdcda6fbf69e3107c3389eb2baf",
+    "A436_causal_path": "research/results/v1/chacha20_round20_w52_corrected_off_axis_reader_a436_v1.causal",
+    "A436_causal_sha256": "2dce03d1fed10da0c22618f37cad6242a67598ad3c3c64498b572a2ecded672d"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "chacha20-round20-extended-pre-result-rank-panel-a338-design-v1",
+  "attempt_id": "A338",
+  "created_at_utc": "2026-07-15T07:22:00Z",
+  "design_state": "postconfirmation_evaluator_over_hash_frozen_pre_A322_result_orders",
+  "question": "Which target-cell ranks do all A332-A337 W45 orders fixed before the A322 result attain on the independently confirmed A322 prefix, and does complete-field transfer selection align with exact target-cell localization?",
+  "panel_contract": {
+    "source_attempt_sequence": ["A332", "A333", "A334", "A335", "A336", "A337"],
+    "expected_alias_count": 89,
+    "expected_unique_order_count": 70,
+    "A332_alias_count": 7,
+    "A333_alias_count": 7,
+    "A334_alias_count": 8,
+    "A335_alias_count": 42,
+    "A336_alias_count": 8,
+    "A337_alias_count": 17,
+    "A335_expansion": "all seven coefficient candidates crossed with all six view-specific predicted W45 orders",
+    "rank_metric": "one-based position of independently confirmed A322 prefix12 in each exact 4,096-cell order",
+    "candidate_count_metric": "rank times 2^33 complete W45 grouped-engine candidates",
+    "gain_metric": "log2(2^45 divided by rank times 2^33)",
+    "global_descriptive_winner_is_prospectively_selected": false,
+    "counterfactual_candidate_execution": false,
+    "counterfactual_matched_control_outcome_inference": false
+  },
+  "designated_selected_aliases": [
+    "A332/consistency_min_rank_wavefront",
+    "A333/midpoint_alpha_minus_1_over_2",
+    "A334/temporal_midpoint_only",
+    "A335/midpoint_alpha_minus_1_over_2/nearest_prototype_Linf",
+    "A336/linf_l2_equal_borda",
+    "A337/linf09_l2_07"
+  ],
+  "executed_baseline": {
+    "alias": "A321_A314/raw_nearest_prototype_Linf",
+    "rank_one_based": 1459,
+    "order_uint16be_sha256": "5d1afc37614fdbe050e9853413a3de7b850b876e9bc5649d3dffcf3e23c9780a"
+  },
+  "information_boundary": {
+    "A322_result_is_used_only_for_postconfirmation_prefix_lookup": true,
+    "all_source_orders_are_hash_frozen_in_artifacts_whose_information_boundary_records_A322_result_unavailable": true,
+    "A322_atomic_negative_progress_was_visible_when_sources_froze": true,
+    "each_source_records_A322_progress_not_used_for_candidate_definition_selection_or_order": true,
+    "orders_refit_after_A322_result": false,
+    "new_candidate_orders_created_by_A338": false,
+    "duplicate_candidate_execution": false,
+    "matched_control_outcomes_inferred": false,
+    "postconfirmation_global_winner_role": "descriptive_breadcrumb_only"
+  },
+  "source_anchors": {
+    "A322_result_path": "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+    "A322_result_sha256": "d5354b58cf558dee701d5cd81ed1c1103517997b88719136db82bdc0e2f0a687",
+    "A330_evaluation_path": "research/results/v1/chacha20_round20_w45_frozen_operator_panel_a330_evaluation_v1.json",
+    "A330_evaluation_sha256": "accf1d15369d600a8f53456db336b254f70d14da4b299fb9b9239eae739e66ca",
+    "A332_order_path": "research/results/v1/chacha20_round20_margin_consistency_wavefront_a332_order_v1.json",
+    "A332_order_sha256": "b6e0a5ca2a819194cde74dacda51ce0ac7b8e7d051e5dc854ad3599b545353ad",
+    "A333_order_path": "research/results/v1/chacha20_round20_cross_width_rank_velocity_a333_order_v1.json",
+    "A333_order_sha256": "4cd1c0ce67e50df687548d0cf6a5f921ff91767c077d25f39b158a4263de4b5c",
+    "A334_order_path": "research/results/v1/chacha20_round20_walk_forward_structural_ensemble_a334_order_v1.json",
+    "A334_order_sha256": "2cf5c72675f31be60a5e8a896735953dba12fb3a5864f3e9c6e700093bfc024e",
+    "A335_order_path": "research/results/v1/chacha20_round20_multiview_rank_smoothing_a335_order_v1.json",
+    "A335_order_sha256": "80e63e65ca8139e2b893670c093ddfbd7451e6cf1e024b64aff18950b6344f75",
+    "A336_order_path": "research/results/v1/chacha20_round20_multiview_forecast_fusion_a336_order_v1.json",
+    "A336_order_sha256": "c8ab47d6de41740fb216861cf2d135568d4aadd1bbcf9bdf5e4fa20ea5344d4c",
+    "A337_order_path": "research/results/v1/chacha20_round20_linf_l2_weight_simplex_a337_order_v1.json",
+    "A337_order_sha256": "16b580081dd1dcea74ba0ca7357e2dfb14b5c50b66bc9f300bbc7d5577f8ceea"
+  },
+  "next_breadcrumb_contract": {
+    "if_a_pre_result_nonselected_order_materially_beats_raw_linf": "freeze its exact W46 transfer and a factor-two raw-Linf portfolio before A325 execution or result, without rewriting A325",
+    "if_selected_orders_dominate": "retain the best source selection rule for the next fresh target",
+    "A325_existing_protocol_rewritten": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "chacha20-round20-w46-full128-proof-antecedent-transfer-a448-design-v1",
+  "attempt_id": "A448",
+  "design_state": "frozen_after_A447_authentic_Causal_personal_readback_before_any_A448_remaining96_measurement_or_transfer_result",
+  "scientific_question": "Does A447's frozen solver-native proof-antecedent Reader transfer without refitting from its 32 development targets to the 96 unmeasured targets, and what complete-128 proof portfolio should be carried target-blind into W52?",
+  "corpus_contract": {
+    "targets": 128,
+    "cells_per_target": 256,
+    "fixed_blocks": 8,
+    "targets_per_block": 16,
+    "sources": {
+      "A359": 32,
+      "A363": 32,
+      "A367": 64
+    },
+    "reused_A447_targets": "source-local indices divisible by four: 4 per fixed block, 32 total",
+    "new_A448_targets": "all remaining source-local indices: 12 per fixed block, 96 total",
+    "exact_measurement_contract": "same content-addressed A447 helper, CNF mapping, numeric candidate order, horizons 1/2/4/8, watchdog, parser, and typed feature extractor",
+    "missing_antecedent_total": 0
+  },
+  "prospective_no_refit_transfer": {
+    "training_targets": "the 32 A447 targets only",
+    "evaluation_targets": "the disjoint 96 A448 targets only",
+    "feature_order": "A447 selected_full_model.complete_feature_order",
+    "primary_operator": "hybrid_proof_top4_equal",
+    "fixed_diagnostic_operator_order": [
+      "borda_sum_baseline",
+      "proof_best_single",
+      "proof_borda_top4",
+      "proof_borda_top8",
+      "proof_borda_top16",
+      "proof_borda_top32",
+      "proof_reciprocal_top8",
+      "proof_vote_top16",
+      "hybrid_proof_top4_base2",
+      "hybrid_proof_top4_equal",
+      "hybrid_proof_top8_base2",
+      "hybrid_proof_top8_equal",
+      "hybrid_proof_top8_proof2",
+      "hybrid_proof_top16_equal",
+      "hybrid_reciprocal_top8_equal"
+    ],
+    "ties": "A442 Borda rank then numeric cell index",
+    "primary_claim_scope": "the fixed A447 primary operator on the disjoint remaining96 evaluation",
+    "diagnostic_panel_changes_no_primary_decision": true
+  },
+  "complete128_model_contract": {
+    "outer_crossfit": "hold out one complete sixteen-target block; feature selection uses the other 112 targets only",
+    "feature_selection_order": [
+      "positive_training_blocks_descending",
+      "minimum_training_block_bit_gain_descending",
+      "all_training_targets_bit_gain_descending",
+      "feature_index_ascending"
+    ],
+    "operators": "the same fixed A447 operator panel",
+    "operator_selection_key": [
+      "minimum_fixed_block_bit_gain_descending",
+      "balanced_eight_block_bit_gain_descending",
+      "all128_bit_gain_descending",
+      "targets_at_or_above_median_rank_descending",
+      "worst_rank_ascending",
+      "fixed_operator_order"
+    ],
+    "final_W52_model": "fit the feature order on all 128 labels only after no-refit transfer evaluation and retain the strongest qualifying proof-derived operator as a target-blind portfolio member"
+  },
+  "W52_open_gate": {
+    "required_cover": [
+      "all 128 targets",
+      "all 32768 candidate cells",
+      "all 131072 solver stages",
+      "zero missing antecedents"
+    ],
+    "proof_transfer_gate": [
+      "at least one fixed A447 proof-derived operator is positive in all eight disjoint remaining96 blocks",
+      "its remaining96 balanced eight-block gain is at least 0.25 bits",
+      "its remaining96 rank field differs from the A442 Borda field"
+    ],
+    "complete128_crossfit_gate": [
+      "at least one proof-derived crossfit operator is positive in all eight complete blocks",
+      "its complete128 balanced gain is at least 0.25 bits"
+    ],
+    "if_either_signal_gate_passes": "open target-blind W52 proof tracing as a portfolio beside the fixed A442 Borda Reader; do not replace or erase the baseline",
+    "if_both_signal_gates_fail": "retain the complete proof corpus and resolve the stable h8 position-5/position-4 ancestry subgraph before W52"
+  },
+  "information_boundary": {
+    "A447_authentic_Causal_personally_read": true,
+    "A447_selected_operator_known": "hybrid_proof_top4_equal",
+    "A447_selected32_results_known": true,
+    "A448_remaining96_proof_values_seen_before_design": false,
+    "A448_remaining96_truth_ranks_seen_before_design": false,
+    "A448_no_refit_operator_results_seen_before_design": false,
+    "A448_complete128_crossfit_results_seen_before_design": false,
+    "W52_target_labels_used": 0,
+    "W52_model_refits": 0,
+    "W52_new_solver_stages": 0,
+    "candidate_assignments_executed": 0
+  },
+  "acceptance_gates": {
+    "A447_32_shards_reopened_against_result_ledger": true,
+    "A448_96_shards_reopened_against_raw_and_compressed_hashes": true,
+    "A442_full128_Borda_reconstructed_exactly": true,
+    "A447_feature_names_and_order_reconstructed_exactly": true,
+    "remaining96_primary_evaluated_before_complete128_refit": true,
+    "authentic_dotcausal_written_reopened_and_personally_read": true
+  },
+  "source_anchors": {
+    "A447_result_path": "research/results/v1/chacha20_round20_w46_proof_antecedent_calibration_a447_v1.json",
+    "A447_result_sha256": "09836abe6618d42d544a327f009d7840e00bb9bfbf2e99eea296a7ed70cc6051",
+    "A447_causal_path": "research/results/v1/chacha20_round20_w46_proof_antecedent_calibration_a447_v1.causal",
+    "A447_causal_sha256": "78cbbe380c50b5394e7262014853214ea39d265be94ea2e64daac2f004902da6",
+    "A447_personal_readback_path": "research/reports/CAUSAL_CHACHA20_A447_PERSONAL_READER_READBACK_V1.md",
+    "A447_personal_readback_sha256": "d944b58ffdbf9f30965ca13e66f8b2ec5c5b89c2b943249e9cc617e8039dc8e1",
+    "A442_result_path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+    "A442_result_sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+  }
+}

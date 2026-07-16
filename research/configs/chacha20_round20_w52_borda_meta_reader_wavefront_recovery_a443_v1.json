@@ -1,0 +1,347 @@
+{
+  "A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "A442_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+  "A442_result_sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d",
+  "anchors": {
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A442_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.causal",
+      "sha256": "89e079477ca230be5d2d6ba0231bf7833b29b5c6793076e5800622bf0b8ffb6b"
+    },
+    "A442_design": {
+      "path": "research/configs/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_design_v1.json",
+      "sha256": "75715e8f0f6f9ecd89c4e2fcafe45f859945b58c5ce1ca162a6fc69c93cd5786"
+    },
+    "A442_implementation": {
+      "path": "research/configs/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_implementation_v1.json",
+      "sha256": "9d1afe23e1ba57f6e21daaaad6014f8b1e4f95a007cfe3ed041ade07da5b0ee5"
+    },
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A442_runner": {
+      "path": "research/experiments/chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+      "sha256": "436f0e2a35949bb2007e7da95ec1558c134c2c30c4d077e72b4d2da81de27314"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443_design_v1.json",
+      "sha256": "16f12746ed7363879ae87f2f7b5371f95aac851d2e97c129910b2baea500f22b"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443_implementation_v1.json",
+      "sha256": "19c3b81612a3012e60657d89c86c6b3fb434191be98331fc3fe2755a7c0c58c6"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443.py",
+      "sha256": "f9a4578b9ca60d89ff98a26d89cec7320dd788d78c198d8c490552b48ffc39f6"
+    }
+  },
+  "attempt_id": "A443",
+  "candidate_assignments_executed": 0,
+  "design_sha256": "16f12746ed7363879ae87f2f7b5371f95aac851d2e97c129910b2baea500f22b",
+  "implementation_commitment_sha256": "a7c9c2ae2675a2ce6cdecb988f6286e8a2af6279c36054b5cebb15847ba74d99",
+  "implementation_sha256": "19c3b81612a3012e60657d89c86c6b3fb434191be98331fc3fe2755a7c0c58c6",
+  "information_boundary": {
+    "A426_A435_A438_A440_candidate_progress_or_outcome_available_at_freeze": false,
+    "A426_assignment_absent_from_protocol": true,
+    "A434_qualification_available_at_A443_protocol_freeze": false,
+    "A442_schedule_frozen_before_A443_challenge_binding": true,
+    "A443_candidate_or_progress_available_at_protocol_freeze": false,
+    "A443_reader_refits": 0,
+    "A443_target_labels_used_for_schedule": 0,
+    "prior_live_recovery_filter_outcomes_consumed": false
+  },
+  "production_execution_enabled": false,
+  "protocol_commitment_sha256": "eb1578422ac2623b537e212e950900359468e132c39054902899636987fc7d2c",
+  "protocol_state": "A442_exact_borda_square_schedule_and_A426_public_challenge_bound_before_A434_qualification_A426_A435_A438_A440_outcome_or_any_A443_candidate_progress_or_filter_outcome",
+  "public_challenge": {
+    "challenge_id": "chacha20-r20-w52-a426-fresh-a416-transfer-v1",
+    "control_target_block_sha256": "0bbd0eb818c1e574b03d84c678e983fc7e1ad8839204050917126820cecd53aa",
+    "control_target_words": [
+      2283608064,
+      3749971332,
+      3271213062,
+      3480526590,
+      2006381002,
+      3825462054,
+      1909223054,
+      627043369,
+      2146981000,
+      1985386057,
+      2292684359,
+      585393699,
+      464339775,
+      3542940251,
+      1580306847,
+      1051308162
+    ],
+    "counter_start": 2458255036,
+    "feedforward": true,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_bits": 204,
+    "known_material_derivation_label": "A426|fresh-W52-A416-transfer|60a9f15d924fe9d089fc190c0a50c1ddd33fee41ea3724c910ab101df06d1ee7",
+    "known_material_derivation_sha256": "b5bcb9ec13441dd9dbb497bdb923e6486e656fdc2fa426b5384087f69b6ec03c",
+    "known_zeroed_key_words": [
+      0,
+      2654994432,
+      3157988503,
+      422095107,
+      1035015418,
+      3335816668,
+      1055899451,
+      2111786092
+    ],
+    "nonce_words": [
+      2106306407,
+      2230959908,
+      744685280
+    ],
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "target_block_sha256": [
+      "b1e90381ee360ee007fe20bb787f74ac524c61548fdd51caa8c3ca9f78ee9542",
+      "901342470813bfb44842b64b69efa667e210919352b1b860e832cdf011fa3d02",
+      "a3f33da20b7a94dd092f1eba40a4ea9ec8e7b3f9f362761cb5fe7287cb4552e9",
+      "9d130e3cfc6ca83c0bf327c58a43b8204f6b4421fe8925a0cb8f1e49ae3b917a",
+      "573b655a685f09a76538f50d50028219c9483e183ca45cc46404466342d9fddc",
+      "bec001c69e3d711d798be6a272fb0e2e297db711ab2ce2549ad717c383acfc81",
+      "6939b1b4933bbf9baa7b3ec270cd2a340f73cf303ceb315fe5dea06ee9073c1b",
+      "e980f14fa207d3adaf4f4bb2c066833f8ff69c9f1fd18b6836a42f4b1bc124b9"
+    ],
+    "target_words": [
+      [
+        2283608065,
+        3749971332,
+        3271213062,
+        3480526590,
+        2006381002,
+        3825462054,
+        1909223054,
+        627043369,
+        2146981000,
+        1985386057,
+        2292684359,
+        585393699,
+        464339775,
+        3542940251,
+        1580306847,
+        1051308162
+      ],
+      [
+        615806303,
+        1915118853,
+        3611999003,
+        2462135062,
+        448213036,
+        712453467,
+        489341250,
+        3167504017,
+        4150064210,
+        1564414257,
+        3359104353,
+        2511576714,
+        2473120310,
+        3867222128,
+        296006303,
+        2932650289
+      ],
+      [
+        1347361375,
+        4198028107,
+        969602438,
+        2495004937,
+        551233127,
+        2384034776,
+        360549143,
+        3273948591,
+        285210321,
+        1678476525,
+        381210838,
+        3443301136,
+        1759361509,
+        456579735,
+        2460315959,
+        1929972024
+      ],
+      [
+        2864085595,
+        1321058389,
+        902529061,
+        1843333541,
+        349805457,
+        839762873,
+        2516387913,
+        3106208824,
+        3233677135,
+        2052514940,
+        1049470956,
+        3377932277,
+        2846673307,
+        2800707270,
+        1640858732,
+        2302053945
+      ],
+      [
+        1472330211,
+        3863379850,
+        2493860843,
+        881466340,
+        2458890627,
+        791456315,
+        2047267578,
+        448135755,
+        3104796158,
+        3612097632,
+        2545111905,
+        1116593590,
+        329062761,
+        2768569991,
+        3538989714,
+        554145576
+      ],
+      [
+        685636110,
+        3940090224,
+        908211371,
+        255843147,
+        3475115012,
+        689754121,
+        2351573275,
+        97002464,
+        1611877939,
+        140879898,
+        480706400,
+        3010544903,
+        4178862783,
+        2692959169,
+        3559637927,
+        4110059171
+      ],
+      [
+        3729988897,
+        3357518871,
+        2590900807,
+        2674243137,
+        2706881435,
+        2254260306,
+        4292153898,
+        1326392940,
+        2063357460,
+        1034071772,
+        1702936261,
+        1694726908,
+        2102486759,
+        987967792,
+        2475940897,
+        2468129540
+      ],
+      [
+        2455022585,
+        2839857810,
+        819931572,
+        4144986460,
+        1994391709,
+        1608334864,
+        2321661955,
+        3175109227,
+        1285587045,
+        1166800420,
+        3803924166,
+        3134888286,
+        2341992935,
+        268546147,
+        3231280618,
+        3008859290
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_key_bits": 52,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low20"
+  },
+  "public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "schedule": {
+    "A442_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+    "algorithm": "A442_knownkey_selected_borda_dual_axis_square_wavefront",
+    "assignments_per_complete_pair_cell": 268435456,
+    "complete_cover_identity": "disjoint residues modulo 8 over [0,2^24)",
+    "complete_domain_assignments": 4503599627370496,
+    "direct_inverse_sentinels": [
+      {
+        "global_index": 0,
+        "off_axis": 2922,
+        "prefix": 771
+      },
+      {
+        "global_index": 1,
+        "off_axis": 2922,
+        "prefix": 310
+      },
+      {
+        "global_index": 7,
+        "off_axis": 299,
+        "prefix": 771
+      },
+      {
+        "global_index": 8,
+        "off_axis": 299,
+        "prefix": 310
+      },
+      {
+        "global_index": 255,
+        "off_axis": 1535,
+        "prefix": 246
+      },
+      {
+        "global_index": 8388608,
+        "off_axis": 3600,
+        "prefix": 3200
+      },
+      {
+        "global_index": 16777215,
+        "off_axis": 2829,
+        "prefix": 3179
+      }
+    ],
+    "first_pair": {
+      "off_axis": 2922,
+      "prefix": 771
+    },
+    "knownkey_balanced_two_corpus_bit_gain": 0.5840543224346755,
+    "knownkey_minimum_fixed_block_bit_gain": 0.3287263877670634,
+    "last_pair": {
+      "off_axis": 2829,
+      "prefix": 3179
+    },
+    "off_axis_order_uint16be_sha256": "1c021823b0ed8a101adfaa67672a2b35a153ccc7f5953fa9852787ec1326d537",
+    "pair_at_formula": "square_pair_at(global_index,A442_prefix_order,A442_off_axis_order)",
+    "pair_cells": 16777216,
+    "pair_spearman_to_A439": 0.8431311772480021,
+    "pair_stream_uint16be_uint16be_sha256": "b2b6e7a0b716083ae357e1dcde436a68e8ca64334ac5ec9009d74742989c6d48",
+    "prefix_order_uint16be_sha256": "7b7eea4c81a15d8dc5347d6affe4ef62702682eace6fd81c08586c477c60947e",
+    "selected_meta_operator": "borda_sum",
+    "top65536_intersection_with_A439": 12792,
+    "worker_global_index_formula": "worker_index + 8 * zero_based_worker_step",
+    "worker_role_formula": "borda_meta_wave_{worker_index}",
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "schedule_commitment_sha256": "2442dbe79db41bb84800c474b9fbd49f6361ec892c32afd2c709abe6d90d034c",
+  "schema": "chacha20-round20-w52-borda-meta-reader-wavefront-recovery-a443-protocol-v1",
+  "worker_roles": [
+    "borda_meta_wave_0",
+    "borda_meta_wave_1",
+    "borda_meta_wave_2",
+    "borda_meta_wave_3",
+    "borda_meta_wave_4",
+    "borda_meta_wave_5",
+    "borda_meta_wave_6",
+    "borda_meta_wave_7"
+  ]
+}

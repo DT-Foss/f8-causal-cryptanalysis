@@ -1,0 +1,45 @@
+{
+  "anchors": {
+    "A385_runner": {
+      "path": "research/experiments/chacha20_round20_fresh_w50_pretarget_transfer_a385.py",
+      "sha256": "b6827f779a8a7997bbee6c04a6a28f9f3c5ec5718ac942b0171c8b4174a928f3"
+    },
+    "A388_preflight": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_preflight_v1.json",
+      "sha256": "6919b9071b5c9de85f050a7921d4a82fa0e55db6e02ca531590afdfdc57cc115"
+    },
+    "A388_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    },
+    "A400_result": {
+      "path": "research/results/v1/chacha20_round20_w50_direct12_transfer_diversity_schedule_a400_v1.json",
+      "sha256": "1d4ca3f053ce566fad4808751767c1549aa6d6625dced16bd65d13d6d97c2215"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+      "sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_knownkey_direct12_learning_a401.sh",
+      "sha256": "f69debacfdb119efa32ac39de3abe79e0cdd1abe180fb429a61813650e0412e0"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "05653671c32e1cee6366e30d6e94217d676c31c692ad9a9bddb238d5ecbc8924"
+    }
+  },
+  "attempt_id": "A401",
+  "candidate_count": 765,
+  "commitment_state": "frozen_before_A401_corpus_measurement_selection_or_holdout_evaluation",
+  "design_sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c",
+  "holdout_label_commitment_sha256": "0e111f21b4f91379f04ac12267f57a4d4f3362d593e868a7d2a10e04c196ab43",
+  "implementation_commitment_sha256": "72ce4d3783e3b29db6f4a3b9cabb733ca6e5b24d8035e8df0874cd53818d7798",
+  "public_corpus_commitment_sha256": "bf544a956d5c825a4716c16d9f6f9da5133bfaab8a2aa707fd40636d93422cee",
+  "schema": "chacha20-round20-w50-knownkey-direct12-learning-a401-implementation-v1",
+  "selection_label_commitment_sha256": "a82b8ce55bb3099196536521d10ecea991bcf334125ab296c0c32f2c083d53dc"
+}

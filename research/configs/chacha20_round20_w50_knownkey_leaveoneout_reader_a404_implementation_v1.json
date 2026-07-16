@@ -1,0 +1,53 @@
+{
+  "A401_selection_or_result_available_at_freeze": false,
+  "A404_label_scores_available_at_freeze": false,
+  "anchors": {
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A401_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+      "sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c"
+    },
+    "A401_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+      "sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1"
+    },
+    "A401_public_corpus": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+      "sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3"
+    },
+    "A401_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "A402_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_fullfit_production_reader_a402.py",
+      "sha256": "ecd409f1894fc5a9ca5781fc70f040c6b8eae02878b69f936c5fe399f42d0473"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_leaveoneout_reader_a404_design_v1.json",
+      "sha256": "ecd0eb3d7f7b155dc4e87d56335890889eaa3dde57c6d3749e72cf321e71d1a1"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_knownkey_leaveoneout_reader_a404.sh",
+      "sha256": "1008fce4e57ed2ff077183a89519c5ca24bc64f70afa7dd126c7e63dd5862fcf"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_leaveoneout_reader_a404.py",
+      "sha256": "d7743e0bc4996c15189876dafa014fec6a8a13398f90885c0284e9c585192bc7"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_knownkey_leaveoneout_reader_a404.py",
+      "sha256": "88b42777ed37446a33af5a9b133ff3ebfa390432d6a290e485fa2b981cca6c43"
+    }
+  },
+  "attempt_id": "A404",
+  "baseline_candidate_count": 11,
+  "candidate_count": 765,
+  "commitment_state": "complete_leaveoneout_code_frozen_before_A401_selection_result_or_A404_label_score",
+  "design_sha256": "ecd0eb3d7f7b155dc4e87d56335890889eaa3dde57c6d3749e72cf321e71d1a1",
+  "implementation_commitment_sha256": "34846943f7b948f488f1f1c0dd60abd639878387274de98924b9066a427a0e61",
+  "schema": "chacha20-round20-w50-knownkey-leaveoneout-reader-a404-implementation-v1"
+}

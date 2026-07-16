@@ -1,0 +1,50 @@
+{
+  "A426_outcome_available_at_V2_freeze": false,
+  "V1_pair_stream_sha256": "6fec353dd64c98d3956c5308995e4cea1ee50cbd5a96436c67bbd426091d12aa",
+  "V1_schedule_commitment_sha256": "79b3e2c0fe0a7aecc4f18e505ab6454cba96923033df319df7ca3ff8ed5ff401",
+  "anchors": {
+    "V1_implementation": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_implementation_v1.json",
+      "sha256": "d92adf76cee3360d35a15dba243590ccc32dbcdbb8b7e11e25bea4d19f0e143c"
+    },
+    "V1_protocol": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v1.json",
+      "sha256": "30652dc6a24838568b22ebe01bca367264c9b65f2cf20d3b3281994936b89685"
+    },
+    "V1_runner": {
+      "path": "research/experiments/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437.py",
+      "sha256": "57a2889bb3dcdd2592e19b20fbb626fac706982ddf6bcc99e6a58fb8e83bdad7"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_design_v1.json",
+      "sha256": "6d4f7eaa72d06b5b02345dafdf038fa20e1abca66e051471b3973ae491e8c607"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.sh",
+      "sha256": "dadf0bad529dd517aa32afe088518b79d6f1005c70e94003068946ecc25253b1"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.py",
+      "sha256": "e6bb01ee2ba114d69c157d72dd381ab9daf3226bf41d797e9964d6f46ba09538"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_calibration_balanced_dual_axis_wavefront_a437_v2.py",
+      "sha256": "910d642a894ef2bc149a723ccddbdb9455cdc7a82fb012720276e028a1568074"
+    }
+  },
+  "attempt_id": "A437",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "packaging_only_repair_frozen_after_V1_KeyError_before_A426_outcome_or_any_candidate",
+  "implementation_commitment_sha256": "014d3b153960c3402da508852c694ec7c24caa1a10666f6b8d9b210c803026d6",
+  "reader_refits": 0,
+  "repair_scope": {
+    "axis_orders_changed": false,
+    "calibration_changed": false,
+    "candidate_assignments_executed": 0,
+    "defect": "V1 Causal builder requested payload.schedule although the assembled result exposes the frozen stream hash at payload.pair_stream_uint16be_uint16be_sha256",
+    "schedule_changed": false,
+    "schedule_recomputed": false
+  },
+  "schema": "chacha20-round20-w52-calibration-balanced-dual-axis-wavefront-a437-implementation-v2",
+  "target_labels_used": 0
+}

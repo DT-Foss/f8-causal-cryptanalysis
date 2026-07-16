@@ -1,0 +1,99 @@
+{
+  "A366_result_file_sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8",
+  "A366_selection_commitment_sha256": "b5fc9d9147cf5dc2c07f7534d57584046d58be53e98115c210c2512a2cba9faa",
+  "anchors": {
+    "A366_result": {
+      "path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_reader_a366_v1.json",
+      "sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_cross_corpus_invariant_validation_a367_design_v1.json",
+      "sha256": "d6b45f81ff3fce2ac187578388d218983b9725397b1d2385749ea57572616259"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_cross_corpus_invariant_validation_a367.sh",
+      "sha256": "49af4d48041b75b06c8924b78f9de4e56fa2e6a2a063ad35cd6a4e735ac2d56b"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_cross_corpus_invariant_validation_a367.py",
+      "sha256": "23537586ed7563396e346e5428b9f96f1970d28ed1a9f102e0ec5a22ee8d5087"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_cross_corpus_invariant_validation_a367.py",
+      "sha256": "825b2872aded96899cdc750bc8ac87c1c4be6a94a64f0a85417c669b36994086"
+    }
+  },
+  "assignment_vector_canonical_sha256": "171f7fdae11c5da8763052cf6cdded23163e0e7e4cc250aa94851b6efadcf51a",
+  "attempt_id": "A367",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "frozen_before_any_A367_target_formula_export_measurement_or_label_readback",
+  "design_sha256": "d6b45f81ff3fce2ac187578388d218983b9725397b1d2385749ea57572616259",
+  "frozen_model_definitions": {
+    "best_single": {
+      "kind": "abs_primitive",
+      "member_feature_indices": [
+        246
+      ],
+      "members": [
+        5
+      ],
+      "name": "abs_primitive::246::learned_clause_accepted_stage__second_difference_1_2_4__xor_gradient_l2"
+    },
+    "coverage_companion": {
+      "aggregator": "borda",
+      "kind": "ensemble",
+      "member_feature_indices": [
+        85,
+        223,
+        329,
+        513
+      ],
+      "members": [
+        1,
+        2,
+        9,
+        13
+      ],
+      "name": "ensemble::borda::085-223-329-513"
+    },
+    "diverse_companion": {
+      "aggregator": "borda",
+      "kind": "ensemble",
+      "member_feature_indices": [
+        223,
+        239,
+        329,
+        479
+      ],
+      "members": [
+        2,
+        4,
+        9,
+        11
+      ],
+      "name": "ensemble::borda::223-239-329-479"
+    },
+    "primary": {
+      "aggregator": "linf_intersection",
+      "kind": "ensemble",
+      "member_feature_indices": [
+        3,
+        85,
+        313,
+        479
+      ],
+      "members": [
+        0,
+        1,
+        8,
+        11
+      ],
+      "name": "ensemble::linf_intersection::003-085-313-479"
+    }
+  },
+  "high8_vector_canonical_sha256": "a2cdceb46a5bed1109786face785ee67b292968e13b73ba524de54bcd95f1957",
+  "implementation_commitment_sha256": "7e3c64cd70528f7cf2ffcb78fb14d0bd013e9c50c9ed0e6ba8e97969da7f20a5",
+  "reader_refits": 0,
+  "row_manifest_canonical_sha256": "2402d6980c90793797583a5bbae4cfc6fcb928b8a2b67c3a5943e7ec27c26419",
+  "schema": "chacha20-round20-w46-cross-corpus-invariant-validation-a367-implementation-v1"
+}

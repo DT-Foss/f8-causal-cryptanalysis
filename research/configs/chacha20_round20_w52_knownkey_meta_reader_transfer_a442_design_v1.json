@@ -1,0 +1,95 @@
+{
+  "schema": "chacha20-round20-w52-knownkey-meta-reader-transfer-a442-design-v1",
+  "attempt_id": "A442",
+  "design_state": "frozen_after_A441_personal_Causal_read_before_any_A442_meta_operator_evaluation_W52_order_or_candidate_execution",
+  "scientific_question": "Which fixed rank-aggregation geometry best preserves the four individually positive and diverse A375 Readers across all eight Known-key calibration blocks, and does its target-blind W52 transfer produce a genuinely more orthogonal pair schedule than A439's union-min wavefront?",
+  "knownkey_calibration_contract": {
+    "source_attempt": "A375",
+    "targets": 128,
+    "fixed_blocks": 8,
+    "targets_per_block": 16,
+    "cells_per_target": 256,
+    "frozen_source_readers": 4,
+    "source_reader_refits": 0,
+    "fixed_meta_operators": [
+      "union_min",
+      "borda_sum",
+      "intersection_max",
+      "upper_median",
+      "geometric_mean",
+      "reciprocal_sum",
+      "top64_consensus"
+    ],
+    "operators_defined_before_meta_evaluation": true,
+    "selection_key": [
+      "minimum_fixed_block_bit_gain_descending",
+      "balanced_two_corpus_bit_gain_descending",
+      "all128_bit_gain_descending",
+      "targets_at_or_above_median_rank_descending",
+      "worst_rank_ascending",
+      "fixed_operator_order"
+    ],
+    "retain_all_operator_results": true
+  },
+  "W52_transfer_contract": {
+    "source_attempt": "A439",
+    "axis_cells": 4096,
+    "pair_cells": 16777216,
+    "apply_selected_rank_geometry_identically_to_prefix_and_off_axis": true,
+    "square_pair_schedule": "A434 exact square wavefront over the two selected meta-orders",
+    "W52_target_labels_used": 0,
+    "W52_reader_refits": 0,
+    "candidate_assignments_executed": 0,
+    "compare_both_axes_and_complete_pair_space_to_A439": true
+  },
+  "decision_contract": {
+    "if_selected_operator_is_union_min": "retain A439 and record that the calibration prefers coverage over consensus",
+    "if_selected_operator_is_not_union_min": "freeze the new complete W52 pair stream as an orthogonal recovery-ready schedule",
+    "do_not_launch_recovery_until_pair_diversity_is_measured": true,
+    "minimum_material_pair_diversity": "Spearman below 0.98 or at least 10 percent non-overlap in the first 65,536 pair cells",
+    "A441_factor2_merge_is_deferred_because_A441_A439_spearman_is_0.9999790521770737": true
+  },
+  "information_boundary": {
+    "A441_authentic_Causal_personally_read": true,
+    "A426_secret_true_pair_result_stop_or_worker_progress_read": false,
+    "A438_result_stop_or_worker_progress_read": false,
+    "A440_result_stop_or_worker_progress_read": false,
+    "A442_meta_operator_results_known_before_design_freeze": false,
+    "A442_W52_orders_known_before_design_freeze": false,
+    "A442_target_labels_used": 0,
+    "A442_reader_refits": 0,
+    "A442_candidate_assignments_executed": 0
+  },
+  "acceptance_gates": {
+    "reconstructed_A375_model_fields_match_frozen_hashes": true,
+    "all_seven_meta_orders_are_exact_per_target": true,
+    "all_eight_fixed_block_gains_reported": true,
+    "selected_operator_follows_frozen_key_exactly": true,
+    "two_W52_axis_orders_are_exact": true,
+    "complete_pair_stream_hash_is_exact": true,
+    "target_labels_reader_refits_candidate_executions": [0, 0, 0],
+    "authentic_dotcausal_written_reopened_and_personally_read": true
+  },
+  "source_anchors": {
+    "A375_runner_path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+    "A375_runner_sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1",
+    "A375_result_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+    "A375_result_sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1",
+    "A375_causal_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.causal",
+    "A375_causal_sha256": "adc5fc921da7c7429407fabc637ff03c27e15705fde6ea157fc31acae25f9825",
+    "A439_runner_path": "research/experiments/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439.py",
+    "A439_runner_sha256": "6cb94c2c8e8e404b25b2b41c51e4fd68b038e447616c740dba549464b5f490fb",
+    "A439_result_path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.json",
+    "A439_result_sha256": "b141fb882bd1a1cdc6a22de424370fe3118c9a4eb90565eaa0c8225321b9f869",
+    "A439_causal_path": "research/results/v1/chacha20_round20_w52_wide_consensus_dual_axis_wavefront_a439_v1.causal",
+    "A439_causal_sha256": "f27c9d0d8311d633cfa46237df44ef1daa0cf375c99ddd1f85e37cc79f26f27c",
+    "A441_result_path": "research/results/v1/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_v1.json",
+    "A441_result_sha256": "884fef4dbe25cb1bbb6cb61f7fb3697d4609a084ff8c1f75d97066538e31dafb",
+    "A441_runner_path": "research/experiments/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441.py",
+    "A441_runner_sha256": "7d3107eb060298d18f01e0d8278d9d2eaaa0a8baab757291cd5eede0cde1c83c",
+    "A441_causal_path": "research/results/v1/chacha20_round20_w52_direct_product_reader_pair_portfolio_a441_v1.causal",
+    "A441_causal_sha256": "2b2f62b2761d48a2249de44e9f1d62b45440f904e425dc8128560197d1fbbe7b",
+    "A434_runner_path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_a434.py",
+    "A434_runner_sha256": "feb01a654135ed03451c3207d4f10195de0bc81ec26ce755d5e0d1eeb7ce9a1b"
+  }
+}

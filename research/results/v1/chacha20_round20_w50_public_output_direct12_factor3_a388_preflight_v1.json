@@ -1,0 +1,134 @@
+{
+  "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b",
+  "A385_public_challenge_sha256": "bbc1a3ba396a645755be858238bf8710080fe57e8c35b0d5771534163e415f6c",
+  "A387_progress_or_filter_outcomes_consumed": false,
+  "A387_result_or_true_prefix_available_at_preflight": false,
+  "CNF": {
+    "path": "research/artifacts/a388_chacha20_r20_w50_public_output_direct12/a388_a385_public_output_w50_b1.cnf",
+    "sha256": "8fbd5e43c12e88265bef2b85e53bb4061cfb098bfa336cf1f55579e9cef3f064"
+  },
+  "CNF_header": "p cnf 72561 228098",
+  "anchors": {
+    "A342_result": {
+      "path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+      "sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+    },
+    "A348_result": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+      "sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812"
+    },
+    "A349_selection": {
+      "path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+      "sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422"
+    },
+    "A385_order": {
+      "path": "research/results/v1/chacha20_round20_fresh_w50_pretarget_transfer_a385_order_v1.json",
+      "sha256": "3d694c17590c063bc14edc925f75adbc2f05e4a941195956a89d18287805af38"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w50_public_output_direct12_factor3_a388_implementation_v1.json",
+      "sha256": "5a3eb08ad5087bd7ebd744548eec7f65f26a70af1679340aede196ea50e4a8b6"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_direct12_factor3_a388.py",
+      "sha256": "36c933ae5003f92f2b96efb2e30d97c30bf8301bfcaa790333a6712f3041b5a9"
+    }
+  },
+  "attempt_id": "A388",
+  "bridge_challenge_sha256": "b80f0ac2c4800fc7f60b30fc4f0beab53958118380b56e2f84a46bf9b7b4daa0",
+  "evidence_stage": "PRE_W50_RECOVERY_PUBLIC_OUTPUT_DIRECT12_CNF_AND_READER_FROZEN",
+  "formula_sha256": "452f298d86a474d2219a41419828de6e0dd5f600bad54fbe07d54e9ddd05c3d8",
+  "implementation_commitment_sha256": "e733f95dd0633cd2afea636d8c28dda38ffadcf99e5b9a72a4af332b4dece8d1",
+  "implementation_sha256": "5a3eb08ad5087bd7ebd744548eec7f65f26a70af1679340aede196ea50e4a8b6",
+  "low4_coordinates": [
+    41,
+    40,
+    39,
+    38
+  ],
+  "preflight_commitment_sha256": "ac6c416aec199b573f612b0e1c37142183ed44571e53086d307b7291a4b72149",
+  "reader_refits": 0,
+  "schema": "chacha20-round20-w50-public-output-direct12-factor3-a388-preflight-v1",
+  "selected_view": "A342_selected_pair_slice_z",
+  "source_mapping_sha256": "f5aaba64ea7ac80443b1f1007624bed69fc8fbeaa2dde8da5c159a5f42fb05d0",
+  "source_one_literals_bit0_upward": [
+    17,
+    16,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    56,
+    61,
+    66,
+    70,
+    74,
+    78,
+    83,
+    87,
+    92,
+    97,
+    102,
+    107,
+    111,
+    115,
+    286,
+    217,
+    216,
+    219,
+    221,
+    223,
+    225,
+    227,
+    229,
+    231,
+    233,
+    235,
+    237,
+    239,
+    241,
+    243,
+    245,
+    247
+  ],
+  "synthetic_reader_mapping": [
+    17,
+    16,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    233,
+    235,
+    237,
+    239,
+    241,
+    243,
+    245,
+    247
+  ],
+  "synthetic_reader_mapping_sha256": "0640c3d7bfe937e4718a579889b8451c657e7d994ff7b462b535384414743ebf",
+  "target_labels_used": 0
+}

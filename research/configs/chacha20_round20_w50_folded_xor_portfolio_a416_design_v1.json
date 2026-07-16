@@ -1,0 +1,78 @@
+{
+  "schema": "chacha20-round20-w50-folded-xor-portfolio-a416-design-v1",
+  "attempt_id": "A416",
+  "design_state": "frozen_after_A415_A401_only_training_before_any_A412_measurement_field_or_reader_score",
+  "scientific_question": "Can the two fixed A415 landscape polarities be folded into one exact single-worker order while retaining an equal-eight-worker advantage over A414?",
+  "fold_contract": {
+    "negative_order": "ascending A415 XOR-correlation score, ties by lower cell index",
+    "positive_order": "descending A415 XOR-correlation score, ties by lower cell index",
+    "fold_order": "negative rank 1, positive rank 1, negative rank 2, positive rank 2, continuing with first-occurrence deduplication",
+    "no_tie_evidence": "all sixteen A415 LOO panels satisfy r_negative + r_positive = 4097 at the true cell",
+    "rank_bound": "R_fold(c) <= 2 min(R_negative(c), R_positive(c))",
+    "target_specific_polarity_choices": 0,
+    "new_solver_stages": 0
+  },
+  "training_selection_contract": {
+    "candidate_family": "one fixed folded A415 Reader plus the ten A413 models already frozen inside A414 or A415",
+    "available_A413_indices": [5, 20, 35, 49, 91, 100, 123, 144, 152, 153],
+    "greedy_rule": "minimum sixteen-key pointwise-minimum geometric mean rank, ties by worst rank then canonical index",
+    "selected_canonical_indices": [155, 123, 35, 100, 153, 91, 49, 144],
+    "selected_roles": ["folded_xor_negative_first", "A413_candidate_123", "A413_candidate_035", "A413_candidate_100", "A413_candidate_153", "A413_candidate_091", "A413_candidate_049", "A413_candidate_144"],
+    "folded_LOO_ranks": [931, 2091, 21, 420, 3557, 326, 3561, 3384, 859, 3, 2565, 809, 3168, 3871, 1608, 1214],
+    "selected_pointwise_minimum_ranks": [397, 66, 21, 420, 122, 326, 935, 3384, 10, 3, 2440, 809, 3, 402, 101, 1214],
+    "selected_geometric_mean_parallel_rank": 163.25747947090397,
+    "selected_bit_gain_vs_complete_4096_cover": 4.648994721373031,
+    "A414_geometric_mean_parallel_rank": 415.5514623998885,
+    "A414_to_A416_training_factor": 2.5453747279857324,
+    "additional_training_bit_gain_vs_A414": 1.3478780643206407,
+    "A415_two_polarity_portfolio_geometric_mean_rank": 119.44814036295723,
+    "single_worker_fold_cost_vs_A415": 1.3667645136611328,
+    "post_freeze_member_replacement_reordering_or_polarity_choice_allowed": false
+  },
+  "external_transfer_contract": {
+    "measurement_fields": "all thirty-two complete A412 fields",
+    "primary_panel": "A412 untouched holdout targets 16 through 31",
+    "matched_baseline": "the eight fixed A414 Readers at equal worker count",
+    "secondary_comparator": "the eight fixed A415 Readers",
+    "qualification": "A416 holdout geometric mean rank is strictly below A414 with positive additional bit gain",
+    "A412_model_choices": 0,
+    "A412_model_refits": 0,
+    "target_specific_polarity_choices": 0,
+    "new_solver_stages": 0
+  },
+  "production_schedule_contract": {
+    "target": "complete assignment-free A388 W50 field",
+    "reader_orders": 8,
+    "worker_count": 8,
+    "ownership": "minimum rank across the eight fixed A416 Readers, ties by frozen portfolio position",
+    "work_stealing": "deterministic order-preserving longest-remaining owner queue",
+    "required_makespan_epochs": 512,
+    "execution_enabled_only_after_external_qualification": true
+  },
+  "information_boundary": {
+    "freeze_utc": "2026-07-16T00:26:22Z",
+    "A412_complete_fields_present_at_design_freeze": 11,
+    "A412_measurement_fields_or_reader_scores_consumed": false,
+    "A412_holdout_label_ledger_opened": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "live_recovery_filter_outcomes_or_results_consumed": false
+  },
+  "source_anchors": {
+    "A415_runner_path": "research/experiments/chacha20_round20_w50_xor_landscape_portfolio_a415.py",
+    "A415_runner_sha256": "11ed184209e0540b9d8d0ee07e9793cc3c1f434767d8100b92706cbaa2c5760f",
+    "A415_implementation_path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_implementation_v1.json",
+    "A415_implementation_sha256": "c955e764c1e6f3c869b13cb3762821b7dc165761f0ef6c0e36d06f5effe47876",
+    "A415_model_path": "research/configs/chacha20_round20_w50_xor_landscape_portfolio_a415_model_v1.json",
+    "A415_model_sha256": "ed7d9e8b44c9dee4fecdb4d59de6a67911c3ed4fc0a0fdb09d7e17885e78e110",
+    "A414_runner_path": "research/experiments/chacha20_round20_w50_knownkey_parallel_portfolio_a414.py",
+    "A414_runner_sha256": "3c0eac31a79141b3c9c39c4c249d7c0a681576bfe652940d9a5151b45b7e9f23",
+    "A414_model_path": "research/configs/chacha20_round20_w50_knownkey_parallel_portfolio_a414_model_v1.json",
+    "A414_model_sha256": "1e65ef99e4a49861ffcfe5e6f30ec3018516e7d91bbdb2a2539980efcaba6f0b",
+    "A413_model_path": "research/configs/chacha20_round20_w50_knownkey_kernel_density_reader_a413_model_v1.json",
+    "A413_model_sha256": "71141bdac6a3f4bea95980e21777eb00a774ecde88a29028c441453dc62b7cf8",
+    "A412_public_corpus_path": "research/configs/chacha20_round20_w50_fresh_hybrid_reader_a412_public_corpus_v1.json",
+    "A412_public_corpus_sha256": "f7859b381d5cf6a5f1a765b4abb44192d3bd73539c681a9a40d8c0a48dd365a2",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  }
+}

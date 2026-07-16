@@ -1,0 +1,51 @@
+{
+  "A362_result_sha256": "6c7ffb32effc2c0141e9f7ce02776a75e4e4772f18126a87bc84c61c6d45705e",
+  "A362_selection_commitment_sha256": "4791833558d170ec540c7045b273e10e78a9f954c91c5a1d6f14bbc891a24032",
+  "anchors": {
+    "A362_result": {
+      "path": "research/results/v1/chacha20_round20_w46_polarity_invariant_reader_a362_v1.json",
+      "sha256": "6c7ffb32effc2c0141e9f7ce02776a75e4e4772f18126a87bc84c61c6d45705e"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_polarity_invariant_validation_a363_design_v1.json",
+      "sha256": "b4c8fb70a62b40788e8d8cbb100806ae5fcc33c18f83e2aef295432cf9f97fb6"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_polarity_invariant_validation_a363.sh",
+      "sha256": "6a18a6734474201f29a61baf65bb57b4357bd4f198375cf047524f02388b0ccc"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_polarity_invariant_validation_a363.py",
+      "sha256": "8ee599e444715170b7f2b55645812e5129d990856408bf81129b0bb9da87b538"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_polarity_invariant_validation_a363.py",
+      "sha256": "502605349b2e16d148a84cc84ef12355fe32c415cb91b28ee1263b5c34bea23d"
+    }
+  },
+  "assignment_vector_canonical_sha256": "fb19407af7294d09a3a1412dcaf956d12b1b6198255f867c21b43b5ff0918897",
+  "attempt_id": "A363",
+  "commitment_state": "frozen_before_any_A363_target_formula_export_measurement_or_label_readback",
+  "design_sha256": "b4c8fb70a62b40788e8d8cbb100806ae5fcc33c18f83e2aef295432cf9f97fb6",
+  "implementation_commitment_sha256": "f8873fba09b43e130e7a745000a995ee1f3b2517eac16eb9e34ee95aefcc5a4c",
+  "primary_definition": {
+    "aggregator": "linf_intersection",
+    "kind": "ensemble",
+    "member_feature_indices": [
+      73,
+      355,
+      380,
+      479
+    ],
+    "members": [
+      2,
+      10,
+      11,
+      15
+    ],
+    "name": "ensemble::linf_intersection::073-355-380-479"
+  },
+  "reader_refits": 0,
+  "row_manifest_canonical_sha256": "40773e7cfe275d5afa256d6c607220945722626591dead0b42e84c72446b3cc2",
+  "schema": "chacha20-round20-w46-polarity-invariant-validation-a363-implementation-v1"
+}

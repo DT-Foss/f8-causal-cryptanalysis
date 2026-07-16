@@ -1,0 +1,58 @@
+{
+  "schema": "chacha20-round20-linf-margin-stability-a331-design-v1",
+  "attempt_id": "A331",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Does exact nearest-prototype margin predict whether a prefix cell retains its Linf Voronoi region from W44 to W45?",
+  "source_anchors": {
+    "A313_result_path": "research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json",
+    "A313_result_sha256": "ec18ee284da633589d1c35fe8f02257438f83fb4f255553667ebc3a0b0452b9a",
+    "A328_result_path": "research/results/v1/chacha20_round20_linf_voronoi_transfer_a328_v1.json",
+    "A328_result_sha256": "93c507e6fa4faeaae30618a35d0a933139246cdf8a57f45fb3760982c796a1b4",
+    "A328_runner_path": "research/experiments/chacha20_round20_linf_voronoi_transfer_a328.py",
+    "A328_runner_sha256": "d7daf79a6e491bbd60b8fc48fcd44eea17ecc6ab4f6b15e22b890b0e8a94ca02"
+  },
+  "predictor_sequence_and_tie_break": [
+    "W44_margin",
+    "W45_margin",
+    "minimum_margin",
+    "maximum_margin",
+    "sum_margin",
+    "product_margin",
+    "negative_absolute_margin_delta",
+    "deterministic_cell_hash_null"
+  ],
+  "predictor_contract": {
+    "margin": "second-smallest minus smallest exact prototype Linf distance",
+    "positive_label": "same nearest-prototype index at W44 and W45",
+    "score_direction": "larger predicts stable for every named predictor",
+    "deterministic_cell_hash_null": "first 64 bits of SHA-256 over ASCII A331:<decimal cell>",
+    "selection_rule": "maximum exact global tie-aware AUC among the first seven non-null predictors then frozen predictor index",
+    "deterministic_cell_hash_null_eligible_for_selection": false,
+    "minimum_AUC_for_followup_operator": 0.55,
+    "new_execution_order": false,
+    "candidate_execution": false,
+    "target_labels_used_from_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "exact twice-concordant AUC numerator and denominator for every predictor",
+    "global tie-aware AUC",
+    "per-W44-prototype tie-aware AUC and pair-weighted stratified AUC",
+    "five equal-count score bins with stable fraction for the selected structural predictor",
+    "selected predictor and explicit 0.55 followup boundary",
+    "A313 predictor values and empirical percentile as annotation only",
+    "deterministic cell-hash null and reversed-score identity check"
+  ],
+  "information_boundary": {
+    "A313_result_available_at_design_freeze": true,
+    "A313_result_role": "annotation_only_no_predictor_selection",
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_predictor_definition_or_selection": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_progress_result_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A322_or_A325": 0,
+    "operator_refits_on_A322_or_A325": 0
+  }
+}

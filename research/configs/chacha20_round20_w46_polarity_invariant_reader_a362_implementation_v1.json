@@ -1,0 +1,49 @@
+{
+  "A361_measurement_shard_content_opened_by_A362_before_freeze": false,
+  "A361_measurement_shard_names_physically_available_at_freeze": [
+    "slice_00.json.zst",
+    "slice_01.json.zst",
+    "slice_02.json.zst",
+    "slice_03.json.zst",
+    "slice_04.json.zst",
+    "slice_05.json.zst",
+    "slice_06.json.zst",
+    "slice_07.json.zst",
+    "slice_08.json.zst",
+    "slice_09.json.zst",
+    "slice_0a.json.zst",
+    "slice_0b.json.zst",
+    "slice_0c.json.zst",
+    "slice_0d.json.zst",
+    "slice_0e.json.zst",
+    "slice_0f.json.zst"
+  ],
+  "A361_measurement_shards_physically_available_at_freeze": 16,
+  "A363_validation_artifacts_available_at_freeze": [],
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_polarity_invariant_reader_a362_design_v1.json",
+      "sha256": "e18527c7677319bc538530e449800b2793500103b0ac7486cb214693a43c9216"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_polarity_invariant_reader_a362.sh",
+      "sha256": "616a67dedde523b0957e50f26c607131be18786bfd21827e7993c123e8e326d3"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_polarity_invariant_reader_a362.py",
+      "sha256": "171e44f83c35d53217fd52c0bee11a2df5e8c22080ac8e00a8bd9c1dd5a25b92"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_polarity_invariant_reader_a362.py",
+      "sha256": "557c7d39bd0f622145ffb0c8d771fa360b61e127210fc22d653655fc10f4bad5"
+    }
+  },
+  "attempt_id": "A362",
+  "candidate_count": 7516,
+  "commitment_state": "frozen_before_A362_selection_and_every_A363_validation_artifact",
+  "definition_ledger_sha256": "34bb7bfbd0c8f2cf6e6243cca6f3e63b24a8134e2080741361b26724b1100ecd",
+  "design_sha256": "e18527c7677319bc538530e449800b2793500103b0ac7486cb214693a43c9216",
+  "feature_ledger_sha256": "9005b242e5855f70dc8b9f9b1136521a3aafbedde7a025e276bdd0a54cda8953",
+  "implementation_commitment_sha256": "1aeb2d60076b28e95614e5728af46bda664e41dcbb2b910ae35f5a30582e5d02",
+  "schema": "chacha20-round20-w46-polarity-invariant-reader-a362-implementation-v1"
+}

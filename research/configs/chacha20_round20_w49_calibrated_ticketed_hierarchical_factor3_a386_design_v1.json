@@ -1,0 +1,74 @@
+{
+  "attempt_id": "A386",
+  "calibration_contract": {
+    "candidate_ticket_vectors": 3823,
+    "cells_per_target": 256,
+    "fixed_block_size": 16,
+    "fixed_blocks": 8,
+    "normalization": "gcd(ticket_vector)=1",
+    "objective_lexicographic": [
+      "minimum maximum_fixed_block_mean_log2_truth_rank",
+      "minimum all128_mean_log2_truth_rank",
+      "minimum worst_truth_rank",
+      "lexicographically_smallest_ticket_vector"
+    ],
+    "source": "A375 complete two-corpus known-key calibration panel",
+    "target_labels_from_W49": 0,
+    "targets": 128,
+    "ticket_range_inclusive": [
+      1,
+      8
+    ]
+  },
+  "design_state": "frozen_after_independent_A375_ticket_hypothesis_generation_before_formal_A386_calibration_recomputation_W49_order_or_target_reveal",
+  "information_boundary": {
+    "A375_knownkey_calibration_available": true,
+    "A382_complete_source_orders_available": true,
+    "A381_or_A383_progress_or_filter_outcomes_consumed": false,
+    "A381_result_available_at_design_freeze": false,
+    "A383_result_available_at_design_freeze": false,
+    "A386_candidate_assignments_executed_at_design_freeze": 0,
+    "W49_secret_assignment_or_true_prefix_available_to_A386": false,
+    "reader_refits_on_W49": 0,
+    "target_labels_from_W49": 0
+  },
+  "outer_order_contract": {
+    "cells": 4096,
+    "exact_factor_bound": "R_A386(c) <= 3 * min(R_A379(c), R_A380(c), R_weighted_wide(c))",
+    "pointwise_bound_checked_cells": 4096,
+    "selected_operator": "three_source_min_rank_wavefront_over_two_fresh_W49_orders_and_calibrated_weighted_wide_order",
+    "source_roles": [
+      "A379_target_free",
+      "A380_target_conditioned",
+      "A386_calibrated_weighted_wide"
+    ]
+  },
+  "schema": "chacha20-round20-w49-calibrated-ticketed-hierarchical-factor3-a386-design-v1",
+  "source_anchors": {
+    "A375_result_path": "research/results/v1/chacha20_round20_w46_wide_consensus_reader_a375_v1.json",
+    "A375_result_sha256": "fc7135af9e001eb8cd83a55902e48f5776dc24a4eb86a162d7d783a115b38ef1",
+    "A375_runner_path": "research/experiments/chacha20_round20_w46_wide_consensus_reader_a375.py",
+    "A375_runner_sha256": "e41a91b225b861abd669280a4044dddf5e2b24e8f6e8c66e7eee6d5a149ec9f1",
+    "A382_causal_path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.causal",
+    "A382_causal_sha256": "a079ddb6c492761f110090a019d7442bd093aa94f104859d2ea8b63b3b76472b",
+    "A382_order_path": "research/results/v1/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382_order_v1.json",
+    "A382_order_sha256": "f705549d15be9f4ed98e8548b837524dae8603bff384ab30648c5917dfb82c0c",
+    "A382_runner_path": "research/experiments/chacha20_round20_w49_crosswidth_wide_consensus_factor6_a382.py",
+    "A382_runner_sha256": "46601c0e4fc5e20ee2ab85c4140b1fadd33b149f189e8335a0a6ef815bcbdc9f"
+  },
+  "weighted_wavefront_contract": {
+    "bound_for_each_reader_i": "R_weighted_wide(c) <= sum(tickets) * ceil(R_i(c) / tickets_i)",
+    "reader_role_order": [
+      "wide_vote",
+      "sparse_reciprocal",
+      "broad_quantile",
+      "broad_intersection"
+    ],
+    "tie_break": [
+      "minimum_ticket_level",
+      "sum_raw_reader_ranks",
+      "reader_ranks_in_role_order",
+      "cell_id"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "A361_compressed_measurement_shard_content_opened_before_implementation_freeze": false,
+  "A361_measurement_commitment_sha256": "9fc46a4e78b849f3e0d64b5dc591431e531682563907f78d0b80caa12e500b55",
+  "A361_measurement_sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc",
+  "A362_result_sha256": "6c7ffb32effc2c0141e9f7ce02776a75e4e4772f18126a87bc84c61c6d45705e",
+  "A362_selection_commitment_sha256": "4791833558d170ec540c7045b273e10e78a9f954c91c5a1d6f14bbc891a24032",
+  "A363_result_available_at_implementation_freeze": false,
+  "anchors": {
+    "A361_measurement": {
+      "path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_measurement_v1.json",
+      "sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc"
+    },
+    "A361_preflight": {
+      "path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_preflight_v1.json",
+      "sha256": "9158edea44ff3884d60308517a7ede1df6b0c0faff2732d520ab61efa88d3d0a"
+    },
+    "A361_protocol": {
+      "path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+      "sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228"
+    },
+    "A362_result": {
+      "path": "research/results/v1/chacha20_round20_w46_polarity_invariant_reader_a362_v1.json",
+      "sha256": "6c7ffb32effc2c0141e9f7ce02776a75e4e4772f18126a87bc84c61c6d45705e"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_a362_reader_sealed_a361_order_a364_design_v1.json",
+      "sha256": "a197962c366e6806a79c8eeb0c88f1a87574de4f390f9a0b1494c267eadad124"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_a362_reader_sealed_a361_order_a364.sh",
+      "sha256": "b54384c22eb765977846ca7eb543f061531a734635ec76ca05440a32b945a613"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_a362_reader_sealed_a361_order_a364.py",
+      "sha256": "6a8640b35ce586b95feea8efa8f4ccbfef894403c1123a91c4408b310893d028"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_a362_reader_sealed_a361_order_a364.py",
+      "sha256": "a0a453823d0ca91350b1b72a9730a0cc79065429c51085f5532692d7ad9f7a59"
+    }
+  },
+  "attempt_id": "A364",
+  "candidate_or_prefix_available_at_implementation_freeze": false,
+  "commitment_state": "frozen_before_A363_result_A361_shard_read_order_candidate_or_prefix",
+  "design_sha256": "a197962c366e6806a79c8eeb0c88f1a87574de4f390f9a0b1494c267eadad124",
+  "implementation_commitment_sha256": "e2d4a738cbf5839dadcac370d1cf66969daaf8473d089f46a9a7b313fd22437f",
+  "primary_definition": {
+    "aggregator": "linf_intersection",
+    "kind": "ensemble",
+    "member_feature_indices": [
+      73,
+      355,
+      380,
+      479
+    ],
+    "members": [
+      2,
+      10,
+      11,
+      15
+    ],
+    "name": "ensemble::linf_intersection::073-355-380-479"
+  },
+  "schema": "chacha20-round20-w46-a362-reader-sealed-a361-order-a364-implementation-v1"
+}

@@ -1,0 +1,52 @@
+{
+  "A401_A402_A404_A406_A408_results_available_at_freeze": false,
+  "A409_candidate_or_prefix_available_at_freeze": false,
+  "anchors": {
+    "A384_qualification": {
+      "path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+      "sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30"
+    },
+    "A385_protocol": {
+      "path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+      "sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+    },
+    "A407_runner": {
+      "path": "research/experiments/chacha20_round20_w50_weighted_reader_recovery_a407.py",
+      "sha256": "d3a95f9f68b701460f13c7748606cc47c43a6c498854d2f62d565f8d7d91bbfb"
+    },
+    "A408_design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_design_v1.json",
+      "sha256": "92e95a7a45025f5fdbb88d755f0a10b034e4f96bc2a07fe97cd6b53b38edb037"
+    },
+    "A408_implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_implementation_v1.json",
+      "sha256": "999ac2e2ffa9536d977e93932bc197451d0307e516060f8bae8d0df70dce9e5c"
+    },
+    "A408_runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_nested_fisher_reader_a408.py",
+      "sha256": "a398bc6b1b8f669bc2b3b0b8666c5f03c12c4f46fb79c1d5eaf8de13f392b5ab"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_nested_fisher_recovery_a409_design_v1.json",
+      "sha256": "4ce0748532dc97c630613bbdeac9ec34a87c587cbb620d0930202386ab993dc4"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_nested_fisher_recovery_a409.sh",
+      "sha256": "e0c5b624f406abab4ee4983e4e3b50089d691461bd58befbe10f56c63193b461"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_nested_fisher_recovery_a409.py",
+      "sha256": "cdd19532d8d4c9df37a066eb3f5187c696fed8f45a6f20ac57ac63be7444727a"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_nested_fisher_recovery_a409.py",
+      "sha256": "bcb9cfec1335928c34eeb9b6c41484821b6d420877a77a09be6769b24f781a3a"
+    }
+  },
+  "attempt_id": "A409",
+  "commitment_state": "complete_nested_Fisher_executor_and_prior_order_dedup_gate_frozen_before_all_source_results_or_A409_candidate",
+  "design_sha256": "4ce0748532dc97c630613bbdeac9ec34a87c587cbb620d0930202386ab993dc4",
+  "implementation_commitment_sha256": "f8c4ceb05261f207b8a4bd45c05aea34cf12e9abeb3a82e483efdc65cd473a92",
+  "schema": "chacha20-round20-w50-nested-fisher-recovery-a409-implementation-v1",
+  "selected_operator": "A408_nested_Fisher_outoffold_qualified_fullfit_production_reader"
+}

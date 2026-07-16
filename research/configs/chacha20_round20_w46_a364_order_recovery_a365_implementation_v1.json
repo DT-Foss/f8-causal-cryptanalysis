@@ -1,0 +1,37 @@
+{
+  "A363_result_available_at_implementation_freeze": false,
+  "A364_order_available_at_implementation_freeze": false,
+  "anchors": {
+    "A324_qualification": {
+      "path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+      "sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a"
+    },
+    "A361_protocol": {
+      "path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+      "sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_a364_order_recovery_a365_design_v1.json",
+      "sha256": "7778d4c93510d3375607f0a6918b208d554f24a37300ac13c2e074ec6fa20222"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_a364_order_recovery_a365.sh",
+      "sha256": "6f0bf369e713250fda8d1aeaa5bbb8e05e3b7b2722b22b0e289f926460968eb2"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_a364_order_recovery_a365.py",
+      "sha256": "b574855c17d6d5b04d53982ddd2e1256e84aa1344623c7204755108e53f5356a"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_a364_order_recovery_a365.py",
+      "sha256": "482e2e11145d3506c83a66bd316cbdc7b43cc167dee46a4f8267cf56647bd4c7"
+    }
+  },
+  "attempt_id": "A365",
+  "candidate_assignments_executed_at_implementation_freeze": 0,
+  "candidate_or_prefix_available_at_implementation_freeze": false,
+  "commitment_state": "frozen_before_A363_result_A364_order_candidate_prefix_or_execution",
+  "design_sha256": "7778d4c93510d3375607f0a6918b208d554f24a37300ac13c2e074ec6fa20222",
+  "implementation_commitment_sha256": "851209b680f77f99529fb77f5726c6df7f5061e801385a7fd7f4f17dc283af95",
+  "schema": "chacha20-round20-w46-a364-order-recovery-a365-implementation-v1"
+}

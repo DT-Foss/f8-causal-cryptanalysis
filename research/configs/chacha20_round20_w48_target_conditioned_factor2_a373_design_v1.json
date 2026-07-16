@@ -1,0 +1,84 @@
+{
+  "attempt_id": "A373",
+  "design_state": "frozen_after_A372_public_challenge_before_A373_measurement_order_candidate_prefix_or_recovery",
+  "information_boundary": {
+    "A372_assignment_absent_from_protocol": true,
+    "A372_candidate_or_prefix_available_at_design_freeze": false,
+    "A372_public_challenge_available_at_design_freeze": true,
+    "A373_candidate_assignments_executed_for_order": 0,
+    "A373_measurement_available_at_design_freeze": false,
+    "A373_order_available_at_design_freeze": false,
+    "A373_reader_refits": 0,
+    "A373_target_labels_used_for_order_construction": 0,
+    "W48_recovery_available_at_design_freeze": false,
+    "source_A372_order_frozen_before_W48_challenge": true
+  },
+  "measurement_contract": {
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "concurrent_slice_workers": 8,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      47,
+      46,
+      45,
+      44,
+      43,
+      42,
+      41,
+      40
+    ],
+    "low4_fixed_unit_coordinates": [
+      39,
+      38,
+      37,
+      36
+    ],
+    "low4_slices": 16,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "portfolio_contract": {
+    "pointwise_bound": "R_A373(c) <= 2 * min(R_A372(c), R_W48_target_conditioned(c)) for every cell c",
+    "source_operator": "unchanged pretarget A372 W48 order",
+    "target_operator": "A342 selected-pair slice-z reader applied without refit to the complete fresh W48 direct12 grid",
+    "tie_break": [
+      "minimum_source_rank",
+      "sum_source_ranks",
+      "A372_rank",
+      "target_conditioned_rank",
+      "cell"
+    ]
+  },
+  "reader_contract": {
+    "known_key_selection_attempt": "A342",
+    "reader_refits": 0,
+    "selected_view": "A342_selected_pair_slice_z",
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w48-target-conditioned-factor2-a373-design-v1",
+  "source_anchors": {
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A349_selection_path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+    "A349_selection_sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422",
+    "A351_order_path": "research/results/v1/chacha20_round20_w46_dual_order_factor2_portfolio_a351_order_v1.json",
+    "A351_order_sha256": "f1087d76e7b98e918e6d7ecca2ae1ac53761dde3f33452a8f3dc37feb68eb61c",
+    "A352_result_path": "research/results/v1/chacha20_round20_w47_target_conditioned_factor2_a352_order_v1.json",
+    "A352_result_sha256": "590fb21da497de44ed190f40852598aac92a403d23bcfbd1bef14225141d007e",
+    "A372_implementation_path": "research/configs/chacha20_round20_fresh_w48_pretarget_transfer_a372_implementation_v1.json",
+    "A372_implementation_sha256": "5676abd7674309aeb7c390c4516380caaccca173dcf1748317e7d4f1b368b50e",
+    "A372_order_path": "research/results/v1/chacha20_round20_fresh_w48_pretarget_transfer_a372_order_v1.json",
+    "A372_order_sha256": "bbc5e61fb0867125c08b08e31f166c686accf1d41c73f27e0b2774371483e3f5",
+    "A372_protocol_path": "research/configs/chacha20_round20_fresh_w48_pretarget_transfer_a372_v1.json",
+    "A372_protocol_sha256": "9223d8a9da09112f62e85f8c3d8ae8a737d3793661b9eb563944191411be846f",
+    "A372_runner_path": "research/experiments/chacha20_round20_fresh_w48_pretarget_transfer_a372.py",
+    "A372_runner_sha256": "3651fb4903fed91f73a887fe52650e2ad17af0376c1481d53467bc99435dc7d9"
+  }
+}

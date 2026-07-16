@@ -1,0 +1,61 @@
+{
+  "schema": "chacha20-round20-w52-corrected-off-axis-reader-a436-design-v1",
+  "attempt_id": "A436",
+  "design_state": "frozen_after_A354_coordinate_correction_A355_prefix_reader_A432_complete_unlabeled_W52_field_and_A433_prefix_field_before_any_A426_candidate_progress_filter_outcome_or_result",
+  "scientific_question": "Which already-measured A432 view is selected when the historical W46 calibration is evaluated at A348's actual assignment bits34-through45 cell rather than the distinct word0 bits20-through31 Metal cell?",
+  "coordinate_contract": {
+    "A348_and_A432_cell_identity": "assignment_bits34_through45_equal_key_word1_low20_bits2_through13_for_the_declared_W52_layout",
+    "A348_actual_W46_calibration_cell": 1916,
+    "A348_actual_W46_calibration_cell_hex": "77c",
+    "historically_declared_but_unmeasured_Metal_cell": 2990,
+    "historically_declared_but_unmeasured_Metal_cell_hex": "bae",
+    "cells_are_distinct": true,
+    "source_of_correction": "A354_source_level_coordinate_codec_audit"
+  },
+  "selection_contract": {
+    "candidate_views": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "selection_population": "A354_corrected_A348_rank_panel_at_actual_measured_cell_0x77c",
+    "selection_rule": "minimum_one_based_rank_at_actual_measured_cell_then_lexicographic_view_name",
+    "expected_selected_view": "A342_selected_pair_global_raw",
+    "expected_selected_rank_one_based": 561,
+    "original_A432_view": "A342_selected_pair_slice_z",
+    "original_A432_corrected_rank_one_based": 567,
+    "historical_298_rank_interpretation": "rank_of_distinct_unmeasured_word0_Metal_cell_not_actual_A348_off_axis_cell"
+  },
+  "assembly_contract": {
+    "reuse_all_sixteen_A432_measurement_slices_without_reexecution": true,
+    "reconstruct_all_eight_frozen_reader_views": true,
+    "verify_original_A432_selected_score_and_order_hashes": true,
+    "emit_complete_corrected_W52_off_axis_order": true,
+    "complete_cells": 4096,
+    "solver_stages_reused": 16384,
+    "new_solver_stages": 0,
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed": 0
+  },
+  "information_boundary": {
+    "A354_post_recovery_W46_coordinate_label_used_for_view_selection": true,
+    "A426_target_label_or_true_assignment_available": false,
+    "A426_progress_or_filter_outcomes_consumed": false,
+    "A432_W52_measurements_contain_target_labels": false,
+    "A436_target_specific_refit": false,
+    "A436_candidate_assignments_executed": 0
+  },
+  "causal_contract": {
+    "authentic_dotcausal_v1_required": true,
+    "reader_reopen_required": true,
+    "embedded_coordinate_correction_rule_required": true,
+    "embedded_selection_and_transfer_rules_required": true,
+    "cluster_and_next_gap_required": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "chacha20-round20-w46-a349-order-prospective-recovery-a350-design-v1",
+  "attempt_id": "A350",
+  "frozen_at_utc": "2026-07-15T09:55:26Z",
+  "design_state": "frozen_after_A349_target_conditioned_order_and_before_any_A345_or_A350_candidate_prefix_or_result",
+  "objective": "Execute the complete W46 group engine on the unchanged fresh A345 public challenge in the A349 public-output-conditioned order that was frozen with zero target labels and zero reader refits.",
+  "source_anchors": {
+    "A345_protocol_path": "research/configs/chacha20_round20_fresh_w46_factor2_replication_a345_v1.json",
+    "A345_protocol_sha256": "8e4280d6603f1eacac0345df634113ed1b550f5d5292c2bed75cc31b19a07f95",
+    "A349_order_path": "research/results/v1/chacha20_round20_w46_direct12_prospective_a345_validation_a349_order_v1.json",
+    "A349_order_sha256": "d2cbc5cbfe4765d7fd3681f92c4881a962d6b856d86a88bf9c9af716867dc96e",
+    "A349_selected_order_uint16be_sha256": "441c6af3d9a2a32e1a61f0d50804a1ecbf2363517a7b570c408a09a15fd1bbaa",
+    "A349_order_commitment_sha256": "9b11478cd8ac38459ad2f8e1692fecdc5d2f31849408aaeaf42ebc80aa1d57af",
+    "A324_qualification_path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+    "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a"
+  },
+  "reader_contract": {
+    "selected_view": "A342_selected_pair_slice_z",
+    "directly_measured_target_cells": 4096,
+    "solver_stages": 16384,
+    "target_labels_used_before_order_freeze": 0,
+    "reader_refits": 0,
+    "A345_result_available_at_order_freeze": false,
+    "A345_candidate_or_prefix_read_before_order_freeze": false
+  },
+  "execution_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "full_rounds": 20,
+    "feedforward_included": true,
+    "unknown_key_bits": 46,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low14",
+    "public_output_blocks": 8,
+    "prefix_groups": 4096,
+    "candidates_per_prefix_group": 17179869184,
+    "slabs_per_prefix_group": 8,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "complete_domain_assignments": 70368744177664
+  },
+  "information_boundary": {
+    "A345_result_available_at_design_freeze": false,
+    "A345_candidate_or_prefix_available_at_design_freeze": false,
+    "A350_candidate_or_prefix_available_at_design_freeze": false,
+    "A349_order_frozen_before_A350_design": true,
+    "A349_target_labels_used_for_order_construction": 0,
+    "A349_reader_refits": 0,
+    "A345_running_order_is_not_modified": true,
+    "A350_executes_the_A349_order_from_rank_one_without_postfreeze_reordering": true
+  },
+  "decision_rule": "Retain the first sole factual model returned after its entire 2^34 assignment prefix group has completed, require zero matched-control models, and confirm all eight output blocks with independent byte and word implementations."
+}

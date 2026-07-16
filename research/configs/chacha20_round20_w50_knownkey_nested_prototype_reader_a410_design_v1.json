@@ -1,0 +1,92 @@
+{
+  "attempt_id": "A410",
+  "design_state": "frozen_during_A401_target13plus_measurement_before_A401_selection_result_A408_result_or_any_A410_label_score",
+  "scientific_question": "Can a prospectively frozen nonlinear prototype-manifold Reader learn recurrent W50 Direct12 cross-view geometry that generalizes out of fold beyond A408's nested Fisher Reader?",
+  "corpus_contract": {
+    "source": "the identical sixteen complete A401 known-key W50 fields",
+    "target_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "outer_folds": 16,
+    "outer_training_targets": 15,
+    "outer_heldout_targets": 1,
+    "inner_folds_per_outer_fold": 15,
+    "inner_training_targets": 14,
+    "inner_validation_targets": 1,
+    "all_measurements_must_close_before_any_label_open": true
+  },
+  "representation_contract": {
+    "base_view_order": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "representation_order": [
+      "log8",
+      "reciprocal_sqrt8",
+      "log_reciprocal16",
+      "log_absdiff36",
+      "log_reciprocal_absdiff44"
+    ],
+    "log_feature": "log2(rank) / 12",
+    "reciprocal_feature": "1 / sqrt(rank)",
+    "absdiff_feature": "absolute pairwise difference of the eight log features in lexicographic pair order",
+    "feature_scaling": "fixed analytic [0,1]-scale only; no target-dependent standardization",
+    "representation_dimensions": [8, 8, 16, 36, 44]
+  },
+  "model_contract": {
+    "model": "positive-prototype k-nearest-neighbour manifold energy",
+    "prototype": "the true Direct12 cell feature vector from each training known-key target",
+    "distance_order": ["mean_absolute_L1", "mean_squared_L2"],
+    "neighbour_order": [1, 3, 7, "all_training_prototypes"],
+    "score": "mean distance to the k nearest training prototypes; lower is earlier",
+    "candidate_count": 40,
+    "inner_selection_objective": "minimum mean log2 validation rank; ties by worst rank, representation order, distance order, neighbour order",
+    "outer_evaluation": "select representation-distance-neighbour count only inside the fifteen outer-training keys, then score the unseen outer key from all fifteen outer-training prototypes",
+    "cell_tie_break": "lower cell index"
+  },
+  "matched_baseline_contract": {
+    "source": "A408 genuine nested outer-fold ranks on the same sixteen keys",
+    "same_outer_heldout_keys": true,
+    "qualification": "A410 nested outer geometric mean rank must be strictly lower with positive additional bit gain"
+  },
+  "production_contract": {
+    "hyperparameter_selection": "select one fixed representation-distance-neighbour candidate on the complete 16x40 prospective rank table, then retain all sixteen known-key positives as prototypes",
+    "target": "complete_assignment_free_A388_W50_Direct12 field",
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed": 0,
+    "new_solver_stages": 0,
+    "live_recovery_progress_filter_outcomes_or_results_consumed": false
+  },
+  "information_boundary": {
+    "A401_completed_targets_visible_at_design_freeze": 13,
+    "A401_selection_holdout_or_result_available_at_design_freeze": false,
+    "A408_result_or_nested_score_available_at_design_freeze": false,
+    "A410_label_scores_available_at_design_freeze": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "post_result_representation_distance_neighbour_or_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A401_design_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+    "A401_design_sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c",
+    "A401_runner_path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+    "A401_runner_sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee",
+    "A401_implementation_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+    "A401_implementation_sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1",
+    "A401_public_corpus_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+    "A401_public_corpus_sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3",
+    "A408_design_path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_design_v1.json",
+    "A408_design_sha256": "92e95a7a45025f5fdbb88d755f0a10b034e4f96bc2a07fe97cd6b53b38edb037",
+    "A408_runner_path": "research/experiments/chacha20_round20_w50_knownkey_nested_fisher_reader_a408.py",
+    "A408_runner_sha256": "a398bc6b1b8f669bc2b3b0b8666c5f03c12c4f46fb79c1d5eaf8de13f392b5ab",
+    "A408_implementation_path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_implementation_v1.json",
+    "A408_implementation_sha256": "999ac2e2ffa9536d977e93932bc197451d0307e516060f8bae8d0df70dce9e5c",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  },
+  "schema": "chacha20-round20-w50-knownkey-nested-prototype-reader-a410-design-v1"
+}

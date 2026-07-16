@@ -99,6 +99,25 @@ domains or solver portfolios.
 
 Expected final line: `A287--A325 cryptanalysis tier: OK`.
 
+### A326--A456 proof-Reader frontier tier
+
+```bash
+python scripts/verify_a326_a456_frontier.py
+python -m pytest -q tests/test_a326_a456_frontier_release.py
+python scripts/validate_causal_artifacts.py
+```
+
+The frontier verifier hashes every released design, implementation, retained
+result, report, Reader graph, and reproduction entry in the A326--A456 chain.
+It independently hashes the complete A451/A453/A454 64 MiB pair streams,
+checks their 16,777,216-cell declarations and exact rank guarantees, and
+replays the headline A447--A454 JSON invariants. It also enforces the release
+boundary: no result/progress payload exists for any queued recovery executor,
+A455 remains frozen with production disabled, and A456 contains only the
+frozen design/implementation set.
+
+Expected final line: `A326--A456 frontier verification: OK`.
+
 ### Anchors
 
 ```bash

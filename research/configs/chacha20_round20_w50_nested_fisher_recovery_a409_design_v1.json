@@ -1,0 +1,72 @@
+{
+  "attempt_id": "A409",
+  "design_state": "frozen_during_A401_measurement_after_A408_implementation_freeze_before_A401_A402_A404_A406_A408_results_or_any_A409_candidate_prefix",
+  "scientific_question": "If A408 beats A406 under nested validation, does its exact zero-refit Fisher production order recover the fresh standard ChaCha20 W50 target without duplicating any prior learned order?",
+  "source_order_contract": {
+    "required_A408_evidence_stage": "NESTED_FISHER_OUTOFFOLD_BEATS_A406_AND_APPLIES_ZERO_REFIT_TO_A388",
+    "required_A408_qualification": true,
+    "required_order_cells": 4096,
+    "order_source": "A408_production_order",
+    "target_labels_used_for_order": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed_for_order": 0,
+    "new_solver_stages_for_order": 0,
+    "qualification_failure_action": "do_not_freeze_an_executable_A409_protocol_or_start_recovery"
+  },
+  "duplicate_execution_contract": {
+    "comparison_results_required_before_A409_protocol_decision": ["A402", "A404", "A406"],
+    "comparison": "exact_uint16be_order_sha256",
+    "match_to_any_qualified_prior_order_action": "freeze_equivalence_only_protocol_and_do_not_repeat_recovery",
+    "distinct_from_all_qualified_prior_orders_action": "freeze_executable_A409_protocol"
+  },
+  "execution_contract": {
+    "primitive": "RFC8439 ChaCha20 block function",
+    "rounds": 20,
+    "feedforward": true,
+    "public_output_blocks": 8,
+    "unknown_key_bits": 50,
+    "prefix_bits": 12,
+    "complete_prefix_groups": 4096,
+    "slabs_per_prefix_group": 128,
+    "candidates_per_slab": 2147483648,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "outcome_evaluation_only_after_complete_128_slab_group": true,
+    "matched_one_bit_control_required": true,
+    "dual_independent_eight_block_confirmation_required": true,
+    "resume_granularity": "complete_prefix_group"
+  },
+  "priority_contract": {
+    "interrupt_live_recoveries": false,
+    "A397_Direct12_first_free_slot_obligation_preserved": true,
+    "all_prior_qualified_A403_A405_A407_obligations_preserved": true,
+    "A409_start": "first_subsequent_free_Metal_slot_after_all_prior_qualified_obligations_if_and_only_if_A408_qualified_and_distinct",
+    "A390_W51_qualification_remains_queued": true
+  },
+  "information_boundary": {
+    "A401_selection_or_result_available_at_design_freeze": false,
+    "A402_A404_A406_A408_result_or_production_order_available_at_design_freeze": false,
+    "A409_candidate_or_prefix_available_at_design_freeze": false,
+    "A385_assignment_absent_from_protocol": true,
+    "live_recovery_progress_filter_outcomes_or_results_consumed_for_order": false,
+    "post_A408_order_mutation_allowed": false,
+    "post_A408_qualification_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A391_runner_path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+    "A391_runner_sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df",
+    "A407_runner_path": "research/experiments/chacha20_round20_w50_weighted_reader_recovery_a407.py",
+    "A407_runner_sha256": "d3a95f9f68b701460f13c7748606cc47c43a6c498854d2f62d565f8d7d91bbfb",
+    "A408_design_path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_design_v1.json",
+    "A408_design_sha256": "92e95a7a45025f5fdbb88d755f0a10b034e4f96bc2a07fe97cd6b53b38edb037",
+    "A408_runner_path": "research/experiments/chacha20_round20_w50_knownkey_nested_fisher_reader_a408.py",
+    "A408_runner_sha256": "a398bc6b1b8f669bc2b3b0b8666c5f03c12c4f46fb79c1d5eaf8de13f392b5ab",
+    "A408_implementation_path": "research/configs/chacha20_round20_w50_knownkey_nested_fisher_reader_a408_implementation_v1.json",
+    "A408_implementation_sha256": "999ac2e2ffa9536d977e93932bc197451d0307e516060f8bae8d0df70dce9e5c",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  },
+  "schema": "chacha20-round20-w50-nested-fisher-recovery-a409-design-v1"
+}

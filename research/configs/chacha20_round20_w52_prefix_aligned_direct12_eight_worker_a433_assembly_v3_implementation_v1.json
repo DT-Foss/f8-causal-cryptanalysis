@@ -1,0 +1,56 @@
+{
+  "A426_progress_or_filter_outcomes_consumed": false,
+  "anchors": {
+    "V1_preflight_failure": {
+      "path": "research/results/v1/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_preflight_failure_v1.json",
+      "sha256": "3f79244479ae5271c5cad6b94c81708dcb8405041a26eb91f5a6532e5334dc08"
+    },
+    "V2_causal_failure": {
+      "path": "research/results/v1/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_causal_reopen_failure_v2.json",
+      "sha256": "20f696c4493a5270aa1c807762a4fd94f2396e3f07ab3b2493371a084c21f166"
+    },
+    "V2_implementation": {
+      "path": "research/configs/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_implementation_v2.json",
+      "sha256": "aef8c643d85fd5f3702549f1856ed42aa0f3d318edd1ecfc3b324f8573b5609e"
+    },
+    "V2_preflight": {
+      "path": "research/results/v1/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_preflight_v2.json",
+      "sha256": "c1edef54740c77031a33e87f500df40a5da9db1e98ca1f0d6a07782cdaccb6c4"
+    },
+    "V2_preserved_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_causal_reopen_failure_v2.causal",
+      "sha256": "2571615d7a18db57e3d769a6c72c78ab38ebefb6b6521d4f9014fb451afc0104"
+    },
+    "V2_runner": {
+      "path": "research/experiments/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_v2.py",
+      "sha256": "17a466cbb7be143e4ed77c48d975ac54c1cc860aee5964dfd5c7ca4f020b7442"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_design_v1.json",
+      "sha256": "7024b47b2e591a96723d4a1ff26ec1193c47ddff67aeb270660b3705380f3100"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_assembly_v3.sh",
+      "sha256": "2972a9ee2efad19336e9156457b6fbe2b01e48b1e6497c108ed0ec2ef1cefc27"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_assembly_v3.py",
+      "sha256": "0f11dab1a90660b34362d9b8642cd140cfb317042d8bc2c851e8df1ed6ba8b7f"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_prefix_aligned_direct12_eight_worker_a433_assembly_v3.py",
+      "sha256": "f4ea9d30946d0b8dcec34f7fb6a78f723c711d5b50876236481a0f140e9f8a5d"
+    }
+  },
+  "assembly_revision": 3,
+  "attempt_id": "A433",
+  "candidate_assignments_executed": 0,
+  "commitment_state": "post_measurement_hash_bound_assembly_frozen_before_result_A426_outcome_or_any_candidate",
+  "expected_order_commitment_sha256": "bc28f9bd5a2a23dbc5506cc1524a0cb9cf325f64615ecfed33d0512a8af291f4",
+  "expected_schedule_commitment_sha256": "0fbb2144abb03f6786d276fe9ee7ee330c61931868644b5a9f6401387c072725",
+  "implementation_commitment_sha256": "4f12d3e30dc71e476179b846ee526a989e1695f82d27307ffbacf9c263489d6b",
+  "measurement_manifest_sha256": "a948f57353d314e16aa3ca4428ff85345d6fbc562fb4588024e3b11d0db5e117",
+  "reader_refits": 0,
+  "schema": "chacha20-round20-w52-prefix-aligned-direct12-a433-assembly-v3-implementation-v1",
+  "target_labels_used": 0
+}

@@ -1,0 +1,112 @@
+{
+  "A361_compressed_measurement_shard_content_opened_before_implementation_freeze": false,
+  "A361_measurement_commitment_sha256": "9fc46a4e78b849f3e0d64b5dc591431e531682563907f78d0b80caa12e500b55",
+  "A361_measurement_sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc",
+  "A366_result_file_sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8",
+  "A366_selection_commitment_sha256": "b5fc9d9147cf5dc2c07f7534d57584046d58be53e98115c210c2512a2cba9faa",
+  "A367_result_available_at_implementation_freeze": false,
+  "anchors": {
+    "A361_measurement": {
+      "path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_measurement_v1.json",
+      "sha256": "a074afc4da9ab4476acf1f09dd752fdc9937486f4a458d8594ef7815046c89dc"
+    },
+    "A361_preflight": {
+      "path": "research/results/v1/chacha20_round20_w46_fresh_a360_reader_deployment_a361_preflight_v1.json",
+      "sha256": "9158edea44ff3884d60308517a7ede1df6b0c0faff2732d520ab61efa88d3d0a"
+    },
+    "A361_protocol": {
+      "path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+      "sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228"
+    },
+    "A366_result": {
+      "path": "research/results/v1/chacha20_round20_w46_cross_corpus_invariant_reader_a366_v1.json",
+      "sha256": "0a961b742c721e9ad0b09803224422c9bb03fc272695ed90b62752f24dc169c8"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368_design_v1.json",
+      "sha256": "8b537866befe488e532245b8e3c0593b22cf8814b13a3515701a88dec0f376f0"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368.sh",
+      "sha256": "85bd5cbb8e330463ec5211e105494de37f7dc41113acba643ed000b26c6a2b61"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368.py",
+      "sha256": "bb9a99b3e6542e04d221cea2d0e6b1913b7704e14dde19079da080b71a414b99"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_a367_reader_portfolio_sealed_a361_order_a368.py",
+      "sha256": "f77060ebff4158a2205e5410b928999fd077027c62a5640aeecd0d07219273dd"
+    }
+  },
+  "attempt_id": "A368",
+  "candidate_assignments_executed_at_implementation_freeze": 0,
+  "candidate_or_prefix_available_at_implementation_freeze": false,
+  "commitment_state": "frozen_before_A367_result_A361_shard_read_order_candidate_or_prefix",
+  "design_sha256": "8b537866befe488e532245b8e3c0593b22cf8814b13a3515701a88dec0f376f0",
+  "eligible_model_definitions": {
+    "best_single": {
+      "kind": "abs_primitive",
+      "member_feature_indices": [
+        246
+      ],
+      "members": [
+        5
+      ],
+      "name": "abs_primitive::246::learned_clause_accepted_stage__second_difference_1_2_4__xor_gradient_l2"
+    },
+    "coverage_companion": {
+      "aggregator": "borda",
+      "kind": "ensemble",
+      "member_feature_indices": [
+        85,
+        223,
+        329,
+        513
+      ],
+      "members": [
+        1,
+        2,
+        9,
+        13
+      ],
+      "name": "ensemble::borda::085-223-329-513"
+    },
+    "diverse_companion": {
+      "aggregator": "borda",
+      "kind": "ensemble",
+      "member_feature_indices": [
+        223,
+        239,
+        329,
+        479
+      ],
+      "members": [
+        2,
+        4,
+        9,
+        11
+      ],
+      "name": "ensemble::borda::223-239-329-479"
+    },
+    "primary": {
+      "aggregator": "linf_intersection",
+      "kind": "ensemble",
+      "member_feature_indices": [
+        3,
+        85,
+        313,
+        479
+      ],
+      "members": [
+        0,
+        1,
+        8,
+        11
+      ],
+      "name": "ensemble::linf_intersection::003-085-313-479"
+    }
+  },
+  "implementation_commitment_sha256": "ede5d7c9d69ac567b025ae384080eb3b3300f9356c8a1c1adc219d37a371082d",
+  "schema": "chacha20-round20-w46-a367-reader-portfolio-sealed-a361-order-a368-implementation-v1"
+}

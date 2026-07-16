@@ -1,0 +1,47 @@
+{
+  "A391_candidate_or_prefix_available_at_implementation_freeze": false,
+  "anchors": {
+    "A350_result": {
+      "path": "research/results/v1/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json",
+      "sha256": "a51919d30fc66ee5e581c87d6f2c5dc32cdabe71b51ce79c0a56a12e7325b3f3"
+    },
+    "A370_result": {
+      "path": "research/results/v1/chacha20_round20_w46_a350_pre_result_order_rank_panel_a370_v1.json",
+      "sha256": "13f6480a0b82440c5a77b13a80d46601abd355569007055d241fc863e6dcb593"
+    },
+    "A388_causal": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.causal",
+      "sha256": "095e4a05b86df98b27899c3055d4ff4c5ea2eab5ffa5961cfb36747320090e3a"
+    },
+    "A388_order": {
+      "path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+      "sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+    },
+    "A389_runner": {
+      "path": "research/experiments/chacha20_round20_w50_public_output_factor3_recovery_a389.py",
+      "sha256": "23602ef77bba32a019b78f776f1fa6a60d6ab13160c79644e4796b5ffe3e9ca5"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_direct12_only_recovery_a391_design_v1.json",
+      "sha256": "16797e88cfad5a23ecc69b056839e7a437619a2c89d4766cdaaf55a03e00d284"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w50_direct12_only_recovery_a391.sh",
+      "sha256": "453e0db6b2b98fd7bd7d8a96d4132f08104b82d4b71aed49ad30525efae1d795"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+      "sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w50_direct12_only_recovery_a391.py",
+      "sha256": "8dd7020919fe8b78c02aaf135d7721181d71f7bfe01c037ad8e7425b99ed6bac"
+    }
+  },
+  "attempt_id": "A391",
+  "commitment_state": "frozen_after_A388_Direct12_order_before_any_A391_candidate_prefix_or_result",
+  "design_sha256": "16797e88cfad5a23ecc69b056839e7a437619a2c89d4766cdaaf55a03e00d284",
+  "implementation_commitment_sha256": "39b15fa5f07f9f7d6246dee11f4b7fbb4d4d886f068720157d0b038923ce2e32",
+  "schema": "chacha20-round20-w50-direct12-only-recovery-a391-implementation-v1",
+  "selected_operator": "A342_selected_pair_slice_z_on_complete_A385_W50_direct12_grid"
+}

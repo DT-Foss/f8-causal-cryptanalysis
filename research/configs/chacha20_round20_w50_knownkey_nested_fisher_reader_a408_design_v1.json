@@ -1,0 +1,90 @@
+{
+  "attempt_id": "A408",
+  "design_state": "frozen_during_A401_measurement_before_A401_selection_result_A406_result_or_any_A408_label_score",
+  "scientific_question": "Can a prospectively frozen nested Fisher readout learn cross-view W50 geometry that generalizes out of fold beyond A406's weighted algebraic Reader?",
+  "corpus_contract": {
+    "source": "the identical sixteen complete A401 known-key W50 fields",
+    "target_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "outer_folds": 16,
+    "outer_training_targets": 15,
+    "outer_heldout_targets": 1,
+    "inner_folds_per_outer_fold": 15,
+    "inner_training_targets": 14,
+    "inner_validation_targets": 1,
+    "all_measurements_must_close_before_any_label_open": true
+  },
+  "feature_contract": {
+    "base_view_order": [
+      "A340_selected8_global_raw",
+      "A340_selected8_slice_z",
+      "A341_selected_single_global_raw",
+      "A341_selected_single_slice_z",
+      "A342_selected_pair_global_raw",
+      "A342_selected_pair_slice_z",
+      "A342_selected_triple_global_raw",
+      "A342_selected_triple_slice_z"
+    ],
+    "feature_family_order": [
+      "rank_log_16",
+      "rank_log_recip_24",
+      "rank_log_recip_absdiff_52",
+      "rank_log_recip_absdiff_product_80"
+    ],
+    "rank_feature": "rank / 4096",
+    "log_feature": "log2(rank) / 12",
+    "reciprocal_feature": "1 / sqrt(rank)",
+    "absdiff_feature": "absolute pairwise difference of the eight log features in lexicographic pair order",
+    "product_feature": "pairwise product of the eight log features in lexicographic pair order",
+    "maximum_feature_dimension": 80
+  },
+  "model_contract": {
+    "model": "background-covariance Fisher direction with trace-scaled ridge",
+    "direction": "inverse(cov_background + lambda * trace(cov_background)/dimension * I) times (mean_positive - mean_background)",
+    "score_direction": "higher is earlier",
+    "ridge_lambda_order": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "candidate_count": 28,
+    "inner_selection_objective": "minimum mean log2 validation rank; ties by worst rank, lower feature dimension, lambda order",
+    "outer_evaluation": "fit the inner-selected candidate on all fifteen outer-training keys and score exactly the unseen outer key",
+    "cell_tie_break": "lower cell index"
+  },
+  "matched_baseline_contract": {
+    "source": "A406 sixteen-fold weighted out-of-fold ranks",
+    "same_outer_heldout_keys": true,
+    "qualification": "A408 nested outer geometric mean rank must be strictly lower with positive additional bit gain"
+  },
+  "production_contract": {
+    "hyperparameter_selection": "select one fixed family/lambda on the complete 16x28 prospective outer-rank table, then fit all sixteen known-key fields once",
+    "target": "complete_assignment_free_A388_W50_Direct12 field",
+    "target_labels_used": 0,
+    "reader_refits": 0,
+    "candidate_assignments_executed": 0,
+    "new_solver_stages": 0,
+    "live_recovery_progress_filter_outcomes_or_results_consumed": false
+  },
+  "information_boundary": {
+    "A401_selection_holdout_or_result_available_at_design_freeze": false,
+    "A406_result_or_weighted_score_available_at_design_freeze": false,
+    "A408_label_scores_available_at_design_freeze": false,
+    "A385_production_assignment_or_true_prefix_consumed": false,
+    "post_result_feature_family_lambda_or_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A401_design_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+    "A401_design_sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c",
+    "A401_runner_path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+    "A401_runner_sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee",
+    "A401_implementation_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+    "A401_implementation_sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1",
+    "A401_public_corpus_path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+    "A401_public_corpus_sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3",
+    "A406_design_path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_design_v1.json",
+    "A406_design_sha256": "aaa67ce789ff3623c22e2d2965cbd5c19aa5f4d9aaa2911797eb2d019e0fd2a0",
+    "A406_runner_path": "research/experiments/chacha20_round20_w50_knownkey_weighted_reader_a406.py",
+    "A406_runner_sha256": "7db8f5234cc2d03c685d2f42babe1274438add56cc0bcde28f66c2e32520e2b9",
+    "A406_implementation_path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_implementation_v1.json",
+    "A406_implementation_sha256": "f6a6e539ee84e03899817e072d09d2b55756419580113990f629f358e93b9236",
+    "A388_order_path": "research/results/v1/chacha20_round20_w50_public_output_direct12_factor3_a388_order_v1.json",
+    "A388_order_sha256": "3c56ce8521b1ced20e1e3a90999810c2e563c4de941701c86274f0828b5d01b8"
+  },
+  "schema": "chacha20-round20-w50-knownkey-nested-fisher-reader-a408-design-v1"
+}

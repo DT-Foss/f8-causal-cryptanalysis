@@ -5,7 +5,7 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A325 result chain as code, typed
+evidence, and the subsequent A107--A456 result chain as code, typed
 `.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
 
 The central result is a family of **full-round, exactly checkable cryptanalytic
@@ -110,6 +110,7 @@ precisely:
 | A282--A286 | Four-target cross-material R20 panel | Four fresh public-material targets produce four confirmed recoveries; discovery modes `fallback/top128/top128/global`; applicable frozen ranks 254/55/107; third-reference recomputation covers 16,384 bits and all four controls are rejected | Same frozen 20-round, eight-block, W20 known-key model; zero target-label use; zero Reader refits; no complete residual-domain enumeration | Four independently confirmed 20-bit partial-key assignments | [A286 root](research/reports/CHACHA20_ROUND20_MULTITARGET_PANEL_ROOT_CONFIRMATION_A286_V1.md), [release record](docs/RELEASE_A278_A286_RECORDS.md) |
 | P128R1 / AES256R1 | New full-round complete-domain records | PRESENT-128 executes `2^38` through 31 rounds plus K32; AES-256 executes `2^41` through all 14 FIPS 197 rounds; each returns one factual and zero control models | 38/41 unknown master-key bits; 90/215 known key bits; two blocks; no early stop | Complete master key in each declared known-key model | [release record](docs/RELEASE_A278_A286_RECORDS.md) |
 | CHACHA20KR43 / A294--A313 | W24--W44 full-round recovery batch | One complete `2^43` ChaCha20-R20 residual domain plus 19 strict-subset executions: W24 replication, zero-refit W28/W32 transfer, and grouped W43/W44 recovery | Standard 20 rounds plus feed-forward; 24--44 unknown key bits; eight complete output blocks; matched controls; dual independent confirmation | 19 executions across 18 new targets, plus one complete-domain W43 record | [release record](docs/RELEASE_A287_A325_CRYPTANALYSIS.md), [gap audit](docs/PUBLISH_GAP_AUDIT_A287_A325.md) |
+| A326--A454 | W46--W52 proof-native Reader and pair-stream frontier | Exact W46 calibration and W52 target-blind transfer culminate in three complete 16,777,216-cell pair permutations; A454 exhausts 248 periodic schedules and selects `BOOHH` with positive gain on all eight held blocks | Standard ChaCha20 R20 plus feed-forward; known-key training is disjoint from W52 application; zero W52 labels, refits, or candidate executions through A454 | Complete target-blind `2^52` recovery schedule, solver-native proof Reader, and exact rank guarantees | [release record](docs/RELEASE_A326_A456_FRONTIER.md), [manifest](research/results/v1/A326_A456_FRONTIER_SHA256SUMS) |
 
 ![A205 structural CNF ordering calibration](research/results/v1/chacha20_a205_structural_ordering_calibration_v1.svg)
 
@@ -199,6 +200,20 @@ operator; and A324 qualifies the exact W46 grouped engine. A322 remains live,
 A325 is protocol-only, and A314 is order-only. The exact release boundary is in
 [docs/RELEASE_A287_A325_CRYPTANALYSIS.md](docs/RELEASE_A287_A325_CRYPTANALYSIS.md).
 
+A326--A454 lift the same program from single-axis W46 ranking into a complete
+W52 two-axis execution geometry. A432/A433 measure independent 4,096-cell
+off-axis and prefix fields; A437/A439/A441 compile complete 16,777,216-cell
+pair streams; A442 selects a cross-material Borda meta-Reader; and A447--A449
+replace aggregate counters with exact solver-proof ancestry over billions of
+nodes and edges. A451 and A453 prove pointwise factor-3 rank bounds across the
+entire pair domain. A454 evaluates all 248 registered periodic schedules,
+selects `BOOHH`, improves the strict remaining-96 aggregate and worst-block
+gains over A451, and emits the complete hash-pinned pair permutation. A455 is
+the frozen, disabled recovery executor; A456 publishes only its frozen
+878-candidate/86-orbit design and implementation. The exact boundary and
+portable verification gate are in
+[docs/RELEASE_A326_A456_FRONTIER.md](docs/RELEASE_A326_A456_FRONTIER.md).
+
 ## Three connected methods
 
 ### F8
@@ -237,7 +252,7 @@ python -m pip install -r requirements.txt
 python -m pip install -e .
 ```
 
-Six evidence tiers make cost explicit:
+Ten evidence tiers make cost explicit:
 
 | Tier | Command | Purpose |
 |---|---|---|
@@ -247,6 +262,7 @@ Six evidence tiers make cost explicit:
 | `frontier` | `./scripts/reproduce_a223_a277.sh` | hash-check and test completed A223--A277 Reader, recovery, Causal, and cross-family records without rerunning complete production domains |
 | `records` | `./scripts/reproduce_a278_a286_records.sh` | verify A281/A286 strict-subset recoveries plus PRESENT-128 W38 and AES-256 W41 without rerunning production domains |
 | `cryptanalysis` | `./scripts/reproduce_a287_a325.sh` | verify CHACHA20KR43, 19 strict-subset executions, completed A287--A325 order/engine/audit records, and native Causal readback |
+| `frontier-2` | `python scripts/verify_a326_a456_frontier.py` | authenticate every released A326--A456 artifact, three complete pair streams, headline invariants, and the A455/A456 publication boundary |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |
 | `anchors` | `./scripts/verify_anchors.sh` | hash-verify the twelve original full-round configurations without rerunning them |
@@ -289,7 +305,8 @@ src/arx_carry_leak/             installable F8, CASI, Reader, and cipher code
 research/experiments/           executable experiments
 research/results/               retained JSON, .causal, and SHA-256 manifests
 research/reports/               result-level scientific interpretation
-research/ATTEMPT_LOG.md         chronological A001--A325 evidence ledger
+research/ATTEMPT_LOG.md         chronological A001--A431 evidence ledger
+research/ATTEMPT_LOG_A432_A456.md  public A432--A456 continuation
 provenance/fullround_anchors/   committed twelve-configuration F8 snapshot
 provenance/dependencies/        minimal licensed source required by an experiment
 data/reference/                 Nanjing/Rome reference datasets

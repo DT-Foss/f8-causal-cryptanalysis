@@ -1,0 +1,462 @@
+{
+  "A426_A438_A440_A443_secret_result_stop_or_worker_progress_read": false,
+  "A450_candidate_progress_or_result_read": false,
+  "W52_target_labels_used": 0,
+  "anchors": {
+    "A449_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_v1.causal",
+      "sha256": "b96389556b19d4bbd71248087354eba1134ff483cd7ce87683f4a5eeb09871cf"
+    },
+    "A449_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A449_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "af35c46f57dffcfad9fa0c82bc2ef6f7931fbfd5a95dbd01e8a01e9bf12a815c"
+    },
+    "A449_result": {
+      "path": "research/results/v1/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449_v1.json",
+      "sha256": "f054125c5c363e379ddca661334a57867a0d367a5c57d0caa2bb0f8814b322a7"
+    },
+    "A449_runner": {
+      "path": "research/experiments/chacha20_round20_w52_target_blind_proof_antecedent_trace_a449.py",
+      "sha256": "cd19406ba8964aceea1dfe16904f505097fb91aed738cb825c934f89c460e875"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_deduplicated_reader_portfolio_a451_design_v1.json",
+      "sha256": "600408b0ca67b263503cc2d1bb75593a16b03c50df556af121238e83fcd4b9d9"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_deduplicated_reader_portfolio_a451_implementation_v1.json",
+      "sha256": "7eeb17ca7a9536f925ebebf89f200cb1dcfc9e0d04815f5edf172170ce17e934"
+    },
+    "pair_stream_artifact": {
+      "path": "research/results/v1/chacha20_round20_w52_deduplicated_reader_portfolio_a451_pair_stream_uint16be_uint16be_v1.bin",
+      "sha256": "826d10e8cfb8ba2cb51e2d1cee35d29f29b9a313928dbdabbf6b92ad2a546cf9"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_deduplicated_reader_portfolio_a451.py",
+      "sha256": "e03ca42e450fc3de76e7368d0d92e86803fb5808c6206ab301a79f926510791a"
+    }
+  },
+  "artifact": {
+    "bytes": 67108864,
+    "complete_permutation": true,
+    "encoding": "uint16be_prefix_then_uint16be_off_axis",
+    "first_pair": [
+      1520,
+      3280
+    ],
+    "last_pair": [
+      3743,
+      2751
+    ],
+    "pair_cells": 16777216,
+    "path": "research/results/v1/chacha20_round20_w52_deduplicated_reader_portfolio_a451_pair_stream_uint16be_uint16be_v1.bin",
+    "sha256": "826d10e8cfb8ba2cb51e2d1cee35d29f29b9a313928dbdabbf6b92ad2a546cf9"
+  },
+  "attempt_id": "A451",
+  "causal": {
+    "api_id": "a451mix",
+    "clusters": 1,
+    "embedded_rules": 2,
+    "explicit_triplets": 3,
+    "format": "authentic_dotcausal_v1_AI_native",
+    "gaps": 1,
+    "materialized_inferred_triplets": 2,
+    "path": "research/results/v1/chacha20_round20_w52_deduplicated_reader_portfolio_a451_v1.causal",
+    "reader_source": {
+      "path": "/Users/bhkmie/Documents/Forschung/O1/vendor/fabel/dotcausal_package/src/dotcausal/io.py",
+      "sha256": "e320f77855a713e44c97fbc9d1bbb8c488a5c458f2b5ddecc0254a7dc57e0074"
+    },
+    "semantic_readback": {
+      "fusion": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "full-round ChaCha20 W52 pair scheduling",
+        "evidence": "{\"bytes\": 67108864, \"complete_permutation\": true, \"encoding\": \"uint16be_prefix_then_uint16be_off_axis\", \"first_pair\": [1520, 3280], \"last_pair\": [3743, 2751], \"pair_cells\": 16777216, \"path\": \"research/results/v1/chacha20_round20_w52_deduplicated_reader_portfolio_a451_pair_stream_uint16be_uint16be_v1.bin\", \"sha256\": \"826d10e8cfb8ba2cb51e2d1cee35d29f29b9a313928dbdabbf6b92ad2a546cf9\"}",
+        "is_inferred": false,
+        "m_idx": 1,
+        "mechanism": "fixed_slot_round_robin_first_encounter_deduplication",
+        "o_idx": 2,
+        "outcome": "A451:complete_nonfactorized_pair_permutation",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"hybrid_proof_top16_equal\": {\"A448_calibration\": {\"aggregate_bit_gain\": 0.5900926088403624, \"balanced_eight_block_bit_gain\": 0.5900926088403632, \"minimum_fixed_block_bit_gain\": 0.3313140248854456, \"positive_fixed_block_count\": 8, \"rank_field_sha256\": \"36c5b69e8ecf86ce71278b774606cce5e42713d24bd139d05375412ac1d11db7\"}, \"off_axis_order_sha256\": \"d0b64b2376cb7b82e5a36e7495f5fbaba7965c1b0c8ad61beba3884f5a6442df\", \"pair_spearman_to_A442\": 0.9960864932877481, \"pair_stream_sha256\": \"81854f76b94fe4b27e0facbc41550b057ccd4881dd684c687b5a0cb02a73533f\", \"prefix_order_sha256\": \"5642902e95d9a64ce69931b82f19865a59417b168b24515740fefe6cd5682476\", \"slot\": 1}, \"proof_best_single\": {\"A448_calibration\": {\"aggregate_bit_gain\": 0.5468008091295848, \"balanced_eight_block_bit_gain\": 0.5468008091295847, \"minimum_fixed_block_bit_gain\": 0.10008618841981676, \"positive_fixed_block_count\": 8, \"rank_field_sha256\": \"61271ec6973a8e247e3cf268971ffd28f1d139a3ea3c45d420f191fc32a7197d\"}, \"off_axis_order_sha256\": \"62af140df395ba29092db28cf9f953822419352af4b34ce0bd9dcd4c7efb608d\", \"pair_spearman_to_A442\": 0.9178290017907836, \"pair_stream_sha256\": \"c06a0a8c77aecbdf71469ef25aa2ef0abc0db24031196e1201220455b585da47\", \"prefix_order_sha256\": \"3f479be2b1e2d1c20977836689367d9e9a085f884657767807559fa757a790a6\", \"slot\": 2}, \"proof_borda_top32\": {\"A448_calibration\": {\"aggregate_bit_gain\": 0.5532844646235651, \"balanced_eight_block_bit_gain\": 0.553284464623566, \"minimum_fixed_block_bit_gain\": 0.3005558305633933, \"positive_fixed_block_count\": 8, \"rank_field_sha256\": \"55acc54632294e2a12ed4d5178230bd2b10dc855e736681ba9422d3e87404ed3\"}, \"off_axis_order_sha256\": \"203167494cfb192ab0450c64a6101ff98f59e6e15b4c415850467a57046f1e2a\", \"pair_spearman_to_A442\": 0.9880793733767832, \"pair_stream_sha256\": \"b54b08eb03164e6f15ddbb9c1709780c435915b0aa65e65154f92b469192c637\", \"prefix_order_sha256\": \"988ebd96289759f711ce28d664c0436c116590d8adb3302f5f4b808547c0883d\", \"slot\": 0}}",
+        "s_idx": 0,
+        "source": "83aee1592fa8916545786143888cc233713f429c3bad4e6ba9918b12fa888f56",
+        "trigger": "A449:three_complementary_proof_operators"
+      },
+      "guarantee": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "bounded-regret multi-reader fusion",
+        "evidence": "{\"1024\": {\"bound_satisfied\": true, \"component_top_k_union_cells\": 1776, \"deduplication_saved_slots\": 1296, \"fused_prefix_required_for_complete_union\": 1776, \"theoretical_three_k_bound\": 3072, \"union_overlap_cells\": 1296}, \"1048576\": {\"bound_satisfied\": true, \"component_top_k_union_cells\": 1292794, \"deduplication_saved_slots\": 1852934, \"fused_prefix_required_for_complete_union\": 1292794, \"theoretical_three_k_bound\": 3145728, \"union_overlap_cells\": 1852934}, \"16\": {\"bound_satisfied\": true, \"compon",
+        "is_inferred": false,
+        "m_idx": 3,
+        "mechanism": "exact_all_pair_rank_inequality",
+        "o_idx": 4,
+        "outcome": "A451:exact_threefold_rank_guarantee",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"cells_checked\": 16777216, \"formula\": \"fused_rank_one_based <= 3 * minimum_component_rank_one_based\", \"guarantee_satisfied\": true, \"maximum_observed_rank_ratio\": 2.0136986301369864, \"median_observed_rank_ratio\": 1.0958929594120528, \"minimum_slack_cells\": 1, \"p99_observed_rank_ratio\": 1.4025899874548984, \"violations\": 0}",
+        "s_idx": 2,
+        "source": "660e2a2c9338b685f4bb22a341c0698a689c053d19c77eb9317958be4d4ac220",
+        "trigger": "A451:complete_nonfactorized_pair_permutation"
+      },
+      "inferred_closure": [
+        {
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "TARGET_BLIND_NONFACTORIZED_W52_BOUNDED_REGRET_RECOVERY_STREAM_READY",
+          "inference_chain": [],
+          "is_inferred": true,
+          "m_idx": 7,
+          "o_idx": 4,
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact retained closure",
+          "s_idx": 0,
+          "source": "materialized:A451_reader_portfolio_chain"
+        },
+        {
+          "confidence": 1.0,
+          "domain": "AI-native retained inference",
+          "evidence": "TARGET_BLIND_NONFACTORIZED_W52_BOUNDED_REGRET_RECOVERY_STREAM_READY",
+          "inference_chain": [],
+          "is_inferred": true,
+          "m_idx": 8,
+          "o_idx": 6,
+          "pmcid": "",
+          "quality_score": 1.0,
+          "quantification": "exact retained closure",
+          "s_idx": 2,
+          "source": "materialized:A451_recovery_ready_chain"
+        }
+      ],
+      "next_gap": {
+        "confidence": 1.0,
+        "expected_object_type": "qualified_W52_nonfactorized_portfolio_recovery_execution",
+        "predicate": "next_required_object",
+        "subject": "A451:nonfactorized_W52_recovery_stream_ready",
+        "suggested_queries": [
+          "Bind the A451 memory-mapped stream to the existing A434-qualified complete-cell engine without reading any prior target outcome."
+        ]
+      },
+      "recovery_readiness": {
+        "attrs": {},
+        "confidence": 1.0,
+        "domain": "restart-safe commodity-hardware recovery execution",
+        "evidence": "TARGET_BLIND_NONFACTORIZED_W52_BOUNDED_REGRET_RECOVERY_STREAM_READY",
+        "is_inferred": false,
+        "m_idx": 5,
+        "mechanism": "memory_mapped_uint16be_pair_readout",
+        "o_idx": 6,
+        "outcome": "A451:nonfactorized_W52_recovery_stream_ready",
+        "pmcid": "",
+        "quality_score": 1.0,
+        "quantification": "{\"comparison_to_A442_borda_sum_baseline\": {\"earlier\": 4429379, \"equal\": 39, \"later\": 12347798, \"spearman_rank_correlation\": 0.9544249391229471, \"top_k_overlap\": {\"1024\": {\"intersection\": 461, \"overlap_fraction\": 0.4501953125}, \"1048576\": {\"intersection\": 923884, \"overlap_fraction\": 0.8810844421386719}, \"16\": {\"intersection\": 0, \"overlap_fraction\": 0.0}, \"256\": {\"intersection\": 58, \"overlap_fraction\": 0.2265625}, \"64\": {\"intersection\": 6, \"overlap_fraction\": 0.09375}, \"65536\": {\"intersection\": 50880, \"overlap_fraction\": 0.7763671875}}}, \"comparisons\": {\"hybrid_proof_top16_equal\": {\"earlier\": 3540627, \"equal\": 5, \"later\": 13236584, \"spearman_rank_correlation\": 0.9539837241596053, \"top_k_overlap\": {\"1024\": {\"intersection\": 639, \"overlap_fraction\": 0.6240234375}, \"1048576\": {\"intersection\": 946573, \"overlap_fraction\": 0.9027223587036133}, \"16\": {\"intersection\": 8, \"overlap_fraction\": 0.5}, \"256\": {\"intersection\": 131, \"overlap_fraction\": 0.51171875}, \"64\": {\"intersection\": 33, \"overlap_fraction\": 0.515625}, \"65536\": {\"intersection\": 55762, \"overlap_fraction\": 0.850860595703125}}}, \"proof_best_single\": {\"earlier\": 3558562, \"equal\": 8, \"later\": 13218646, \"spearman_rank_correlation\": 0.9631336348775348, \"top_k_overlap\": {\"1024\": {\"intersection\": 634, \"overlap_fraction\": 0.619140625}, \"1048576\": {\"intersection\": 914097, \"overlap_fraction\": 0.8717508316040039}, \"16\": {\"intersection\": 8, \"overlap_fraction\": 0.5}, \"256\": {\"intersection\": 130, \"overlap_fraction\": 0.5078125}, \"64\": {\"intersection\": 33, \"overlap_fraction\": 0.515625}, \"65536\": {\"intersection\": 52299, \"overlap_fraction\": 0.7980194091796875}}}, \"proof_borda_top32\": {\"earlier\": 4369253, \"equal\": 9, \"later\": 12407954, \"spearman_rank_correlation\": 0.9506987126917545, \"top_k_overlap\": {\"1024\": {\"intersection\": 591, \"overlap_fraction\": 0.5771484375}, \"1048576\": {\"intersection\": 908385, \"overlap_fraction\": 0.8663034439086914}, \"16\": {\"intersection\": 9, \"overlap_fraction\": 0.5625}, \"256\": {\"intersection\": 131, \"overlap_fraction\": 0.51171875}, \"64\": {\"intersection\": 34, \"overlap_fraction\": 0.53125}, \"65536\": {\"intersection\": 48212, \"overlap_fraction\": 0.73565673828125}}}}, \"first_encounter_owner_counts\": {\"hybrid_proof_top16_equal\": 3998573, \"proof_best_single\": 3803718, \"proof_borda_top32\": 8974925}, \"first_encounter_owner_top_k\": {\"1024\": {\"hybrid_proof_top16_equal\": 328, \"proof_best_single\": 152, \"proof_borda_top32\": 544}, \"1048576\": {\"hybrid_proof_top16_equal\": 186189, \"proof_best_single\": 295731, \"proof_borda_top32\": 566656}, \"16\": {\"hybrid_proof_top16_equal\": 4, \"proof_best_single\": 3, \"proof_borda_top32\": 9}, \"256\": {\"hybrid_proof_top16_equal\": 82, \"proof_best_single\": 43, \"proof_borda_top32\": 131}, \"64\": {\"hybrid_proof_top16_equal\": 18, \"proof_best_single\": 12, \"proof_borda_top32\": 34}, \"65536\": {\"hybrid_proof_top16_equal\": 14834, \"proof_best_single\": 15280, \"proof_borda_top32\": 35422}}}",
+        "s_idx": 4,
+        "source": "826d10e8cfb8ba2cb51e2d1cee35d29f29b9a313928dbdabbf6b92ad2a546cf9",
+        "trigger": "A451:exact_threefold_rank_guarantee"
+      }
+    },
+    "sha256": "07d34f4edbdb7d23d97d6b15fb66c21814c1315e3e2ef225f1d57b9e22bf2895",
+    "writer_stats": {
+      "clusters": 1,
+      "entities": 9,
+      "file_size_bytes": 9853,
+      "file_size_kb": 9.6,
+      "filepath": "/Users/bhkmie/Documents/Krypto karm/Kryptkram codex/arx-carry-leak/research/results/v1/.chacha20_round20_w52_deduplicated_reader_portfolio_a451_v1.causal.9841.tmp",
+      "gaps": 1,
+      "rules": 2,
+      "triplets": 5
+    }
+  },
+  "component_contract": {
+    "hybrid_proof_top16_equal": {
+      "A448_calibration": {
+        "aggregate_bit_gain": 0.5900926088403624,
+        "balanced_eight_block_bit_gain": 0.5900926088403632,
+        "minimum_fixed_block_bit_gain": 0.3313140248854456,
+        "positive_fixed_block_count": 8,
+        "rank_field_sha256": "36c5b69e8ecf86ce71278b774606cce5e42713d24bd139d05375412ac1d11db7"
+      },
+      "off_axis_order_sha256": "d0b64b2376cb7b82e5a36e7495f5fbaba7965c1b0c8ad61beba3884f5a6442df",
+      "pair_spearman_to_A442": 0.9960864932877481,
+      "pair_stream_sha256": "81854f76b94fe4b27e0facbc41550b057ccd4881dd684c687b5a0cb02a73533f",
+      "prefix_order_sha256": "5642902e95d9a64ce69931b82f19865a59417b168b24515740fefe6cd5682476",
+      "slot": 1
+    },
+    "proof_best_single": {
+      "A448_calibration": {
+        "aggregate_bit_gain": 0.5468008091295848,
+        "balanced_eight_block_bit_gain": 0.5468008091295847,
+        "minimum_fixed_block_bit_gain": 0.10008618841981676,
+        "positive_fixed_block_count": 8,
+        "rank_field_sha256": "61271ec6973a8e247e3cf268971ffd28f1d139a3ea3c45d420f191fc32a7197d"
+      },
+      "off_axis_order_sha256": "62af140df395ba29092db28cf9f953822419352af4b34ce0bd9dcd4c7efb608d",
+      "pair_spearman_to_A442": 0.9178290017907836,
+      "pair_stream_sha256": "c06a0a8c77aecbdf71469ef25aa2ef0abc0db24031196e1201220455b585da47",
+      "prefix_order_sha256": "3f479be2b1e2d1c20977836689367d9e9a085f884657767807559fa757a790a6",
+      "slot": 2
+    },
+    "proof_borda_top32": {
+      "A448_calibration": {
+        "aggregate_bit_gain": 0.5532844646235651,
+        "balanced_eight_block_bit_gain": 0.553284464623566,
+        "minimum_fixed_block_bit_gain": 0.3005558305633933,
+        "positive_fixed_block_count": 8,
+        "rank_field_sha256": "55acc54632294e2a12ed4d5178230bd2b10dc855e736681ba9422d3e87404ed3"
+      },
+      "off_axis_order_sha256": "203167494cfb192ab0450c64a6101ff98f59e6e15b4c415850467a57046f1e2a",
+      "pair_spearman_to_A442": 0.9880793733767832,
+      "pair_stream_sha256": "b54b08eb03164e6f15ddbb9c1709780c435915b0aa65e65154f92b469192c637",
+      "prefix_order_sha256": "988ebd96289759f711ce28d664c0436c116590d8adb3302f5f4b808547c0883d",
+      "slot": 0
+    }
+  },
+  "design_sha256": "600408b0ca67b263503cc2d1bb75593a16b03c50df556af121238e83fcd4b9d9",
+  "evidence_stage": "TARGET_BLIND_NONFACTORIZED_W52_BOUNDED_REGRET_RECOVERY_STREAM_READY",
+  "feature_refits": 0,
+  "fused_canonical_pair_order_uint32be_sha256": "3b56334ed758e292440ecef0596f9da0f284573fa266950ff3e8290dfb3e5bfe",
+  "fused_first_encounter_key_uint32be_sha256": "bf5bc3fa649c956105ee76043fa6eae871066fdefdbfb48ef675a239fe13df9a",
+  "fused_rank_vector_uint32be_sha256": "14407a9a5259c08741ee725b4bc68e7d848f6a8e739db06e6eac02f4ccd50a64",
+  "fusion_algorithm": "deduplicated_fixed_slot_round_robin_min_rank",
+  "fusion_sha256": "83aee1592fa8916545786143888cc233713f429c3bad4e6ba9918b12fa888f56",
+  "geometry": {
+    "comparison_to_A442_borda_sum_baseline": {
+      "earlier": 4429379,
+      "equal": 39,
+      "later": 12347798,
+      "spearman_rank_correlation": 0.9544249391229471,
+      "top_k_overlap": {
+        "1024": {
+          "intersection": 461,
+          "overlap_fraction": 0.4501953125
+        },
+        "1048576": {
+          "intersection": 923884,
+          "overlap_fraction": 0.8810844421386719
+        },
+        "16": {
+          "intersection": 0,
+          "overlap_fraction": 0.0
+        },
+        "256": {
+          "intersection": 58,
+          "overlap_fraction": 0.2265625
+        },
+        "64": {
+          "intersection": 6,
+          "overlap_fraction": 0.09375
+        },
+        "65536": {
+          "intersection": 50880,
+          "overlap_fraction": 0.7763671875
+        }
+      }
+    },
+    "comparisons": {
+      "hybrid_proof_top16_equal": {
+        "earlier": 3540627,
+        "equal": 5,
+        "later": 13236584,
+        "spearman_rank_correlation": 0.9539837241596053,
+        "top_k_overlap": {
+          "1024": {
+            "intersection": 639,
+            "overlap_fraction": 0.6240234375
+          },
+          "1048576": {
+            "intersection": 946573,
+            "overlap_fraction": 0.9027223587036133
+          },
+          "16": {
+            "intersection": 8,
+            "overlap_fraction": 0.5
+          },
+          "256": {
+            "intersection": 131,
+            "overlap_fraction": 0.51171875
+          },
+          "64": {
+            "intersection": 33,
+            "overlap_fraction": 0.515625
+          },
+          "65536": {
+            "intersection": 55762,
+            "overlap_fraction": 0.850860595703125
+          }
+        }
+      },
+      "proof_best_single": {
+        "earlier": 3558562,
+        "equal": 8,
+        "later": 13218646,
+        "spearman_rank_correlation": 0.9631336348775348,
+        "top_k_overlap": {
+          "1024": {
+            "intersection": 634,
+            "overlap_fraction": 0.619140625
+          },
+          "1048576": {
+            "intersection": 914097,
+            "overlap_fraction": 0.8717508316040039
+          },
+          "16": {
+            "intersection": 8,
+            "overlap_fraction": 0.5
+          },
+          "256": {
+            "intersection": 130,
+            "overlap_fraction": 0.5078125
+          },
+          "64": {
+            "intersection": 33,
+            "overlap_fraction": 0.515625
+          },
+          "65536": {
+            "intersection": 52299,
+            "overlap_fraction": 0.7980194091796875
+          }
+        }
+      },
+      "proof_borda_top32": {
+        "earlier": 4369253,
+        "equal": 9,
+        "later": 12407954,
+        "spearman_rank_correlation": 0.9506987126917545,
+        "top_k_overlap": {
+          "1024": {
+            "intersection": 591,
+            "overlap_fraction": 0.5771484375
+          },
+          "1048576": {
+            "intersection": 908385,
+            "overlap_fraction": 0.8663034439086914
+          },
+          "16": {
+            "intersection": 9,
+            "overlap_fraction": 0.5625
+          },
+          "256": {
+            "intersection": 131,
+            "overlap_fraction": 0.51171875
+          },
+          "64": {
+            "intersection": 34,
+            "overlap_fraction": 0.53125
+          },
+          "65536": {
+            "intersection": 48212,
+            "overlap_fraction": 0.73565673828125
+          }
+        }
+      }
+    },
+    "first_encounter_owner_counts": {
+      "hybrid_proof_top16_equal": 3998573,
+      "proof_best_single": 3803718,
+      "proof_borda_top32": 8974925
+    },
+    "first_encounter_owner_top_k": {
+      "1024": {
+        "hybrid_proof_top16_equal": 328,
+        "proof_best_single": 152,
+        "proof_borda_top32": 544
+      },
+      "1048576": {
+        "hybrid_proof_top16_equal": 186189,
+        "proof_best_single": 295731,
+        "proof_borda_top32": 566656
+      },
+      "16": {
+        "hybrid_proof_top16_equal": 4,
+        "proof_best_single": 3,
+        "proof_borda_top32": 9
+      },
+      "256": {
+        "hybrid_proof_top16_equal": 82,
+        "proof_best_single": 43,
+        "proof_borda_top32": 131
+      },
+      "64": {
+        "hybrid_proof_top16_equal": 18,
+        "proof_best_single": 12,
+        "proof_borda_top32": 34
+      },
+      "65536": {
+        "hybrid_proof_top16_equal": 14834,
+        "proof_best_single": 15280,
+        "proof_borda_top32": 35422
+      }
+    }
+  },
+  "geometry_sha256": "7fe46cc2f207ac2ee6bd3b62ef0db7a87b2818f92e085d7d5f0e8b992fa4fda7",
+  "guarantee_sha256": "660e2a2c9338b685f4bb22a341c0698a689c053d19c77eb9317958be4d4ac220",
+  "hard_rank_guarantee": {
+    "cells_checked": 16777216,
+    "formula": "fused_rank_one_based <= 3 * minimum_component_rank_one_based",
+    "guarantee_satisfied": true,
+    "maximum_observed_rank_ratio": 2.0136986301369864,
+    "median_observed_rank_ratio": 1.0958929594120528,
+    "minimum_slack_cells": 1,
+    "p99_observed_rank_ratio": 1.4025899874548984,
+    "violations": 0
+  },
+  "implementation_commitment_sha256": "de764e2b393bef734b83850458abb461f1fc18e1ce0e7dca03fd820973984d04",
+  "implementation_sha256": "7eeb17ca7a9536f925ebebf89f200cb1dcfc9e0d04815f5edf172170ce17e934",
+  "model_refits": 0,
+  "production_candidate_assignments_executed": 0,
+  "result_commitment_sha256": "d699e1150e902fd66dd530a60cc4b71d69be379eb46e355c08121e8526ca2b9f",
+  "schema": "chacha20-round20-w52-deduplicated-reader-portfolio-a451-v1",
+  "union_cover": {
+    "1024": {
+      "bound_satisfied": true,
+      "component_top_k_union_cells": 1776,
+      "deduplication_saved_slots": 1296,
+      "fused_prefix_required_for_complete_union": 1776,
+      "theoretical_three_k_bound": 3072,
+      "union_overlap_cells": 1296
+    },
+    "1048576": {
+      "bound_satisfied": true,
+      "component_top_k_union_cells": 1292794,
+      "deduplication_saved_slots": 1852934,
+      "fused_prefix_required_for_complete_union": 1292794,
+      "theoretical_three_k_bound": 3145728,
+      "union_overlap_cells": 1852934
+    },
+    "16": {
+      "bound_satisfied": true,
+      "component_top_k_union_cells": 31,
+      "deduplication_saved_slots": 17,
+      "fused_prefix_required_for_complete_union": 31,
+      "theoretical_three_k_bound": 48,
+      "union_overlap_cells": 17
+    },
+    "256": {
+      "bound_satisfied": true,
+      "component_top_k_union_cells": 474,
+      "deduplication_saved_slots": 294,
+      "fused_prefix_required_for_complete_union": 474,
+      "theoretical_three_k_bound": 768,
+      "union_overlap_cells": 294
+    },
+    "64": {
+      "bound_satisfied": true,
+      "component_top_k_union_cells": 120,
+      "deduplication_saved_slots": 72,
+      "fused_prefix_required_for_complete_union": 120,
+      "theoretical_three_k_bound": 192,
+      "union_overlap_cells": 72
+    },
+    "65536": {
+      "bound_satisfied": true,
+      "component_top_k_union_cells": 95800,
+      "deduplication_saved_slots": 100808,
+      "fused_prefix_required_for_complete_union": 95800,
+      "theoretical_three_k_bound": 196608,
+      "union_overlap_cells": 100808
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "attempt_id": "A380",
+  "design_state": "frozen_after_A379_public_challenge_before_A380_measurement_order_candidate_prefix_or_recovery",
+  "information_boundary": {
+    "A379_assignment_absent_from_protocol": true,
+    "A379_candidate_or_prefix_available_at_design_freeze": false,
+    "A379_public_challenge_available_at_design_freeze": true,
+    "A380_candidate_assignments_executed_for_order": 0,
+    "A380_measurement_available_at_design_freeze": false,
+    "A380_order_available_at_design_freeze": false,
+    "A380_reader_refits": 0,
+    "A380_target_labels_used_for_order_construction": 0,
+    "W49_recovery_available_at_design_freeze": false,
+    "source_A379_order_frozen_before_W49_challenge": true
+  },
+  "measurement_contract": {
+    "complete_direct_prefix_bits": 12,
+    "complete_direct_prefix_cells": 4096,
+    "concurrent_slice_workers": 8,
+    "conflict_horizons": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "high8_assumption_coordinates": [
+      48,
+      47,
+      46,
+      45,
+      44,
+      43,
+      42,
+      41
+    ],
+    "low4_fixed_unit_coordinates": [
+      40,
+      39,
+      38,
+      37
+    ],
+    "low4_slices": 16,
+    "watchdog_seconds_per_stage": 2.0
+  },
+  "portfolio_contract": {
+    "pointwise_bound": "R_A380(c) <= 2 * min(R_A379(c), R_W49_target_conditioned(c)) for every cell c",
+    "source_operator": "unchanged pretarget A379 W49 order",
+    "target_operator": "A342 selected-pair slice-z reader applied without refit to the complete fresh W49 direct12 grid",
+    "tie_break": [
+      "minimum_source_rank",
+      "sum_source_ranks",
+      "A379_rank",
+      "target_conditioned_rank",
+      "cell"
+    ]
+  },
+  "reader_contract": {
+    "known_key_selection_attempt": "A342",
+    "reader_refits": 0,
+    "selected_view": "A342_selected_pair_slice_z",
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w49-target-conditioned-factor2-a380-design-v1",
+  "source_anchors": {
+    "A342_result_path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+    "A342_result_sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb",
+    "A348_result_path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+    "A348_result_sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812",
+    "A349_selection_path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+    "A349_selection_sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422",
+    "A351_order_path": "research/results/v1/chacha20_round20_w46_dual_order_factor2_portfolio_a351_order_v1.json",
+    "A351_order_sha256": "f1087d76e7b98e918e6d7ecca2ae1ac53761dde3f33452a8f3dc37feb68eb61c",
+    "A379_design_path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_design_v1.json",
+    "A379_design_sha256": "881496c77ebf9fb909d8683b551ca7e83b29d1cf8c73fdf8cd9b102626629ed6",
+    "A379_implementation_path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_implementation_v1.json",
+    "A379_implementation_sha256": "bf2945db89fb13ef2975398ab7819d05b9582f3753a689a256bc0e2226d255cf",
+    "A379_order_path": "research/results/v1/chacha20_round20_fresh_w49_pretarget_transfer_a379_order_v1.json",
+    "A379_order_sha256": "90e06848c9f608ae484b9cdf95d0ebcc64a0776b976470df436e82392caf02a5",
+    "A379_protocol_path": "research/configs/chacha20_round20_fresh_w49_pretarget_transfer_a379_v1.json",
+    "A379_protocol_sha256": "673b44d81f1e25490fd778b48d1ef0c6423ddda6716354c03f5212f68888903a",
+    "A379_runner_path": "research/experiments/chacha20_round20_fresh_w49_pretarget_transfer_a379.py",
+    "A379_runner_sha256": "a8bfce2e53c96db40c5b48fc79876928266cf2d0ecc59187f59da47aaa7153e9"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "A454_result_commitment_sha256": "508cec4cbb82bc3ba4852cf29a4ee14ac62b049ec3d3003d1fede26c274c311e",
+  "A454_result_sha256": "afa2faa05c83e97b9cd8aeee03063ce4493d9c3ea5388fdb9dc39bf3f2093856",
+  "anchors": {
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A454_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_v1.causal",
+      "sha256": "3c14b8a31484bd6bda279d5010056ee7700af89dd81707244f7fafcdf255063f"
+    },
+    "A454_design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_design_v1.json",
+      "sha256": "7a55c5201141734ff10bc55434a4bcf8265a72c9d3a3585b4b964d3bb28308ed"
+    },
+    "A454_implementation": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_implementation_v2.json",
+      "sha256": "368855583aa58c520069974631726fbe467f05917a8bee36fc7875897e215334"
+    },
+    "A454_pair_stream": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_pair_stream_uint16be_uint16be_v1.bin",
+      "sha256": "a82fbe129f6eccaf2ddd560064df1efb471668a116cd52a97490bc66b720b749"
+    },
+    "A454_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A454_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "bb7c6c9d1c1d630f6a12d4a21f0cedbb38fdc81d19012190dba70c081794676f"
+    },
+    "A454_result": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454_v1.json",
+      "sha256": "afa2faa05c83e97b9cd8aeee03063ce4493d9c3ea5388fdb9dc39bf3f2093856"
+    },
+    "A454_runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_weighted_reader_portfolio_a454.py",
+      "sha256": "ef327b61026dea463384c0fe3b1793289e51fe9246953ae982ee89275c810eb1"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455_design_v1.json",
+      "sha256": "1f0bb67882401ba302a9fc2ffeb23f179524bf0bd9a07323479c6accd73c9658"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455_implementation_v1.json",
+      "sha256": "c5b89e4a7dc6e295cf60282d00811060544660c6db02d55a46a8248e091c2b6b"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_weighted_reader_portfolio_recovery_a455.py",
+      "sha256": "fe880b3388de9779982b9baa6cabbeebd41d18c48c6b02a263a0273758a8e1e4"
+    }
+  },
+  "attempt_id": "A455",
+  "candidate_assignments_executed": 0,
+  "design_sha256": "1f0bb67882401ba302a9fc2ffeb23f179524bf0bd9a07323479c6accd73c9658",
+  "implementation_commitment_sha256": "f495a2fe92d75e87e23777cf39bcbf44a9c805766c2a2b5a0f5859fd46105550",
+  "implementation_sha256": "c5b89e4a7dc6e295cf60282d00811060544660c6db02d55a46a8248e091c2b6b",
+  "information_boundary": {
+    "A426_A438_A440_A443_A450_secret_result_stop_or_worker_progress_read": false,
+    "A426_assignment_absent_from_protocol": true,
+    "A434_qualification_content_read_at_A455_protocol_freeze": false,
+    "A452_candidate_progress_or_result_read": false,
+    "A454_schedule_frozen_before_A455_challenge_binding": true,
+    "A455_candidate_or_progress_available_at_protocol_freeze": false,
+    "A455_feature_refits": 0,
+    "A455_model_refits": 0,
+    "A455_target_labels_used_for_schedule": 0,
+    "prior_live_recovery_filter_outcomes_consumed": false
+  },
+  "production_execution_enabled": false,
+  "protocol_commitment_sha256": "eea8f27c75e56c6af5cebf40afb4940fe8d30610e4f604c07ec9575f4ac6b27f",
+  "protocol_state": "A454_exact_BOOHH_weighted_pair_stream_and_A426_public_challenge_bound_before_any_A452_candidate_progress_or_result",
+  "public_challenge": {
+    "challenge_id": "chacha20-r20-w52-a426-fresh-a416-transfer-v1",
+    "control_target_block_sha256": "0bbd0eb818c1e574b03d84c678e983fc7e1ad8839204050917126820cecd53aa",
+    "control_target_words": [
+      2283608064,
+      3749971332,
+      3271213062,
+      3480526590,
+      2006381002,
+      3825462054,
+      1909223054,
+      627043369,
+      2146981000,
+      1985386057,
+      2292684359,
+      585393699,
+      464339775,
+      3542940251,
+      1580306847,
+      1051308162
+    ],
+    "counter_start": 2458255036,
+    "feedforward": true,
+    "filter_bits": 64,
+    "filter_words": 2,
+    "known_key_bits": 204,
+    "known_material_derivation_label": "A426|fresh-W52-A416-transfer|60a9f15d924fe9d089fc190c0a50c1ddd33fee41ea3724c910ab101df06d1ee7",
+    "known_material_derivation_sha256": "b5bcb9ec13441dd9dbb497bdb923e6486e656fdc2fa426b5384087f69b6ec03c",
+    "known_zeroed_key_words": [
+      0,
+      2654994432,
+      3157988503,
+      422095107,
+      1035015418,
+      3335816668,
+      1055899451,
+      2111786092
+    ],
+    "nonce_words": [
+      2106306407,
+      2230959908,
+      744685280
+    ],
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "public_output_bits": 4096,
+    "public_output_blocks": 8,
+    "rounds": 20,
+    "target_block_sha256": [
+      "b1e90381ee360ee007fe20bb787f74ac524c61548fdd51caa8c3ca9f78ee9542",
+      "901342470813bfb44842b64b69efa667e210919352b1b860e832cdf011fa3d02",
+      "a3f33da20b7a94dd092f1eba40a4ea9ec8e7b3f9f362761cb5fe7287cb4552e9",
+      "9d130e3cfc6ca83c0bf327c58a43b8204f6b4421fe8925a0cb8f1e49ae3b917a",
+      "573b655a685f09a76538f50d50028219c9483e183ca45cc46404466342d9fddc",
+      "bec001c69e3d711d798be6a272fb0e2e297db711ab2ce2549ad717c383acfc81",
+      "6939b1b4933bbf9baa7b3ec270cd2a340f73cf303ceb315fe5dea06ee9073c1b",
+      "e980f14fa207d3adaf4f4bb2c066833f8ff69c9f1fd18b6836a42f4b1bc124b9"
+    ],
+    "target_words": [
+      [
+        2283608065,
+        3749971332,
+        3271213062,
+        3480526590,
+        2006381002,
+        3825462054,
+        1909223054,
+        627043369,
+        2146981000,
+        1985386057,
+        2292684359,
+        585393699,
+        464339775,
+        3542940251,
+        1580306847,
+        1051308162
+      ],
+      [
+        615806303,
+        1915118853,
+        3611999003,
+        2462135062,
+        448213036,
+        712453467,
+        489341250,
+        3167504017,
+        4150064210,
+        1564414257,
+        3359104353,
+        2511576714,
+        2473120310,
+        3867222128,
+        296006303,
+        2932650289
+      ],
+      [
+        1347361375,
+        4198028107,
+        969602438,
+        2495004937,
+        551233127,
+        2384034776,
+        360549143,
+        3273948591,
+        285210321,
+        1678476525,
+        381210838,
+        3443301136,
+        1759361509,
+        456579735,
+        2460315959,
+        1929972024
+      ],
+      [
+        2864085595,
+        1321058389,
+        902529061,
+        1843333541,
+        349805457,
+        839762873,
+        2516387913,
+        3106208824,
+        3233677135,
+        2052514940,
+        1049470956,
+        3377932277,
+        2846673307,
+        2800707270,
+        1640858732,
+        2302053945
+      ],
+      [
+        1472330211,
+        3863379850,
+        2493860843,
+        881466340,
+        2458890627,
+        791456315,
+        2047267578,
+        448135755,
+        3104796158,
+        3612097632,
+        2545111905,
+        1116593590,
+        329062761,
+        2768569991,
+        3538989714,
+        554145576
+      ],
+      [
+        685636110,
+        3940090224,
+        908211371,
+        255843147,
+        3475115012,
+        689754121,
+        2351573275,
+        97002464,
+        1611877939,
+        140879898,
+        480706400,
+        3010544903,
+        4178862783,
+        2692959169,
+        3559637927,
+        4110059171
+      ],
+      [
+        3729988897,
+        3357518871,
+        2590900807,
+        2674243137,
+        2706881435,
+        2254260306,
+        4292153898,
+        1326392940,
+        2063357460,
+        1034071772,
+        1702936261,
+        1694726908,
+        2102486759,
+        987967792,
+        2475940897,
+        2468129540
+      ],
+      [
+        2455022585,
+        2839857810,
+        819931572,
+        4144986460,
+        1994391709,
+        1608334864,
+        2321661955,
+        3175109227,
+        1285587045,
+        1166800420,
+        3803924166,
+        3134888286,
+        2341992935,
+        268546147,
+        3231280618,
+        3008859290
+      ]
+    ],
+    "unknown_assignment_included": false,
+    "unknown_key_bits": 52,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low20"
+  },
+  "public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "schedule": {
+    "A454_calibration_sha256": "233ee76ee261f79771bddc05774d666e882ccc69c5465aead4658432f9e4fb13",
+    "A454_guarantee_sha256": "5ee8c540427a841e9739f4fd76360c06eaebd844f4df63236e7cff7b4ba1c676",
+    "A454_result_commitment_sha256": "508cec4cbb82bc3ba4852cf29a4ee14ac62b049ec3d3003d1fede26c274c311e",
+    "algorithm": "A454_BOOHH_deduplicated_periodic_weighted_first_encounter_pair_stream",
+    "assignments_per_complete_pair_cell": 268435456,
+    "complete_cover_identity": "disjoint residues modulo 8 over [0,2^24)",
+    "complete_domain_assignments": 4503599627370496,
+    "direct_inverse_sentinels": [
+      {
+        "global_index": 0,
+        "off_axis": 3280,
+        "prefix": 1520
+      },
+      {
+        "global_index": 1,
+        "off_axis": 672,
+        "prefix": 1520
+      },
+      {
+        "global_index": 7,
+        "off_axis": 1025,
+        "prefix": 690
+      },
+      {
+        "global_index": 8,
+        "off_axis": 3280,
+        "prefix": 690
+      },
+      {
+        "global_index": 255,
+        "off_axis": 3564,
+        "prefix": 1520
+      },
+      {
+        "global_index": 8388608,
+        "off_axis": 256,
+        "prefix": 1743
+      },
+      {
+        "global_index": 16777215,
+        "off_axis": 2751,
+        "prefix": 3470
+      }
+    ],
+    "exact_component_proposal_bounds": {
+      "B": {
+        "asymptotic_regret": 5.0,
+        "formula": "fused_rank <= min(2^24, component_proposal_key + 1)",
+        "frequency": 1,
+        "minimum_slack": 0,
+        "operator": "proof_borda_top32",
+        "period": 5,
+        "satisfied": true,
+        "violations": 0
+      },
+      "H": {
+        "asymptotic_regret": 2.5,
+        "formula": "fused_rank <= min(2^24, component_proposal_key + 1)",
+        "frequency": 2,
+        "minimum_slack": 0,
+        "operator": "hybrid_proof_top16_equal",
+        "period": 5,
+        "satisfied": true,
+        "violations": 0
+      },
+      "O": {
+        "asymptotic_regret": 2.5,
+        "formula": "fused_rank <= min(2^24, component_proposal_key + 1)",
+        "frequency": 2,
+        "minimum_slack": 0,
+        "operator": "proof_best_single",
+        "period": 5,
+        "satisfied": true,
+        "violations": 0
+      }
+    },
+    "exact_rank_guarantee_violations": 0,
+    "first_pair": {
+      "off_axis": 3280,
+      "prefix": 1520
+    },
+    "last_pair": {
+      "off_axis": 2751,
+      "prefix": 3470
+    },
+    "maximum_observed_best_component_rank_ratio": 3.2686567164179103,
+    "maximum_observed_hybrid_rank_ratio": 2.0,
+    "pair_at_formula": "read_uint32be(A454_pair_stream,4*global_index) -> prefix16 || off_axis16",
+    "pair_cells": 16777216,
+    "pair_spearman_to_A451": 0.9975947948955896,
+    "pair_stream_bytes": 67108864,
+    "pair_stream_sha256": "a82fbe129f6eccaf2ddd560064df1efb471668a116cd52a97490bc66b720b749",
+    "selected_pattern": "BOOHH",
+    "selected_reader_portfolio": [
+      "hybrid_proof_top16_equal",
+      "proof_borda_top32",
+      "proof_best_single"
+    ],
+    "top65536_intersection_with_A451": 58827,
+    "worker_global_index_formula": "worker_index + 8 * zero_based_worker_step",
+    "worker_role_formula": "weighted_portfolio_wave_{worker_index}",
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "schedule_commitment_sha256": "6f8927631b35b94e510a32566bc7c3393cde2733773631e190fa9779d20ebc8e",
+  "schema": "chacha20-round20-w52-no-refit-weighted-reader-portfolio-recovery-a455-protocol-v1",
+  "worker_roles": [
+    "weighted_portfolio_wave_0",
+    "weighted_portfolio_wave_1",
+    "weighted_portfolio_wave_2",
+    "weighted_portfolio_wave_3",
+    "weighted_portfolio_wave_4",
+    "weighted_portfolio_wave_5",
+    "weighted_portfolio_wave_6",
+    "weighted_portfolio_wave_7"
+  ]
+}

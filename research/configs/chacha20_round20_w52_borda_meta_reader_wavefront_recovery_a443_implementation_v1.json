@@ -1,0 +1,138 @@
+{
+  "A426_A435_A438_A440_outcome_or_progress_available_at_freeze": false,
+  "A434_qualification_available_at_freeze": false,
+  "A443_candidate_or_progress_available_at_freeze": false,
+  "anchors": {
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A426_runner": {
+      "path": "research/experiments/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426.py",
+      "sha256": "d849065a0bc33f1d3eff3f5b7638948c86b683f8020bfd8a0f5ed0e9ca449637"
+    },
+    "A435_implementation": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_implementation_v1.json",
+      "sha256": "fd37e58b9786cafbe605fb1738204e815de610d20982b459b1007492615ee126"
+    },
+    "A435_protocol": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_v1.json",
+      "sha256": "a6616f0ce3ef8c92a67381e8d3c6acde649f0842d85ea7be9cc488e2182044cd"
+    },
+    "A435_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435.py",
+      "sha256": "c9d355f1afda18b6a5f3367f56ba3d9d7658a2b3c3e79ce80d1e8618578fb3b6"
+    },
+    "A442_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.causal",
+      "sha256": "89e079477ca230be5d2d6ba0231bf7833b29b5c6793076e5800622bf0b8ffb6b"
+    },
+    "A442_design": {
+      "path": "research/configs/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_design_v1.json",
+      "sha256": "75715e8f0f6f9ecd89c4e2fcafe45f859945b58c5ce1ca162a6fc69c93cd5786"
+    },
+    "A442_implementation": {
+      "path": "research/configs/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_implementation_v1.json",
+      "sha256": "9d1afe23e1ba57f6e21daaaad6014f8b1e4f95a007cfe3ed041ade07da5b0ee5"
+    },
+    "A442_result": {
+      "path": "research/results/v1/chacha20_round20_w52_knownkey_meta_reader_transfer_a442_v1.json",
+      "sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d"
+    },
+    "A442_runner": {
+      "path": "research/experiments/chacha20_round20_w52_knownkey_meta_reader_transfer_a442.py",
+      "sha256": "436f0e2a35949bb2007e7da95ec1558c134c2c30c4d077e72b4d2da81de27314"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443_design_v1.json",
+      "sha256": "16f12746ed7363879ae87f2f7b5371f95aac851d2e97c129910b2baea500f22b"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443.sh",
+      "sha256": "0ba5c82ea30c2d10ff452c9867ba38b46f010c15ceb6665018b0c76f7a70e165"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443.py",
+      "sha256": "f9a4578b9ca60d89ff98a26d89cec7320dd788d78c198d8c490552b48ffc39f6"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_borda_meta_reader_wavefront_recovery_a443.py",
+      "sha256": "9c70b26f8a6eaccd4121f846878f69b63dc08aac78e248342ab068dd0b99c1d9"
+    }
+  },
+  "attempt_id": "A443",
+  "commitment_state": "complete_restart_safe_eight_worker_A442_borda_executor_frozen_before_A434_qualification_A426_A435_A438_A440_outcome_or_any_A443_candidate_progress_or_filter_outcome",
+  "design_sha256": "16f12746ed7363879ae87f2f7b5371f95aac851d2e97c129910b2baea500f22b",
+  "engine_reuse_contract": {
+    "A435_original_square_pair_order_reused": false,
+    "A438_anisotropic_pair_order_reused": false,
+    "A439_wide_consensus_pair_order_reused": false,
+    "A442_borda_meta_reader_pair_order_used": true,
+    "prior_candidate_progress_or_outcome_consumed": false,
+    "reuse_only": [
+      "qualified A434 2^28-subcell filter",
+      "eight-worker modulo partition",
+      "restart-safe progress",
+      "matched control",
+      "shared confirmed stop",
+      "dual-reference eight-block confirmation"
+    ],
+    "source_attempt": "A435/A438/A440"
+  },
+  "execution_contract": {
+    "candidates_per_complete_pair_cell": 268435456,
+    "complete_domain_assignments": 4503599627370496,
+    "complete_pair_cell_before_success_evaluation": true,
+    "dual_reference_confirmation_blocks": 8,
+    "dual_reference_confirmation_output_bits": 8192,
+    "early_stop_inside_pair_cell": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 204,
+    "matched_one_bit_control_must_be_empty": true,
+    "pair_cells": 16777216,
+    "primitive": "standard RFC8439 ChaCha20 block function",
+    "public_output_blocks": 8,
+    "restart_safe_progress_per_worker": true,
+    "shared_stop_only_after_independent_confirmation": true,
+    "unknown_key_bits": 52,
+    "worker_partition": "global_pair_index_mod_8",
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "a7c9c2ae2675a2ce6cdecb988f6286e8a2af6279c36054b5cebb15847ba74d99",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_reader_refits": 0,
+  "production_target_labels_used": 0,
+  "schedule_transfer_contract": {
+    "W52_true_pair_rank_known_at_freeze": false,
+    "copy_square_pair_at_and_worker_modulo_mapping_without_refit": true,
+    "knownkey_balanced_two_corpus_bit_gain": 0.5840543224346755,
+    "knownkey_fixed_blocks": 8,
+    "knownkey_minimum_fixed_block_bit_gain": 0.3287263877670634,
+    "knownkey_positive_fixed_blocks": 8,
+    "material_pair_diversity": true,
+    "off_axis_order_sha256": "1c021823b0ed8a101adfaa67672a2b35a153ccc7f5953fa9852787ec1326d537",
+    "pair_spearman_to_A439": 0.8431311772480021,
+    "prefix_axis_order_sha256": "7b7eea4c81a15d8dc5347d6affe4ef62702682eace6fd81c08586c477c60947e",
+    "reader_refits": 0,
+    "source_attempt": "A442",
+    "source_pair_stream_cells": 16777216,
+    "source_pair_stream_complete": true,
+    "source_pair_stream_uint16be_uint16be_sha256": "b2b6e7a0b716083ae357e1dcde436a68e8ca64334ac5ec9009d74742989c6d48",
+    "source_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+    "source_selected_operator": "borda_sum",
+    "target_labels_used": 0,
+    "top65536_intersection_with_A439": 12792,
+    "top65536_overlap_fraction_with_A439": 0.1951904296875
+  },
+  "schema": "chacha20-round20-w52-borda-meta-reader-wavefront-recovery-a443-implementation-v1",
+  "source_A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "source_A426_public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "source_A442_off_axis_order_sha256": "1c021823b0ed8a101adfaa67672a2b35a153ccc7f5953fa9852787ec1326d537",
+  "source_A442_pair_stream_sha256": "b2b6e7a0b716083ae357e1dcde436a68e8ca64334ac5ec9009d74742989c6d48",
+  "source_A442_prefix_order_sha256": "7b7eea4c81a15d8dc5347d6affe4ef62702682eace6fd81c08586c477c60947e",
+  "source_A442_result_commitment_sha256": "31c88ca1468c6fa1b6e789975f1f96ec0f1ba28c581569a66f8f0c69df26b98d",
+  "source_A442_result_sha256": "8c8222528dc3ef12ffc0fbda513061b39243daade51a70a17f0bd89c65b53b1d",
+  "source_pair_cells": 16777216
+}

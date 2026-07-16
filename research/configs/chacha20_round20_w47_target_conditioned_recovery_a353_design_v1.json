@@ -1,0 +1,55 @@
+{
+  "attempt_id": "A353",
+  "design_state": "frozen_before_A346_qualification_A347_protocol_A352_order_or_any_W47_candidate_prefix_result",
+  "execution_contract": {
+    "candidates_per_prefix_group": 34359738368,
+    "complete_domain_assignments": 140737488355328,
+    "complete_group_before_success_evaluation": true,
+    "early_stop_inside_group": false,
+    "feedforward_included": true,
+    "filter_bits": 64,
+    "full_rounds": 20,
+    "matched_control": "target block 0 with public output bit 0 flipped",
+    "prefix_groups": 4096,
+    "public_output_blocks": 8,
+    "slabs_per_prefix_group": 16,
+    "unknown_key_bits": 47,
+    "unknown_layout": "key_word0_all32_plus_key_word1_low15"
+  },
+  "information_boundary": {
+    "A346_qualification_available_at_design_freeze": false,
+    "A347_candidate_or_prefix_available_at_design_freeze": false,
+    "A347_protocol_available_at_design_freeze": false,
+    "A352_order_available_at_design_freeze": false,
+    "A353_candidate_or_prefix_available_at_design_freeze": false,
+    "target_labels_used_for_A353_order_selection": 0
+  },
+  "order_contract": {
+    "future_order_schema": "chacha20-round20-w47-target-conditioned-factor2-a352-order-v1",
+    "order_execution": "execute the exact future A352 selected_order from rank one without postfreeze reordering",
+    "pointwise_bound": "R_A352(c) <= 2 * min(R_A347(c), R_W47_target_conditioned(c))",
+    "reader_refits": 0,
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w47-target-conditioned-recovery-a353-design-v1",
+  "source_anchors": {
+    "A346_protocol_path": "research/configs/chacha20_round20_w47_sixteen_slab_grouped_engine_a346_v1.json",
+    "A346_protocol_sha256": "4cb6c1c7e0a9719cf4ac04e870d9f5190772664b786d541a0fc4c7c7ea86e3ca",
+    "A346_runner_path": "research/experiments/chacha20_round20_w47_sixteen_slab_grouped_engine_a346.py",
+    "A346_runner_sha256": "b022a3c19de0e5c0ab09cee68fa738e2fb3586823f5155d087441361588156d2",
+    "A347_design_path": "research/configs/chacha20_round20_fresh_w47_factor2_transfer_a347_design_v1.json",
+    "A347_design_sha256": "78e3406ca48af0c81f002c0f5329c1b7267481eca579ac9544b5188ee3cbe102",
+    "A347_implementation_path": "research/configs/chacha20_round20_fresh_w47_factor2_transfer_a347_implementation_v1.json",
+    "A347_implementation_sha256": "2d951320541a4b5e3606fb289541369c635c9ecc96d92961a57df228494af3c7",
+    "A347_order_path": "research/results/v1/chacha20_round20_fresh_w47_factor2_transfer_a347_order_v1.json",
+    "A347_order_sha256": "5a287c0985ed249e15d3d1a9b351d30e70503b15ccd6199e33944a633144a2a6",
+    "A347_runner_path": "research/experiments/chacha20_round20_fresh_w47_factor2_transfer_a347.py",
+    "A347_runner_sha256": "66054128dac2d1512a6f81f007341c4e8603a6a832b997417a21911f2f6eea1f",
+    "A352_design_path": "research/configs/chacha20_round20_w47_target_conditioned_factor2_a352_design_v1.json",
+    "A352_design_sha256": "3136952bbef9cbaaa168eb83d2c281a1980092087ec626eb821c0f46e816f241",
+    "A352_implementation_path": "research/configs/chacha20_round20_w47_target_conditioned_factor2_a352_implementation_v1.json",
+    "A352_implementation_sha256": "5c5015b8d082fd8a0988110abd7522aee1dcaacaf7014f023eb5a0b6e3b665a2",
+    "A352_runner_path": "research/experiments/chacha20_round20_w47_target_conditioned_factor2_a352.py",
+    "A352_runner_sha256": "c4ff829d8f432566d383908a170893c0be07e8e88fa6184f8cd8c0be9dc7927b"
+  }
+}

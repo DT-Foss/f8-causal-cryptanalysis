@@ -1,0 +1,94 @@
+{
+  "schema": "chacha20-round20-linf-l2-weight-simplex-a337-design-v1",
+  "attempt_id": "A337",
+  "created_at_utc": "2026-07-15T06:59:42Z",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "hypothesis": "A336 retained an equal-rank Linf plus squared-L2 fusion. A complete exact weight simplex can identify whether the walk-forward signal has an interior optimum and can deploy that weight unchanged at W46.",
+  "weight_contract": {
+    "resolution": 16,
+    "candidate_sequence": [
+      {"name": "linf16_l2_00", "linf_weight": 16, "l2_weight": 0},
+      {"name": "linf15_l2_01", "linf_weight": 15, "l2_weight": 1},
+      {"name": "linf14_l2_02", "linf_weight": 14, "l2_weight": 2},
+      {"name": "linf13_l2_03", "linf_weight": 13, "l2_weight": 3},
+      {"name": "linf12_l2_04", "linf_weight": 12, "l2_weight": 4},
+      {"name": "linf11_l2_05", "linf_weight": 11, "l2_weight": 5},
+      {"name": "linf10_l2_06", "linf_weight": 10, "l2_weight": 6},
+      {"name": "linf09_l2_07", "linf_weight": 9, "l2_weight": 7},
+      {"name": "linf08_l2_08", "linf_weight": 8, "l2_weight": 8},
+      {"name": "linf07_l2_09", "linf_weight": 7, "l2_weight": 9},
+      {"name": "linf06_l2_10", "linf_weight": 6, "l2_weight": 10},
+      {"name": "linf05_l2_11", "linf_weight": 5, "l2_weight": 11},
+      {"name": "linf04_l2_12", "linf_weight": 4, "l2_weight": 12},
+      {"name": "linf03_l2_13", "linf_weight": 3, "l2_weight": 13},
+      {"name": "linf02_l2_14", "linf_weight": 2, "l2_weight": 14},
+      {"name": "linf01_l2_15", "linf_weight": 1, "l2_weight": 15},
+      {"name": "linf00_l2_16", "linf_weight": 0, "l2_weight": 16}
+    ],
+    "selection_eligible_sequence": [
+      "linf16_l2_00",
+      "linf15_l2_01",
+      "linf14_l2_02",
+      "linf13_l2_03",
+      "linf12_l2_04",
+      "linf11_l2_05",
+      "linf10_l2_06",
+      "linf09_l2_07",
+      "linf08_l2_08",
+      "linf07_l2_09",
+      "linf06_l2_10",
+      "linf05_l2_11",
+      "linf04_l2_12",
+      "linf03_l2_13",
+      "linf02_l2_14",
+      "linf01_l2_15",
+      "linf00_l2_16"
+    ],
+    "selection_rule": "maximum complete-W45-Linf Spearman, then minimum mean absolute rank error, then frozen candidate index",
+    "weighted_order_rule": "ascending linf_weight*rank_linf + l2_weight*rank_l2, then unweighted rank sum, minimum rank, maximum rank, Linf rank, L2 rank, cell index",
+    "training_sources": "A335 alpha=-1/2 predicted W45 Linf and squared-L2 orders",
+    "training_target": "complete target-blind A318 W45 raw-Linf order loaded only after all 17 training candidates exist",
+    "deployment_sources": "A335 alpha=-1/2 predicted W46 Linf and squared-L2 orders",
+    "deployment_rule": "apply the selected integer weights and unchanged tie rule before A325 execution",
+    "named_identity_gates": {
+      "linf16_l2_00": "A335 Linf midpoint order",
+      "linf08_l2_08": "A336 equal-rank Linf plus squared-L2 Borda order",
+      "linf00_l2_16": "A335 squared-L2 midpoint order"
+    },
+    "A313_role": "none",
+    "A322_progress_or_result_role": "none",
+    "A325_W46_challenge_or_result_role": "none",
+    "new_candidate_execution": false,
+    "target_labels_used_from_A313_A322_or_A325": 0
+  },
+  "information_boundary": {
+    "all_training_candidate_orders_constructed_before_W45_target_field_is_loaded": true,
+    "training_sources_use_any_W45_target_field": false,
+    "deployment_sources_use_any_W46_challenge_feature": false,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_candidate_definition_selection_or_order": false,
+    "A322_result_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_public_challenge_feature_used": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "target_labels_used_from_A313_A322_or_A325": 0
+  },
+  "source_anchors": {
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A335_order_path": "research/results/v1/chacha20_round20_multiview_rank_smoothing_a335_order_v1.json",
+    "A335_order_sha256": "80e63e65ca8139e2b893670c093ddfbd7451e6cf1e024b64aff18950b6344f75",
+    "A336_order_path": "research/results/v1/chacha20_round20_multiview_forecast_fusion_a336_order_v1.json",
+    "A336_order_sha256": "c8ab47d6de41740fb216861cf2d135568d4aadd1bbcf9bdf5e4fa20ea5344d4c"
+  },
+  "future_evaluation_contract": {
+    "A325": "after independent A325 confirmation, rank the single confirmed prefix in all 17 frozen W46 simplex orders without duplicate candidate execution",
+    "primary_comparisons": [
+      "selected versus Linf endpoint",
+      "selected versus equal-weight A336 identity",
+      "selected versus squared-L2 endpoint"
+    ],
+    "counterfactual_control_outcome_inference": false
+  }
+}

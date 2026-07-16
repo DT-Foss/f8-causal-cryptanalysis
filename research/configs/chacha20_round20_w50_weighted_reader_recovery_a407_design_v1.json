@@ -1,0 +1,72 @@
+{
+  "attempt_id": "A407",
+  "design_state": "frozen_during_A401_measurement_after_A406_implementation_freeze_before_A401_A402_A404_A406_results_or_any_A407_candidate_prefix",
+  "scientific_question": "If A406 beats the complete 765-Reader family out of fold, does its exact zero-refit production order recover the fresh standard ChaCha20 W50 target without duplicating an already queued learned order?",
+  "source_order_contract": {
+    "required_A406_evidence_stage": "WEIGHTED_OUTOFFOLD_BEATS_COMPLETE_765_BASELINE_AND_APPLIES_ZERO_REFIT_TO_A388",
+    "required_A406_qualification": true,
+    "required_order_cells": 4096,
+    "order_source": "A406_production_order",
+    "target_labels_used_for_order": 0,
+    "production_reader_refits": 0,
+    "production_candidate_assignments_executed_for_order": 0,
+    "new_solver_stages_for_order": 0,
+    "qualification_failure_action": "do_not_freeze_an_executable_A407_protocol_or_start_recovery"
+  },
+  "duplicate_execution_contract": {
+    "comparison_results_required_before_A407_protocol_decision": ["A402", "A404"],
+    "comparison": "exact_uint16be_order_sha256",
+    "match_to_any_qualified_prior_order_action": "freeze_equivalence_only_protocol_and_do_not_repeat_recovery",
+    "distinct_from_all_qualified_prior_orders_action": "freeze_executable_A407_protocol"
+  },
+  "execution_contract": {
+    "primitive": "RFC8439 ChaCha20 block function",
+    "rounds": 20,
+    "feedforward": true,
+    "public_output_blocks": 8,
+    "unknown_key_bits": 50,
+    "prefix_bits": 12,
+    "complete_prefix_groups": 4096,
+    "slabs_per_prefix_group": 128,
+    "candidates_per_slab": 2147483648,
+    "candidates_per_prefix_group": 274877906944,
+    "complete_domain_assignments": 1125899906842624,
+    "outcome_evaluation_only_after_complete_128_slab_group": true,
+    "matched_one_bit_control_required": true,
+    "dual_independent_eight_block_confirmation_required": true,
+    "resume_granularity": "complete_prefix_group"
+  },
+  "priority_contract": {
+    "interrupt_live_recoveries": false,
+    "A397_Direct12_first_free_slot_obligation_preserved": true,
+    "prior_qualified_A403_and_A405_obligations_preserved": true,
+    "A407_start": "first_subsequent_free_Metal_slot_after_all_prior_qualified_obligations_if_and_only_if_A406_qualified_and_distinct",
+    "A390_W51_qualification_remains_queued": true
+  },
+  "information_boundary": {
+    "A401_selection_or_result_available_at_design_freeze": false,
+    "A402_A404_A406_result_or_production_order_available_at_design_freeze": false,
+    "A407_candidate_or_prefix_available_at_design_freeze": false,
+    "A385_assignment_absent_from_protocol": true,
+    "live_recovery_progress_filter_outcomes_or_results_consumed_for_order": false,
+    "post_A406_order_mutation_allowed": false,
+    "post_A406_qualification_threshold_change_allowed": false
+  },
+  "source_anchors": {
+    "A391_runner_path": "research/experiments/chacha20_round20_w50_direct12_only_recovery_a391.py",
+    "A391_runner_sha256": "d39eaaf6aabae9beb4ddf561a713ac5c943a67700e8e77084606bf457c3380df",
+    "A405_runner_path": "research/experiments/chacha20_round20_w50_leaveoneout_reader_recovery_a405.py",
+    "A405_runner_sha256": "09fa3dce7790f4795cd0fa10c2cbebcb82f05c083494358775dd146ec67bf6e2",
+    "A406_design_path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_design_v1.json",
+    "A406_design_sha256": "aaa67ce789ff3623c22e2d2965cbd5c19aa5f4d9aaa2911797eb2d019e0fd2a0",
+    "A406_runner_path": "research/experiments/chacha20_round20_w50_knownkey_weighted_reader_a406.py",
+    "A406_runner_sha256": "7db8f5234cc2d03c685d2f42babe1274438add56cc0bcde28f66c2e32520e2b9",
+    "A406_implementation_path": "research/configs/chacha20_round20_w50_knownkey_weighted_reader_a406_implementation_v1.json",
+    "A406_implementation_sha256": "f6a6e539ee84e03899817e072d09d2b55756419580113990f629f358e93b9236",
+    "A384_qualification_path": "research/results/v1/chacha20_round20_w50_onehundredtwentyeight_slab_grouped_engine_a384_qualification_v1.json",
+    "A384_qualification_sha256": "0e31d4d7b0e0bb0e45cd815d975e2898c60eeea16e04498d720f0a58dd41dc30",
+    "A385_protocol_path": "research/configs/chacha20_round20_fresh_w50_pretarget_transfer_a385_v1.json",
+    "A385_protocol_sha256": "801831f2daabe41476c9bf1ec676907f11c1b5465a193ba61d8d1877eb3b0b4b"
+  },
+  "schema": "chacha20-round20-w50-weighted-reader-recovery-a407-design-v1"
+}

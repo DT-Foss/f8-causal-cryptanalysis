@@ -1,0 +1,145 @@
+{
+  "A426_progress_or_filter_outcomes_consumed": false,
+  "A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "A426_public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "A426_result_available_at_preflight": false,
+  "CNF": {
+    "path": "research/artifacts/a432_chacha20_r20_w52_public_output_direct12/a432_a426_public_output_w52_b1.cnf",
+    "sha256": "bf55cd893e3e3a654c1a90bdaa804f146658e74b20b8c0c7c92704cc4a410310"
+  },
+  "CNF_header": "p cnf 72520 227997",
+  "anchors": {
+    "A342_result": {
+      "path": "research/results/v1/chacha20_round20_w46_exhaustive_reader_ensemble_a342_v1.json",
+      "sha256": "8d6d6f99b89d67d7eff186037934bfa515cf93a00af10b244826f44056b4cebb"
+    },
+    "A348_result": {
+      "path": "research/results/v1/chacha20_round20_w46_direct12_sliced_reader_a348_v1.json",
+      "sha256": "f09bba039b26c8b78804f48169df62db167a9d95fbfff91e7099a01c1be1c812"
+    },
+    "A349_selection": {
+      "path": "research/configs/chacha20_round20_w46_direct12_prospective_a345_validation_a349_selection_v1.json",
+      "sha256": "4f33a99b859044ed79d933b813486dba195e37438bc9afcf32b21d31d2d6c422"
+    },
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A426_runner": {
+      "path": "research/experiments/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426.py",
+      "sha256": "d849065a0bc33f1d3eff3f5b7638948c86b683f8020bfd8a0f5ed0e9ca449637"
+    },
+    "A430_causal": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_v1.causal",
+      "sha256": "3e55b2bc31bc005d0857f1135bfc9565d49cb069cb887f8decd382626c2db987"
+    },
+    "A430_result": {
+      "path": "research/results/v1/chacha20_round20_w51_public_output_direct12_eight_worker_a430_v1.json",
+      "sha256": "12c3f60fbc7dde8bbaa32ff7d13272a422b094d999a3c99ae16f1efd4c21f89a"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w52_public_output_direct12_eight_worker_a432_implementation_v1.json",
+      "sha256": "77e59c820d94796d731b632a879272ce13f7162358f64a1edd5515a6843a5ab2"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_public_output_direct12_eight_worker_a432.py",
+      "sha256": "22b00e57cf06fd6c6e5e5e5be1766101ce1500d4e47dbe035a257ec271a0270e"
+    }
+  },
+  "attempt_id": "A432",
+  "bridge_challenge_sha256": "70b4cc5d1a4794453cd1bfd180f55e12cbabdb0a7b675ec08095346950e93146",
+  "candidate_assignments_executed": 0,
+  "evidence_stage": "PRE_W52_RECOVERY_PUBLIC_OUTPUT_DIRECT12_CNF_AND_READER_FROZEN",
+  "formula_sha256": "4f231befa92993f5bdb8e9f3f9261f99418fefe6880f39326c5e45448301ce81",
+  "implementation_commitment_sha256": "01b73863dd61e23f1123f86dd4eb485c5624a202cde93d60932fd2e3b223c8fc",
+  "implementation_sha256": "77e59c820d94796d731b632a879272ce13f7162358f64a1edd5515a6843a5ab2",
+  "low4_coordinates": [
+    43,
+    42,
+    41,
+    40
+  ],
+  "preflight_commitment_sha256": "ad2143915923589ee9f78d13ad8b37bb6d6a44fcd2eb3397c2398aa81347580f",
+  "reader_refits": 0,
+  "schema": "chacha20-round20-w52-public-output-direct12-eight-worker-a432-preflight-v1",
+  "selected_view": "A342_selected_pair_slice_z",
+  "source_mapping_sha256": "ab29c6e178bbb7474bdfb1347bdd5444d126ee71cd6c7baedf3b33aaa3868fa0",
+  "source_one_literals_bit0_upward": [
+    15,
+    14,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    56,
+    61,
+    65,
+    69,
+    73,
+    78,
+    82,
+    87,
+    92,
+    97,
+    102,
+    106,
+    110,
+    290,
+    208,
+    207,
+    210,
+    212,
+    214,
+    216,
+    218,
+    220,
+    222,
+    224,
+    226,
+    228,
+    230,
+    232,
+    234,
+    236,
+    238,
+    240,
+    242
+  ],
+  "synthetic_reader_mapping": [
+    15,
+    14,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    228,
+    230,
+    232,
+    234,
+    236,
+    238,
+    240,
+    242
+  ],
+  "synthetic_reader_mapping_sha256": "6356bd150b67efad1a0af874a1c21cf4ba0f8b8101b64bc944be4db3a06a918f",
+  "target_labels_used": 0
+}

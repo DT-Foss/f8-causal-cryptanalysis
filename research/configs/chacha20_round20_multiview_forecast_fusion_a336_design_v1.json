@@ -1,0 +1,75 @@
+{
+  "schema": "chacha20-round20-multiview-forecast-fusion-a336-design-v1",
+  "attempt_id": "A336",
+  "design_state": "frozen_while_A322_is_running_before_any_A322_result_and_before_any_A325_execution_or_result",
+  "scientific_question": "Can A335's independently selected negative-half forecasts from diverse views be fused to predict the W45 Linf field better than the Linf forecast alone and then deploy unchanged at W46?",
+  "source_anchors": {
+    "A317_order_path": "research/results/v1/chacha20_round20_w44_multiview_operator_atlas_a317_order_v1.json",
+    "A317_order_sha256": "3c3779cb26ace4e4361399969a89461eb69e443e8b4630f953cb0a8892f672a2",
+    "A318_order_path": "research/results/v1/chacha20_round20_w45_multiview_operator_atlas_a318_order_v1.json",
+    "A318_order_sha256": "25c36b4412cedcd37243057535109b36e79ded5172eba642bb84dd50f1de49f0",
+    "A335_order_path": "research/results/v1/chacha20_round20_multiview_rank_smoothing_a335_order_v1.json",
+    "A335_order_sha256": "80e63e65ca8139e2b893670c093ddfbd7451e6cf1e024b64aff18950b6344f75"
+  },
+  "fusion_contract": {
+    "training_sources": "A335 alpha=-1/2 W45 forecasts constructed only from W43-W44 within each view",
+    "training_target": "complete target-blind W45 nearest_prototype_Linf field, read only after every candidate fusion order is constructed",
+    "deployment_sources": "A335 alpha=-1/2 W46 forecasts constructed only from W44-W45 within each view",
+    "borda": "ascending sum of named source ranks, then minimum rank, maximum rank, lexicographic named-view rank tuple, then cell",
+    "prototype_median": "ascending median rank across L1-Linf-L2, then rank sum, Linf rank, L1 rank, L2 rank, cell",
+    "candidate_sequence": [
+      "linf_midpoint_baseline",
+      "l1_linf_equal_borda",
+      "linf_l2_equal_borda",
+      "l1_linf_l2_equal_borda",
+      "l1_linf_l2_rank_median",
+      "all_six_equal_borda",
+      "fine_coarse_equal_borda_control",
+      "W44_raw_linf_carry_forward_control"
+    ],
+    "selection_eligible_sequence": [
+      "linf_midpoint_baseline",
+      "l1_linf_equal_borda",
+      "linf_l2_equal_borda",
+      "l1_linf_l2_equal_borda",
+      "l1_linf_l2_rank_median",
+      "all_six_equal_borda"
+    ],
+    "fixed_controls": [
+      "fine_coarse_equal_borda_control",
+      "W44_raw_linf_carry_forward_control"
+    ],
+    "selection": "maximum Spearman against complete target-blind W45 Linf, then minimum mean absolute rank error, then frozen eligible index",
+    "deployment": "apply the selected unchanged named-view fusion to the corresponding A335 W46 forecasts",
+    "A313_role": "none",
+    "A322_progress_or_result_role": "none",
+    "A325_W46_challenge_or_result_role": "none",
+    "new_candidate_execution": false,
+    "target_labels_used_from_A313_A322_or_A325": 0
+  },
+  "predeclared_outputs": [
+    "eight exact W45 fusion forecasts with complete-field metrics",
+    "one selected fusion under the frozen eligible-only rule",
+    "eight exact W46 fusion forecasts and one selected order hash",
+    "exact identity gates for every A335 source order",
+    "two fixed ineligible controls",
+    "postconfirmation A325 rank panel without duplicate candidate execution"
+  ],
+  "information_boundary": {
+    "all_training_candidate_orders_constructed_before_W45_target_field_is_loaded": true,
+    "training_sources_use_any_W45_field": false,
+    "deployment_sources_use_any_W46_challenge_feature": false,
+    "A313_result_candidate_or_prefix_used": false,
+    "A322_execution_running_at_design_freeze": true,
+    "A322_atomic_negative_prefix_progress_visible_at_design_freeze": true,
+    "A322_progress_used_for_candidate_definition_selection_or_order": false,
+    "A322_result_available_at_design_freeze": false,
+    "A322_candidate_or_prefix_rank_available_at_design_freeze": false,
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_challenge_feature_candidate_prefix_or_result_used": false,
+    "target_labels_used_from_A313_A322_or_A325": 0,
+    "operator_refits_on_A313_A322_or_A325": 0,
+    "duplicate_candidate_execution_required_for_evaluation": false
+  }
+}

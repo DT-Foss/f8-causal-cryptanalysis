@@ -1,0 +1,82 @@
+{
+  "schema": "chacha20-round20-w46-target-conditioned-causal-order-a340-design-v1",
+  "attempt_id": "A340",
+  "created_at_utc": "2026-07-15T08:41:00Z",
+  "design_state": "frozen_before_any_A325_execution_candidate_prefix_or_result",
+  "scientific_question": "Can the unchanged A272 selected-channel Reader condition directly on A325's actual public W46 output, produce a complete target-specific 12-bit prefix order without a target label, and protect it with A325 raw Linf under an exact factor-two rank bound?",
+  "measurement_contract": {
+    "primitive": "RFC8439_ChaCha20_block_function",
+    "rounds": 20,
+    "feedforward": true,
+    "unknown_key_bits": 46,
+    "diagnostic_target_blocks": 1,
+    "recovery_target_blocks_unchanged": 8,
+    "coarse_prefix_bits": 8,
+    "fine_prefix_bits": 12,
+    "free_bits_per_fine_cell": 34,
+    "coarse_cells": 256,
+    "fine_cells": 4096,
+    "conflict_horizons": [1, 2, 4, 8],
+    "selected_feature_indices": [502, 504, 505, 508, 509, 510, 511, 514],
+    "reader_refits": 0,
+    "target_labels_used": 0,
+    "fine_extension": "each Reader-ranked high-eight-bit cell followed by reflected Gray4 over the next four prefix bits",
+    "measurement_status_required": "all 1024 stages model-free UNKNOWN"
+  },
+  "order_contract": {
+    "candidate_sequence": [
+      "A325_raw_linf_baseline",
+      "A340_target_conditioned_causal_fine",
+      "raw_causal_min_rank_wavefront_protected",
+      "raw_causal_equal_borda",
+      "A325_public_hash_control"
+    ],
+    "primary_operator": "A340_target_conditioned_causal_fine",
+    "protected_operator": "raw_causal_min_rank_wavefront_protected",
+    "established_baseline": "A325_raw_linf_baseline",
+    "matched_public_control": "A325_public_hash_control",
+    "wavefront_rule": "ascending minimum one-based source rank, then rank sum, raw rank, Causal rank, cell index",
+    "wavefront_guarantee": "for every cell R_wavefront <= 2*min(R_raw_linf,R_target_conditioned_causal)",
+    "borda_rule": "ascending rank sum, then minimum rank, maximum rank, raw rank, Causal rank, cell index",
+    "A325_existing_protocol_or_order_rewritten": false,
+    "candidate_execution_by_A340": false
+  },
+  "information_boundary": {
+    "A325_public_challenge_available_at_design_freeze": true,
+    "A325_public_output_allowed_as_measurement_input": true,
+    "A325_hidden_assignment_available_at_design_freeze": false,
+    "A325_candidate_or_prefix_available_at_design_freeze": false,
+    "A325_execution_started_at_design_freeze": false,
+    "A325_result_available_at_design_freeze": false,
+    "A325_filter_outcome_available_at_design_freeze": false,
+    "target_labels_used_from_A325": 0,
+    "reader_coefficients_refit_on_A325": false,
+    "A325_protocol_modified": false
+  },
+  "source_anchors": {
+    "A325_protocol_path": "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+    "A325_protocol_sha256": "480fe15f22c87df1b9422c1dc8cfcf5a9add147f65b6631d25e94d66b5255a2c",
+    "A296_runner_path": "research/experiments/chacha20_round20_causal_search_gain_panel_a296.py",
+    "A296_runner_sha256": "7b2a4423e71c87751389fcccea05839ad5ca2b8524d6c821d9f23cb7b30dd936",
+    "A296_result_path": "research/results/v1/chacha20_round20_causal_search_gain_panel_a296_v1.json",
+    "A296_result_sha256": "2cf8aa4fbd37889baa0a7740724b7751746d037dd2482a63261327abb7e6f45d",
+    "A297_runner_path": "research/experiments/chacha20_round20_w32_causal_search_gain_panel_a297.py",
+    "A297_runner_sha256": "f5700d37179c82969fb458d5cd184656641f65e5962e82cfa6fa1ff48b3ca60f",
+    "A223_source_path": "research/experiments/chacha20_round20_capacity_moonshot_a223.py",
+    "A223_source_sha256": "f41b70c549392101a4a2cdf1499f69ac897912682a5696da79ef3533fa55e0e0",
+    "A223_config_path": "research/configs/chacha20_round20_capacity_moonshot_a223_v1.json",
+    "A223_config_sha256": "9b60f65be6415b4ac3738881336bfe8397328e0d216882f684db1c3da9b3a79f",
+    "A251_wrapper_path": "research/experiments/chacha20_fresh_clause_identity.py",
+    "A251_wrapper_sha256": "3a1d63d223712997519f72143ebcc3e5725a8f8659eadbd9389465dd0fe654f6",
+    "A275_runner_path": "research/experiments/chacha20_round20_selected_channel_target_replication_measure.py",
+    "A275_runner_sha256": "218815280ce978aba16ba857db80828424e390cc1d141a1be3d33fb330c4e56b",
+    "A275_protocol_path": "research/configs/chacha20_round20_selected_channel_target_replication_v1.json",
+    "A275_protocol_sha256": "d6e753defe3eba1e9989e8e6f792a6e731d8371487788917db0d7cff518c75f9"
+  },
+  "future_evaluation_contract": {
+    "A325": "after a single independent A325 confirmation, locate its prefix in all five A340 orders without duplicate candidate execution",
+    "primary_question": "does direct public-output-conditioned Causal measurement localize the unseen W46 prefix earlier than the copied raw-Linf order and public-hash control",
+    "matched_control_outcomes_inferred": false,
+    "A325_existing_protocol_rewritten": false
+  }
+}

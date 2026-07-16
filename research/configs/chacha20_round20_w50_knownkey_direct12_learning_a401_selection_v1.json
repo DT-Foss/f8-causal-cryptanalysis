@@ -1,0 +1,258 @@
+{
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_design_v1.json",
+      "sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c"
+    },
+    "implementation": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_implementation_v1.json",
+      "sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1"
+    },
+    "public_corpus": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_public_corpus_v1.json",
+      "sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w50_knownkey_direct12_learning_a401.py",
+      "sha256": "2238b99504883cd0b722b7b92254b3dc02255a6b53c9851f35264daad3f21bee"
+    },
+    "selection_labels": {
+      "path": "research/configs/chacha20_round20_w50_knownkey_direct12_learning_a401_selection_labels_v1.json",
+      "sha256": "1decf5c6f422024b51da02afc2f7b16bacbdb0a027ca674d7790858d6fada6f4"
+    }
+  },
+  "attempt_id": "A401",
+  "candidate_count": 765,
+  "candidate_family_commitment_sha256": "789181e119ce2661cee731ad94d1e336469dd5d002aa8e446606407cd8283218",
+  "complete_measurement_target_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "design_sha256": "bb8127e6d2fbe5c99a38847ab16e2a97a79168781bcecb0b14bef93fc958aa7c",
+  "holdout_label_file_opened": false,
+  "implementation_commitment_sha256": "72ce4d3783e3b29db6f4a3b9cabb733ca6e5b24d8035e8df0874cd53818d7798",
+  "implementation_sha256": "4a08686d34674525bd08938d96783c6772ce4cd004fffbe04d11dc972cf63df1",
+  "public_corpus_sha256": "18aaad488842ce9fb52a77cef01c89bfeb8c901001a86fd56e23bbf594c7a4f3",
+  "schema": "chacha20-round20-w50-knownkey-direct12-learning-a401-selection-v1",
+  "selected_candidate": {
+    "aggregator": "minimum_rank_then_sum",
+    "aggregator_index": 2,
+    "selection_bit_gain_vs_complete_4096_cover": 2.0455169883562316,
+    "selection_mean_log2_rank": 9.954483011643768,
+    "selection_true_ranks": [
+      1141,
+      2138,
+      2774,
+      277,
+      1962,
+      3940,
+      3241,
+      20
+    ],
+    "selection_worst_rank": 3940,
+    "view_indices": [
+      3,
+      7
+    ],
+    "view_names": [
+      "A341_selected_single_slice_z",
+      "A342_selected_triple_slice_z"
+    ]
+  },
+  "selected_candidate_commitment_sha256": "563365cd3c2e0a8188cd13e4a18b3b18636428b9437f4452a90c4869539ce050",
+  "selection_commitment_sha256": "ad59adc473c56395f0e4436d4dda763cd64424fe966f940c3e2d1196c8f5dcdc",
+  "selection_label_sha256": "1decf5c6f422024b51da02afc2f7b16bacbdb0a027ca674d7790858d6fada6f4",
+  "selection_state": "frozen_after_targets_0_7_only_before_holdout_labels_or_scores",
+  "selection_view_field_commitments": {
+    "0": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "838d787b36692bc2a1be1119172d27be81bcdec0386a7b21ce088eb76ef313ef",
+        "A340_selected8_slice_z": "8ac2b578c816b1602d99136f6679646066d43749d2e896fd9e816f52f0f1be39",
+        "A341_selected_single_global_raw": "0f4b91dd6c3fa9f41c0285e30f7ed8c5adc19e2c585a9afa9fe9d8dbf6057687",
+        "A341_selected_single_slice_z": "72fd2ec0438ddebc2955552e64aae90508f69fc123c730f9ab081658d04940b5",
+        "A342_selected_pair_global_raw": "018736174dc75bcfa3809a1351da0d0dd2b95ba868b6e510ff3c6868d9a46d95",
+        "A342_selected_pair_slice_z": "d79d6df35be3b3a4a17448b102c2f379bf4036edf7f6ab20f1fd1187ac081020",
+        "A342_selected_triple_global_raw": "de6d41a9ab0758434818a4c431d4de534e7f22ce08251b04b876c220be8aba02",
+        "A342_selected_triple_slice_z": "5087ac119c3235da8f27803d707571d4e8fb8bd6e1454baba126aa41141938f0"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "1ce8777e296e10009a458d5160be686d3304d47d25283c655665a0c068b107f2",
+        "A340_selected8_slice_z": "9f88d98b5979edb4d7adec527954161ff951212a27d57a806a9df1d27aaa9dae",
+        "A341_selected_single_global_raw": "9b6f05d31234972bc4302b419ed758dfe05b99cd0fa3ed039e4d7a2f0fea8f31",
+        "A341_selected_single_slice_z": "794459410006db5ddbc937b11c1c63a22a3de6624be6eb6acde347fcdd36ca11",
+        "A342_selected_pair_global_raw": "f1f373abbd9c38870a517191be87b9edcb73a20dc53163af46405848b0cb0e4b",
+        "A342_selected_pair_slice_z": "c4804e237f10644f8996bdb2bebc39e34adc550e89863d359045fdc556354dcb",
+        "A342_selected_triple_global_raw": "b800ed258b0e07b40642f7746e25dacbc4bbd3f05c86f47761b7fb03538db7c8",
+        "A342_selected_triple_slice_z": "8918b0d094cc6946c81deebd5bbfa42ac4492648438dda666131f694e302cf16"
+      }
+    },
+    "1": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "f9e03ed852d3e62231121bd8a1a3161fcd909ed34d70a38b8b225ba1319beb2d",
+        "A340_selected8_slice_z": "bbb48675c765c00e5ead14ef44327ae3f13a869adcc6b46d409ddc25321b6419",
+        "A341_selected_single_global_raw": "f45701e781875492eb0a391f8e16af83bf1eced3a5d5d2196547489744f49a47",
+        "A341_selected_single_slice_z": "777bbce418e63bc9054768d65553a2bc06a2d27ce44d2c9093464f259c86c987",
+        "A342_selected_pair_global_raw": "94a21ba872ec2b3cf0755233f2d17dff9892a19c58c4b08156cc94277a5823a9",
+        "A342_selected_pair_slice_z": "086db0936362127d2bc821f07cf966a4c2981fa5c1dea6311a4a8f474110bf89",
+        "A342_selected_triple_global_raw": "c834868d1950495d4372eb783a05b1cf524ca21ae39341e60afd37592307c2d4",
+        "A342_selected_triple_slice_z": "9b6743374d99d2f9eb0f2dcb1bbfc97def0806bc157d7b0a0fa13e05114c69d1"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "2e99a70c7690cca9742f0a53b913d239d573c3e3d3276ed5a59a612e030358d1",
+        "A340_selected8_slice_z": "f64f68e2f00a81a8f5b48ac4f682be53519a24bb5e8207653e958547e51b2278",
+        "A341_selected_single_global_raw": "413c76a7bbfc1ca82bf5ba53c49492b1cd2c184fda9ec84d23f8498f67021715",
+        "A341_selected_single_slice_z": "2cc3b5441cc6fc6fab1eb01be74501c809828ca377ab43021eb174e92324c9fa",
+        "A342_selected_pair_global_raw": "5e485fe4f693cbc52c2f3ee10ca06a876348725cd02c38189a18ca728cf2e20a",
+        "A342_selected_pair_slice_z": "a5e1574879e384df990d403bae1122a73ad048bc51e87712a6786e248a1af6b4",
+        "A342_selected_triple_global_raw": "62b1ae94da81a3cee96bf3d8c67f27b4a87d4653c7a96f7b66bcee9a21d6487a",
+        "A342_selected_triple_slice_z": "4903c0d85ed8133591729e75553beacf8e84ed42d04d1fb0e140acc74051de44"
+      }
+    },
+    "2": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "4891e41b8c3ba51181055f40da861d2ff36f7296f0169d5927e423c8b7b0acf3",
+        "A340_selected8_slice_z": "d179fed9d3f15e9715699ad97a59c2660e02e09c2d9c92a36303fc8f6fe6d450",
+        "A341_selected_single_global_raw": "b7a6cfb69584cc47432f4884a6decff18490cf8aad4dec123fccdeac16de8cc2",
+        "A341_selected_single_slice_z": "a94f66f2fd3d3cb97cd8974f91f5750c57e3bd63172df2604c03816bf72a6079",
+        "A342_selected_pair_global_raw": "ee9b660eda8ad7d7b6539344528acc879bf2e033b82e03a1accaf9dcd5f7db0e",
+        "A342_selected_pair_slice_z": "2443acd7bce8e84b5fa83356d6bba28e64b38512c7560ee1e1cb63477d7cdbf0",
+        "A342_selected_triple_global_raw": "2713ce01840bf00b0906e89059fce45da3b8388c485d861ea3041ec1c69a7be6",
+        "A342_selected_triple_slice_z": "d0eb4a639fa4b3a9b8a5a27b3ba9c9b9b80ef9cae4b229b6edc15e2bda34853e"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "0387fcc12ef8f973e84aca9db6126c21c2a58aba6738e603cae6bb2b056b42e6",
+        "A340_selected8_slice_z": "1592fa2b2723b5def0f65802ba243982a337fb8d803cf8dee69fd0ad5ea9bfc5",
+        "A341_selected_single_global_raw": "6d899bfc34b1233ed3cd7792daace460d289c12a800abdebe0ef294bfd824a83",
+        "A341_selected_single_slice_z": "e4fe6648ae7b606885d2b94cd91134e5924892d289c21b07a2c1a8ab0d2309b9",
+        "A342_selected_pair_global_raw": "5dd05818b721c0d84943bf958962e43818c290641878d92ca2662559282b9d75",
+        "A342_selected_pair_slice_z": "2684e44ee4e514edaa06e8bd3fba35e561d5cdacdd7fc39336b0b72b0621887f",
+        "A342_selected_triple_global_raw": "afb5fd067a08374af627161da32337a34794da03dc68f6329cf1366dfecbb2fd",
+        "A342_selected_triple_slice_z": "cfba77dd311225d9a753ce3b0f1074e7dd037491f99b52e539e5e69f02357ead"
+      }
+    },
+    "3": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "4f6b8a5e16d356621e6e8aad611efbc71d5a13c08d9f5a5321b9199f280e5e90",
+        "A340_selected8_slice_z": "d21d4279aa9d0cc969ac81eb1cc30a743fd1ec71bafa0e64de6644f36ff9fc0c",
+        "A341_selected_single_global_raw": "b11c0a707b630c4975a027f0ddddf09885accf38d079216504722e8fc1bd18af",
+        "A341_selected_single_slice_z": "4957ec3184b40d6bf1e98fd8111ab4afa57f3a4f76352f4d36ff436cb3589d7a",
+        "A342_selected_pair_global_raw": "9fbf7a57d66e9ecd41e15820120392932464d32bc52dbfb451ae3a81e28adf96",
+        "A342_selected_pair_slice_z": "22f4b8216c2ed1911ee976251715963dc5a7acd665a3898b28c5acccd3d2238e",
+        "A342_selected_triple_global_raw": "20712b0e6220802aa28a127722a03c18ff799960448a1f8f54971bdd6d573770",
+        "A342_selected_triple_slice_z": "1c41fe9349f749d69f6dba7fff8b23f1ff1cd5c57d8619b6fb95345d3deb6466"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "f54e7627bc8ae83457bf5dc824b4515dda6eb21fb9349990f3818c5d7f8efd96",
+        "A340_selected8_slice_z": "0d8c56c80dd496680d1756ce446f3ae98a5d5ecdf8260481f77619bf26ddc013",
+        "A341_selected_single_global_raw": "0fa8003f2504d916e12996603c15e5bb15d2f36abd06d1606150e778ea104e00",
+        "A341_selected_single_slice_z": "80d82701a33943e64d7e2034d9d80ee2113c6e3a7b39b552fe1b36a6b64d1f33",
+        "A342_selected_pair_global_raw": "fb9475ea3f2bdd4032e2f055f3400a9a7b0c87d796de902bb44bdea7cd98723f",
+        "A342_selected_pair_slice_z": "e19af907e81daa2d5efddee99f670d154a82819004f9c104a58d6483c5d27bbb",
+        "A342_selected_triple_global_raw": "1178d5a886b4812ced542c0bea55de2baa03b2a9a0b82edad0e542bf7acb2a6f",
+        "A342_selected_triple_slice_z": "30775869ce707111dab117cae9b363d35b5a115033e370242cfdad3d01e0125d"
+      }
+    },
+    "4": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "abd4d53eb2f6ac9930287f66740afb1abb71e78309ece24c36dd4fe1591dca76",
+        "A340_selected8_slice_z": "3e9b370f49db2a468616846b2ce681355f6e7044b974a4410557708891889b79",
+        "A341_selected_single_global_raw": "9212808b3917e963b42a0a7291b1faa7e15ab536a8663216cf81064090c8142a",
+        "A341_selected_single_slice_z": "3813eee5d891efe0b28d67067413de6e6d5dc00b1d9c9934f741dcec97938009",
+        "A342_selected_pair_global_raw": "175e333833c81558cd302be579cd3c4df385edc47d72fa15c3506ab10a1d6e05",
+        "A342_selected_pair_slice_z": "41f917bc27f053a2b3ed60e4b25ac08def68fa246e317f150031f03999161f02",
+        "A342_selected_triple_global_raw": "8640c04c713ab2c5f7b77a10efe87e4b34443c5c6026bde348e1167ab0aa3570",
+        "A342_selected_triple_slice_z": "32ea6ea793332f181a3ee299f8c633e929ccd1f547c7faf4f2bd8392c4ef4d44"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "ad95b4f9cf495da9350410d6013f370b4f40e623e962cb3c55ff04532dc26da2",
+        "A340_selected8_slice_z": "189d8c34c94100485bc717e1c1ff9ff61ec53c2812da21b32b201bc487a7c054",
+        "A341_selected_single_global_raw": "e58aac9c24ac1479c1e25faf2400438ce27a82351475569669b20964508a9807",
+        "A341_selected_single_slice_z": "8ec82a22da2dcb3e6eba26e318c4afd4c54983049298711c4155db2b15ababc4",
+        "A342_selected_pair_global_raw": "e278cc9d03e76ea03d8af707f3bbc75944ee305b595abfa652d5bdaf0d640d71",
+        "A342_selected_pair_slice_z": "3e737241b6a7cf57307a0171e1ffb3de27702dc3298a0c36c49ebfee5718a902",
+        "A342_selected_triple_global_raw": "fc657dfd2111ca90bc8a9f2f94e37953d5e3d9f1e11880490df50eefdeb087b7",
+        "A342_selected_triple_slice_z": "4d5fa1a386cb574a779fb31fd83e287c7489efd8dea650235ebec4bcf278f543"
+      }
+    },
+    "5": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "a8355ddcc32ac525c70cf3455027631501ff541c4d090eea70012511c4a75c6b",
+        "A340_selected8_slice_z": "3d02b9b1f74a78e30ba07b4cf33d5b827eb9ae6d40279954653dd7172ac4cd5d",
+        "A341_selected_single_global_raw": "9e8f2b85fa6007cd140fa11ce8e0058168f80c0258a8a794015e98e1cd35ac79",
+        "A341_selected_single_slice_z": "92d29e9d79e552bf33cedd04930262c86a381b1b31d1973d2c1802cb0b1f11a5",
+        "A342_selected_pair_global_raw": "6461b252b69de4e8b95264d25c2fe1f116b6f2df428028945f81cd52656648af",
+        "A342_selected_pair_slice_z": "ddc4717b71ca141ec46535be7a36b96d10e6d7f3180fe8f8b27123c0e9199baa",
+        "A342_selected_triple_global_raw": "813734d7d03eaf6123fe786bd735cc0d719f76068443dd400cedd887581f32d7",
+        "A342_selected_triple_slice_z": "60a4f46e9fe431aef0d0429acaf0bc1ac835fe8a7d4ee078a9fd76acc837245c"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "7f6235cbf342275adbabf663de19b06700b14fb1b6c05bf5ad4bce500905d09c",
+        "A340_selected8_slice_z": "caeb4c3c781b57e976e933810a681d8f802dbc9553695cbe11780ccb34f1a2a4",
+        "A341_selected_single_global_raw": "a7ec69dd48dc1e8d7cea7ec1aece159d8c22d8b829f3bc0fdd1b5c49dc372d9b",
+        "A341_selected_single_slice_z": "80037445e3f304e6e5e3a2269196d2dddaa49922da9f7aaa6c8178392ef3b755",
+        "A342_selected_pair_global_raw": "3dcaad9ae8200d5cdfea80a9afa60fb304dd38687e5e462d70c23cfe57e2650c",
+        "A342_selected_pair_slice_z": "71c3ce00287b9ff213f8caf6bf492663ded86479da0d486c58cd3eca07163728",
+        "A342_selected_triple_global_raw": "06b33e5b1774ea41cc8c45d921720165fe8536887fc04bd6d7935cf306067fef",
+        "A342_selected_triple_slice_z": "e96bcce7e67d4f9f1ebfbc2711d2063e5d8d56ce1f1918fd78a7ddea8bb75531"
+      }
+    },
+    "6": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "4c95999a4faeb425378fce056ec13e49bb9f3d1b7bf6c94ec284bd99d57d3c7a",
+        "A340_selected8_slice_z": "2e3f17250801e21a537e907d0b37dcd18a19cd6d6033fb032943a36d631e0d9b",
+        "A341_selected_single_global_raw": "8191e3171b0039d64c96257e624462ffe0de4a4b6f073afb7bf28b208b64f5b9",
+        "A341_selected_single_slice_z": "26c60c8e448379866dd8f312d0bcd6cf0c518fcf443e5ec6ad3833f51dbcae95",
+        "A342_selected_pair_global_raw": "59c94163ccf4df99aa19f1ad8d31c1227e51d539be13b640cc4db17c4c8b6788",
+        "A342_selected_pair_slice_z": "90012788009e484d1301cb75eea1310694b30f788da6b71775ec3cb7cb3c94c2",
+        "A342_selected_triple_global_raw": "ecf62d1098b490394f20f2dd2cc8ac32eb6e805a10888a08bd785e9b74c52152",
+        "A342_selected_triple_slice_z": "3d94df3ae6aea2654f52ed42f3b85de6d0dc69ab538f5dd85f1562fd536b0533"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "6ed79c525fc73baceb4cc1ae46ccdfdd2351e5d5b3e8c5ca9524411908de23d8",
+        "A340_selected8_slice_z": "c3fdb038350c2626bfb730f45903c174453db4ecb2be32c7fb8c5e3441f9f2e1",
+        "A341_selected_single_global_raw": "015e50ec8352ff1a65c8cb29331a9da5d7cb647325d8ba36003c82bbee6a08c4",
+        "A341_selected_single_slice_z": "3f452c81472f8f0729f421de5dee9b65589b889ce60271b3e3fb62023abd97fb",
+        "A342_selected_pair_global_raw": "e2c2dd1852c0808851fa0e75d3359a6bf809532bbc4464456f867e689a4d97c7",
+        "A342_selected_pair_slice_z": "288d72af0e0b8743d8bc89fb66100fbd185aa05c0095855cb78b1eb41672ada3",
+        "A342_selected_triple_global_raw": "c1c9508c42d1e165a5d3129523309b99bd0f33e9d13474f668673dec0b908b5a",
+        "A342_selected_triple_slice_z": "37e26e6609c1179d34c46cd1a7fe24cac94ae76eae7447bcb496623f7c861c78"
+      }
+    },
+    "7": {
+      "view_order_uint16be_sha256": {
+        "A340_selected8_global_raw": "620055f97c8be54180912ad3dd1aa89f653dd43d9dadd4378e2c7a86c910fe81",
+        "A340_selected8_slice_z": "2ebe8d5fb618a170f2805d3802090235284e236455a6d7d244fdf0cb65de5254",
+        "A341_selected_single_global_raw": "82807dc98c33670f73a2115b388ebaa9a563c0d11f3f2de178aad5ee7b2a9204",
+        "A341_selected_single_slice_z": "704da3154a3344fcc2457e9d44993941b4ef6e9507212a93b33240e302e827b9",
+        "A342_selected_pair_global_raw": "253e9e9fbde9ca624d9f36f39f28c9beaa7985cb4daceefcf0b930b9e3b3a996",
+        "A342_selected_pair_slice_z": "758707fa1d8e9a1d96d6c164d6f9d96e0bef7a9dedba6b48dccc9d0a9d2d7725",
+        "A342_selected_triple_global_raw": "396f5418511b0e660dced89ef9425326da7648d0bcdf88ce89f8a2bd3134c5ff",
+        "A342_selected_triple_slice_z": "9234e59ca04be5666b5537a654a9b3a74be9e84c01b4dc4c34532704354e5484"
+      },
+      "view_score_field_sha256": {
+        "A340_selected8_global_raw": "fd7a6ce534d6d433a62df9221a2d64e736ce7f8d337ae67ed6acbf5b218369ff",
+        "A340_selected8_slice_z": "ae2584c58377b93942ca20e364c4425d0f2c93338bc2f3e620cf7ccf96d90f21",
+        "A341_selected_single_global_raw": "99f29723b6acd37fca736c509163ebb22b76b58147f6d6e9efd09fef1f097d42",
+        "A341_selected_single_slice_z": "d5401978c4bc5c8f0427e1834bd3a618e460429cd32317cc5ac7893c5e76fe6e",
+        "A342_selected_pair_global_raw": "bb57c120e98700f07456883768752ee8c1c9e40e6f960df5afd02a1339c20479",
+        "A342_selected_pair_slice_z": "9095baed3f9035b215a194834d7fc15bc81f211dac904e6893a1e87438b008d7",
+        "A342_selected_triple_global_raw": "dd168f55476e468707b596ba4d9cdd0dd771f2dc0bafa91048b4baef71d6ec4c",
+        "A342_selected_triple_slice_z": "05c03757de4e9a84c73ae47a6536a770317a1bdfc3634c74ab3137071ae438e0"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "anchors": {
+    "design": {
+      "path": "research/configs/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359_design_v1.json",
+      "sha256": "8bbfc9853a9bcd2f42001411d1a46f722d7d8c0bf8038e95994ea3e414b7f7f9"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.sh",
+      "sha256": "54e97f3cc5e254dff26b74d47077be7180925b166072bc8cdca39de68ffa0aab"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+      "sha256": "5bb1d21b9790b98e09d1fb540f5673c10ab484dc5a539c4c0242d11538461b99"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w46_corrected_knownkey_slice_corpus_a359.py",
+      "sha256": "553c94a8d751d3f15f1f6a3e2fd0737525445861f5af67f750e22441b9c963b7"
+    }
+  },
+  "attempt_id": "A359",
+  "commitment_state": "frozen_before_any_A359_formula_export_or_solver_measurement",
+  "design_sha256": "8bbfc9853a9bcd2f42001411d1a46f722d7d8c0bf8038e95994ea3e414b7f7f9",
+  "implementation_commitment_sha256": "16ddbaa9846902f917867acbefa7e957869b57aaa3a015815754db09554ede02",
+  "schema": "chacha20-round20-w46-corrected-knownkey-slice-corpus-a359-implementation-v1"
+}

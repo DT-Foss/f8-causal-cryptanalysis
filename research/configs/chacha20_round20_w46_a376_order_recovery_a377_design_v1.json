@@ -1,0 +1,68 @@
+{
+  "schema": "chacha20-round20-w46-a376-order-recovery-a377-design-v1",
+  "attempt_id": "A377",
+  "design_state": "frozen_after_A376_factor4_order_before_any_A377_candidate_prefix_or_recovery_execution",
+  "execution_contract": {
+    "primitive": "standard ChaCha20",
+    "rounds": 20,
+    "feed_forward": true,
+    "public_output_blocks": 8,
+    "unknown_key_bits": 46,
+    "complete_group_suffix_bits": 34,
+    "group_count": 4096,
+    "group_coordinate_interval": [
+      20,
+      31
+    ],
+    "group_order": "the exact immutable A376 selected_order factor-four portfolio permutation",
+    "group_execution": "all 2^34 suffix assignments in every visited group",
+    "within_group_early_stop": false,
+    "matched_control": "one-bit-flipped output relation executed with the identical complete-group engine",
+    "progress_resume": true,
+    "maximum_complete_domain_assignments": 70368744177664
+  },
+  "rank_contract": {
+    "selected_portfolio_rank": "selected_order.index(confirmed_prefix12)+1",
+    "source_reader_ranks": "source_order[role].index(confirmed_prefix12)+1 for all four A375 Readers",
+    "best_source_rank": "minimum source-reader rank",
+    "pointwise_factor4_check": "selected_portfolio_rank <= 4 * best_source_rank",
+    "rank_readback_only_after_independent_confirmation": true
+  },
+  "confirmation_contract": {
+    "canonical_reference": "repository ChaCha20 implementation",
+    "independent_reference": "independent RFC8439 transcription retained by A325",
+    "all_eight_output_blocks_required": true,
+    "total_cross_implementation_output_bits_required": 8192,
+    "matched_control_candidates_required": 0
+  },
+  "evidence_contract": {
+    "strict_subset_if_group_rank_below_4096": true,
+    "domain_reduction_factor": "4096 / selected_portfolio_rank",
+    "search_gain_bits": "log2(4096 / selected_portfolio_rank)",
+    "all_four_source_ranks_reported_after_confirmation": true,
+    "full_domain_completion_is_still_a_valid_recovery_record": true
+  },
+  "information_boundary": {
+    "A376_order_available_at_design_freeze": true,
+    "A376_order_file_sha256": "a10bbd8aa3e41ae230e30c435f6966665007322c2b02f82cdc678254d44b6bf3",
+    "A361_secret_or_true_prefix_available_at_design_freeze": false,
+    "A377_candidate_or_prefix_available_at_design_freeze": false,
+    "A377_candidate_assignments_executed_at_design_freeze": 0,
+    "reader_refits": 0,
+    "target_labels_used_for_A376_order": 0
+  },
+  "source_anchors": {
+    "A324_runner_path": "research/experiments/chacha20_round20_w46_eight_slab_grouped_engine_a324.py",
+    "A324_runner_sha256": "d286102bfcdf5ec4902c7e7240aa6b4ba6c9edd486933b58cbc895355b0c0f4b",
+    "A324_qualification_path": "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
+    "A324_qualification_sha256": "996dcddfc5f9b9e91f7c77c01aa10747af8f291795dfa04d3e7eaf890047296a",
+    "A361_protocol_path": "research/configs/chacha20_round20_w46_fresh_a360_reader_deployment_a361_protocol_v1.json",
+    "A361_protocol_sha256": "3396559ab6fde25ef12f5fdcae68e33585234926885b88b136c1f4af47c13228",
+    "A376_design_path": "research/configs/chacha20_round20_w46_a375_reader_sealed_a361_order_a376_design_v1.json",
+    "A376_design_sha256": "d382730a341bc46e5de68cb3b6d4fc0d7c1e21df4be7732f3dc95bca9bc9cffb",
+    "A376_implementation_path": "research/configs/chacha20_round20_w46_a375_reader_sealed_a361_order_a376_implementation_v1.json",
+    "A376_implementation_sha256": "978f9611107ead21d13583f3b748732e5f62d043df085a9f96b159a18b09ec38",
+    "A376_order_path": "research/results/v1/chacha20_round20_w46_a375_reader_sealed_a361_order_a376_v1.json",
+    "A376_order_sha256": "a10bbd8aa3e41ae230e30c435f6966665007322c2b02f82cdc678254d44b6bf3"
+  }
+}
