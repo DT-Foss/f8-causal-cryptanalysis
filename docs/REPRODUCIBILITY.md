@@ -90,12 +90,23 @@ Expected final line: `A278--A286 and complete-domain record tier: OK`.
 ./scripts/reproduce_a287_a325.sh
 ```
 
-This portable tier verifies the complete A287--A325 release manifest,
-independently recomputes the 19 strict-subset executions and the complete W43
+This portable tier verifies the complete A287--A325 release manifest and its
+terminal supplement, independently recomputes the 21 strict-subset executions and the complete W43
 record, runs the completed order/engine/audit tests, and opens the retained
-AI-native `.causal` files with the authoritative Reader. It enforces that A322
-and A325 have no result artifact and does not launch the production Metal
-domains or solver portfolios.
+AI-native `.causal` files with the authoritative Reader. It verifies the A322
+and A325 terminal results without relaunching the production Metal domains or
+solver portfolios.
+
+### Full-round recovery completeness tier
+
+```bash
+./scripts/reproduce_fullround_recovery_completeness.sh
+```
+
+This tier authenticates the five additional complete-domain records B3KR1,
+SIPKR1, TEAKR1, XTEAKR1, and TF1024KR1 plus A322, A325, A350, and A374. It
+checks their dedicated manifest, terminal invariants, independent public-output
+recomputation, matched controls, and native Causal readback.
 
 Expected final line: `A287--A325 cryptanalysis tier: OK`.
 

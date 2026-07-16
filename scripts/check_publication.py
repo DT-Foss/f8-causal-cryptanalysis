@@ -45,6 +45,8 @@ PATH_BEARING_RELEASE_MANIFESTS = (
     Path("research/results/v1/A223_A277_SHA256SUMS"),
     Path("research/results/v1/A278_A286_RECORDS_SHA256SUMS"),
     Path("research/results/v1/A287_A325_SHA256SUMS"),
+    Path("research/results/v1/FULLROUND_RECOVERY_COMPLETENESS_SHA256SUMS"),
+    Path("research/results/v1/A326_A458_FRONTIER_SHA256SUMS"),
 )
 
 
@@ -83,6 +85,13 @@ def files() -> list[Path]:
     )
 
 
+def is_probably_text(path: Path) -> bool:
+    """Keep extensionless scripts in scope without decoding native binaries."""
+    if path.suffix.lower() not in TEXT_SUFFIXES:
+        return False
+    return b"\0" not in path.read_bytes()[:4096]
+
+
 def main() -> int:
     failures: list[str] = []
     exact_path_bearing_records = EXACT_PATH_BEARING_RECORDS | release_manifest_paths()
@@ -93,11 +102,14 @@ def main() -> int:
         if entry.is_symlink():
             failures.append(f"symlink: {relative}")
     all_files = files()
-    text_files = [path for path in all_files if path.suffix.lower() in TEXT_SUFFIXES]
+    text_files = [path for path in all_files if is_probably_text(path)]
 
     for path in all_files:
         relative = path.relative_to(ROOT)
-        if path.stat().st_size > 50 * 1024 * 1024:
+        if (
+            path.stat().st_size > 50 * 1024 * 1024
+            and relative not in exact_path_bearing_records
+        ):
             failures.append(f"file over 50 MiB: {relative}")
 
     for path in text_files:
@@ -146,6 +158,7 @@ def main() -> int:
         "docs/RELEASE_A278_A286_RECORDS.md",
         "docs/RELEASE_A287_A325_CRYPTANALYSIS.md",
         "docs/PUBLISH_GAP_AUDIT_A287_A325.md",
+        "docs/FULLROUND_RECOVERY_COMPLETENESS_AUDIT.md",
         "research/results/v1/ANCHOR_SHA256SUMS",
         "research/results/v1/SHAKE_SOLVER_FRONTIER_SHA256SUMS",
         "research/results/v1/A223_A277_SHA256SUMS",
@@ -157,6 +170,24 @@ def main() -> int:
         "research/results/v1/A287_A325_TESTS.txt",
         "scripts/reproduce_a287_a325.sh",
         "tests/test_a287_a325_published_records.py",
+        "research/results/v1/FULLROUND_RECOVERY_COMPLETENESS_SHA256SUMS",
+        "research/results/v1/FULLROUND_RECOVERY_COMPLETENESS_TESTS.txt",
+        "scripts/reproduce_fullround_recovery_completeness.sh",
+        "tests/test_fullround_recovery_completeness.py",
+        "research/results/v1/blake3_keyed_metal_recovery_v1.json",
+        "research/results/v1/blake3_keyed_metal_recovery_v1.causal",
+        "research/results/v1/siphash24_metal_recovery_v1.json",
+        "research/results/v1/siphash24_metal_recovery_v1.causal",
+        "research/results/v1/tea_metal_recovery_v1.json",
+        "research/results/v1/tea_metal_recovery_v1.causal",
+        "research/results/v1/xtea_metal_recovery_v1.json",
+        "research/results/v1/xtea_metal_recovery_v1.causal",
+        "research/results/v1/threefish1024_metal_record_v1.json",
+        "research/results/v1/threefish1024_metal_record_v1.causal",
+        "research/results/v1/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.json",
+        "research/results/v1/chacha20_round20_w46_a349_order_prospective_recovery_a350_v1.causal",
+        "research/results/v1/chacha20_round20_w48_target_conditioned_recovery_a374_v1.json",
+        "research/results/v1/chacha20_round20_w48_target_conditioned_recovery_a374_v1.causal",
         "research/results/v1/chacha20_round20_w43_metal_record_v1.json",
         "research/results/v1/chacha20_round20_w43_metal_record_v1.causal",
         "research/results/v1/chacha20_round20_w24_causal_ordered_metal_a294_v1.json",
@@ -191,8 +222,12 @@ def main() -> int:
         "research/results/v1/chacha20_round20_holdout_selected_w45_operator_a321_order_v1.causal",
         "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_design_v1.json",
         "research/configs/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal",
         "research/results/v1/chacha20_round20_w46_eight_slab_grouped_engine_a324_qualification_v1.json",
         "research/configs/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+        "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal",
         "research/results/v1/chacha20_round20_cross_material_composite_recovery_v1.json",
         "research/results/v1/chacha20_round20_cross_material_composite_recovery_canonical_v1.causal",
         "research/results/v1/chacha20_round20_multitarget_panel_root_confirmation_a286_v1.json",
@@ -483,10 +518,6 @@ def main() -> int:
         "research/results/v1/chacha20_round20_factorial_boundary_route_v1.json",
         "research/results/v1/chacha20_round20_factorial_eight_block_ensemble_v1.json",
         "research/results/v1/chacha20_round20_factorial_prospective_target_v1_public.json",
-        "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
-        "research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal",
-        "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
-        "research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal",
         ".research_sealed",
     ]
     for item in forbidden_unfinished_or_private_files:

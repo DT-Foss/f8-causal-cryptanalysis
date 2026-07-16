@@ -176,9 +176,11 @@ publication:
   factual and zero control models across eight independently confirmed blocks.
 - A294--A313: 19 strict-subset ChaCha20-R20 executions across 18 targets at
   widths 24, 28, 32, 43, and 44, with matched empty controls and dual confirmation.
+- A322/A325: terminal W45/W46 strict-subset recoveries at ranks 1,459 and 77,
+  each with an empty matched control and 8,192 independently checked bits.
 - A304/A307/A311/A324 and A312--A323: target-free grouped-engine qualifications,
   target-blind order fields, frozen meta-operator designs, and the completed
-  cross-width operator-stability audit. A322/A325 outcomes are not claimed.
+  cross-width operator-stability audit.
 
 ## Presentation sanitization
 

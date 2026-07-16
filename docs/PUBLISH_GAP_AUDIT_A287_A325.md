@@ -18,11 +18,13 @@ It is the release-selection record for version 0.5.0.
 | A305 | W43 A299-order replay through the grouped engine; strict-subset recovery at rank 2,114/4,096 | `research/results/v1/chacha20_round20_w43_a299_grouped_replay_a305_v1.json` |
 | A309 | W43 width-conditioned portfolio; strict-subset recovery at rank 4,044/4,096 | `research/results/v1/chacha20_round20_w43_width_conditioned_band_portfolio_a309_v1.json` |
 | A313 | W44 width-conditioned/Fine/baseline portfolio; strict-subset recovery at rank 2,753/4,096 after exactly 11,824,044,965,888 of `2^44` assignments | `research/results/v1/chacha20_round20_w44_width_conditioned_fine_portfolio_a313_v1.json` |
+| A322 | W45 holdout-selected strict-subset recovery at rank 1,459/4,096 after exactly 12,532,714,569,728 of `2^45` assignments | `research/results/v1/chacha20_round20_holdout_selected_w45_recovery_a322_v1.json` |
+| A325 | W46 unchanged holdout-selected strict-subset recovery at rank 77/4,096 after exactly 1,322,849,927,168 of `2^46` assignments | `research/results/v1/chacha20_round20_holdout_selected_w46_recovery_a325_v1.json` |
 
-The release therefore adds one complete-domain record and 19 confirmed
-strict-subset executions. Together with the preceding public batches, the
-archive contains 13 complete-domain residual-key recoveries and 24
-strict-subset executions across 23 distinct targets.
+The original release added one complete-domain record and 19 confirmed
+strict-subset executions. The terminal supplement adds A322 and A325 without
+altering their frozen protocols, yielding 21 strict-subset executions in this
+batch and 26 through A325.
 
 ## Completed non-recovery records added
 
@@ -42,20 +44,20 @@ strict-subset executions across 23 distinct targets.
 - A323 retains the completed target-blind cross-width operator-stability audit
   and its authentic Causal graph.
 
-## Frozen designs without outcome claims
+## Frozen designs with terminal outcomes
 
-- A322: the W45 execution protocol is published; the live production outcome
-  and progress state are excluded.
-- A325: the W46 execution protocol was frozen before A322 produced an outcome;
-  no W46 production result is published.
+- A322: the original W45 protocol remains frozen; its terminal result and
+  Causal graph are now published.
+- A325: the W46 protocol froze before A322 produced an outcome; its later
+  terminal result and Causal graph preserve that exact information boundary.
 
 ## Deliberate exclusions
 
 - A306 has no completed result row or confirmed result artifact.
-- A322 remains live and A325 has no production outcome; neither is claimed.
 - Checkpoints, local builds, raw solver traces, generated CNF files, and active
   execution state are excluded. Their frozen hashes and generating sources
   remain in the portable records where applicable.
 
-The automated publication gate enforces the required confirmed records and the
-absence of A322/A325 outcome files.
+The automated publication gate enforces both terminal records, independently
+recomputes their eight output blocks, rejects their controls, and opens their
+AI-native Causal graphs.

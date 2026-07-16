@@ -1,10 +1,14 @@
 # A287--A325 full-round ChaCha20 cryptanalysis release
 
-Version 0.5.0 publishes the next closed ChaCha20-R20 evidence batch: one new
+Version 0.5.0 published the initial closed ChaCha20-R20 evidence batch: one new
 complete-domain W43 recovery, 19 additional strict-subset executions, exact
 grouped-engine qualifications through W46, target-blind model-free order
 fields, three pre-reveal-committed operator evaluations, the completed A321
 holdout selection, and the A323 cross-width operator audit.
+
+The terminal supplement closes the two executions that were still open at that
+snapshot: A322 recovers W45 at rank 1,459 and A325 recovers W46 at rank 77.
+Both retain their original pre-result protocols and orders byte-for-byte.
 
 Every recovery executes standard ChaCha20 with all 20 rounds and feed-forward,
 uses eight complete public output blocks, rejects the matched one-bit control,
@@ -23,11 +27,13 @@ and is confirmed by independent byte- and word-oriented implementations.
 | A305 | 43 | 1 | 2,114 | Frozen A299 order through qualified grouped engine |
 | A309 | 43 | 1 | 4,044 | Width-conditioned portfolio retains a strict subset |
 | A313 | 44 | 1 | 2,753 | Frozen three-arm order; 11,824,044,965,888 of `2^44` assignments |
+| A322 | 45 | 1 | 1,459 | Frozen A321-selected order; 12,532,714,569,728 of `2^45` assignments |
+| A325 | 46 | 1 | 77 | Unchanged A321-selected order; 1,322,849,927,168 of `2^46` assignments |
 
 A294/A295 intentionally test two distinct frozen orders on one target. The
-batch therefore contains 19 executions across 18 new targets. Across all
-public batches the repository contains 24 strict-subset executions across 23
-distinct targets.
+initial batch therefore contains 19 executions across 18 new targets. With the
+terminal supplement, A287--A325 contains 21 strict-subset executions and the
+repository contains 26 strict-subset executions through A325.
 
 ## Completed post-recovery operator records
 
@@ -39,11 +45,11 @@ group (`2^34` assignments across eight slabs) with 147,968 independently
 checked boundary bits, a unique synthetic factual assignment, and an empty
 matched control.
 
-## Exact open boundary
+## Exact terminal boundary
 
-A322 remains a live execution under its frozen W45 protocol; no A322 outcome
-is published. A325 is a frozen W46 production protocol only. A314 remains an
-order-only result. These separations are machine-checked.
+A322 and A325 are completed, independently confirmed recovery records. A314
+remains an order-only result. Qualification, order, terminal recovery, and
+control artifacts remain separately typed and machine-checked.
 
 ## Portable reproduction
 

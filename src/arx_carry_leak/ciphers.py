@@ -159,6 +159,34 @@ THREEFISH256_ROTATIONS: tuple[tuple[int, int], ...] = (
     (58, 22),
     (32, 32),
 )
+THREEFISH1024_ROTATIONS: tuple[tuple[int, ...], ...] = (
+    (24, 13, 8, 47, 8, 17, 22, 37),
+    (38, 19, 10, 55, 49, 18, 23, 52),
+    (33, 4, 51, 13, 34, 41, 59, 17),
+    (5, 20, 48, 41, 47, 28, 16, 25),
+    (41, 9, 37, 31, 12, 47, 44, 30),
+    (16, 34, 56, 51, 4, 53, 42, 41),
+    (31, 44, 47, 46, 19, 42, 44, 25),
+    (9, 48, 35, 52, 23, 31, 37, 20),
+)
+THREEFISH1024_PERMUTATION: tuple[int, ...] = (
+    0,
+    9,
+    2,
+    13,
+    6,
+    11,
+    4,
+    15,
+    10,
+    7,
+    12,
+    3,
+    14,
+    5,
+    8,
+    1,
+)
 THREEFISH_C240 = 0x1BD11BDAA9FC1A22
 MASK64 = (1 << 64) - 1
 
@@ -216,6 +244,59 @@ def threefish256_encrypt(
     return state
 
 
+def threefish1024_encrypt(
+    plaintext: list[int],
+    key: list[int],
+    tweak: list[int],
+    n_rounds: int = 80,
+) -> list[int]:
+    """Threefish-1024 reference encryption with the standard final subkey."""
+    if len(plaintext) != 16 or len(key) != 16 or len(tweak) != 2:
+        raise ValueError(
+            "Threefish-1024 expects 16 plaintext/key words and 2 tweak words"
+        )
+    if n_rounds < 1 or n_rounds % 4:
+        raise ValueError("Threefish-1024 rounds must be a positive multiple of four")
+
+    key_schedule = [word & MASK64 for word in key]
+    parity = THREEFISH_C240
+    for word in key_schedule:
+        parity ^= word
+    key_schedule.append(parity)
+    tweak_schedule = [tweak[0] & MASK64, tweak[1] & MASK64]
+    tweak_schedule.append(tweak_schedule[0] ^ tweak_schedule[1])
+
+    def inject(state: list[int], subkey_index: int) -> list[int]:
+        output = [
+            (word + key_schedule[(subkey_index + index) % 17]) & MASK64
+            for index, word in enumerate(state)
+        ]
+        output[13] = (
+            output[13] + tweak_schedule[subkey_index % 3]
+        ) & MASK64
+        output[14] = (
+            output[14] + tweak_schedule[(subkey_index + 1) % 3]
+        ) & MASK64
+        output[15] = (output[15] + subkey_index) & MASK64
+        return output
+
+    state = inject([word & MASK64 for word in plaintext], 0)
+    for round_index in range(n_rounds):
+        mixed = [0] * 16
+        rotations = THREEFISH1024_ROTATIONS[round_index % 8]
+        for pair_index, rotation in enumerate(rotations):
+            left_index = 2 * pair_index
+            right_index = left_index + 1
+            left = (state[left_index] + state[right_index]) & MASK64
+            right = _rol(state[right_index], rotation, 64) ^ left
+            mixed[left_index] = left
+            mixed[right_index] = right
+        state = [mixed[index] for index in THREEFISH1024_PERMUTATION]
+        if (round_index + 1) % 4 == 0:
+            state = inject(state, (round_index + 1) // 4)
+    return state
+
+
 def threefish256_stream(n_blocks: int, n_rounds: int, seed: int) -> tuple[bytes, int, int]:
     if n_blocks < 1:
         raise ValueError("n_blocks must be positive")
@@ -260,6 +341,7 @@ def verify_reference_vectors() -> dict[str, bool]:
         for offset in range(0, 32, 8)
     ]
     sequential_result = threefish256_encrypt([0, 0, 0, 0], sequential_key, [0, 0])
+    threefish1024_zero = threefish1024_encrypt([0] * 16, [0] * 16, [0, 0])
 
     return {
         "speck32_64": speck_result == (0xA868, 0x42F2),
@@ -267,4 +349,23 @@ def verify_reference_vectors() -> dict[str, bool]:
         == [0x94EEEA8B1F2ADA84, 0xADF103313EAE6670, 0x952419A1F4B16D53, 0xD83F13E63C9F6B11],
         "threefish256_sequential_key": sequential_result
         == [0xE894160E827BB3D4, 0xDE12213BE83D70BA, 0x2B035298135CCAFF, 0xA7DFCAA344FC69F1],
+        "threefish1024_zero": threefish1024_zero
+        == [
+            0x04B3053D0A3D5CF0,
+            0x0136E0D1C7DD85F7,
+            0x067B212F6EA78A5C,
+            0x0DA9C10B4C54E1C6,
+            0x0F4EC27394CBACF0,
+            0x32437F0568EA4FD5,
+            0xCFF56D1D7654B49C,
+            0xA2D5FB14369B2E7B,
+            0x540306B460472E0B,
+            0x71C18254BCEA820D,
+            0xC36B4068BEAF32C8,
+            0xFA4329597A360095,
+            0xC4A36C28434A5B9A,
+            0xD54331444B1046CF,
+            0xDF11834830B2A460,
+            0x1E39E8DFE1F7EE4F,
+        ],
     }

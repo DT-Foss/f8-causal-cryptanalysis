@@ -29,7 +29,9 @@ if [[ "${#mapfile_command[@]}" -eq 0 ]]; then
   echo "empty focused test list: $TEST_LIST" >&2
   exit 2
 fi
-"$PYTHON" -m pytest -q "${mapfile_command[@]}"
+for test_file in "${mapfile_command[@]}"; do
+  "$PYTHON" -m pytest -q "$test_file"
+done
 
 AUDIT="$(mktemp)"
 trap 'rm -f "$AUDIT"' EXIT
@@ -58,6 +60,8 @@ required = (
     "chacha20_round20_w44_multiview_operator_atlas_a317_v1.causal",
     "chacha20_round20_w44_covariance_whitened_atlas_a319_v1.causal",
     "chacha20_round20_holdout_selected_w45_operator_a321_order_v1.causal",
+    "chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal",
+    "chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal",
 )
 missing = [name for name in required if name not in by_name]
 if missing:

@@ -8,16 +8,16 @@ original full-round F8 configurations, the Nanjing and Rome conference
 evidence, and the complete public A107--A458 chain as code, typed `.causal`
 graphs, result JSON, controls, tests, and SHA-256 manifests.
 
-Its headline recovery record is **37 verified full-round residual-key recovery
-executions on a base Apple M4 Mac mini with 16 GB unified memory**: thirteen
-complete-domain records across nine cipher families and 24 strict-subset
-ChaCha20-R20 executions across 23 targets. Every row reconstructs the complete
+Its headline recovery record is **46 verified full-round residual-key recovery
+executions on a base Apple M4 Mac mini with 16 GB unified memory**: eighteen
+complete-domain records across thirteen primitive families and 28
+strict-subset ChaCha20-R20 executions. Every row reconstructs the complete
 master key in its declared known-key model, confirms the full public relation
-independently, and rejects the matched control.
+independently, and rejects its frozen control.
 
 ## Main results: complete full-round recovery record
 
-### Thirteen complete-domain records
+### Eighteen complete-domain records
 
 Every assignment in every declared domain was executed without early stopping.
 Each factual relation returned exactly one model; each one-bit-flipped control
@@ -38,15 +38,24 @@ returned none.
 | P128R1 | PRESENT-128, 31 rounds + K32 whitening | 38 / 90 bits | `2^38` complete | 1 / 0 | 128 bits |
 | AES256R1 | AES-256, 14 FIPS 197 rounds | 41 / 215 bits | `2^41` complete | 1 / 0 | 256 bits |
 | CHACHA20KR43 | ChaCha20, 20 rounds + feed-forward | 43 / 213 bits | `2^43` complete | 1 / 0 | 8,192 bits |
+| B3KR1 | keyed BLAKE3, all 7 standard rounds | 43 / 213 bits | `2^43` complete | 1 / 0 | 256 bits + official `b3sum` confirmation |
+| SIPKR1 | SipHash-2-4, complete 2/4 operation | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| TEAKR1 | TEA, 32 cycles / 64 Feistel updates | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| XTEAKR1 | XTEA, 32 cycles / 64 Feistel updates | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| TF1024KR1 | Threefish-1024, 80 rounds + final subkey | 39 / 985 bits | `2^39` complete | 1 / 0 | 2,048 cross-implementation bits |
 
-### Twenty-four strict-subset ChaCha20-R20 executions
+### Twenty-eight strict-subset ChaCha20-R20 executions
 
 All rows execute the standard 20 rounds plus feed-forward against eight public
-output blocks unless noted. Their schedules were frozen target-blind or
-transferred without refitting, and every execution remains below its full
-residual domain.
+output blocks unless noted. Their schedules were frozen before candidate
+execution under the declared information boundary; target-blind,
+zero-refit-transfer, and prospectively public-output-conditioned protocols are
+labeled in their artifacts. Every execution remains below its full residual
+domain. A281 and the four A286 targets use post-model one-bit control rejection
+(`O0`); A294--A374 run the same grouped candidate search against the control
+and accept zero control candidates (`S0`).
 
-| Record / target | Residual key | Frozen discovery point | Executed assignments | Factual / control | Confirmation |
+| Record / target | Residual key | Frozen discovery point | Executed assignments | Recovered / control accepted | Confirmation |
 |---|---:|---:|---:|---:|---:|
 | A281 | 20 / 236 bits | rank 37 / 256 | 151,552 / 1,048,576 | 1 / 0 | 4,096 bits |
 | A286/t01 | 20 / 236 bits | fallback, rank 254 | strict subset | 1 / 0 | 4,096 bits |
@@ -72,11 +81,20 @@ residual domain.
 | A305 | 43 / 213 bits | rank 2,114 / 4,096 | 4,539,780,431,872 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
 | A309 | 43 / 213 bits | rank 4,044 / 4,096 | 8,684,423,872,512 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
 | A313 | 44 / 212 bits | rank 2,753 / 4,096 | 11,824,044,965,888 / 17,592,186,044,416 | 1 / 0 | 8,192 bits |
+| A322 | 45 / 211 bits | rank 1,459 / 4,096 | 12,532,714,569,728 / 35,184,372,088,832 | 1 / 0 | 8,192 bits |
+| A325 | 46 / 210 bits | rank 77 / 4,096 | 1,322,849,927,168 / 70,368,744,177,664 | 1 / 0 | 8,192 bits |
+| A350 | 46 / 210 bits | rank 445 / 4,096 | 7,645,041,786,880 / 70,368,744,177,664 | 1 / 0 | 8,192 bits |
+| A374 | 48 / 208 bits | rank 102 / 4,096 | 7,009,386,627,072 / 281,474,976,710,656 | 1 / 0 | 8,192 bits |
 
 The compact verification package, exact per-record mapping, and immutable
 reconstruction gate are published in
 [`DT-Foss/fullround-key-recovery`](https://github.com/DT-Foss/fullround-key-recovery).
 The originating reports and artifacts remain hash-pinned in this repository.
+The exhaustive [recovery completeness audit](docs/FULLROUND_RECOVERY_COMPLETENESS_AUDIT.md)
+also inventories the earlier A178--A183 breadth ladder, alternate target-blind
+solver recoveries, exact same-target implementation replays, and post-barrier
+label executions without mixing those evidence classes into the 46-record
+headline frontier.
 
 ## A326--A458: complete W52 Reader frontier
 
@@ -279,15 +297,16 @@ Causal Reader. In parallel, P128R1 and AES256R1 add complete `2^38` and `2^41`
 Metal records for PRESENT-128 and AES-256. The hashes and focused reproduction
 gate are in [docs/RELEASE_A278_A286_RECORDS.md](docs/RELEASE_A278_A286_RECORDS.md).
 
-A287--A325 extend that line to W24--W45 model-free fields, exact grouped
+A287--A325 extend that line to W24--W46 model-free fields, exact grouped
 execution engines, and a cross-width operator audit. The closed recovery set
 adds CHACHA20KR43, a complete `2^43` domain execution, and 19 confirmed
 strict-subset executions spanning W24, W28, W32, W43, and W44. Every recovery uses
 all 20 ChaCha20 rounds plus feed-forward, eight public output blocks, an empty
 matched control, and two independent confirmations. A315/A317/A319 add
 pre-reveal-committed rank-only evaluations; A321 selects the unchanged W45
-operator; and A324 qualifies the exact W46 grouped engine. A322 remains live,
-A325 is protocol-only, and A314 is order-only. The exact release boundary is in
+operator; A322 completes W45 at rank 1,459; A324 qualifies the exact W46 grouped
+engine; and A325 completes W46 at rank 77. A314 remains order-only. The terminal
+release supplement and exact evidence boundary are in
 [docs/RELEASE_A287_A325_CRYPTANALYSIS.md](docs/RELEASE_A287_A325_CRYPTANALYSIS.md).
 
 A326--A458 lift the same program from single-axis W46 ranking into a complete
@@ -354,7 +373,8 @@ Ten evidence tiers make cost explicit:
 | `retained` | `./scripts/reproduce_a211_a220p.sh` | authenticate A211--A220P evidence and frozen A220/A220B/A222 infrastructure without a production solve |
 | `frontier` | `./scripts/reproduce_a223_a277.sh` | hash-check and test completed A223--A277 Reader, recovery, Causal, and cross-family records without rerunning complete production domains |
 | `records` | `./scripts/reproduce_a278_a286_records.sh` | verify A281/A286 strict-subset recoveries plus PRESENT-128 W38 and AES-256 W41 without rerunning production domains |
-| `cryptanalysis` | `./scripts/reproduce_a287_a325.sh` | verify CHACHA20KR43, 19 strict-subset executions, completed A287--A325 order/engine/audit records, and native Causal readback |
+| `cryptanalysis` | `./scripts/reproduce_a287_a325.sh` | verify CHACHA20KR43, 21 strict-subset executions through A325, completed order/engine/audit records, and native Causal readback |
+| `recovery-completeness` | `./scripts/reproduce_fullround_recovery_completeness.sh` | verify the five additional complete-domain records and A322/A325/A350/A374, their controls, independent confirmation, hashes, and native Causal readback |
 | `frontier-2` | `python scripts/verify_a326_a458_frontier.py` | authenticate every released A326--A458 artifact, five complete pair streams, headline invariants, and the A455/A457 publication boundary |
 | `extended` | `./scripts/reproduce_shake_native_extended.sh` | resumable A127 native 32-coordinate SHAKE enumeration |
 | `solver` | `./scripts/reproduce_shake_solver_frontier.sh` | reproduce A128--A151 frontiers and validate retained A152--A177 prospective, affine, encoder, resource, native, and alias/order Readers |

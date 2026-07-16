@@ -268,14 +268,39 @@ def test_a324_target_free_w46_engine_qualification() -> None:
     assert result["production_W46_candidate_used"] is False
 
 
-def test_open_execution_results_are_absent() -> None:
-    forbidden = (
+def test_a322_a325_terminal_results_are_published() -> None:
+    required = (
         RESULTS / "chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
         RESULTS / "chacha20_round20_holdout_selected_w45_recovery_a322_v1.causal",
         RESULTS / "chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
         RESULTS / "chacha20_round20_holdout_selected_w46_recovery_a325_v1.causal",
     )
-    assert not any(path.exists() for path in forbidden)
+    assert all(path.is_file() for path in required)
+    for result_name, config_name, attempt, rank in (
+        (
+            "chacha20_round20_holdout_selected_w45_recovery_a322_v1.json",
+            "chacha20_round20_w45_fine_band_recovery_a314_v1.json",
+            "A322",
+            1459,
+        ),
+        (
+            "chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+            "chacha20_round20_holdout_selected_w46_recovery_a325_v1.json",
+            "A325",
+            77,
+        ),
+    ):
+        result = _load(f"research/results/v1/{result_name}")
+        challenge = _load(f"research/configs/{config_name}")["public_challenge"]
+        assert result["attempt_id"] == attempt
+        assert result["discovery"]["executed_prefix_groups"] == rank
+        assert result["discovery"]["matched_control_candidates"] == 0
+        confirmation = result["confirmation"]
+        hashes = _confirm_challenge(
+            challenge, [int(value) for value in confirmation["recovered_key_words"]]
+        )
+        assert hashes == confirmation["word_reference_sha256"]
+        assert hashes == confirmation["byte_reference_sha256"]
     assert (RESULTS / "chacha20_round20_w44_width_conditioned_fine_portfolio_a313_order_v1.json").is_file()
     assert (
         CONFIGS / "chacha20_round20_holdout_selected_w45_recovery_a322_design_v1.json"
@@ -298,5 +323,7 @@ def test_headline_causal_artifacts_present() -> None:
         "chacha20_round20_w44_multiview_operator_atlas_a317_v1",
         "chacha20_round20_w44_covariance_whitened_atlas_a319_v1",
         "chacha20_round20_holdout_selected_w45_operator_a321_order_v1",
+        "chacha20_round20_holdout_selected_w45_recovery_a322_v1",
+        "chacha20_round20_holdout_selected_w46_recovery_a325_v1",
     )
     assert all((RESULTS / f"{stem}.causal").is_file() for stem in stems)

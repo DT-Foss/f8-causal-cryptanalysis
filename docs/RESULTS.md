@@ -727,12 +727,14 @@ The release record and exact manifest are
 | A321 | `raw_nearest_prototype_Linf` wins the frozen holdout selection at rank 2,159 and binds the exact W45 deployment order. | Eight precommitted W44/W45 pairs; no A314 label or manual override. |
 | A323 | Eight W44 operators are compared over all 4,096 cells; every operator wins at least one cell and raw Linf is the most stable unchanged W44-to-W45 geometry (`rho=0.3498033`). | Target-blind rank-vector audit; zero target labels, refits, or candidate execution. |
 | A324 | The target-free W46 engine executes one complete `2^34` group across eight slabs. | 147,968 boundary bits checked; unique synthetic factual assignment; empty control; no production target. |
+| A322 | W45 assignment `0x091190ecc0e8` recovers at rank 1,459. | Exactly 12,532,714,569,728/35,184,372,088,832 assignments; empty control; 8,192 checked bits. |
+| A325 | W46 assignment `0x1df3bae9e3a6` recovers at rank 77. | Exactly 1,322,849,927,168/70,368,744,177,664 assignments; empty control; 8,192 checked bits. |
 
 A304/A307/A311 separately qualify complete grouped W43/W44/W45 execution
 without production targets. A287--A293, A298--A301, A308, A310, A312,
 A314 and A316/A318/A320 retain their exact model-free boundaries or frozen
-order objects. A322 remains live and A325 remains protocol-only; no outcome is
-published for either.
+order objects. A322 and A325 now retain terminal result JSON, independent
+confirmation, empty matched controls, and authentic Causal graphs.
 
 The release record, gap audit, and manifest are
 [docs/RELEASE_A287_A325_CRYPTANALYSIS.md](RELEASE_A287_A325_CRYPTANALYSIS.md),

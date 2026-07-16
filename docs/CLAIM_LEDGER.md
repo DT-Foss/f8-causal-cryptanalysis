@@ -168,9 +168,10 @@ write; it does not alter any of the four per-target results.
 | A315/A317/A319 | Three pre-reveal-committed operator families are evaluated exactly on the independently confirmed A313 prefix without duplicate candidate execution. | Rank-only evaluation; zero target-label use and zero post-reveal refits. |
 | A321 | Independent W44 holdout rank selects `raw_nearest_prototype_Linf` at rank 2,159 and deploys its exact paired W45 order. | Selection rule and eight order pairs frozen before A313/A314 outcomes; no W45 labels or manual override. |
 | A324 | One complete W46 prefix group executes exactly across eight `2^31` slabs and passes 147,968 boundary-bit checks. | Target-free synthetic qualification; unique factual assignment and empty matched control; no production challenge. |
+| A322 | The frozen W45 holdout-selected order recovers assignment `0x091190ecc0e8` at rank 1,459. | 12,532,714,569,728 of `2^45` assignments; complete groups; empty matched control; 8,192 checked bits. |
+| A325 | The unchanged W46 transfer recovers assignment `0x1df3bae9e3a6` at rank 77. | 1,322,849,927,168 of `2^46` assignments; complete groups; empty matched control; 8,192 checked bits. |
 | A323 | Complete target-blind cross-width operator stability is measured over eight exact 4,096-cell W44/W45 order pairs. | Rank geometry and complementarity only; no secret label or candidate execution. |
 
-A322 is a live execution under its frozen protocol; A325 is a frozen W46
-protocol without a production outcome. A314 is a completed model-free order,
-not a recovery. The publication gate rejects any A322/A325 outcome file in
-this release.
+A322 and A325 are terminal independently confirmed recoveries under their
+unchanged frozen protocols. A314 is a completed model-free order, not a
+recovery. The publication gate requires both terminal outcome files.
