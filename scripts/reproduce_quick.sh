@@ -103,7 +103,7 @@ echo "causal artifacts: OK ($CAUSAL_COUNT validated)"
   research/results/v1/A220B_A222_INFRA_SHA256SUMS \
   research/results/v1/A223_A277_SHA256SUMS \
   research/results/v1/A278_A286_RECORDS_SHA256SUMS
-.venv/bin/python scripts/verify_a326_a456_frontier.py
+.venv/bin/python scripts/verify_a326_a458_frontier.py
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m compileall -q src research/experiments tests
 
 echo "quick evidence tier: OK"

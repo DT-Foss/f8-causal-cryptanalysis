@@ -1,0 +1,111 @@
+{
+  "A458_W52_pair_stream_seen_at_freeze": false,
+  "A458_candidate_results_seen_at_freeze": false,
+  "A458_selected_pattern_seen_at_freeze": false,
+  "W52_target_labels_used": 0,
+  "anchors": {
+    "A456_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.causal",
+      "sha256": "ef9024b9c5644958ca4a3f7ebff8ec16c2a448867f4a7e86445b83e07390213d"
+    },
+    "A456_design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_design_v1.json",
+      "sha256": "a1a2529fbb9280d4f031f7fb816eb3aa85a64671406c38bbd60b4c80056a800f"
+    },
+    "A456_implementation": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_implementation_v1.json",
+      "sha256": "c31ce92b9d32dd08406e1f1563336381f8bd63b8a0118edd9dc6099616974369"
+    },
+    "A456_pair_stream": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_pair_stream_uint16be_uint16be_v1.bin",
+      "sha256": "9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352"
+    },
+    "A456_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A456_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "37898bba41c518b0f07c7c415a32ecc9afe7264a3936003b14b60513f7ec6a32"
+    },
+    "A456_result": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.json",
+      "sha256": "8a06661bd6ace82fc9b6854eb4158ddc8a92a47563d71d4aee1cf47707cbbc88"
+    },
+    "A456_runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456.py",
+      "sha256": "4a2a69351775b6db7096ea6fef182bd30a77b8f725d4b26205474c437dd2f74b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_extension_a458_design_v1.json",
+      "sha256": "269d10b462dd1da0c1d1dc30d96ed8b32b543ae98a1754750324a2079801d1d2"
+    },
+    "native_executable": {
+      "path": "research/bin/a458_frequency_ray_compiler",
+      "sha256": "621c74121cb8c31d7331ebf6ec6e58e14b32897ec907daca854f291cee8dec79"
+    },
+    "native_source": {
+      "path": "research/native/a458_frequency_ray_compiler.cpp",
+      "sha256": "bb0c95cee7f07c1092cdbd6df685dfb14458bfa53b27170f86248ed61312ca03"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_no_refit_frequency_ray_extension_a458.sh",
+      "sha256": "4c8b81c5ed428ad036f51f7b8b8fd455b3474b3c7e55918d65fbab1aa8dcc37f"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_frequency_ray_extension_a458.py",
+      "sha256": "9b24dce3b2b0f3eff5ad9b7d623dc6b1982968088396114e6ac9286ad24ae159"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_no_refit_frequency_ray_extension_a458.py",
+      "sha256": "f744124d2e3ea6a0356fee321b1dcfcf24228b40ac4d6adf2463183b4f929fdc"
+    }
+  },
+  "attempt_id": "A458",
+  "candidate_assignments_executed": 0,
+  "candidate_count": 405,
+  "candidate_family_sha256": "5fcd71fe971cc0075fc58356944f888e119fd23a3eadd7e82f292e576a368753",
+  "commitment_state": "complete_paired_B1_B0_single_block_ray_evaluator_and_active_component_period31_W52_compiler_frozen_before_any_A458_candidate_value_or_selected_pattern",
+  "design_sha256": "269d10b462dd1da0c1d1dc30d96ed8b32b543ae98a1754750324a2079801d1d2",
+  "feature_refits": 0,
+  "implementation_commitment_sha256": "50dcc66169031754687a6a955ea2bfe69a4c64878eb1c7c62f6ef3e6009c8120",
+  "model_refits": 0,
+  "orbit_count": 18,
+  "orbit_family_sha256": "3d0f72309e7db1985ce1cc2739828f32ddb42ad036e23fb86a3b7f55b42b9172",
+  "orbits_by_arm": {
+    "B0": 9,
+    "B1": 9
+  },
+  "patterns_by_arm_m": {
+    "B0": {
+      "10": 20,
+      "11": 22,
+      "12": 24,
+      "13": 26,
+      "14": 28,
+      "15": 30,
+      "7": 14,
+      "8": 16,
+      "9": 18
+    },
+    "B1": {
+      "10": 21,
+      "11": 23,
+      "12": 25,
+      "13": 27,
+      "14": 29,
+      "15": 31,
+      "7": 15,
+      "8": 17,
+      "9": 19
+    }
+  },
+  "prior_secret_recovery_progress_or_result_read": false,
+  "schema": "chacha20-round20-w52-no-refit-frequency-ray-extension-a458-implementation-v1",
+  "selection_objective": [
+    "maximize_candidate_minimum_fixed_block_bit_gain",
+    "maximize_cyclic_orbit_median_minimum_fixed_block_bit_gain",
+    "maximize_candidate_aggregate_bit_gain",
+    "maximize_cyclic_orbit_median_aggregate_bit_gain",
+    "maximize_targets_at_or_above_median_rank",
+    "minimize_worst_rank",
+    "minimize_period",
+    "lexicographically_smallest_arm_then_pattern"
+  ]
+}

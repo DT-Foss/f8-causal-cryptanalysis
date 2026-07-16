@@ -1,0 +1,157 @@
+{
+  "A426_A438_A440_A443_A450_A452_secret_result_stop_or_worker_progress_read": false,
+  "A434_qualification_content_read_at_freeze": false,
+  "A455_candidate_progress_or_result_read": false,
+  "A457_candidate_or_progress_available_at_freeze": false,
+  "anchors": {
+    "A426_protocol": {
+      "path": "research/configs/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426_v1.json",
+      "sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3"
+    },
+    "A426_runner": {
+      "path": "research/experiments/chacha20_round20_w52_a416_fresh_shared_stop_recovery_a426.py",
+      "sha256": "d849065a0bc33f1d3eff3f5b7638948c86b683f8020bfd8a0f5ed0e9ca449637"
+    },
+    "A435_implementation": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_implementation_v1.json",
+      "sha256": "fd37e58b9786cafbe605fb1738204e815de610d20982b459b1007492615ee126"
+    },
+    "A435_protocol": {
+      "path": "research/configs/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435_v1.json",
+      "sha256": "a6616f0ce3ef8c92a67381e8d3c6acde649f0842d85ea7be9cc488e2182044cd"
+    },
+    "A435_runner": {
+      "path": "research/experiments/chacha20_round20_w52_dual_axis_square_wavefront_recovery_a435.py",
+      "sha256": "c9d355f1afda18b6a5f3367f56ba3d9d7658a2b3c3e79ce80d1e8618578fb3b6"
+    },
+    "A456_causal": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.causal",
+      "sha256": "ef9024b9c5644958ca4a3f7ebff8ec16c2a448867f4a7e86445b83e07390213d"
+    },
+    "A456_design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_design_v1.json",
+      "sha256": "a1a2529fbb9280d4f031f7fb816eb3aa85a64671406c38bbd60b4c80056a800f"
+    },
+    "A456_implementation": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_implementation_v1.json",
+      "sha256": "c31ce92b9d32dd08406e1f1563336381f8bd63b8a0118edd9dc6099616974369"
+    },
+    "A456_pair_stream": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_pair_stream_uint16be_uint16be_v1.bin",
+      "sha256": "9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352"
+    },
+    "A456_personal_readback": {
+      "path": "research/reports/CAUSAL_CHACHA20_A456_PERSONAL_READER_READBACK_V1.md",
+      "sha256": "37898bba41c518b0f07c7c415a32ecc9afe7264a3936003b14b60513f7ec6a32"
+    },
+    "A456_result": {
+      "path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.json",
+      "sha256": "8a06661bd6ace82fc9b6854eb4158ddc8a92a47563d71d4aee1cf47707cbbc88"
+    },
+    "A456_runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456.py",
+      "sha256": "4a2a69351775b6db7096ea6fef182bd30a77b8f725d4b26205474c437dd2f74b"
+    },
+    "design": {
+      "path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_recovery_a457_design_v1.json",
+      "sha256": "00ac61ccbed292821435a57cad140d0622ce307d8d8e27c17d60c1c7b3a95232"
+    },
+    "reproducer": {
+      "path": "scripts/reproduce_chacha20_round20_w52_no_refit_frequency_ray_portfolio_recovery_a457.sh",
+      "sha256": "3e56b94bac12047e2e7ced58928e4c280bfe9af3653ed8a3ca2caf7353020ce5"
+    },
+    "runner": {
+      "path": "research/experiments/chacha20_round20_w52_no_refit_frequency_ray_portfolio_recovery_a457.py",
+      "sha256": "f6ca71e291e54504655b9f9ff5f1abf8385dc9539c1df8f143d00d31aad47143"
+    },
+    "test": {
+      "path": "tests/test_chacha20_round20_w52_no_refit_frequency_ray_portfolio_recovery_a457.py",
+      "sha256": "b48d7e659f007a29b3d531d16be136f1123d681c966de04e8d2fd3f73fc58f15"
+    }
+  },
+  "attempt_id": "A457",
+  "commitment_state": "complete_restart_safe_eight_worker_A456_BOOOOOOHHHHHH_frequency_ray_executor_frozen_without_reading_any_prior_secret_result_stop_or_worker_progress",
+  "design_sha256": "00ac61ccbed292821435a57cad140d0622ce307d8d8e27c17d60c1c7b3a95232",
+  "engine_reuse_contract": {
+    "A456_nonfactorized_pair_stream_used": true,
+    "factorized_square_pair_order_reused": false,
+    "prior_candidate_progress_or_outcome_consumed": false,
+    "reuse_only": [
+      "qualified A434 2^28-subcell filter",
+      "eight-worker modulo partition",
+      "restart-safe progress",
+      "matched control",
+      "shared confirmed stop",
+      "dual-reference eight-block confirmation"
+    ],
+    "source_attempt": "A435/A438/A440/A443/A450/A452/A455"
+  },
+  "execution_contract": {
+    "candidates_per_complete_pair_cell": 268435456,
+    "complete_domain_assignments": 4503599627370496,
+    "complete_pair_cell_before_success_evaluation": true,
+    "dual_reference_confirmation_blocks": 8,
+    "dual_reference_confirmation_output_bits": 8192,
+    "early_stop_inside_pair_cell": false,
+    "feedforward_included": true,
+    "full_rounds": 20,
+    "known_key_bits": 204,
+    "matched_one_bit_control_must_be_empty": true,
+    "pair_cells": 16777216,
+    "primitive": "standard RFC8439 ChaCha20 block function",
+    "public_output_blocks": 8,
+    "restart_safe_progress_per_worker": true,
+    "shared_stop_only_after_independent_confirmation": true,
+    "unknown_key_bits": 52,
+    "worker_partition": "global_pair_index_mod_8",
+    "worker_tasks_each": 2097152,
+    "workers": 8
+  },
+  "implementation_commitment_sha256": "3f93aa3e364ca0a51ac9f9b9380c621f573dab26dacf9d7ef22495fd6b5e434e",
+  "prior_live_recovery_filter_outcomes_consumed": false,
+  "production_feature_refits": 0,
+  "production_model_refits": 0,
+  "production_target_labels_used": 0,
+  "schedule_transfer_contract": {
+    "W52_true_pair_rank_known_at_freeze": false,
+    "copy_worker_modulo_mapping_without_refit": true,
+    "feature_refits": 0,
+    "model_refits": 0,
+    "production_candidate_assignments_executed": 0,
+    "random_access_pair_at_global_index": true,
+    "read_only_memory_map": true,
+    "source_attempt": "A456",
+    "source_calibration_sha256": "581145b5a2e9973596e5911f21ad70bfb7319676dcc930b4ba1f675ab30a2f8d",
+    "source_complete_permutation": true,
+    "source_decision": "separate_recovery_queue_qualified",
+    "source_fusion_algorithm": "deduplicated_periodic_weighted_first_encounter",
+    "source_geometry_sha256": "107091fe07db4fd57197d4d741f46cc2a61bbf688eefa50b4ead9285c4ec73c7",
+    "source_guarantee_sha256": "936c6a2b934134b9adae34d367db0f2262a2507b659e88911baeba63c9581873",
+    "source_hard_rank_guarantee": "fused_rank <= min(2^24, component_proposal_key + 1) for H, B, and O",
+    "source_hard_rank_violations": 0,
+    "source_maximum_observed_best_component_rank_ratio": 8.157894736842104,
+    "source_maximum_observed_hybrid_rank_ratio": 4.0,
+    "source_pair_stream_bytes": 67108864,
+    "source_pair_stream_cells": 16777216,
+    "source_pair_stream_sha256": "9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352",
+    "source_result_commitment_sha256": "6ef9c4d507892052abf766ee9d34e08fb3833c2377d05c4255e34ff083b80908",
+    "source_result_sha256": "8a06661bd6ace82fc9b6854eb4158ddc8a92a47563d71d4aee1cf47707cbbc88",
+    "source_selected_counts_H_B_O": [
+      6,
+      1,
+      6
+    ],
+    "source_selected_pattern": "BOOOOOOHHHHHH",
+    "target_labels_used": 0
+  },
+  "schema": "chacha20-round20-w52-no-refit-frequency-ray-portfolio-recovery-a457-implementation-v1",
+  "source_A426_protocol_sha256": "746c880115464383247ee0ef8d52d6095195f26fa4b69178a8de281cd4c483a3",
+  "source_A426_public_challenge_sha256": "5d60dac2570756d681f248a6cfb818681c644d87843d273bc0e9b2ee46731b54",
+  "source_A456_calibration_sha256": "581145b5a2e9973596e5911f21ad70bfb7319676dcc930b4ba1f675ab30a2f8d",
+  "source_A456_guarantee_sha256": "936c6a2b934134b9adae34d367db0f2262a2507b659e88911baeba63c9581873",
+  "source_A456_pair_stream_bytes": 67108864,
+  "source_A456_pair_stream_sha256": "9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352",
+  "source_A456_result_commitment_sha256": "6ef9c4d507892052abf766ee9d34e08fb3833c2377d05c4255e34ff083b80908",
+  "source_A456_result_sha256": "8a06661bd6ace82fc9b6854eb4158ddc8a92a47563d71d4aee1cf47707cbbc88",
+  "source_pair_cells": 16777216
+}

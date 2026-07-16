@@ -9,6 +9,7 @@ input is a deliberately excluded local CNF, trace directory, or native binary.
 
 from __future__ import annotations
 
+import platform
 from pathlib import Path
 
 import pytest
@@ -58,6 +59,14 @@ PORTABLE_READER_SUPERSEDED_CHECKS = {
     "tests/test_chacha20_round20_w24_causal_ordered_metal_a294.py::test_frozen_protocol_reloads_without_secret_or_target_prefix",
     "tests/test_chacha20_round20_w43_width_conditioned_band_portfolio_a309.py::test_training_rows_and_ai_native_readback_are_authentic",
     "tests/test_chacha20_round20_w44_fine_selected_channel_transfer_a312.py::test_authentic_source_graphs_close_reader_and_request_wider_transfer",
+    "tests/test_chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456.py::test_result_and_authentic_causal_reopen_when_present",
+    "tests/test_chacha20_round20_w52_no_refit_frequency_ray_extension_a458.py::test_result_and_authentic_causal_reopen_when_present",
+}
+
+NATIVE_APPLE_ARM64_TEST_MODULES = {
+    "tests/test_chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456.py",
+    "tests/test_chacha20_round20_w52_no_refit_frequency_ray_portfolio_recovery_a457.py",
+    "tests/test_chacha20_round20_w52_no_refit_frequency_ray_extension_a458.py",
 }
 
 
@@ -70,6 +79,15 @@ def pytest_collection_modifyitems(items: list[pytest.Item]) -> None:
         except ValueError:
             normalized = path.as_posix()
         key = "::".join((normalized, relative_nodeid[1])) if len(relative_nodeid) == 2 else normalized
+        if normalized in NATIVE_APPLE_ARM64_TEST_MODULES and (
+            platform.system() != "Darwin" or platform.machine() != "arm64"
+        ):
+            item.add_marker(
+                pytest.mark.skip(
+                    reason="retained native compiler is the hash-frozen Apple-arm64 execution artifact"
+                )
+            )
+            continue
         if key in PORTABLE_READER_SUPERSEDED_CHECKS:
             item.add_marker(
                 pytest.mark.skip(

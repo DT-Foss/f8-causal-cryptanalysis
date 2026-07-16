@@ -1,0 +1,140 @@
+{
+  "schema": "chacha20-round20-w52-no-refit-frequency-ray-extension-a458-design-v1",
+  "attempt_id": "A458",
+  "design_state": "frozen_after_personal_A456_authentic_Causal_readback_before_any_A458_candidate_calibration_or_W52_materialization_or_recovery_execution",
+  "scientific_question": "Does the single-block cyclic orbit that won independently at every measured A456 scale m=3,4,5,6 continue improving for m=7..15, and is the sole B proposal still beneficial when compared prospectively with a matched B-free endpoint at every scale?",
+  "source_contract": {
+    "A456_result_sha256": "8a06661bd6ace82fc9b6854eb4158ddc8a92a47563d71d4aee1cf47707cbbc88",
+    "A456_result_commitment_sha256": "6ef9c4d507892052abf766ee9d34e08fb3833c2377d05c4255e34ff083b80908",
+    "A456_calibration_sha256": "581145b5a2e9973596e5911f21ad70bfb7319676dcc930b4ba1f675ab30a2f8d",
+    "A456_pair_stream_sha256": "9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352",
+    "A456_personal_readback_sha256": "37898bba41c518b0f07c7c415a32ecc9afe7264a3936003b14b60513f7ec6a32",
+    "A456_selected_pattern": "BOOOOOOHHHHHH",
+    "A456_selected_counts_H_B_O": [
+      6,
+      1,
+      6
+    ],
+    "A456_remaining96_aggregate_bit_gain": 0.4894376102314375,
+    "A456_remaining96_minimum_fixed_block_bit_gain": 0.17634772194140247,
+    "A456_remaining96_positive_fixed_block_count": 8,
+    "A456_breadcrumb": "the best schedule at every A456 scale m=3,4,5,6 belongs to the same single-block cyclic orbit B O^m H^m, and the strongest remaining96 minimum and aggregate occur at the measured boundary m=6",
+    "component_symbol_map": {
+      "H": "hybrid_proof_top16_equal",
+      "B": "proof_borda_top32",
+      "O": "proof_best_single"
+    }
+  },
+  "candidate_family_contract": {
+    "m_values": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "B1_main_ray": {
+      "canonical_pattern_per_m": "B O^m H^m",
+      "counts_H_B_O": "[m,1,m]",
+      "period": "2*m+1",
+      "phase_enumeration": "all cyclic rotations",
+      "expected_unique_patterns": 207,
+      "expected_cyclic_orbits": 9
+    },
+    "B0_matched_endpoint_ray": {
+      "canonical_pattern_per_m": "O^m H^m",
+      "counts_H_B_O": "[m,0,m]",
+      "period": "2*m",
+      "phase_enumeration": "all cyclic rotations",
+      "purpose": "matched-scale ablation of the sole B proposal and finite approximation to the B-frequency-zero endpoint",
+      "expected_unique_patterns": 198,
+      "expected_cyclic_orbits": 9
+    },
+    "expected_unique_patterns": 405,
+    "expected_cyclic_orbits": 18,
+    "deduplication": "exact string identity within arm followed by deterministic arm,m,pattern ordering",
+    "active_component_cursor_semantics": "every occurrence of an active symbol advances that component Reader by exactly one rank; B0 schedules never query or advance B",
+    "cell_first_key_formula": "minimum over active components j of period*floor((rank_j-1)/frequency_j)+occurrence_slot_j[(rank_j-1) mod frequency_j]",
+    "fused_order": "stable ascending (first_key, canonical_pair_id)",
+    "complete_permutation_required": true,
+    "exact_per_active_component_proposal_bound_required": true
+  },
+  "selection_contract": {
+    "selection_scope": "A448_remaining96_A447_fixed_model_no_refit_only",
+    "candidate_truth_labels": 96,
+    "required_positive_fixed_blocks": 8,
+    "lexicographic_objective": [
+      "maximize_candidate_minimum_fixed_block_bit_gain",
+      "maximize_cyclic_orbit_median_minimum_fixed_block_bit_gain",
+      "maximize_candidate_aggregate_bit_gain",
+      "maximize_cyclic_orbit_median_aggregate_bit_gain",
+      "maximize_targets_at_or_above_median_rank",
+      "minimize_worst_rank",
+      "minimize_period",
+      "lexicographically_smallest_arm_then_pattern"
+    ],
+    "A456_BOOOOOOHHHHHH_is_frozen_external_control_not_a_candidate": true,
+    "B1_and_B0_are_both_selection_eligible": true,
+    "complete128_crossfit_is_report_only_not_selection": true,
+    "W52_pair_geometry_is_report_only_not_selection": true,
+    "W52_target_labels_used_for_selection": 0,
+    "reader_refits": 0,
+    "model_refits": 0
+  },
+  "W52_materialization_contract": {
+    "materialize_selected_A458_pattern_even_if_A456_remains_stronger": true,
+    "component_orders_source": "A449_via_A456_anchors",
+    "pair_cells": 16777216,
+    "expected_artifact_bytes": 67108864,
+    "encoding": "uint16be_prefix_then_uint16be_off_axis",
+    "complete_random_access_permutation": true,
+    "native_compiler_period_limit": 31,
+    "native_compiler_must_support_HBO_and_HO_active_component_sets": true,
+    "native_compiler_must_match_reference_on_exhaustive_small_permutations": true,
+    "candidate_assignments_executed": 0
+  },
+  "decision_contract": {
+    "recovery_queue_if": "selected A458 pattern strictly improves A456 remaining96 minimum fixed-block gain, or ties it and strictly improves aggregate gain",
+    "retain_A456_if": "A458 fails the recovery_queue_if condition",
+    "next_front_if_A456_retained": "treat m=6 as the localized single-block frequency optimum and replace global periodic allocation with calibration-only prefix-state adaptation",
+    "next_front_if_A458_qualified": "freeze a separate recovery executor behind A457 and continue from the selected scale and active-component set"
+  },
+  "information_boundary": {
+    "A456_result_and_authentic_Causal_personally_read_before_design": true,
+    "A458_candidate_results_seen_before_design": false,
+    "A458_selected_pattern_seen_before_design": false,
+    "A458_W52_pair_stream_seen_before_design": false,
+    "A426_A438_A440_A443_A450_A452_A455_A457_secret_result_stop_or_worker_progress_read": false,
+    "W52_true_pair_rank_known": false,
+    "W52_target_labels_used": 0,
+    "feature_refits": 0,
+    "model_refits": 0,
+    "production_candidate_assignments_executed": 0
+  },
+  "causal_contract": {
+    "format": "authentic_dotcausal_v1_AI_native",
+    "reader": "dotcausal.io.CausalReader",
+    "required_semantic_chain": "A456 boundary winner -> paired B1/B0 single-block extension -> selected no-refit schedule -> exact W52 geometry -> recovery-or-adaptive-allocation decision",
+    "main_agent_personal_reader_readback_required": true
+  },
+  "source_anchors": {
+    "A456_runner_path": "research/experiments/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456.py",
+    "A456_runner_sha256": "4a2a69351775b6db7096ea6fef182bd30a77b8f725d4b26205474c437dd2f74b",
+    "A456_design_path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_design_v1.json",
+    "A456_design_sha256": "a1a2529fbb9280d4f031f7fb816eb3aa85a64671406c38bbd60b4c80056a800f",
+    "A456_implementation_path": "research/configs/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_implementation_v1.json",
+    "A456_implementation_sha256": "c31ce92b9d32dd08406e1f1563336381f8bd63b8a0118edd9dc6099616974369",
+    "A456_result_path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.json",
+    "A456_result_sha256": "8a06661bd6ace82fc9b6854eb4158ddc8a92a47563d71d4aee1cf47707cbbc88",
+    "A456_pair_stream_path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_pair_stream_uint16be_uint16be_v1.bin",
+    "A456_pair_stream_sha256": "9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352",
+    "A456_causal_path": "research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.causal",
+    "A456_causal_sha256": "ef9024b9c5644958ca4a3f7ebff8ec16c2a448867f4a7e86445b83e07390213d",
+    "A456_personal_readback_path": "research/reports/CAUSAL_CHACHA20_A456_PERSONAL_READER_READBACK_V1.md",
+    "A456_personal_readback_sha256": "37898bba41c518b0f07c7c415a32ecc9afe7264a3936003b14b60513f7ec6a32"
+  }
+}
