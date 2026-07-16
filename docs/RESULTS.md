@@ -5,6 +5,37 @@ model**, **known variables**, **recovered object**, **complexity**, and
 **controls**. Numeric claims link to immutable result JSON and the report that
 interprets it.
 
+## Threefish-1024 terminal full-round recovery: TF1024KR1
+
+[`threefish1024_metal_record_v1.json`](../research/results/v1/threefish1024_metal_record_v1.json)
+and
+[`FULLROUND_THREEFISH1024_METAL_RECORD_V1.md`](../research/reports/FULLROUND_THREEFISH1024_METAL_RECORD_V1.md)
+record the complete terminal recovery.
+
+- **Attack model:** one frozen Threefish-1024 plaintext/ciphertext relation,
+  known tweak, 985 known master-key bits, and 39 unknown master-key bits;
+  encryption executes all 80 standard rounds and the final subkey.
+- **Known variables:** plaintext, ciphertext, tweak, key words 1--15, and the
+  upper 25 bits of key word 0.
+- **Recovered object:** the unique residual assignment `0x2718170cd1`, which
+  reconstructs key word 0 as `0x0a5d4f2718170cd1` and completes the 1,024-bit
+  master key.
+- **Complexity:** all `2^39 = 549,755,813,888` assignments execute without
+  early stopping; success is evaluated only after the complete domain.
+- **Controls:** the factual relation returns one full model and the identical
+  complete search against the one-bit-flipped relation returns zero. The
+  canonical implementation and an independent Skein 1.3 transcription each
+  confirm all 1,024 output bits, for 2,048 checked bits.
+- **Integrity:** terminal JSON SHA-256
+  `a1267651b7cf283a1d3fe94da15e63b1746650d97bc04d047ed7efc881cf3a5d`;
+  authentic Causal SHA-256
+  `9608580fef4dd08e59002a4b23e48d12f622a6d5e833afeef4a8416762d32c31`.
+
+This recovery and the original Threefish-1024 F8 anchor below are distinct
+results. TF1024KR1 recovers residual key material from a public full-round
+relation; the original anchor is a known-key adjacent-state fixed-point
+distinguisher and recovers no key material.
+
 ## Original full-round F8 anchors
 
 The committed snapshot at

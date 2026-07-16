@@ -4,6 +4,13 @@ Reports in this directory interpret retained results. They must link every
 numeric statement to a JSON/CSV artifact and every execution claim to the
 attempt log. Raw outputs take precedence over report prose.
 
+`FULLROUND_THREEFISH1024_METAL_RECORD_V1.md` records TF1024KR1: the complete
+`2^39` residual domain executes through all 80 Threefish-1024 rounds and the
+final subkey, returning the unique assignment `0x2718170cd1` and zero models
+for the matched one-bit control. Canonical and independently transcribed Skein
+1.3 implementations confirm all 1,024 output bits each. This is a terminal
+residual-key recovery, not the older R80 F8 fixed-point distinguisher.
+
 `FORMULA_ATLAS_FULL_REAUDIT_V1.md` records the unnumbered, keyword-independent
 re-read of nine mathematical papers, 113 source pages, and all 2,411 immutable
 atlas entries.  It retains complete page/entry coverage and an 18-family

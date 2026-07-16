@@ -13,6 +13,7 @@ such; empirical confirmations retain their sample counts.
 | IDs | Public claim | Evidence |
 |---|---|---|
 | Anchors 1--12 | Twelve full-round known-key internal-boundary F8 configurations are preserved in the original curated suite. | `provenance/fullround_anchors/f8/`, `ANCHOR_SHA256SUMS`, source commit `2e23b23...e62f73` |
+| TF1024KR1 | A complete `2^39` search through all 80 Threefish-1024 rounds plus the final subkey recovers the unique 39-bit residual assignment `0x2718170cd1`; the factual/control model counts are 1/0 and two independent implementations confirm 2,048 output bits. | `threefish1024_metal_record_v1.json`, `threefish1024_metal_record_v1.causal`, `FULLROUND_THREEFISH1024_METAL_RECORD_V1.md`, `FULLROUND_RECOVERY_COMPLETENESS_SHA256SUMS` |
 | A107--A109 | PRESENT-128 R31→R32 has exactly seven population-nonzero single-bit F8 cells, predicted from pLayer fixed points and the S-box truth table. | `present128_*`, `present_fullround_exact_mechanism_v1.*` |
 | A110--A112 | SHA-256 and SHA-512 full compression feed-forward is exactly invertible with the chaining state, and its complete carry spectrum matches the analytic predictor. | `sha{256,512}_fullround_feedforward_*`, `sha{256,512}_feedforward_carry_*` |
 | A114 | The FEAL-32X Reader reconstructs the complete R30 right half at the R32 endpoint from the declared joint relation and known final subkey. | `feal32x_fullround_reader_inverse_v1.*` |
@@ -64,6 +65,7 @@ The filenames above are rooted at `research/results/v1/`; full hashes are in
 | Result | Boundary encoded in the public claim |
 |---|---|
 | Original F8 anchors | Known-key, instrumented adjacent internal states; not ciphertext-only key recovery. |
+| TF1024KR1 | One public block pair, known tweak, 985 known and 39 unknown master-key bits; all `2^39` residual assignments are executed. This is terminal residual-key recovery, distinct from the keyless Threefish-1024 F8 fixed-point distinguisher. |
 | FEAL-32X | Known final two-byte subkey and cross-round joint difference. |
 | SHACAL-2 | Known-key internal R63/R64 endpoint. |
 | SPARKLE | Public permutation relation; no secret variable is introduced. |
