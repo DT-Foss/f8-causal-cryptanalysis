@@ -5,24 +5,114 @@
 F8-Causal is David Tom Foss's executable research archive for cross-round F8,
 CASI/LiveCASI, and CryptoCausal Reader analysis. It preserves the twelve
 original full-round F8 configurations, the Nanjing and Rome conference
-evidence, and the subsequent A107--A458 result chain as code, typed
-`.causal` graphs, result JSON, controls, tests, and SHA-256 manifests.
+evidence, and the complete public A107--A458 chain as code, typed `.causal`
+graphs, result JSON, controls, tests, and SHA-256 manifests.
 
-The central result is a family of **full-round, exactly checkable cryptanalytic
-relations** spanning block ciphers, hash compression functions, stream-cipher
-permutations, and Keccak-f[1600]. The repository distinguishes four objects
-precisely:
+Its headline recovery record is **37 verified full-round residual-key recovery
+executions on a base Apple M4 Mac mini with 16 GB unified memory**: thirteen
+complete-domain records across nine cipher families and 24 strict-subset
+ChaCha20-R20 executions across 23 targets. Every row reconstructs the complete
+master key in its declared known-key model, confirms the full public relation
+independently, and rejects the matched control.
 
-- a **distinguisher** separates a tested relation from its registered controls;
-- a **Reader** executes a relation stored in an audited `.causal` graph;
-- **state reconstruction** recovers the stated internal coordinates under the
-  listed known variables;
-- **key recovery** is named only where a key is actually recovered; each row
-  states its known-key model and recovered residual explicitly.
+## Main results: complete full-round recovery record
+
+### Thirteen complete-domain records
+
+Every assignment in every declared domain was executed without early stopping.
+Each factual relation returned exactly one model; each one-bit-flipped control
+returned none.
+
+| Record | Primitive / standard endpoint | Residual key | Executed domain | Factual / control | Independent confirmation |
+|---|---|---:|---:|---:|---:|
+| A184 | ChaCha20, 20 rounds + feed-forward | 40 / 216 bits | `2^40` complete | 1 / 0 | 512 bits |
+| A237 | Speck32/64, 22 rounds | 42 / 22 bits | `2^42` complete | 1 / 0 | 96 bits |
+| A240 | Threefish-256, 72 rounds | 38 / 218 bits | `2^38` complete | 1 / 0 | 256 bits |
+| A244 | Speck64/128, 27 rounds | 44 / 84 bits | `2^44` complete | 1 / 0 | 128 bits |
+| A246 | SIMON64/128, 44 rounds | 43 / 85 bits | `2^43` complete | 1 / 0 | 128 bits |
+| A248 | RC5-32/12/16, 12 rounds | 40 / 88 bits | `2^40` complete | 1 / 0 | 128 bits |
+| A253 | PRESENT-80, 31 rounds | 38 / 42 bits | `2^38` complete | 1 / 0 | 128 bits |
+| A256 | Ascon-AEAD128, complete 12/8/12 operation | 40 / 88 bits | `2^40` complete | 1 / 0 | 384 bits |
+| AES-W41 | AES-128, 10 rounds | 41 / 87 bits | `2^41` complete | 1 / 0 | 256 bits |
+| A264 | Salsa20/20, 20 rounds + feed-forward | 42 / 214 bits | `2^42` complete | 1 / 0 | 512 bits |
+| P128R1 | PRESENT-128, 31 rounds + K32 whitening | 38 / 90 bits | `2^38` complete | 1 / 0 | 128 bits |
+| AES256R1 | AES-256, 14 FIPS 197 rounds | 41 / 215 bits | `2^41` complete | 1 / 0 | 256 bits |
+| CHACHA20KR43 | ChaCha20, 20 rounds + feed-forward | 43 / 213 bits | `2^43` complete | 1 / 0 | 8,192 bits |
+
+### Twenty-four strict-subset ChaCha20-R20 executions
+
+All rows execute the standard 20 rounds plus feed-forward against eight public
+output blocks unless noted. Their schedules were frozen target-blind or
+transferred without refitting, and every execution remains below its full
+residual domain.
+
+| Record / target | Residual key | Frozen discovery point | Executed assignments | Factual / control | Confirmation |
+|---|---:|---:|---:|---:|---:|
+| A281 | 20 / 236 bits | rank 37 / 256 | 151,552 / 1,048,576 | 1 / 0 | 4,096 bits |
+| A286/t01 | 20 / 236 bits | fallback, rank 254 | strict subset | 1 / 0 | 4,096 bits |
+| A286/t02 | 20 / 236 bits | top-128, rank 55 | strict subset | 1 / 0 | 4,096 bits |
+| A286/t03 | 20 / 236 bits | top-128, rank 107 | strict subset | 1 / 0 | 4,096 bits |
+| A286/t04 | 20 / 236 bits | global retained solve | strict subset | 1 / 0 | 4,096 bits |
+| A294 | 24 / 232 bits | rank 202 / 4,096 | 827,392 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A295 | 24 / 232 bits | rank 2,605 / 4,096 | 10,670,080 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t00 | 24 / 232 bits | rank 2,750 / 4,096 | 11,264,000 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t01 | 24 / 232 bits | rank 2,948 / 4,096 | 12,075,008 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t02 | 24 / 232 bits | rank 1,485 / 4,096 | 6,082,560 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w24_t03 | 24 / 232 bits | rank 213 / 4,096 | 872,448 / 16,777,216 | 1 / 0 | 8,192 bits |
+| A296/w28_t00 | 28 / 228 bits | rank 1,144 / 4,096 | 74,973,184 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A296/w28_t01 | 28 / 228 bits | rank 2,113 / 4,096 | 138,477,568 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A296/w28_t02 | 28 / 228 bits | rank 520 / 4,096 | 34,078,720 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A296/w28_t03 | 28 / 228 bits | rank 3,019 / 4,096 | 197,853,184 / 268,435,456 | 1 / 0 | 8,192 bits |
+| A297/w32_t00 | 32 / 224 bits | rank 2,867 / 4,096 | 3,006,267,392 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A297/w32_t01 | 32 / 224 bits | rank 2,032 / 4,096 | 2,130,706,432 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A297/w32_t02 | 32 / 224 bits | rank 926 / 4,096 | 970,981,376 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A297/w32_t03 | 32 / 224 bits | rank 3,932 / 4,096 | 4,123,000,832 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A303 | 32 / 224 bits | rank 3,801 / 4,096 | 3,985,637,376 / 4,294,967,296 | 1 / 0 | 8,192 bits |
+| A302/A304 | 43 / 213 bits | rank 2,473 / 4,096 | 5,310,727,061,504 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
+| A305 | 43 / 213 bits | rank 2,114 / 4,096 | 4,539,780,431,872 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
+| A309 | 43 / 213 bits | rank 4,044 / 4,096 | 8,684,423,872,512 / 8,796,093,022,208 | 1 / 0 | 8,192 bits |
+| A313 | 44 / 212 bits | rank 2,753 / 4,096 | 11,824,044,965,888 / 17,592,186,044,416 | 1 / 0 | 8,192 bits |
+
+The compact verification package, exact per-record mapping, and immutable
+reconstruction gate are published in
+[`DT-Foss/fullround-key-recovery`](https://github.com/DT-Foss/fullround-key-recovery).
+The originating reports and artifacts remain hash-pinned in this repository.
+
+## A326--A458: complete W52 Reader frontier
+
+The current frontier compiles target-blind execution geometry for the complete
+`2^52` residual domain. A456 and A458 each evaluate every registered schedule
+and emit a complete permutation of all 16,777,216 W52 pair cells.
+
+| Result | Schedule census | Selected schedule | Remaining-96 aggregate gain | Minimum block gain | Pair-stream SHA-256 |
+|---|---:|---|---:|---:|---|
+| A456 | 878 schedules / 86 cyclic orbits | `BOOOOOOHHHHHH` | `0.489437610231` bit | `0.176347721941` bit | `9a3af1cfb71f96d186815086170127cd5340e7ac102a5fe9dc65414c14df7352` |
+| A458 | 405 paired B1/B0 schedules / 18 cyclic orbits | `OOOOOOOOHHHHHHHHHHHHHHHBOOOOOOO` | `0.495787645250` bit | `0.205050504927` bit | `5220aa319ab75f7e5e77717802f248512ecdb04531a5d660ac48302f428a1138` |
+
+Both schedules have positive gain on all eight fixed blocks, zero W52 labels,
+zero refits, zero candidate assignments, and exact component bounds over the
+entire pair domain. A455 and A457 are the hash-frozen eight-worker recovery
+executors with production disabled. The public release contains no live worker
+state or recovery outcome.
+
+- [A326--A458 release record](docs/RELEASE_A326_A458_FRONTIER.md)
+- [One-command frontier verifier](scripts/verify_a326_a458_frontier.py)
+- [935-file SHA-256 manifest](research/results/v1/A326_A458_FRONTIER_SHA256SUMS)
+- [A456 result](research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.json) and [AI-native Causal graph](research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_portfolio_a456_v1.causal)
+- [A458 result](research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_extension_a458_v1.json) and [AI-native Causal graph](research/results/v1/chacha20_round20_w52_no_refit_frequency_ray_extension_a458_v1.causal)
+- [Integrity-checking Causal Reader](src/arx_carry_leak/_dotcausal/io.py) and [repository-wide Reader gate](scripts/validate_causal_artifacts.py)
+
+The wider archive contains full-round, exactly checkable relations spanning
+block ciphers, hash compression functions, stream-cipher permutations, and
+Keccak-f[1600]. It uses four precise result classes: distinguishers separate a
+registered relation from its controls; Readers execute relations stored in
+audited `.causal` graphs; state reconstruction recovers declared internal
+coordinates; and key recovery is used only when a residual key is actually
+recovered.
 
 ![SHAKE exact-search frontier](docs/figures/shake_frontier.svg)
 
-## Result landscape
+## Complete A107--A458 result landscape
 
 | Evidence | Primitive / endpoint | Full-round result | Attack model and known variables | Recovered object | Primary evidence |
 |---|---|---|---|---|---|
